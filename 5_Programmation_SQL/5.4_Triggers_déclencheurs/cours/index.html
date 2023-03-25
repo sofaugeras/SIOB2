@@ -12,19 +12,21 @@
         <meta name="author" content="Sophie FAUGERAS">
       
       
-      <link rel="icon" href="/sofaugeras/SIOB2/xtra/favTNSI.png">
+        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/5_Programmation_SQL/5.4_Triggers_d%C3%A9clencheurs/cours/">
+      
+      <link rel="icon" href="../../../xtra/favTNSI.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Saint Sauveur BTS SIO Bloc B2</title>
+        <title>Les triggers ou déclencheurs - Saint Sauveur BTS SIO Bloc B2</title>
       
     
     
-      <link rel="stylesheet" href="/sofaugeras/SIOB2/assets/stylesheets/main.472b142f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.472b142f.min.css">
       
         
-        <link rel="stylesheet" href="/sofaugeras/SIOB2/assets/stylesheets/palette.08040f6c.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.08040f6c.min.css">
         
       
       
@@ -40,8 +42,8 @@
     
     
     
-    <script src="/sofaugeras/SIOB2//xtra/webcomponentsjs/webcomponents-loader.js"></script>
-    <script src="/sofaugeras/SIOB2//xtra/gifplayer/gif-player.es6.js" defer async></script>
+    <script src="../../../xtra/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../../../xtra/gifplayer/gif-player.es6.js" defer async></script>
     <!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
@@ -55,11 +57,11 @@
       
     
     
-      <link rel="stylesheet" href="/sofaugeras/SIOB2/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="/sofaugeras/SIOB2/xtra/stylesheets/pyoditeur.css">
+      <link rel="stylesheet" href="../../../xtra/stylesheets/pyoditeur.css">
     
-    <script>__md_scope=new URL("/sofaugeras/SIOB2/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -99,6 +101,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#les-triggers-ou-declencheurs" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -109,7 +116,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="/sofaugeras/SIOB2/." title="Saint Sauveur BTS SIO Bloc B2" class="md-header__button md-logo" aria-label="Saint Sauveur BTS SIO Bloc B2" data-md-component="logo">
+    <a href="../../.." title="Saint Sauveur BTS SIO Bloc B2" class="md-header__button md-logo" aria-label="Saint Sauveur BTS SIO Bloc B2" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Z"/></svg>
@@ -128,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Les triggers ou déclencheurs
             
           </span>
         </div>
@@ -227,7 +234,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/sofaugeras/SIOB2/." class="md-tabs__link">
+    <a href="../../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -242,7 +249,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/sofaugeras/SIOB2/1_Base_de_donnees/sommaire/" class="md-tabs__link">
+      <a href="../../../1_Base_de_donnees/sommaire/" class="md-tabs__link">
         Base de données
       </a>
     </li>
@@ -258,7 +265,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/sofaugeras/SIOB2/2_SQL%20Complexe/sommaire/" class="md-tabs__link">
+      <a href="../../../2_SQL%20Complexe/sommaire/" class="md-tabs__link">
         SQL complexe
       </a>
     </li>
@@ -274,7 +281,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/sofaugeras/SIOB2/3_UML/sommaire/" class="md-tabs__link">
+      <a href="../../../3_UML/sommaire/" class="md-tabs__link">
         UML
       </a>
     </li>
@@ -290,7 +297,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/sofaugeras/SIOB2/4_Laravel/sommaire/" class="md-tabs__link">
+      <a href="../../../4_Laravel/sommaire/" class="md-tabs__link">
         Laravel
       </a>
     </li>
@@ -300,13 +307,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/sommaire/" class="md-tabs__link">
+      <a href="../../sommaire/" class="md-tabs__link md-tabs__link--active">
         Programmation SQL
       </a>
     </li>
@@ -336,7 +345,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/sofaugeras/SIOB2/." title="Saint Sauveur BTS SIO Bloc B2" class="md-nav__button md-logo" aria-label="Saint Sauveur BTS SIO Bloc B2" data-md-component="logo">
+    <a href="../../.." title="Saint Sauveur BTS SIO Bloc B2" class="md-nav__button md-logo" aria-label="Saint Sauveur BTS SIO Bloc B2" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Z"/></svg>
@@ -367,7 +376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -408,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/1_Base_de_donnees/sommaire/" class="md-nav__link">
+      <a href="../../../1_Base_de_donnees/sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -448,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/1_Base_de_donnees/1.1_Listes_Piles_Files/cours/" class="md-nav__link">
+      <a href="../../../1_Base_de_donnees/1.1_Listes_Piles_Files/cours/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -462,7 +471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/1_Base_de_donnees/1.1_Listes_Piles_Files/Exercices/" class="md-nav__link">
+      <a href="../../../1_Base_de_donnees/1.1_Listes_Piles_Files/Exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -517,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/2_SQL%20Complexe/sommaire/" class="md-nav__link">
+      <a href="../../../2_SQL%20Complexe/sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -565,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/3_UML/sommaire/" class="md-nav__link">
+      <a href="../../../3_UML/sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -613,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/4_Laravel/sommaire/" class="md-nav__link">
+      <a href="../../../4_Laravel/sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -633,12 +642,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -661,7 +672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/sommaire/" class="md-nav__link">
+      <a href="../../sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -701,7 +712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/5.1_Procedures_stockees/cours/" class="md-nav__link">
+      <a href="../../5.1_Procedures_stockees/cours/" class="md-nav__link">
         Les procédures stockées
       </a>
     </li>
@@ -715,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/5.1_Procedures_stockees/exercices/" class="md-nav__link">
+      <a href="../../5.1_Procedures_stockees/exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -762,7 +773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/5.2_Transactions/cours/" class="md-nav__link">
+      <a href="../../5.2_Transactions/cours/" class="md-nav__link">
         Le transactionnel
       </a>
     </li>
@@ -809,7 +820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/5.3_curseurs/cours/" class="md-nav__link">
+      <a href="../../5.3_curseurs/cours/" class="md-nav__link">
         Les curseurs
       </a>
     </li>
@@ -823,7 +834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/5.3_curseurs/exercices/" class="md-nav__link">
+      <a href="../../5.3_curseurs/exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -842,12 +853,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6_5" type="checkbox" id="__nav_6_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" type="checkbox" id="__nav_6_5" checked>
       
       
       
@@ -868,11 +881,141 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/5.4_Triggers_d%C3%A9clencheurs/cours/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Les triggers ou déclencheurs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Les triggers ou déclencheurs
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#principe-et-usage" class="md-nav__link">
+    Principe et usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Principe et usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quest-ce-quun-trigger" class="md-nav__link">
+    Qu'est-ce qu'un trigger ?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-fait-un-trigger" class="md-nav__link">
+    Que fait un trigger ?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-quoi-sert-un-trigger" class="md-nav__link">
+    À quoi sert un trigger ?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creation-des-triggers" class="md-nav__link">
+    Création des triggers
+  </a>
+  
+    <nav class="md-nav" aria-label="Création des triggers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe" class="md-nav__link">
+    Syntaxe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evenement-declencheur" class="md-nav__link">
+    Événement déclencheur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regle-et-convention" class="md-nav__link">
+    Règle et convention
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#old-et-new" class="md-nav__link">
+    OLD et NEW
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suppression-des-triggers" class="md-nav__link">
+    Suppression des triggers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonctionnement-des-tables-inserted-et-deleted" class="md-nav__link">
+    Fonctionnement des tables inserted et deleted
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-triggers" class="md-nav__link">
+    Exemple de triggers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -884,7 +1027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/5.4_Triggers_d%C3%A9clencheurs/exercices/" class="md-nav__link">
+      <a href="../exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -917,7 +1060,167 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+
+
+
+                  
+
+  <a href="https://github.com/sofaugeras/SIOB2/edit/main/docs/5_Programmation_SQL/5.4_Triggers_déclencheurs/cours.md" title="Editer cette page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="les-triggers-ou-declencheurs">Les triggers ou déclencheurs<a class="headerlink" href="#les-triggers-ou-declencheurs" title="Permanent link">⚓︎</a></h1>
+<p>Les <strong>triggers</strong> (ou déclencheurs) sont des objets de la base de données. Attachés à une table, ils vont déclencher l'exécution d'une instruction, ou d'un bloc d'instructions, lorsqu'une ou plusieurs lignes sont insérées, supprimées ou modifiées dans la table à laquelle ils sont attachés.<br /></p>
+<p>Nous allons voir comment ils fonctionnent exactement, comment on peut les créer et les supprimer, et surtout, comment on peut s'en servir et quelles sont leurs restrictions.</p>
+<h2 id="principe-et-usage">Principe et usage<a class="headerlink" href="#principe-et-usage" title="Permanent link">⚓︎</a></h2>
+<h3 id="quest-ce-quun-trigger">Qu'est-ce qu'un trigger ?<a class="headerlink" href="#quest-ce-quun-trigger" title="Permanent link">⚓︎</a></h3>
+<p>Tout comme les procédures stockées, les triggers servent à exécuter une ou plusieurs instructions. Mais à la différence des procédures, <mark>il n'est pas possible d'appeler un trigger</mark> : un trigger doit être déclenché par un événement.<br /></p>
+<p>Un trigger est attaché à une table et peut être déclenché par :<br /></p>
+<blockquote>
+<p>une <strong>insertion</strong> dans la table (requête <code>INSERT</code>) <br />
+    la <strong>suppression</strong> d'une partie des données de la table (requête <code>DELETE</code>) <br />
+    la <strong>modification</strong> d'une partie des données de la table (requête <code>UPDATE</code>)<br /></p>
+</blockquote>
+<p>Par ailleurs, une fois le trigger déclenché, ses instructions peuvent être exécutées soit juste avant l'exécution de l'événement déclencheur, soit juste après.</p>
+<h3 id="que-fait-un-trigger">Que fait un trigger ?<a class="headerlink" href="#que-fait-un-trigger" title="Permanent link">⚓︎</a></h3>
+<p>Un trigger exécute un traitement pour chaque ligne insérée, modifiée ou supprimée par l'événement déclencheur. Donc si l'on insère cinq lignes, les instructions du trigger seront exécutées cinq fois, chaque itération permettant de traiter les données d'une des lignes insérées.<br /></p>
+<p>Les instructions d'un trigger suivent les mêmes principes que les instructions d'une procédure stockée. S'il y a plus d'une instruction, il faut les mettre à l'intérieur d'un bloc d'instructions. Les structures que nous avons vues dans les deux chapitres précédents sont bien sûr utilisables (structures conditionnelles, boucles, gestionnaires d'erreurs, etc.), avec toutefois quelques restrictions que nous verrons en fin de chapitre.
+<br />
+Un trigger peut <strong>modifier et/ou insérer</strong> des données dans n'importe quelle table sauf les tables utilisées dans la requête qui l'a déclenché. En ce qui concerne la table à laquelle le trigger est attaché (qui est forcément utilisée par l'événement déclencheur), le trigger peut lire et modifier uniquement la ligne insérée, modifiée ou supprimée qu'il est en train de traiter.</p>
+<h3 id="a-quoi-sert-un-trigger">À quoi sert un trigger ?<a class="headerlink" href="#a-quoi-sert-un-trigger" title="Permanent link">⚓︎</a></h3>
+<p>On peut faire de nombreuses choses avec un trigger. Voici quelques exemples d'usage fréquent de ces objets. </p>
+<h4 id="contraintes-et-verifications-de-donnees">Contraintes et vérifications de données<a class="headerlink" href="#contraintes-et-verifications-de-donnees" title="Permanent link">⚓︎</a></h4>
+<p>MySQL n'implémente pas de contraintes d'assertion, qui sont des contraintes permettant de limiter les valeurs acceptées par une colonne (limiter une colonne TINYINT  à TRUE  (1) ou FALSE  (0), par exemple).<br />
+Avec des triggers se déclenchant avant l'INSERT  et avant l'UPDATE, on peut vérifier les valeurs d'une colonne lors de l'insertion ou de la modification, et les corriger si elles ne font pas partie des valeurs acceptables, ou bien faire échouer la requête. On peut ainsi pallier l'absence de contraintes d'assertion.</p>
+<h4 id="integrite-des-donnees">Intégrité des données<a class="headerlink" href="#integrite-des-donnees" title="Permanent link">⚓︎</a></h4>
+<p>Les triggers sont parfois utilisés pour remplacer les options des clés étrangères <code>ON UPDATE RESTRICT|CASCADE|SET NULL</code>  et <code>ON DELETE RESTRICT|CASCADE|SET NULL</code>, notamment pour des tables <strong>MyISAM</strong> qui sont non transactionnelles et ne supportent pas les clés étrangères.<br />
+Cela peut aussi être utilisé avec des tables transactionnelles, dans les cas où le traitement à appliquer pour garder des données cohérentes est plus complexe que ce qui est permis par les options de clés étrangères.<br /></p>
+<p>Par exemple, dans certains systèmes, on veut pouvoir appliquer deux systèmes de suppression :<br />
+- une vraie suppression pure et dure, avec effacement des données, donc une requête DELETE  <br />
+- un archivage, qui masquera les données dans l'application, mais les conservera dans la base de données.<br /></p>
+<p>Dans ce cas, une solution possible est d'ajouter aux tables contenant des données archivables une colonne archive, pouvant contenir 0 (la ligne n'est pas archivée) ou 1 (la ligne est archivée). Pour une vraie suppression, on peut utiliser simplement un <code>ON DELETE RESTRICT|CASCADE|SET NULL</code> qui se répercutera sur les tables référençant les données supprimées. Par contre, dans le cas d'un archivage, on utilisera plutôt un trigger pour traiter les lignes qui référencent les données archivées, par exemple en les archivant également.</p>
+<h4 id="historisation-des-actions">Historisation des actions<a class="headerlink" href="#historisation-des-actions" title="Permanent link">⚓︎</a></h4>
+<p>On veut parfois garder une trace des actions effectuées sur la base de données, c'est-à-dire, par exemple, savoir qui a modifié telle ligne, et quand. Avec les triggers, rien de plus simple, il suffit de mettre à jour des données d'historisation à chaque insertion, modification ou suppression, soit directement dans la table concernée, soit dans une table utilisée spécialement et exclusivement pour garder un historique des actions.</p>
+<h4 id="mise-a-jour-dinformations-qui-dependent-dautres-donnees">Mise à jour d'informations qui dépendent d'autres données<a class="headerlink" href="#mise-a-jour-dinformations-qui-dependent-dautres-donnees" title="Permanent link">⚓︎</a></h4>
+<p>Comme pour les procédures stockées, une partie de la logique "business" de l'application peut être codée directement dans la base de données grâce aux <strong>triggers</strong>, plutôt que du côté applicatif (en PHP, Java ou quel que soit le langage de programmation utilisé).
+À nouveau, cela peut permettre d'harmoniser un traitement à travers plusieurs applications utilisant la même base de données.
+Par ailleurs, lorsque certaines informations dépendent de la valeur de certaines données, on peut en général les retrouver en faisant une requête <code>SELECT</code>. Dans ce cas, il n'est pas indispensable de stocker ces informations.<br />
+<strong>Cependant</strong>, utiliser les triggers pour stocker ces informations peut faciliter la vie de l'utilisateur et peut aussi faire gagner en performance, par exemple, si l'on a très souvent besoin de cette information, ou si la requête à faire pour trouver cette information est longue à exécuter. C'est typiquement cet usage qui est fait des triggers dans ce que l'on appelle les "vues matérialisées".</p>
+<h2 id="creation-des-triggers">Création des triggers<a class="headerlink" href="#creation-des-triggers" title="Permanent link">⚓︎</a></h2>
+<h3 id="syntaxe">Syntaxe<a class="headerlink" href="#syntaxe" title="Permanent link">⚓︎</a></h3>
+<p>Pour créer un trigger, on utilise la commande suivante :
+<div class="highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">nom_trigger</span><span class="w"> </span><span class="n">moment_trigger</span><span class="w"> </span><span class="n">evenement_trigger</span><span class="w"></span>
+<span class="k">ON</span><span class="w"> </span><span class="n">nom_table</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span><span class="w"></span>
+<span class="n">corps_trigger</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+➡️ <code>CREATE TRIGGER nom_trigger</code>  : les triggers ont donc un nom.<br />
+➡️ <code>moment_trigger`` evenement_trigger</code>  : servent à définir quand et comment le trigger est déclenché.<br />
+➡️ <code>ON nom_table</code>  : c'est là que l'on définit à quelle table le trigger est attaché.<br />
+➡️ <code>FOR EACH ROW</code>  : signifie littéralement "pour chaque ligne", sous-entendu "pour chaque ligne insérée/supprimée/modifiée" selon ce qui a déclenché le trigger.<br />
+➡️ <code>corps_trigger</code>  : c'est le contenu du trigger. Comme pour les procédures stockées, il peut s'agir soit d'une seule instruction, soit d'un bloc d'instructions.<br /></p>
+<h3 id="evenement-declencheur">Événement déclencheur<a class="headerlink" href="#evenement-declencheur" title="Permanent link">⚓︎</a></h3>
+<p>Trois événements différents peuvent déclencher l'exécution des instructions d'un trigger :<br />
+➡️ l'<strong>insertion</strong> de lignes (INSERT) dans la table attachée au trigger <br />
+➡️ la <strong>modification</strong> de lignes (UPDATE) de cette table <br />
+➡️ la <strong>suppression</strong> de lignes (DELETE) de la table.<br />
+Un trigger est déclenché soit par INSERT, soit par UPDATE, soit par DELETE. Il ne peut pas être déclenché par deux événements différents. On peut par contre créer plusieurs triggers par table pour couvrir chaque événement.</p>
+<p>▶️ Avant ou après<br />
+Lorsqu'un trigger est déclenché, ses instructions peuvent être exécutées à deux moments différents : soit juste avant que l'événement déclencheur n'ait lieu (<code>BEFORE</code>), soit juste après (<code>AFTER</code>).<br /></p>
+<p>Donc, si vous avez un trigger <code>BEFORE UPDATE</code> sur la table <code>A</code>, l'exécution d'une requête <code>UPDATE</code> sur cette table va d'abord déclencher l'exécution des instructions du trigger, ensuite seulement les lignes de la table seront modifiées.<br /></p>
+<p><em>Exemple :</em> Pour créer un trigger sur la table <code>Article</code>, déclenché par une insertion et s'exécutant après ladite insertion, on utilisera la syntaxe suivante :
+<div class="highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">after_insert_article</span><span class="w"> </span><span class="k">AFTER</span><span class="w"> </span><span class="k">INSERT</span><span class="w"></span>
+<span class="k">ON</span><span class="w"> </span><span class="n">Article</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span><span class="w"></span>
+<span class="n">corps_trigger</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></p>
+<h3 id="regle-et-convention">Règle et convention<a class="headerlink" href="#regle-et-convention" title="Permanent link">⚓︎</a></h3>
+<p>Il ne peut exister qu'un seul trigger par combinaison <code>moment_trigger/evenement_trigger</code> par table. Donc un seul trigger <code>BEFORE UPDATE</code> par table, un seul <code>AFTER DELETE</code>, etc...<br /></p>
+<p>Étant donné qu'il existe deux possibilités pour le moment d'exécution, et trois pour l'événement déclencheur, on a donc un maximum de <strong>six</strong> triggers par table. Cette règle étant établie, il existe une convention quant à la manière de nommer ses triggers, que je vous encourage à suivre : <code>nom_trigger = moment_evenement_table</code>. Donc le trigger <code>BEFORE UPDATE ON Animal</code>  aura pour nom : <code>before_update_animal</code>.</p>
+<h3 id="old-et-new">OLD et NEW<a class="headerlink" href="#old-et-new" title="Permanent link">⚓︎</a></h3>
+<p>Dans le corps du trigger, <strong>MySQL</strong> met à disposition deux mots-clés : OLD  et NEW.<br />
+▶️ OLD  représente les valeurs des colonnes de la ligne traitée avant qu'elle ne soit modifiée par l'événement déclencheur. Ces valeurs peuvent être lues, mais pas modifiées.<br />
+▶️ NEW  représente les valeurs des colonnes de la ligne traitée après qu'elle a été modifiée par l'événement déclencheur. Ces valeurs peuvent être lues et modifiées.<br />
+Il n'y a que dans le cas d'un trigger <code>UPDATE</code> que <code>OLD</code> et <code>NEW</code>  coexistent. Lors d'une insertion, <code>OLD</code> n'existe pas, puisque la ligne n'existe pas avant l'événement déclencheur. Dans le cas d'une suppression, c'est <code>NEW</code>  qui n'existe pas, puisque la ligne n'existera plus après l'événement déclencheur.</p>
+<h3 id="suppression-des-triggers">Suppression des triggers<a class="headerlink" href="#suppression-des-triggers" title="Permanent link">⚓︎</a></h3>
+<p>Encore une fois, la commande <code>DROP</code> permet de supprimer un trigger.
+<div class="highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">DROP</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">nom_trigger</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+Tout comme pour les procédures stockées, il n'est pas possible de modifier un trigger. Il faut le supprimer puis le recréer différemment. Par ailleurs, si l'on supprime une table, on supprime également tous les triggers qui y sont attachés.</p>
+<h3 id="fonctionnement-des-tables-inserted-et-deleted">Fonctionnement des tables inserted et deleted<a class="headerlink" href="#fonctionnement-des-tables-inserted-et-deleted" title="Permanent link">⚓︎</a></h3>
+<p>Au cours des opérations d'ajout, de suppression et de modification, le système utilise les <strong>tables temporaires</strong> <code>inserted</code> et <code>deleted</code>. Ces tables ne sont accessibles qu'au niveau des triggers et leur contenu est perdu dès que les triggers sont validés.
+<br />
+<strong>Action d'ajout :</strong> Les enregistrements ajoutés sont placés dans une table temporaire nommée <code>inserted</code><br />
+▶️ Action de suppression : Les enregistrements supprimés sont placés dans une table temporaire nommée deleted.<br />
+▶️ Action de modification :  L'opération de modification est interprétée comme une opération de suppression des anciennes informations et d'ajout des nouvelles informations. </p>
+<p>C'est pourquoi le système utilise dans ce cas les deux tables temporaires <code>deleted</code> et <code>inserted</code>. En fait quand un utilisateur demande à modifier des enregistrements, ceux ci sont d'abord sauvegardés dans la table temporaire <code>deleted</code> et la copie modifiée est enregistrée dans la table <code>inserted</code>.</p>
+<h3 id="exemple-de-triggers">Exemple de triggers<a class="headerlink" href="#exemple-de-triggers" title="Permanent link">⚓︎</a></h3>
+<p>Le trigger suivant à la suppression d'une ligne de commande, remet à jour le stock et vérifie s'il s'agit de la dernière ligne pour cette commande. Si c'est le cas la commande est supprimée :</p>
+<div class="highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="k">Create</span><span class="w"> </span><span class="k">Trigger</span><span class="w"> </span><span class="n">Tr_Supprimer_Ligne</span><span class="w"> </span><span class="k">AFTER</span><span class="w"> </span><span class="k">DELETE</span><span class="w"></span>
+<span class="k">On</span><span class="w"> </span><span class="n">LigneCommande</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span><span class="w"></span>
+<span class="k">BEGIN</span><span class="w"></span>
+<span class="w">    </span><span class="k">Update</span><span class="w"> </span><span class="n">article</span><span class="w"> </span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">OLD</span><span class="p">.</span><span class="n">QteCommandee</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="k">OLD</span><span class="p">.</span><span class="n">numart</span><span class="o">=</span><span class="n">article</span><span class="p">.</span><span class="n">numart</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">Delete</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">commande</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">numcom</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">numcom</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">lignecommande</span><span class="p">);</span><span class="w"></span>
+<span class="k">END</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Dernière mise à jour:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">25 mars 2023</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+
+                
+<script src="../../../js/ide.js"></script>
+<style>
+    .jp-RenderedHTMLCommon p {
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+    .jp-RenderedHTMLCommon li {
+        font-size: .8rem;
+        line-height: 1.6;
+    }
+    .jp-RenderedHTMLCommon h1 {
+        margin: 0 0 1.25em;
+        color: var(--md-default-fg-color--light);
+        font-weight: 300;
+        font-size: 2em;
+        line-height: 1.3;
+        letter-spacing: -0.01em;
+    }
+    .jp-RenderedHTMLCommon h2 {
+        margin: 1.6em 0 .64em;
+        font-weight: 300;
+        font-size: 1.965em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
+    }
+    .jp-RenderedHTMLCommon h3 {
+        margin: 1.6em 0 .8em;
+        font-weight: 400;
+        font-size: 1.57em;
+        line-height: 1.5;
+        letter-spacing: -0.01em;
+    }
+    .jp-RenderedHTMLCommon hr {
+        border: none;
+    }
+</style>
 
               </article>
             </div>
@@ -933,6 +1236,42 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+      
+        
+        <a href="../../5.3_curseurs/exercices/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Exercices" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              Exercices
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../exercices/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Exercices" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              Exercices
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -993,10 +1332,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "/sofaugeras/SIOB2/", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate"], "search": "/sofaugeras/SIOB2/assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="/sofaugeras/SIOB2/assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
@@ -1008,13 +1347,13 @@
       
         <script src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
       
-        <script src="/sofaugeras/SIOB2/javascript/mermaid.js"></script>
+        <script src="../../../javascript/mermaid.js"></script>
       
-        <script src="/sofaugeras/SIOB2/javascript/mathjax.js"></script>
+        <script src="../../../javascript/mathjax.js"></script>
       
-        <script src="/sofaugeras/SIOB2/javascript/interpreter.js"></script>
+        <script src="../../../javascript/interpreter.js"></script>
       
-        <script src="/sofaugeras/SIOB2/javascript/ide.js"></script>
+        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

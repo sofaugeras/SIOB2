@@ -12,19 +12,21 @@
         <meta name="author" content="Sophie FAUGERAS">
       
       
-      <link rel="icon" href="/sofaugeras/SIOB2/xtra/favTNSI.png">
+        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/5_Programmation_SQL/5.3_curseurs/cours/">
+      
+      <link rel="icon" href="../../../xtra/favTNSI.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Saint Sauveur BTS SIO Bloc B2</title>
+        <title>Les curseurs - Saint Sauveur BTS SIO Bloc B2</title>
       
     
     
-      <link rel="stylesheet" href="/sofaugeras/SIOB2/assets/stylesheets/main.472b142f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.472b142f.min.css">
       
         
-        <link rel="stylesheet" href="/sofaugeras/SIOB2/assets/stylesheets/palette.08040f6c.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.08040f6c.min.css">
         
       
       
@@ -40,8 +42,8 @@
     
     
     
-    <script src="/sofaugeras/SIOB2//xtra/webcomponentsjs/webcomponents-loader.js"></script>
-    <script src="/sofaugeras/SIOB2//xtra/gifplayer/gif-player.es6.js" defer async></script>
+    <script src="../../../xtra/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../../../xtra/gifplayer/gif-player.es6.js" defer async></script>
     <!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
@@ -55,11 +57,11 @@
       
     
     
-      <link rel="stylesheet" href="/sofaugeras/SIOB2/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="/sofaugeras/SIOB2/xtra/stylesheets/pyoditeur.css">
+      <link rel="stylesheet" href="../../../xtra/stylesheets/pyoditeur.css">
     
-    <script>__md_scope=new URL("/sofaugeras/SIOB2/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -99,6 +101,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#les-curseurs" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -109,7 +116,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="/sofaugeras/SIOB2/." title="Saint Sauveur BTS SIO Bloc B2" class="md-header__button md-logo" aria-label="Saint Sauveur BTS SIO Bloc B2" data-md-component="logo">
+    <a href="../../.." title="Saint Sauveur BTS SIO Bloc B2" class="md-header__button md-logo" aria-label="Saint Sauveur BTS SIO Bloc B2" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Z"/></svg>
@@ -128,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Les curseurs
             
           </span>
         </div>
@@ -227,7 +234,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/sofaugeras/SIOB2/." class="md-tabs__link">
+    <a href="../../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -242,7 +249,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/sofaugeras/SIOB2/1_Base_de_donnees/sommaire/" class="md-tabs__link">
+      <a href="../../../1_Base_de_donnees/sommaire/" class="md-tabs__link">
         Base de données
       </a>
     </li>
@@ -258,7 +265,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/sofaugeras/SIOB2/2_SQL%20Complexe/sommaire/" class="md-tabs__link">
+      <a href="../../../2_SQL%20Complexe/sommaire/" class="md-tabs__link">
         SQL complexe
       </a>
     </li>
@@ -274,7 +281,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/sofaugeras/SIOB2/3_UML/sommaire/" class="md-tabs__link">
+      <a href="../../../3_UML/sommaire/" class="md-tabs__link">
         UML
       </a>
     </li>
@@ -290,7 +297,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/sofaugeras/SIOB2/4_Laravel/sommaire/" class="md-tabs__link">
+      <a href="../../../4_Laravel/sommaire/" class="md-tabs__link">
         Laravel
       </a>
     </li>
@@ -300,13 +307,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/sommaire/" class="md-tabs__link">
+      <a href="../../sommaire/" class="md-tabs__link md-tabs__link--active">
         Programmation SQL
       </a>
     </li>
@@ -336,7 +345,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/sofaugeras/SIOB2/." title="Saint Sauveur BTS SIO Bloc B2" class="md-nav__button md-logo" aria-label="Saint Sauveur BTS SIO Bloc B2" data-md-component="logo">
+    <a href="../../.." title="Saint Sauveur BTS SIO Bloc B2" class="md-nav__button md-logo" aria-label="Saint Sauveur BTS SIO Bloc B2" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Z"/></svg>
@@ -367,7 +376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -408,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/1_Base_de_donnees/sommaire/" class="md-nav__link">
+      <a href="../../../1_Base_de_donnees/sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -448,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/1_Base_de_donnees/1.1_Listes_Piles_Files/cours/" class="md-nav__link">
+      <a href="../../../1_Base_de_donnees/1.1_Listes_Piles_Files/cours/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -462,7 +471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/1_Base_de_donnees/1.1_Listes_Piles_Files/Exercices/" class="md-nav__link">
+      <a href="../../../1_Base_de_donnees/1.1_Listes_Piles_Files/Exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -517,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/2_SQL%20Complexe/sommaire/" class="md-nav__link">
+      <a href="../../../2_SQL%20Complexe/sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -565,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/3_UML/sommaire/" class="md-nav__link">
+      <a href="../../../3_UML/sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -613,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/4_Laravel/sommaire/" class="md-nav__link">
+      <a href="../../../4_Laravel/sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -633,12 +642,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -661,7 +672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/sommaire/" class="md-nav__link">
+      <a href="../../sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -701,7 +712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/5.1_Procedures_stockees/cours/" class="md-nav__link">
+      <a href="../../5.1_Procedures_stockees/cours/" class="md-nav__link">
         Les procédures stockées
       </a>
     </li>
@@ -715,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/5.1_Procedures_stockees/exercices/" class="md-nav__link">
+      <a href="../../5.1_Procedures_stockees/exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -762,7 +773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/5.2_Transactions/cours/" class="md-nav__link">
+      <a href="../../5.2_Transactions/cours/" class="md-nav__link">
         Le transactionnel
       </a>
     </li>
@@ -781,12 +792,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" checked>
       
       
       
@@ -807,11 +820,107 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/5.3_curseurs/cours/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Les curseurs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Les curseurs
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    définition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntaxe" class="md-nav__link">
+    Syntaxe
+  </a>
+  
+    <nav class="md-nav" aria-label="Syntaxe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declaration-du-curseur" class="md-nav__link">
+    Déclaration du curseur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ouverture-et-fermeture-du-curseur" class="md-nav__link">
+    Ouverture et fermeture du curseur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parcours-du-curseur" class="md-nav__link">
+    Parcours du curseur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restrictions" class="md-nav__link">
+    Restrictions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parcourir-intelligemment-tous-les-resultats-dun-curseur" class="md-nav__link">
+    Parcourir intelligemment tous les résultats d'un curseur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condition-darret" class="md-nav__link">
+    Condition d'arrêt
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -823,7 +932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/5.3_curseurs/exercices/" class="md-nav__link">
+      <a href="../exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -870,7 +979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/5.4_Triggers_d%C3%A9clencheurs/cours/" class="md-nav__link">
+      <a href="../../5.4_Triggers_d%C3%A9clencheurs/cours/" class="md-nav__link">
         Les triggers ou déclencheurs
       </a>
     </li>
@@ -884,7 +993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/5.4_Triggers_d%C3%A9clencheurs/exercices/" class="md-nav__link">
+      <a href="../../5.4_Triggers_d%C3%A9clencheurs/exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -917,7 +1026,176 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+
+
+
+                  
+
+  <a href="https://github.com/sofaugeras/SIOB2/edit/main/docs/5_Programmation_SQL/5.3_curseurs/cours.md" title="Editer cette page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="les-curseurs">Les curseurs<a class="headerlink" href="#les-curseurs" title="Permanent link">⚓︎</a></h1>
+<h2 id="definition">définition<a class="headerlink" href="#definition" title="Permanent link">⚓︎</a></h2>
+<p>Nous avons vu qu'il était possible d'exploiter le résultat d'un <code>SELECT</code> dans un bloc d'instructions en utilisant la commande <code>SELECT colonne(s) INTO variable(s)</code>, qui assigne les valeurs sélectionnées à des variables.<br />
+Cependant, <code>SELECT ... INTO</code>  ne peut être utilisé que pour des requêtes qui ne ramènent qu'une seule ligne de résultats.<br />
+Les <strong>curseurs</strong> permettent de parcourir un jeu de résultats d'une requête <code>SELECT</code>, quel que soit le nombre de lignes récupérées, et d'en exploiter les valeurs.<br /></p>
+<p>Quatre étapes sont nécessaires pour utiliser un curseur.<br />
+- Déclaration du curseur : avec une instruction <code>DECLARE</code>.<br />
+- Ouverture du curseur : on exécute la requête <code>SELECT</code> du curseur et on stocke le résultat dans celui-ci.<br />
+- Parcours du curseur : on parcourt une à une les lignes.<br />
+- Fermeture du curseur.</p>
+<h2 id="syntaxe">Syntaxe<a class="headerlink" href="#syntaxe" title="Permanent link">⚓︎</a></h2>
+<h3 id="declaration-du-curseur">Déclaration du curseur<a class="headerlink" href="#declaration-du-curseur" title="Permanent link">⚓︎</a></h3>
+<p>Comme toutes les instructions <code>DECLARE</code>, la déclaration d'un curseur doit se faire au début du bloc d'instructions pour lequel celui-ci est défini. Plus précisément, on déclare les curseurs après les variables locales et les conditions, mais avant les gestionnaires d'erreurs.</p>
+<div class="highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">DECLARE</span><span class="w"> </span><span class="n">nom_curseur</span><span class="w"> </span><span class="k">CURSOR</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="n">requete_select</span><span class="p">;</span><span class="w"></span>
+<span class="n">Un</span><span class="w"> </span><span class="n">curseur</span><span class="w"> </span><span class="n">est</span><span class="w"> </span><span class="n">donc</span><span class="w"> </span><span class="n">composé</span><span class="w"> </span><span class="n">d</span><span class="s1">&#39;un nom, et d&#39;</span><span class="n">une</span><span class="w"> </span><span class="n">requête</span><span class="w"> </span><span class="k">SELECT</span><span class="p">.</span><span class="w"></span>
+<span class="n">Exemple</span><span class="w"> </span><span class="p">:</span><span class="w"></span>
+<span class="k">DECLARE</span><span class="w"> </span><span class="n">curseur_client</span><span class="w"> </span><span class="k">CURSOR</span><span class="w"> </span>
+<span class="w">    </span><span class="k">FOR</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">Client</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="ouverture-et-fermeture-du-curseur">Ouverture et fermeture du curseur<a class="headerlink" href="#ouverture-et-fermeture-du-curseur" title="Permanent link">⚓︎</a></h3>
+<p>En déclarant le curseur, on a donc associé un nom et une requête <code>SELECT</code>. L'ouverture du curseur va provoquer l'exécution de la requête <code>SELECT</code>, ce qui va produire un jeu de résultats. Une fois que l'on aura parcouru les résultats, il n'y aura plus qu'à fermer le curseur. Si l'on ne le fait pas explicitement, le curseur sera fermé à la fin du bloc d'un <code>OPEN nom_curseur</code>;</p>
+<div class="highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="w">  </span><span class="c1">-- Parcours du curseur et instructions diverses</span>
+<span class="k">CLOSE</span><span class="w"> </span><span class="n">nom_curseur</span><span class="p">;.</span><span class="w"></span>
+</code></pre></div>
+<h3 id="parcours-du-curseur">Parcours du curseur<a class="headerlink" href="#parcours-du-curseur" title="Permanent link">⚓︎</a></h3>
+<p>Une fois que le curseur a été ouvert et le jeu de résultats récupéré, le curseur place un <strong>pointeur</strong> sur la première ligne de résultats. Avec la commande <strong>FETCH</strong>, on récupère la ligne sur laquelle pointe le curseur, et on fait avancer le pointeur vers la ligne de résultats suivante. On peut comparer ce fonctionnement avec la lecture de requête en PHP.</p>
+<div class="highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">FETCH</span><span class="w"> </span><span class="n">nom_curseur</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">variable</span><span class="p">(</span><span class="n">s</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>Bien entendu, comme pour <code>SELECT ... INTO</code>, il faut donner autant de variables dans la clause <code>INTO</code>  que l'on a récupéré de colonnes dans la clause <code>SELECT</code>  du curseur.</p>
+<p><em>Exemple :</em> la procédure suivante parcourt les deux premières lignes d’une table Client avec un curseur.</p>
+<div class="highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">parcours_deux_clients</span><span class="p">()</span><span class="w"></span>
+<span class="k">BEGIN</span><span class="w"></span>
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">v_nom</span><span class="p">,</span><span class="w"> </span><span class="n">v_prenom</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">curs_clients</span><span class="w"> </span><span class="k">CURSOR</span><span class="w"></span>
+<span class="w">        </span><span class="k">FOR</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="w">  </span><span class="c1">-- Le SELECT récupère deux colonnes</span>
+<span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">Client</span><span class="w"></span>
+<span class="w">        </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="p">;</span><span class="w">   </span>
+<span class="w">        </span><span class="c1">-- On trie les clients par ordre alphabétique</span>
+
+<span class="w">    </span><span class="k">OPEN</span><span class="w"> </span><span class="n">curs_clients</span><span class="p">;</span><span class="w">  </span><span class="c1">-- Ouverture du curseur</span>
+
+<span class="w">    </span><span class="k">FETCH</span><span class="w"> </span><span class="n">curs_clients</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">v_nom</span><span class="p">,</span><span class="w"> </span><span class="n">v_prenom</span><span class="p">;</span><span class="w">    </span>
+<span class="w">    </span><span class="c1">-- On récupère la première ligne et on assigne les valeurs récupérées à nos variables locales</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="n">v_prenom</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">v_nom</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s1">&#39;Premier client&#39;</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">FETCH</span><span class="w"> </span><span class="n">curs_clients</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">v_nom</span><span class="p">,</span><span class="w"> </span><span class="n">v_prenom</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="c1">-- On récupère la seconde ligne et on assigne les valeurs récupérées à nos variables locales</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="n">v_prenom</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">v_nom</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s1">&#39;Second client&#39;</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">CLOSE</span><span class="w"> </span><span class="n">curs_clients</span><span class="p">;</span><span class="w">     </span><span class="c1">-- Fermeture du curseur</span>
+<span class="k">END</span><span class="o">|</span><span class="w"></span>
+<span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+
+<span class="k">CALL</span><span class="w"> </span><span class="n">parcours_deux_clients</span><span class="p">();</span><span class="w"></span>
+</code></pre></div>
+<h3 id="restrictions">Restrictions<a class="headerlink" href="#restrictions" title="Permanent link">⚓︎</a></h3>
+<p><code>FETCH</code>  est la seule commande permettant de récupérer une partie d'un jeu de résultats d'un curseur, et elle ne permet qu'une chose : récupérer la ligne de résultats suivante.<br />
+Il n'est pas possible de sauter une ou plusieurs lignes ni d'aller rechercher une ligne précédente. On ne peut que parcourir les lignes une à une, de la première à la dernière. Ensuite, il n'est pas possible de modifier une ligne directement à partir d'un curseur. Il s'agit d'une restriction particulière à <strong>MySQL</strong>. D'autres SGBD vous permettent des requêtes d'<code>UPDATE</code> directement sur les curseurs.</p>
+<h3 id="parcourir-intelligemment-tous-les-resultats-dun-curseur">Parcourir intelligemment tous les résultats d'un curseur<a class="headerlink" href="#parcourir-intelligemment-tous-les-resultats-dun-curseur" title="Permanent link">⚓︎</a></h3>
+<p>Pour récupérer une ligne de résultats, on utilise donc <code>FETCH</code>. Dans la procédure <code>parcours_deux_clients()</code>, on voulait récupérer les deux premières lignes, on a donc utilisé deux <code>FETCH</code>. Cependant, la plupart du temps, on ne veut pas seulement utiliser les deux premières lignes, mais toutes ! Or, sauf exception, on ne sait pas combien de lignes seront sélectionnées.<br /></p>
+<p>On veut donc parcourir une à une les lignes de résultats et leur appliquer un traitement, sans savoir à l'avance combien de fois ce traitement devra être répété. Pour cela, on utilise une boucle ! <code>WHILE</code>, <code>REPEAT</code> ou <code>LOOP</code>. Il n'y a plus qu'à trouver une condition pour arrêter la boucle une fois tous les résultats parcourus.</p>
+<h3 id="condition-darret">Condition d'arrêt<a class="headerlink" href="#condition-darret" title="Permanent link">⚓︎</a></h3>
+<p>Voyons ce qui se passe lorsque l'on fait un <code>FETCH</code> alors qu'il n'y a plus, ou pas, de résultats.<br />
+Voici une procédure qui sélectionne les clients selon une ville donnée en paramètre. Les lignes sont récupérées et affichées grâce au <code>FETCH</code>, placé dans une boucle <code>LOOP</code>. Je rappelle que cette boucle ne définit pas de condition d'arrêt : il est nécessaire d'ajouter une instruction <code>LEAVE</code>  pour l'arrêter. Ici, pour tester, on ne mettra pas d'instruction <code>LEAVE</code>.</p>
+<div class="highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">test_condition</span><span class="p">(</span><span class="k">IN</span><span class="w"> </span><span class="n">p_ville</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span><span class="w"></span>
+<span class="k">BEGIN</span><span class="w"></span>
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">v_nom</span><span class="p">,</span><span class="w"> </span><span class="n">v_prenom</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">curs_clients</span><span class="w"> </span><span class="k">CURSOR</span><span class="w"></span>
+<span class="w">        </span><span class="k">FOR</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="w"></span>
+<span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">Client</span><span class="w"></span>
+<span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">ville</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_ville</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">OPEN</span><span class="w"> </span><span class="n">curs_clients</span><span class="p">;</span><span class="w">                                    </span>
+
+<span class="w">    </span><span class="n">LOOP</span><span class="w">                                                  </span>
+<span class="w">        </span><span class="k">FETCH</span><span class="w"> </span><span class="n">curs_clients</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">v_nom</span><span class="p">,</span><span class="w"> </span><span class="n">v_prenom</span><span class="p">;</span><span class="w">                   </span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="n">v_prenom</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">v_nom</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s1">&#39;Client&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="n">LOOP</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">CLOSE</span><span class="w"> </span><span class="n">curs_clients</span><span class="p">;</span><span class="w"> </span>
+<span class="k">END</span><span class="o">|</span><span class="w"></span>
+<span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p><em>Exemple :</em> Pour afficher la liste des articles sous la forme :
+<em>L'article Numéro ........  portant la désignation ………coûte …. …..</em>&gt;</p>
+<p>▶️ Ecrire le curseur correspondant </p>
+<details class="question"><summary>Correction</summary><div class="highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">Declare</span><span class="w"> </span><span class="o">@</span><span class="n">a</span><span class="w"> </span><span class="nb">int</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">b</span><span class="w"> </span><span class="nb">Varchar</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span><span class="w"> </span><span class="o">@</span><span class="k">c</span><span class="w"> </span><span class="nb">real</span><span class="w"></span>
+<span class="k">Declare</span><span class="w"> </span><span class="n">Cur_ListeArt</span><span class="w"> </span><span class="k">Cursor</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="k">Select</span><span class="w"> </span><span class="n">NumArt</span><span class="p">,</span><span class="w"> </span><span class="n">DesArt</span><span class="p">,</span><span class="n">puart</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">article</span><span class="w"></span>
+<span class="k">Open</span><span class="w"> </span><span class="n">Cur_ListeArt</span><span class="w"></span>
+<span class="k">Fetch</span><span class="w"> </span><span class="k">Next</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">Cur_ListeArt</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="o">@</span><span class="n">a</span><span class="p">,</span><span class="o">@</span><span class="n">b</span><span class="p">,</span><span class="o">@</span><span class="k">c</span><span class="w"></span>
+<span class="n">While</span><span class="w"> </span><span class="o">@@</span><span class="n">fetch_status</span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
+<span class="k">Begin</span><span class="w"></span>
+<span class="n">Print</span><span class="w"> </span><span class="s1">&#39;L&#39;&#39;article numéro &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">convert</span><span class="p">(</span><span class="nb">varchar</span><span class="p">,</span><span class="o">@</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; portant la désignation &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">@</span><span class="n">b</span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; coûte    &#39;</span><span class="w"> </span><span class="o">+</span><span class="w">     </span><span class="k">convert</span><span class="p">(</span><span class="nb">varchar</span><span class="p">,</span><span class="o">@</span><span class="k">c</span><span class="p">)</span><span class="w"></span>
+<span class="k">Fetch</span><span class="w"> </span><span class="k">Next</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">Cur_ListeArt</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="o">@</span><span class="n">a</span><span class="p">,</span><span class="o">@</span><span class="n">b</span><span class="p">,</span><span class="o">@</span><span class="k">c</span><span class="w"></span>
+<span class="k">End</span><span class="w"></span>
+<span class="k">Close</span><span class="w"> </span><span class="n">Cur_ListeArt</span><span class="w"></span>
+<span class="k">Deallocate</span><span class="w"> </span><span class="n">Cur_ListeArt</span><span class="w"></span>
+</code></pre></div>
+</details>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Dernière mise à jour:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">25 mars 2023</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+
+                
+<script src="../../../js/ide.js"></script>
+<style>
+    .jp-RenderedHTMLCommon p {
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+    .jp-RenderedHTMLCommon li {
+        font-size: .8rem;
+        line-height: 1.6;
+    }
+    .jp-RenderedHTMLCommon h1 {
+        margin: 0 0 1.25em;
+        color: var(--md-default-fg-color--light);
+        font-weight: 300;
+        font-size: 2em;
+        line-height: 1.3;
+        letter-spacing: -0.01em;
+    }
+    .jp-RenderedHTMLCommon h2 {
+        margin: 1.6em 0 .64em;
+        font-weight: 300;
+        font-size: 1.965em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
+    }
+    .jp-RenderedHTMLCommon h3 {
+        margin: 1.6em 0 .8em;
+        font-weight: 400;
+        font-size: 1.57em;
+        line-height: 1.5;
+        letter-spacing: -0.01em;
+    }
+    .jp-RenderedHTMLCommon hr {
+        border: none;
+    }
+</style>
 
               </article>
             </div>
@@ -933,6 +1211,42 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+      
+        
+        <a href="../../5.2_Transactions/cours/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Le transactionnel" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              Le transactionnel
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../exercices/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Exercices" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              Exercices
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -993,10 +1307,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "/sofaugeras/SIOB2/", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate"], "search": "/sofaugeras/SIOB2/assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="/sofaugeras/SIOB2/assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
@@ -1008,13 +1322,13 @@
       
         <script src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
       
-        <script src="/sofaugeras/SIOB2/javascript/mermaid.js"></script>
+        <script src="../../../javascript/mermaid.js"></script>
       
-        <script src="/sofaugeras/SIOB2/javascript/mathjax.js"></script>
+        <script src="../../../javascript/mathjax.js"></script>
       
-        <script src="/sofaugeras/SIOB2/javascript/interpreter.js"></script>
+        <script src="../../../javascript/interpreter.js"></script>
       
-        <script src="/sofaugeras/SIOB2/javascript/ide.js"></script>
+        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

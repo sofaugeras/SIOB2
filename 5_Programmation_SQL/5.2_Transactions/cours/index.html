@@ -12,19 +12,21 @@
         <meta name="author" content="Sophie FAUGERAS">
       
       
-      <link rel="icon" href="/sofaugeras/SIOB2/xtra/favTNSI.png">
+        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/5_Programmation_SQL/5.2_Transactions/cours/">
+      
+      <link rel="icon" href="../../../xtra/favTNSI.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Saint Sauveur BTS SIO Bloc B2</title>
+        <title>Le transactionnel - Saint Sauveur BTS SIO Bloc B2</title>
       
     
     
-      <link rel="stylesheet" href="/sofaugeras/SIOB2/assets/stylesheets/main.472b142f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.472b142f.min.css">
       
         
-        <link rel="stylesheet" href="/sofaugeras/SIOB2/assets/stylesheets/palette.08040f6c.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.08040f6c.min.css">
         
       
       
@@ -40,8 +42,8 @@
     
     
     
-    <script src="/sofaugeras/SIOB2//xtra/webcomponentsjs/webcomponents-loader.js"></script>
-    <script src="/sofaugeras/SIOB2//xtra/gifplayer/gif-player.es6.js" defer async></script>
+    <script src="../../../xtra/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../../../xtra/gifplayer/gif-player.es6.js" defer async></script>
     <!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
@@ -55,11 +57,11 @@
       
     
     
-      <link rel="stylesheet" href="/sofaugeras/SIOB2/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="/sofaugeras/SIOB2/xtra/stylesheets/pyoditeur.css">
+      <link rel="stylesheet" href="../../../xtra/stylesheets/pyoditeur.css">
     
-    <script>__md_scope=new URL("/sofaugeras/SIOB2/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -99,6 +101,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#le-transactionnel" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -109,7 +116,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="/sofaugeras/SIOB2/." title="Saint Sauveur BTS SIO Bloc B2" class="md-header__button md-logo" aria-label="Saint Sauveur BTS SIO Bloc B2" data-md-component="logo">
+    <a href="../../.." title="Saint Sauveur BTS SIO Bloc B2" class="md-header__button md-logo" aria-label="Saint Sauveur BTS SIO Bloc B2" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Z"/></svg>
@@ -128,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Le transactionnel
             
           </span>
         </div>
@@ -227,7 +234,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/sofaugeras/SIOB2/." class="md-tabs__link">
+    <a href="../../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -242,7 +249,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/sofaugeras/SIOB2/1_Base_de_donnees/sommaire/" class="md-tabs__link">
+      <a href="../../../1_Base_de_donnees/sommaire/" class="md-tabs__link">
         Base de données
       </a>
     </li>
@@ -258,7 +265,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/sofaugeras/SIOB2/2_SQL%20Complexe/sommaire/" class="md-tabs__link">
+      <a href="../../../2_SQL%20Complexe/sommaire/" class="md-tabs__link">
         SQL complexe
       </a>
     </li>
@@ -274,7 +281,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/sofaugeras/SIOB2/3_UML/sommaire/" class="md-tabs__link">
+      <a href="../../../3_UML/sommaire/" class="md-tabs__link">
         UML
       </a>
     </li>
@@ -290,7 +297,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/sofaugeras/SIOB2/4_Laravel/sommaire/" class="md-tabs__link">
+      <a href="../../../4_Laravel/sommaire/" class="md-tabs__link">
         Laravel
       </a>
     </li>
@@ -300,13 +307,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/sommaire/" class="md-tabs__link">
+      <a href="../../sommaire/" class="md-tabs__link md-tabs__link--active">
         Programmation SQL
       </a>
     </li>
@@ -336,7 +345,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/sofaugeras/SIOB2/." title="Saint Sauveur BTS SIO Bloc B2" class="md-nav__button md-logo" aria-label="Saint Sauveur BTS SIO Bloc B2" data-md-component="logo">
+    <a href="../../.." title="Saint Sauveur BTS SIO Bloc B2" class="md-nav__button md-logo" aria-label="Saint Sauveur BTS SIO Bloc B2" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Z"/></svg>
@@ -367,7 +376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -408,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/1_Base_de_donnees/sommaire/" class="md-nav__link">
+      <a href="../../../1_Base_de_donnees/sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -448,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/1_Base_de_donnees/1.1_Listes_Piles_Files/cours/" class="md-nav__link">
+      <a href="../../../1_Base_de_donnees/1.1_Listes_Piles_Files/cours/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -462,7 +471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/1_Base_de_donnees/1.1_Listes_Piles_Files/Exercices/" class="md-nav__link">
+      <a href="../../../1_Base_de_donnees/1.1_Listes_Piles_Files/Exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -517,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/2_SQL%20Complexe/sommaire/" class="md-nav__link">
+      <a href="../../../2_SQL%20Complexe/sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -565,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/3_UML/sommaire/" class="md-nav__link">
+      <a href="../../../3_UML/sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -613,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/4_Laravel/sommaire/" class="md-nav__link">
+      <a href="../../../4_Laravel/sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -633,12 +642,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -661,7 +672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/sommaire/" class="md-nav__link">
+      <a href="../../sommaire/" class="md-nav__link">
         Sommaire
       </a>
     </li>
@@ -701,7 +712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/5.1_Procedures_stockees/cours/" class="md-nav__link">
+      <a href="../../5.1_Procedures_stockees/cours/" class="md-nav__link">
         Les procédures stockées
       </a>
     </li>
@@ -715,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/5.1_Procedures_stockees/exercices/" class="md-nav__link">
+      <a href="../../5.1_Procedures_stockees/exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -734,12 +745,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" checked>
       
       
       
@@ -760,11 +773,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/5.2_Transactions/cours/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Le transactionnel
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Le transactionnel
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#syntaxe" class="md-nav__link">
+    Syntaxe
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple" class="md-nav__link">
+    Exemple
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application" class="md-nav__link">
+    Application
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -809,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/5.3_curseurs/cours/" class="md-nav__link">
+      <a href="../../5.3_curseurs/cours/" class="md-nav__link">
         Les curseurs
       </a>
     </li>
@@ -823,7 +891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/5.3_curseurs/exercices/" class="md-nav__link">
+      <a href="../../5.3_curseurs/exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -870,7 +938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/5.4_Triggers_d%C3%A9clencheurs/cours/" class="md-nav__link">
+      <a href="../../5.4_Triggers_d%C3%A9clencheurs/cours/" class="md-nav__link">
         Les triggers ou déclencheurs
       </a>
     </li>
@@ -884,7 +952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sofaugeras/SIOB2/5_Programmation_SQL/5.4_Triggers_d%C3%A9clencheurs/exercices/" class="md-nav__link">
+      <a href="../../5.4_Triggers_d%C3%A9clencheurs/exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -917,7 +985,116 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+
+
+
+                  
+
+  <a href="https://github.com/sofaugeras/SIOB2/edit/main/docs/5_Programmation_SQL/5.2_Transactions/cours.md" title="Editer cette page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="le-transactionnel">Le transactionnel<a class="headerlink" href="#le-transactionnel" title="Permanent link">⚓︎</a></h1>
+<p>Les transactions sont une fonctionnalité absolument indispensable, permettant de sécuriser une application utilisant une base de données. Sans transactions, certaines opérations risqueraient d'être à <mark>moitié</mark> réalisées, et la moindre erreur, la moindre interruption pourraient avoir des conséquences énormes. En effet, les transactions permettent de regrouper des requêtes dans des blocs, et de faire en sorte que tout le bloc soit exécuté en une seule fois, cela afin de préserver l'intégrité des données de la base.
+<br />
+Une transaction permet d'exécuter un groupe d'instructions. Si pour une raison ou une autre l'une de ces instructions n'a pas pu être exécutée, tous le groupe d'instructions est annulé (le tout ou rien) :<br />
+▶️  Pour démarrer une transaction on utilise l'instruction <code>START TRANSACTION</code>
+▶️  Pour valider la transaction et rendre les traitements qui lui sont associés effectifs, on utilise l'instruction <code>COMMIT</code>
+▶️  interrompre une transaction en cours qui n'a pas encore été validée, on utilise l'instruction <code>ROLLBACK</code>
+▶️  Si plusieurs transactions peuvent être en cours, on peut leur attribuer des noms pour les distinguer</p>
+<h2 id="syntaxe">Syntaxe<a class="headerlink" href="#syntaxe" title="Permanent link">⚓︎</a></h2>
+<div class="highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">START</span><span class="w"> </span><span class="k">TRANSACTION</span><span class="w"></span>
+<span class="w">    </span><span class="p">[</span><span class="n">transaction_characteristic</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="n">transaction_characteristic</span><span class="p">]</span><span class="w"> </span><span class="p">...]</span><span class="w"></span>
+
+<span class="n">transaction_characteristic</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">WITH</span><span class="w"> </span><span class="n">CONSISTENT</span><span class="w"> </span><span class="n">SNAPSHOT</span><span class="w"></span>
+<span class="w">  </span><span class="o">|</span><span class="w"> </span><span class="k">READ</span><span class="w"> </span><span class="k">WRITE</span><span class="w"></span>
+<span class="w">  </span><span class="o">|</span><span class="w"> </span><span class="k">READ</span><span class="w"> </span><span class="k">ONLY</span><span class="w"></span>
+<span class="err">}</span><span class="w"></span>
+
+<span class="k">BEGIN</span><span class="w"> </span><span class="p">[</span><span class="k">WORK</span><span class="p">]</span><span class="w"></span>
+<span class="k">COMMIT</span><span class="w"> </span><span class="p">[</span><span class="k">WORK</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="k">AND</span><span class="w"> </span><span class="p">[</span><span class="k">NO</span><span class="p">]</span><span class="w"> </span><span class="k">CHAIN</span><span class="p">]</span><span class="w"> </span><span class="p">[[</span><span class="k">NO</span><span class="p">]</span><span class="w"> </span><span class="n">RELEASE</span><span class="p">]</span><span class="w"></span>
+<span class="k">ROLLBACK</span><span class="w"> </span><span class="p">[</span><span class="k">WORK</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="k">AND</span><span class="w"> </span><span class="p">[</span><span class="k">NO</span><span class="p">]</span><span class="w"> </span><span class="k">CHAIN</span><span class="p">]</span><span class="w"> </span><span class="p">[[</span><span class="k">NO</span><span class="p">]</span><span class="w"> </span><span class="n">RELEASE</span><span class="p">]</span><span class="w"></span>
+<span class="k">SET</span><span class="w"> </span><span class="n">autocommit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="mi">0</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">1</span><span class="err">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="exemple">Exemple<a class="headerlink" href="#exemple" title="Permanent link">⚓︎</a></h2>
+<div class="highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">START</span><span class="w"> </span><span class="k">TRANSACTION</span><span class="p">;</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">@</span><span class="n">A</span><span class="p">:</span><span class="o">=</span><span class="k">SUM</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">table1</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="k">type</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="k">UPDATE</span><span class="w"> </span><span class="n">table2</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">summary</span><span class="o">=@</span><span class="n">A</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="k">type</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="k">COMMIT</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h2 id="application">Application<a class="headerlink" href="#application" title="Permanent link">⚓︎</a></h2>
+<p>Supposons qu'il n'existe pas de contrainte clé étrangère entre le champ <code>NumCom</code> de la table <code>LigneCommande</code> et le champ <code>NumCom</code> de la <code>Commande</code>. On souhaite supprimer la commande numéro 5 ainsi que la liste de ces articles. <br />
+Le programme serait :</p>
+<p>```sql
+Delete from Commande where NumCom=5
+Delete from LigneCommande where NumCom=5
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Mais si, juste après l&#39;exécution de la première instruction et alors que la deuxième n&#39;a pas encore eu lieu, un problème survient (une coupure de courant par exemple) la base de données deviendra incohérente car on aura des lignes de commande pour une commande qui n&#39;existe pas.&lt;br /&gt;
+En présence d&#39;une transaction, le programme n&#39;ayant pas atteint l&#39;instruction Commit Tran, aurait annulé toutes les instructions depuis Begin Tran. Le programme devra être alors :
+
+ ```sql
+START TRANSACTION;
+Delete from Commande where NumCom=5
+Delete from LigneCommande where NumCom=5
+COMMIT;
+</code></pre></div></p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Dernière mise à jour:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">25 mars 2023</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+
+                
+<script src="../../../js/ide.js"></script>
+<style>
+    .jp-RenderedHTMLCommon p {
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+    .jp-RenderedHTMLCommon li {
+        font-size: .8rem;
+        line-height: 1.6;
+    }
+    .jp-RenderedHTMLCommon h1 {
+        margin: 0 0 1.25em;
+        color: var(--md-default-fg-color--light);
+        font-weight: 300;
+        font-size: 2em;
+        line-height: 1.3;
+        letter-spacing: -0.01em;
+    }
+    .jp-RenderedHTMLCommon h2 {
+        margin: 1.6em 0 .64em;
+        font-weight: 300;
+        font-size: 1.965em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
+    }
+    .jp-RenderedHTMLCommon h3 {
+        margin: 1.6em 0 .8em;
+        font-weight: 400;
+        font-size: 1.57em;
+        line-height: 1.5;
+        letter-spacing: -0.01em;
+    }
+    .jp-RenderedHTMLCommon hr {
+        border: none;
+    }
+</style>
 
               </article>
             </div>
@@ -933,6 +1110,42 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+      
+        
+        <a href="../../5.1_Procedures_stockees/exercices/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Exercices" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              Exercices
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../5.3_curseurs/cours/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Les curseurs" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              Les curseurs
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -993,10 +1206,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "/sofaugeras/SIOB2/", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate"], "search": "/sofaugeras/SIOB2/assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="/sofaugeras/SIOB2/assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
@@ -1008,13 +1221,13 @@
       
         <script src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
       
-        <script src="/sofaugeras/SIOB2/javascript/mermaid.js"></script>
+        <script src="../../../javascript/mermaid.js"></script>
       
-        <script src="/sofaugeras/SIOB2/javascript/mathjax.js"></script>
+        <script src="../../../javascript/mathjax.js"></script>
       
-        <script src="/sofaugeras/SIOB2/javascript/interpreter.js"></script>
+        <script src="../../../javascript/interpreter.js"></script>
       
-        <script src="/sofaugeras/SIOB2/javascript/ide.js"></script>
+        <script src="../../../javascript/ide.js"></script>
       
     
   </body>
