@@ -1178,14 +1178,15 @@ Contrairement aux requêtes préparées, qui ne sont gardées en mémoire que po
 <p><div class="highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">nom_procedure</span><span class="w"> </span><span class="p">([</span><span class="n">parametre1</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="n">parametre2</span><span class="p">,</span><span class="w"> </span><span class="p">...]])</span><span class="w"></span>
 <span class="n">corps</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">procédure</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
-exemple sur la base gesCom, pour afficher les articles en console : </p>
+exemple sur la base gesCom, pour afficher les articles en console : 
 <div class="highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">afficher_liste_articles</span><span class="p">()</span><span class="w"> </span>
 <span class="w">    </span><span class="c1">-- pas de paramètres dans les parenthèses</span>
 <span class="k">SELECT</span><span class="w"> </span><span class="n">Desart</span><span class="p">,</span><span class="w"> </span><span class="n">PUart</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="p">;</span><span class="w"></span>
-<span class="n">La</span><span class="w"> </span><span class="n">procédure</span><span class="w"> </span><span class="n">stockée</span><span class="w"> </span><span class="n">est</span><span class="w"> </span><span class="n">stockée</span><span class="w"> </span><span class="n">dans</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">données</span><span class="p">.</span><span class="w"></span>
-<span class="n">Pour</span><span class="w"> </span><span class="n">exécuter</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">procédure</span><span class="p">,</span><span class="w"> </span><span class="n">il</span><span class="w"> </span><span class="n">suffit</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">l</span><span class="err">’</span><span class="n">appeler</span><span class="w"> </span><span class="p">..</span><span class="w"></span>
-<span class="k">CALL</span><span class="w"> </span><span class="n">afficher_liste_articles</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
+La procédure stockée est stockée dans la base de données.
+Pour exécuter la procédure, il suffit de l’appeler ..
+<div class="highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">CALL</span><span class="w"> </span><span class="n">afficher_liste_articles</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+</code></pre></div></p>
 <h3 id="bloc-dinstructions">Bloc D’instructions<a class="headerlink" href="#bloc-dinstructions" title="Permanent link">⚓︎</a></h3>
 <p>Pour délimiter un bloc d'instructions (qui peut donc contenir plus d'une instruction), on utilise les mots <strong>BEGIN</strong>  et <strong>END</strong>.</p>
 <p><div class="highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">afficher_liste_articles</span><span class="p">()</span><span class="w"> </span>
@@ -1278,8 +1279,9 @@ Pour utiliser la procédure </p>
 <h3 id="affichage-dinformations">Affichage d’informations<a class="headerlink" href="#affichage-dinformations" title="Permanent link">⚓︎</a></h3>
 <p>Syntaxe :
 <div class="highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Elément_A_Afficher</span><span class="w"></span>
-
-<span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">IndexVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">PUart</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+exemple : </p>
+<p><div class="highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">IndexVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">PUart</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="p">);</span><span class="w"></span>
 <span class="k">SELECT</span><span class="w"> </span><span class="o">@</span><span class="n">IndexVar</span><span class="p">,</span><span class="w"> </span><span class="n">Desart</span><span class="w"></span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="p">;</span><span class="w"></span>
 <span class="k">SELECT</span><span class="w"> </span><span class="n">concat</span><span class="p">(</span><span class="ss">&quot;La variable est &quot;</span><span class="p">,</span><span class="w"> </span><span class="k">convert</span><span class="p">(</span><span class="o">@</span><span class="n">IndexVar</span><span class="p">,</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">));</span><span class="w"></span>
@@ -1610,7 +1612,7 @@ Elles permettent également de <strong>sécuriser une base de données</strong>.
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">25 mars 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">30 mars 2023</span>
       
     
   </small>

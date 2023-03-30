@@ -51,7 +51,7 @@ La base de données GestionCom  sera utilisée en appplication de ce cours est c
 
         N'oubliez pas de créer votre jeu de données au fur et à mesure pour tester les applications de cours
 
-1. [Procédures stockées](../5.1_Procédures_stockées/cours/) 
+1. [Procédures stockées](../5.1_Procedures_stockees/cours/) 
 2. [Le transactionnel](../5.2_Transactions/cours/) 
 3. [Les curseurs](../5.3_curseurs/cours/) 
 4. [Triggers et déclencheurs](../5.4_Triggers_declencheurs/cours/) 

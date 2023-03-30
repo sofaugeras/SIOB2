@@ -18,13 +18,14 @@ CREATE PROCEDURE nom_procedure ([parametre1 [, parametre2, ...]])
 corps de la procédure;
 ```
 exemple sur la base gesCom, pour afficher les articles en console : 
-
 ```sql
 CREATE PROCEDURE afficher_liste_articles() 
     -- pas de paramètres dans les parenthèses
 SELECT Desart, PUart FROM article;
+```
 La procédure stockée est stockée dans la base de données.
 Pour exécuter la procédure, il suffit de l’appeler ..
+```sql
 CALL afficher_liste_articles ;
 ```
 
@@ -154,7 +155,10 @@ SELECT Desart FROM article WHERE PUart = @IndexVar ;
 Syntaxe :
 ```sql
 SELECT Elément_A_Afficher
+```
+exemple : 
 
+```sql
 SET @IndexVar = (SELECT PUart FROM article);
 SELECT @IndexVar, Desart
 FROM article;
