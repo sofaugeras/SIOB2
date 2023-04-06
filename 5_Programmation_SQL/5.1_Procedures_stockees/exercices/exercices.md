@@ -40,9 +40,13 @@ Créer une procédure stockée nommée `SP_NbrArtCom` qui retourne le nombre d'a
 ??? question "Correction"
 
     ```sql
-    Create Procedure SP_NbrArtCom @NumCom int, @Nbr int output as
-    Set@Nbr = (Select count(NumArt) from LigneCommande where NumCom=@NumCom)
-
+    DELIMITER $
+    Create Procedure SP_NbrArtCom2 (IN Num int, OUT Nbr int)
+    begin
+        Select count(NumArt) INTO Nbr
+        from LigneCommande 
+        where NumCom=Num ;
+    end$
     --Exécuter cette procédure pour afficher le nombre d'articles de la commande numéro 1 :
     Declare @n int
     Exec SP_NbrArtCom 1, @n Output
@@ -72,7 +76,7 @@ Créer une procédure stockée `SP_NbrArticlesParCommande` qui calcule le nombre
     Exec SP_NbrArticlesParCommande
     ```
 
-### Exercice 5
+## Exercice 5
 
 Créer une procédure stockée nommée `SP_ComPeriode` qui affiche la liste des commandes effectuées entre deux dates données en paramètre 
 
@@ -94,7 +98,7 @@ Créer une procédure stockée nommée `SP_ComPeriode` qui affiche la liste des 
     Exec SP_ComPeriode @dd, @df
     ```
 
-### Exercice 6
+## Exercice 6
 
 Créer une procédure stockée nommée `SP_TypeComPeriode` qui affiche la liste des commandes effectuées entre deux dates passées en paramètres. En plus si le nombre de ces commandes est supérieur à 100, afficher *Période rouge*. Si le nombre de ces commandes est entre 50 et 100 afficher *Période jaune* sinon afficher *Période blanche* (exploiter la procédure précédente)
 
@@ -117,7 +121,7 @@ Créer une procédure stockée nommée `SP_TypeComPeriode` qui affiche la liste 
     End
     ```
 
-### Exercice 7
+## Exercice 7
 
 Créer une procédure stockée nommée `SP_EnregistrerLigneCom` qui reçoit un numéro de commande, un numéro d'article et la quantité commandée :<br />
 - Si l'article n'existe pas ou si la quantité demandée n'est pas disponible afficher un message d'erreur <br />

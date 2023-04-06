@@ -1,3 +1,8 @@
+!!! abstract "Compétences"
+    B2.3 SLAM Gérer les données
+    Développer des fonctionnalités applicatives au sein d’un système de gestion de base de données (relationnel ou non)
+    > Répondre aux incidents et aux demandes d'assistance et d'évolution
+
 !!! abstract "Bibliographie"
     - Cours de Transat SQL : Pr H.LAARAJ
     - Aide Transact-SQL à partir de SQL Server

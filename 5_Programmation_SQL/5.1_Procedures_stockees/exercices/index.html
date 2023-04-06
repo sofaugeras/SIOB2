@@ -787,32 +787,26 @@
     Exercice 4
   </a>
   
-    <nav class="md-nav" aria-label="Exercice 4">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercice-5" class="md-nav__link">
     Exercice 5
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#exercice-6" class="md-nav__link">
     Exercice 6
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#exercice-7" class="md-nav__link">
     Exercice 7
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1057,9 +1051,13 @@
 </details>
 <h2 id="exercice-3">Exercice 3<a class="headerlink" href="#exercice-3" title="Permanent link">⚓︎</a></h2>
 <p>Créer une procédure stockée nommée <code>SP_NbrArtCom</code> qui retourne le nombre d'articles d'une commande dont le numéro est donné en paramètre </p>
-<details class="question"><summary>Correction</summary><div class="highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">Create</span><span class="w"> </span><span class="k">Procedure</span><span class="w"> </span><span class="n">SP_NbrArtCom</span><span class="w"> </span><span class="o">@</span><span class="n">NumCom</span><span class="w"> </span><span class="nb">int</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">Nbr</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="k">output</span><span class="w"> </span><span class="k">as</span><span class="w"></span>
-<span class="k">Set</span><span class="o">@</span><span class="n">Nbr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">Select</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="n">NumArt</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">LigneCommande</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">NumCom</span><span class="o">=@</span><span class="n">NumCom</span><span class="p">)</span><span class="w"></span>
-
+<details class="question"><summary>Correction</summary><div class="highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="err">$</span><span class="w"></span>
+<span class="k">Create</span><span class="w"> </span><span class="k">Procedure</span><span class="w"> </span><span class="n">SP_NbrArtCom2</span><span class="w"> </span><span class="p">(</span><span class="k">IN</span><span class="w"> </span><span class="n">Num</span><span class="w"> </span><span class="nb">int</span><span class="p">,</span><span class="w"> </span><span class="k">OUT</span><span class="w"> </span><span class="n">Nbr</span><span class="w"> </span><span class="nb">int</span><span class="p">)</span><span class="w"></span>
+<span class="k">begin</span><span class="w"></span>
+<span class="w">    </span><span class="k">Select</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="n">NumArt</span><span class="p">)</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Nbr</span><span class="w"></span>
+<span class="w">    </span><span class="k">from</span><span class="w"> </span><span class="n">LigneCommande</span><span class="w"> </span>
+<span class="w">    </span><span class="k">where</span><span class="w"> </span><span class="n">NumCom</span><span class="o">=</span><span class="n">Num</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="k">end</span><span class="err">$</span><span class="w"></span>
 <span class="c1">--Exécuter cette procédure pour afficher le nombre d&#39;articles de la commande numéro 1 :</span>
 <span class="k">Declare</span><span class="w"> </span><span class="o">@</span><span class="n">n</span><span class="w"> </span><span class="nb">int</span><span class="w"></span>
 <span class="k">Exec</span><span class="w"> </span><span class="n">SP_NbrArtCom</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">n</span><span class="w"> </span><span class="k">Output</span><span class="w"></span>
@@ -1085,7 +1083,7 @@
 <span class="k">Exec</span><span class="w"> </span><span class="n">SP_NbrArticlesParCommande</span><span class="w"></span>
 </code></pre></div>
 </details>
-<h3 id="exercice-5">Exercice 5<a class="headerlink" href="#exercice-5" title="Permanent link">⚓︎</a></h3>
+<h2 id="exercice-5">Exercice 5<a class="headerlink" href="#exercice-5" title="Permanent link">⚓︎</a></h2>
 <p>Créer une procédure stockée nommée <code>SP_ComPeriode</code> qui affiche la liste des commandes effectuées entre deux dates données en paramètre </p>
 <details class="question"><summary>Correction</summary><div class="highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">Create</span><span class="w"> </span><span class="k">Procedure</span><span class="w"> </span><span class="n">SP_ComPeriode</span><span class="w"> </span><span class="o">@</span><span class="n">DateD</span><span class="w"> </span><span class="n">DateTime</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">DateF</span><span class="w"> </span><span class="n">DateTime</span><span class="w"> </span><span class="k">as</span><span class="w"></span>
 <span class="k">Select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">Commande</span><span class="w"> </span><span class="k">Where</span><span class="w"> </span><span class="n">datcom</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="o">@</span><span class="n">dateD</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="o">@</span><span class="n">DateF</span><span class="w"></span>
@@ -1102,7 +1100,7 @@
 <span class="k">Exec</span><span class="w"> </span><span class="n">SP_ComPeriode</span><span class="w"> </span><span class="o">@</span><span class="n">dd</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">df</span><span class="w"></span>
 </code></pre></div>
 </details>
-<h3 id="exercice-6">Exercice 6<a class="headerlink" href="#exercice-6" title="Permanent link">⚓︎</a></h3>
+<h2 id="exercice-6">Exercice 6<a class="headerlink" href="#exercice-6" title="Permanent link">⚓︎</a></h2>
 <p>Créer une procédure stockée nommée <code>SP_TypeComPeriode</code> qui affiche la liste des commandes effectuées entre deux dates passées en paramètres. En plus si le nombre de ces commandes est supérieur à 100, afficher <em>Période rouge</em>. Si le nombre de ces commandes est entre 50 et 100 afficher <em>Période jaune</em> sinon afficher <em>Période blanche</em> (exploiter la procédure précédente)</p>
 <details class="question"><summary>Correction</summary><div class="highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">Create</span><span class="w"> </span><span class="k">Procedure</span><span class="w"> </span><span class="n">SP_TypeComPeriode</span><span class="w"> </span><span class="o">@</span><span class="n">DateD</span><span class="w"> </span><span class="n">DateTime</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">DateF</span><span class="w"> </span><span class="n">DateTime</span><span class="w"> </span><span class="k">as</span><span class="w"></span>
 <span class="k">Exec</span><span class="w"> </span><span class="n">SP_ComPeriode</span><span class="w"> </span><span class="o">@</span><span class="n">DateD</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">DateF</span><span class="w"></span>
@@ -1120,7 +1118,7 @@
 <span class="k">End</span><span class="w"></span>
 </code></pre></div>
 </details>
-<h3 id="exercice-7">Exercice 7<a class="headerlink" href="#exercice-7" title="Permanent link">⚓︎</a></h3>
+<h2 id="exercice-7">Exercice 7<a class="headerlink" href="#exercice-7" title="Permanent link">⚓︎</a></h2>
 <p>Créer une procédure stockée nommée <code>SP_EnregistrerLigneCom</code> qui reçoit un numéro de commande, un numéro d'article et la quantité commandée :<br />
 - Si l'article n'existe pas ou si la quantité demandée n'est pas disponible afficher un message d'erreur <br />
 - Si la commande introduite en paramètre n'existe pas, la créer <br />
@@ -1146,7 +1144,7 @@
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">30 mars 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">6 avril 2023</span>
       
     
   </small>
