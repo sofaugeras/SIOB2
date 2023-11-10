@@ -14,9 +14,9 @@
 
 La base de données GestionCom  sera utilisée en appplication de ce cours est comme suivante :
 
- ![schéma UML](5.1_Procedures_stockees/data/gescom_UML.jpg){: .center width=50%}
+ ![schéma UML](./5.1_Procedures_stockees/data/gescom_UML.jpg){: .center width=50%}
 
- ![Modèle logique](5.1_Procedures_stockees/data/gescom_MLD.jpg){: .center width=50%}
+ ![Modèle logique](./5.1_Procedures_stockees/data/gescom_MLD.jpg){: .center width=50%}
 
 
 !!! question "Script de création de la base GESCOM"
@@ -28,8 +28,7 @@ La base de données GestionCom  sera utilisée en appplication de ce cours est c
         - 	📌les tables InnoDB sont transactionnelles, donc supportent les transactions.<br />
 
     === "Correction"
-        le script en téléchargement [ici](data/gescom2.sql)
-
+       
         ```sql
         USE gescom;
         CREATE TABLE COMMANDE (
@@ -56,8 +55,8 @@ La base de données GestionCom  sera utilisée en appplication de ce cours est c
 
         N'oubliez pas de créer votre jeu de données au fur et à mesure pour tester les applications de cours
 
-1. [Procédures stockées](../5.1_Procedures_stockees/cours/) 
-2. [Le transactionnel](../5.2_Transactions/cours/) 
-3. [Les curseurs](../5.3_curseurs/cours/) 
-4. [Triggers et déclencheurs](../5.4_Triggers_declencheurs/cours/) 
+1. [Procédures stockées](./5.1_Procedures_stockees/cours.md) 
+2. [Le transactionnel](./5.2_Transactions/cours.md) 
+3. [Les curseurs](./5.3_curseurs/cours.md) 
+4. [Triggers et déclencheurs](./5.4_Triggers_déclencheurs/cours.md) 
 
