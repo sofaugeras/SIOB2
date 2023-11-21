@@ -165,7 +165,8 @@ Vous avez défini votre première variable c'est bien. Mais pour l'instant rien 
 <br />
 Pour que quelque chose s’affiche :<br />
 
-:arrow_formard: Éditer le fichier routes/web.php, la ligne Route en :
+:arrow_forward: Éditer le fichier routes/web.php, la ligne Route en :
+
 ```php 
 Route::get('/welcome', function () {
     return view('welcome', ['titre' => 'mon premier exemple.']);

@@ -804,7 +804,7 @@
         
   
   <span class="md-ellipsis">
-    4.2.1 initialisation
+    Introduction
   </span>
   
 
@@ -1458,13 +1458,13 @@ La syntaxe <strong>«blade»</strong> est la suivante <code>{{ $titre }}</code>.
 Vous avez défini votre première variable c'est bien. Mais pour l'instant rien n'est modifié… 
 <br />
 Pour que quelque chose s’affiche :<br /></p>
-<p>:arrow_formard: Éditer le fichier routes/web.php, la ligne Route en :
+<p><img alt="▶" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/25b6.svg" title=":arrow_forward:" /> Éditer le fichier routes/web.php, la ligne Route en :</p>
 <div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">Route::get(&#39;/welcome&#39;, function () {</span>
 <span class="x">    return view(&#39;welcome&#39;, [&#39;titre&#39; =&gt; &#39;mon premier exemple.&#39;]);</span>
 <span class="x">})-&gt; name(&#39;welcome&#39;);</span>
 <span class="x">ou</span>
 <span class="x">Route::view(&#39;/welcome&#39;, &#39;welcome&#39;, [&#39;titre&#39; =&gt; &#39;mon premier exemple.&#39;]);</span>
-</code></pre></div></p>
+</code></pre></div>
 <p>💡 Vous pouvez également appeler des fonctions dans les templates, exemple <code>{{ time() }}</code>. Tester cette fonction en ajoutant :</p>
 <div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&lt;p&gt;Le Timestamp est {{ time() }}&lt;/p&gt;</span>
 </code></pre></div>

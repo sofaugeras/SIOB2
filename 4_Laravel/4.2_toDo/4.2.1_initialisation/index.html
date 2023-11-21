@@ -26,7 +26,7 @@
     
     
       
-        <title>4.2.1 initialisation - Saint Sauveur BTS SIO Bloc B2</title>
+        <title>Introduction - Saint Sauveur BTS SIO Bloc B2</title>
       
     
     
@@ -106,6 +106,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#introduction" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -136,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              4.2.1 initialisation
+              Introduction
             
           </span>
         </div>
@@ -791,12 +796,14 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    4.2.1 initialisation
+    Introduction
   </span>
   
 
@@ -1275,96 +1282,279 @@
   
 
 
-  <h1>4.2.1 initialisation</h1>
-
-<p>Introduction
-Dans ce TP nous allons réaliser une application / site web, le but de cette application/site web est de faire de la prise de note de « TODO » ou aussi appelé liste de tâches.
-Une TODO List est un procédé qui se veut simple et efficace pour gérer les tâches d'un projet. Ces tâches peuvent être indépendantes ou devoir, au contraire, être accomplies dans un certain ordre.
-Voilà la liste des fonctionnalités de l’application que l'on va créer :
-•   Lister les tâches.
-•   Ajouter une tâche.
-•   Marquer comme terminé une tâche.
-•   Suppression d'une tâche.
-Technologie
-Dans ce TP nous allons utiliser les technologies suivantes :
-•   Laravel (Framework PHP)
-•   ORM Eloqent
-•   Bootstrap 4 (Framework HTML / CSS / JS)
-•   NodeJS (Utilisation de Webpack)
-Initialiser le projet
-La première étape lors d'un projet Laravel est la création de la structure avec une simple ligne de commande, dans notre cas :
-✋ Attention, le projet va être créé dans le dossier laravel-todo dans le dossier courant.</p>
-<blockquote>
-<p>laravel new laravel-todo
-Crafting application...
-Loading composer repositories with package information
-Installing dependencies (including require-dev) from lock file
-[…]
-La création prend environ 1 minute, un certains nombres de librairies sont téléchargées. Une fois terminé, prenez quelques instants pour regarder les fichiers qui ont été créés.
-Questions
-•   Où sont les librairies ?
-Les vendor représentent les bibliothèques tierce qui sont nécessaires au projet mais qui sont des ressources externe, c'est notamment le nom utiliser par le dossier ou sont stocker les dépendances téléchargées via le package manager le plus utiliser de php : composer
-•   Quel est l'intérêt à votre avis d'utiliser un outil pour initialiser un projet ?
-Gain de temps, d’efficacité, non redondance des taches, automatisation de ce qui peut l’être.
-Configurer le projet, le .env
-Le projet qui vient d'être créé est « générique » c'est à dire qu'il ne possède aucune personnalisation et peut donc servir de base quelques soit votre développement.
-La première étape est donc d'éditer le fichier .env pour configurer les options de base de votre projet tel que :
-•   Le nom : ToDoList
-•   Le type de base de données
-•   …
-Le reste du fichier .env
-Nous n'allons pas toucher aux autres paramètres mais certains sont tout de même intéressants. Je vous laisse donc consulter la documentation en ligne de laravel.
-Conception de la base de données
-Voilà à quoi va ressembler notre base de données :
-TODO (id, texte, termine, timestamp)</p>
-</blockquote>
-<p>Création de la « migration »
-Laravel utilise un ORM pour manipuler la base de données. Pour rappel un ORM est
-Un mapping objet-relationnel (en anglais object-relational mapping ou ORM) est une technique de programmation informatique qui crée l'illusion d'une base de données orientée objet à partir d'une base de données relationnelle en définissant des correspondances entre cette base de données et les objets du langage utilisé.
-L'ORM utilisé par Laravel est Eloquent, il est à la fois puissant et relativement simple. Autrement dit avec un ORM dans la plus part des cas vous n'écrivez plus de requête SQL mais vous manipulez des objets représentant la base de données.
-Comme pour la création du projet, la création de la définition de la table « todos » va se faire via une requête dans votre terminal en utilisant Artisan.</p>
-<p>php artisan make:migration create_todo_table --create=todo
-ou
-php artisan migration :install
-L’option --create=todo dans la première méthode permet d’indiquer le nom du modèle de la table à créer.
-✋ Le contenu du fichier créé est fictif, il est là pour illustrer comment travailler. Nous allons le modifier pour mettre les informations relatives à notre table.
-La commande vient de créer un nouveau fichier dans le dossier database/migration. Dans mon cas le fichier se nomme :
-/laravel-todo/database/migrations/2018_11_12_102501_create_todo_table.php
-Questions
-•   Il y a deux autres fichiers dans votre répertoire de migration. A quoi servent ils ?
-o   table users : c’est une migration de base pour créer une table des utilisateurs,
-o   table password_resets : c’est une migration liée à la précédente qui permet de gérer le renouvellement des mots de passe en toute sécurité.
-•   Quels sont les champs par défaut dans la création d’une table simple ?
-Id et timestamp
-•   Pourquoi ?
-Nous allons définir notre schéma (à savoir la définition de la table) pour y ajouter les 2 colonnes qui nous serons utiles texte et termine. L'ORM étant une librairie objet, la définition de nouveaux champs se fait via une méthode, dans notre cas :
-    $table-&gt;string('texte');
-    $table-&gt;boolean('termine');
-Ajouter les deux champs dans la méthode up du fichier.
-Questions
-•   À quoi correspond la méthode up et down ?
-•   L'ordre des champs est-il important ?
-Création en base
-Maintenant que le script est terminé, nous allons indiquer à Laravel d'effectuer « la migration » c'est-à-dire de transformer votre définition PHP en instruction SQL pour créer réellement la base de données. Retour dans la ligne de commande :</p>
-<blockquote>
-<p>php artisan migrate:install
-[…]
-Migrating: 2018_09_09_150442_create_todos_table
-Migrated:  2018_09_09_150442_create_todos_table
-Vérifier votre console et votre travail ! 
-ERREUR :
-Remplacer dans config/database.php
-    'charset' =&gt; 'utf8mb4',
-        'collation' =&gt; 'utf8mb4_unicode_ci',
-Par </p>
-</blockquote>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>    &#39;charset&#39; =&gt; &#39;utf8&#39;,
-    &#39;collation&#39; =&gt; &#39;utf8_unicode_ci&#39;,
+<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">⚓︎</a></h1>
+<p>Dans ce TP nous allons réaliser une application web, « TODO » ou aussi appelé liste de tâches.<br />
+Une TODO List est un procédé qui se veut simple et efficace pour gérer les tâches d'un projet. Ces tâches peuvent être indépendantes ou devoir, au contraire, être accomplies dans un certain ordre. Ces tâches pourront également être catégorisées (pro, perso, famille, ...).<br />
+Voilà la liste des fonctionnalités de l’application que l'on va créer :<br />
+- Lister les tâches.<br />
+- Ajouter une tâche.<br />
+- Marquer comme terminé une tâche.<br />
+- Suppression d'une tâche.<br /></p>
+<div class="admonition note">
+<p class="admonition-title">Technologie</p>
+<p>Dans ce TP nous allons utiliser les technologies suivantes :<br />
+- Laravel (Framework PHP)<br />
+- ORM Eloqent<br />
+- Bootstrap 4 (Framework HTML / CSS / JS)<br />
+- NodeJS (Utilisation de Webpack)</p>
+</div>
+<h1 id="initialiser-le-projet">Initialiser le projet<a class="headerlink" href="#initialiser-le-projet" title="Permanent link">⚓︎</a></h1>
+<p>La première étape lors d'un projet Laravel est la création de la structure avec une simple ligne de commande, dans notre cas :
+✋ Attention, le projet va être créé dans le dossier todo2024 <strong>dans le dossier courant</strong>.</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>composer create-project --prefer-dist laravel/laravel todo2024 
 </code></pre></div>
-<p>Votre base de données est maintenant prête à être utilisée. Vous pouvez aller voir le contenu grâce à phpMyAdmin.</p>
-<p>COURS :
-L’ORM eloquent permet de créer une correspondance entre les classes PHP et la base de données. On peut créer une classe maTable associée à une table maTable. On pourra accéder aux colonnes de la table au travers des propriétés de la classe et bénéficier de méthodes pour charger un élément ou une liste d’éléments, enregistrer, mettre à jour …
-Exemple :
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Question</label><label for="__tabbed_1_2">réponse</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Où sont les librairies ?</p>
+</div>
+<div class="tabbed-block">
+<p>Les vendor représentent les bibliothèques tierce qui sont nécessaires au projet mais qui sont des ressources externe, c'est notamment le nom utiliser par le dossier ou sont stocker les dépendances téléchargées via le package manager le plus utiliser de php : composer</p>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">question</label><label for="__tabbed_2_2">Réponse</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Quel est l'intérêt à votre avis d'utiliser un outil pour initialiser un projet ?</p>
+</div>
+<div class="tabbed-block">
+<p>Gain de temps, d’efficacité, non redondance des taches, automatisation de ce qui peut l’être.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Configurer le projet</p>
+<p>Configurer le projet : <strong>.env</strong><br />
+Le projet qui vient d'être créé est « générique » c'est à dire qu'il ne possède aucune personnalisation et peut donc servir de base quelques soit votre développement.<br />
+La première étape est donc d'éditer le fichier <code>.env</code> pour configurer les options de base de votre projet tel que :<br />
+- Le nom : ToDoList<br />
+- Le type de base de données<br />
+- …<br /></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Sécurité</p>
+<p><img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f6a7.svg" title=":construction:" /> Créer une base de données <code>todo2024</code> sous MySQL <br />
+<img alt="💥" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4a5.svg" title=":boom:" /> créer un user de base de données à périmètre restreint pour votre application
+<div class="language-sql highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">&#39;todo&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="n">mysql_native_password</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s1">&#39;***&#39;</span><span class="p">;</span><span class="k">GRANT</span><span class="w"> </span><span class="k">SELECT</span><span class="p">,</span><span class="w"> </span><span class="k">INSERT</span><span class="p">,</span><span class="w"> </span><span class="k">UPDATE</span><span class="p">,</span><span class="w"> </span><span class="k">DELETE</span><span class="p">,</span><span class="w"> </span><span class="k">CREATE</span><span class="p">,</span><span class="w"> </span><span class="k">DROP</span><span class="p">,</span><span class="w"> </span><span class="n">FILE</span><span class="p">,</span><span class="w"> </span><span class="k">INDEX</span><span class="p">,</span><span class="w"> </span><span class="k">ALTER</span><span class="p">,</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TEMPORARY</span><span class="w"> </span><span class="n">TABLES</span><span class="p">,</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="p">,</span><span class="w"> </span><span class="n">EVENT</span><span class="p">,</span><span class="w"> </span><span class="k">TRIGGER</span><span class="p">,</span><span class="w"> </span><span class="k">SHOW</span><span class="w"> </span><span class="k">VIEW</span><span class="p">,</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">ROUTINE</span><span class="p">,</span><span class="w"> </span><span class="k">ALTER</span><span class="w"> </span><span class="k">ROUTINE</span><span class="p">,</span><span class="w"> </span><span class="k">EXECUTE</span><span class="w"> </span>
+<span class="k">ON</span><span class="w"> </span><span class="o">*</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;todo&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="w"> </span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">`</span><span class="n">todo2024</span><span class="o">`</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;todo&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="p">;</span><span class="w"> </span>
+</code></pre></div></p>
+</div>
+<p>Le reste du fichier .env : Nous n'allons pas toucher aux autres paramètres mais certains sont tout de même intéressants. Je vous laisse donc consulter la documentation en ligne de laravel.<br /></p>
+<h1 id="conception-de-la-base-de-donnees">Conception de la base de données<a class="headerlink" href="#conception-de-la-base-de-donnees" title="Permanent link">⚓︎</a></h1>
+<p><img alt="modélisation Todo" src="../data/todo.png" /></p>
+<p>Ce qui donnera le calcul du MPD suivant : <br />
+TODO (<u>id</u>, texte, termine,important timestamp)<br />
+CATEGORIE(<u>idcat</u>, libelle)<br />
+CATEGORISE (<u>id</u>,<u>idcat</u>)<br /></p>
+<h2 id="creation-de-la-migration">Création de la « migration »<a class="headerlink" href="#creation-de-la-migration" title="Permanent link">⚓︎</a></h2>
+<p>Laravel utilise un <strong>ORM</strong> pour manipuler la base de données. Pour rappel un ORM est Un <strong>mapping objet-relationnel</strong> (en anglais object-relational mapping) est une technique de programmation informatique qui crée l'illusion d'une base de données orientée objet à partir d'une base de données relationnelle en définissant des correspondances entre cette base de données et les objets du langage utilisé.<br />
+L'ORM utilisé par Laravel est <strong>Eloquent</strong>, il est à la fois puissant et relativement simple. Autrement dit avec un ORM dans la plus part des cas vous n'écrivez plus de requête SQL mais vous manipulez des objets représentant la base de données.<br /></p>
+<p>Comme pour la création du projet, la création de la définition de vos table va se faire via une requête dans votre terminal en utilisant Artisan.</p>
+<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>php artisan make:migration create_todo_table --create=todo
+</code></pre></div>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>INFO  Migration [C:\wamp64\www\todo2024\database\migrations/2023_11_21_084423_create_todo_table.php] created successfully.
+</code></pre></div></p>
+<p>L’option <code>--create=todo</code> dans la première méthode permet d’indiquer le nom du modèle de la table à créer.<br />
+La commande vient de créer un nouveau fichier dans le dossier database/migration. Dans mon cas le fichier se nomme :
+/todo2024/database/migrations/2023_11_21_084423_create_todo_table.php</p>
+<details class="note">
+<summary>contenu du fichier</summary>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+
+    <span class="k">use</span> <span class="nx">Illuminate\Database\Migrations\Migration</span><span class="p">;</span>
+    <span class="k">use</span> <span class="nx">Illuminate\Database\Schema\Blueprint</span><span class="p">;</span>
+    <span class="k">use</span> <span class="nx">Illuminate\Support\Facades\Schema</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="k">new</span> <span class="k">class</span> <span class="k">extends</span> <span class="nx">Migration</span>
+    <span class="p">{</span>
+        <span class="sd">/**</span>
+<span class="sd">         * Run the migrations.</span>
+<span class="sd">         */</span>
+        <span class="k">public</span> <span class="k">function</span> <span class="nf">up</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span>
+        <span class="p">{</span>
+            <span class="nx">Schema</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;todo&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nx">Blueprint</span> <span class="nv">$table</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">id</span><span class="p">();</span>
+                <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">timestamps</span><span class="p">();</span>
+            <span class="p">});</span>
+        <span class="p">}</span>
+
+        <span class="sd">/**</span>
+<span class="sd">         * Reverse the migrations.</span>
+<span class="sd">         */</span>
+        <span class="k">public</span> <span class="k">function</span> <span class="nf">down</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span>
+        <span class="p">{</span>
+            <span class="nx">Schema</span><span class="o">::</span><span class="na">dropIfExists</span><span class="p">(</span><span class="s1">&#39;todo&#39;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">};</span>
+</code></pre></div>
+</details>
+<p>✋ Le contenu du fichier créé est fictif, il est là pour illustrer comment travailler. Nous allons le modifier pour mettre les informations relatives à notre table.</p>
+<details class="question">
+<summary>Questions</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Question</label><label for="__tabbed_3_2">réponse</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Il y a d'autres fichiers dans votre répertoire de migration. A quoi servent ils ?
+<img alt="migration" src="../data/migration.png" />)</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>table users : c’est une migration de base pour créer une table des utilisateurs,</li>
+<li>table password_resets : c’est une migration liée à la précédente qui permet de gérer le renouvellement des mots de passe en toute sécurité.</li>
+</ul>
+</div>
+</div>
+</div>
+</details>
+<details class="question">
+<summary>Questions</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Question</label><label for="__tabbed_4_2">réponse</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Quels sont les champs par défaut dans la création d’une table simple ?</p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Id" src="https://laravel.com/docs/10.x/migrations#column-method-id" /> et <img alt="timestamp" src="https://laravel.com/docs/10.x/migrations#column-method-timestamps" /></p>
+<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">$table-&gt;integer(&#39;id&#39;);</span>
+<span class="x">$table-&gt;timestamps();</span>
+</code></pre></div>
+les deux champs ont une syntaxe particulière. Ce sont des fonctions propres à Laravel. Il en existe beaucoup dans la <img alt="documentation" src="https://laravel.com/docs/10.x/migrations#column-method-timestamps" />.</p>
+</div>
+</div>
+</div>
+</details>
+<p>Nous allons définir notre schéma  pour y ajouter les 3 colonnes qui nous serons utiles <strong>texte, termine et important</strong>. L'ORM étant une librairie objet, la définition de nouveaux champs se fait via une méthode, dans notre cas :</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```php
+$table-&gt;string(&#39;texte&#39;);
+$table-&gt;boolean(&#39;termine&#39;)-&gt;default(0);
+$table-&gt;boolean(&#39;important&#39;)-&gt;default(0);
+```
+</code></pre></div>
+<details class="note">
+<summary>fonction up</summary>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
+<span class="x">{</span>
+<span class="x">    Schema::create(&#39;todo&#39;, function (Blueprint $table) {</span>
+<span class="x">        $table-&gt;integer(&#39;id&#39;);</span>
+<span class="x">        $table-&gt;string(&#39;texte&#39;);</span>
+<span class="x">        $table-&gt;boolean(&#39;termine&#39;)-&gt;default(0);</span>
+<span class="x">        $table-&gt;boolean(&#39;important&#39;)-&gt;default(0);</span>
+<span class="x">        $table-&gt;primary(&#39;id&#39;);</span>
+<span class="x">        $table-&gt;timestamps();</span>
+<span class="x">    });</span>
+<span class="x">}</span>
+</code></pre></div>
+</details>
+<p>Ajouter les deux champs dans la méthode <code>up</code> du fichier.</p>
+<details class="question">
+<summary>Questions</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Question</label><label for="__tabbed_5_2">Réponses</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>À quoi correspond la méthode up et down ?<br />
+L'ordre des champs est-il important ?</p>
+</div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+</details>
+<h2 id="creation-en-base">Création en base<a class="headerlink" href="#creation-en-base" title="Permanent link">⚓︎</a></h2>
+<p>Maintenant que le script est terminé, nous allons indiquer à Laravel d'effectuer « la migration » c'est-à-dire de transformer votre définition PHP en instruction SQL pour créer réellement la base de données. </p>
+<div class="admonition warning">
+<p class="admonition-title">Checklist</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> base de données <code>todo</code> créée</li>
+<li class="task-list-item"><input type="checkbox"/> user base de donnée créé</li>
+<li class="task-list-item"><input type="checkbox"/> .env mis à jour</li>
+<li class="task-list-item"><input type="checkbox"/> métode <code>up</code> de la migration mise à jour</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title"><img alt="💥" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4a5.svg" title=":boom:" /></p>
+<p>Remplacer dans config/database.php</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&#39;charset&#39; =&gt; &#39;utf8mb4&#39;,</span>
+<span class="x">&#39;collation&#39; =&gt; &#39;utf8mb4_unicode_ci&#39;,</span>
+<span class="x">#Par </span>
+<span class="x">&#39;charset&#39; =&gt; &#39;utf8&#39;,</span>
+<span class="x">&#39;collation&#39; =&gt; &#39;utf8_unicode_ci&#39;,</span>
+<span class="x">#et </span>
+<span class="x">&#39;engine&#39; =&gt; null,</span>
+<span class="x">#par</span>
+<span class="x">&#39;engine&#39; =&gt; &#39;InnoDB&#39;,</span>
+</code></pre></div>
+</div>
+<p>Retour dans la ligne de commande :</p>
+<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>php artisan migrate:fresh  
+
+  Dropping all tables ..................................................................................................... 146ms DONE
+
+   INFO  Preparing database.
+
+  Creating migration table ................................................................................................. 16ms DONE  
+
+   INFO  Running migrations.
+
+  2014_10_12_000000_create_users_table ..................................................................................... 21ms DONE  
+  2014_10_12_100000_create_password_reset_tokens_table ..................................................................... 13ms DONE  
+  2019_08_19_000000_create_failed_jobs_table ............................................................................... 22ms DONE  
+  2019_12_14_000001_create_personal_access_tokens_table .................................................................... 21ms DONE  
+  2023_11_21_084423_create_todo_table ...................................................................................... 21ms DONE  
+</code></pre></div>
+Vérifier votre console et votre travail dans phpMyAdmin. Puis passer vos tables todo et user en moteur InnoDB au lieu de MyISAM.
+<img alt="innoDB" src="../data/innoDB.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">A faire</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Modèle relationnel</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Faites la même chose avec les tables CATEGORIE et CATEGORISE
+Sachant que CATEGORISE possède également deux clés étrangères.</p>
+</div>
+</div>
+</div>
+<p>=== "Correction
+    La difficulté ici est de créer la bonne relation entre clés primaires et clés étrangères.<br />
+    Pour rappel, en Base de données, on ne peut référencer un champ en clé étrangère vers une clé primaire que si les deux champs sont exactement du MEME type. or ici, si on utilise <code>id()</code> pour catégorie, on aura du mal à construire la clé étrangère dans la table CATEGORISE</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```php
+public function up(): void
+{
+    Schema::create(&#39;categorie&#39;, function (Blueprint $table) {
+        $table-&gt;integer(&#39;idcat&#39;);
+        $table-&gt;string(&#39;libelle&#39;);
+        $table-&gt;primary(&#39;idcat&#39;);
+        $table-&gt;timestamps();
+    });
+}
+
+public function up(): void
+{
+    Schema::create(&#39;categorise&#39;, function (Blueprint $table) {
+        $table-&gt;integer(&#39;idcat&#39;);
+        $table-&gt;integer(&#39;idtodo&#39;);
+
+        $table-&gt;foreign(&#39;idcat&#39;)-&gt;references(&#39;idcat&#39;)-&gt;on(&#39;categorie&#39;);
+        $table-&gt;foreign(&#39;idtodo&#39;)-&gt;references(&#39;id&#39;)-&gt;on(&#39;todo&#39;);
+
+        $table-&gt;primary([&#39;idcat&#39;, &#39;idtodo&#39;]);
+        $table-&gt;timestamps();
+    });
+}
+</code></pre></div>
+<p>```</p>
+</div>
+<p>Votre base de données est maintenant prête à être utilisée. Vous pouvez aller voir le contenu grâce à phpMyAdmin. Verifier votre structures et vos contraintes.</p>
+<p>!!! abstract "Cours" :</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>L’ORM eloquent permet de créer une correspondance entre les classes PHP et la base de données. On peut créer une **classe**`maTable` associée à une **table** `maTable`. On pourra accéder aux colonnes de la table au travers des propriétés de la classe et bénéficier de méthodes pour charger un élément ou une liste d’éléments, enregistrer, mettre à jour …
+</code></pre></div>
+<p>Exemple :
 $user = User ::find(5) ;
 Echo $user-&gt;name ;
 $user-&gt;age=32 ;
