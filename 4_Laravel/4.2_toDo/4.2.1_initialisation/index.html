@@ -1434,11 +1434,15 @@ les deux champs ont une syntaxe particulière. Ce sont des fonctions propres à 
 </details>
 <p>Nous allons définir notre schéma  pour y ajouter les 3 colonnes qui nous serons utiles <strong>texte, termine et important</strong>. L'ORM étant une librairie objet, la définition de nouveaux champs se fait via une méthode, dans notre cas :</p>
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```php
+$table-&gt;integer(&#39;id&#39;);
 $table-&gt;string(&#39;texte&#39;);
 $table-&gt;boolean(&#39;termine&#39;)-&gt;default(0);
 $table-&gt;boolean(&#39;important&#39;)-&gt;default(0);
+#Déclaraction de la clé primaire
+$table-&gt;primary(&#39;id&#39;);
 ```
 </code></pre></div>
+<p>Ajouter les champs dans la méthode <code>up</code> du fichier.</p>
 <details class="note">
 <summary>fonction up</summary>
 <div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
@@ -1454,25 +1458,12 @@ $table-&gt;boolean(&#39;important&#39;)-&gt;default(0);
 <span class="x">}</span>
 </code></pre></div>
 </details>
-<p>Ajouter les deux champs dans la méthode <code>up</code> du fichier.</p>
-<details class="question">
-<summary>Questions</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Question</label><label for="__tabbed_5_2">Réponses</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>À quoi correspond la méthode up et down ?<br />
-L'ordre des champs est-il important ?</p>
-</div>
-<div class="tabbed-block"></div>
-</div>
-</div>
-</details>
 <h2 id="creation-en-base">Création en base<a class="headerlink" href="#creation-en-base" title="Permanent link">⚓︎</a></h2>
 <p>Maintenant que le script est terminé, nous allons indiquer à Laravel d'effectuer « la migration » c'est-à-dire de transformer votre définition PHP en instruction SQL pour créer réellement la base de données. </p>
 <div class="admonition warning">
 <p class="admonition-title">Checklist</p>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox"/> base de données <code>todo</code> créée</li>
+<li class="task-list-item"><input type="checkbox"/> base de données <code>todo2024</code> créée</li>
 <li class="task-list-item"><input type="checkbox"/> user base de donnée créé</li>
 <li class="task-list-item"><input type="checkbox"/> .env mis à jour</li>
 <li class="task-list-item"><input type="checkbox"/> métode <code>up</code> de la migration mise à jour</li>
@@ -1509,47 +1500,45 @@ L'ordre des champs est-il important ?</p>
   2019_12_14_000001_create_personal_access_tokens_table .................................................................... 21ms DONE  
   2023_11_21_084423_create_todo_table ...................................................................................... 21ms DONE  
 </code></pre></div>
-Vérifier votre console et votre travail dans phpMyAdmin. Puis passer vos tables todo et user en moteur InnoDB au lieu de MyISAM.
-<img alt="innoDB" src="../data/innoDB.png" /></p>
+Vérifier votre console et votre travail dans phpMyAdmin. </p>
 <div class="admonition note">
 <p class="admonition-title">A faire</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Modèle relationnel</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Modèle relationnel</label><label for="__tabbed_5_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Faites la même chose avec les tables CATEGORIE et CATEGORISE
 Sachant que CATEGORISE possède également deux clés étrangères.</p>
 </div>
-</div>
-</div>
-<p>=== "Correction
-    La difficulté ici est de créer la bonne relation entre clés primaires et clés étrangères.<br />
-    Pour rappel, en Base de données, on ne peut référencer un champ en clé étrangère vers une clé primaire que si les deux champs sont exactement du MEME type. or ici, si on utilise <code>id()</code> pour catégorie, on aura du mal à construire la clé étrangère dans la table CATEGORISE</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```php
-public function up(): void
-{
-    Schema::create(&#39;categorie&#39;, function (Blueprint $table) {
-        $table-&gt;integer(&#39;idcat&#39;);
-        $table-&gt;string(&#39;libelle&#39;);
-        $table-&gt;primary(&#39;idcat&#39;);
-        $table-&gt;timestamps();
-    });
-}
+<div class="tabbed-block">
+<p>La difficulté ici est de créer la bonne relation entre clés primaires et clés étrangères.<br />
+Pour rappel, en Base de données, on ne peut référencer un champ en clé étrangère vers une clé primaire que si les deux champs sont exactement du MEME type. or ici, si on utilise <code>id()</code> pour catégorie, on aura du mal à construire la clé étrangère dans la table CATEGORISE</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
+<span class="x">{</span>
+<span class="x">    Schema::create(&#39;categorie&#39;, function (Blueprint $table) {</span>
+<span class="x">        $table-&gt;integer(&#39;idcat&#39;);</span>
+<span class="x">        $table-&gt;string(&#39;libelle&#39;);</span>
+<span class="x">        $table-&gt;primary(&#39;idcat&#39;);</span>
+<span class="x">        $table-&gt;timestamps();</span>
+<span class="x">    });</span>
+<span class="x">}</span>
 
-public function up(): void
-{
-    Schema::create(&#39;categorise&#39;, function (Blueprint $table) {
-        $table-&gt;integer(&#39;idcat&#39;);
-        $table-&gt;integer(&#39;idtodo&#39;);
+<span class="x">public function up(): void</span>
+<span class="x">{</span>
+<span class="x">    Schema::create(&#39;categorise&#39;, function (Blueprint $table) {</span>
+<span class="x">        $table-&gt;integer(&#39;idcat&#39;);</span>
+<span class="x">        $table-&gt;integer(&#39;idtodo&#39;);</span>
 
-        $table-&gt;foreign(&#39;idcat&#39;)-&gt;references(&#39;idcat&#39;)-&gt;on(&#39;categorie&#39;);
-        $table-&gt;foreign(&#39;idtodo&#39;)-&gt;references(&#39;id&#39;)-&gt;on(&#39;todo&#39;);
+<span class="x">        $table-&gt;foreign(&#39;idcat&#39;)-&gt;references(&#39;idcat&#39;)-&gt;on(&#39;categorie&#39;);</span>
+<span class="x">        $table-&gt;foreign(&#39;idtodo&#39;)-&gt;references(&#39;id&#39;)-&gt;on(&#39;todo&#39;);</span>
 
-        $table-&gt;primary([&#39;idcat&#39;, &#39;idtodo&#39;]);
-        $table-&gt;timestamps();
-    });
-}
+<span class="x">        $table-&gt;primary([&#39;idcat&#39;, &#39;idtodo&#39;]);</span>
+<span class="x">        $table-&gt;timestamps();</span>
+<span class="x">    });</span>
+<span class="x">}</span>
 </code></pre></div>
-<p>```</p>
+</div>
+</div>
+</div>
 </div>
 <p>Votre base de données est maintenant prête à être utilisée. Vous pouvez aller voir le contenu grâce à phpMyAdmin. Verifier votre structures et vos contraintes.</p>
 <p>!!! abstract "Cours" :</p>
