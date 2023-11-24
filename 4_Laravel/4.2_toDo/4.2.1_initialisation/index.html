@@ -1398,8 +1398,8 @@ La commande vient de créer un nouveau fichier dans le dossier database/migratio
 </code></pre></div>
 </details>
 <p>✋ Le contenu du fichier créé est fictif, il est là pour illustrer comment travailler. Nous allons le modifier pour mettre les informations relatives à notre table.</p>
-<details class="question">
-<summary>Questions</summary>
+<div class="admonition question">
+<p class="admonition-title">Questions</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Question</label><label for="__tabbed_3_2">réponse</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1414,9 +1414,9 @@ La commande vient de créer un nouveau fichier dans le dossier database/migratio
 </div>
 </div>
 </div>
-</details>
-<details class="question">
-<summary>Questions</summary>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Questions</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Question</label><label for="__tabbed_4_2">réponse</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1431,7 +1431,7 @@ les deux champs ont une syntaxe particulière. Ce sont des fonctions propres à 
 </div>
 </div>
 </div>
-</details>
+</div>
 <p>Nous allons définir notre schéma  pour y ajouter les 3 colonnes qui nous serons utiles <strong>texte, termine et important</strong>. L'ORM étant une librairie objet, la définition de nouveaux champs se fait via une méthode, dans notre cas :</p>
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```php
 $table-&gt;integer(&#39;id&#39;);
@@ -1447,7 +1447,7 @@ $table-&gt;primary(&#39;id&#39;);
 <summary>fonction up</summary>
 <div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
 <span class="x">{</span>
-<span class="x">    Schema::create(&#39;todo&#39;, function (Blueprint $table) {</span>
+<span class="x">    Schema::create(&#39;todos&#39;, function (Blueprint $table) {</span>
 <span class="x">        $table-&gt;integer(&#39;id&#39;);</span>
 <span class="x">        $table-&gt;string(&#39;texte&#39;);</span>
 <span class="x">        $table-&gt;boolean(&#39;termine&#39;)-&gt;default(0);</span>
@@ -1461,30 +1461,31 @@ $table-&gt;primary(&#39;id&#39;);
 <h2 id="creation-en-base">Création en base<a class="headerlink" href="#creation-en-base" title="Permanent link">⚓︎</a></h2>
 <p>Maintenant que le script est terminé, nous allons indiquer à Laravel d'effectuer « la migration » c'est-à-dire de transformer votre définition PHP en instruction SQL pour créer réellement la base de données. </p>
 <div class="admonition warning">
+<p class="admonition-title"><img alt="💥" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4a5.svg" title=":boom:" /></p>
+<p>Remplacer dans config/database.php</p>
+<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&#39;charset&#39; =&gt; &#39;utf8mb4&#39;,</span>
+<span class="x">&#39;collation&#39; =&gt; &#39;utf8mb4_unicode_ci&#39;,</span>
+<span class="x">#Par </span>
+<span class="x">&#39;charset&#39; =&gt; &#39;utf8&#39;,</span>
+<span class="x">&#39;collation&#39; =&gt; &#39;utf8_unicode_ci&#39;,</span>
+</code></pre></div>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&#39;engine&#39; =&gt; null,</span>
+<span class="x">#par</span>
+<span class="x">&#39;engine&#39; =&gt; &#39;InnoDB&#39;,</span>
+</code></pre></div></p>
+</div>
+<div class="admonition warning">
 <p class="admonition-title">Checklist</p>
 <ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> Terminal : <code>C:\wamp64\www\todo2024&gt;</code></li>
 <li class="task-list-item"><input type="checkbox"/> base de données <code>todo2024</code> créée</li>
 <li class="task-list-item"><input type="checkbox"/> user base de donnée créé</li>
 <li class="task-list-item"><input type="checkbox"/> .env mis à jour</li>
 <li class="task-list-item"><input type="checkbox"/> métode <code>up</code> de la migration mise à jour</li>
 </ul>
 </div>
-<div class="admonition warning">
-<p class="admonition-title"><img alt="💥" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4a5.svg" title=":boom:" /></p>
-<p>Remplacer dans config/database.php</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&#39;charset&#39; =&gt; &#39;utf8mb4&#39;,</span>
-<span class="x">&#39;collation&#39; =&gt; &#39;utf8mb4_unicode_ci&#39;,</span>
-<span class="x">#Par </span>
-<span class="x">&#39;charset&#39; =&gt; &#39;utf8&#39;,</span>
-<span class="x">&#39;collation&#39; =&gt; &#39;utf8_unicode_ci&#39;,</span>
-<span class="x">#et </span>
-<span class="x">&#39;engine&#39; =&gt; null,</span>
-<span class="x">#par</span>
-<span class="x">&#39;engine&#39; =&gt; &#39;InnoDB&#39;,</span>
-</code></pre></div>
-</div>
 <p>Retour dans la ligne de commande :</p>
-<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>php artisan migrate:fresh  
+<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>C:\wamp64\www\todo2024&gt;php artisan migrate:fresh  
 
   Dropping all tables ..................................................................................................... 146ms DONE
 
@@ -1529,7 +1530,7 @@ Pour rappel, en Base de données, on ne peut référencer un champ en clé étra
 <span class="x">        $table-&gt;integer(&#39;idtodo&#39;);</span>
 
 <span class="x">        $table-&gt;foreign(&#39;idcat&#39;)-&gt;references(&#39;idcat&#39;)-&gt;on(&#39;categorie&#39;);</span>
-<span class="x">        $table-&gt;foreign(&#39;idtodo&#39;)-&gt;references(&#39;id&#39;)-&gt;on(&#39;todo&#39;);</span>
+<span class="x">        $table-&gt;foreign(&#39;idtodo&#39;)-&gt;references(&#39;id&#39;)-&gt;on(&#39;todos&#39;);</span>
 
 <span class="x">        $table-&gt;primary([&#39;idcat&#39;, &#39;idtodo&#39;]);</span>
 <span class="x">        $table-&gt;timestamps();</span>
@@ -1541,301 +1542,331 @@ Pour rappel, en Base de données, on ne peut référencer un champ en clé étra
 </div>
 </div>
 <p>Votre base de données est maintenant prête à être utilisée. Vous pouvez aller voir le contenu grâce à phpMyAdmin. Verifier votre structures et vos contraintes.</p>
-<p>!!! abstract "Cours" :</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>L’ORM eloquent permet de créer une correspondance entre les classes PHP et la base de données. On peut créer une **classe**`maTable` associée à une **table** `maTable`. On pourra accéder aux colonnes de la table au travers des propriétés de la classe et bénéficier de méthodes pour charger un élément ou une liste d’éléments, enregistrer, mettre à jour …
+<div class="admonition abstract">
+<p class="admonition-title">Cours</p>
+<p>L’ORM eloquent permet de créer une correspondance entre les classes PHP et la base de données. On peut créer une <strong>classe</strong><code>maTable</code> associée à une <strong>table</strong> <code>maTable</code>. On pourra accéder aux colonnes de la table au travers des propriétés de la classe et bénéficier de méthodes pour charger un élément ou une liste d’éléments, enregistrer, mettre à jour …</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>Exemple de commande pour manipuler facilement des retours de requêtes en base de données. Tout est Objet !</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">$user = User ::find(5) ;</span>
+<span class="x">Echo $user-&gt;name ;</span>
+<span class="x">$user-&gt;age=32 ;</span>
+<span class="x">$user-&gt;save() ;</span>
 </code></pre></div>
-<p>Exemple :
-$user = User ::find(5) ;
-Echo $user-&gt;name ;
-$user-&gt;age=32 ;
-$user-&gt;save() ;
-Modèle
-Le modèle
-Maintenant que nous avons fait le script de création / migration, nous allons définir notre modèle.
-$ php artisan make:model Todos
-La commande va créer le fichier Todos.php dans le dossier app/.
-Ajouter dans la class :
-    protected $fillable = ['texte', 'termine'];
-⚠️ Cette propriété est optionnelle, elle permet vous autorisera plus tard à faire du « mass-assignment » c'est à dire à créer un objet « Todos » depuis par exemple le POST HTTP.
-Le controller
-Maintenant que nous avons la migration et le modèle de notre base de données, nous allons créer le controller. Pour rappel le controller va faire « le lien » entre la base de données et les appels HTTP. C’est ici que nous allons mettre la logique métier de notre application.
-Rôle
-La tâche d'un contrôleur est de réceptionner une requête (qui a déjà été triée par une route) et de définir la réponse appropriée, rien de moins et rien de plus. Voici une illustration du processus :</p>
-<p>•   Les contrôleurs servent à réceptionner les requêtes triées par les routes et à fournir une réponse au client.
-•   Artisan permet de créer facilement un contrôleur.
-•   Il est facile d'appeler une méthode de contrôleur à partir d'une route.
-•   On peut nommer une route qui pointe vers une méthode de contrôleur.
-Pour commencer nous allons créer « la structure de base » de notre controller.</p>
-<blockquote>
-<p>php artisan make:controller TodosController
-Le fichier TodosController.php viens d'être créé dans le chemin suivant app/Http/Controllers/.
-Notre code est maintenant prêt. Nous allons créer les méthodes permettant la manipulation de notre base de données tout en répondant à nos problématique d'interface (liste, création, terminer, suppression).
-Nous allons maintenant écrire une méthode pour chaque action. Avec les différentes conditions nécessaires au bon fonctionnement de l'application.
-La méthode « Liste »
-Corriger le chemin de la database
-La méthode « Liste »
-La méthode liste est certainement la plus simple, nous allons faire appel à la méthode all() de Eloquent (ORM pour l’accès à la base de données). Pour ça créez une nouvelle méthode dans la Class TodoController avec le code suivant.
-Pour l'instant nous n'allons pas intégrer Éloquent, mais uniquement définir notre méthode.
-public function liste(){
-    return "Liste";
-}
-Rien de bien compliqué, comme vous pouvez le voir.
-Les autres méthodes
-✋ Pour l'instant nous allons nous arrêter là pour la partie code PHP. Cette méthode est suffisante pour « tester » le premier template que nous allons écrire.
-Ajout route /
-Nous allons tester la route /, pour ça nous allons remplacer le contenu du fichier routes/web.php par :
-Route::get('/', "TodosController@liste");
-Vous pouvez relancer votre serveur de test, vous devez maintenant voir afficher « Liste ».
-Créer les templates
-Nous avons donc maintenant :
-•   La structure Laravel.
-•   La définition de notre base de données.
-•   Les dépendances clients (bootstrap 4…)
-Nous allons donc pouvoir commencer la création des templates. L'organisation du code est quelques choses d'important, elle n'est pas à négliger. Un code organisé est un code agréable à rédiger.
+</div>
+<h2 id="le-modele">Le modèle<a class="headerlink" href="#le-modele" title="Permanent link">⚓︎</a></h2>
+<p>Maintenant que nous avons fait le script de création / migration, nous allons définir notre <strong>model</strong>.</p>
+<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>$ php artisan make:model Todos
+</code></pre></div>
+<img alt="▶" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/25b6.svg" title=":arrow_forward:" /> La commande va créer le fichier <code>Todos.php</code> dans le dossier <code>app/</code>.</p>
+<p>Ajouter dans la class <code>Todos.php</code> :</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```php
+protected $fillable = [&#39;texte&#39;, &#39;termine&#39;, &#39;important&#39;];
+```
+</code></pre></div>
+<p>⚠️ Cette propriété est optionnelle, elle permet vous autorisera plus tard à faire du « mass-assignment » c'est à dire à créer un objet « Todos » depuis par exemple le POST HTTP.<br /></p>
+<div class="admonition note">
+<p class="admonition-title">A faire</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Modèle relationnel</label><label for="__tabbed_6_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Faites la même chose avec les tables CATEGORIE
+Inutile d'ajouter des attributs <code>fillable</code> pour cette table puisque nous ne créerons pas de catégorie via l'interface Web.</p>
+</div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+</div>
+<h2 id="relation-many-to-many">Relation Many To Many<a class="headerlink" href="#relation-many-to-many" title="Permanent link">⚓︎</a></h2>
+<p>On va avoir besoin de déclarer un todo peut appartenir à plusieurs catégories et une catégorie classifie plusieurs todos. La relation est symétrique.</p>
+<p>On ajoute l'espace de noms nécessaire à la gestion de cette relation dans les 2 models.</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use Illuminate\Database\Eloquent\Relations\BelongsToMany;</span>
+</code></pre></div>
+<p>Puis à l'intérieur de la classe, on ajoute les méthodes d'association</p>
+<p>Dans Todos.php</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">    public function categories(): BelongsToMany</span>
+<span class="x">        {</span>
+<span class="x">            return $this-&gt;belongsToMany(Categories::class);</span>
+<span class="x">        }</span>
+</code></pre></div>
+<p>Dans Categories.php</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">    public function todos(): BelongsToMany</span>
+<span class="x">        {</span>
+<span class="x">            return $this-&gt;belongsToMany(Todos::class);</span>
+<span class="x">        }</span>
+</code></pre></div>
+<p>On déclare ici avec la méthode todos (au pluriel) qu’une catégorie appartient à plusieurs (belongsToMany) todos (Todos). On aura ainsi une méthode pratique pour récupérer les todos d’une catégorie. Idem pour les catégories.</p>
+<h1 id="le-controller">Le controller<a class="headerlink" href="#le-controller" title="Permanent link">⚓︎</a></h1>
+<p>Maintenant que nous avons la <em>migration</em> et le <em>model</em> de notre base de données, nous allons créer le <strong>controller</strong>. Pour rappel le controller va faire « le lien » entre la base de données et les appels HTTP. C’est ici que nous allons mettre la logique métier de notre application.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Rôle</p>
+<p>La tâche d'un contrôleur est de réceptionner une requête (qui a déjà été triée par une route) et de définir la réponse appropriée, rien de moins et rien de plus. Voici une illustration du processus :
+<img alt="controller illustration" src="../data/controller.png" /></p>
+<ul>
+<li>Les contrôleurs servent à réceptionner les requêtes triées par les routes et à fournir une réponse au client.<br /></li>
+<li>Artisan permet de créer facilement un contrôleur.<br /></li>
+<li>Il est facile d'appeler une méthode de contrôleur à partir d'une route.<br /></li>
+<li>On peut nommer une route qui pointe vers une méthode de contrôleur.</li>
+</ul>
+</div>
+<p><img alt="▶" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/25b6.svg" title=":arrow_forward:" /> Pour commencer nous allons créer « la structure de base » de notre controller.<br /></p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>php artisan make:controller TodosController
+php artisan make:controller CategoriessController
+</code></pre></div>
+<p>Le fichier <code>TodosController.php</code> viens d'être créé dans le chemin suivant <code>app/Http/Controllers/</code>.<br /></p>
+<p>Notre code est prêt. Nous allons créer les méthodes permettant la manipulation de notre base de données tout en répondant à nos problématique d'interface (liste, création, terminer, suppression<img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /><strong>CRUD</strong>).<br /></p>
+<p>Nous allons écrire une méthode pour chaque action. Avec les différentes conditions nécessaires au bon fonctionnement de l'application.</p>
+<h2 id="la-methode-liste">La méthode « Liste »<a class="headerlink" href="#la-methode-liste" title="Permanent link">⚓︎</a></h2>
+<p>La méthode liste est certainement la plus simple, nous allons faire appel à la méthode <code>all()</code> de Eloquent. 
+✋ Dans un premier temp nous n'allons pas integrer la base de données, mais uniquement définir notre méthode. Et tester 
+l'interface de notre projet.</p>
+<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function liste(){</span>
+<span class="x">    return &quot;Liste&quot;;</span>
+<span class="x">}</span>
+</code></pre></div>
+<img alt="▶" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/25b6.svg" title=":arrow_forward:" /> Nous allons tester la route <code>/</code> (page d'acccueil du projet), pour ça nous allons remplacer le contenu du fichier routes/web.php par :
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use Illuminate\Support\Facades\Route;</span>
+<span class="x">use App\Http\Controllers\TodosController;</span>
+
+<span class="x">Route::get(&#39;/&#39;, [TodosController::class, &#39;liste&#39;]);</span>
+</code></pre></div></p>
+<div class="admonition abstract">
+<p class="admonition-title">serveur de test</p>
+<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>php artisan serve
+</code></pre></div>
+<img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> <a href="http://localhost:8000/">http://localhost:8000/</a></p>
+</div>
+<p>Vous pouvez relancer votre serveur de test, vous devez maintenant voir afficher « Liste ».</p>
+<h2 id="creer-les-templates">Créer les templates<a class="headerlink" href="#creer-les-templates" title="Permanent link">⚓︎</a></h2>
+<p>Nous avons donc maintenant :<br />
+- [ ] La structure Laravel.<br />
+- [ ]La définition de notre base de données.<br />
+- [ ] Une page d'accueil valide<br />
+- [ ] Un controller un peu vide</p>
+<p>Nous allons donc pouvoir commencer la création des vues. L'organisation du code est quelques choses d'important, elle n'est pas à négliger. Un code organisé est un code agréable à rédiger.
 Notre vue va être découpée en 3 partie :</p>
-</blockquote>
-<p>•   ✋ Pourquoi le découpage en « 3 templates » est-il important ?
-On retrouve les besoins de découpage que l’on pouvait avoir avec un PHP brut avec les fonctions include ou require. On peut vouloir inclure une portion de code blade pour gérer les affichages d’erreurs liés aux formulaires dans chaque page qui en possèdera un. Ici on mutualisera le code statique commun à plusieurs pages.
-•   Quelle est l'avantage pour le développeur ?
-Réutilisation de code, maintenabilité.
-Le template principal
-Nous allons commencer par définir notre « Template principal » celui-ci va contenir l'ensemble des éléments partagés sur toutes nos pages à savoir :
-•   Les JS
-•   Les CSS
-•   La structure commune</p>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<p><img alt="découpage" src="../data/templates.png" /></p>
+<details class="question">
+<summary>Pourquoi le découpage en « 3 templates » est-il important ?</summary>
+<p>On retrouve les besoins de découpage que l’on pouvait avoir avec un PHP brut avec les fonctions include ou require. On peut vouloir inclure une portion de code blade pour gérer les affichages d’erreurs liés aux formulaires dans chaque page qui en possèdera un. Ici on mutualisera le code statique commun à plusieurs pages.</p>
+</details>
+<details class="question">
+<summary>Quelle est l'avantage pour le développeur ?</summary>
+<p>Réutilisation de code, maintenabilité.</p>
+</details>
+<h3 id="le-template-principal">Le template principal<a class="headerlink" href="#le-template-principal" title="Permanent link">⚓︎</a></h3>
+<p>Nous allons commencer par définir notre « Template principal » celui-ci va contenir l'ensemble des éléments partagés sur toutes nos pages à savoir :<br />
+•   Les JS <br />
+•   Les CSS <br />
+•   La structure commune </p>
+<details class="abstract">
+<summary>template.blade.php</summary>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&lt;html&gt;</span>
+<span class="x">    &lt;head&gt;</span>
+<span class="x">        &lt;meta charset=&quot;utf-8&quot;&gt;</span>
+<span class="x">        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</span>
+<span class="x">        &lt;meta name=&quot;csrf-token&quot; content=&quot;{{ csrf_token() }}&quot;&gt;</span>
 
-        <title>@yield('title')</title>
+<span class="x">        &lt;title&gt;@yield(&#39;title&#39;)&lt;/title&gt;</span>
 
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand" href="#">Ma Todo List</a>
-        </nav>
+<span class="x">        &lt;link href=&quot;{{ asset(&#39;css/app.css&#39;) }}&quot; rel=&quot;stylesheet&quot;&gt;</span>
+<span class="x">        &lt;script type=&quot;text/javascript&quot; src=&quot;{{ asset(&#39;js/app.js&#39;) }}&quot;&gt;&lt;/script&gt;</span>
+<span class="x">    &lt;/head&gt;</span>
+<span class="x">    &lt;body&gt;</span>
+<span class="x">        &lt;nav class=&quot;navbar navbar-expand-md navbar-dark bg-dark&quot;&gt;</span>
+<span class="x">            &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Ma Todo List&lt;/a&gt;</span>
+<span class="x">        &lt;/nav&gt;</span>
 
-        @yield('content')
+<span class="x">        @yield(&#39;content&#39;)</span>
 
-    </body>
-</html>
-<p>Maintenant que nous avons le contenu, nous devons créer un nouveau fichier.
-•   Créer un nouveau fichier resources/views/template.blade.php
-•   Copier-Coller le html dans le fichier.
-👏👏 Bravo, vous venez de créer votre premier template.
-Questions
-•   Pourquoi le fichier est-il nommé ….blade.php ?
-Il utilise le moteur de template blade. Contrairement aux autres moteurs de templates PHP populaires, Blade ne vous empêche pas d'utiliser du code PHP simple dans vos vues. En fait, toutes les vues Blade sont compilées dans du code PHP brut et mises en cache jusqu'à ce qu'elles soient modifiées, ce qui signifie que Blade n'ajoute pratiquement aucune surcharge à votre application. 
-•   À quoi correspond {{ asset('…') }} ?
-The asset function generates a URL for an asset using the current scheme of the request (HTTP or HTTPS):
-$url = asset('css/style.css ');
--&gt;essaiera de charger /mon-site/ma/route/web/web/css/style.css</p>
-<p>•   À quoi correspond la directive « yield »? En quoi est-ce très important ?
-Mot clé permet de déterminer la partie ou placé le code à sustituer.
-Il permet de gérer l’héritage et l’inclusion de modèle.</p>
-<p>•   Est-il possible de définir une « zone » où d'autre ressources JS/CSS seront insérées lors de l'exécution ? Voir la documentation : https://laravel.com/docs/5.6/blade#stacks
-Blade propose un système pour ajouter des éléments de plusieurs endroits dans une pile avant l’affichage. Il faut utiliser les directives @push, @endpush, @stack.</p>
-<p>•   Maintenant que vous avez la réponse, ajouter une « stack » pour le script et le style dans l'entête.
-Créer un fichier base.css dans le repertoire ressources des css 
-    body {background-color: coral;}
-Créer un fichier scripts.blade.php dans le répertoire views
-        //Fichiers scripts.blade.php
-@push('head')
-            <script src="/jquery.js" /></script>
-            <script src="/angular.js" /></script>
-@endpush
-Créer un fichier styles.blade.php
-        //Fichiers styles.blade.php
-@push('head')
-            <link href="{{ asset('css/base.css') }}" rel="stylesheet">
-@endpush  <br />
-Dans template.blade.php
-    Avant la balise HTML insérer les deux lignes suivantes
-            @include('scripts')
-               @include('styles')
-       Et dans la balise Head
-           @stack('head')
-Pour tester, mettez en commentaires la route vers le contrôleur et remplacer par une route vers le template. 
-Tester
-          Une fois votre serveur de développement lancé, aller sur http://localhost:8000.
-Que se passe t’il ? Changer votre couleur de fond dans le css base pour voir ?
-Visualiser votre code source de page. Que se passe t’il ?
-Installation des dépendances client
-Maintenant que la partie base de données est prête, nous allons nous occuper de la partie visualisation de notre application / site web. Nous allons utiliser bootstrap pour gérer la problématique d'affichage et de responsive.
-Attention méthode alternative en cas de soucis avec NodeJS et npm.
-Si pas de souci, reprendre le TP à Installation de Bootsrap 4 via NodeJS + NPM"
-Ajout des libraries
-La structure de base de Laravel n'intègre pas Bootsrap, par contre il est possible de l'installer dans votre projet.
-La façon la plus rapide est d'intégrer directement dans le <head> de votre projet les librairies suivantes :
-Éditer le fichier scripts.blade.php pour ajouter :</p>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-<p>Éditer le fichier styles.blade.php pour ajouter :</p>
-<p><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-Vous venez d'ajouter Jquery, Bootstrap, et l'ensemble des éléments nécéssaires à son bon fonctionnement. Notre site a également besoin d'une CSS spécifique. Celle-ci doit être ajoutée manuellement.
-Créer un fichier main.css dans public/css. Mettre le contenu suivant :
-body{
-    padding-top: 5rem;
-  }</p>
-<p>form.add{
-    padding-bottom: 10px;
-  }</p>
-<p>.pull-right{
-    float: right;
-  }</p>
-<p>.action &gt; .btn{
-    padding: 1px 7px 1px;
-  }</p>
-<p>.oi{
-    font-size: small;
-}
-Ajouter à nouveau cette CSS dans le fichier styles.template.php de votre site :
-<link href="{{ asset('css/main.css') }}" rel="stylesheet">
-Installation de Bootsrap 4 via NodeJS + NPM"
-✋ Si vous lisez ceci c'est que vous êtes sur votre machine, si c'est le cas, sachez que c'est la meilleur façon de faire. (Attention à ne pas avoir les librairies en HTTP et Via NodeJS).
-Ajouter Bootsrap 4
-La structure de base de Laravel n'intègre pas Bootsrap, par contre elle intègre un système de gestion de dépendances. Nous allons nous servir de cette gestion de dépendance pour ajouter bootstrap (version 4). Dans la ligne de commande :
-$ php artisan preset none
-$ php artisan preset bootstrap
-Patientez quelques instants… bootstrap est maintenant disponible pour votre projet. Mais pour qu'il soit accessible pour vos templates nous devons « le compiler ».
-Préparation des « Assets » bootsrap …
-Laravel inclut une configuration « webpack.mix.js », celle-ci permet de fusionner l'ensemble des JS et CSS en un seul fichier pour gagner en performance.
-Sans entrer dans le détail, la compilation des ressources (assets) est réalisée avec Webpack. Webpack est un outils NodeJS très puissant mais qui peut être complexe, nous allons donc uniquement l'utiliser.
-•   Installer NodeJS version current (https://nodejs.org/en/download/current/
-Une fois installé retourner dans le dossier de votre projet faites les commandes suivantes :
-laravel-mix ?
-laravel-mix est un outil fourni de base dans Laravel qui gèrent la partie libraries clientes. La configuration de celui-ci se fait dans le fichier webpack.mix.js</p>
-<p>Le contenu initial est :
-const mix = require('laravel-mix');</p>
-<p>/*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
- | file for the application as well as bundling up all the JS files.
- |
- */</p>
-<p>mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
-Modifier le SCSS
-Remplacer le fichier ressources/sass/app/scss par :
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');</p>
-<p>// Variables
-@import 'variables';</p>
-<p>// Bootstrap
-@import '~bootstrap/scss/bootstrap';</p>
-<p>.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}</p>
-<p>body{
-  padding-top: 5rem;
-}</p>
-<p>form.add{
-  padding-bottom: 10px;
-}</p>
-<p>.pull-right{
-  float: right;
-}</p>
-<p>.action &gt; .btn{
-  padding: 1px 7px 1px;
-}</p>
-<p>.oi{
-  font-size: small;
-}</p>
-<p>Transpiler</p>
-<blockquote>
-<p>npm install
-npm run production
-🔎 Plus d'informations Webpack.mix.js</p>
-</blockquote>
-<p>Questions
- Questions
-•   Quels fichiers ont été créés ?
-•   Que contient le fichier webpack.mix.js ?
-•   webpack.mix.js fait référence à des fichiers dans ressources/js/* et ressources/sass/*, allez y jeter un coup d'oeil (même si dans ce projet nous n'allons rien modifier).
-•   Pourquoi la fusion / compilation des ressources est-elle si importante ?
-Modifications demandés
-✋ Cette modification n'est nécessaire que dans le cas où vous n'utilisez pas NodeJS + NPM.
-Comme vous l'avez vu avec le fichier main.css il est possible d'avoir un CSS / JS en local dans le dossier public.
-•   Télécharger l'ensemble de librairies http / https (css + js) dans le dossier public (attention à bien les ranger) et les utiliser dans votre head.
-Question
-Liste des todos
-Maintenant que nous avons défini notre template de base nous allons pouvoir définir notre page principale, la page « liste des todos ». Une fois terminée celle-ci va ressembler à :</p>
-<p>Avant de commencer la réalisation de ce template, regardons ce que l'on peut y voir :
-•   Un formulaire « form »
-•   Une « liste »
-Nous allons donc avoir besoin de composant bootstrap. Première étape regarder la documentation de bootsrap (https://getbootstrap.com/docs/4.0/components/alerts/) !
- Questions
-•   Quels composants (components) allons-nous avoir besoins ?
-Gestion des messages d’erreur pour gérer la saisie dans le formulaire
-•   Est-ce que ce sont les seuls ?
-Définition du template « Liste » / « Home »
-Nous allons créer un 2nd template celui qui va être chargé d'afficher la liste des todos. 
-Créér un nouveau fichier resources/views/home.blade.php et y mettre le contenu suivant :
-@extends("template")</p>
-<p>@section("title", "Ma Todo List")</p>
-<p>@section("content")
-    <div class="container">
-        <div class="card">
-            <div class="card-body">
-                <!-- Action -->
-                <form action="/action/add" method="post" class="add">
-                    <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon1"><span class="oi oi-pencil"></span></span>
-                        <input id="texte" name="texte" type="text" class="form-control" placeholder="Prendre une note…" aria-label="My new idea" aria-describedby="basic-addon1">
-                    </div>
-                </form></p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>            &lt;!-- Liste --&gt;
-            &lt;ul class=&quot;list-group&quot;&gt;
-                @forelse ($todos as $todo)
-                    &lt;li class=&quot;list-group-item&quot;&gt;
-                        &lt;span&gt;{{ $todo-&gt;texte }}&lt;/span&gt;
-                        &lt;!-- Action à ajouter pour Terminer et supprimer --&gt;
-                    &lt;/li&gt;
-                @empty
-                    &lt;li class=&quot;list-group-item text-center&quot;&gt;C&#39;est vide !&lt;/li&gt;
-                @endforelse
-            &lt;/ul&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+<span class="x">    &lt;/body&gt;</span>
+<span class="x">&lt;/html&gt;</span>
 </code></pre></div>
-<p>@endsection
-🤓 Questions
-•   @extends ? À quoi sert cette directive, pourquoi « template »?
-•   Modifier le titre affiché dans la barre.
-•   À quoi correspond le @forelse … @empty … @endforelse?
-Et maintenant ?
-Bien… récupitulons ! Nous avons :
-•   Le modele.
-•   Le contrôleur.
-•   Les templates (template et home).
-Il faut maintenant assembler l'ensemble pour que votre page s'affiche lors d'une requête.
-Création des routes
-La définition des routes se fait dans le fichier routes/web.php pour l'instant vous devez avoir qu'une seule route de définie.
-Supprimer là, et ajouter :
-Route::get('/', "TodosController@liste");
-🤓 Question
-•   À quoi correspond la notation TodosController@liste ?
-Tester
-Vous voyez « Liste » ? C'est OK !
-Affichage de la liste
-Bon afficher « Liste » c'est un bon début… Modifier la méthode liste() pour qu'elle ressemble à :
-    return view("home", ["todos" =&gt; Todos::all()]);
-Tester
-La page s'affiche ? Super !
-•   Ajouter une entrée « à la main » grâce à l'explorateur de base de données de PHPStorm.
-Rafraichissez la page, vous devez maintenant voir votre texte 😎.</p>
+</details>
+<details class="question">
+<summary>Pourquoi le fichier est-il nommé ….blade.php ?</summary>
+<p>Il utilise le moteur de template blade. Contrairement aux autres moteurs de templates PHP populaires, Blade ne vous empêche pas d'utiliser du code PHP simple dans vos vues. En fait, toutes les vues Blade sont compilées dans du code PHP brut et mises en cache jusqu'à ce qu'elles soient modifiées, ce qui signifie que Blade n'ajoute pratiquement aucune surcharge à votre application. </p>
+</details>
+<details class="question">
+<summary>À quoi correspond {{ asset('…') }} ?</summary>
+<p>The asset function generates a URL for an asset using the current scheme of the request (HTTP or HTTPS):</p>
+<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">    $url = asset(&#39;css/style.css &#39;);</span>
+</code></pre></div>
+essaiera de charger <code>/mon-site/ma/route/web/web/css/style.css</code></p>
+</details>
+<details class="question">
+<summary>À quoi correspond la directive « yield »? En quoi est-ce très important ?</summary>
+<p>Mot clé permet de déterminer la partie ou placé le code à sustituer.<br />
+Il permet de gérer l’héritage et l’inclusion de modèle.</p>
+</details>
+<details class="question">
+<summary>Est-il possible de définir une « zone » où d'autre ressources JS/CSS seront insérées lors de l'exécution ? </summary>
+<p>Voir la <img alt="documentation Blade" src="https://laravel.com/docs/10.x/blade" />
+Blade propose un système pour ajouter des éléments de plusieurs endroits dans une pile avant l’affichage. Il faut utiliser les directives @push, @endpush, @stack.</p>
+</details>
+<h2 id="composant-vite">Composant VITE<a class="headerlink" href="#composant-vite" title="Permanent link">⚓︎</a></h2>
+<p>petit aparté pour détailler l'utilisation des assets front-end (JavaScript / CSS) dans le cadre de Laravel. Lorsque l'on commence à travailler sur du JavaScript on a très rapidement besoin d'outils comme des bundlers pour travailler efficacement. Malheureusement ces outils sont souvent pensés pour des sites web statiques et l'intégration avec une application backend n'est pas forcément évident.<br /></p>
+<p>Lors de son installation Laravel dispose déjà d'une configuration permettant d'utiliser le bundler Vite avec un fichier package.json pré-rempli.</p>
+<p><img alt="💥" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4a5.svg" title=":boom:" /> Installer au préalable node.js <a href="https://nodejs.org/en/download/">ici</a></p>
+<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>composer require laravel/breeze --dev
+php artisan breeze:install vue
+npm install
+npm install --save-dev vite laravel-vite-plugin
+npm install --save-dev @vitejs/plugin-vue
+</code></pre></div>
+Il ne nous reste plus qu’à compiler les assets.
+<img alt="vite" src="../data/vite.png" /></p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>npm run build
+</code></pre></div>
+<p>On trouve aussi un nouveau fichier de configuration
+<img alt="Config VITE" src="../data/configVite.png" /></p>
+<p><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4a1.svg" title=":bulb:" /> Dans <code>template.blade.php</code><br />
+dans la balise Head
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">    @vite([&#39;resources/js/app.js&#39;])</span>
+</code></pre></div></p>
+<p><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4a1.svg" title=":bulb:" /></p>
+<p><img alt="▶" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/25b6.svg" title=":arrow_forward:" /> Pour tester, mettez en commentaires la route vers le contrôleur et remplacer par une route vers le template. </p>
+<details class="note">
+<summary><img alt="👀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f440.svg" title=":eyes:" /> Tester</summary>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> Mettre en commentaire la route vers le controller Todo</li>
+<li class="task-list-item"><input type="checkbox"/> Créer une route vers la vue template <code>Route :: view ('/test', 'template');</code></li>
+<li class="task-list-item"><input type="checkbox"/> Dans le template, mettre mettre un titre avec une classe Bootstrap bien visible <code>&lt;a class="text-center" href="#"&gt;Ma Todo List&lt;/a&gt;</code></li>
+</ul>
+</details>
+<h2 id="installation-de-bootstrap-5">Installation de Bootstrap 5<a class="headerlink" href="#installation-de-bootstrap-5" title="Permanent link">⚓︎</a></h2>
+<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>composer require laravel/ui
+npm i --save bootstrap @popperjs/core
+npm install bootstrap-icons
+npm install
+npm run build
+</code></pre></div>
+dans <code>app.css</code>, ajouter 
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">import &#39;./bootstrap&#39;;</span>
+<span class="x">import &#39;bootstrap/dist/css/bootstrap.min.css&#39;</span>
+<span class="x">import &#39;bootstrap-icons/font/bootstrap-icons.css&#39;;</span>
+</code></pre></div></p>
+<p>Dans votre template, ajouter dans le <code>head</code> la ligne <code>@vite(['resources/js/app.css', 'resources/js/app.js'])</code></p>
+<p>pour utiliser les icones bootstrap dans vos pages : ajouter dans le fichier <code>app.scss</code> la ligne <code>@import 'bootstrap-icons/font/bootstrap-icons.css';</code>
+<img alt="app.scss" src="../data/appscss.png" /></p>
+<details class="note">
+<summary><img alt="👀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f440.svg" title=":eyes:" /> tester</summary>
+<p>pour tester vos manips, ajouer du code bootstrap dans votre template.</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&lt;nav class=&quot;navbar navbar-expand-md navbar-dark bg-dark&quot;&gt;</span>
+<span class="x">    &lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;Ma Todo List&lt;/a&gt;</span>
+<span class="x">    &lt;a class=&quot;navbar-brand btn btn-primary&quot; href=&quot;liste&quot;&gt;&lt;i class=&quot;bi bi-app&quot;&gt;&lt;/i&gt;Liste&lt;/a&gt;</span>
+
+<span class="x">    &lt;a class=&quot;navbar-brand btn btn-danger&quot; href=&quot;compteur&quot;&gt;Compteur&lt;/a&gt;</span>
+<span class="x">&lt;/nav&gt;</span>
+</code></pre></div>
+</details>
+<h2 id="liste-des-todos">Liste des todos<a class="headerlink" href="#liste-des-todos" title="Permanent link">⚓︎</a></h2>
+<p>Maintenant que nous avons défini notre template de base nous allons pouvoir définir notre page principale, la page « liste des todos ». Une fois terminée celle-ci va ressembler à :</p>
+<p>Avant de commencer la réalisation de ce template, regardons ce que l'on peut y voir :<br />
+-   Un formulaire « form »<br />
+-   Une « liste »<br /></p>
+<p>Nous allons donc avoir besoin de composant bootstrap. Première étape regarder la <a href="https://getbootstrap.com/docs/4.0/components/alerts/">documentation de bootsrap</a> ! <br /></p>
+<details class="question">
+<summary>Quels composants (components) allons-nous avoir besoins ?</summary>
+<p>Gestion des messages d’erreur pour gérer la saisie dans le formulaire</p>
+</details>
+<details class="question">
+<summary>Est-ce que ce sont les seuls ?</summary>
+<p>Définition du template « Liste » / « Home »</p>
+</details>
+<p>Nous allons créer un 2nd template celui qui va être chargé d'afficher la liste des todos. 
+Créér un nouveau fichier resources/views/home.blade.php et y mettre le contenu suivant :</p>
+<details class="note">
+<summary>home.blade.php</summary>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">@extends(&quot;template&quot;)</span>
+
+<span class="x">@section(&quot;title&quot;, &quot;Ma Todo List&quot;)</span>
+
+<span class="x">@section(&quot;content&quot;)</span>
+<span class="x">    &lt;div class=&quot;container&quot;&gt;</span>
+<span class="x">        &lt;div class=&quot;card&quot;&gt;</span>
+<span class="x">            &lt;div class=&quot;card-body&quot;&gt;</span>
+<span class="x">                &lt;!-- Action --&gt;</span>
+<span class="x">                &lt;form action=&quot;/action/add&quot; method=&quot;post&quot; class=&quot;add&quot;&gt;</span>
+<span class="x">                    &lt;div class=&quot;input-group&quot;&gt;</span>
+<span class="x">                        &lt;span class=&quot;input-group-addon&quot; id=&quot;basic-addon1&quot;&gt;&lt;span class=&quot;oi oi-pencil&quot;&gt;&lt;/span&gt;&lt;/span&gt;</span>
+<span class="x">                        &lt;input id=&quot;texte&quot; name=&quot;texte&quot; type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Prendre une note…&quot; aria-label=&quot;My new idea&quot; aria-describedby=&quot;basic-addon1&quot;&gt;</span>
+<span class="x">                    &lt;/div&gt;</span>
+<span class="x">                &lt;/form&gt;</span>
+
+<span class="x">                &lt;!-- Liste --&gt;</span>
+<span class="x">                &lt;ul class=&quot;list-group&quot;&gt;</span>
+<span class="x">                    @forelse ($todos as $todo)</span>
+<span class="x">                        &lt;li class=&quot;list-group-item&quot;&gt;</span>
+<span class="x">                            &lt;span&gt;{{ $todo-&gt;texte }}&lt;/span&gt;</span>
+<span class="x">                            &lt;!-- Action à ajouter pour Terminer et supprimer --&gt;</span>
+<span class="x">                        &lt;/li&gt;</span>
+<span class="x">                    @empty</span>
+<span class="x">                        &lt;li class=&quot;list-group-item text-center&quot;&gt;C&#39;est vide !&lt;/li&gt;</span>
+<span class="x">                    @endforelse</span>
+<span class="x">                &lt;/ul&gt;</span>
+<span class="x">            &lt;/div&gt;</span>
+<span class="x">        &lt;/div&gt;</span>
+<span class="x">    &lt;/div&gt;</span>
+<span class="x">@endsection</span>
+</code></pre></div>
+</details>
+<details class="question">
+<summary>@extends ? À quoi sert cette directive, pourquoi « template »?</summary>
+<p>Modifier le titre affiché dans la barre.</p>
+</details>
+<details class="question">
+<summary>À quoi correspond le @forelse … @empty … @endforelse?</summary>
+<p>Boucler sur la collection de Todos et afficher chaque Todo</p>
+</details>
+<div class="admonition warning">
+<p class="admonition-title">Recap</p>
+<p>Nous avons :<br />
+-   Le modele.<br />
+-   Le contrôleur.<br />
+-   Les templates (template et home).<br />
+Il faut maintenant assembler l'ensemble pour que votre page s'affiche lors d'une requête.</p>
+</div>
+<h2 id="creation-des-routes">Création des routes<a class="headerlink" href="#creation-des-routes" title="Permanent link">⚓︎</a></h2>
+<p>La définition des routes se fait dans le fichier <code>routes/web.php</code>, <br />
+décommenter <code>Route::get('/', [TodosController::class, 'liste'])-&gt;name('todo.liste');</code> <br /></p>
+<details class="question">
+<summary>À quoi correspond la notation TodosController@liste ?</summary>
+<p>Lien vers le controller Todos</p>
+</details>
+<p><img alt="👀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f440.svg" title=":eyes:" /> Tester
+Vous voyez « Liste » ? C'est <img alt="🆗" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f197.svg" title=":ok:" /></p>
+<h2 id="affichage-de-la-liste">Affichage de la liste<a class="headerlink" href="#affichage-de-la-liste" title="Permanent link">⚓︎</a></h2>
+<p>On va modifier la méthode <code>liste()</code> pour qu'elle appelle la bonne vue ici <code>home</code> et qu'elle aille chercher la collection des todos en base :</p>
+<details class="note">
+<summary>Code de la fonction liste</summary>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use App\Models\Todos;</span>
+<span class="x">//Liste</span>
+<span class="x">public function liste()</span>
+<span class="x">{</span>
+<span class="x">    return view(&quot;home&quot;, [&quot;todos&quot; =&gt; Todos::all()]);</span>
+<span class="x">}</span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary><img alt="👀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f440.svg" title=":eyes:" /> Tester</summary>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> Créer un todo dans la base de donnée ...<br />
+<img alt="🔂" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f502.svg" title=":repeat_one:" /> Rafraichissez la page, vous devez maintenant voir votre texte <img alt="🎉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f389.svg" title=":tada:" /></li>
+</ul>
+</details>
+<h1 id="expressions-de-besoins">Expressions de besoins<a class="headerlink" href="#expressions-de-besoins" title="Permanent link">⚓︎</a></h1>
+<h2 id="user-story-1-save-todo">User story 1 : save Todo<a class="headerlink" href="#user-story-1-save-todo" title="Permanent link">⚓︎</a></h2>
+<p>Dans le premier form de la vue home, vous avez un input pour saisir un Todo
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&lt;!-- Action --&gt;</span>
+<span class="x">&lt;form action=&quot;/action/add&quot; method=&quot;post&quot; class=&quot;add&quot;&gt;</span>
+<span class="x">    &lt;div class=&quot;input-group&quot;&gt;</span>
+<span class="x">        &lt;span class=&quot;input-group-addon&quot; id=&quot;basic-addon1&quot;&gt;&lt;span class=&quot;oi oi-pencil&quot;&gt;&lt;/span&gt;&lt;/span&gt;</span>
+<span class="x">        &lt;input id=&quot;texte&quot; name=&quot;texte&quot; type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Prendre une note…&quot; aria-label=&quot;My new idea&quot; aria-describedby=&quot;basic-addon1&quot;&gt;</span>
+<span class="x">    &lt;/div&gt;</span>
+<span class="x">&lt;/form&gt;</span>
+</code></pre></div></p>
 
 
   
