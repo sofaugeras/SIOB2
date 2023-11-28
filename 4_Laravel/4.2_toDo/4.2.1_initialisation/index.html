@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.6a10b989.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.fad675c6.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
@@ -250,7 +250,7 @@
   
     
   
-  Home
+  Accueil
 
       </a>
     </li>
@@ -401,12 +401,13 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Home
+    Accueil
   </span>
   
 
@@ -417,6 +418,7 @@
     
       
       
+  
   
   
   
@@ -461,6 +463,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../../1_Base_de_donnees/sommaire/" class="md-nav__link">
         
@@ -485,6 +488,7 @@
     
       
       
+  
   
   
   
@@ -529,6 +533,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../../2_SQL%20Complexe/sommaire/" class="md-nav__link">
         
@@ -553,6 +558,7 @@
     
       
       
+  
   
   
   
@@ -597,6 +603,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../../3_UML/sommaire/" class="md-nav__link">
         
@@ -624,6 +631,7 @@
   
   
     
+  
   
   
     
@@ -665,6 +673,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../sommaire/" class="md-nav__link">
         
@@ -682,6 +691,7 @@
             
               
                 
+  
   
   
   
@@ -723,6 +733,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../4.1_installation/cours/" class="md-nav__link">
         
@@ -751,6 +762,7 @@
   
   
     
+  
   
   
     
@@ -791,6 +803,7 @@
     
   
   
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
@@ -819,6 +832,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../4.2.2_prolongement_ORM/" class="md-nav__link">
         
@@ -836,6 +850,7 @@
             
               
                 
+  
   
   
   
@@ -871,6 +886,7 @@
     
       
       
+  
   
   
   
@@ -915,6 +931,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../../5_Programmation_SQL/sommaire/" class="md-nav__link">
         
@@ -932,6 +949,7 @@
             
               
                 
+  
   
   
   
@@ -973,6 +991,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../../5_Programmation_SQL/5.1_Procedures_stockees/cours/" class="md-nav__link">
         
@@ -990,6 +1009,7 @@
             
               
                 
+  
   
   
   
@@ -1018,6 +1038,7 @@
             
               
                 
+  
   
   
   
@@ -1059,6 +1080,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../../5_Programmation_SQL/5.2_Transactions/cours/" class="md-nav__link">
         
@@ -1084,6 +1106,7 @@
             
               
                 
+  
   
   
   
@@ -1125,6 +1148,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../../5_Programmation_SQL/5.3_curseurs/cours/" class="md-nav__link">
         
@@ -1142,6 +1166,7 @@
             
               
                 
+  
   
   
   
@@ -1170,6 +1195,7 @@
             
               
                 
+  
   
   
   
@@ -1211,6 +1237,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../../5_Programmation_SQL/5.4_Triggers_d%C3%A9clencheurs/cours/" class="md-nav__link">
         
@@ -1228,6 +1255,7 @@
             
               
                 
+  
   
   
   
@@ -1359,11 +1387,11 @@ CATEGORISE (<u>id</u>,<u>idcat</u>)<br /></p>
 <p>Laravel utilise un <strong>ORM</strong> pour manipuler la base de données. Pour rappel un ORM est Un <strong>mapping objet-relationnel</strong> (en anglais object-relational mapping) est une technique de programmation informatique qui crée l'illusion d'une base de données orientée objet à partir d'une base de données relationnelle en définissant des correspondances entre cette base de données et les objets du langage utilisé.<br />
 L'ORM utilisé par Laravel est <strong>Eloquent</strong>, il est à la fois puissant et relativement simple. Autrement dit avec un ORM dans la plus part des cas vous n'écrivez plus de requête SQL mais vous manipulez des objets représentant la base de données.<br /></p>
 <p>Comme pour la création du projet, la création de la définition de vos table va se faire via une requête dans votre terminal en utilisant Artisan.</p>
-<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>php artisan make:migration create_todo_table --create=todo
+<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>php artisan make:migration create_todos_table --create=todos
 </code></pre></div>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>INFO  Migration [C:\wamp64\www\todo2024\database\migrations/2023_11_21_084423_create_todo_table.php] created successfully.
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>INFO  Migration [C:\wamp64\www\todo2024\database\migrations/2023_11_21_084423_create_todos_table.php] created successfully.
 </code></pre></div></p>
-<p>L’option <code>--create=todo</code> dans la première méthode permet d’indiquer le nom du modèle de la table à créer.<br />
+<p>L’option <code>--create=todos</code> dans la première méthode permet d’indiquer le nom du modèle de la table à créer.<br />
 La commande vient de créer un nouveau fichier dans le dossier database/migration. Dans mon cas le fichier se nomme :
 /todo2024/database/migrations/2023_11_21_084423_create_todo_table.php</p>
 <details class="note">
@@ -1381,7 +1409,7 @@ La commande vient de créer un nouveau fichier dans le dossier database/migratio
 <span class="sd">         */</span>
         <span class="k">public</span> <span class="k">function</span> <span class="nf">up</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span>
         <span class="p">{</span>
-            <span class="nx">Schema</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;todo&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nx">Blueprint</span> <span class="nv">$table</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">Schema</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;todos&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nx">Blueprint</span> <span class="nv">$table</span><span class="p">)</span> <span class="p">{</span>
                 <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">id</span><span class="p">();</span>
                 <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">timestamps</span><span class="p">();</span>
             <span class="p">});</span>
@@ -1392,7 +1420,7 @@ La commande vient de créer un nouveau fichier dans le dossier database/migratio
 <span class="sd">         */</span>
         <span class="k">public</span> <span class="k">function</span> <span class="nf">down</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span>
         <span class="p">{</span>
-            <span class="nx">Schema</span><span class="o">::</span><span class="na">dropIfExists</span><span class="p">(</span><span class="s1">&#39;todo&#39;</span><span class="p">);</span>
+            <span class="nx">Schema</span><span class="o">::</span><span class="na">dropIfExists</span><span class="p">(</span><span class="s1">&#39;todos&#39;</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">};</span>
 </code></pre></div>
@@ -1507,7 +1535,7 @@ Vérifier votre console et votre travail dans phpMyAdmin. </p>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Modèle relationnel</label><label for="__tabbed_5_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Faites la même chose avec les tables CATEGORIE et CATEGORISE
+<p>Faites la même chose avec les tables CATEGORIES et CATEGORISE
 Sachant que CATEGORISE possède également deux clés étrangères.</p>
 </div>
 <div class="tabbed-block">
@@ -1515,7 +1543,7 @@ Sachant que CATEGORISE possède également deux clés étrangères.</p>
 Pour rappel, en Base de données, on ne peut référencer un champ en clé étrangère vers une clé primaire que si les deux champs sont exactement du MEME type. or ici, si on utilise <code>id()</code> pour catégorie, on aura du mal à construire la clé étrangère dans la table CATEGORISE</p>
 <div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
 <span class="x">{</span>
-<span class="x">    Schema::create(&#39;categorie&#39;, function (Blueprint $table) {</span>
+<span class="x">    Schema::create(&#39;categories&#39;, function (Blueprint $table) {</span>
 <span class="x">        $table-&gt;integer(&#39;idcat&#39;);</span>
 <span class="x">        $table-&gt;string(&#39;libelle&#39;);</span>
 <span class="x">        $table-&gt;primary(&#39;idcat&#39;);</span>
@@ -1571,10 +1599,11 @@ protected $fillable = [&#39;texte&#39;, &#39;termine&#39;, &#39;important&#39;];
 <div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Modèle relationnel</label><label for="__tabbed_6_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Faites la même chose avec les tables CATEGORIE
-Inutile d'ajouter des attributs <code>fillable</code> pour cette table puisque nous ne créerons pas de catégorie via l'interface Web.</p>
+<p>Faites la même chose avec les tables CATEGORIE</p>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>Inutile d'ajouter des attributs <code>fillable</code> pour cette table puisque nous ne créerons pas de catégorie via l'interface Web.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1612,7 +1641,7 @@ Inutile d'ajouter des attributs <code>fillable</code> pour cette table puisque n
 </div>
 <p><img alt="▶" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/25b6.svg" title=":arrow_forward:" /> Pour commencer nous allons créer « la structure de base » de notre controller.<br /></p>
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>php artisan make:controller TodosController
-php artisan make:controller CategoriessController
+php artisan make:controller CategoriesController
 </code></pre></div>
 <p>Le fichier <code>TodosController.php</code> viens d'être créé dans le chemin suivant <code>app/Http/Controllers/</code>.<br /></p>
 <p>Notre code est prêt. Nous allons créer les méthodes permettant la manipulation de notre base de données tout en répondant à nos problématique d'interface (liste, création, terminer, suppression<img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /><strong>CRUD</strong>).<br /></p>
@@ -1742,14 +1771,13 @@ npm install bootstrap-icons
 npm install
 npm run build
 </code></pre></div>
-dans <code>app.css</code>, ajouter 
+dans <code>app.js</code>, ajouter 
 <div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">import &#39;./bootstrap&#39;;</span>
-<span class="x">import &#39;bootstrap/dist/css/bootstrap.min.css&#39;</span>
+<span class="x">import &#39;bootstrap/dist/css/bootstrap.min.css&#39;;</span>
 <span class="x">import &#39;bootstrap-icons/font/bootstrap-icons.css&#39;;</span>
+<span class="x">import &#39;@popperjs/core&#39;;</span>
 </code></pre></div></p>
-<p>Dans votre template, ajouter dans le <code>head</code> la ligne <code>@vite(['resources/js/app.css', 'resources/js/app.js'])</code></p>
-<p>pour utiliser les icones bootstrap dans vos pages : ajouter dans le fichier <code>app.scss</code> la ligne <code>@import 'bootstrap-icons/font/bootstrap-icons.css';</code>
-<img alt="app.scss" src="../data/appscss.png" /></p>
+<p>Dans votre template, ajouter dans le <code>head</code> la ligne <code>@vite(['resources/js/app.js'])</code></p>
 <details class="note">
 <summary><img alt="👀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f440.svg" title=":eyes:" /> tester</summary>
 <p>pour tester vos manips, ajouer du code bootstrap dans votre template.</p>
@@ -1826,7 +1854,7 @@ Créér un nouveau fichier resources/views/home.blade.php et y mettre le contenu
 -   Le modele.<br />
 -   Le contrôleur.<br />
 -   Les templates (template et home).<br />
-Il faut maintenant assembler l'ensemble pour que votre page s'affiche lors d'une requête.</p>
+Il faut maintenant assembler l'ensemble pour que votre page s'affiche lors d'une requête HTTP.</p>
 </div>
 <h2 id="creation-des-routes">Création des routes<a class="headerlink" href="#creation-des-routes" title="Permanent link">⚓︎</a></h2>
 <p>La définition des routes se fait dans le fichier <code>routes/web.php</code>, <br />
@@ -2001,7 +2029,7 @@ Vous voyez « Liste » ? C'est <img alt="🆗" class="twemoji" src="https://cdn.
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
