@@ -1861,6 +1861,20 @@ Créér un nouveau fichier resources/views/home.blade.php et y mettre le contenu
 <span class="x">    @endsection</span>
 </code></pre></div>
 </details>
+<div class="admonition warning">
+<p class="admonition-title">tip</p>
+<p>Vous n'aurez pas besoin de tout le contenu du home.blade.php dans un premier temps. <br />
+Je vous conseille de mettre de côté ce code et de dans le home.blade.php de supprimer  de :
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&lt;!-- Action à ajouter pour Terminer et supprimer --&gt;</span>
+<span class="x">@if ($todo-&gt;termine === 0)</span>
+</code></pre></div>
+à 
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">    @elseif ($todo-&gt;important == 1)</span>
+<span class="x">    &lt;!-- Action à ajouter pour descendre la priorité --&gt;</span>
+<span class="x">    &lt;a href=&quot;{{ route(&#39;todo.lower&#39;, [&#39;id&#39; =&gt; $todo-&gt;id]) }}&quot;&gt;&lt;i class=&quot;bi bi-arrow-down-circle&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="x">@endif</span>
+</code></pre></div></p>
+</div>
 <details class="question">
 <summary>@extends ? À quoi sert cette directive, pourquoi « template »?</summary>
 <p>Modifier le titre affiché dans la barre.</p>
@@ -1907,7 +1921,7 @@ Vous voyez « Liste » ? C'est <img alt="🆗" class="twemoji" src="https://cdn.
 </details>
 <h1 id="sauvegarde-du-formulaire-et-enregitsrement-en-base">Sauvegarde du formulaire et enregitsrement en base<a class="headerlink" href="#sauvegarde-du-formulaire-et-enregitsrement-en-base" title="Permanent link">⚓︎</a></h1>
 <h2 id="etape-1-ceer-la-fonction-save-dans-le-controleur">Etape 1 : céer la fonction Save dans le controleur<a class="headerlink" href="#etape-1-ceer-la-fonction-save-dans-le-controleur" title="Permanent link">⚓︎</a></h2>
-<p>Pour utiliser les fonctionnalités Eloqent, vous pouvez consulter la documentation ici.</p>
+<p>Pour utiliser les fonctionnalités Eloqent, vous pouvez consulter la documentation <a href="https://laravel.com/docs/10.x/eloquent">ici</a>.</p>
 <details class="warning">
 <summary>fonction save</summary>
 <div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x"> public function saveTodo(Request $request){</span>
