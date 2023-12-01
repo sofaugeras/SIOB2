@@ -1793,75 +1793,74 @@ dans <code>app.js</code>, ajouter
 Créér un nouveau fichier resources/views/home.blade.php et y mettre le contenu suivant :</p>
 <details class="note">
 <summary>home.blade.php</summary>
-<p>```php
-@extends("template")</p>
-</details>
-<p>@section("title", "Ma Todo List")</p>
-<p>@section("content")</p>
-<div class="container">
-    <div class="card">
-        <div class="card-body">
-            <!-- Action -->
-            <form action="{{ route('todo.save') }}" method="POST" class="add">
-                    @csrf <!-- <<L'annotation ici ! -->
-                    <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon1"><span class="oi oi-pencil"></span></span>
-                        <input id="texte" name="texte" type="text" class="form-control" placeholder="Prendre une note..." aria-label="My new idea" aria-describedby="basic-addon1">
-                        @if (session('message'))
-                            <p class="alert alert-danger">{{ session('message') }}</p>
-                        @endif
-                    </div>
-                    <div class="priority-choice">
-                        Importance : 
-                        <input type="radio" name="priority" id="highpr" value="0" checked><label for="highpr"><i class="bi bi-reception-1"></i></label>
-                        <input type="radio" name="priority" id="lowpr" value="1"><label for="lowpr"><i class="bi bi-reception-4"></i></label>
-                        <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i></button>
-                    </div>
-                </form>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">@extends(&quot;template&quot;)</span>
 
-                <!-- Liste -->
-                <ul class="list-group">
-                    @forelse ($todos as $todo)
-                        <li class="list-group-item">
-                            <!-- Affichage de la priorité -->
-                            @if ($todo->important == 0)
-                                <i class="bi bi-reception-1"></i>
-                            @elseif ($todo->important == 1)
-                                <i class="bi bi-reception-4"></i>
-                            @endif
-                            <!-- Affichage du texte -->
-                            <span>{{ $todo->texte }}</span>
-                            <!-- Action à ajouter pour Terminer et supprimer -->
-                            @if ($todo->termine === 0)
-                                <!-- Si un ToDo n'est pas terminé, Action à ajouter pour terminer -->
-                                <a href="{{ route('todo.done', ['id' => $todo->id]) }}" class="btn btn-success"><i class="bi bi-bag-check"></i></a>
-                                <!--<button class="btn btn-primary btn-lg"><span class="fa fa-user"></span><br>Terminer</button>-->
-                            @elseif ($todo->termine === 1)
-                                <!-- Si un ToDo est terminé, Action à ajouter pour supprimer -->
-                                <a href="{{ route('todo.delete', ['id' => $todo->id]) }}" class="btn btn-danger"><i class="bi bi-trash3"></i></i></a>
-                                @if (session('validation'))
-                                    <p class="alert alert-success">{{ session('validation') }}</p>
-                                @endif
-                            @endif
-                            @if ($todo->important == 0)
-                                <!-- Action à ajouter pour monter la priorité -->
-                                <a href="{{ route('todo.raise', ['id'=> $todo->id]) }}"><i class="bi bi-arrow-up-circle"></i></a>
-                            @elseif ($todo->important == 1)
-                                <!-- Action à ajouter pour descendre la priorité -->
-                                <a href="{{ route('todo.lower', ['id' => $todo->id]) }}"><i class="bi bi-arrow-down-circle"></i></a>
-                            @endif
-                        </li>
-                    @empty
-                        <li class="list-group-item text-center">C'est vide !</li>
-                    @endforelse
-                </ul>
-            </div>
-        </div>
-    </div>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>@endsection
+<span class="x">@section(&quot;title&quot;, &quot;Ma Todo List&quot;)</span>
 
-```
+<span class="x">@section(&quot;content&quot;)</span>
+<span class="x">&lt;div class=&quot;container&quot;&gt;</span>
+<span class="x">    &lt;div class=&quot;card&quot;&gt;</span>
+<span class="x">        &lt;div class=&quot;card-body&quot;&gt;</span>
+<span class="x">            &lt;!-- Action --&gt;</span>
+<span class="x">            &lt;form action=&quot;{{ route(&#39;todo.save&#39;) }}&quot; method=&quot;POST&quot; class=&quot;add&quot;&gt;</span>
+<span class="x">                    @csrf &lt;!-- &lt;&lt;L&#39;annotation ici ! --&gt;</span>
+<span class="x">                    &lt;div class=&quot;input-group&quot;&gt;</span>
+<span class="x">                        &lt;span class=&quot;input-group-addon&quot; id=&quot;basic-addon1&quot;&gt;&lt;span class=&quot;oi oi-pencil&quot;&gt;&lt;/span&gt;&lt;/span&gt;</span>
+<span class="x">                        &lt;input id=&quot;texte&quot; name=&quot;texte&quot; type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Prendre une note...&quot; aria-label=&quot;My new idea&quot; aria-describedby=&quot;basic-addon1&quot;&gt;</span>
+<span class="x">                        @if (session(&#39;message&#39;))</span>
+<span class="x">                            &lt;p class=&quot;alert alert-danger&quot;&gt;{{ session(&#39;message&#39;) }}&lt;/p&gt;</span>
+<span class="x">                        @endif</span>
+<span class="x">                    &lt;/div&gt;</span>
+<span class="x">                    &lt;div class=&quot;priority-choice&quot;&gt;</span>
+<span class="x">                        Importance : </span>
+<span class="x">                        &lt;input type=&quot;radio&quot; name=&quot;priority&quot; id=&quot;highpr&quot; value=&quot;0&quot; checked&gt;&lt;label for=&quot;highpr&quot;&gt;&lt;i class=&quot;bi bi-reception-1&quot;&gt;&lt;/i&gt;&lt;/label&gt;</span>
+<span class="x">                        &lt;input type=&quot;radio&quot; name=&quot;priority&quot; id=&quot;lowpr&quot; value=&quot;1&quot;&gt;&lt;label for=&quot;lowpr&quot;&gt;&lt;i class=&quot;bi bi-reception-4&quot;&gt;&lt;/i&gt;&lt;/label&gt;</span>
+<span class="x">                        &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;&lt;i class=&quot;bi bi-save&quot;&gt;&lt;/i&gt;&lt;/button&gt;</span>
+<span class="x">                    &lt;/div&gt;</span>
+<span class="x">                &lt;/form&gt;</span>
+
+<span class="x">                &lt;!-- Liste --&gt;</span>
+<span class="x">                &lt;ul class=&quot;list-group&quot;&gt;</span>
+<span class="x">                    @forelse ($todos as $todo)</span>
+<span class="x">                        &lt;li class=&quot;list-group-item&quot;&gt;</span>
+<span class="x">                            &lt;!-- Affichage de la priorité --&gt;</span>
+<span class="x">                            @if ($todo-&gt;important == 0)</span>
+<span class="x">                                &lt;i class=&quot;bi bi-reception-1&quot;&gt;&lt;/i&gt;</span>
+<span class="x">                            @elseif ($todo-&gt;important == 1)</span>
+<span class="x">                                &lt;i class=&quot;bi bi-reception-4&quot;&gt;&lt;/i&gt;</span>
+<span class="x">                            @endif</span>
+<span class="x">                            &lt;!-- Affichage du texte --&gt;</span>
+<span class="x">                            &lt;span&gt;{{ $todo-&gt;texte }}&lt;/span&gt;</span>
+<span class="x">                            &lt;!-- Action à ajouter pour Terminer et supprimer --&gt;</span>
+<span class="x">                            @if ($todo-&gt;termine === 0)</span>
+<span class="x">                                &lt;!-- Si un ToDo n&#39;est pas terminé, Action à ajouter pour terminer --&gt;</span>
+<span class="x">                                &lt;a href=&quot;{{ route(&#39;todo.done&#39;, [&#39;id&#39; =&gt; $todo-&gt;id]) }}&quot; class=&quot;btn btn-success&quot;&gt;&lt;i class=&quot;bi bi-bag-check&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="x">                                &lt;!--&lt;button class=&quot;btn btn-primary btn-lg&quot;&gt;&lt;span class=&quot;fa fa-user&quot;&gt;&lt;/span&gt;&lt;br&gt;Terminer&lt;/button&gt;--&gt;</span>
+<span class="x">                            @elseif ($todo-&gt;termine === 1)</span>
+<span class="x">                                &lt;!-- Si un ToDo est terminé, Action à ajouter pour supprimer --&gt;</span>
+<span class="x">                                &lt;a href=&quot;{{ route(&#39;todo.delete&#39;, [&#39;id&#39; =&gt; $todo-&gt;id]) }}&quot; class=&quot;btn btn-danger&quot;&gt;&lt;i class=&quot;bi bi-trash3&quot;&gt;&lt;/i&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="x">                                @if (session(&#39;validation&#39;))</span>
+<span class="x">                                    &lt;p class=&quot;alert alert-success&quot;&gt;{{ session(&#39;validation&#39;) }}&lt;/p&gt;</span>
+<span class="x">                                @endif</span>
+<span class="x">                            @endif</span>
+<span class="x">                            @if ($todo-&gt;important == 0)</span>
+<span class="x">                                &lt;!-- Action à ajouter pour monter la priorité --&gt;</span>
+<span class="x">                                &lt;a href=&quot;{{ route(&#39;todo.raise&#39;, [&#39;id&#39;=&gt; $todo-&gt;id]) }}&quot;&gt;&lt;i class=&quot;bi bi-arrow-up-circle&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="x">                            @elseif ($todo-&gt;important == 1)</span>
+<span class="x">                                &lt;!-- Action à ajouter pour descendre la priorité --&gt;</span>
+<span class="x">                                &lt;a href=&quot;{{ route(&#39;todo.lower&#39;, [&#39;id&#39; =&gt; $todo-&gt;id]) }}&quot;&gt;&lt;i class=&quot;bi bi-arrow-down-circle&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="x">                            @endif</span>
+<span class="x">                        &lt;/li&gt;</span>
+<span class="x">                    @empty</span>
+<span class="x">                        &lt;li class=&quot;list-group-item text-center&quot;&gt;C&#39;est vide !&lt;/li&gt;</span>
+<span class="x">                    @endforelse</span>
+<span class="x">                &lt;/ul&gt;</span>
+<span class="x">            &lt;/div&gt;</span>
+<span class="x">        &lt;/div&gt;</span>
+<span class="x">    &lt;/div&gt;</span>
+<span class="x">    @endsection</span>
 </code></pre></div>
+</details>
 <details class="question">
 <summary>@extends ? À quoi sert cette directive, pourquoi « template »?</summary>
 <p>Modifier le titre affiché dans la barre.</p>
