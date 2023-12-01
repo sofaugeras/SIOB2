@@ -1932,7 +1932,7 @@ Vous voyez « Liste » ? C'est <img alt="🆗" class="twemoji" src="https://cdn.
 <span class="x">        $todo = new Todos();</span>
 <span class="x">        $todo-&gt;texte = $texte;</span>
 <span class="x">        $todo-&gt;termine = 0;</span>
-<span class="x">        $todo-&gt;Importance = 0;</span>
+<span class="x">        $todo-&gt;Important = 0;</span>
 <span class="x">        $todo-&gt;save();</span>
 
 <span class="x">        return redirect()-&gt;route(&#39;todo.liste&#39;);</span>
@@ -1942,7 +1942,7 @@ Vous voyez « Liste » ? C'est <img alt="🆗" class="twemoji" src="https://cdn.
 <span class="x">}</span>
 </code></pre></div>
 </details>
-<p>Vous prendrez le temps de remarquer que ce code gère les messages d'erreur avec Bootstrap.<br />
+<p>Vous prendrez le temps de <ins>remarquer</ins> que ce code gère les messages d'erreur avec Bootstrap.<br />
 On "attrape" l'erreur en testant le champ texte, qui doit ici être non vide et on ajoute un élément à la route.
 Element qui sera mappé avec la vue <em>home</em> et plus précisement avec le champ <em>message</em>
 <div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">@if (session(&#39;message&#39;))</span>
@@ -1988,10 +1988,10 @@ Dans ce cas, laravel créé un index sur le champ id, il devient inutile de le d
 <span class="x">        $todo-&gt;texte = $texte;</span>
 <span class="x">        $todo-&gt;termine = 0;</span>
 <span class="x">        #Gestion du bouton Important</span>
-<span class="x">        if($button==&#39;highpr&#39;){</span>
-<span class="x">            $todo-&gt;Importance = 1;</span>
-<span class="x">        } elseif($button==&#39;lowpr&#39;){</span>
-<span class="x">            $todo-&gt;Importance = 0;</span>
+<span class="x">        if($button==&#39;1&#39;){</span>
+<span class="x">            $todo-&gt;Important = 1;</span>
+<span class="x">        } elseif($button==&#39;0&#39;){</span>
+<span class="x">            $todo-&gt;Important = 0;</span>
 <span class="x">        }</span>
 <span class="x">        $todo-&gt;save();</span>
 <span class="x">        return redirect()-&gt;route(&#39;todo.liste&#39;);</span>
