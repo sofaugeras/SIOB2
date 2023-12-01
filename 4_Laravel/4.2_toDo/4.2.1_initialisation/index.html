@@ -1793,39 +1793,75 @@ dans <code>app.js</code>, ajouter
 Créér un nouveau fichier resources/views/home.blade.php et y mettre le contenu suivant :</p>
 <details class="note">
 <summary>home.blade.php</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">@extends(&quot;template&quot;)</span>
-
-<span class="x">@section(&quot;title&quot;, &quot;Ma Todo List&quot;)</span>
-
-<span class="x">@section(&quot;content&quot;)</span>
-<span class="x">    &lt;div class=&quot;container&quot;&gt;</span>
-<span class="x">        &lt;div class=&quot;card&quot;&gt;</span>
-<span class="x">            &lt;div class=&quot;card-body&quot;&gt;</span>
-<span class="x">                &lt;!-- Action --&gt;</span>
-<span class="x">                &lt;form action=&quot;/action/add&quot; method=&quot;post&quot; class=&quot;add&quot;&gt;</span>
-<span class="x">                    &lt;div class=&quot;input-group&quot;&gt;</span>
-<span class="x">                        &lt;span class=&quot;input-group-addon&quot; id=&quot;basic-addon1&quot;&gt;&lt;span class=&quot;oi oi-pencil&quot;&gt;&lt;/span&gt;&lt;/span&gt;</span>
-<span class="x">                        &lt;input id=&quot;texte&quot; name=&quot;texte&quot; type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Prendre une note…&quot; aria-label=&quot;My new idea&quot; aria-describedby=&quot;basic-addon1&quot;&gt;</span>
-<span class="x">                    &lt;/div&gt;</span>
-<span class="x">                &lt;/form&gt;</span>
-
-<span class="x">                &lt;!-- Liste --&gt;</span>
-<span class="x">                &lt;ul class=&quot;list-group&quot;&gt;</span>
-<span class="x">                    @forelse ($todos as $todo)</span>
-<span class="x">                        &lt;li class=&quot;list-group-item&quot;&gt;</span>
-<span class="x">                            &lt;span&gt;{{ $todo-&gt;texte }}&lt;/span&gt;</span>
-<span class="x">                            &lt;!-- Action à ajouter pour Terminer et supprimer --&gt;</span>
-<span class="x">                        &lt;/li&gt;</span>
-<span class="x">                    @empty</span>
-<span class="x">                        &lt;li class=&quot;list-group-item text-center&quot;&gt;C&#39;est vide !&lt;/li&gt;</span>
-<span class="x">                    @endforelse</span>
-<span class="x">                &lt;/ul&gt;</span>
-<span class="x">            &lt;/div&gt;</span>
-<span class="x">        &lt;/div&gt;</span>
-<span class="x">    &lt;/div&gt;</span>
-<span class="x">@endsection</span>
-</code></pre></div>
+<p>```php
+@extends("template")</p>
 </details>
+<p>@section("title", "Ma Todo List")</p>
+<p>@section("content")</p>
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <!-- Action -->
+            <form action="{{ route('todo.save') }}" method="POST" class="add">
+                    @csrf <!-- <<L'annotation ici ! -->
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><span class="oi oi-pencil"></span></span>
+                        <input id="texte" name="texte" type="text" class="form-control" placeholder="Prendre une note..." aria-label="My new idea" aria-describedby="basic-addon1">
+                        @if (session('message'))
+                            <p class="alert alert-danger">{{ session('message') }}</p>
+                        @endif
+                    </div>
+                    <div class="priority-choice">
+                        Importance : 
+                        <input type="radio" name="priority" id="highpr" value="0" checked><label for="highpr"><i class="bi bi-reception-1"></i></label>
+                        <input type="radio" name="priority" id="lowpr" value="1"><label for="lowpr"><i class="bi bi-reception-4"></i></label>
+                        <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i></button>
+                    </div>
+                </form>
+
+                <!-- Liste -->
+                <ul class="list-group">
+                    @forelse ($todos as $todo)
+                        <li class="list-group-item">
+                            <!-- Affichage de la priorité -->
+                            @if ($todo->important == 0)
+                                <i class="bi bi-reception-1"></i>
+                            @elseif ($todo->important == 1)
+                                <i class="bi bi-reception-4"></i>
+                            @endif
+                            <!-- Affichage du texte -->
+                            <span>{{ $todo->texte }}</span>
+                            <!-- Action à ajouter pour Terminer et supprimer -->
+                            @if ($todo->termine === 0)
+                                <!-- Si un ToDo n'est pas terminé, Action à ajouter pour terminer -->
+                                <a href="{{ route('todo.done', ['id' => $todo->id]) }}" class="btn btn-success"><i class="bi bi-bag-check"></i></a>
+                                <!--<button class="btn btn-primary btn-lg"><span class="fa fa-user"></span><br>Terminer</button>-->
+                            @elseif ($todo->termine === 1)
+                                <!-- Si un ToDo est terminé, Action à ajouter pour supprimer -->
+                                <a href="{{ route('todo.delete', ['id' => $todo->id]) }}" class="btn btn-danger"><i class="bi bi-trash3"></i></i></a>
+                                @if (session('validation'))
+                                    <p class="alert alert-success">{{ session('validation') }}</p>
+                                @endif
+                            @endif
+                            @if ($todo->important == 0)
+                                <!-- Action à ajouter pour monter la priorité -->
+                                <a href="{{ route('todo.raise', ['id'=> $todo->id]) }}"><i class="bi bi-arrow-up-circle"></i></a>
+                            @elseif ($todo->important == 1)
+                                <!-- Action à ajouter pour descendre la priorité -->
+                                <a href="{{ route('todo.lower', ['id' => $todo->id]) }}"><i class="bi bi-arrow-down-circle"></i></a>
+                            @endif
+                        </li>
+                    @empty
+                        <li class="list-group-item text-center">C'est vide !</li>
+                    @endforelse
+                </ul>
+            </div>
+        </div>
+    </div>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>@endsection
+
+```
+</code></pre></div>
 <details class="question">
 <summary>@extends ? À quoi sert cette directive, pourquoi « template »?</summary>
 <p>Modifier le titre affiché dans la barre.</p>
