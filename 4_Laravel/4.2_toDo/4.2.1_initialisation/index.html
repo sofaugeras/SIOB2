@@ -26,7 +26,7 @@
     
     
       
-        <title>Introduction - Saint Sauveur BTS SIO Bloc B2</title>
+        <title>1. Projet ToDo Initialisation - Saint Sauveur BTS SIO Bloc B2</title>
       
     
     
@@ -107,7 +107,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#1-projet-todo-initialisation" class="md-skip">
           Aller au contenu
         </a>
       
@@ -141,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              1. Projet ToDo Initialisation
             
           </span>
         </div>
@@ -816,7 +816,7 @@
         
   
   <span class="md-ellipsis">
-    Introduction
+    1. Projet ToDo Initialisation
   </span>
   
 
@@ -1310,7 +1310,7 @@
   
 
 
-<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">⚓︎</a></h1>
+<h1 id="1-projet-todo-initialisation">1. Projet ToDo Initialisation<a class="headerlink" href="#1-projet-todo-initialisation" title="Permanent link">⚓︎</a></h1>
 <p>Dans ce TP nous allons réaliser une application web, « TODO » ou aussi appelé liste de tâches.<br />
 Une TODO List est un procédé qui se veut simple et efficace pour gérer les tâches d'un projet. Ces tâches peuvent être indépendantes ou devoir, au contraire, être accomplies dans un certain ordre. Ces tâches pourront également être catégorisées (pro, perso, famille, ...).<br />
 Voilà la liste des fonctionnalités de l’application que l'on va créer :<br />
@@ -1744,26 +1744,9 @@ npm install
 npm install --save-dev vite laravel-vite-plugin
 npm install --save-dev @vitejs/plugin-vue
 </code></pre></div>
-Il ne nous reste plus qu’à compiler les assets.
 <img alt="vite" src="../data/vite.png" /></p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>npm run build
-</code></pre></div>
 <p>On trouve aussi un nouveau fichier de configuration
 <img alt="Config VITE" src="../data/configVite.png" /></p>
-<p><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4a1.svg" title=":bulb:" /> Dans <code>template.blade.php</code><br />
-dans la balise Head
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">    @vite([&#39;resources/js/app.js&#39;])</span>
-</code></pre></div></p>
-<p><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4a1.svg" title=":bulb:" /></p>
-<p><img alt="▶" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/25b6.svg" title=":arrow_forward:" /> Pour tester, mettez en commentaires la route vers le contrôleur et remplacer par une route vers le template. </p>
-<details class="note">
-<summary><img alt="👀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f440.svg" title=":eyes:" /> Tester</summary>
-<ul class="task-list">
-<li class="task-list-item"><input type="checkbox"/> Mettre en commentaire la route vers le controller Todo</li>
-<li class="task-list-item"><input type="checkbox"/> Créer une route vers la vue template <code>Route :: view ('/test', 'template');</code></li>
-<li class="task-list-item"><input type="checkbox"/> Dans le template, mettre mettre un titre avec une classe Bootstrap bien visible <code>&lt;a class="text-center" href="#"&gt;Ma Todo List&lt;/a&gt;</code></li>
-</ul>
-</details>
 <h2 id="installation-de-bootstrap-5">Installation de Bootstrap 5<a class="headerlink" href="#installation-de-bootstrap-5" title="Permanent link">⚓︎</a></h2>
 <p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>composer require laravel/ui
 npm i --save bootstrap @popperjs/core
@@ -1780,7 +1763,10 @@ dans <code>app.js</code>, ajouter
 <p>Dans votre template, ajouter dans le <code>head</code> la ligne <code>@vite(['resources/js/app.js'])</code></p>
 <details class="note">
 <summary><img alt="👀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f440.svg" title=":eyes:" /> tester</summary>
-<p>pour tester vos manips, ajouer du code bootstrap dans votre template.</p>
+<p>pour tester vos manips, ajouer du code bootstrap dans votre template.
+- [ ] Mettre en commentaire la route vers le controller Todo
+- [ ] Créer une route vers la vue template <code>Route :: view ('/test', 'template');</code>
+- [ ] Dans le template, mettre mettre le code ci dessous contenant du bootstrap</p>
 <div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&lt;nav class=&quot;navbar navbar-expand-md navbar-dark bg-dark&quot;&gt;</span>
 <span class="x">    &lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;Ma Todo List&lt;/a&gt;</span>
 <span class="x">    &lt;a class=&quot;navbar-brand btn btn-primary&quot; href=&quot;liste&quot;&gt;&lt;i class=&quot;bi bi-app&quot;&gt;&lt;/i&gt;Liste&lt;/a&gt;</span>
@@ -1884,17 +1870,97 @@ Vous voyez « Liste » ? C'est <img alt="🆗" class="twemoji" src="https://cdn.
 <img alt="🔂" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f502.svg" title=":repeat_one:" /> Rafraichissez la page, vous devez maintenant voir votre texte <img alt="🎉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f389.svg" title=":tada:" /></li>
 </ul>
 </details>
-<h1 id="expressions-de-besoins">Expressions de besoins<a class="headerlink" href="#expressions-de-besoins" title="Permanent link">⚓︎</a></h1>
-<h2 id="user-story-1-save-todo">User story 1 : save Todo<a class="headerlink" href="#user-story-1-save-todo" title="Permanent link">⚓︎</a></h2>
-<p>Dans le premier form de la vue home, vous avez un input pour saisir un Todo
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&lt;!-- Action --&gt;</span>
-<span class="x">&lt;form action=&quot;/action/add&quot; method=&quot;post&quot; class=&quot;add&quot;&gt;</span>
-<span class="x">    &lt;div class=&quot;input-group&quot;&gt;</span>
-<span class="x">        &lt;span class=&quot;input-group-addon&quot; id=&quot;basic-addon1&quot;&gt;&lt;span class=&quot;oi oi-pencil&quot;&gt;&lt;/span&gt;&lt;/span&gt;</span>
-<span class="x">        &lt;input id=&quot;texte&quot; name=&quot;texte&quot; type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Prendre une note…&quot; aria-label=&quot;My new idea&quot; aria-describedby=&quot;basic-addon1&quot;&gt;</span>
-<span class="x">    &lt;/div&gt;</span>
-<span class="x">&lt;/form&gt;</span>
-</code></pre></div></p>
+<h1 id="sauvegarde-du-formulaire-et-enregitsrement-en-base">Sauvegarde du formulaire et enregitsrement en base<a class="headerlink" href="#sauvegarde-du-formulaire-et-enregitsrement-en-base" title="Permanent link">⚓︎</a></h1>
+<h2 id="etape-1-ceer-la-fonction-save-dans-le-controleur">Etape 1 : céer la fonction Save dans le controleur<a class="headerlink" href="#etape-1-ceer-la-fonction-save-dans-le-controleur" title="Permanent link">⚓︎</a></h2>
+<p>Pour utiliser les fonctionnalités Eloqent, vous pouvez consulter la documentation ici.</p>
+<details class="warning">
+<summary>fonction save</summary>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x"> public function saveTodo(Request $request){</span>
+
+<span class="x">    $texte = $request-&gt;input(&#39;texte&#39;);</span>
+
+<span class="x">    if($texte){</span>
+<span class="x">        $todo = new Todos();</span>
+<span class="x">        $todo-&gt;texte = $texte;</span>
+<span class="x">        $todo-&gt;termine = 0;</span>
+<span class="x">        $todo-&gt;Importance = 0;</span>
+<span class="x">        $todo-&gt;save();</span>
+
+<span class="x">        return redirect()-&gt;route(&#39;todo.liste&#39;);</span>
+<span class="x">    } else{</span>
+<span class="x">        return redirect()-&gt;route(&#39;todo.liste&#39;)-&gt;with(&#39;message&#39;, &quot;Veuillez saisir une note à ajouter&quot;);</span>
+<span class="x">    }     </span>
+<span class="x">}</span>
+</code></pre></div>
+</details>
+<p>Vous prendrez le temps de remarquer que ce code gère les messages d'erreur avec Bootstrap.<br />
+On "attrape" l'erreur en testant le champ texte, qui doit ici être non vide et on ajoute un élément à la route.
+Element qui sera mappé avec la vue <em>home</em> et plus précisement avec le champ <em>message</em>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">@if (session(&#39;message&#39;))</span>
+<span class="x">    &lt;p class=&quot;alert alert-danger&quot;&gt;{{ session(&#39;message&#39;) }}&lt;/p&gt;</span>
+<span class="x">@endif</span>
+</code></pre></div>
+Il manque encore un élément pour finaliser ce besoin : La route.<br />
+Il faut ajouter le lien vers la fonction saveTodo du controleur.</p>
+<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">Route::post(&#39;/action/add&#39;, [TodosController::class, &#39;saveTodo&#39;])-&gt;name(&#39;todo.save&#39;);</span>
+</code></pre></div>
+et encore faut il appeler cette route lorsque l'on clique sur le bouton "Save" ! Vérifier dans la vue home que vous ayez bien l'appel à votre route.</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&lt;form action=&quot;{{ route(&#39;todo.save&#39;) }}&quot; method=&quot;POST&quot; class=&quot;add&quot;&gt;</span>
+</code></pre></div>
+<div class="admonition tips">
+<p class="admonition-title">Erreur à traiter</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Enoncé</label><label for="__tabbed_7_2">Solution</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Il manque le champ 'id' dans la requete d'insertion. </p>
+</div>
+<div class="tabbed-block">
+<p>Il faut passer le champ id en autoIncrément et relancer le fresh de migration.</p>
+<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">$table-&gt;integer(&#39;id&#39;)-&gt;autoIncrement();</span>
+<span class="x">#$table-&gt;primary(&#39;id&#39;);</span>
+</code></pre></div>
+Dans ce cas, laravel créé un index sur le champ id, il devient inutile de le déclarer en primary key. Mais dans la base de donnée, le champ est bien clé primaire.</p>
+</div>
+</div>
+</div>
+</div>
+<h1 id="user-story">User Story<a class="headerlink" href="#user-story" title="Permanent link">⚓︎</a></h1>
+<h2 id="user-story-1-save-todo-traiter-le-champ-important-priorite-hautefaible">User story 1 : save Todo : traiter le champ Important "Priorité haute/faible"<a class="headerlink" href="#user-story-1-save-todo-traiter-le-champ-important-priorite-hautefaible" title="Permanent link">⚓︎</a></h2>
+<p><img alt="▶" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/25b6.svg" title=":arrow_forward:" /> Adaptez votre Controleur pour prendre en compte le champ <em>Important</em>.</p>
+<details class="warning">
+<summary>solution</summary>
+<p>Modifier la fonction "Save" du contrôleur</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x"> public function saveTodo(Request $request){</span>
+<span class="x">    $texte = $request-&gt;input(&#39;texte&#39;);</span>
+<span class="x">    $button = $request-&gt;input(&#39;priority&#39;);</span>
+
+<span class="x">    if($texte){</span>
+<span class="x">        $todo = new Todos();</span>
+<span class="x">        $todo-&gt;texte = $texte;</span>
+<span class="x">        $todo-&gt;termine = 0;</span>
+<span class="x">        #Gestion du bouton Important</span>
+<span class="x">        if($button==&#39;highpr&#39;){</span>
+<span class="x">            $todo-&gt;Importance = 1;</span>
+<span class="x">        } elseif($button==&#39;lowpr&#39;){</span>
+<span class="x">            $todo-&gt;Importance = 0;</span>
+<span class="x">        }</span>
+<span class="x">        $todo-&gt;save();</span>
+<span class="x">        return redirect()-&gt;route(&#39;todo.liste&#39;);</span>
+<span class="x">    } else{</span>
+<span class="x">        return redirect()-&gt;route(&#39;todo.liste&#39;)-&gt;with(&#39;message&#39;, &quot;Veuillez saisir une note à ajouter&quot;);</span>
+<span class="x">    }</span>
+
+<span class="x">}</span>
+</code></pre></div>
+</details>
+<h2 id="user-story-1-baisser-limportance-dun-todo">User story 1 : Baisser l'importance d'un toDo.<a class="headerlink" href="#user-story-1-baisser-limportance-dun-todo" title="Permanent link">⚓︎</a></h2>
+<p>Besoin : A la saisie, on peut choisir l'importance d'un Todo.<br />
+Fonctionnalité : Pouvoir ajuster L'importance de chaque ToDo </p>
+<h2 id="user-story-2-passer-un-todo-a-termine">User story 2 : Passer un ToDo à Terminé.<a class="headerlink" href="#user-story-2-passer-un-todo-a-termine" title="Permanent link">⚓︎</a></h2>
+<h2 id="user-story-3-supprimer-un-todo">User Story 3 : Supprimer un ToDo<a class="headerlink" href="#user-story-3-supprimer-un-todo" title="Permanent link">⚓︎</a></h2>
+<p><img alt="🚫" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f6ab.svg" title=":no_entry_sign:" /> On ne peut pas supprimer un Todo qui n'est pas terminé</p>
+<h2 id="user-story-bonus-statistiques">User Story Bonus : Statistiques<a class="headerlink" href="#user-story-bonus-statistiques" title="Permanent link">⚓︎</a></h2>
+<p>Ajouter une page qui dénombre les Todos Non terminés et les Todos terminés.</p>
 
 
   
