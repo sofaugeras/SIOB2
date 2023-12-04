@@ -18,7 +18,7 @@
         <link rel="prev" href="../../4.1_installation/cours/">
       
       
-        <link rel="next" href="../4.2.2_prolongement_ORM/">
+        <link rel="next" href="../4.2.2_Ajout_cat%C3%A9gorie/">
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
@@ -834,11 +834,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../4.2.2_prolongement_ORM/" class="md-nav__link">
+      <a href="../4.2.2_Ajout_cat%C3%A9gorie/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    4.2.2 prolongement ORM
+    2. Evolution : Gestion des catégories
   </span>
   
 
@@ -859,7 +859,7 @@
         
   
   <span class="md-ellipsis">
-    4.2.3 prolongement middleware
+    Utilisation des middlewares
   </span>
   
 
@@ -1382,7 +1382,7 @@ La première étape est donc d'éditer le fichier <code>.env</code> pour configu
 <p>Ce qui donnera le calcul du MPD suivant : <br />
 TODO (<u>id</u>, texte, termine,important timestamp)<br />
 CATEGORIE(<u>idcat</u>, libelle)<br />
-CATEGORISE (<u>id</u>,<u>idcat</u>)<br /></p>
+CATEGORIES_TODOS (<u>id</u>,<u>idcat</u>)<br /></p>
 <h2 id="creation-de-la-migration">Création de la « migration »<a class="headerlink" href="#creation-de-la-migration" title="Permanent link">⚓︎</a></h2>
 <p>Laravel utilise un <strong>ORM</strong> pour manipuler la base de données. Pour rappel un ORM est Un <strong>mapping objet-relationnel</strong> (en anglais object-relational mapping) est une technique de programmation informatique qui crée l'illusion d'une base de données orientée objet à partir d'une base de données relationnelle en définissant des correspondances entre cette base de données et les objets du langage utilisé.<br />
 L'ORM utilisé par Laravel est <strong>Eloquent</strong>, il est à la fois puissant et relativement simple. Autrement dit avec un ORM dans la plus part des cas vous n'écrivez plus de requête SQL mais vous manipulez des objets représentant la base de données.<br /></p>
@@ -1476,10 +1476,11 @@ $table-&gt;primary(&#39;id&#39;);
 <div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
 <span class="x">{</span>
 <span class="x">    Schema::create(&#39;todos&#39;, function (Blueprint $table) {</span>
-<span class="x">        $table-&gt;integer(&#39;id&#39;);</span>
+<span class="x">        $table-&gt;integer(&#39;id&#39;)</span>
 <span class="x">        $table-&gt;string(&#39;texte&#39;);</span>
 <span class="x">        $table-&gt;boolean(&#39;termine&#39;)-&gt;default(0);</span>
 <span class="x">        $table-&gt;boolean(&#39;important&#39;)-&gt;default(0);</span>
+<span class="x">        #Déclaraction de la clé primaire</span>
 <span class="x">        $table-&gt;primary(&#39;id&#39;);</span>
 <span class="x">        $table-&gt;timestamps();</span>
 <span class="x">    });</span>
@@ -1544,23 +1545,22 @@ Pour rappel, en Base de données, on ne peut référencer un champ en clé étra
 <div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
 <span class="x">{</span>
 <span class="x">    Schema::create(&#39;categories&#39;, function (Blueprint $table) {</span>
-<span class="x">        $table-&gt;integer(&#39;idcat&#39;);</span>
+<span class="x">        $table-&gt;integer(&#39;id&#39;);</span>
 <span class="x">        $table-&gt;string(&#39;libelle&#39;);</span>
-<span class="x">        $table-&gt;primary(&#39;idcat&#39;);</span>
+<span class="x">        $table-&gt;primary(&#39;id&#39;);</span>
 <span class="x">        $table-&gt;timestamps();</span>
 <span class="x">    });</span>
 <span class="x">}</span>
-
 <span class="x">public function up(): void</span>
 <span class="x">{</span>
-<span class="x">    Schema::create(&#39;categorise&#39;, function (Blueprint $table) {</span>
-<span class="x">        $table-&gt;integer(&#39;idcat&#39;);</span>
-<span class="x">        $table-&gt;integer(&#39;idtodo&#39;);</span>
+<span class="x">    Schema::create(&#39;categories_todos&#39;, function (Blueprint $table) {</span>
+<span class="x">        $table-&gt;integer(&#39;categories_id&#39;);</span>
+<span class="x">        $table-&gt;integer(&#39;todos_id&#39;);</span>
 
-<span class="x">        $table-&gt;foreign(&#39;idcat&#39;)-&gt;references(&#39;idcat&#39;)-&gt;on(&#39;categorie&#39;);</span>
-<span class="x">        $table-&gt;foreign(&#39;idtodo&#39;)-&gt;references(&#39;id&#39;)-&gt;on(&#39;todos&#39;);</span>
+<span class="x">        $table-&gt;foreign(&#39;categories_id&#39;)-&gt;references(&#39;id&#39;)-&gt;on(&#39;categories&#39;);</span>
+<span class="x">        $table-&gt;foreign(&#39;todos_id&#39;)-&gt;references(&#39;id&#39;)-&gt;on(&#39;todos&#39;);</span>
 
-<span class="x">        $table-&gt;primary([&#39;idcat&#39;, &#39;idtodo&#39;]);</span>
+<span class="x">        $table-&gt;primary([&#39;categories_id&#39;, &#39;todos_id&#39;]);</span>
 <span class="x">        $table-&gt;timestamps();</span>
 <span class="x">    });</span>
 <span class="x">}</span>
@@ -1607,25 +1607,6 @@ protected $fillable = [&#39;texte&#39;, &#39;termine&#39;, &#39;important&#39;];
 </div>
 </div>
 </div>
-<h2 id="relation-many-to-many">Relation Many To Many<a class="headerlink" href="#relation-many-to-many" title="Permanent link">⚓︎</a></h2>
-<p>On va avoir besoin de déclarer un todo peut appartenir à plusieurs catégories et une catégorie classifie plusieurs todos. La relation est symétrique.</p>
-<p>On ajoute l'espace de noms nécessaire à la gestion de cette relation dans les 2 models.</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use Illuminate\Database\Eloquent\Relations\BelongsToMany;</span>
-</code></pre></div>
-<p>Puis à l'intérieur de la classe, on ajoute les méthodes d'association</p>
-<p>Dans Todos.php</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">    public function categories(): BelongsToMany</span>
-<span class="x">        {</span>
-<span class="x">            return $this-&gt;belongsToMany(Categories::class);</span>
-<span class="x">        }</span>
-</code></pre></div>
-<p>Dans Categories.php</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">    public function todos(): BelongsToMany</span>
-<span class="x">        {</span>
-<span class="x">            return $this-&gt;belongsToMany(Todos::class);</span>
-<span class="x">        }</span>
-</code></pre></div>
-<p>On déclare ici avec la méthode todos (au pluriel) qu’une catégorie appartient à plusieurs (belongsToMany) todos (Todos). On aura ainsi une méthode pratique pour récupérer les todos d’une catégorie. Idem pour les catégories.</p>
 <h1 id="le-controller">Le controller<a class="headerlink" href="#le-controller" title="Permanent link">⚓︎</a></h1>
 <p>Maintenant que nous avons la <em>migration</em> et le <em>model</em> de notre base de données, nous allons créer le <strong>controller</strong>. Pour rappel le controller va faire « le lien » entre la base de données et les appels HTTP. C’est ici que nous allons mettre la logique métier de notre application.</p>
 <div class="admonition abstract">
@@ -1777,6 +1758,7 @@ dans <code>app.js</code>, ajouter
 </details>
 <h2 id="liste-des-todos">Liste des todos<a class="headerlink" href="#liste-des-todos" title="Permanent link">⚓︎</a></h2>
 <p>Maintenant que nous avons défini notre template de base nous allons pouvoir définir notre page principale, la page « liste des todos ». Une fois terminée celle-ci va ressembler à :</p>
+<p><img alt="page d'accueil ToDo" src="../../data/interface.png" /></p>
 <p>Avant de commencer la réalisation de ce template, regardons ce que l'on peut y voir :<br />
 -   Un formulaire « form »<br />
 -   Une « liste »<br /></p>
@@ -1803,62 +1785,62 @@ Créér un nouveau fichier resources/views/home.blade.php et y mettre le contenu
 <span class="x">        &lt;div class=&quot;card-body&quot;&gt;</span>
 <span class="x">            &lt;!-- Action --&gt;</span>
 <span class="x">            &lt;form action=&quot;{{ route(&#39;todo.save&#39;) }}&quot; method=&quot;POST&quot; class=&quot;add&quot;&gt;</span>
-<span class="x">                    @csrf &lt;!-- &lt;&lt;L&#39;annotation ici ! --&gt;</span>
-<span class="x">                    &lt;div class=&quot;input-group&quot;&gt;</span>
-<span class="x">                        &lt;span class=&quot;input-group-addon&quot; id=&quot;basic-addon1&quot;&gt;&lt;span class=&quot;oi oi-pencil&quot;&gt;&lt;/span&gt;&lt;/span&gt;</span>
-<span class="x">                        &lt;input id=&quot;texte&quot; name=&quot;texte&quot; type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Prendre une note...&quot; aria-label=&quot;My new idea&quot; aria-describedby=&quot;basic-addon1&quot;&gt;</span>
-<span class="x">                        @if (session(&#39;message&#39;))</span>
-<span class="x">                            &lt;p class=&quot;alert alert-danger&quot;&gt;{{ session(&#39;message&#39;) }}&lt;/p&gt;</span>
-<span class="x">                        @endif</span>
-<span class="x">                    &lt;/div&gt;</span>
-<span class="x">                    &lt;div class=&quot;priority-choice&quot;&gt;</span>
-<span class="x">                        Importance : </span>
-<span class="x">                        &lt;input type=&quot;radio&quot; name=&quot;priority&quot; id=&quot;highpr&quot; value=&quot;0&quot; checked&gt;&lt;label for=&quot;highpr&quot;&gt;&lt;i class=&quot;bi bi-reception-1&quot;&gt;&lt;/i&gt;&lt;/label&gt;</span>
-<span class="x">                        &lt;input type=&quot;radio&quot; name=&quot;priority&quot; id=&quot;lowpr&quot; value=&quot;1&quot;&gt;&lt;label for=&quot;lowpr&quot;&gt;&lt;i class=&quot;bi bi-reception-4&quot;&gt;&lt;/i&gt;&lt;/label&gt;</span>
-<span class="x">                        &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;&lt;i class=&quot;bi bi-save&quot;&gt;&lt;/i&gt;&lt;/button&gt;</span>
-<span class="x">                    &lt;/div&gt;</span>
-<span class="x">                &lt;/form&gt;</span>
+<span class="x">                @csrf &lt;!-- &lt;&lt;L&#39;annotation ici ! --&gt;</span>
+<span class="x">                &lt;div class=&quot;input-group&quot;&gt;</span>
+<span class="x">                    &lt;span class=&quot;input-group-addon&quot; id=&quot;basic-addon1&quot;&gt;&lt;span class=&quot;oi oi-pencil&quot;&gt;&lt;/span&gt;&lt;/span&gt;</span>
+<span class="x">                    &lt;input id=&quot;texte&quot; name=&quot;texte&quot; type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Prendre une note...&quot; aria-label=&quot;My new idea&quot; aria-describedby=&quot;basic-addon1&quot;&gt;</span>
+<span class="x">                    @if (session(&#39;message&#39;))</span>
+<span class="x">                        &lt;p class=&quot;alert alert-danger&quot;&gt;{{ session(&#39;message&#39;) }}&lt;/p&gt;</span>
+<span class="x">                    @endif</span>
+<span class="x">                &lt;/div&gt;</span>
+<span class="x">                &lt;div class=&quot;priority-choice&quot;&gt;</span>
+<span class="x">                    Importance : </span>
+<span class="x">                    &lt;input type=&quot;radio&quot; name=&quot;priority&quot; id=&quot;lowpr&quot; value=&quot;0&quot; checked&gt;&lt;label for=&quot;lowpr&quot;&gt;&lt;i class=&quot;bi bi-reception-1&quot;&gt;&lt;/i&gt;&lt;/label&gt;</span>
+<span class="x">                    &lt;input type=&quot;radio&quot; name=&quot;priority&quot; id=&quot;highpr&quot; value=&quot;1&quot;&gt;&lt;label for=&quot;highpr&quot;&gt;&lt;i class=&quot;bi bi-reception-4&quot;&gt;&lt;/i&gt;&lt;/label&gt;</span>
+<span class="x">                    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;&lt;i class=&quot;bi bi-save&quot;&gt;&lt;/i&gt;&lt;/button&gt;</span>
+<span class="x">                &lt;/div&gt;</span>
+<span class="x">            &lt;/form&gt;</span>
 
-<span class="x">                &lt;!-- Liste --&gt;</span>
-<span class="x">                &lt;ul class=&quot;list-group&quot;&gt;</span>
-<span class="x">                    @forelse ($todos as $todo)</span>
-<span class="x">                        &lt;li class=&quot;list-group-item&quot;&gt;</span>
-<span class="x">                            &lt;!-- Affichage de la priorité --&gt;</span>
-<span class="x">                            @if ($todo-&gt;important == 0)</span>
-<span class="x">                                &lt;i class=&quot;bi bi-reception-1&quot;&gt;&lt;/i&gt;</span>
-<span class="x">                            @elseif ($todo-&gt;important == 1)</span>
-<span class="x">                                &lt;i class=&quot;bi bi-reception-4&quot;&gt;&lt;/i&gt;</span>
+<span class="x">            &lt;!-- Liste --&gt;</span>
+<span class="x">            &lt;ul class=&quot;list-group&quot;&gt;</span>
+<span class="x">                @forelse ($todos as $todo)</span>
+<span class="x">                    &lt;li class=&quot;list-group-item&quot;&gt;</span>
+<span class="x">                        &lt;!-- Affichage de la priorité --&gt;</span>
+<span class="x">                        @if ($todo-&gt;important == 0)</span>
+<span class="x">                            &lt;i class=&quot;bi bi-reception-1&quot;&gt;&lt;/i&gt;</span>
+<span class="x">                        @elseif ($todo-&gt;important == 1)</span>
+<span class="x">                            &lt;i class=&quot;bi bi-reception-4&quot;&gt;&lt;/i&gt;</span>
+<span class="x">                        @endif</span>
+<span class="x">                        &lt;!-- Affichage du texte --&gt;</span>
+<span class="x">                        &lt;span&gt;{{ $todo-&gt;texte }}&lt;/span&gt;</span>
+<span class="x">                        &lt;!-- Action à ajouter pour Terminer et supprimer --&gt;</span>
+<span class="x">                        @if ($todo-&gt;termine === 0)</span>
+<span class="x">                            &lt;!-- Si un ToDo n&#39;est pas terminé, Action à ajouter pour terminer --&gt;</span>
+<span class="x">                            &lt;a href=&quot;{{ route(&#39;todo.done&#39;, [&#39;id&#39; =&gt; $todo-&gt;id]) }}&quot; class=&quot;btn btn-success&quot;&gt;&lt;i class=&quot;bi bi-check2-square&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="x">                            &lt;!--&lt;button class=&quot;btn btn-primary btn-lg&quot;&gt;&lt;span class=&quot;fa fa-user&quot;&gt;&lt;/span&gt;&lt;br&gt;Terminer&lt;/button&gt;--&gt;</span>
+<span class="x">                        @elseif ($todo-&gt;termine === 1)</span>
+<span class="x">                            &lt;!-- Si un ToDo est terminé, Action à ajouter pour supprimer --&gt;</span>
+<span class="x">                            &lt;a href=&quot;{{ route(&#39;todo.delete&#39;, [&#39;id&#39; =&gt; $todo-&gt;id]) }}&quot; class=&quot;btn btn-danger&quot;&gt;&lt;i class=&quot;bi bi-trash3&quot;&gt;&lt;/i&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="x">                            @if (session(&#39;validation&#39;))</span>
+<span class="x">                                &lt;p class=&quot;alert alert-success&quot;&gt;{{ session(&#39;validation&#39;) }}&lt;/p&gt;</span>
 <span class="x">                            @endif</span>
-<span class="x">                            &lt;!-- Affichage du texte --&gt;</span>
-<span class="x">                            &lt;span&gt;{{ $todo-&gt;texte }}&lt;/span&gt;</span>
-<span class="x">                            &lt;!-- Action à ajouter pour Terminer et supprimer --&gt;</span>
-<span class="x">                            @if ($todo-&gt;termine === 0)</span>
-<span class="x">                                &lt;!-- Si un ToDo n&#39;est pas terminé, Action à ajouter pour terminer --&gt;</span>
-<span class="x">                                &lt;a href=&quot;{{ route(&#39;todo.done&#39;, [&#39;id&#39; =&gt; $todo-&gt;id]) }}&quot; class=&quot;btn btn-success&quot;&gt;&lt;i class=&quot;bi bi-bag-check&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span>
-<span class="x">                                &lt;!--&lt;button class=&quot;btn btn-primary btn-lg&quot;&gt;&lt;span class=&quot;fa fa-user&quot;&gt;&lt;/span&gt;&lt;br&gt;Terminer&lt;/button&gt;--&gt;</span>
-<span class="x">                            @elseif ($todo-&gt;termine === 1)</span>
-<span class="x">                                &lt;!-- Si un ToDo est terminé, Action à ajouter pour supprimer --&gt;</span>
-<span class="x">                                &lt;a href=&quot;{{ route(&#39;todo.delete&#39;, [&#39;id&#39; =&gt; $todo-&gt;id]) }}&quot; class=&quot;btn btn-danger&quot;&gt;&lt;i class=&quot;bi bi-trash3&quot;&gt;&lt;/i&gt;&lt;/i&gt;&lt;/a&gt;</span>
-<span class="x">                                @if (session(&#39;validation&#39;))</span>
-<span class="x">                                    &lt;p class=&quot;alert alert-success&quot;&gt;{{ session(&#39;validation&#39;) }}&lt;/p&gt;</span>
-<span class="x">                                @endif</span>
-<span class="x">                            @endif</span>
-<span class="x">                            @if ($todo-&gt;important == 0)</span>
-<span class="x">                                &lt;!-- Action à ajouter pour monter la priorité --&gt;</span>
-<span class="x">                                &lt;a href=&quot;{{ route(&#39;todo.raise&#39;, [&#39;id&#39;=&gt; $todo-&gt;id]) }}&quot;&gt;&lt;i class=&quot;bi bi-arrow-up-circle&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span>
-<span class="x">                            @elseif ($todo-&gt;important == 1)</span>
-<span class="x">                                &lt;!-- Action à ajouter pour descendre la priorité --&gt;</span>
-<span class="x">                                &lt;a href=&quot;{{ route(&#39;todo.lower&#39;, [&#39;id&#39; =&gt; $todo-&gt;id]) }}&quot;&gt;&lt;i class=&quot;bi bi-arrow-down-circle&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span>
-<span class="x">                            @endif</span>
-<span class="x">                        &lt;/li&gt;</span>
-<span class="x">                    @empty</span>
-<span class="x">                        &lt;li class=&quot;list-group-item text-center&quot;&gt;C&#39;est vide !&lt;/li&gt;</span>
-<span class="x">                    @endforelse</span>
-<span class="x">                &lt;/ul&gt;</span>
-<span class="x">            &lt;/div&gt;</span>
+<span class="x">                        @endif</span>
+<span class="x">                        @if ($todo-&gt;important == 0)</span>
+<span class="x">                            &lt;!-- Action à ajouter pour monter la priorité --&gt;</span>
+<span class="x">                            &lt;a href=&quot;{{ route(&#39;todo.raise&#39;, [&#39;id&#39;=&gt; $todo-&gt;id]) }}&quot;&gt;&lt;i class=&quot;bi bi-arrow-up-circle&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="x">                        @elseif ($todo-&gt;important == 1)</span>
+<span class="x">                            &lt;!-- Action à ajouter pour descendre la priorité --&gt;</span>
+<span class="x">                            &lt;a href=&quot;{{ route(&#39;todo.lower&#39;, [&#39;id&#39; =&gt; $todo-&gt;id]) }}&quot;&gt;&lt;i class=&quot;bi bi-arrow-down-circle&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="x">                        @endif</span>
+<span class="x">                    &lt;/li&gt;</span>
+<span class="x">                @empty</span>
+<span class="x">                    &lt;li class=&quot;list-group-item text-center&quot;&gt;C&#39;est vide !&lt;/li&gt;</span>
+<span class="x">                @endforelse</span>
+<span class="x">            &lt;/ul&gt;</span>
 <span class="x">        &lt;/div&gt;</span>
 <span class="x">    &lt;/div&gt;</span>
-<span class="x">    @endsection</span>
+<span class="x">&lt;/div&gt;</span>
+<span class="x">@endsection</span>
 </code></pre></div>
 </details>
 <div class="admonition warning">
@@ -2006,9 +1988,10 @@ Dans ce cas, laravel créé un index sur le champ id, il devient inutile de le d
 <p>Besoin : A la saisie, on peut choisir l'importance d'un Todo.<br />
 Fonctionnalité : Pouvoir ajuster L'importance de chaque ToDo </p>
 <h2 id="user-story-2-passer-un-todo-a-termine">User story 2 : Passer un ToDo à Terminé.<a class="headerlink" href="#user-story-2-passer-un-todo-a-termine" title="Permanent link">⚓︎</a></h2>
+<p>Sur l'icone <code>&lt;i class="bi bi-check2-square"&gt;&lt;/i&gt;</code>, ajouter l'action de passer un Todo à Terminé</p>
 <h2 id="user-story-3-supprimer-un-todo">User Story 3 : Supprimer un ToDo<a class="headerlink" href="#user-story-3-supprimer-un-todo" title="Permanent link">⚓︎</a></h2>
 <p><img alt="🚫" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f6ab.svg" title=":no_entry_sign:" /> On ne peut pas supprimer un Todo qui n'est pas terminé</p>
-<h2 id="user-story-bonus-statistiques">User Story Bonus : Statistiques<a class="headerlink" href="#user-story-bonus-statistiques" title="Permanent link">⚓︎</a></h2>
+<h2 id="user-story-4-statistiques">User Story 4 : Statistiques<a class="headerlink" href="#user-story-4-statistiques" title="Permanent link">⚓︎</a></h2>
 <p>Ajouter une page qui dénombre les Todos Non terminés et les Todos terminés.</p>
 
 
