@@ -2314,8 +2314,21 @@ Lisez un peu de documentation <a href="https://laravel.sillo.org/cours-laravel-1
 <span class="x">        }</span>
 </code></pre></div>
 <h2 id="23-les-groupes-de-routes">2.3 Les groupes de routes<a class="headerlink" href="#23-les-groupes-de-routes" title="Permanent link">⚓︎</a></h2>
+<p>Si plusieurs routes ont des informations communes il est possible de les grouper ensemble.</p>
+<details class="tips">
+<summary>Code de web.php</summary>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">    Route::controller(TodosController::class)-&gt;group(function () {</span>
+
+<span class="x">    Route::post(&#39;/action/add&#39;, &#39;saveTodo&#39;)-&gt;name(&#39;todo.save&#39;);</span>
+<span class="x">    Route::get(&#39;/action/done/{id}&#39; , &#39;markAsDone&#39;)-&gt;name(&#39;todo.done&#39;);</span>
+<span class="x">    Route::get(&#39;/action/delete/{id}&#39;, &#39;deleteTodo&#39;)-&gt;name(&#39;todo.delete&#39;);</span>
+<span class="x">    Route::get(&#39;/action/lower/{id}&#39;,  &#39;lowerPriority&#39;)-&gt;name(&#39;todo.lower&#39;);</span>
+<span class="x">    Route::get(&#39;/action/raise/{id}&#39;, &#39;raisePriority&#39;)-&gt;name(&#39;todo.raise&#39;);</span>
+<span class="x">});</span>
+</code></pre></div>
+</details>
 <h2 id="24-une-nouvelle-page-recherche">2.4 Une nouvelle page : Recherche<a class="headerlink" href="#24-une-nouvelle-page-recherche" title="Permanent link">⚓︎</a></h2>
-<p>User story : On souhaite créer une page de Recherche par mot clé. Cette page disposera d'un champ texte pour saisir un mot-clé. A la validation de ce formulaire, l'application retournera tous les Todos contenant ce mot-clé dans leur texte.</p>
+<p>User story : On souhaite créer une page de Recherche par mot clé. Cette page disposera d'un champ texte pour saisir un mot-clé. A la validation de ce formulaire, l'application retournera tous les Todos contenant ce mot-clé dans leur texte, y compris dans les ToDos déjà supprimés.</p>
 
 
   
