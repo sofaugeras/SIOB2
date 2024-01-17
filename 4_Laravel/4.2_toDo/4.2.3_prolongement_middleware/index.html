@@ -26,7 +26,7 @@
     
     
       
-        <title>Utilisation des middlewares - Saint Sauveur BTS SIO SLAM</title>
+        <title>3. Utilisation des middlewares - Saint Sauveur BTS SIO SLAM</title>
       
     
     
@@ -107,7 +107,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#utilisation-des-middlewares" class="md-skip">
+        <a href="#3-utilisation-des-middlewares" class="md-skip">
           Aller au contenu
         </a>
       
@@ -141,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Utilisation des middlewares
+              3. Utilisation des middlewares
             
           </span>
         </div>
@@ -713,11 +713,163 @@
         
   
   <span class="md-ellipsis">
-    sommaire
+    sommaire UML
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3.1 diagrammeClasse
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            3.1 diagrammeClasse
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3_UML/3.1_diagrammeClasse/3.1.0_IntroUML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction à UML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3_UML/3.1_diagrammeClasse/3.1.1_diagrammeDeClasse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Le diagramme de classe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3_UML/3.1_diagrammeClasse/3.1.2_CalculMPD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1.2 CalculMPD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3_UML/3.1_diagrammeClasse/3.1.3_Methodologie/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Je construis un Diagramme de Classe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3_UML/3.1_diagrammeClasse/exercice/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -962,7 +1114,7 @@
           
   
   <span class="md-ellipsis">
-    Utilisation des middlewares
+    3. Utilisation des middlewares
   </span>
   
 
@@ -973,7 +1125,7 @@
         
   
   <span class="md-ellipsis">
-    Utilisation des middlewares
+    3. Utilisation des middlewares
   </span>
   
 
@@ -995,9 +1147,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#le-middelware-principal-lauthentification" class="md-nav__link">
+  <a href="#31-lauthentification" class="md-nav__link">
     <span class="md-ellipsis">
-      Le middelware principal : l'authentification
+      3.1 l'authentification
     </span>
   </a>
   
@@ -1834,9 +1986,15 @@
   
 
 
-<h1 id="utilisation-des-middlewares">Utilisation des middlewares<a class="headerlink" href="#utilisation-des-middlewares" title="Permanent link">⚓︎</a></h1>
-<h2 id="le-middelware-principal-lauthentification">Le middelware principal : l'authentification<a class="headerlink" href="#le-middelware-principal-lauthentification" title="Permanent link">⚓︎</a></h2>
+<h1 id="3-utilisation-des-middlewares">3. Utilisation des middlewares<a class="headerlink" href="#3-utilisation-des-middlewares" title="Permanent link">⚓︎</a></h1>
+<h2 id="31-lauthentification">3.1 l'authentification<a class="headerlink" href="#31-lauthentification" title="Permanent link">⚓︎</a></h2>
 <p><a href="https://laravel.sillo.org/cours-laravel-10-la-securite-lauthentification/">tuto</a></p>
+<p>De manière simplifiée, on va utiliser le package <code>Laravel\breeze</code>, pour le middelware d'authentification.</p>
+<div class="admonition tips">
+<p class="admonition-title">Définition Middelware</p>
+<p>Dans le contexte d'un framework PHP, un middleware est une composante logicielle qui agit comme une couche intermédiaire entre la requête entrante et la réponse sortante dans le processus de traitement d'une application web. Les middlewares sont couramment utilisés pour effectuer des tâches spécifiques telles que l'authentification, l'autorisation, la gestion des cookies, la mise en cache, la journalisation, la compression des réponses, et d'autres opérations liées au traitement de la requête.</p>
+<p>Un middleware peut être conçu pour intervenir à différents moments du cycle de vie d'une requête HTTP. Dans de nombreux frameworks PHP, notamment Laravel et Symfony, les middlewares sont souvent utilisés dans le processus de gestion des requêtes HTTP.</p>
+</div>
 
 
   
