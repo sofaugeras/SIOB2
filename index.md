@@ -1,14 +1,14 @@
 # Accueil
 
-!!! abstract "Actualités"
-    - [Lien vers le BO](https://www.reseaucerta.org/sites/default/files/sio/BTS_ServicesInformatiquesOrganisations2019.pdf)
+![logo BTS](./images/logo-bts-sio-300x143.png){ .center width=30%}
 
 !!! warning "Actu SIO1"
 
-    :pencil: Conseil de classe : <br />
-    :arrow_forward: Semaine de césure du 8 au 12 janvier <br />
-    :light_rail: sortie scolaire le vendredi 12 janvier à Rennes
+    :arrow_forward: Thème en cours d'étude : [UML](./3_UML/3.1_diagrammeClasse/)
 
 !!! warning "Actu SIO2"
 
     :rotating_light: Stage du 8 janvier 2024 au 23 février 2024
+
+!!! tip "les essentiels"
+    - [Lien vers le BO](https://www.reseaucerta.org/sites/default/files/sio/BTS_ServicesInformatiquesOrganisations2019.pdf)
