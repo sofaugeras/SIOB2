@@ -41,7 +41,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/sofaugeras/SIOB2/3_UML/3.1_diagrammeClasse/3.1.3_Methodologie/</loc>
+         <loc>https://github.com/sofaugeras/SIOB2/3_UML/3.1_diagrammeClasse/3.1.3_UML2java/</loc>
+         <lastmod>2024-01-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/sofaugeras/SIOB2/3_UML/3.1_diagrammeClasse/3.1.4_Methodologie/</loc>
          <lastmod>2024-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
