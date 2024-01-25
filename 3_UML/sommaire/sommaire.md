@@ -15,6 +15,7 @@
     - [David Roumanet, SIO, Lycée Aristide BERGES](https://nuage03.apps.education.fr/index.php/s/cLFoMwBEFce9wiH?path=%2FBloc%202%20(sp%C3%A9cialisation)%2F230%20-%20UML) Licence BY-NC-SA
     - **UML2 de l’apprentissage à la pratique** de Laurent Audibert
     - **UML2 par la pratique** de Pascal Roques
+    
 
 0. [Introduction à UML](./3.1_diagrammeClasse/3.1.0_IntroUML.md)
 1. [Diagramme de classe](./3.1_diagrammeClasse/3.1.1_diagrammeDeClasse.md)

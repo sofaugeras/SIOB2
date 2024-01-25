@@ -4,7 +4,7 @@
 
 !!! warning "Actu SIO1"
 
-    :arrow_forward: Thème en cours d'étude : [UML](./3_UML/3.1_diagrammeClasse/)
+    :arrow_forward: Thème en cours d'étude : [UML](./3_UML/)
 
 !!! warning "Actu SIO2"
 
