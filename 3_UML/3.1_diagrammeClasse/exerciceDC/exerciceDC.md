@@ -65,3 +65,48 @@ Enfin, ils désirent avoir le récapitulatif des notes obtenues par un soldat do
     **PASSE**(^^#NumPassage , #nomObstacle^^, noteInstructeur, Temps)<br />
     **OBSTACLE**(^^nomObstacle^^, noteMini, #codeDifficulte)<br />
     **DIFFCICULTE**(^^codeDifficulte^^, libelleDifficulte, bonus)
+
+## Exercice 6 : GESTION DES LOGEMENTS DANS UNE AGENCE IMMOBILIERE
+
+Une agence de location de maisons et d’appartements désire gérer sa liste de logements. Elle voudrait en effet connaître l’implantation de chaque logement (nom de la commune et du quartier) ainsi que les personnes qui les occupent (les signataires uniquement). 
+Le loyer dépend d’un logement, mais en fonction de son type (maison, studio, T1, T2...) l’agence facturera toujours en plus du loyer la même somme forfaitaire à ses clients. Par exemple, le prix d’un studio sera toujours égal au prix du loyer + 30 € de charges forfaitaires par mois. Pour chaque logement, on veut disposer également de l’adresse, de la superficie ainsi que du loyer. 
+Quant aux individus qui occupent les logements (les signataires du contrat uniquement), on se contentera de leurs noms, prénoms, date de naissance et numéro de téléphone. Pour chaque commune, on désire connaître le nombre d’habitants ainsi que la distance séparant la commune de l’agence. 
+
+NB : on ne gérera pas l’historique de l’occupation des logements par les individus. On considèrera de plus qu’un individu ne peut être signataire que d’un seul contrat. 
+
+Etablir :
+
+1. Le dictionnaire des données et énoncer les règles de gestion établis
+2. Le modèle conceptuel des données
+3. Le modèle logique associé 
+
+??? tip "correction"
+
+## Exercice 7 : GESTION DES COURSES HIPPIQUES
+
+On désire gérer les participations des divers chevaux et jockeys aux courses hippiques : connaître les participants d’une course et leur classement. Une course se déroule toujours sur le même champ de course et appartient toujours à la même catégorie (exemple de catégorie : trot attelé, trot monté, obstacle …). 
+On désire connaître les catégories de course qu’un champ de course peut accueillir. 
+On désire de plus gérer les informations suivantes : 
+
+- la désignation de la course (ex : prix d’Amérique) 
+- le nom du champ de course 
+- le nombre de places dans les tribunes 
+- la date de la course (cette date est variable) 
+- la dotation de la course en euros (cette dotation est variable) 
+- le nom des chevaux 
+- le nom et le prénom du propriétaire (on supposera qu’il n’y en a qu’un et on ne gérera pas l’historique) 
+- le sexe du cheval 
+- le nom et prénom des jockeys 
+- la date de naissance de chaque cheval.
+- le numéro de dossard du jockey et du cheval pour la course 
+
+NB : on désire de plus gérer les liens de parenté directs entre les chevaux. 
+
+Une même course peut avoir lieu plusieurs fois dans la même saison sur le même champ de course et les dotations ne sont pas toujours les mêmes. 
+Ex : le trot monté d’Auteuil se déroule au mois de mars avec une dotation de 5 millions, au mois de juillet avec une dotation de 3 millions et au mois de décembre avec une dotation de 4 millions. 
+
+1. Le dictionnaire des données et énoncer les règles de gestion établis
+2. Le modèle conceptuel des données
+3. Le modèle logique associé 
+
+??? tip "correction"
