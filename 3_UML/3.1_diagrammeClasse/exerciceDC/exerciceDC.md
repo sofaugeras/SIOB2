@@ -66,7 +66,7 @@ Enfin, ils désirent avoir le récapitulatif des notes obtenues par un soldat do
     **OBSTACLE**(^^nomObstacle^^, noteMini, #codeDifficulte)<br />
     **DIFFCICULTE**(^^codeDifficulte^^, libelleDifficulte, bonus)
 
-## Exercice 6 : GESTION DES LOGEMENTS DANS UNE AGENCE IMMOBILIERE
+## Exercice 6 : Gestion des logements dans une agence immobilière
 
 Une agence de location de maisons et d’appartements désire gérer sa liste de logements. Elle voudrait en effet connaître l’implantation de chaque logement (nom de la commune et du quartier) ainsi que les personnes qui les occupent (les signataires uniquement). 
 Le loyer dépend d’un logement, mais en fonction de son type (maison, studio, T1, T2...) l’agence facturera toujours en plus du loyer la même somme forfaitaire à ses clients. Par exemple, le prix d’un studio sera toujours égal au prix du loyer + 30 € de charges forfaitaires par mois. Pour chaque logement, on veut disposer également de l’adresse, de la superficie ainsi que du loyer. 
@@ -82,7 +82,36 @@ Etablir :
 
 ??? tip "correction"
 
-## Exercice 7 : GESTION DES COURSES HIPPIQUES
+    |Nom|Commentaires|Entité|Type|Identifiant|
+    |:--|:--|:--|:--|:--|
+    |Id commune|Numéro artificiel|COMMUNE|entier|Oui|
+    |Nom Commune|-|COMMUNE|varchar(45)|Non|
+    |DistanceAgence|Distance moyenne d'une ville par rapport à l'agence|COMMUNE|float|Non|
+    |Nb habitants|-|COMMUNE|float|Non|
+    |NumIdentification|Numéro artificiel|INDIVIDU|entier|Oui|
+    |Nom|-|INDIVIDU|varchar(35)|Non|
+    |Prenom|-|INDIVIDU|varchar(30)|Non|
+    |DateNaissance|-|INDIVIDU|date|Non|
+    |NumTelephone|-|INDIVIDU|varchar(12)|Non|
+    |NumLogement|Numéro artificiel|LOGEMENT|entier|Oui|
+    |Adresse|-|LOGEMENT|varchar(50)|Non|
+    |Superficie|-|LOGEMENT|entier|Non|
+    |Loyer|-|LOGEMENT|float|Non|
+    |IdQuartier|Numéro artificiel|QUARTIER|entier|Oui|
+    |LibelleQuartier|-|LOGEMENT|varchar(35)|Non|
+    |TypeLogement|Classifie le logemùent en fonction du nb de piece (T1, T2, ...)|TYPE LOGEMENT|varchar(25)|Oui|
+    |chargesforfaitaires|Montant forfaitaire appliqué en fonction du nb de pieces|TYPE LOGEMENT|float|Non|
+
+    ![DC gestion immo](./data/gestionImmo.png)
+
+    **LOGEMENT** (^^numLogement^^, adresse, superficie, loyer, #typeLogement, #idQuartier)<br />
+    **INDIVIDU** (^^nulIdentification^^, nom, prenom, dateNaissance, numTelephone, #numLogement)<br />
+    **TYPELOGEMENT**(^^typeLogement^^, chargesForfaitaires)<br />
+    **QUARTIER** (^^IdQuartier^^, LibelleQuartier, #IdCommune)<br />
+    **COMMUNE** (^^IdCommune^^, nomCommune, distanceAgence, NbHabitants)
+
+
+## Exercice 7 : Gestion des courses hippiques
 
 On désire gérer les participations des divers chevaux et jockeys aux courses hippiques : connaître les participants d’une course et leur classement. Une course se déroule toujours sur le même champ de course et appartient toujours à la même catégorie (exemple de catégorie : trot attelé, trot monté, obstacle …). 
 On désire connaître les catégories de course qu’un champ de course peut accueillir. 
@@ -105,8 +134,20 @@ NB : on désire de plus gérer les liens de parenté directs entre les chevaux.
 Une même course peut avoir lieu plusieurs fois dans la même saison sur le même champ de course et les dotations ne sont pas toujours les mêmes. 
 Ex : le trot monté d’Auteuil se déroule au mois de mars avec une dotation de 5 millions, au mois de juillet avec une dotation de 3 millions et au mois de décembre avec une dotation de 4 millions. 
 
-1. Le dictionnaire des données et énoncer les règles de gestion établis
-2. Le modèle conceptuel des données
-3. Le modèle logique associé 
+1. Le modèle conceptuel des données
+2. Le modèle logique (MPD) associé 
 
 ??? tip "correction"
+
+    ![course hippique](./data/hippique.png)
+
+    **CHAMPCOURSE** (^^idChampCourse^^, nomChampCourse, nbPlaces)<br />
+    **CATEGORIE_CHAMP_COURSE** (^^idChampCourse, id_categorie^^)<br />
+    **CATEGORIE_COURSE** (^^idCategorie^^, categorie)<br />
+    **COURSE** (^^idCourse^^, designationCourse, #idChampCourse, #idCategorie)<br />
+    **EPREUVE** (^^idEpreuve^^, dotation, dateEpreuve, #idCourse)<br />
+    **INDIVIDU** (^^idIndividu^^, nomIndividu, prenomIndividu)<br />
+    **PARTICIPER** (^^idepreuve, idIndividu, idCheval^^, numDossard, place)<br />
+    **CHEVAL** (^^idCheval^^, nomCheval, dateNaissance, sexe, #idIndividu)<br />
+    **EST_PARENT_DE** (^^#idChevalparent, #idChevalEnfant^^)
+

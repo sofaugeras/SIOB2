@@ -985,7 +985,7 @@
         <li class="md-nav__item">
   <a href="#exercice-6-gestion-des-logements-dans-une-agence-immobiliere" class="md-nav__link">
     <span class="md-ellipsis">
-      Exercice 6 : GESTION DES LOGEMENTS DANS UNE AGENCE IMMOBILIERE
+      Exercice 6 : Gestion des logements dans une agence immobilière
     </span>
   </a>
   
@@ -994,7 +994,7 @@
         <li class="md-nav__item">
   <a href="#exercice-7-gestion-des-courses-hippiques" class="md-nav__link">
     <span class="md-ellipsis">
-      Exercice 7 : GESTION DES COURSES HIPPIQUES
+      Exercice 7 : Gestion des courses hippiques
     </span>
   </a>
   
@@ -2601,7 +2601,7 @@ Enfin, ils désirent avoir le récapitulatif des notes obtenues par un soldat do
 <strong>OBSTACLE</strong>(<ins>nomObstacle</ins>, noteMini, #codeDifficulte)<br />
 <strong>DIFFCICULTE</strong>(<ins>codeDifficulte</ins>, libelleDifficulte, bonus)</p>
 </details>
-<h2 id="exercice-6-gestion-des-logements-dans-une-agence-immobiliere">Exercice 6 : GESTION DES LOGEMENTS DANS UNE AGENCE IMMOBILIERE<a class="headerlink" href="#exercice-6-gestion-des-logements-dans-une-agence-immobiliere" title="Permanent link">⚓︎</a></h2>
+<h2 id="exercice-6-gestion-des-logements-dans-une-agence-immobiliere">Exercice 6 : Gestion des logements dans une agence immobilière<a class="headerlink" href="#exercice-6-gestion-des-logements-dans-une-agence-immobiliere" title="Permanent link">⚓︎</a></h2>
 <p>Une agence de location de maisons et d’appartements désire gérer sa liste de logements. Elle voudrait en effet connaître l’implantation de chaque logement (nom de la commune et du quartier) ainsi que les personnes qui les occupent (les signataires uniquement). 
 Le loyer dépend d’un logement, mais en fonction de son type (maison, studio, T1, T2...) l’agence facturera toujours en plus du loyer la même somme forfaitaire à ses clients. Par exemple, le prix d’un studio sera toujours égal au prix du loyer + 30 € de charges forfaitaires par mois. Pour chaque logement, on veut disposer également de l’adresse, de la superficie ainsi que du loyer. 
 Quant aux individus qui occupent les logements (les signataires du contrat uniquement), on se contentera de leurs noms, prénoms, date de naissance et numéro de téléphone. Pour chaque commune, on désire connaître le nombre d’habitants ainsi que la distance séparant la commune de l’agence. </p>
@@ -2614,8 +2614,146 @@ Quant aux individus qui occupent les logements (les signataires du contrat uniqu
 </ol>
 <details class="tip">
 <summary>correction</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Nom</th>
+<th style="text-align: left;">Commentaires</th>
+<th style="text-align: left;">Entité</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Identifiant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Id commune</td>
+<td style="text-align: left;">Numéro artificiel</td>
+<td style="text-align: left;">COMMUNE</td>
+<td style="text-align: left;">entier</td>
+<td style="text-align: left;">Oui</td>
+</tr>
+<tr>
+<td style="text-align: left;">Nom Commune</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">COMMUNE</td>
+<td style="text-align: left;">varchar(45)</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">DistanceAgence</td>
+<td style="text-align: left;">Distance moyenne d'une ville par rapport à l'agence</td>
+<td style="text-align: left;">COMMUNE</td>
+<td style="text-align: left;">float</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Nb habitants</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">COMMUNE</td>
+<td style="text-align: left;">float</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">NumIdentification</td>
+<td style="text-align: left;">Numéro artificiel</td>
+<td style="text-align: left;">INDIVIDU</td>
+<td style="text-align: left;">entier</td>
+<td style="text-align: left;">Oui</td>
+</tr>
+<tr>
+<td style="text-align: left;">Nom</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">INDIVIDU</td>
+<td style="text-align: left;">varchar(35)</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Prenom</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">INDIVIDU</td>
+<td style="text-align: left;">varchar(30)</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">DateNaissance</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">INDIVIDU</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">NumTelephone</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">INDIVIDU</td>
+<td style="text-align: left;">varchar(12)</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">NumLogement</td>
+<td style="text-align: left;">Numéro artificiel</td>
+<td style="text-align: left;">LOGEMENT</td>
+<td style="text-align: left;">entier</td>
+<td style="text-align: left;">Oui</td>
+</tr>
+<tr>
+<td style="text-align: left;">Adresse</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">LOGEMENT</td>
+<td style="text-align: left;">varchar(50)</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Superficie</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">LOGEMENT</td>
+<td style="text-align: left;">entier</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">Loyer</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">LOGEMENT</td>
+<td style="text-align: left;">float</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">IdQuartier</td>
+<td style="text-align: left;">Numéro artificiel</td>
+<td style="text-align: left;">QUARTIER</td>
+<td style="text-align: left;">entier</td>
+<td style="text-align: left;">Oui</td>
+</tr>
+<tr>
+<td style="text-align: left;">LibelleQuartier</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">LOGEMENT</td>
+<td style="text-align: left;">varchar(35)</td>
+<td style="text-align: left;">Non</td>
+</tr>
+<tr>
+<td style="text-align: left;">TypeLogement</td>
+<td style="text-align: left;">Classifie le logemùent en fonction du nb de piece (T1, T2, ...)</td>
+<td style="text-align: left;">TYPE LOGEMENT</td>
+<td style="text-align: left;">varchar(25)</td>
+<td style="text-align: left;">Oui</td>
+</tr>
+<tr>
+<td style="text-align: left;">chargesforfaitaires</td>
+<td style="text-align: left;">Montant forfaitaire appliqué en fonction du nb de pieces</td>
+<td style="text-align: left;">TYPE LOGEMENT</td>
+<td style="text-align: left;">float</td>
+<td style="text-align: left;">Non</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="DC gestion immo" src="../data/gestionImmo.png" /></p>
+<p><strong>LOGEMENT</strong> (<ins>numLogement</ins>, adresse, superficie, loyer, #typeLogement, #idQuartier)<br />
+<strong>INDIVIDU</strong> (<ins>nulIdentification</ins>, nom, prenom, dateNaissance, numTelephone, #numLogement)<br />
+<strong>TYPELOGEMENT</strong>(<ins>typeLogement</ins>, chargesForfaitaires)<br />
+<strong>QUARTIER</strong> (<ins>IdQuartier</ins>, LibelleQuartier, #IdCommune)<br />
+<strong>COMMUNE</strong> (<ins>IdCommune</ins>, nomCommune, distanceAgence, NbHabitants)</p>
 </details>
-<h2 id="exercice-7-gestion-des-courses-hippiques">Exercice 7 : GESTION DES COURSES HIPPIQUES<a class="headerlink" href="#exercice-7-gestion-des-courses-hippiques" title="Permanent link">⚓︎</a></h2>
+<h2 id="exercice-7-gestion-des-courses-hippiques">Exercice 7 : Gestion des courses hippiques<a class="headerlink" href="#exercice-7-gestion-des-courses-hippiques" title="Permanent link">⚓︎</a></h2>
 <p>On désire gérer les participations des divers chevaux et jockeys aux courses hippiques : connaître les participants d’une course et leur classement. Une course se déroule toujours sur le même champ de course et appartient toujours à la même catégorie (exemple de catégorie : trot attelé, trot monté, obstacle …). 
 On désire connaître les catégories de course qu’un champ de course peut accueillir. 
 On désire de plus gérer les informations suivantes : </p>
@@ -2636,12 +2774,21 @@ On désire de plus gérer les informations suivantes : </p>
 <p>Une même course peut avoir lieu plusieurs fois dans la même saison sur le même champ de course et les dotations ne sont pas toujours les mêmes. 
 Ex : le trot monté d’Auteuil se déroule au mois de mars avec une dotation de 5 millions, au mois de juillet avec une dotation de 3 millions et au mois de décembre avec une dotation de 4 millions. </p>
 <ol>
-<li>Le dictionnaire des données et énoncer les règles de gestion établis</li>
 <li>Le modèle conceptuel des données</li>
-<li>Le modèle logique associé </li>
+<li>Le modèle logique (MPD) associé </li>
 </ol>
 <details class="tip">
 <summary>correction</summary>
+<p><img alt="course hippique" src="../data/hippique.png" /></p>
+<p><strong>CHAMPCOURSE</strong> (<ins>idChampCourse</ins>, nomChampCourse, nbPlaces)<br />
+<strong>CATEGORIE_CHAMP_COURSE</strong> (<ins>idChampCourse, id_categorie</ins>)<br />
+<strong>CATEGORIE_COURSE</strong> (<ins>idCategorie</ins>, categorie)<br />
+<strong>COURSE</strong> (<ins>idCourse</ins>, designationCourse, #idChampCourse, #idCategorie)<br />
+<strong>EPREUVE</strong> (<ins>idEpreuve</ins>, dotation, dateEpreuve, #idCourse)<br />
+<strong>INDIVIDU</strong> (<ins>idIndividu</ins>, nomIndividu, prenomIndividu)<br />
+<strong>PARTICIPER</strong> (<ins>idepreuve, idIndividu, idCheval</ins>, numDossard, place)<br />
+<strong>CHEVAL</strong> (<ins>idCheval</ins>, nomCheval, dateNaissance, sexe, #idIndividu)<br />
+<strong>EST_PARENT_DE</strong> (<ins>#idChevalparent, #idChevalEnfant</ins>)</p>
 </details>
 
 
