@@ -16,6 +16,7 @@
     - **UML2 de l’apprentissage à la pratique** de Laurent Audibert
     - **UML2 par la pratique** de Pascal Roques
     - [ENITA Bordeaux](https://www.agro-bordeaux.fr/), Adaptation de TD Merise de Monique BORIES et Jérôme STEFFE (2004)
+    - Fiche de Synthèse BTS IRIS LORGUES
     
 
 0. [Introduction à UML](./3.1_diagrammeClasse/3.1.0_IntroUML.md)

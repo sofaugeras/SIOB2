@@ -990,6 +990,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Cas d'utilisation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -999,6 +1010,127 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1notation-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.Notation de base
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.Notation de base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-acteurs-et-usecase" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Acteurs et useCase
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-relations-entre-acteurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Relations entre Acteurs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-relations-entre-cas-dutilisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Relations entre cas d’utilisation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Relations entre cas d’utilisation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-inclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Inclusion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Extension
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-generalisation-dun-usecase" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Généralisation d'un UseCase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-exemple-complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Exemple complet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-exercices" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 Exercices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-cas-dutilisation-detaillee" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Cas d'utilisation détaillée
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1016,7 +1148,7 @@
         
   
   <span class="md-ellipsis">
-    Exercice
+    Exercices
   </span>
   
 
@@ -1084,7 +1216,7 @@
         
   
   <span class="md-ellipsis">
-    Diagramme de séquence
+    Diagramme d'interaction
   </span>
   
 
@@ -2455,7 +2587,245 @@
 
 
 <h1 id="cas-dutilisation">Cas d'utilisation<a class="headerlink" href="#cas-dutilisation" title="Permanent link">⚓︎</a></h1>
-<p><img alt="🚧" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f6a7.svg" title=":construction:" /> En construction</p>
+<div class="admonition abstract">
+<p class="admonition-title">Rappel</p>
+<p><img alt="👉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f449.svg" title=":point_right:" /> UML permet de construire plusieurs modèles d’un système : certains montrent le système du point de vue des utilisateurs, d’autres montrent sa structure interne, d’autres encore en donnent une vision globale ou détaillée. Les modèles se complètent et peuvent être assemblés.<br />
+<img alt="👉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f449.svg" title=":point_right:" /> Ils sont élaborés tout au long du cycle de vie du développement d’un système (depuis le recueil des besoins jusqu’à la phase de conception). Dans ce chapitre, nous allons étudier un des modèles , en l’occurrence le premier à construire : le diagramme de cas d’utilisation.<br />
+<img alt="👉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f449.svg" title=":point_right:" /> Il permet de recueillir, d’analyser et d’organiser les besoins. Avec lui débute l’étape d’analyse d’un système.</p>
+</div>
+<h2 id="1notation-de-base">1.Notation de base<a class="headerlink" href="#1notation-de-base" title="Permanent link">⚓︎</a></h2>
+<h3 id="11-acteurs-et-usecase">1.1 Acteurs et useCase<a class="headerlink" href="#11-acteurs-et-usecase" title="Permanent link">⚓︎</a></h3>
+<p>On va aborder ici un nouveau diagramme de la famille des diagrammes illustrant une vue <strong>statique</strong> du système.</p>
+<p>Le diagramme de cas d'utilisation est un élément essentiel du langage UML qui permet de représenter graphiquement les <strong>interactions</strong> entre les <strong>acteurs externes</strong> et le <strong>système</strong>. Cet outil graphique permet de représenter de manière globale les fonctionnalités du système du point de vue des utilisateurs et des intervenants externes. </p>
+<div class="admonition abstract">
+<p class="admonition-title">Intérêt du diagramme</p>
+<ul>
+<li>Permettent de délimiter les frontières du système<br /></li>
+<li>Constituent un moyen d’exprimer les besoins d’un système<br /></li>
+<li>Utilisés par les utilisateurs finaux pour exprimer leurs attentes et leurs besoins<br /></li>
+<li>Permettent d’impliquer les utilisateurs dès les premiers stades du développement<br /></li>
+<li>Constituent une base pour les tests fonctionnels</li>
+</ul>
+</div>
+<p>Les éléments de base d'un diagramme de cas d'utilisations (useCase) sont : </p>
+<p><img alt="🚶" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f6b6.svg" title=":walking:" /> Acteur : entité externe qui agit sur le système (opérateur, autre système...).<br /></p>
+<blockquote>
+<p><img alt="🔹" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f539.svg" title=":small_blue_diamond:" /> L'acteur peut consulter ou modifier l'état du système. <br />
+<img alt="🔹" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f539.svg" title=":small_blue_diamond:" /> En réponse à l'action d'un acteur, le système fournit un service qui correspond à son besoin. <br />
+<img alt="🔹" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f539.svg" title=":small_blue_diamond:" /> Les acteurs peuvent être classés (hiérarchisés) en faisant une sorte d’héritage.</p>
+</blockquote>
+<p><img alt="⚪️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/26aa.svg" title=":white_circle:" /> Use case : ensemble d'actions réalisées par le système, en réponse à une action d'un acteur.<br /></p>
+<blockquote>
+<p><img alt="🔹" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f539.svg" title=":small_blue_diamond:" /> Les uses cases peuvent être structurés. <br />
+<img alt="🔹" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f539.svg" title=":small_blue_diamond:" /> Les uses cases peuvent être organisés en paquetages (packages). <br />
+<img alt="🔹" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f539.svg" title=":small_blue_diamond:" /> L'ensemble des use cases décrit les objectifs (le but) du système. </p>
+</blockquote>
+<div class="admonition info">
+<p class="admonition-title">Convention graphique</p>
+<p><img alt="convention graphique" class="center" src="../data/conventionGraphique.png" width="60%" /></p>
+</div>
+<p><img alt="exemple" class="center" src="../data/figure1.png" width="75%" /></p>
+<h4 id="exercice-vraifaux">Exercice Vrai/Faux<a class="headerlink" href="#exercice-vraifaux" title="Permanent link">⚓︎</a></h4>
+<blockquote>
+<p>Compléter le tableau (Vrai ou Faux) :</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Analyse</th>
+<th style="text-align: center;">Vrai ou Faux</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Un acteur est forcément une personne humaine</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Une seule relation peut lier un acteur aux cas d'utilisation</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Un cas d'utilisation peut être en relation avec plusieurs acteurs</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Un cas d’utilisation peut être en relation avec un autre cas d’utilisation</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Un acteur peut être en relation avec un autre acteur.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Une même personne peut être représentée par plusieurs acteurs.</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<details class="tip">
+<summary>Correction</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Analyse</th>
+<th style="text-align: center;">Vrai ou Faux</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Un acteur est forcément une personne humaine</td>
+<td style="text-align: center;"><img alt="❌" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/274c.svg" title=":x:" /></td>
+</tr>
+<tr>
+<td style="text-align: left;">Une seule relation peut lier un acteur aux cas d'utilisation</td>
+<td style="text-align: center;"><img alt="❌" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/274c.svg" title=":x:" /></td>
+</tr>
+<tr>
+<td style="text-align: left;">Un cas d'utilisation peut être en relation avec plusieurs acteurs</td>
+<td style="text-align: center;"><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+</tr>
+<tr>
+<td style="text-align: left;">Un cas d’utilisation peut être en relation avec un autre cas d’utilisation</td>
+<td style="text-align: center;"><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+</tr>
+<tr>
+<td style="text-align: left;">Un acteur peut être en relation avec un autre acteur.</td>
+<td style="text-align: center;"><img alt="❌" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/274c.svg" title=":x:" /></td>
+</tr>
+<tr>
+<td style="text-align: left;">Une même personne peut être représentée par plusieurs acteurs</td>
+<td style="text-align: center;"><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+</tr>
+</tbody>
+</table>
+</details>
+<h2 id="2-relations-entre-acteurs">2. Relations entre Acteurs<a class="headerlink" href="#2-relations-entre-acteurs" title="Permanent link">⚓︎</a></h2>
+<p>La seule relation possible entre deux acteurs est la <strong>généralisation</strong> : <br />
+un acteur A est une généralisation d’un acteur B si l’acteur A peut être substitué par l’acteur B. Dans ce cas, tous les cas d’utilisation accessibles à A le sont aussi à B, mais l’inverse n’est pas vrai.</p>
+<p><img alt="heritage" class="center" src="../data/heritage.png" width="50%" /></p>
+<h4 id="exercice-station-service">Exercice : Station Service<a class="headerlink" href="#exercice-station-service" title="Permanent link">⚓︎</a></h4>
+<p><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0031-20e3.svg" title=":one:" /> Le client se sert de l'essence de la façon suivante. Il prend un pistolet accroché à une pompe et appuie sur la gâchette pour prendre de l'essence. Qui est l'acteur du système ? Est-ce le client, le pistolet ou la gâchette ?</p>
+<details class="tip">
+<summary>Correction</summary>
+<p>Le client est l’acteur du système. Le pistolet et la gâchette sont des ressources utilisées par le système.</p>
+</details>
+<p><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0032-20e3.svg" title=":two:" /> Le pompiste peut se servir de l'essence pour sa voiture. Est-ce un nouvel acteur ?</p>
+<details class="tip">
+<summary>Correction</summary>
+<p>Si le pompiste accompli uniquement les tâches d’un client, il est inutile de créer un nouvel acteur. Il sera lui-même client.</p>
+</details>
+<p><img alt="3️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0033-20e3.svg" title=":three:" /> La station a un gérant qui utilise le système informatique pour des opérations de gestion. Est-ce un nouvel acteur ?</p>
+<details class="tip">
+<summary>Correction</summary>
+<p>Oui, le gérant est un nouvel acteur.</p>
+</details>
+<p><img alt="4️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0034-20e3.svg" title=":four:" /> La station-service a un petit atelier d'entretien de véhicules dont s'occupe un mécanicien.
+Le gérant est remplacé par un chef d 'atelier qui, en plus d'assurer la gestion, est aussi mécanicien. Comment modéliser cela ?</p>
+<details class="tip">
+<summary>Correction</summary>
+<p>Un nouvel acteur, le chef d’atelier est créé à la place du gérant. Il hérite d’un autre acteur : le mécanicien.</p>
+</details>
+<p><img alt="5️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0035-20e3.svg" title=":five:" /> Quel est le défaut du diagramme suivant ?</p>
+<p><img alt="useCase erroné" class="center" src="../data/stationService_defaut.jpg" width="50%" /></p>
+<details class="tip">
+<summary>Correction</summary>
+<p>Il ne faut pas introduire de séquencement temporel entre les cas d’utilisation. <br />
+On peut faire apparaître Cette notion dans le scénario de la description détaillée du cas d’utilisation (voir ci après), mais pas dans le diagramme. <br />
+De plus, il est incorrect d’utiliser un trait plein pour relier deux cas d’utilisation. Cette notation est réservée entre acteur et cas d’utilisation. Les seules notations admises entre deux cas d’utilisation sont Include, extend ou héritage.</p>
+<p><img alt="station service" class="center" src="../data/stationService1.jpg.png" width="50%" /></p>
+</details>
+<h2 id="3-relations-entre-cas-dutilisation">3. Relations entre cas d’utilisation<a class="headerlink" href="#3-relations-entre-cas-dutilisation" title="Permanent link">⚓︎</a></h2>
+<h3 id="31-inclusion">3.1 Inclusion<a class="headerlink" href="#31-inclusion" title="Permanent link">⚓︎</a></h3>
+<p><strong>Relation d’utilisation</strong> : <code>&lt;&lt;include&gt;&gt;</code> : Le cas d’utilisation contient un autre cas d’utilisation<br /></p>
+<p>L'inclusion est une relation entre deux cas d'utilisation, où l'un inclut l'exécution de l'autre à un endroit spécifié. Elle est représentée par une flèche pointant vers le cas d'utilisation inclus avec la mention «include». L'inclusion est utilisée pour réutiliser un ensemble de comportements communs dans plusieurs cas d'utilisation sans dupliquer le même scénario dans chacun d'eux. Le cas d'utilisation inclus est généralement appelé "sous-cas d'utilisation".</p>
+<p>Exemple :</p>
+<blockquote>
+<p>Cas d'utilisation principal : "Acheter un produit en ligne"<br />
+   <img alt="↪️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/21aa.svg" title=":arrow_right_hook:" /> Cas d'inclusion : "Sélectionner le mode de paiement"<br />
+Dans cet exemple, "Sélectionner le mode de paiement" est inclus dans le cas d'utilisation "Acheter un produit en ligne".</p>
+</blockquote>
+<h3 id="32-extension">3.2 Extension<a class="headerlink" href="#32-extension" title="Permanent link">⚓︎</a></h3>
+<p><strong>Relation d’extension</strong> : <code>&lt;&lt;extend&gt;&gt;</code>:  Le cas d’utilisation étend (précise) les objectifs (le comportement) d’un autre cas d’utilisation</p>
+<p>L'extension est une relation entre deux cas d'utilisation, où l'un étend le comportement de l'autre à un point spécifié sans modifier le scénario de base. Elle est représentée par une flèche pointant vers le cas d'utilisation étendu avec la mention «extend». L'extension est utilisée pour modéliser des comportements optionnels ou conditionnels qui peuvent enrichir le scénario de base. Le cas d'utilisation étendu est généralement appelé "extension".</p>
+<p>Exemple :</p>
+<blockquote>
+<p>Cas d'utilisation principal : "Gérer un compte utilisateur"<br />
+  <img alt="↪️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/21aa.svg" title=":arrow_right_hook:" /> Cas d'extension : "Envoyer une notification par e-mail en cas de modification du compte"<br />
+Dans cet exemple, "Envoyer une notification par e-mail en cas de modification du compte" est une extension qui peut être activée en fonction de certaines conditions dans le cas d'utilisation principal "Gérer un compte utilisateur".</p>
+</blockquote>
+<p><img alt="inclusion" class="center" src="../data/include.png" width="75%" /></p>
+<p><strong>Le point d'extension</strong> : Un cas d’utilisation A étend un cas d’utilisation B lorsque le cas d’utilisation A peut être appelé au cours de l’exécution du cas d’utilisation de B. Le cas A dépend de B et la flèche va de A vers B.<br />
+Le <strong>point d’extension</strong>, c'est le point précis à partir duquel le scénario étendu peut être déclenché. Il porte un nom dans un compartiment du cas étendu. </p>
+<p><img alt="exemple extension" class="center" src="../data/extension1.jpg" width="50%" /></p>
+<details class="info">
+<summary>Exemple détaillé point d'extension Gérer une Réservation d'Hôtel</summary>
+<p>Voici un exemple pour illustrer la notion de point d'extension :</p>
+<p><ins>Cas d'Utilisation Principal :</ins> "Gérer une Réservation d'Hôtel"<br />
+<ins>Point d'Extension :</ins> "Appliquer un Rabais Spécial"</p>
+<p><strong>Scénario Principal :</strong></p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>L&#39;utilisateur crée une réservation d&#39;hôtel.
+Le système calcule le coût standard de la réservation.
+</code></pre></div>
+<p><strong>Point d'Extension :</strong> "Appliquer un Rabais Spécial"</p>
+<p><strong>Scénario d'Extension</strong> (si la condition est remplie) :</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Si le client est un membre fidèle, le système applique un rabais spécial.
+Le système recalcule le coût avec le rabais.
+</code></pre></div>
+<p>Suite du Scénario Principal :
+3. Le client confirme la réservation.</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Le système enregistre la réservation.
+</code></pre></div>
+<p>Dans cet exemple, "Appliquer un Rabais Spécial" est le point d'extension, et il indique l'endroit où le scénario d'extension peut être activé sous certaines conditions (par exemple, si le client est un membre fidèle).</p>
+</details>
+<h3 id="33-generalisation-dun-usecase">3.3 Généralisation d'un UseCase<a class="headerlink" href="#33-generalisation-dun-usecase" title="Permanent link">⚓︎</a></h3>
+<p>La <strong>généralisation</strong> appliquée à un cas d'utilisation dans un diagramme de cas d'utilisation UML permet de modéliser une relation d'héritage entre des cas d'utilisation. Cela signifie qu'un cas d'utilisation spécifique, appelé cas d'utilisation enfant, hérite des propriétés et des comportements d'un cas d'utilisation plus général, appelé cas d'utilisation parent. le cas d'utilisation enfant est un cas particuler du cas d'utilisation parent.</p>
+<p>exemple </p>
+<blockquote>
+<p>Cas d'Utilisation Parent : "Gérer une Réservation de transport"<br />
+  <img alt="↪️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/21aa.svg" title=":arrow_right_hook:" /> Cas d'Utilisation enfant : "Gérer une Réservation d'avion"<br />
+  <img alt="↪️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/21aa.svg" title=":arrow_right_hook:" /> Cas d'Utilisation enfant : "Gérer une Réservation de train"<br /></p>
+</blockquote>
+<h3 id="34-exemple-complet">3.4 Exemple complet<a class="headerlink" href="#34-exemple-complet" title="Permanent link">⚓︎</a></h3>
+<p><img alt="cas complet DAB" class="center" src="../data/casComplet.png" width="50%" /></p>
+<h3 id="35-exercices">3.5 Exercices<a class="headerlink" href="#35-exercices" title="Permanent link">⚓︎</a></h3>
+<h4 id="lagence-de-voyages">L'Agence de voyages<a class="headerlink" href="#lagence-de-voyages" title="Permanent link">⚓︎</a></h4>
+<blockquote>
+<p>Choisissez et dessinez les relations entre les cas suivants :</p>
+</blockquote>
+<ol>
+<li>Une agence de voyages organise des voyages où l'hébergement se fait en hôtel. Le client doit disposer d 'un taxi quand il arrive à la gare pour se rendre à l'hôtel.</li>
+</ol>
+<p><img alt="diagramme de base" class="center" src="../data/agenceVoyage1.png" width="50%" /></p>
+<ol>
+<li>
+<p>Certains clients demandent à l'agent de voyages d'établir une facture détaillée.
+Cela donne lieu à un nouveau cas d 'utilisation appelé « Etablir une facture détaillée ». Comment mettre ce cas en relation avec les cas existants ?</p>
+</li>
+<li>
+<p>Le voyage se fait soit par avion, soit par train. Comment modéliser cela ?</p>
+</li>
+</ol>
+<details class="tip">
+<summary>correction</summary>
+<p><img alt="diagramme complet" class="center" src="../data/agenceVoyage2.png" width="75%" /></p>
+</details>
+<h4 id="reservation-de-salles-et-materiel">Réservation de salles et matériel<a class="headerlink" href="#reservation-de-salles-et-materiel" title="Permanent link">⚓︎</a></h4>
+<p>Dans un établissement scolaire, on désire gérer la réservation des salles de cours ainsi que du matériel pédagogique (ordinateur portable ou/et tablette). <br />
+<img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Seuls les enseignants sont habilités à effectuer des réservations (sous réserve de disponibilité de la salle ou du matériel). <br />
+<img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Le planning des salles peut quant à lui être consulté par tout le monde (enseignants et étudiants). <br />
+<img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Par contre, le récapitulatif horaire par enseignant (calculé à partir du planning des salles) ne peut être consulté que par les enseignants. <br />
+<img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Enfin, il existe pour chaque formation un enseignant responsable qui seul peut éditer le récapitulatif horaire pour l’ensemble de la formation.</p>
+<details class="tip">
+<summary>Correction</summary>
+<p><img alt="reservation de matériel" class="center" src="../data/resaMateriel.png" width="75%" /></p>
+</details>
+<h2 id="4-cas-dutilisation-detaillee">4. Cas d'utilisation détaillée<a class="headerlink" href="#4-cas-dutilisation-detaillee" title="Permanent link">⚓︎</a></h2>
+<p>Un diagramme de classe s'accompagne d'une description détaillée, qui permet d'enrichir les futurs cas de tests et de recettes.</p>
+<p><img alt="cas complet" class="center" src="../data/useCase_complet.png" width="50%" /></p>
+<p>exemple : </p>
+<p><img alt="Use case Commande" class="center" src="../data/useCaseCommande.png" width="75%" />
+<img alt="Use case commande détaillé" class="center" src="../data/useCaseCommande_detaillee.png" width="75%" /></p>
 
 
   

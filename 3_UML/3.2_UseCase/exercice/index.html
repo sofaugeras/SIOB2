@@ -26,7 +26,7 @@
     
     
       
-        <title>Exercice - Saint Sauveur BTS SIO SLAM</title>
+        <title>Exercices - Saint Sauveur BTS SIO SLAM</title>
       
     
     
@@ -106,6 +106,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#exercices" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -136,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exercice
+              Exercices
             
           </span>
         </div>
@@ -1003,16 +1008,66 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Exercices
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Exercice
+    Exercices
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-la-bibliotheque" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. La bibliothèque
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-la-caisse-enregistreuse" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. La caisse enregistreuse
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1077,7 +1132,7 @@
         
   
   <span class="md-ellipsis">
-    Diagramme de séquence
+    Diagramme d'interaction
   </span>
   
 
@@ -2447,9 +2502,112 @@
   
 
 
-  <h1>Exercice</h1>
-
-<p><img alt="🚧" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f6a7.svg" title=":construction:" /> En construction</p>
+<h1 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">⚓︎</a></h1>
+<h2 id="1-la-bibliotheque">1. La bibliothèque<a class="headerlink" href="#1-la-bibliotheque" title="Permanent link">⚓︎</a></h2>
+<p>source : UML2 de l'apprentissage à la pratique, L. Audibert</p>
+<p>L'objectif de cet exercice est de produire un diagramme de cas d'utilisation modélisant les besoins du système d'information d'une bibliothèque. Actuellement, la bibliothèqye est question n'en possède pas et ne travaille qu'avec des notices et des fiches papier. Vous agissez en tant que prestataire pour une société de conception de logiciel de bibliothèque. Vous allez à la rencontre du client (la bibliothécaire). L'entretien est retranscris ci dessous.</p>
+<p><img alt="👩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f469.svg" title=":woman:" /> Bonjour monsieur, je vous attendais. J'ai fait appel à vous pour informatiser notre bibliothèque. En effet, nous commençons à avoir un certain nombrede livres et d'adhérents, et il devient difficile pour nous de suivre les prêts et difficile pour les adhérents de rechercher des livres.</p>
+<p><img alt="👤" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f464.svg" title=":bust_in_silhouette:" /> <em>Bonjour madame. Pourriez vous me décrire la façon dont vous fonctionnez actuellement ?</em></p>
+<p><img alt="👩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f469.svg" title=":woman:" /> Nous fonctionnons avec des notices papier. Une notice est affectée à chaque livre et insérée contre la couverture à l'intérieur du livre. Quand une personne emprunte un livre, elle donne la notice du livre à un assistant qui la range dans le fichier des emprunts. Nous avons aussi une fiche par adhérent. Il faut donc noter sur la fiche de l'adhérent les livres qu'il emprunte et la date de retour lorsqu'il les rend.</p>
+<p><img alt="👤" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f464.svg" title=":bust_in_silhouette:" /> <em>Qu'y a t'il d'écrit sur une notice ?</em></p>
+<p><img alt="👩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f469.svg" title=":woman:" /> Le titre du livre, l'auteur et l'éditeur par exemple. Mais ca depend un peu des notices. Quand une personne emprunte un livre, on écrit aussi son nom, son prénom, et la date du prêt.</p>
+<p><img alt="👤" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f464.svg" title=":bust_in_silhouette:" /> <em>Pourquoi dites-vous : "Ca dépend des notices" ?</em></p>
+<p><img alt="👩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f469.svg" title=":woman:" /> Parce qu'il y a plusieurs type de notice en fonction des documents. Nous avons des romans, des bandes dessinées, des livres sur la culture, comme l'histoire de l'art ...</p>
+<p><img alt="👤" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f464.svg" title=":bust_in_silhouette:" /> <em>Pouvez vous me montrer quelques notices ?</em></p>
+<p><img alt="notices" class="center" src="../data/notice.png" width="60%" /></p>
+<p><img alt="👤" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f464.svg" title=":bust_in_silhouette:" /> _Quels sont exactement les différents types de documents que vous possédez ?</p>
+<p><img alt="👩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f469.svg" title=":woman:" /> Des romans, des bandes dessinées, des ouvrages d'art et l'histoire, des guides de voyage et des revues qui ne peuvent pas être empruntées.</p>
+<p><img alt="👤" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f464.svg" title=":bust_in_silhouette:" /> <em>Le système doit-il aussi les revues ?</em></p>
+<p><img alt="👩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f469.svg" title=":woman:" /> oui, pour connaître notre fond, et pour permettre de faire des recherches.</p>
+<p><img alt="👤" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f464.svg" title=":bust_in_silhouette:" /> <em>Qu'attendez vous du système ?</em></p>
+<p><img alt="👩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f469.svg" title=":woman:" /> Qu'il permette de mémoriser et de gérer toutes nos notices papier. Qu'il permette d'effectuer des recherches sur notre fond. Qu'il permette de gérer les emprunts.</p>
+<p><img alt="👤" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f464.svg" title=":bust_in_silhouette:" /> <em>Tout le monde peut il emprunter des ouvrages ?</em></p>
+<p><img alt="👩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f469.svg" title=":woman:" /> Oui, à condition d'être abonné à la bibliothèque</p>
+<p><img alt="👤" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f464.svg" title=":bust_in_silhouette:" /> <em>Donc le système doit aussi gérer les abonnés ?</em></p>
+<p><img alt="👩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f469.svg" title=":woman:" /> Euh ...oui</p>
+<p><img alt="👤" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f464.svg" title=":bust_in_silhouette:" /> <em>Un adhérent a-t-il accès au système ?</em></p>
+<p><img alt="👩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f469.svg" title=":woman:" /> Oui, il doit pouvoir effectuer des recherches pour savoir si un ouvrage existe dans la bibliothèque et s'il est disponible. Même un simple visiteur doit pouvoir le faire.</p>
+<p><img alt="👤" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f464.svg" title=":bust_in_silhouette:" /> <em>Toutes les autres interactions avec les système sont réalisés uniquement par le bibliothécaire ?</em></p>
+<p><img alt="👩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f469.svg" title=":woman:" /> Oui ... et un assistant. Un assistant doit pouvoir gérer les emprunts et les retours. Il doit aussi pouvoir effectuer des recherches et savoir, le cas échéant, qui a emprunté un ouvrage en cours de prêt. Moi, je dois pouvoir, en plus modifier le fond documentaire. J'aimerais aussi pouvoir afficher la liste des ouvrages qui auraient dû être rendus et ne le sont pas encore, et qui les a empruntés.</p>
+<p><img alt="👤" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f464.svg" title=":bust_in_silhouette:" /> <em>Quelle est la durée maximale d'un prêt ?</em></p>
+<p><img alt="👩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f469.svg" title=":woman:" /> Ca dépend, un mois pour les romans et les autres livres. trois semaines pour un guide de voyage et deux pour une bande dessinée.</p>
+<p><img alt="👤" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f464.svg" title=":bust_in_silhouette:" /> <em>Combien un adhérent peut-il emprunter d'ouvrages ?</em></p>
+<p><img alt="👩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f469.svg" title=":woman:" /> Au maximun trois romans, deux guides de voyage et cinq bandes dessinées. Mais pas plus de 5 ouvrages en tout.</p>
+<p><img alt="👤" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f464.svg" title=":bust_in_silhouette:" /> <em>Bon, voyez vous des choses à rajouter</em></p>
+<p><img alt="👩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f469.svg" title=":woman:" /> Oui, j'aimerais bien qu'un assistant ou moi-même puissions spécifier sur une notice l'état d'un ouvrage. Par exemple avec trois niveaux : bon, moyen, abîmé. Ceci m'aiderait beaucoup pour le remplacement des exemplaires.</p>
+<p><img alt="👉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f449.svg" title=":point_right:" /> Penser à utiliser vos connaissances sur le monde de l'édition et sur vos fréquentations des bibliothèques pour trouver les informations qui ne figurent pas dans cet entretien. Elles sont nombreuses !</p>
+<ol>
+<li>identifier et spécifier les besoins en réalisant un diagramme de cas d'utilisation</li>
+<li>Donner une description détaillé du cas d'utilisation <strong>gérer un emprunt</strong></li>
+</ol>
+<details class="tip">
+<summary>Correction</summary>
+<p><img alt="use case" class="center" src="../data/DC_bibli.png" width="60%" />
+<img alt="use case détaillée" class="center" src="../data/DC_bibli_detaillee.png" width="80%" />
+<img alt="Diagramme de classe" class="center" src="../data/DC_bibli_classe.png" width="75%" /></p>
+</details>
+<h2 id="2-la-caisse-enregistreuse">2. La caisse enregistreuse<a class="headerlink" href="#2-la-caisse-enregistreuse" title="Permanent link">⚓︎</a></h2>
+<p>source : UML2 de l'apprentissage à la pratique, L. Audibert</p>
+<p>L'objectif de cet exercice est de produire un diagramme de cas d'utilisation modélisant les besoins du système informatique emabrqué dans une caisse enregistreuse de supermarché. Le déroulement normal d'utilisation d'une caisse enregistreuse est le suivant :</p>
+<ul>
+<li>
+<p>Le client se présente à la caisse avec les articles qu'il veut acheter</p>
+</li>
+<li>
+<p>Le caissier identifie chaque article à l'aide de son code barre et saisit la quantité si celle-ci est supérieure à un.</p>
+</li>
+<li>
+<p>La caisse affiche le prix et la désignation de chaque article pour que le client puissent surveiller le déroulement des opérations.</p>
+</li>
+<li>
+<p>Lorsque tous les articles ont été enregistrés, le caissier signale la fin de la vente à la caisse.</p>
+</li>
+<li>
+<p>La caisse affiche le montant total des achats.</p>
+</li>
+<li>
+<p>Le client peut présenter des coupons de réductions avant le paiement.</p>
+</li>
+<li>
+<p>Le client a le choix entre les trois modes de paiement qui suivent</p>
+</li>
+</ul>
+<blockquote>
+<ol>
+<li><em>en liquide</em> : Le caissier enregiste l'argent et la caisse indique le montant éventuel à rendre au client.</li>
+<li><em>Par chèque</em> : Le caissier vérifie l'identité du client ainsi que sa solvabilité en transmettant une requête au centre d'autorisation via la caisse.</li>
+<li><em>Par carte de crédit</em> : Le terminal bancaire intégré à la caisse transmet la demande à un centre d'autorisation multi-banques.</li>
+</ol>
+</blockquote>
+<ul>
+<li>
+<p>La caisse mémorise la vente et imprime le ticket.</p>
+</li>
+<li>
+<p>La caissier transmet le ticket imprimé au client.</p>
+</li>
+<li>
+<p>La caisse transmet les informations relatives aux articles vendus au sytème de gestion des stocks.</p>
+</li>
+</ul>
+<p>Le supermarché possède également des superviseurs qui peuvent effectuer des opérations particulières avec les caisses enregistreuses, comme son initialisation, ou un forçage de prix pour un article dont le prix (ou la réduction) affiché en magasin ne correspond pas à celui mémorisé dans le système informatique.</p>
+<ol>
+<li>
+<p>Proposer un diagramme de cas d'utilisation minimaliste contenant deux cas, <em>traiter le passage en caisse</em> et <em>effectuer une opération particulière</em>, ainsi que le ou les acteurs principaux.</p>
+</li>
+<li>
+<p>Ajouter les acteurs secondaires.</p>
+</li>
+<li>
+<p>La prolifération des acteurs secondaires sur le cas <em>traiter le passage en caisse</em> indique que le cas comporte probablement trop de responsabilités. Proposer une décomposition du cas.</p>
+</li>
+<li>
+<p>En utilisant un point d'extension, faites figurer la prise en compte des coupons de réductions.</p>
+</li>
+</ol>
+<details class="tip">
+<summary>Correction</summary>
+</details>
 
 
   

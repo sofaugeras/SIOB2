@@ -27,4 +27,7 @@ Pensez à utiliser toute la richesse du langage UML.
 
 
 ??? tip "Correction"
-    ![lien vers le PDF de correction](./data/commissariat.pdf)
+    ![Corrigé Diagramme de cas d'utilisation](./data/commissariat_UC_corrige.png){ .center width=50%}
+    ![Corrigé Diagrammme de classe](./data/commissariat_DC_corrige.png){ .center width=50%}
+
+    
