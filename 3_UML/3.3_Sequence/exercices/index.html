@@ -1100,6 +1100,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Exercices
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1109,6 +1120,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-1-distributeur-automatique-de-billet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 1  : Distributeur automatique de billet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-decharger-un-camion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2 : Décharger un camion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2455,7 +2503,40 @@
 
 
 <h1 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">⚓︎</a></h1>
-<p><img alt="🚧" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f6a7.svg" title=":construction:" /> En construction</p>
+<h2 id="exercice-1-distributeur-automatique-de-billet">Exercice 1  : Distributeur automatique de billet<a class="headerlink" href="#exercice-1-distributeur-automatique-de-billet" title="Permanent link">⚓︎</a></h2>
+<p>Le déroulement normal d’utilisation d’un distributeur automatique de billets est le suivant :<br />
+1.     le client introduit sa carte bancaire<br />
+2.     la machine vérifie alors la validité de la carte et demande le code au client<br />
+3.     si le code est correct, elle envoie une demande d’autorisation de prélèvement au groupement de banques. Ce dernier renvoie le solde autorisé à prélever.<br />
+4.     le distributeur propose alors plusieurs montants à prélever<br />
+5.     le client saisit le montant à retirer<br />
+6.     après contrôle du montant par rapport au solde autorisé, le distributeur demande au client s’il désire un ticket<br />
+7.     Après la réponse du client, la carte est éjectée et récupérée par le client<br />
+8.     les billets sont alors délivrés (ainsi que le ticket)<br />
+9.     le client récupère enfin les billets et son ticket<br /></p>
+<p><ins>Travail à Faire :</ins><br />
+Modéliser cette situation à l’aide d’un diagramme de séquence en ne prenant en compte que le cas où tout se passe bien. <br />
+note : on identifiera les scénarios qui peuvent poser problème en incluant des commentaires dans le diagramme</p>
+<details class="tip">
+<summary>Correction</summary>
+<p><img alt="correction DAB" src="../data/seq_DAB_correction.jpg" /></p>
+</details>
+<h2 id="exercice-2-decharger-un-camion">Exercice 2 : Décharger un camion<a class="headerlink" href="#exercice-2-decharger-un-camion" title="Permanent link">⚓︎</a></h2>
+<p>Pour faciliter sa gestion, un entrepôt de stockage envisage de s’informatiser. Le logiciel à produire doit allouer automatique un emplacement pour le chargement des camions qui convoient le stock à entreposer. Le fonctionnement du système informatique doit être le suivant :<br /></p>
+<p>1 . <strong>Déchargement d’un camion :</strong> <br />
+lors de l’arrivée d’un camion, un employé doit saisir dans le système les caractéristiques de chaque article  <br />
+le système produit alors une liste où figure un emplacement pour chaque article <br /></p>
+<p>2 . <strong>Chargement d’un camion :</strong> les caractéristiques des articles à charger dans un camion sont saisies par un employé afin d’indiquer au système de libérer des emplacements.<br />
+Le chargement et le déchargement sont réalisés manuellement.<br />
+Les employés de l’entrepôt sont sous la responsabilité d’un chef dont le rôle est de superviser la bonne application des consignes.<br /></p>
+<p><ins>Travail à Faire :</ins><br />
+Donner  le Diagramme de séquence pour le cas déchargement d’un camion</p>
+<details class="tip">
+<summary>correction</summary>
+<p><img alt="correction stockage" src="../data/seq_stockage_correction.jpg" /></p>
+<p>et pour info, le diagramme de collaboration correspondant</p>
+<p><img alt="correction stockage collab" src="../data/collab_stockage_correction.jpg" /></p>
+</details>
 
 
   

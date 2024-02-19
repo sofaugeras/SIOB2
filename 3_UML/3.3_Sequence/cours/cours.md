@@ -1,5 +1,6 @@
 # Diagramme d'interaction
 
+## 1. Présentation
 
 !!! abstract "Définition"
 
@@ -9,9 +10,9 @@
 
 Il existe 2 types de diagrammes d’interaction :<br />
 
-- Diagrammes de séquence : mettent l’accent sur le classement chronologique des messages de collaboration d’instance
+- **Diagrammes de séquence** : mettent l’accent sur le classement chronologique des messages de collaboration d’instance
 
-- Diagrammes de collaboration : mettent l’accent sur l’organisation structurelle des éléments qui envoient et reçoivent des messages
+- **Diagrammes de collaboration** : mettent l’accent sur l’organisation structurelle des éléments qui envoient et reçoivent des messages
 
 Les ^^diagrammes de séquence^^ et les ^^diagrammes de collaboration^^ sont **isomorphes** : l’un peut-être transformé en l’autre
 
@@ -28,4 +29,36 @@ L'ordre d'envoi d'un message est déterminé par sa position sur l'axe vertical 
 
 ![element de base](./data/elementBase.png){ .center width=70%}
 
+## 2. Convention de langage : 
 
+:point_right: **Le Branchement conditionnel** : Deux ou plusieurs branches de séquence sont représentées à l'intérieur du fragment conditionnel. Chaque branche correspond à un chemin d'exécution possible en fonction du résultat de l'évaluation de la condition.
+
+![branchement conditionnel](./data/messageconditionnel.png)
+
+:point_right: **La récursivité** : un message récursif est un message envoyé par un objet à lui-même. Cette situation peut survenir lorsqu'un objet doit effectuer une action répétitive ou itérative sur lui-même, souvent dans le cadre de la logique de boucle ou de récursivité.
+
+![message récursif](./data/messageRecurs.png)
+
+:point_right: **Message simple**: aucune caractéristique d'envoi ou de réception particulière
+
+![message simple](./data/messageSimple.png)
+
+:point_right: **Message minuté** (timeout) : bloque l'expéditeur pendant un temps donné, en attendant la prise en compte du message par le récepteur. L'expéditeur est libéré si la prise en compte n'a pas eu lieu pendant le délai spécifié
+
+![message minuté](./data/messageMinute.png)
+
+:point_right: **Message Synchone** : bloque l'expéditeur jusqu'à prise en compte du message par le destinataire
+
+![Message Synchrone](./data/messageSynchrone.png)
+
+:point_right: **Message Asynchone** : n'interrompt pas l'exécution de l'expéditeur. Le message peut être pris en compte par le récepteur à tout moment ou ignoré
+
+![Message Asynchrone](./data/messageAsynchrone.png)
+
+## 3. Exemple complet Séquence
+
+![exemple complet](./data/exempleSequence.png)
+
+## 4. Exemple Diagramme de collaboration
+
+![diagramme de collaboration](./data/exempleDiagCollab.png)

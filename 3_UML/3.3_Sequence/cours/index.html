@@ -1079,6 +1079,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Diagramme d'interaction
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1088,6 +1099,61 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-presentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Présentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-convention-de-langage" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Convention de langage :
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-exemple-complet-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Exemple complet Séquence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-exemple-diagramme-de-collaboration" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Exemple Diagramme de collaboration
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2455,6 +2521,7 @@
 
 
 <h1 id="diagramme-dinteraction">Diagramme d'interaction<a class="headerlink" href="#diagramme-dinteraction" title="Permanent link">⚓︎</a></h1>
+<h2 id="1-presentation">1. Présentation<a class="headerlink" href="#1-presentation" title="Permanent link">⚓︎</a></h2>
 <div class="admonition abstract">
 <p class="admonition-title">Définition</p>
 <p>Les <strong>diagrammes d'interactions</strong> sont des outils pour modéliser les interactions entre les objets d'un système logiciel. Ce chapitre explore les concepts fondamentaux des diagrammes de séquence, leur utilité dans le processus de conception logicielle.</p>
@@ -2463,10 +2530,10 @@
 <p>Il existe 2 types de diagrammes d’interaction :<br /></p>
 <ul>
 <li>
-<p>Diagrammes de séquence : mettent l’accent sur le classement chronologique des messages de collaboration d’instance</p>
+<p><strong>Diagrammes de séquence</strong> : mettent l’accent sur le classement chronologique des messages de collaboration d’instance</p>
 </li>
 <li>
-<p>Diagrammes de collaboration : mettent l’accent sur l’organisation structurelle des éléments qui envoient et reçoivent des messages</p>
+<p><strong>Diagrammes de collaboration</strong> : mettent l’accent sur l’organisation structurelle des éléments qui envoient et reçoivent des messages</p>
 </li>
 </ul>
 <p>Les <ins>diagrammes de séquence</ins> et les <ins>diagrammes de collaboration</ins> sont <strong>isomorphes</strong> : l’un peut-être transformé en l’autre</p>
@@ -2478,6 +2545,23 @@
 <p><img alt="illustration" class="center" src="../data/exemple1.png" width="50%" /></p>
 <p>L'ordre d'envoi d'un message est déterminé par sa position sur l'axe vertical du diagramme. Le temps s'écoule "de haut en bas" de cet axe. La disposition des objets sur l'axe horizontal n'a pas de conséquence pour la sémantique du diagramme.</p>
 <p><img alt="element de base" class="center" src="../data/elementBase.png" width="70%" /></p>
+<h2 id="2-convention-de-langage">2. Convention de langage :<a class="headerlink" href="#2-convention-de-langage" title="Permanent link">⚓︎</a></h2>
+<p><img alt="👉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f449.svg" title=":point_right:" /> <strong>Le Branchement conditionnel</strong> : Deux ou plusieurs branches de séquence sont représentées à l'intérieur du fragment conditionnel. Chaque branche correspond à un chemin d'exécution possible en fonction du résultat de l'évaluation de la condition.</p>
+<p><img alt="branchement conditionnel" src="../data/messageconditionnel.png" /></p>
+<p><img alt="👉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f449.svg" title=":point_right:" /> <strong>La récursivité</strong> : un message récursif est un message envoyé par un objet à lui-même. Cette situation peut survenir lorsqu'un objet doit effectuer une action répétitive ou itérative sur lui-même, souvent dans le cadre de la logique de boucle ou de récursivité.</p>
+<p><img alt="message récursif" src="../data/messageRecurs.png" /></p>
+<p><img alt="👉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f449.svg" title=":point_right:" /> <strong>Message simple</strong>: aucune caractéristique d'envoi ou de réception particulière</p>
+<p><img alt="message simple" src="../data/messageSimple.png" /></p>
+<p><img alt="👉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f449.svg" title=":point_right:" /> <strong>Message minuté</strong> (timeout) : bloque l'expéditeur pendant un temps donné, en attendant la prise en compte du message par le récepteur. L'expéditeur est libéré si la prise en compte n'a pas eu lieu pendant le délai spécifié</p>
+<p><img alt="message minuté" src="../data/messageMinute.png" /></p>
+<p><img alt="👉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f449.svg" title=":point_right:" /> <strong>Message Synchone</strong> : bloque l'expéditeur jusqu'à prise en compte du message par le destinataire</p>
+<p><img alt="Message Synchrone" src="../data/messageSynchrone.png" /></p>
+<p><img alt="👉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f449.svg" title=":point_right:" /> <strong>Message Asynchone</strong> : n'interrompt pas l'exécution de l'expéditeur. Le message peut être pris en compte par le récepteur à tout moment ou ignoré</p>
+<p><img alt="Message Asynchrone" src="../data/messageAsynchrone.png" /></p>
+<h2 id="3-exemple-complet-sequence">3. Exemple complet Séquence<a class="headerlink" href="#3-exemple-complet-sequence" title="Permanent link">⚓︎</a></h2>
+<p><img alt="exemple complet" src="../data/exempleSequence.png" /></p>
+<h2 id="4-exemple-diagramme-de-collaboration">4. Exemple Diagramme de collaboration<a class="headerlink" href="#4-exemple-diagramme-de-collaboration" title="Permanent link">⚓︎</a></h2>
+<p><img alt="diagramme de collaboration" src="../data/exempleDiagCollab.png" /></p>
 
 
   

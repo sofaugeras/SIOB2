@@ -9,6 +9,11 @@
 - [Cyber-Learning.fr, créer par et pour le SIO](https://cyber-learning.fr/)
 - [The OSINT project](https://the-osint-project.fr/)
 - [Hackropole proposé par ANSII](https://hackropole.fr/fr/)
+- [Arcsi](https://www.arcsi.fr/jeux.php) : challenges de cryptographie et leurs solutions
+- [hackthebox](https://www.hackthebox.com/) : exploiter des vulnérabilités
+- [Try hack me](https://tryhackme.com/) : exploiter des vulnérabilités
+- [Blue team labs](https://blueteamlabs.online/)
+
 
 ## Ressources support de cours
 
