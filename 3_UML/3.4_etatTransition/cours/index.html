@@ -1168,6 +1168,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Diagramme Etat-Transition
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1177,6 +1188,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-semantique" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Sémantique
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-convention-de-langage" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Convention de langage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-exemple-complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Exemple complet
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2455,7 +2512,41 @@
 
 
 <h1 id="diagramme-etat-transition">Diagramme Etat-Transition<a class="headerlink" href="#diagramme-etat-transition" title="Permanent link">⚓︎</a></h1>
-<p><img alt="🚧" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f6a7.svg" title=":construction:" /> En construction</p>
+<div class="admonition abstract">
+<p class="admonition-title">Définition</p>
+<p>un diagramme d'<strong>état-transition</strong> est un outil de modélisation qui permet de décrire le comportement <ins>dynamique</ins> d'un système en représentant les états possibles d'un objet, les transitions entre ces états et les événements qui déclenchent ces transitions.</p>
+<p>Utilisation des diagrammes états-transitions : <br />
+<ins>En phase d'analyse :</ins><br />
+- Description de la dynamique du système vu de l'extérieur<br />
+- Synthèse des scénarios liés aux cas d'utilisation<br />
+- Événements = action des acteurs<br />
+<ins>En phase de conception :</ins><br />
+- Description de la dynamique d'un objet particulier<br />
+- Événements = appels d'opérations</p>
+</div>
+<h2 id="1-semantique">1. Sémantique<a class="headerlink" href="#1-semantique" title="Permanent link">⚓︎</a></h2>
+<p><strong>État :</strong> Un état représente une condition ou une situation dans laquelle un objet peut se trouver à un moment donné. Par exemple, un objet peut être dans un état "allumé" ou "éteint".</p>
+<p><strong>Transition :</strong> Une transition représente le passage d'un état à un autre en réponse à un événement ou une condition spécifique. Les transitions sont déclenchées par des événements externes ou des actions internes.</p>
+<p><strong>Événement :</strong> Un événement est un stimulus externe ou une condition interne qui déclenche une transition entre les états. Les événements peuvent être des signaux provenant d'autres objets, des délais de temps, des conditions booléennes, etc.</p>
+<p><strong>Actions :</strong> Les actions sont des comportements associés à une transition. Elles peuvent inclure des opérations ou des traitements effectués lorsque la transition est déclenchée.</p>
+<h2 id="2-convention-de-langage">2. Convention de langage<a class="headerlink" href="#2-convention-de-langage" title="Permanent link">⚓︎</a></h2>
+<p><img alt="convention graphique" src="../data/convention.png" /></p>
+<p>Quelques éléments de langage :</p>
+<p><img alt="👉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f449.svg" title=":point_right:" /> <strong>Transition conditionnelle</strong></p>
+<p><img alt="condition" src="../data/ET_condition.png" /></p>
+<p><img alt="👉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f449.svg" title=":point_right:" /> <strong>Évènement réflexif</strong> : L’évènement peut arriver plusieurs fois et les action doivent être à chaque fois exécutées</p>
+<p><img alt="reflexif" src="../data/ET_refelxif.png" /></p>
+<p><img alt="👉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f449.svg" title=":point_right:" /> <strong>Etat composé</strong> : État  qui englobe d'autres états et transitions (éléments de structuration du diagramme)</p>
+<p><img alt="composé" src="../data/ET_compos%C3%A9.png" /></p>
+<p><img alt="👉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f449.svg" title=":point_right:" /> <strong>Synchronisation</strong> : Il est possible de synchroniser des transitions à l’aide d’une barre de synchronisation. Celle-ci permet d’ouvrir et de fermer des branches parallèles au sein d’un flôt d’exécution : Les transitions qui partent d’une barre de synchronisation ont lieu en même temps. On ne franchit une barre de synchronisation qu’après réalisation de toutes les transitions qui s’y rattachent. </p>
+<p><img alt="synchronisation" src="../data/ET_synchro.png" /></p>
+<h2 id="3-exemple-complet">3. Exemple complet<a class="headerlink" href="#3-exemple-complet" title="Permanent link">⚓︎</a></h2>
+<p><img alt="exemple complet fenetre" src="../data/ET_complet.png" /></p>
+<details class="tip">
+<summary>exemple Analyse fonctionnel</summary>
+<p>Worflow des virements émis en euro (valeurs prise par un statut technique IDT_STA_TEC)
+<img alt="worflow bancaire" src="../data/Worklow_bancaire.png" /></p>
+</details>
 
 
   
