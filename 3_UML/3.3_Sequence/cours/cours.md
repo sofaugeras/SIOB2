@@ -1,4 +1,4 @@
-# Diagramme d'interaction
+# Diagramme de séquence
 
 ## 1. Présentation
 
