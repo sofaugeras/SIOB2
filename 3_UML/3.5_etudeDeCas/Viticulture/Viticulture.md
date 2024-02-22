@@ -2,6 +2,8 @@
 
 ![illustration](./data/viti.jpg){ .center width=50%}
 
+:page_facing_up: [version PDF](./data/CASVITICULTURE.pdf)
+
 Dans le cadre d’un projet de recherche en viticulture, on désire collecter les temps de travaux sur des exploitations agricoles pilotes, pour travailler en particulier sur les opérations phytosanitaires. Pour ce faire, un glossaire des opérations culturales types a été mis en place (afin que tout le monde ait le même cadre analytique). 
 
 Des contraintes assez fortes sont apparues sur le projet : les ouvriers agricoles des exploitations pilotes n’ont pas accès aux outils informatiques et la lourdeur d’enregistrement des temps de travaux a donc de fait écarté l’utilisation d’un outil informatique. La procédure suivante a ainsi été définie : chaque ouvrier agricole saisit ses temps de travaux sur un cahier au format prédéfini. (dans ce cahier, il peut consulter en annexes le glossaire afin d’identifier l’opération culturale type). 

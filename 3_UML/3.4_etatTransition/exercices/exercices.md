@@ -1,6 +1,6 @@
 # Exercices
 
-## Exercice 1 : Réveil matin
+## Exercice 1 : Réveil matin :alarm_clock:
 Considérons un réveille-matin simplifié : <br />
 - on peut mettre l’alarme « on » ou « off » <br />
 - quand l’heure courante devient égale à l’heure d’alarme, le réveil sonne sans s’arrêter <br />
@@ -9,7 +9,7 @@ Considérons un réveille-matin simplifié : <br />
 ??? tip "correction"
     ![correction](./data/ET_alarme_corr.png)
 
-## Exercice 2 : Lavage de voiture
+## Exercice 2 : Lavage de voiture :sweat_drops:
 
 On cherche à montrer les différents états par lesquels passe une machine à laver les voitures.<br />
 - En phase de lustrage ou de lavage, le client peut appuyer sur le bouton d'arrêt d'urgence. <br />
