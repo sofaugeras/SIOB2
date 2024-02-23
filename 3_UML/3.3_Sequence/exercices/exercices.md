@@ -41,3 +41,4 @@ Donner  le Diagramme de séquence pour le cas déchargement d’un camion
     et pour info, le diagramme de collaboration correspondant
 
     ![correction stockage collab](./data/collab_stockage_correction.jpg)
+

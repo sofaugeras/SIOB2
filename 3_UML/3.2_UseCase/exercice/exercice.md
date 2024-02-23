@@ -116,3 +116,24 @@ Le supermarché possède également des superviseurs qui peuvent effectuer des o
 
 ??? tip "Correction"
     
+## Exercice 3 : Société de livraison express à domicile
+
+On s'intéresse à une société de livraison express à domicile. Le service _Clientèle_ reçoit chaque jour les clients qui désirent une livraison en France ou à l'étranger. Ce service gère deux catégories de paquets :<br />
+
++ les paquets légers ou _lettres_ dont le poids est £ à 2 kg<br />
++ les paquets lourds ou _colis_ dont le poids est > à 2 kg<br />
+
+Le tarif est calculé en fonction du poids du colis et de sa destination avec un forfait de 10 Euros si le client opte pour un envoi avec accusé de réception. Le service _Clientèle_ enregistre alors les références des paquets client (coordonnées expéditeur + destinataire, poids, etc.) en ordinateur et impriment un récépissé pour le client. La facturation des paquets légers ou à destination de la France sont gérés aussi par ce service. Le paiement effectué, le service transmet le paquet au service _Logistique_ pour l'acheminement.<br />
+
+Les paquets lourds, à destination de l'international, doivent respecter la réglementation douanière et doivent donc faire l'objet de démarches plus lourdes qui rallongent leur délai d'acheminement de 48h au moins et sont sur-facturés de 10%. En particulier, le client doit remplir et signer une liasse de transport qui précise la nature et la valeur du contenu du (ou des) paquets à acheminer. Le paquet, accompagné de ce document, est transmis au service _Export_ de l'entreprise.<br />
+
+Les paquets dont le poids dépasse les 20kg ou, dont le contenu est répertorié dans une liste de marchandises bien définie par la réglementation douanière, doivent subir des formalités avec les douanes Françaises, en liaison avec le service Export. Le paquet ne peut être acheminé avant accord des douanes qui se matérialise par un bordereau avec les références du paquet à acheminer et le montant de la taxe à la charge du client. Le service Export de l'entreprise transmet alors l'information au service de facturation. Celui-ci émet ensuite la facture finale à destination du client. Après règlement, le service Export en est informé et transmet le paquet avec le bordereau des douanes au service Logistique qui se charge de la livraison.<br />
+
+> 1. Donner le diagramme de cas d'utilisation qui décrit le fonctionnement de cette société<br />
+> 2. Décrire la structure statique de ce système par un **diagramme de classe**. Vous utiliserez la version abrégée du langage UML.<br />
+
+??? tip "Correction"
+    ![useCase](./data/UseCaseLivraison.png)
+
+    ![diagramme de classe](./data/DCLivraison.png)
+

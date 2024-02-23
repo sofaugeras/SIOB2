@@ -1065,6 +1065,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exercice-3-societe-de-livraison-express-a-domicile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 3 : Société de livraison express à domicile
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2607,6 +2616,26 @@
 </ol>
 <details class="tip">
 <summary>Correction</summary>
+</details>
+<h2 id="exercice-3-societe-de-livraison-express-a-domicile">Exercice 3 : Société de livraison express à domicile<a class="headerlink" href="#exercice-3-societe-de-livraison-express-a-domicile" title="Permanent link">⚓︎</a></h2>
+<p>On s'intéresse à une société de livraison express à domicile. Le service <em>Clientèle</em> reçoit chaque jour les clients qui désirent une livraison en France ou à l'étranger. Ce service gère deux catégories de paquets :<br /></p>
+<ul>
+<li>les paquets légers ou <em>lettres</em> dont le poids est £ à 2 kg<br /></li>
+<li>les paquets lourds ou <em>colis</em> dont le poids est &gt; à 2 kg<br /></li>
+</ul>
+<p>Le tarif est calculé en fonction du poids du colis et de sa destination avec un forfait de 10 Euros si le client opte pour un envoi avec accusé de réception. Le service <em>Clientèle</em> enregistre alors les références des paquets client (coordonnées expéditeur + destinataire, poids, etc.) en ordinateur et impriment un récépissé pour le client. La facturation des paquets légers ou à destination de la France sont gérés aussi par ce service. Le paiement effectué, le service transmet le paquet au service <em>Logistique</em> pour l'acheminement.<br /></p>
+<p>Les paquets lourds, à destination de l'international, doivent respecter la réglementation douanière et doivent donc faire l'objet de démarches plus lourdes qui rallongent leur délai d'acheminement de 48h au moins et sont sur-facturés de 10%. En particulier, le client doit remplir et signer une liasse de transport qui précise la nature et la valeur du contenu du (ou des) paquets à acheminer. Le paquet, accompagné de ce document, est transmis au service <em>Export</em> de l'entreprise.<br /></p>
+<p>Les paquets dont le poids dépasse les 20kg ou, dont le contenu est répertorié dans une liste de marchandises bien définie par la réglementation douanière, doivent subir des formalités avec les douanes Françaises, en liaison avec le service Export. Le paquet ne peut être acheminé avant accord des douanes qui se matérialise par un bordereau avec les références du paquet à acheminer et le montant de la taxe à la charge du client. Le service Export de l'entreprise transmet alors l'information au service de facturation. Celui-ci émet ensuite la facture finale à destination du client. Après règlement, le service Export en est informé et transmet le paquet avec le bordereau des douanes au service Logistique qui se charge de la livraison.<br /></p>
+<blockquote>
+<ol>
+<li>Donner le diagramme de cas d'utilisation qui décrit le fonctionnement de cette société<br /></li>
+<li>Décrire la structure statique de ce système par un <strong>diagramme de classe</strong>. Vous utiliserez la version abrégée du langage UML.<br /></li>
+</ol>
+</blockquote>
+<details class="tip">
+<summary>Correction</summary>
+<p><img alt="useCase" src="../data/UseCaseLivraison.png" /></p>
+<p><img alt="diagramme de classe" src="../data/DCLivraison.png" /></p>
 </details>
 
 

@@ -134,8 +134,8 @@ NB : on désire de plus gérer les liens de parenté directs entre les chevaux.
 Une même course peut avoir lieu plusieurs fois dans la même saison sur le même champ de course et les dotations ne sont pas toujours les mêmes. 
 Ex : le trot monté d’Auteuil se déroule au mois de mars avec une dotation de 5 millions, au mois de juillet avec une dotation de 3 millions et au mois de décembre avec une dotation de 4 millions. 
 
-1. Le modèle conceptuel des données
-2. Le modèle logique (MPD) associé 
+> Le modèle conceptuel des données<br />
+> Le modèle logique (MPD) associé 
 
 ??? tip "correction"
 
@@ -151,3 +151,95 @@ Ex : le trot monté d’Auteuil se déroule au mois de mars avec une dotation de
     **CHEVAL** (^^idCheval^^, nomCheval, dateNaissance, sexe, #idIndividu)<br />
     **EST_PARENT_DE** (^^#idChevalparent, #idChevalEnfant^^)
 
+## Exercice 8 : Hôtel
+
+Un hôtel est composé d'au moins deux chambres. Chaque chambre dispose d'une salle d'eau : douche ou bien baignoire. Un hôtel héberge des personnes. Il peut employer du personnel et est impérativement dirigé par un directeur. On ne connaît que le nom et le prénom des employés, des directeurs et des occupants. Certaines personnes sont des enfants et d'autres des adultes (faire travailler des enfants est interdit). Un hôtel a les caractéristiques suivantes : une adresse, un nombre de pièces et une catégorie. Une chambre est caractérisé par le nombre de lit qu'elle contient, son prix et son numéro. On veut pouvoir savoir qui occupe quelle chambre et à quelle date. Pour chaque jour de l'année, on veut pouvoir calculer le loyer de chaque chambre en fonction de son prix et de son occupation (le loyer est nul si la chambre est inoccupée). La somme de ces loyers permet de calculer le chiffre d'affaires de l'hôtel entre deux dates.
+
+> Donnez un diagramme de classe pour modéliser le probléme de l'hôtel
+
+??? tip "Correction"
+    ![hotel](./data/hotel.png)
+
+## Exercice 9 : Asso35
+
+:page_facing_up: [version PDF](./data/Asso35.pdf)
+
+Asso35 est une association dont les membres, regroupés en équipe, pratiquent des activités. Chaque équipe est le plus souvent ludique ou sportive. <br />
+
+Les équipes sportives peuvent être amatrice ou licenciée du sport qu'elles pratiquent par la fédération concernée. Dans ce cas, certaines d'entre elles peuvent participer à une compétition dont on connaît un descriptif, sa catégorie (nationale, régionale ou départementale) et le classement de l'équipe. L'historique d'une équipe pour une compétition n'est pas à archiver, seule compte l'année en cours.<br />
+On ne gère pas les licences individuelles de chaque adhérent. Pour chaque sport, on souhaite savoir si un avis médical est nécessaire.<br />
+
+Toutes les équipes sportives sont entraînées par un adhérent qui peut gérer plusieurs équipes.<br />
+
+Une fiche repère les adhérents de l'association par leur nom, leur prénom, leurs coordonnées, leur date de naissance et les coordonnées de leur médecin traitant. Pour les hommes, on note leur situation militaire (accompli, exempté ou sursitaire), pour les femmes, on référence les périodes d'interruption des activités dues à leurs maternités, numérotées séquentiellement par rapport au membre.<br />
+
+Les équipes ludiques peuvent jouer à plusieurs jeux.<br />
+
+Un adhérent peut pratiquer plusieurs activités.<br />
+
+> Donnez un diagramme de classe pour modéliser la gestion de l'association
+
+??? tip "Correction"
+    ![Asso35](./data/asso35.png)
+
+## Exercice 10 : Etude d'un système de réservation de train
+
+:page_facing_up: [Version PDF](./data/train/resaTrain.pdf)
+
+Cette étude de cas concerne un système simplifié de réservation de train pour une agence de voyage. Les rencontres avec les futurs utilisateurs et les experts ont permis de résumer la connaissance du domaine avec les phrases suivantes :<br />
+
+1.	des compagnies proposent différents trains<br />
+2.	un train est ouvert à la réservation et refermé sur ordre de la compagnie<br />
+3.	un client peut réserver un ou plusieurs trains pour des passagers différents<br />
+4.	une réservation concerne un seul train et un seul passager<br />
+5.	une réservation peut-être annulée ou confirmée<br />
+6.	un train a une gare de départ ou une gare d'arrivée<br />
+7.	un train a un jour et une heure de départ, et un jour et une heure d'arrivée<br />
+8.	un train peut comporter des arrêts dans des gares<br />
+9.	un arrêt a une heure d'arrivée et une heure de départ<br />
+10.	chaque gare dessert une ou plusieurs villes<br />
+
+À partir de ces informations, réaliser par étapes, un modèle statique du domaine. N'hésitez pas à revenir en arrière si certaines étapes vous apportent des éléments ou contraintes supplémentaires.<br />
+
+**Etape 1 : Modélisation des phrases 1 et 2**
+-	Réaliser le diagramme de classe représentant la phrase 1<br />
+-	La phrase 2 permet de préciser un peu plus ce diagramme. Pour cela, appuyez-vous sur un diagramme de collaboration illustrant cette phrase.<br />
+
+??? tip "Correction"
+    ![etape1](./data/train/etape1.png)
+
+**Etape 2 : Modélisation des phrases 6, 7 et 10**
+Dans la phrase 7, les dates et heures représentent uniquement des valeurs. Dans la phrase 6, la notion de gare est plus complexe, une gare possède un nom, dessert plusieurs villes…<br />
+-	Poursuivre la modélisation de la classe train en se rapportant à la phrase 7<br />
+-	Poursuivre l'élaboration du diagramme de classe en interprétant la phrase 6. Les gares de départ et d'arrivée ont-elles des attributs et méthodes différents ou jouent-elles des rôles différents ?<br />
+-	Modéliser la phrase 10 en réfléchissant au cardinalités.
+
+??? tip "Correction"
+    ![etape2](./data/train/etape2.png)
+ 
+**Etape 3 : Modélisation des phrases 8 et 9**
+Ces deux phrases amène des précisions sur les arrêts, mais restent trop vagues. Essayer d'obtenir plus de précisions en vous appuyant sur un cas concret.<br />
+-	Établir le diagramme d'objet décrivant les cas réels suivants : le train TGV_Marseille_Paris part de la gare Saint-Charles, fait un arrêt à Aix-en-Provence à la gare de l'Arbois, et arrive à Paris en gare de Lyon; le train TGV_Marseille_Bruxelles part de la gare Saint-Charles, fait un arrêt à Aix-en-Provence à la gare de l'Arbois, un autre arrêt à Paris en gare de Lyon, et arrive à Bruxelles en gare Centrale.<br />
+-	À l'aide de ce diagramme d'objet, modéliser les phrases 8 et 9. <br />
+
+??? tip "Correction"
+    ![etape3](./data/train/etape3.png)
+
+**Etape 4 : Modélisation des phrases 3, 4 et 5**
+Modéliser le concept de réservation.<br />
+
+??? tip "Correction"
+    ![etape4](./data/train/etape4.png)
+
+**Etape 5 : Ajouter les attributs nécessaires.**
+On ne doit pas lister dans les attributs des références à d'autres classes : c'est le but même de l'identification des associations.<br />
+-	une gare a un nom<br />
+-	un client possède un nom, un prénom, une adresse et un numéro de téléphone<br />
+-	une compagnie a un nom<br />
+-	un arrêt et lié à une heure de départ et une heure d'arrivée dans un trajet<br />
+-	un passager a un nom et un prénom<br />
+-	une ville a un nom<br />
+-	un train a un numéro, une date de départ et d'arrivée, une heure de départ et d'arrivée.<br />
+
+??? tip "Correction"
+    ![etape5](./data/train/etape5.png)
