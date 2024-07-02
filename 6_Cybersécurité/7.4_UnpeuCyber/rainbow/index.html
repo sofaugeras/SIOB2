@@ -18,7 +18,7 @@
         <link rel="prev" href="../phrase_de_passe-v2/">
       
       
-        <link rel="next" href="../../../7_Epreuves/sommaire/">
+        <link rel="next" href="../sel/">
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
@@ -2300,19 +2300,31 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#la-notion-de-salage" class="md-nav__link">
-    <span class="md-ellipsis">
-      La notion de salage
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sel
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -3296,6 +3308,7 @@ file.close()</div>
         <span class="c1">#on lit le fichier ligne par ligne pour le mettre dans un dictionnaire</span>
         <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
             <span class="n">password</span><span class="p">,</span> <span class="n">empreinte</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">';'</span><span class="p">)</span>
+            <span class="c1">#Insertion dans le dictionnaire, la clé est le mot de passe en clair, la valeur l'empreinte MD5</span>
             <span class="n">passwords</span><span class="p">[</span><span class="n">password</span><span class="p">]</span> <span class="o">=</span> <span class="n">empreinte</span>
     
     <span class="c1">#On vérifie si le hachage est dans le dictionnaire</span>
@@ -3317,6 +3330,7 @@ file.close()</div>
         #on lit le fichier ligne par ligne pour le mettre dans un dictionnaire
         for line in file:
             password, empreinte = line.strip().split(';')
+            #Insertion dans le dictionnaire, la clé est le mot de passe en clair, la valeur l'empreinte MD5
             passwords[password] = empreinte
     
     #On vérifie si le hachage est dans le dictionnaire
@@ -3351,17 +3365,6 @@ find_password(hash)</div>
 <pre>'Le mot de passe associé au hachage 5ebe2294ecd0e0f08eab7690d2a6ee69 est secret'</pre>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="la-notion-de-salage">La notion de salage<a class="anchor-link" href="#la-notion-de-salage">¶</a></h2>
 </div>
 </div>
 </div>
