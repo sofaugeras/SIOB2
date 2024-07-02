@@ -176,22 +176,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/sofaugeras/SIOB2/6_Cybers%C3%A9curit%C3%A9/7.4_UnpeuCyber/cours1/</loc>
-         <lastmod>2024-07-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/sofaugeras/SIOB2/6_Cybers%C3%A9curit%C3%A9/7.4_UnpeuCyber/cours2/</loc>
-         <lastmod>2024-07-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/sofaugeras/SIOB2/6_Cybers%C3%A9curit%C3%A9/7.4_UnpeuCyber/lienCyber/</loc>
-         <lastmod>2024-07-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://github.com/sofaugeras/SIOB2/6_Cybers%C3%A9curit%C3%A9/7.4_UnpeuCyber/mdp/</loc>
+         <lastmod>2024-07-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/sofaugeras/SIOB2/6_Cybers%C3%A9curit%C3%A9/7.4_UnpeuCyber/owasp/</loc>
          <lastmod>2024-07-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -207,6 +197,11 @@
     </url>
     <url>
          <loc>https://github.com/sofaugeras/SIOB2/6_Cybers%C3%A9curit%C3%A9/7.4_UnpeuCyber/rainbow/</loc>
+         <lastmod>2024-07-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/sofaugeras/SIOB2/6_Cybers%C3%A9curit%C3%A9/7.4_UnpeuCyber/secureByDesign/</loc>
          <lastmod>2024-07-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
