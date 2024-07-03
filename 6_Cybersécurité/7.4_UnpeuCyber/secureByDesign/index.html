@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/6_Cybers%C3%A9curit%C3%A9/7.4_UnpeuCyber/secureByDesign/">
       
       
-        <link rel="prev" href="../rainbow/">
+        <link rel="prev" href="../owasp/">
       
       
-        <link rel="next" href="../sel/">
+        <link rel="next" href="../data/phrase_de_passe-v2-Corrige/">
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>La Cyber en NSI - Saint Sauveur BTS SIO SLAM</title>
+        <title>Secure by Design - Saint Sauveur BTS SIO SLAM</title>
       
     
     
@@ -107,7 +107,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#la-cyber-en-nsi" class="md-skip">
+        <a href="#secure-by-design" class="md-skip">
           Aller au contenu
         </a>
       
@@ -141,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              La Cyber en NSI
+              Secure by Design
             
           </span>
         </div>
@@ -2081,6 +2081,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../initiationReseau/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Un peu de réseau
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../mdp/" class="md-nav__link">
         
   
@@ -2120,10 +2141,80 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Secure by Design
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2_5" id="__nav_7_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../phrase_de_passe-v2-Corrige/" class="md-nav__link">
+      <a href="../data/phrase_de_passe-v2-Corrige/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2144,7 +2235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../phrase_de_passe-v2/" class="md-nav__link">
+      <a href="../data/phrase_de_passe-v2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2165,7 +2256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rainbow/" class="md-nav__link">
+      <a href="../data/rainbow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2183,49 +2274,26 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../data/sel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    La Cyber en NSI
+    generate new salt, hash password
   </span>
   
 
       </a>
-      
     </li>
   
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../sel/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sel
-  </span>
-  
-
-      </a>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2648,7 +2716,7 @@
   
 
 
-<h1 id="la-cyber-en-nsi">La Cyber en NSI<a class="headerlink" href="#la-cyber-en-nsi" title="Permanent link">⚓︎</a></h1>
+<h1 id="secure-by-design">Secure by Design<a class="headerlink" href="#secure-by-design" title="Permanent link">⚓︎</a></h1>
 <blockquote>
 <p>"La cybersécurité est un domaine à part entière, il sera donc nécessaire de continuer d'en faire [note en : en BTS SIO], mais peut-être moins sur les aspects "attaquer" mais sur le <strong>"security by design"</strong>, la qualité du code, la gestion des frameworks... bref, la sécurité en amont plutôt qu'en aval. " David Roumanet, Lycée Louise Michel. Professeur BTS SIO.</p>
 </blockquote>
@@ -2668,6 +2736,63 @@
 - Utiliser des exceptions spécifiques plutôt que des exceptions générales
 - Toujours nettoyer les ressources dans un bloc finally dans la gestion des exceptions
 - Fermer les ressources au fur et à mesure (fichier par exemple)</p>
+<p>Exemple de code dangereux :</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">read_file</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="c1"># Fichier jamais fermé explicitement</span>
+    <span class="k">return</span> <span class="n">data</span>
+
+<span class="c1"># Utilisation de la fonction</span>
+<span class="n">content</span> <span class="o">=</span> <span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;example.txt&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+
+<span class="c1"># Autres opérations</span>
+<span class="c1"># Le fichier &#39;example.txt&#39; reste ouvert pendant toute la durée du programme</span>
+</code></pre></div></td></tr></table></div>
+<p><ins>Problèmes Potentiels :</ins></p>
+<blockquote>
+<p><strong>Fuite de Ressources :**Le descripteur de fichier reste ouvert, consommant des ressources système inutiles.<br />
+**Verrouillage de Fichier :</strong> Le fichier peut rester verrouillé, empêchant d'autres processus ou parties du programme de le modifier.<br />
+<strong>Incohérences et Erreurs :</strong> Si le programme tente de lire ou d'écrire à nouveau dans le fichier, des comportements inattendus peuvent survenir.<br /></p>
+</blockquote>
+<p><ins>Solution : Utiliser le Bloc with</ins><br /></p>
+<p>L'utilisation d'un bloc with en Python garantit que le fichier est correctement fermé après son utilisation, même si une exception est levée pendant l'opération de lecture ou d'écriture. Voici comment corriger le code :</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">read_file</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="c1"># Le fichier est automatiquement fermé à la fin du bloc with</span>
+    <span class="k">return</span> <span class="n">data</span>
+
+<span class="c1"># Utilisation de la fonction</span>
+<span class="n">content</span> <span class="o">=</span> <span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;example.txt&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+
+<span class="c1"># Autres opérations</span>
+<span class="c1"># Le fichier &#39;example.txt&#39; est fermé proprement après la lecture</span>
+</code></pre></div></td></tr></table></div>
 
 
   

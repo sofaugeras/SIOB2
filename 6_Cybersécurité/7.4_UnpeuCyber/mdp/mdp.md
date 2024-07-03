@@ -83,8 +83,8 @@ Quelques astuces :
 
     Point de programme : Manipulation de chaîne de caractère
 
-    🔽 Télécharger le notebook Activité correspondant [ici](./phrase_de_passe-v2.ipynb)<br />
-    🔽 Télécharger le notebook Activité corrigé [ici](./phrase_de_passe-v2-Corrige.ipynb)
+    🔽 Télécharger le notebook Activité correspondant [ici](./data/phrase_de_passe-v2.ipynb)<br />
+    🔽 Télécharger le notebook Activité corrigé [ici](./data/phrase_de_passe-v2-Corrige.ipynb)
 
     idée : Poursuivre sur la conversion binaire. 
 
@@ -112,7 +112,7 @@ Pour cracker un mot de passe, le cybercriminel va chercher son empreinte dans la
 
     Point de programme : Manipulation de dictionnaire et CSV
 
-    🔽 Télécharger le notebook Activité correspondant [ici](./rainbow.ipynb)<br />
+    🔽 Télécharger le notebook Activité correspondant [ici](./data/rainbow.ipynb)<br />
 
 ## Stockage d'un mot de passe
 
@@ -121,7 +121,9 @@ La règle de "base" en hygiène de codeur est de ne JAMAiS stocké un mot de pas
 Le seul moment où un mot de passe est en clair est quand il est saisi dans le champ du formulaire. <br />
 Imaginons ... Si tous les sites avaient tous la même méthode de chiffrement (MD5 ou SH256) et qu'un utilisateur utilisait le même mot de passe sur tous ces sites ...
 
-Il existe des fuites de données recensant le couple identifiant/mot de passe d'un grand nombre de personne !
+Il existe des fuites de données recensant le couple identifiant/mot de passe d'un grand nombre de personne ! <br />
+Vous pouvez tester votre adresse mail sur le site [';--have i been pwned?](https://haveibeenpwned.com/) pour savoir si celle ci appartient à une fuite de données connue.
+
 
 ^^Mise en exemple :^^ <br />
 Alphonse (al@mail.com) utilise le mot de passe "secret" pour les sites monsite.fr et concurrent.fr<br />

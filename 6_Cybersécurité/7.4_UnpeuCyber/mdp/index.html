@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/6_Cybers%C3%A9curit%C3%A9/7.4_UnpeuCyber/mdp/">
       
       
-        <link rel="prev" href="../../ressources/">
+        <link rel="prev" href="../initiationReseau/">
       
       
         <link rel="next" href="../owasp/">
@@ -2078,6 +2078,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../initiationReseau/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Un peu de réseau
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -2259,7 +2280,67 @@
   
   
     <li class="md-nav__item">
-      <a href="../phrase_de_passe-v2-Corrige/" class="md-nav__link">
+      <a href="../secureByDesign/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secure by Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2_5" id="__nav_7_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data/phrase_de_passe-v2-Corrige/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2280,7 +2361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../phrase_de_passe-v2/" class="md-nav__link">
+      <a href="../data/phrase_de_passe-v2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2301,7 +2382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rainbow/" class="md-nav__link">
+      <a href="../data/rainbow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2322,11 +2403,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../secureByDesign/" class="md-nav__link">
+      <a href="../data/sel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    La Cyber en NSI
+    generate new salt, hash password
   </span>
   
 
@@ -2336,22 +2417,9 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../sel/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sel
-  </span>
-  
-
-      </a>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2853,8 +2921,8 @@ télédéclaration de l’impôt : imputabilité = lien entre la déclaration et
 <div class="admonition note">
 <p class="admonition-title">Activité Phrase de passe</p>
 <p>Point de programme : Manipulation de chaîne de caractère</p>
-<p>🔽 Télécharger le notebook Activité correspondant <a href="../phrase_de_passe-v2/">ici</a><br />
-🔽 Télécharger le notebook Activité corrigé <a href="../phrase_de_passe-v2-Corrige/">ici</a></p>
+<p>🔽 Télécharger le notebook Activité correspondant <a href="../data/phrase_de_passe-v2/">ici</a><br />
+🔽 Télécharger le notebook Activité corrigé <a href="../data/phrase_de_passe-v2-Corrige/">ici</a></p>
 <p>idée : Poursuivre sur la conversion binaire. </p>
 </div>
 <h2 id="les-rainbows-tables">Les rainbows Tables<a class="headerlink" href="#les-rainbows-tables" title="Permanent link">⚓︎</a></h2>
@@ -2870,13 +2938,14 @@ télédéclaration de l’impôt : imputabilité = lien entre la déclaration et
 <div class="admonition note">
 <p class="admonition-title">Activité</p>
 <p>Point de programme : Manipulation de dictionnaire et CSV</p>
-<p>🔽 Télécharger le notebook Activité correspondant <a href="../rainbow/">ici</a><br /></p>
+<p>🔽 Télécharger le notebook Activité correspondant <a href="../data/rainbow/">ici</a><br /></p>
 </div>
 <h2 id="stockage-dun-mot-de-passe">Stockage d'un mot de passe<a class="headerlink" href="#stockage-dun-mot-de-passe" title="Permanent link">⚓︎</a></h2>
 <p>La règle de "base" en hygiène de codeur est de ne JAMAiS stocké un mot de passe en clair, que ce soit dans un fichier ou pire dans une base de données. Un site ne doit jamais être en capacité de vous communiquer votre mot de passe initial !</p>
 <p>Le seul moment où un mot de passe est en clair est quand il est saisi dans le champ du formulaire. <br />
 Imaginons ... Si tous les sites avaient tous la même méthode de chiffrement (MD5 ou SH256) et qu'un utilisateur utilisait le même mot de passe sur tous ces sites ...</p>
-<p>Il existe des fuites de données recensant le couple identifiant/mot de passe d'un grand nombre de personne !</p>
+<p>Il existe des fuites de données recensant le couple identifiant/mot de passe d'un grand nombre de personne ! <br />
+Vous pouvez tester votre adresse mail sur le site <a href="https://haveibeenpwned.com/">';--have i been pwned?</a> pour savoir si celle ci appartient à une fuite de données connue.</p>
 <p><ins>Mise en exemple :</ins> <br />
 Alphonse (al@mail.com) utilise le mot de passe "secret" pour les sites monsite.fr et concurrent.fr<br />
 Chacun des deux sites utilise la même méthode de chiffrement MD5.<br />

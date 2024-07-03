@@ -12,28 +12,28 @@
         <meta name="author" content="Sophie FAUGERAS">
       
       
-        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/6_Cybers%C3%A9curit%C3%A9/7.4_UnpeuCyber/phrase_de_passe-v2-Corrige/">
+        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/6_Cybers%C3%A9curit%C3%A9/7.4_UnpeuCyber/data/rainbow/">
       
       
-        <link rel="prev" href="../owasp/">
+        <link rel="prev" href="../phrase_de_passe-v2/">
       
       
-        <link rel="next" href="../phrase_de_passe-v2/">
+        <link rel="next" href="../sel/">
       
       
-      <link rel="icon" href="../../../xtra/favTNSI.png">
+      <link rel="icon" href="../../../../xtra/favTNSI.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
     
     
       
-        <title>Au travail ! - Saint Sauveur BTS SIO SLAM</title>
+        <title>Génération et utilisation d'une rainbow Table - Saint Sauveur BTS SIO SLAM</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.fad675c6.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.fad675c6.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.356b1318.min.css">
       
       
   
@@ -51,8 +51,8 @@
     
       
     
-    <script src="../../../xtra/webcomponentsjs/webcomponents-loader.js"></script>
-    <script src="../../../xtra/gifplayer/gif-player.es6.js" defer async></script>
+    <script src="../../../../xtra/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../../../../xtra/gifplayer/gif-player.es6.js" defer async></script>
     <!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
@@ -66,9 +66,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -107,7 +107,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#objectifs" class="md-skip">
+        <a href="#generation-et-utilisation-dune-rainbow-table" class="md-skip">
           Aller au contenu
         </a>
       
@@ -121,7 +121,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="../../.." title="Saint Sauveur BTS SIO SLAM" class="md-header__button md-logo" aria-label="Saint Sauveur BTS SIO SLAM" data-md-component="logo">
+    <a href="../../../.." title="Saint Sauveur BTS SIO SLAM" class="md-header__button md-logo" aria-label="Saint Sauveur BTS SIO SLAM" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Z"/></svg>
@@ -141,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Au travail !
+              Génération et utilisation d'une rainbow Table
             
           </span>
         </div>
@@ -245,7 +245,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../../../.." class="md-tabs__link">
         
   
     
@@ -264,7 +264,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../1_Base_de_donnees/sommaire/" class="md-tabs__link">
+        <a href="../../../../1_Base_de_donnees/sommaire/" class="md-tabs__link">
           
   
   Base de données
@@ -282,7 +282,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../2_SQL%20Complexe/sommaire/" class="md-tabs__link">
+        <a href="../../../../2_SQL%20Complexe/sommaire/" class="md-tabs__link">
           
   
   SQL complexe
@@ -300,7 +300,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../3_UML/sommaire/" class="md-tabs__link">
+        <a href="../../../../3_UML/sommaire/" class="md-tabs__link">
           
   
   UML
@@ -318,7 +318,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../4_Laravel/sommaire/" class="md-tabs__link">
+        <a href="../../../../4_Laravel/sommaire/" class="md-tabs__link">
           
   
   Laravel
@@ -336,7 +336,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../5_Programmation_SQL/sommaire/" class="md-tabs__link">
+        <a href="../../../../5_Programmation_SQL/sommaire/" class="md-tabs__link">
           
   
   Programmation BdD
@@ -356,7 +356,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../ressources/" class="md-tabs__link">
+        <a href="../../../ressources/" class="md-tabs__link">
           
   
   ressources Cyber SLAM
@@ -374,7 +374,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../7_Epreuves/sommaire/" class="md-tabs__link">
+        <a href="../../../../7_Epreuves/sommaire/" class="md-tabs__link">
           
   
   Epreuves BTS
@@ -392,7 +392,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../8_PostBTS/sommaire/" class="md-tabs__link">
+        <a href="../../../../8_PostBTS/sommaire/" class="md-tabs__link">
           
   
   Poursuites d'études
@@ -427,7 +427,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Saint Sauveur BTS SIO SLAM" class="md-nav__button md-logo" aria-label="Saint Sauveur BTS SIO SLAM" data-md-component="logo">
+    <a href="../../../.." title="Saint Sauveur BTS SIO SLAM" class="md-nav__button md-logo" aria-label="Saint Sauveur BTS SIO SLAM" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Z"/></svg>
@@ -457,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -519,7 +519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/sommaire/" class="md-nav__link">
+      <a href="../../../../1_Base_de_donnees/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -579,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/1.1_introduction/cours/" class="md-nav__link">
+      <a href="../../../../1_Base_de_donnees/1.1_introduction/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -657,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_SQL%20Complexe/sommaire/" class="md-nav__link">
+      <a href="../../../../2_SQL%20Complexe/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -727,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_UML/sommaire/" class="md-nav__link">
+      <a href="../../../../3_UML/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -787,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_UML/3.1_diagrammeClasse/3.1.0_IntroUML/" class="md-nav__link">
+      <a href="../../../../3_UML/3.1_diagrammeClasse/3.1.0_IntroUML/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -808,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_UML/3.1_diagrammeClasse/3.1.1_diagrammeDeClasse/" class="md-nav__link">
+      <a href="../../../../3_UML/3.1_diagrammeClasse/3.1.1_diagrammeDeClasse/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -829,7 +829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_UML/3.1_diagrammeClasse/3.1.2_CalculMPD/" class="md-nav__link">
+      <a href="../../../../3_UML/3.1_diagrammeClasse/3.1.2_CalculMPD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -850,7 +850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_UML/3.1_diagrammeClasse/3.1.3_UML2java/" class="md-nav__link">
+      <a href="../../../../3_UML/3.1_diagrammeClasse/3.1.3_UML2java/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -871,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_UML/3.1_diagrammeClasse/3.1.4_Methodologie/" class="md-nav__link">
+      <a href="../../../../3_UML/3.1_diagrammeClasse/3.1.4_Methodologie/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -892,7 +892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_UML/3.1_diagrammeClasse/exerciceDC/" class="md-nav__link">
+      <a href="../../../../3_UML/3.1_diagrammeClasse/exerciceDC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -913,7 +913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_UML/3.1_diagrammeClasse/exerciceMPD/" class="md-nav__link">
+      <a href="../../../../3_UML/3.1_diagrammeClasse/exerciceMPD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -981,7 +981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_UML/3.2_UseCase/cours/" class="md-nav__link">
+      <a href="../../../../3_UML/3.2_UseCase/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1002,7 +1002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_UML/3.2_UseCase/exercice/" class="md-nav__link">
+      <a href="../../../../3_UML/3.2_UseCase/exercice/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1070,7 +1070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_UML/3.3_Sequence/cours/" class="md-nav__link">
+      <a href="../../../../3_UML/3.3_Sequence/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1091,7 +1091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_UML/3.3_Sequence/exercices/" class="md-nav__link">
+      <a href="../../../../3_UML/3.3_Sequence/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1159,7 +1159,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_UML/3.4_etatTransition/cours/" class="md-nav__link">
+      <a href="../../../../3_UML/3.4_etatTransition/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1180,7 +1180,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_UML/3.4_etatTransition/exercices/" class="md-nav__link">
+      <a href="../../../../3_UML/3.4_etatTransition/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1248,7 +1248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_UML/3.5_etudeDeCas/Viticulture/" class="md-nav__link">
+      <a href="../../../../3_UML/3.5_etudeDeCas/Viticulture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1269,7 +1269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_UML/3.5_etudeDeCas/commissariat/" class="md-nav__link">
+      <a href="../../../../3_UML/3.5_etudeDeCas/commissariat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1290,7 +1290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_UML/3.5_etudeDeCas/reseauSocial/" class="md-nav__link">
+      <a href="../../../../3_UML/3.5_etudeDeCas/reseauSocial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1368,7 +1368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_Laravel/sommaire/" class="md-nav__link">
+      <a href="../../../../4_Laravel/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1428,7 +1428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_Laravel/4.1_installation/cours/" class="md-nav__link">
+      <a href="../../../../4_Laravel/4.1_installation/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1496,7 +1496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_Laravel/4.2_toDo/4.2.1_initialisation/" class="md-nav__link">
+      <a href="../../../../4_Laravel/4.2_toDo/4.2.1_initialisation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1517,7 +1517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_Laravel/4.2_toDo/4.2.2_Ajout_cat%C3%A9gorie/" class="md-nav__link">
+      <a href="../../../../4_Laravel/4.2_toDo/4.2.2_Ajout_cat%C3%A9gorie/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1538,7 +1538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_Laravel/4.2_toDo/4.2.3_prolongement_middleware/" class="md-nav__link">
+      <a href="../../../../4_Laravel/4.2_toDo/4.2.3_prolongement_middleware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1616,7 +1616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../5_Programmation_SQL/sommaire/" class="md-nav__link">
+      <a href="../../../../5_Programmation_SQL/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1676,7 +1676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../5_Programmation_SQL/5.1_Procedures_stockees/cours/" class="md-nav__link">
+      <a href="../../../../5_Programmation_SQL/5.1_Procedures_stockees/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1697,7 +1697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../5_Programmation_SQL/5.1_Procedures_stockees/exercices/" class="md-nav__link">
+      <a href="../../../../5_Programmation_SQL/5.1_Procedures_stockees/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1765,7 +1765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../5_Programmation_SQL/5.2_Transactions/cours/" class="md-nav__link">
+      <a href="../../../../5_Programmation_SQL/5.2_Transactions/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1833,7 +1833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../5_Programmation_SQL/5.3_curseurs/cours/" class="md-nav__link">
+      <a href="../../../../5_Programmation_SQL/5.3_curseurs/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1854,7 +1854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../5_Programmation_SQL/5.3_curseurs/exercices/" class="md-nav__link">
+      <a href="../../../../5_Programmation_SQL/5.3_curseurs/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1922,7 +1922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../5_Programmation_SQL/5.4_Triggers_d%C3%A9clencheurs/cours/" class="md-nav__link">
+      <a href="../../../../5_Programmation_SQL/5.4_Triggers_d%C3%A9clencheurs/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1943,7 +1943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../5_Programmation_SQL/5.4_Triggers_d%C3%A9clencheurs/exercices/" class="md-nav__link">
+      <a href="../../../../5_Programmation_SQL/5.4_Triggers_d%C3%A9clencheurs/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2021,7 +2021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ressources/" class="md-nav__link">
+      <a href="../../../ressources/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2081,7 +2081,28 @@
   
   
     <li class="md-nav__item">
-      <a href="../mdp/" class="md-nav__link">
+      <a href="../../initiationReseau/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Un peu de réseau
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mdp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2102,7 +2123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../owasp/" class="md-nav__link">
+      <a href="../../owasp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2120,28 +2141,70 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../../secureByDesign/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secure by Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
   
-    <li class="md-nav__item md-nav__item--active">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2_5" checked>
+        
           
+          <label class="md-nav__link" for="__nav_7_2_5" id="__nav_7_2_5_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
-    Au travail !
+    Data
   </span>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_2_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phrase_de_passe-v2-Corrige/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2150,84 +2213,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#objectifs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Objectifs :
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#le-scenario" class="md-nav__link">
-    <span class="md-ellipsis">
-      Le scénario :
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#construire-un-mot-de-passe-assez-fort-et-facilement-memorisable" class="md-nav__link">
-    <span class="md-ellipsis">
-      Construire un mot de passe assez fort et facilement mémorisable.
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Construire un mot de passe assez fort et facilement mémorisable.">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      Description
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#les-etapes-de-construction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Les étapes de construction
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#au-travail" class="md-nav__link">
-    <span class="md-ellipsis">
-      Au travail !
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2258,10 +2243,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../rainbow/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Génération et utilisation d'une rainbow Table
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2270,27 +2275,74 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../secureByDesign/" class="md-nav__link">
+      
         
-  
-  <span class="md-ellipsis">
-    La Cyber en NSI
-  </span>
-  
 
-      </a>
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#etape-1-generation-dune-rainbow-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etape 1 : génération d'une rainbow Table
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Etape 1 : génération d'une rainbow Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-etapes-de-construction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les étapes de construction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-2-utilisation-de-la-rainbow-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etape 2 : Utilisation de la rainbow Table
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Etape 2 : Utilisation de la rainbow Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-etapes-de-construction_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les étapes de construction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2307,11 +2359,19 @@
         
   
   <span class="md-ellipsis">
-    Sel
+    generate new salt, hash password
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2381,7 +2441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../7_Epreuves/sommaire/" class="md-nav__link">
+      <a href="../../../../7_Epreuves/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2441,7 +2501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../7_Epreuves/info/E4/" class="md-nav__link">
+      <a href="../../../../7_Epreuves/info/E4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2462,7 +2522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../7_Epreuves/info/E5/" class="md-nav__link">
+      <a href="../../../../7_Epreuves/info/E5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2483,7 +2543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../7_Epreuves/info/E6/" class="md-nav__link">
+      <a href="../../../../7_Epreuves/info/E6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2561,7 +2621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../8_PostBTS/sommaire/" class="md-nav__link">
+      <a href="../../../../8_PostBTS/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2621,7 +2681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../8_PostBTS/possibilit%C3%A9s/7.1_LP_initial/" class="md-nav__link">
+      <a href="../../../../8_PostBTS/possibilit%C3%A9s/7.1_LP_initial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2642,7 +2702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../8_PostBTS/possibilit%C3%A9s/7.2_LP_alt/" class="md-nav__link">
+      <a href="../../../../8_PostBTS/possibilit%C3%A9s/7.2_LP_alt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2663,7 +2723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../8_PostBTS/possibilit%C3%A9s/7.3_fac/" class="md-nav__link">
+      <a href="../../../../8_PostBTS/possibilit%C3%A9s/7.3_fac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2684,7 +2744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../8_PostBTS/possibilit%C3%A9s/7.4_Ecoles/" class="md-nav__link">
+      <a href="../../../../8_PostBTS/possibilit%C3%A9s/7.4_Ecoles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2727,7 +2787,7 @@
                 
 
 
-    <a href="/sofaugeras/SIOB2/6_Cybers%C3%A9curit%C3%A9/7.4_UnpeuCyber/phrase_de_passe-v2-Corrige/phrase_de_passe-v2-Corrige.ipynb" title="Download" class="md-content__button md-icon">
+    <a href="/sofaugeras/SIOB2/6_Cybers%C3%A9curit%C3%A9/7.4_UnpeuCyber/data/rainbow/rainbow.ipynb" title="Download" class="md-content__button md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7Z"/></svg>
     </a>
 
@@ -3139,57 +3199,51 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </style>
 <!-- End of mermaid configuration --><div class="jupyter-wrapper">
 <div class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f05e3c71">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Auteur : Hélène Passelande</strong></p>
-<h2 id="objectifs">Objectifs :<a class="anchor-link" href="#objectifs">¶</a></h2><p>réutiliser les fonctions<br/>
-savoir lire et utiliser une documentation de fonction</p>
-<h2 id="le-scenario">Le scénario :<a class="anchor-link" href="#le-scenario">¶</a></h2><p>Un utilisateur souhaite construire un mot de passe fort pour sécuriser un document.</p>
-<h2 id="construire-un-mot-de-passe-assez-fort-et-facilement-memorisable">Construire un mot de passe assez fort et facilement mémorisable.<a class="anchor-link" href="#construire-un-mot-de-passe-assez-fort-et-facilement-memorisable">¶</a></h2><h3 id="description">Description<a class="anchor-link" href="#description">¶</a></h3><p>Pour construire un mot de passe assez fort et facilement mémorisable, une technique consiste à retenir les initiales des mots d'une phrase code.<br/>
-Par exemple : J'adore passer mes vacances à réaliser des devoirs maison.<br/>
-Donne : Japmvàrddm<br/>
-Pour augmenter la sécurité du mot de passe, on peut décider de mettre aléatoirement certaines lettres en majuscules.  Attention pour que le mot de passe reste facile à écrire au clavier, on n'aura pas de majuscules accentuées !<br/>
-Cela donne : JApMvARDdm<br/>
-Pour augmenter encore la sécurité, on décide de mettre un chiffre dans le mot de passe.<br/>
-Ca donne : JAp5MvARDdm</p>
-<h3 id="les-etapes-de-construction">Les étapes de construction<a class="anchor-link" href="#les-etapes-de-construction">¶</a></h3><p>Un utilisateur saisit un chiffre et une phrase de passe.</p>
-<ul>
-<li>On vérifie que le chiffre est bien un entier entre 0 et 9.</li>
-<li>On transforme les apostrophes et les signes de ponctuation en espace</li>
-<li>On vérifie qu'il y a plus de 8 mots séparés par des espaces</li>
-</ul>
-<p>Pour obtenir le mot de passe  :</p>
-<ul>
-<li>on récupère la première lettre de chaque mot</li>
-<li>on convertit les lettres accentuées en lettres non accentuées</li>
-<li>si la lettre est minuscule, on la convertit au hasard en minuscule ou majuscule</li>
-<li>on ajoute au hasard le chiffre quelque part dans la chaine de caractères.</li>
-</ul>
+<h1 id="generation-et-utilisation-dune-rainbow-table">Génération et utilisation d'une rainbow Table<a class="anchor-link" href="#generation-et-utilisation-dune-rainbow-table">¶</a></h1><p>Auteur : sophie Faugeras</p>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b8028c43">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="au-travail">Au travail !<a class="anchor-link" href="#au-travail">¶</a></h1><p>Compléter la fonction <code>convertir_ponctuation</code>qui convertit les apostrophes et les signes de ponctuation de la phrase en espaces.</p>
+<h2 id="etape-1-generation-dune-rainbow-table">Etape 1 : génération d'une rainbow Table<a class="anchor-link" href="#etape-1-generation-dune-rainbow-table">¶</a></h2><p>Le projet <a href="https://github.com/tarraschk/richelieu/">Richelieu</a>, créé par les développeurs Maxime Alay-Eddine et Paul Barbaste, établit une liste des mots de passe français les plus courants. Ceux-ci proviennent de fuites de données rendues publiques, filtrées sur les adresses e-mail en « .fr ».</p>
+<p>Par simplication de performance, nous utiliserons un fichier réduit contenant les 1000 mots de passe français les plus utilisés <a href="./data/french_passwords_top1000.txt">ici</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="les-etapes-de-construction">Les étapes de construction<a class="anchor-link" href="#les-etapes-de-construction">¶</a></h3><ul>
+<li>Ouverture et lecture du fichier txt</li>
+<li>Création d'un dictionnaire clé-valeur, dont la clé est le mot de passe en clair et la valeur l'empreinte du mot de passe.</li>
+<li>Pour chaque ligne, calcul de l'empreinte MD5 du mot de passe.</li>
+<li>Ecriture d'un fichier CSV pour sauvegarder le dictionnaire</li>
+</ul>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=563de538">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-1">
@@ -3202,77 +3256,86 @@ Ca donne : JAp5MvARDdm</p>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">convertir_ponctuation</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span> <span class="p">:</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    convertir les apostrophes et les signes de ponctuation de la phrase en espaces</span>
-<span class="sd">    PARAM</span>
-<span class="sd">    -----</span>
-<span class="sd">    phrase(str) : phrase saisie par l'utilisateur</span>
-<span class="sd">    </span>
-<span class="sd">    RETURN</span>
-<span class="sd">    ------</span>
-<span class="sd">    (str) : phrase saisie par l'utilisateur avec des espaces à la place des apostrophes et des signes de ponctuation</span>
-<span class="sd">    </span>
-<span class="sd">    EXAMPLES </span>
-<span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; convertir_ponctuation("J'adore passer mes vacances à réaliser des devoirs maison")</span>
-<span class="sd">    "J adore passer mes vacances à réaliser des devoirs maison"</span>
-<span class="sd">    </span>
-<span class="sd">    &gt;&gt;&gt; convertir_ponctuation("J''aime avec une faute de frappe")</span>
-<span class="sd">    "J  aime avec une faute de frappe"</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">hashlib</span>
 
-<span class="sd">    &gt;&gt;&gt; convertir_ponctuation("Voilà : écoute, ce que je te dis !")</span>
-<span class="sd">    "Voilà   écoute  ce que je te dis  "</span>
-<span class="sd">    """</span>
-    <span class="n">phrase_sans_ponctuation</span> <span class="o">=</span> <span class="s2">""</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">phrase</span><span class="p">))</span> <span class="p">:</span>
-        <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">"'"</span><span class="p">,</span><span class="s2">":"</span><span class="p">,</span><span class="s2">","</span><span class="p">,</span><span class="s2">";"</span><span class="p">,</span><span class="s2">"!"</span><span class="p">,</span><span class="s2">"."</span><span class="p">,</span><span class="s2">"?"</span><span class="p">]</span> <span class="p">:</span>
-            <span class="n">phrase_sans_ponctuation</span> <span class="o">=</span> <span class="n">phrase_sans_ponctuation</span> <span class="o">+</span> <span class="s2">" "</span>
-        <span class="k">else</span> <span class="p">:</span>
-            <span class="n">phrase_sans_ponctuation</span> <span class="o">=</span> <span class="n">phrase_sans_ponctuation</span> <span class="o">+</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">phrase_sans_ponctuation</span>
+<span class="c1"># Dictionnaire pour stocker les mots de passe générés et leurs hachages MD5</span>
+<span class="n">passwords</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1">#ouverture du fichier contenant les mots de passe</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"./data/french_passwords_top1000.txt"</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="c1">#pour chaque mot de passe, on créé un hachage MD5 et on stocke le mot de passe et son hachage dans le dictionnaire</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>   
+        <span class="n">password</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">password_hash</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="n">password</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+        <span class="n">passwords</span><span class="p">[</span><span class="n">password</span><span class="p">]</span> <span class="o">=</span> <span class="n">password_hash</span> 
+        
+<span class="c1">#Sauvegarde des hachages dans un fichier</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"./data/md5_passwords.csv"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">password</span><span class="p">,</span> <span class="nb">hash</span> <span class="ow">in</span> <span class="n">passwords</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">password</span> <span class="o">+</span> <span class="s1">';'</span> <span class="o">+</span><span class="nb">hash</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+        
+<span class="c1">#fermeture du fichier</span>
+<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-1">def convertir_ponctuation(phrase) :
-    """
-    convertir les apostrophes et les signes de ponctuation de la phrase en espaces
-    PARAM
-    -----
-    phrase(str) : phrase saisie par l'utilisateur
-    
-    RETURN
-    ------
-    (str) : phrase saisie par l'utilisateur avec des espaces à la place des apostrophes et des signes de ponctuation
-    
-    EXAMPLES 
-    --------
-    &gt;&gt;&gt; convertir_ponctuation("J'adore passer mes vacances à réaliser des devoirs maison")
-    "J adore passer mes vacances à réaliser des devoirs maison"
-    
-    &gt;&gt;&gt; convertir_ponctuation("J''aime avec une faute de frappe")
-    "J  aime avec une faute de frappe"
+<div class="clipboard-copy-txt" id="cell-1">import hashlib
 
-    &gt;&gt;&gt; convertir_ponctuation("Voilà : écoute, ce que je te dis !")
-    "Voilà   écoute  ce que je te dis  "
-    """
-    phrase_sans_ponctuation = ""
-    for i in range(len(phrase)) :
-        if phrase[i] in ["'",":",",",";","!",".","?"] :
-            phrase_sans_ponctuation = phrase_sans_ponctuation + " "
-        else :
-            phrase_sans_ponctuation = phrase_sans_ponctuation + phrase[i]
-    return phrase_sans_ponctuation</div>
+# Dictionnaire pour stocker les mots de passe générés et leurs hachages MD5
+passwords = {}
+
+#ouverture du fichier contenant les mots de passe
+with open("./data/french_passwords_top1000.txt", "r") as file:
+    #pour chaque mot de passe, on créé un hachage MD5 et on stocke le mot de passe et son hachage dans le dictionnaire
+    for line in file:   
+        password = line.strip()
+        password_hash = hashlib.md5(password.encode()).hexdigest()
+        passwords[password] = password_hash 
+        
+#Sauvegarde des hachages dans un fichier
+with open("./data/md5_passwords.csv", "w") as file:
+    for password, hash in passwords.items():
+        file.write(password + ';' +hash + "\n")
+        
+#fermeture du fichier
+file.close()</div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="etape-2-utilisation-de-la-rainbow-table">Etape 2 : Utilisation de la rainbow Table<a class="anchor-link" href="#etape-2-utilisation-de-la-rainbow-table">¶</a></h2><p>Scénario : un utilisateur saisi un mot de passe dans un formulaire, qui est immédiatement chiffrer à l'aide l'algorithme MD5. Un hacker réussit grâce à une lecture de trame réseau à capter cette empreinte.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="les-etapes-de-construction">Les étapes de construction<a class="anchor-link" href="#les-etapes-de-construction">¶</a></h3><ul>
+<li>Ouverture et lecture du fichier csv</li>
+<li>Création d'un dictionnaire clé-valeur, dont la clé est le mot de passe en clair et la valeur l'empreinte du mot de passe.</li>
+<li>Pour chaque ligne, comparaison de l'empreinte captée et de la valeur dans le dictionnaire.</li>
+<li>Si on trouve l'empreinte, retournez le mot de passe en clair, sinon retournez "Non trouvé"</li>
+</ul>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f3ce0742">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-2">
@@ -3285,1548 +3348,49 @@ Ca donne : JAp5MvARDdm</p>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">convertir_ponctuation</span><span class="p">(</span><span class="s2">"J'adore passer mes vacances à réaliser des devoirs maison."</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-2">convertir_ponctuation("J'adore passer mes vacances à réaliser des devoirs maison.")</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'J adore passer mes vacances à réaliser des devoirs maison '</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=266b89b8">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-3">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">convertir_ponctuation</span><span class="p">(</span><span class="s2">"J''aime avec une faute de frappe"</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-3">convertir_ponctuation("J''aime avec une faute de frappe")</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'J  aime avec une faute de frappe'</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b9ef734a">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-4">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">convertir_ponctuation</span><span class="p">(</span><span class="s2">"Voilà : écoute, ce que je te dis !"</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-4">convertir_ponctuation("Voilà : écoute, ce que je te dis !")</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'Voilà   écoute  ce que je te dis  '</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=66e74a82">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Il faut maintenant vérifier que la phrase contient plus de 8 mots.<br/>
-Pour compter le nombre de mots, on va compter le nombre de fois où on trouve un caractère qui est un espace suivi d'un caractère qui n'est pas un espace.<br/>
-Dans ce cas, pour détecter le premier mot, il faut ajouter un espace au début de la phrase s'il n'y en a pas.</p>
-<p>En suivant cette règle, compléter la fonction <code>verifier_plus_de_huit_mots</code>.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a63362e4">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [41]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-5">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">verifier_plus_de_huit_mots</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span> <span class="p">:</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    vérifier que la phrase contient plus de 8 mots</span>
-<span class="sd">    PARAM</span>
-<span class="sd">    -----</span>
-<span class="sd">    phrase(str) : phrase saisie par l'utilisateur où il n'y a plus de ponctuation et </span>
-<span class="sd">                  chaque mot est séparé par des espaces</span>
-<span class="sd">    </span>
-<span class="sd">    RETURN</span>
-<span class="sd">    ------</span>
-<span class="sd">    (bool) : vrai si la phrase contient plus de 8 mots</span>
-<span class="sd">    </span>
-<span class="sd">    EXAMPLES </span>
-<span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; verifier_plus_de_huit_mots("C est trop court")</span>
-<span class="sd">    False</span>
-<span class="sd">    &gt;&gt;&gt; verifier_plus_de_huit_mots("C est trop         court")</span>
-<span class="sd">    False</span>
-<span class="sd">    &gt;&gt;&gt; verifier_plus_de_huit_mots("J adore passer mes vacances à réaliser des devoirs maison")</span>
-<span class="sd">    True</span>
-<span class="sd">    """</span>
-    <span class="c1"># on ajoute un espace pour premier caractère s'il n'y en pas pas</span>
-    <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">' '</span><span class="p">:</span>
-        <span class="n">phrase</span> <span class="o">=</span>  <span class="s1">' '</span> <span class="o">+</span> <span class="n">phrase</span>
-    <span class="c1"># pour compter le nombre de mots, on cherche le début de chaque mot</span>
-    <span class="c1"># en testant chaque caractère de la phrase,</span>
-    <span class="c1"># on détecte le début d'un mot parce qu'il contient un espace suivi d'une lettre </span>
-    <span class="n">nb_mots</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">' '</span> <span class="ow">and</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">' '</span> <span class="p">:</span>
-            <span class="n">nb_mots</span> <span class="o">=</span> <span class="n">nb_mots</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="c1">#debug</span>
-    <span class="c1">#print("nb mots ", nb_mots)</span>
-    <span class="k">if</span> <span class="n">nb_mots</span> <span class="o">&lt;</span> <span class="mi">8</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">else</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="kc">True</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-5">def verifier_plus_de_huit_mots(phrase) :
-    """
-    vérifier que la phrase contient plus de 8 mots
-    PARAM
-    -----
-    phrase(str) : phrase saisie par l'utilisateur où il n'y a plus de ponctuation et 
-                  chaque mot est séparé par des espaces
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">find_password</span><span class="p">(</span><span class="nb">hash</span><span class="p">):</span>
+    <span class="n">passwords</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="c1">#ouverture du fichier contenant les hachages MD5</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"./data/md5_passwords.csv"</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="c1">#on lit le fichier ligne par ligne pour le mettre dans un dictionnaire</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+            <span class="n">password</span><span class="p">,</span> <span class="n">empreinte</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">';'</span><span class="p">)</span>
+            <span class="c1">#Insertion dans le dictionnaire, la clé est le mot de passe en clair, la valeur l'empreinte MD5</span>
+            <span class="n">passwords</span><span class="p">[</span><span class="n">password</span><span class="p">]</span> <span class="o">=</span> <span class="n">empreinte</span>
     
-    RETURN
-    ------
-    (bool) : vrai si la phrase contient plus de 8 mots
-    
-    EXAMPLES 
-    --------
-    &gt;&gt;&gt; verifier_plus_de_huit_mots("C est trop court")
-    False
-    &gt;&gt;&gt; verifier_plus_de_huit_mots("C est trop         court")
-    False
-    &gt;&gt;&gt; verifier_plus_de_huit_mots("J adore passer mes vacances à réaliser des devoirs maison")
-    True
-    """
-    # on ajoute un espace pour premier caractère s'il n'y en pas pas
-    if phrase[0] != ' ':
-        phrase =  ' ' + phrase
-    # pour compter le nombre de mots, on cherche le début de chaque mot
-    # en testant chaque caractère de la phrase,
-    # on détecte le début d'un mot parce qu'il contient un espace suivi d'une lettre 
-    nb_mots = 0
-    for i in range(len(phrase)-1):
-        if phrase[i] == ' ' and phrase[i+1] != ' ' :
-            nb_mots = nb_mots + 1
-    #debug
-    #print("nb mots ", nb_mots)
-    if nb_mots &lt; 8 :
-        return False
-    else :
-        return True</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=01656aac">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [42]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-6">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">verifier_plus_de_huit_mots</span><span class="p">(</span><span class="s2">"C est trop court"</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-6">verifier_plus_de_huit_mots("C est trop court")</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[42]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>False</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=108da5e8">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [43]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-7">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">verifier_plus_de_huit_mots</span><span class="p">(</span><span class="s2">"C est trop         court"</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-7">verifier_plus_de_huit_mots("C est trop         court")</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[43]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>False</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9f3f764c">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-8">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">verifier_plus_de_huit_mots</span><span class="p">(</span><span class="s2">"J adore passer mes vacances à réaliser des devoirs maison"</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-8">verifier_plus_de_huit_mots("J adore passer mes vacances à réaliser des devoirs maison")</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[44]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>True</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8466af8e">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>On vérifie que le chiffre est bien un entier entre 0 et 9.<br/>
-Compléter la fonction <code>verifier_chiffre</code>.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=2075456d">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-9">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">verifier_chiffre</span><span class="p">(</span><span class="n">chiffre</span><span class="p">)</span> <span class="p">:</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    vérifier que le chiffre est bien un entier entre 0 et 9.</span>
-<span class="sd">    PARAM</span>
-<span class="sd">    -----</span>
-<span class="sd">    chiffre(int) : chiffre saisi par l'utilisateur</span>
-<span class="sd">    </span>
-<span class="sd">    RETURN</span>
-<span class="sd">    ------</span>
-<span class="sd">    (bool) : vrai si le chiffre est bien un entier entre 0 et 9.</span>
-<span class="sd">    </span>
-<span class="sd">    EXAMPLES </span>
-<span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; verifier_chiffre(5.3)</span>
-<span class="sd">    AssertionError: Il faut donner un nombre entier !</span>
-<span class="sd">    &gt;&gt;&gt; verifier_chiffre(7)</span>
-<span class="sd">    True</span>
-<span class="sd">    &gt;&gt;&gt; verifier_chiffre(10)</span>
-<span class="sd">    AssertionError: Il faut nombre entier entre 0 et 9 !</span>
-<span class="sd">    """</span>
-    <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">chiffre</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span> <span class="p">,</span> <span class="s2">"Il faut donner un nombre entier !"</span>
-    <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">chiffre</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">"Il faut nombre entier entre 0 et 9 !"</span>
-    <span class="k">return</span> <span class="kc">True</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-9">def verifier_chiffre(chiffre) :
-    """
-    vérifier que le chiffre est bien un entier entre 0 et 9.
-    PARAM
-    -----
-    chiffre(int) : chiffre saisi par l'utilisateur
-    
-    RETURN
-    ------
-    (bool) : vrai si le chiffre est bien un entier entre 0 et 9.
-    
-    EXAMPLES 
-    --------
-    &gt;&gt;&gt; verifier_chiffre(5.3)
-    AssertionError: Il faut donner un nombre entier !
-    &gt;&gt;&gt; verifier_chiffre(7)
-    True
-    &gt;&gt;&gt; verifier_chiffre(10)
-    AssertionError: Il faut nombre entier entre 0 et 9 !
-    """
-    assert type(chiffre) == int , "Il faut donner un nombre entier !"
-    assert 0 &lt;= chiffre &lt;= 9, "Il faut nombre entier entre 0 et 9 !"
-    return True</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=7ba05c29">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [55]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-10">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">verifier_chiffre</span><span class="p">(</span><span class="mf">5.3</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-10">verifier_chiffre(5.3)</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">AssertionError</span>                            Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-55-699a6690dbe7&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>verifier_chiffre<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-cyan-intense-fg ansi-bold">5.3</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+    <span class="c1">#On vérifie si le hachage est dans le dictionnaire</span>
+    <span class="k">if</span> <span class="nb">hash</span> <span class="ow">in</span> <span class="n">passwords</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+        <span class="c1">#si le hachage est dans le dictionnaire, on affiche le mot de passe correspondant</span>
+        <span class="k">for</span> <span class="n">password</span><span class="p">,</span> <span class="n">password_hash</span> <span class="ow">in</span> <span class="n">passwords</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">password_hash</span> <span class="o">==</span> <span class="nb">hash</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">(</span><span class="sa">f</span><span class="s2">"Le mot de passe associé au hachage </span><span class="si">{</span><span class="nb">hash</span><span class="si">}</span><span class="s2"> est </span><span class="si">{</span><span class="n">password</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+            <span class="c1">#sinon on affiche que le mot de passe n'a pas été trouvé</span>
+    <span class="k">return</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Le mot de passe associé au hachage </span><span class="si">{</span><span class="nb">hash</span><span class="si">}</span><span class="s2"> n'a pas été trouvé"</span><span class="p">)</span>
 
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-53-1eaaaf47921e&gt;</span> in <span class="ansi-cyan-fg">verifier_chiffre</span><span class="ansi-blue-intense-fg ansi-bold">(chiffre)</span>
-<span class="ansi-green-fg">     19</span>     AssertionError<span class="ansi-yellow-intense-fg ansi-bold">:</span> Il faut nombre entier entre <span class="ansi-cyan-intense-fg ansi-bold">0</span> et <span class="ansi-cyan-intense-fg ansi-bold">9</span><span class="ansi-red-fg"> </span><span class="ansi-red-fg">!</span>
-<span class="ansi-green-fg">     20</span>     """
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 21</span><span class="ansi-yellow-intense-fg ansi-bold">     </span><span class="ansi-green-intense-fg ansi-bold">assert</span> type<span class="ansi-yellow-intense-fg ansi-bold">(</span>chiffre<span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-yellow-intense-fg ansi-bold">==</span> int <span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">"Il faut donner un nombre entier !"</span>
-<span class="ansi-green-fg">     22</span>     <span class="ansi-green-intense-fg ansi-bold">assert</span> <span class="ansi-cyan-intense-fg ansi-bold">0</span> <span class="ansi-yellow-intense-fg ansi-bold">&lt;=</span> chiffre <span class="ansi-yellow-intense-fg ansi-bold">&lt;=</span> <span class="ansi-cyan-intense-fg ansi-bold">9</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">"Il faut nombre entier entre 0 et 9 !"</span>
-<span class="ansi-green-fg">     23</span>     <span class="ansi-green-intense-fg ansi-bold">return</span> <span class="ansi-green-intense-fg ansi-bold">True</span>
+<span class="nb">hash</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="s2">"secret"</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span> <span class="c1">#5ebe2294ecd0e0f08eab7690d2a6ee69</span>
+<span class="n">find_password</span><span class="p">(</span><span class="nb">hash</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-2">def find_password(hash):
+    passwords = {}
+    #ouverture du fichier contenant les hachages MD5
+    with open("./data/md5_passwords.csv", "r") as file:
+        #on lit le fichier ligne par ligne pour le mettre dans un dictionnaire
+        for line in file:
+            password, empreinte = line.strip().split(';')
+            #Insertion dans le dictionnaire, la clé est le mot de passe en clair, la valeur l'empreinte MD5
+            passwords[password] = empreinte
+    
+    #On vérifie si le hachage est dans le dictionnaire
+    if hash in passwords.values():
+        #si le hachage est dans le dictionnaire, on affiche le mot de passe correspondant
+        for password, password_hash in passwords.items():
+            if password_hash == hash:
+                return (f"Le mot de passe associé au hachage {hash} est {password}")
+            #sinon on affiche que le mot de passe n'a pas été trouvé
+    return(f"Le mot de passe associé au hachage {hash} n'a pas été trouvé")
 
-<span class="ansi-red-intense-fg ansi-bold">AssertionError</span>: Il faut donner un nombre entier !</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a5f0d00f">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-11">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">verifier_chiffre</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-11">verifier_chiffre(7)</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[51]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>True</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=bd28407b">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [52]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-12">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">verifier_chiffre</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-12">verifier_chiffre(10)</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">AssertionError</span>                            Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-52-a6b341408307&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>verifier_chiffre<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-cyan-intense-fg ansi-bold">10</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-49-affa54426425&gt;</span> in <span class="ansi-cyan-fg">verifier_chiffre</span><span class="ansi-blue-intense-fg ansi-bold">(chiffre)</span>
-<span class="ansi-green-fg">     20</span>     """
-<span class="ansi-green-fg">     21</span>     <span class="ansi-green-intense-fg ansi-bold">assert</span> type<span class="ansi-yellow-intense-fg ansi-bold">(</span>chiffre<span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-yellow-intense-fg ansi-bold">==</span> int <span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">"Il faut donner un nombre entier !"</span>
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 22</span><span class="ansi-yellow-intense-fg ansi-bold">     </span><span class="ansi-green-intense-fg ansi-bold">assert</span> <span class="ansi-cyan-intense-fg ansi-bold">0</span> <span class="ansi-yellow-intense-fg ansi-bold">&lt;=</span> chiffre <span class="ansi-yellow-intense-fg ansi-bold">&lt;=</span> <span class="ansi-cyan-intense-fg ansi-bold">9</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">"Il faut nombre entier entre 0 et 9 !"</span>
-<span class="ansi-green-fg">     23</span>     <span class="ansi-green-intense-fg ansi-bold">return</span> <span class="ansi-green-intense-fg ansi-bold">True</span>
-
-<span class="ansi-red-intense-fg ansi-bold">AssertionError</span>: Il faut nombre entier entre 0 et 9 !</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b4a921da">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Il faut maintenant récupérer les initiales de chaque mot pour créer la première version du mot de passe.<br/>
-On détecte la première lettre de chaque mot de la même façon que pour la fonction <code>verifier_plus_de_huit_mots</code>.<br/>
-Puis, on crée un algorithme de cumul qui concatène les premières lettres de chaque mot.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f95bf97b">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [45]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-13">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">obtenir_premieres_lettres</span><span class="p">(</span><span class="n">phrase</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    créer un mot constitué des premières lettres de chaque mot de la phrase</span>
-<span class="sd">    PARAM</span>
-<span class="sd">    -----</span>
-<span class="sd">    phrase(str) : phrase saisie par l'utilisateur où chaque mot est séparé par des espaces</span>
-<span class="sd">    </span>
-<span class="sd">    RETURN</span>
-<span class="sd">    ------</span>
-<span class="sd">    (str) : mot constitué des premières lettres de chaque mot de la phrase</span>
-<span class="sd">    </span>
-<span class="sd">    EXAMPLES </span>
-<span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; obtenir_premieres_lettres("J adore passer mes vacances à réaliser des devoirs maison")</span>
-<span class="sd">    Japmvàrddm</span>
-<span class="sd">    &gt;&gt;&gt; obtenir_premieres_lettres("Le petit chien s appelle            Idéfix")</span>
-<span class="sd">    LpcsaI</span>
-<span class="sd">    """</span>
-    <span class="c1"># on ajoute un espace pour premier caractère s'il n'y en pas pas</span>
-    <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">' '</span><span class="p">:</span>
-        <span class="n">phrase</span> <span class="o">=</span>  <span class="s1">' '</span> <span class="o">+</span> <span class="n">phrase</span>
-    
-    <span class="n">mot_de_passe</span> <span class="o">=</span> <span class="s2">""</span>
-    
-    <span class="c1"># en testant chaque caractère de la phrase,</span>
-    <span class="c1"># on détecte le début d'un mot parce qu'il contient un espace suivi d'une lettre </span>
-    <span class="c1"># on concatène les premières lettres pour créer le mot de passe</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">' '</span> <span class="ow">and</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">' '</span> <span class="p">:</span>
-            <span class="n">mot_de_passe</span> <span class="o">=</span> <span class="n">mot_de_passe</span> <span class="o">+</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
-            
-    <span class="k">return</span> <span class="n">mot_de_passe</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-13">def obtenir_premieres_lettres(phrase):
-    """
-    créer un mot constitué des premières lettres de chaque mot de la phrase
-    PARAM
-    -----
-    phrase(str) : phrase saisie par l'utilisateur où chaque mot est séparé par des espaces
-    
-    RETURN
-    ------
-    (str) : mot constitué des premières lettres de chaque mot de la phrase
-    
-    EXAMPLES 
-    --------
-    &gt;&gt;&gt; obtenir_premieres_lettres("J adore passer mes vacances à réaliser des devoirs maison")
-    Japmvàrddm
-    &gt;&gt;&gt; obtenir_premieres_lettres("Le petit chien s appelle            Idéfix")
-    LpcsaI
-    """
-    # on ajoute un espace pour premier caractère s'il n'y en pas pas
-    if phrase[0] != ' ':
-        phrase =  ' ' + phrase
-    
-    mot_de_passe = ""
-    
-    # en testant chaque caractère de la phrase,
-    # on détecte le début d'un mot parce qu'il contient un espace suivi d'une lettre 
-    # on concatène les premières lettres pour créer le mot de passe
-    for i in range(len(phrase)-1):
-        if phrase[i] == ' ' and phrase[i+1] != ' ' :
-            mot_de_passe = mot_de_passe + phrase[i+1]
-            
-    return mot_de_passe  </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b38a798a">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-14">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">obtenir_premieres_lettres</span><span class="p">(</span><span class="s2">"J adore passer mes vacances à réaliser des devoirs maison"</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-14">obtenir_premieres_lettres("J adore passer mes vacances à réaliser des devoirs maison")</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[46]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'Japmvàrddm'</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=5bf0a36c">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [47]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-15">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">obtenir_premieres_lettres</span><span class="p">(</span><span class="s2">"Le petit chien s appelle            Idéfix"</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-15">obtenir_premieres_lettres("Le petit chien s appelle            Idéfix")</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'LpcsaI'</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1a06d664">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>On suppose que l'utilisateur n'a pas utilisé de majuscule accentuée.<br/>
-Pour convertir les minuscules accentuées en en leur équivalent non accentué :</p>
-<ol>
-<li>Chercher toutes les minuscules accentuées possibles en français pour compléter la fonction <code>convertir_sans_accent</code>.</li>
-<li>Dans cette fonction, on itère sur chaque caractère de <code>mot</code>.<ol>
-<li>Si le caractère est une minuscule accentuée, on attribue à la variable <code>nv_caractère</code> l'équivalent non accentué du caractère.</li>
-<li>Si le caractère est une minuscule accentuée, on attribue à la variable <code>nv_caractère</code> ce caractère.</li>
-</ol>
-</li>
-</ol>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=09655754">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [62]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-16">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">convertir_sans_accent</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    convertir les lettres accentuées du mot en leur équivalent non accentué"</span>
-<span class="sd">    PARAM</span>
-<span class="sd">    -----</span>
-<span class="sd">    mot(str) : une chaine de caractères</span>
-<span class="sd">    </span>
-<span class="sd">    RETURN</span>
-<span class="sd">    ------</span>
-<span class="sd">    (str) : la même chaine de caractères sans les accents</span>
-<span class="sd">    </span>
-<span class="sd">    EXAMPLES </span>
-<span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; convertir_sans_accent("Japmvàrddm")</span>
-<span class="sd">    Japmvarddm</span>
-<span class="sd">    &gt;&gt;&gt; convertir_sans_accent("àêïôù")</span>
-<span class="sd">    aeiou</span>
-<span class="sd">    """</span>
-    <span class="n">mot_sans_accent</span> <span class="o">=</span> <span class="s2">""</span>
-    <span class="k">for</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="n">mot</span> <span class="p">:</span>
-        <span class="k">if</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'à'</span><span class="p">,</span><span class="s1">'â'</span><span class="p">]:</span>
-            <span class="n">nv_caractere</span> <span class="o">=</span> <span class="s1">'a'</span>
-        <span class="k">elif</span> <span class="n">caractere</span> <span class="o">==</span> <span class="s1">'ç'</span><span class="p">:</span>
-            <span class="n">nv_caractere</span> <span class="o">=</span> <span class="s1">'c'</span>
-        <span class="k">elif</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'é'</span><span class="p">,</span><span class="s1">'è'</span><span class="p">,</span><span class="s1">'ê'</span><span class="p">,</span><span class="s1">'ë'</span><span class="p">]:</span>
-            <span class="n">nv_caractere</span> <span class="o">=</span> <span class="s1">'e'</span>
-        <span class="k">elif</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'î'</span><span class="p">,</span><span class="s1">'ï'</span><span class="p">]:</span>
-            <span class="n">nv_caractere</span> <span class="o">=</span> <span class="s1">'i'</span>
-        <span class="k">elif</span> <span class="n">caractere</span> <span class="o">==</span> <span class="s1">'ô'</span><span class="p">:</span>
-            <span class="n">nv_caractere</span> <span class="o">=</span> <span class="s1">'o'</span>
-        <span class="k">elif</span> <span class="n">caractere</span> <span class="ow">in</span><span class="p">[</span><span class="s1">'ù'</span><span class="p">,</span><span class="s1">'û'</span><span class="p">,</span><span class="s1">'ü'</span><span class="p">]:</span>
-            <span class="n">nv_caractere</span> <span class="o">=</span> <span class="s1">'u'</span>
-        <span class="k">else</span> <span class="p">:</span>
-            <span class="n">nv_caractere</span> <span class="o">=</span> <span class="n">caractere</span>
-        <span class="n">mot_sans_accent</span> <span class="o">=</span> <span class="n">mot_sans_accent</span> <span class="o">+</span> <span class="n">nv_caractere</span>   
-    <span class="k">return</span> <span class="n">mot_sans_accent</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-16">def convertir_sans_accent(mot):
-    """
-    convertir les lettres accentuées du mot en leur équivalent non accentué"
-    PARAM
-    -----
-    mot(str) : une chaine de caractères
-    
-    RETURN
-    ------
-    (str) : la même chaine de caractères sans les accents
-    
-    EXAMPLES 
-    --------
-    &gt;&gt;&gt; convertir_sans_accent("Japmvàrddm")
-    Japmvarddm
-    &gt;&gt;&gt; convertir_sans_accent("àêïôù")
-    aeiou
-    """
-    mot_sans_accent = ""
-    for caractere in mot :
-        if caractere in ['à','â']:
-            nv_caractere = 'a'
-        elif caractere == 'ç':
-            nv_caractere = 'c'
-        elif caractere in ['é','è','ê','ë']:
-            nv_caractere = 'e'
-        elif caractere in ['î','ï']:
-            nv_caractere = 'i'
-        elif caractere == 'ô':
-            nv_caractere = 'o'
-        elif caractere in['ù','û','ü']:
-            nv_caractere = 'u'
-        else :
-            nv_caractere = caractere
-        mot_sans_accent = mot_sans_accent + nv_caractere   
-    return mot_sans_accent</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=915a499e">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [63]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-17">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">convertir_sans_accent</span><span class="p">(</span><span class="s2">"Japmvàrddm"</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-17">convertir_sans_accent("Japmvàrddm")</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[63]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'Japmvarddm'</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a9206b1d">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [64]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-18">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">convertir_sans_accent</span><span class="p">(</span><span class="s2">"àêïôù"</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-18">convertir_sans_accent("àêïôù")</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[64]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'aeiou'</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5198ce98">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>En regardant le code ASCII, on peut voir que le code décimal de chaque lettre majuscule et minuscule a un écart de 32.<br/>
-Par exemple :<br/>
-A(65)  et a(97) : 97 - 65 = 32
-D(68) et d(100) : 100 - 68 = 32
-P(80) et p(112) : 112 - 80 = 32</p>
-<p>On peut donc convertir une minuscule en sa majuscule en otant 32 à son code décimal en ASCII.</p>
-<p>Utiliser cette particularité du code ASCII pour compléter la fonction <code>convertir_majuscule_minuscule_aleatoire</code>.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=41e786b1">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [89]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-19">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
-
-<span class="k">def</span> <span class="nf">convertir_majuscule_minuscule_aleatoire</span><span class="p">(</span><span class="n">lettre</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    convertir aléatoirement une lettre minuscule en majuscule ou minuscule</span>
-<span class="sd">    PARAM</span>
-<span class="sd">    -----</span>
-<span class="sd">    lettre(str) : une lettre minuscule non accentuée de l'alphabet</span>
-<span class="sd">    </span>
-<span class="sd">    RETURN</span>
-<span class="sd">    ------</span>
-<span class="sd">    (str) : la même lettre en majuscule ou en minuscule</span>
-<span class="sd">    </span>
-<span class="sd">    EXAMPLES </span>
-<span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; convertir_majuscule_minuscule_aleatoire("a")</span>
-<span class="sd">    a</span>
-<span class="sd">    </span>
-<span class="sd">    ou aléatoirement</span>
-<span class="sd">    </span>
-<span class="sd">    &gt;&gt;&gt; convertir_majuscule_minuscule_aleatoire("a")</span>
-<span class="sd">    A</span>
-<span class="sd">    """</span>
-    <span class="c1"># on choisit au hasard 0 ou 1</span>
-    <span class="n">alea</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-    <span class="c1"># si le hasard a désigné 1 alors on convertit la lettre en majuscule</span>
-    <span class="k">if</span> <span class="n">alea</span> <span class="p">:</span>
-        <span class="n">lettre</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span><span class="o">-</span><span class="mi">32</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">lettre</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-19">from random import randint
-
-def convertir_majuscule_minuscule_aleatoire(lettre):
-    """
-    convertir aléatoirement une lettre minuscule en majuscule ou minuscule
-    PARAM
-    -----
-    lettre(str) : une lettre minuscule non accentuée de l'alphabet
-    
-    RETURN
-    ------
-    (str) : la même lettre en majuscule ou en minuscule
-    
-    EXAMPLES 
-    --------
-    &gt;&gt;&gt; convertir_majuscule_minuscule_aleatoire("a")
-    a
-    
-    ou aléatoirement
-    
-    &gt;&gt;&gt; convertir_majuscule_minuscule_aleatoire("a")
-    A
-    """
-    # on choisit au hasard 0 ou 1
-    alea = randint(0,1)
-    # si le hasard a désigné 1 alors on convertit la lettre en majuscule
-    if alea :
-        lettre = chr(ord(lettre)-32)
-    return lettre</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=cab1f978">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [93]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-20">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">convertir_majuscule_minuscule_aleatoire</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-20">convertir_majuscule_minuscule_aleatoire("a")</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[93]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'a'</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ee77e252">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [88]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-21">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">convertir_majuscule_minuscule_aleatoire</span><span class="p">(</span><span class="s2">"B"</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-21">convertir_majuscule_minuscule_aleatoire("B")</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[88]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'B'</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=217b58a3">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>En utilisant le code ASCII, comment peut-on savoir si une lettre non accentuée est une majuscule ou une minuscule ?</p>
-<ul>
-<li>Votre réponse : ...</li>
-</ul>
-<p>Compléter la fonction <code>modifier_mot_majuscule_minuscule(mot)</code> qui :</p>
-<ul>
-<li>itère sur chaque lettre du mot</li>
-<li>appelle, si la lettre est une minuscule, la fonction <code>convertir_majuscule_minuscule_aleatoire</code></li>
-<li>renvoie un nouveau mot de passe avec des minuscules parfois modifiées en majuscules.</li>
-</ul>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=67d47fe3">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [124]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-22">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">modifier_mot_majuscule_minuscule</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    convertir aléatoirement chaque lettre minuscule d'un mot en majuscule ou minuscule, </span>
-<span class="sd">    ne pas la modifier si elle est en majuscule</span>
-<span class="sd">    PARAM</span>
-<span class="sd">    -----</span>
-<span class="sd">    mot(str) : une chaine de caractères de lettres non accentuées</span>
-<span class="sd">    </span>
-<span class="sd">    RETURN</span>
-<span class="sd">    ------</span>
-<span class="sd">    (str) : le même mot avec des majuscules et des minuscules aléatoires</span>
-<span class="sd">    </span>
-<span class="sd">    EXAMPLES </span>
-<span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; modifier_mot_majuscule_minuscule("Japmvarddm")</span>
-<span class="sd">    JApMvARDdm</span>
-<span class="sd">    </span>
-<span class="sd">    ou aleatoirement </span>
-<span class="sd">    </span>
-<span class="sd">    &gt;&gt;&gt; modifier_mot_majuscule_minuscule("Japmvarddm")</span>
-<span class="sd">    JaPMVarDDm</span>
-<span class="sd">    </span>
-<span class="sd">    &gt;&gt;&gt; modifier_mot_majuscule_minuscule("ABCDefgh")</span>
-<span class="sd">    ABCDeFgH</span>
-<span class="sd">    """</span>
-    <span class="n">nv_mot</span> <span class="o">=</span> <span class="s2">""</span>
-    <span class="c1"># on itère sur chaque lettre du mot </span>
-    <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">mot</span> <span class="p">:</span>
-        <span class="c1"># si la lettre est une minuscule</span>
-        <span class="c1"># on convertit aléatoirement cette lettre en majuscule ou minuscule</span>
-        <span class="c1"># on concatène le nouveau mot et cette nouvelle lettre </span>
-        <span class="k">if</span> <span class="mi">97</span> <span class="o">&lt;=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">122</span> <span class="p">:</span> <span class="c1">#97 &lt;= ord(lettre) suffirait</span>
-            <span class="n">nv_lettre</span> <span class="o">=</span> <span class="n">convertir_majuscule_minuscule_aleatoire</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span>
-            <span class="n">nv_mot</span> <span class="o">=</span> <span class="n">nv_mot</span> <span class="o">+</span> <span class="n">nv_lettre</span>
-        <span class="c1"># sinon on concatène le nouveau mot et cette lettre</span>
-        <span class="k">else</span> <span class="p">:</span>
-            <span class="n">nv_mot</span> <span class="o">=</span> <span class="n">nv_mot</span> <span class="o">+</span> <span class="n">lettre</span>
-    <span class="k">return</span> <span class="n">nv_mot</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-22">def modifier_mot_majuscule_minuscule(mot):
-    """
-    convertir aléatoirement chaque lettre minuscule d'un mot en majuscule ou minuscule, 
-    ne pas la modifier si elle est en majuscule
-    PARAM
-    -----
-    mot(str) : une chaine de caractères de lettres non accentuées
-    
-    RETURN
-    ------
-    (str) : le même mot avec des majuscules et des minuscules aléatoires
-    
-    EXAMPLES 
-    --------
-    &gt;&gt;&gt; modifier_mot_majuscule_minuscule("Japmvarddm")
-    JApMvARDdm
-    
-    ou aleatoirement 
-    
-    &gt;&gt;&gt; modifier_mot_majuscule_minuscule("Japmvarddm")
-    JaPMVarDDm
-    
-    &gt;&gt;&gt; modifier_mot_majuscule_minuscule("ABCDefgh")
-    ABCDeFgH
-    """
-    nv_mot = ""
-    # on itère sur chaque lettre du mot 
-    for lettre in mot :
-        # si la lettre est une minuscule
-        # on convertit aléatoirement cette lettre en majuscule ou minuscule
-        # on concatène le nouveau mot et cette nouvelle lettre 
-        if 97 &lt;= ord(lettre) &lt;= 122 : #97 &lt;= ord(lettre) suffirait
-            nv_lettre = convertir_majuscule_minuscule_aleatoire(lettre)
-            nv_mot = nv_mot + nv_lettre
-        # sinon on concatène le nouveau mot et cette lettre
-        else :
-            nv_mot = nv_mot + lettre
-    return nv_mot</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=52901f3f">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [130]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-23">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">modifier_mot_majuscule_minuscule</span><span class="p">(</span><span class="s2">"Japmvarddm"</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-23">modifier_mot_majuscule_minuscule("Japmvarddm")</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[130]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'JaPmVARddM'</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=2acf24c8">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [145]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-24">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">modifier_mot_majuscule_minuscule</span><span class="p">(</span><span class="s2">"ABCDefgh"</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-24">modifier_mot_majuscule_minuscule("ABCDefgh")</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[145]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'ABCDEfGH'</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=44e014d4">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Compléter la fonction <code>ajouter_chiffre</code> qui améliore la sécurité du mot de passe en ajoutant le chiffre quelque part dans le mot.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8c5062e5">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [152]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-25">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">ajouter_chiffre</span><span class="p">(</span><span class="n">mot</span><span class="p">,</span><span class="n">chiffre</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    ajouter un chiffre quelque part dans le mot</span>
-<span class="sd">    PARAM</span>
-<span class="sd">    -----</span>
-<span class="sd">    mot(str) : une chaine de caractères</span>
-<span class="sd">    chiffre(int) : un chiffre</span>
-<span class="sd">    </span>
-<span class="sd">    RETURN</span>
-<span class="sd">    ------</span>
-<span class="sd">    (str) : le même mot mais avec un chiffre inséré quelquepart</span>
-<span class="sd">    </span>
-<span class="sd">    EXAMPLES </span>
-<span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; ajouter_chiffre("JApMvARDdm",5)</span>
-<span class="sd">    'JApM5vARDdm'</span>
-<span class="sd">    </span>
-<span class="sd">    ou aléatoiremment </span>
-<span class="sd">    </span>
-<span class="sd">    &gt;&gt;&gt; ajouter_chiffre("JApMvARDdm",5)</span>
-<span class="sd">    'JApMvARDdm5'</span>
-<span class="sd">    </span>
-<span class="sd">    &gt;&gt;&gt; ajouter_chiffre("aBcdEF",9)</span>
-<span class="sd">    'a9BcdEF'</span>
-<span class="sd">    """</span>
-    <span class="nb">max</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
-    <span class="n">alea</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">max</span><span class="p">)</span>
-    <span class="n">nv_mot</span> <span class="o">=</span> <span class="n">mot</span> <span class="p">[:</span><span class="n">alea</span><span class="p">]</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">chiffre</span><span class="p">)</span><span class="o">+</span><span class="n">mot</span><span class="p">[</span><span class="n">alea</span><span class="p">:]</span>
-    <span class="k">return</span> <span class="n">nv_mot</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-25">def ajouter_chiffre(mot,chiffre):
-    """
-    ajouter un chiffre quelque part dans le mot
-    PARAM
-    -----
-    mot(str) : une chaine de caractères
-    chiffre(int) : un chiffre
-    
-    RETURN
-    ------
-    (str) : le même mot mais avec un chiffre inséré quelquepart
-    
-    EXAMPLES 
-    --------
-    &gt;&gt;&gt; ajouter_chiffre("JApMvARDdm",5)
-    'JApM5vARDdm'
-    
-    ou aléatoiremment 
-    
-    &gt;&gt;&gt; ajouter_chiffre("JApMvARDdm",5)
-    'JApMvARDdm5'
-    
-    &gt;&gt;&gt; ajouter_chiffre("aBcdEF",9)
-    'a9BcdEF'
-    """
-    max = len(mot)-1
-    alea = randint(0,max)
-    nv_mot = mot [:alea]+str(chiffre)+mot[alea:]
-    return nv_mot</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=be8c8368">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [159]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-26">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">ajouter_chiffre</span><span class="p">(</span><span class="s2">"JApMvARDdm"</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-26">ajouter_chiffre("JApMvARDdm",5)</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[159]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'JApM5vARDdm'</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d3ff5ec7">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [173]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-27">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">ajouter_chiffre</span><span class="p">(</span><span class="s2">"aBcdEF"</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-27">ajouter_chiffre("aBcdEF",9)</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[173]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'a9BcdEF'</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e179fb5e">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Le programme principal appelle toutes ces fonctions pour créer le mot de passe à l'aide de la saisie de l'utilisateur.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d449ae54">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [205]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-28">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1">###################################################</span>
-<span class="c1">#####    PROGRAMME PRINCIPAL DE LA PHASE 1    #####</span>
-<span class="c1">###################################################</span>
-<span class="n">chiffre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Saisir un chiffre (pas un nombre !) : "</span><span class="p">))</span>
-<span class="k">if</span> <span class="n">verifier_chiffre</span><span class="p">(</span><span class="n">chiffre</span><span class="p">)</span> <span class="p">:</span>
-    <span class="n">verif</span> <span class="o">=</span> <span class="kc">False</span>
-    <span class="k">while</span> <span class="ow">not</span> <span class="n">verif</span> <span class="p">:</span>
-        <span class="n">phrase</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Saisir votre phrase de code de plus de 8 mots : "</span><span class="p">)</span>
-        <span class="n">phrase</span> <span class="o">=</span> <span class="n">convertir_ponctuation</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span>
-        <span class="n">verif</span> <span class="o">=</span> <span class="n">verifier_plus_de_huit_mots</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">verif</span> <span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">"Votre phrase est trop courte."</span><span class="p">)</span>
-<span class="n">mot_de_passe</span> <span class="o">=</span> <span class="n">obtenir_premieres_lettres</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span>
-<span class="n">mot_de_passe</span> <span class="o">=</span> <span class="n">convertir_sans_accent</span><span class="p">(</span><span class="n">mot_de_passe</span><span class="p">)</span>
-<span class="n">mot_de_passe</span> <span class="o">=</span> <span class="n">modifier_mot_majuscule_minuscule</span><span class="p">(</span><span class="n">mot_de_passe</span><span class="p">)</span>
-<span class="n">mot_de_passe</span> <span class="o">=</span> <span class="n">ajouter_chiffre</span><span class="p">(</span><span class="n">mot_de_passe</span><span class="p">,</span><span class="n">chiffre</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Votre mot de passe est : "</span><span class="p">,</span> <span class="n">mot_de_passe</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-28">###################################################
-#####    PROGRAMME PRINCIPAL DE LA PHASE 1    #####
-###################################################
-chiffre = int(input("Saisir un chiffre (pas un nombre !) : "))
-if verifier_chiffre(chiffre) :
-    verif = False
-    while not verif :
-        phrase = input("Saisir votre phrase de code de plus de 8 mots : ")
-        phrase = convertir_ponctuation(phrase)
-        verif = verifier_plus_de_huit_mots(phrase)
-        if not verif :
-            print("Votre phrase est trop courte.")
-mot_de_passe = obtenir_premieres_lettres(phrase)
-mot_de_passe = convertir_sans_accent(mot_de_passe)
-mot_de_passe = modifier_mot_majuscule_minuscule(mot_de_passe)
-mot_de_passe = ajouter_chiffre(mot_de_passe,chiffre)
-print("Votre mot de passe est : ", mot_de_passe)</div>
+hash = hashlib.md5("secret".encode()).hexdigest() #5ebe2294ecd0e0f08eab7690d2a6ee69
+find_password(hash)</div>
 </div>
 </div>
 </div>
@@ -4838,10 +3402,14 @@ print("Votre mot de passe est : ", mot_de_passe)</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Saisir un chiffre (pas un nombre !) : 4
-Saisir votre phrase de code de plus de 8 mots : J'adore passer mes vacances à réaliser des devoirs maison.
-Votre mot de passe est :  J4APMVARddm
+<pre>5ebe2294ecd0e0f08eab7690d2a6ee69
 </pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>'Le mot de passe associé au hachage 5ebe2294ecd0e0f08eab7690d2a6ee69 est secret'</pre>
 </div>
 </div>
 </div>
@@ -4863,7 +3431,7 @@ Votre mot de passe est :  J4APMVARddm
 
 
                 
-<script src="../../../js/ide.js"></script>
+<script src="../../../../js/ide.js"></script>
 <style>
     .jp-RenderedHTMLCommon p {
         font-size: 0.8rem;
@@ -4986,10 +3554,10 @@ Votre mot de passe est :  J4APMVARddm
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
@@ -5001,13 +3569,13 @@ Votre mot de passe est :  J4APMVARddm
       
         <script src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
       
-        <script src="../../../javascript/mermaid.js"></script>
+        <script src="../../../../javascript/mermaid.js"></script>
       
-        <script src="../../../javascript/mathjax.js"></script>
+        <script src="../../../../javascript/mathjax.js"></script>
       
-        <script src="../../../javascript/interpreter.js"></script>
+        <script src="../../../../javascript/interpreter.js"></script>
       
-        <script src="../../../javascript/ide.js"></script>
+        <script src="../../../../javascript/ide.js"></script>
       
     
   </body>

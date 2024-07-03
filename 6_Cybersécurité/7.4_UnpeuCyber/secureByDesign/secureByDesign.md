@@ -1,4 +1,4 @@
-# La Cyber en NSI
+# Secure by Design
 
 > "La cybersécurité est un domaine à part entière, il sera donc nécessaire de continuer d'en faire [note en : en BTS SIO], mais peut-être moins sur les aspects "attaquer" mais sur le **"security by design"**, la qualité du code, la gestion des frameworks... bref, la sécurité en amont plutôt qu'en aval. " David Roumanet, Lycée Louise Michel. Professeur BTS SIO.
 
@@ -18,3 +18,46 @@ et plus globalement, coder propre :<br />
 - Utiliser des exceptions spécifiques plutôt que des exceptions générales
 - Toujours nettoyer les ressources dans un bloc finally dans la gestion des exceptions
 - Fermer les ressources au fur et à mesure (fichier par exemple)
+
+Exemple de code dangereux :
+
+```python linenums='1'
+
+def read_file(filename):
+    f = open(filename, 'r')
+    data = f.read()
+    # Fichier jamais fermé explicitement
+    return data
+
+# Utilisation de la fonction
+content = read_file('example.txt')
+print(content)
+
+# Autres opérations
+# Le fichier 'example.txt' reste ouvert pendant toute la durée du programme
+```
+
+^^Problèmes Potentiels :^^
+
+>**Fuite de Ressources :**Le descripteur de fichier reste ouvert, consommant des ressources système inutiles.<br />
+>**Verrouillage de Fichier :** Le fichier peut rester verrouillé, empêchant d'autres processus ou parties du programme de le modifier.<br />
+>**Incohérences et Erreurs :** Si le programme tente de lire ou d'écrire à nouveau dans le fichier, des comportements inattendus peuvent survenir.<br />
+
+^^Solution : Utiliser le Bloc with^^<br />
+
+L'utilisation d'un bloc with en Python garantit que le fichier est correctement fermé après son utilisation, même si une exception est levée pendant l'opération de lecture ou d'écriture. Voici comment corriger le code :
+
+```python linenums='1'
+def read_file(filename):
+    with open(filename, 'r') as f:
+        data = f.read()
+    # Le fichier est automatiquement fermé à la fin du bloc with
+    return data
+
+# Utilisation de la fonction
+content = read_file('example.txt')
+print(content)
+
+# Autres opérations
+# Le fichier 'example.txt' est fermé proprement après la lecture
+```
