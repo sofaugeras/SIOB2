@@ -2153,6 +2153,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Secure by Design
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2162,6 +2173,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quelques-principes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quelques principes : 
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2724,18 +2763,20 @@
 <p class="admonition-title">Définition</p>
 <p>"Secure by Design" (ou "sécurité par conception" en français) est une approche de développement de systèmes informatiques et de logiciels qui intègre des principes de sécurité dès les premières étapes de la conception et tout au long du cycle de vie du produit. L'objectif est de minimiser les vulnérabilités et les risques de sécurité en adoptant des pratiques et des technologies de sécurité robustes dès le départ, plutôt que d'ajouter des mesures de sécurité après coup.</p>
 </div>
-<p>Quelques principes : <br />
-- Limitation des droits et des accès des utilisateurs et des systèmes à ce qui est strictement nécessaire pour réduire les surfaces d'attaque potentielles.
-- Mise en place de processus rigoureux de tests et de validations de la sécurité tout au long du cycle de vie du développement</p>
-<p>et plus globalement, coder propre :<br />
-- Vérification des types dans les paramètres de fonction
-- Requêtes préparées uniquement ou utilisation d'un ORM
-- Supprimer le code "mort" (exemple getter/setter non utilisé)
-- Limiter les fonctions/méthodes à une seule tâche
-- Documenter les fonctions, méthodes, classes et modules
-- Utiliser des exceptions spécifiques plutôt que des exceptions générales
-- Toujours nettoyer les ressources dans un bloc finally dans la gestion des exceptions
-- Fermer les ressources au fur et à mesure (fichier par exemple)</p>
+<h2 id="quelques-principes">Quelques principes : <br /><a class="headerlink" href="#quelques-principes" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>Limitation des droits et des accès des utilisateurs et des systèmes à ce qui est strictement nécessaire pour réduire les surfaces d'attaque potentielles.<br /></li>
+<li>Mise en place de processus rigoureux de tests et de validations de la sécurité tout au long du cycle de vie du développement<br /></li>
+</ul>
+<p>et plus globalement, <strong>coder propre</strong> :<br />
+- Vérification des types dans les paramètres de fonction<br />
+- Requêtes préparées uniquement ou utilisation d'un ORM<br />
+- Supprimer le code "mort" (exemple getter/setter non utilisé)<br />
+- Limiter les fonctions/méthodes à une seule tâche<br />
+- Documenter les fonctions, méthodes, classes et modules<br />
+- Utiliser des exceptions spécifiques plutôt que des exceptions générales<br />
+- Toujours nettoyer les ressources dans un bloc finally dans la gestion des exceptions<br />
+- Fermer les ressources au fur et à mesure (fichier par exemple)<br /></p>
 <p>Exemple de code dangereux :</p>
 <div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>

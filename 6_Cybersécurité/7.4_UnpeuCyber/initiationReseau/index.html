@@ -2090,6 +2090,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Un peu de réseau
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2099,6 +2110,136 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#la-securite-des-communications-numeriques" class="md-nav__link">
+    <span class="md-ellipsis">
+      La sécurité des communications numériques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quelques-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quelques définitions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quelques définitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-sous-reseaux-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les sous-réseaux IP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-vlans" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les VLANs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#un-port-reseau" class="md-nav__link">
+    <span class="md-ellipsis">
+      Un port réseau
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-routeurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les routeurs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dmz-zone-demilitarisee" class="md-nav__link">
+    <span class="md-ellipsis">
+      DMZ (zone démilitarisée)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-pratique-de-securisation-avec-un-reseau-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple pratique de sécurisation avec un réseau simple
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-reseau" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activité Réseau :
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Activité Réseau :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#presentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Présentation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rappel-sur-la-notation-cidr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rappel sur la notation CIDR :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2719,12 +2860,98 @@
 <h1 id="un-peu-de-reseau">Un peu de réseau<a class="headerlink" href="#un-peu-de-reseau" title="Permanent link">⚓︎</a></h1>
 <details class="note">
 <summary>Source</summary>
+<ul>
+<li>Module 3 CyberEdu : module_3_reseau_et_applicatifs.pdf</li>
+</ul>
 </details>
 <div class="admonition info">
 <p class="admonition-title">Liaison avec le BO</p>
 <p>en classe de première : <br/>
 - Architecture d’un réseau : Simuler ou mettre en oeuvre un réseau. (Le rôle des différents constituants du réseau local de l’établissement est présenté.)<br/></p>
 </div>
+<h2 id="la-securite-des-communications-numeriques">La sécurité des communications numériques<a class="headerlink" href="#la-securite-des-communications-numeriques" title="Permanent link">⚓︎</a></h2>
+<p>La  sécurisation  des  communications  (acheminement  des  données)  dans  un réseau local implique l’utilisation de protocoles spécifiques et la mise en œuvre d’infrastructures réseaux particulières pour segmenter (diviser) de façon logique 
+et physique le réseau interne.</p>
+<h2 id="quelques-definitions">Quelques définitions<a class="headerlink" href="#quelques-definitions" title="Permanent link">⚓︎</a></h2>
+<h3 id="les-sous-reseaux-ip">Les sous-réseaux IP<a class="headerlink" href="#les-sous-reseaux-ip" title="Permanent link">⚓︎</a></h3>
+<p>Dans  un  réseau  local,  les  hôtes  sont  identifiés par  des  adresses  IPv4  privées constituées de 4 octets de 8 bits. Une adresse est composée d’une partie réseau, qui définit le réseau d’appartenance de l’hôte, et d’une partir hôte, qui identifie l’hôte dans son réseau. Tous les hôtes d’un même réseau peuvent communiquer entre eux : on parle de domaine de diffusion. Cependant, les hôtes appartenant à des  réseaux  différents  ne  peuvent  pas  communiquer  directement:  ils  doivent utiliser une passerelle.</p>
+<h3 id="les-vlans">Les VLANs<a class="headerlink" href="#les-vlans" title="Permanent link">⚓︎</a></h3>
+<p>Un  VLAN  (Virtual  Local  Area  Network)  décrit  un  réseau local virtuel. Son  objectif est de regrouper de façon logique et indépendante un ensemble d’hôtes. Il permet de créer des domaines de diffusion gérés par les commutateurs indépendamment 
+de l’emplacement géographique où se situe le nœud. </p>
+<h3 id="un-port-reseau">Un port réseau<a class="headerlink" href="#un-port-reseau" title="Permanent link">⚓︎</a></h3>
+<p>Un port est un point virtuel où les connexions réseau commencent et se terminent. Les ports sont basés sur des logiciels et gérés par le système d'exploitation d'un ordinateur. Chaque port est associé à un processus ou à un service spécifique.<br/>
+Ce numéro ajouté est ce que l'on appelle un « numéro de port », et sert à orienter le trafic Internet lorsqu'il arrive sur un serveur. Les protocoles TCP (Transmission Control Protocol) et UDP (User Datagram Protocol) sont utilisés pour acheminer un paquet de données au processus correspondant.<br/>
+Exemple de port : <br/></p>
+<blockquote>
+<p>Port 80 ou 8080 : Web (HTTP)<br/>
+ Port 443 : Web sécurisé (HTTPS)<br/>
+ Port 43 : DNS (système de noms de domaine)<br/>
+ Port 3389 : Remote Desktop Protocol (RDP)<br/>
+ port 3306 : MySqL, système de gestion de base de données<br/>
+ Port 21 : FTP (File Transfer Protocol)<br/>
+ Port 22 : Secure Shell (SSH), protocole de tunnelisation utilisé pour créer des connexions réseau sécurisées</p>
+</blockquote>
+<h3 id="les-routeurs">Les routeurs<a class="headerlink" href="#les-routeurs" title="Permanent link">⚓︎</a></h3>
+<p>Les routeurs (ou passerelles) sont des équipements réseaux permettant de relier différents réseaux qui n’appartiennent pas au même réseau logique afin qu’ils puissent  échanger  des  donner.  Pour  acheminer  les  données  vers  les  bons réseaux, le retour dispose d’une table de routage qui lui indique la route à suivre. Dans  un  réseau  local,  le  routeur,  par  l’intermédiaire  de  règles  de  sécurité, achemine  ou  non  les  informations  vers  différents  réseaux  internes.  Cela  permet ainsi  d’instaurer  une sécurité supplémentaire.</p>
+<h3 id="dmz-zone-demilitarisee">DMZ (zone démilitarisée)<a class="headerlink" href="#dmz-zone-demilitarisee" title="Permanent link">⚓︎</a></h3>
+<p>Une DMZ  ou zone démilitarisée est un réseau périmétrique qui protège et ajoute une couche de sécurité supplémentaire au réseau local interne d’une organisation contre le trafic non fiable.<br />
+L’objectif final d’un réseau de zone démilitarisé est de permettre à une organisation d’accéder à des réseaux non fiables, tels qu’Internet, tout en s’assurant que son réseau privé ou son LAN reste sécurisé. Les organisations stockent généralement des services et ressources externes, ainsi que des serveurs pour le système de noms dedomaine (DNS), le protocole de transfert defichiers (FTP), la messagerie, le proxy, le protocole VoIP (Voice over Internet Protocol) et les serveurs Web, dans la DMZ. <br />
+Ces serveurs et ressources sont isolés et bénéficient d’un accès limité au LAN afin de s’assurer qu’ils sont accessibles via Internet, mais pas le réseau LAN interne. Par conséquent, une approche DMZ rend plus difficile pour un hacker d’obtenir un accès direct aux données et aux serveurs internes d’une organisation via Internet. Une entreprise peut minimiser les vulnérabilités de son réseau local, créant ainsi un environnement sûr contre les menaces tout en garantissant que les employés peuvent communiquer efficacement et partager des informations directement via une connexion sécurisée.</p>
+<h2 id="exemple-pratique-de-securisation-avec-un-reseau-simple">Exemple pratique de sécurisation avec un réseau simple<a class="headerlink" href="#exemple-pratique-de-securisation-avec-un-reseau-simple" title="Permanent link">⚓︎</a></h2>
+<p>Prenons l’exemple d’un réseau d’entreprise « à plat ». </p>
+<p><ins>Caractéristiques de cette entreprise :</ins><br /></p>
+<blockquote>
+<ul>
+<li>Elle fournit un site WEB de e-commerce ;<br /></li>
+<li>Certains employés se connectent sur le réseau local filaire, d’autres se connectent en wifi ;<br /></li>
+<li>Certains employés sont nomades et doivent donc se connecter à distance ;<br /></li>
+<li>Il existe deux catégories principales d’utilisateurs : les utilisateurs « standard » et les administrateurs du S.I. ;<br /></li>
+<li>Afin de fonctionner, l’entreprise possède également des serveurs internes (comptabilité, wiki, etc.) ;<br /></li>
+<li>L’entreprise souhaite permettre à ses visiteurs de se connecter en wifi afin de naviguer sur internet.</li>
+</ul>
+</blockquote>
+<p><img alt="réseau simple" src="../data/reseauAplat.png" /></p>
+<p>Parmi les nombreuses faiblesses architecturales de ce réseau, nous pouvons identifier au moins le problème suivant :<br /></p>
+<ul>
+<li>Le réseau est directement connecté à Internet, i.e. tous les systèmes et utilisateurs et systèmes peuvent communiquer avec l’extérieur (attention aux fuites de données !) et tout Internet peut se connecter sur notre réseau interne.<br /></li>
+</ul>
+<p>Corrigeons cela en implémentant un <strong>pare-feu</strong> en frontal qui va autoriser uniquement les flux entrants vers le serveur WEB (TCP/80 et TCP/443) et le serveur DNS (UDP/53 et TCP/53). Ainsi, Internet ne pourra plus accéder au reste du réseau interne.</p>
+<p><img alt="réseau parefeu frontal" src="../data/reseauParfeuFrontal.png" /></p>
+<p>Le pare-feu empêche – certes – la connexion directe entre internet et le réseau interne, mais :<br />
+Au cas où le serveur WEB présente une vulnérabilité, un hacker présent sur Internet peut potentiellement prendre la main sur ce serveur, puis rebondir ensuite sur le réseau interne.</p>
+<p>Nous allons donc segmenter notre réseau en différentes zones de criticité, notamment :<br />
+- Une DMZ (zone démilitarisée) destinée à héberger tous les serveurs qui doivent être accessibles depuis internet, et uniquement ceux-ci. Ainsi, en cas de faille dans le serveur web, un attaquant aurait plus de difficultés pour rebondir sur le réseau interne ;<br />
+- Une zone destinée aux serveurs internes de l’entreprise ;<br />
+- Une zone pour les postes de travail filaires des utilisateurs ;<br />
+- Une zone pour les postes de travail wifi des utilisateurs ;<br />
+- Une zone pour les postes wifi des visiteurs ;<br />
+- Une zone pour les postes de travail des administrateurs, car ceux-ci ont besoin d’accéder à des interfaces d’administration (RDP, SSH…).<br /></p>
+<p>Afin que cette segmentation réseau soit efficace, nous faisons passer tous les flux (y compris internes) par un deuxième pare-feu (interne) afin que seuls les flux que nous allons configurer soient autorisés.</p>
+<blockquote>
+<p>on observe malheureusement souvent des réseaux segmentés mais non filtrés. Cela ne sert à rien en terme de sécurité, car toutes les zones peuvent communiquer entre-elles.</p>
+</blockquote>
+<p><img alt="réseau segmenté" src="../data/reseauSegmente.png" /></p>
+<p>On va s'arrêter là à notre niveau, mais il faudrait egalement gérer de façon plus fine le WIFI, les utilisateurs nomades, analyser le trafic entrant/sortant, ... Un vrai travail d'administrateur réseau ! <img alt="😉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f609.svg" title=":wink:" /></p>
+<h2 id="activite-reseau">Activité Réseau :<a class="headerlink" href="#activite-reseau" title="Permanent link">⚓︎</a></h2>
+<h3 id="presentation">Présentation<a class="headerlink" href="#presentation" title="Permanent link">⚓︎</a></h3>
+<p>On va essayer de reproduire sous filius un schéma réseau d'une micro entreprise.<br />
+Pour cela, on va placer :<br />
+- Un poste client extérieur à l'entreprise<br />
+- Deux serveurs, un web et un DNS dans un VLAN frontal, qui illustreras la DMZ<br />
+- Un sous-réseau VLAN "Prod", qui rassemblera un serveur base de données et un serveur de fichier<br />
+- Un sous-réseau "Utilisateur", avec quelques postes utilisateurs.<br /></p>
+<p>^^Contraintes : ^^<br />
+La DMZ peut atteindre le VLAN "prod"<br />
+Le VLAN "utilisateur" peut atteindre le VLAn "Prod" mais ne peut pas atteindre la DMZ<br />
+Le client externe peut atteindre la DMZ mais aucun autre VLAN</p>
+<p>Pour cela, nous allons utiliser uniquement les moyens à notre disposition, c'est à dire des routeurs et des adresses IP !</p>
+<h3 id="rappel-sur-la-notation-cidr">Rappel sur la notation CIDR :<a class="headerlink" href="#rappel-sur-la-notation-cidr" title="Permanent link">⚓︎</a></h3>
+<p>Une convention de notation permet d'écrire simplement le couple d'informations Adresse IP + masque de sous-réseau : la notation CIDR.</p>
+<p><strong>Exemple</strong> : Une machine d'IP <code>192.168.0.33</code> avec un masque de sous-réseau <code>255.255.255.0</code> sera désignée par <code>192.168.0.33 / 24</code> en notation CIDR.</p>
+<p>Le suffixe <code>/ 24</code> signifie que le masque de sous-réseau commence par  24 bits consécutifs de valeur 1 : le reste des bits (donc 8 bits) est à mis à 0.<br />
+Autrement dit, ce masque vaut <code>11111111.11111111.11111111.00000000</code> , soit <code>255.255.255.0</code>.<br />
+De la même manière, le suffixe <code>/ 16</code> donnera un masque de <code>11111111.11111111.00000000.00000000</code> , soit <code>255.255.0.0</code>.<br />
+Ou encore, un suffixe <code>/ 21</code> donnera un masque de <code>11111111.11111111.11111000.00000000</code> , soit <code>255.255.248.0</code>. </p>
 
 
   

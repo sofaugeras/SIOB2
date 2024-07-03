@@ -153,3 +153,8 @@ print(pwd)
 5ebe2294ecd0e0f08eab7690d2a6ee69
 b'\xc3;K\xc2\xfb\xb4z\xca`f\xc4T\xc9I\x1b.'
 ```
+!!! note "Activité possible"
+    A la suite de la sensibilisation sur les mots de passe, faire réaliser aux élèves une infographie à destination de leurs camarades lycéens non sensibilisés.
+
+    ![infographies réalisées par des élèves de première NSI, 2024](./data/infographieCyber.png)
+    
