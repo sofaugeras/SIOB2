@@ -19,19 +19,17 @@
 • **Traçabilité** des actions, historique des actions.<br/>
 
 Exemple, <br/>
-télédéclaration de l’impôt : imputabilité = lien entre la déclaration et la personne *ET* traçabilité = connaître l’heure et la date de la déclaration.
+^^télédéclaration de l’impôt :^^ imputabilité = lien entre la déclaration et la personne *ET* traçabilité = connaître l’heure et la date de la déclaration.
 
 ## un mot de passe, c'est 
 
-• La connaissance :point_right: JE CONNAIT<br/>
+• La connaissance :point_right: JE CONNAIS<br/>
 • La possession :point_right: JE POSSEDE<br/>
 • Les caractéristiques biométriques :point_right: JE SUIS<br/>
 
 ![source : https://www.apog.net/deploiement-solution-mfa-indispensable](./data/Facteurs.jpg){: .center width=90%}
 
 ## Les risques 
-
-Risques du mot de passe :<br/>
 
 • **Divulgation :**<br/>
 

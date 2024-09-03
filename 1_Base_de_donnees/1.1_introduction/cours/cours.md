@@ -1,8 +1,10 @@
-# 1. Généralités 
+# 1 Généralités 
 
 ## 1.1 Définition 
 
 **Définition générale :** Une Base de données est un ensemble organisé d'informations avec un objectif commun. <br />
+
+![image](./data/baseDeDonnees.gif){: width=30% .center}
 
 Peu importe le support utilisé pour rassembler et stocker les données (papier, fichiers, etc.), dès lors que des données sont rassemblées et stockées d'une manière organisée dans un but spécifique, on parle de base de données.<br />
 
@@ -13,18 +15,21 @@ Peu importe le support utilisé pour rassembler et stocker les données (papier,
 ^^Cohérente :^^ la base de données sert pour prendre un ensemble de décision. Les données doivent être juste et non redondante.<br />
 ^^Partagée :^^ L'un des avantages d'une base de données est que les informations qui la constituent peuvent être accessibles aisément par plusieurs programmes qui les utilisent simultanément avec des objectifs différents. <br />
 exemple : Application de gestion RH (paye, congés, …)
-<br />
+<br /><br />
 Une base de données peut être locale ou répartie. Elle est dite *locale* quand elle est utilisée sur une machine par un utilisateur et *repartie* quand les informations sont stockées sur des machines distantes (serveur) et accessibles par réseau.<br />
-
 
 :arrow_forward: Conséquence : Il faut un « pilote », un administrateur de base de données (DBA).
 
- 
+!!! note "DBA"
+    Quels ont les tâches d'un administrateur de Base de données ?
+    [vidéo](https://www.youtube.com/watch?v=pvVWqQTX3OQ)
+
+
 ## 1.2 Historique 
 
 Au  début de l'informatique, on a voulu construire des systèmes pour effectuer des calculs (équations différentielles, calcul matriciel, ...). L’approche classique de mise en place d’une application informatique dans une entreprise, consistait le plus souvent à l’écriture d’un certain nombre de programmes destinés à l’exploitation d’un ensemble de fichiers qu’il fallait aussi créer. 
  
-[Données organisées en fichier (jusqu'au années 60)](./data/archi_fichier.png)
+![Données organisées en fichier (jusqu'au années 60)](./data/archi_fichier.png){: width=50% .center}
 Légende : D pour données, F pour Fichiers
 
 Les systèmes classiques de fichiers posent les problèmes suivants:<br />
@@ -33,244 +38,339 @@ Les systèmes classiques de fichiers posent les problèmes suivants:<br />
 :arrow_lower_right: Les procédures de sécurité (confidentialité et reprise après panne) doivent être programmées.
 Ce système par fichier est toujours exploité dans les grandes entreprises. Système VSAM sous IBM.<br />
 
-Aujourd’hui, la tendance actuelle est la gestion de grandes voire très grandes1 quantités d'informations. Cela revient à stocker des données et manipuler ces données. Notons que les données peuvent être de natures diverses, les opérations plus ou moins compliquées et nombre d’utilisateurs plus ou moins important. <br />
+Aujourd’hui, la tendance actuelle est la gestion de grandes voire très grandes quantités d'informations. Cela revient à stocker des données et manipuler ces données. Notons que les données peuvent être de natures diverses, les opérations plus ou moins compliquées et nombre d’utilisateurs plus ou moins important. <br />
 
-Exemples d'applications : Applications de gestion (paye, stock, ...), applications transactionnelles (banque, réservation...), applications de documentation (bibliothèque, cartographie, ...), Ingénierie (PAO, CAO, ... ). 
- Les entrepôts de données (data warehouse) contiennent plusieurs téraoctets (1 To = 1024 Go) de données. 
-Le 7° youtube, c’est 45 Terabytes de données et le 1er le centre mondial pour le climat, c’est 330 terabytes
 
-Ordre de grandeur : Un octet est une suite de 8 bits. C’est ce qu’il faut pour coder 1 caractère ‘A’. 
-: kilo > mega > giga > tera > peta > exa …
-3	Le système de gestion de base de données SGDB
+## 1.3 Le système de gestion de base de données SGDB
 
-Une base de données est un ensemble d’informations stocké sur un système informatique. 
-Cet ensemble est implanté physiquement (généralement sur disque dur) sous la forme d’un ou plusieurs fichiers. 
-Cette organisation est assurée par un logiciel spécialisé : Le SGBD (Système de Gestion de Base de Données) Les fonctionnalités élémentaires d’un SGBD sont : 
-- Structurer/organiser les données 
-- Stocker les données 
-- Mettre à jour les données (ajout, modification et suppression d’informations) 
-- Interroger les données 
+Une base de données est un ensemble d’informations stocké sur un système informatique. <br />
+Cet ensemble est implanté physiquement sous la forme d’un ou plusieurs fichiers. <br />
+Cette organisation est assurée par un logiciel spécialisé : Le **SGBD** (Système de Gestion de Base de Données) <br />
+Les fonctionnalités élémentaires d’un SGBD sont : <br />
+:arrow_lower_right:  Structurer/organiser les données <br />
+:arrow_lower_right:  Stocker les données <br />
+:arrow_lower_right:  Mettre à jour les données (ajout, modification et suppression d’informations) <br />
+:arrow_lower_right:  Interroger les données <br />
 
- 
-Figure 2 : Principes de fonctionnement des SGBD
+ ![role SGBD](./data/dbms-image-1.png){: width=50% .center}
 
-La construction d’une base de données passe tout d’abord par la réalisation d’un « plan » : un schéma conceptuel. Cette phase de conception est généralement guidée par une méthode (ex. MERISE).
-L’objectif est de modéliser* le domaine étudié. 
+La construction d’une base de données passe tout d’abord par la réalisation d’un « plan » : un schéma conceptuel. Cette phase de conception est généralement guidée par une méthode (exemple : Merise ou UML).<br />
+L’objectif est de modéliser le domaine étudié. (On n’abordera pas les méthodes de modélisation dans ce module. Prévu au 2nd semestre en SLAM.)<br />
 
-* On n’abordera pas les méthodes de modélisation dans ce module. Prévu au 2nd semestre en SLAM1.
+Exemple : Dans une entreprise on souhaite réaliser une base de données « fournisseurs » La modélisation consistera à recenser les informations nécessaires concernant les fournisseurs (raison sociale, téléphone, e-mail…) et les produits (référence, désignation, prix…) ainsi que les liens entre ces deux entités (Qui fournit quoi ?)
 
-Exemple : Dans une entreprise on souhaite réaliser une base de données « fournisseurs » La modélisation consistera à recenser les informations nécessaires concernant les fournisseurs (raison sociale, téléphone, e-mail…) et les produits (référence, désignation, prix…) ainsi que les liens entre ces deux entités (Qui fournit quoi ?) L’organisation sémantique des informations peut être réalisée suivant plusieurs modèles de données. Les principaux modèles de base de données sont les suivants : 
-- Le modèle hiérarchique 
-- Le modèle réseau 
-- Le modèle relationnel 
-- Le modèle objet 
+![plan modélisation](./data/schema_global.png){: width=50% .center}
+
+ L’organisation sémantique des informations peut être réalisée suivant plusieurs modèles de données. Les principaux modèles de base de données sont les suivants : <br />
+
+![modeles BD](./data/sgbd.webp){: width=70% .center}
+
+:arrow_lower_right: Le modèle hiérarchique <br />
+:arrow_lower_right: Le modèle réseau <br />
+:arrow_lower_right: Le modèle relationnel <br />
+:arrow_lower_right: Le modèle objet 
 
 Notons cependant que le modèle relationnel est aujourd’hui utilisé par la grande majorité des SGBD (environ ¾) et que l’on retrouve également d’autres modèles (ex. : navigationnel et déductif)
 
-2.	Les modèles de base de données 
-1	Le modèle hiérarchique 
+![quelques SGBD](./data/SGBD_2023.png){: width=50% .center}
 
-Conçu à la NASA pour la gestion des données du programme spatial Apollo, les données sont classées hiérarchiquement, selon une arborescence descendante. Ce modèle utilise des pointeurs entre les différents enregistrements. Bien adapté à des données de type nomenclatures avec une relation 1 vers N mais inapproprié aux structures de données complexes. 
+??? note "Un peu d'histoire"
+
+    |Année |	Evenement|
+    |:--|:--|
+    |1964 |	Développement de la première base de données, un magasin de données intégré (IDS), par Charles Bachman chez General Electric.|
+    |1966 |	IBM introduit le système de gestion de l’information (IMS), développé conjointement avec Rockwell et Caterpillar.|
+    |1970 |	Edgar F. Codd introduit le modèle relationnel dans un document intitulé “A Relational Model of Data for Large Shared Data Banks”.|
+    |1974 |	Le langage de requête structuré (SQL) est créé.|
+    |1976 |	Peter Chen présente le modèle entité-relation dans son article intitulé “The Entity-Relationship Model – Toward a Unified View of Data” (Le modèle entité-relation – vers une vue unifiée des données).|
+    |1979 |	Oracle lance la première base de données relationnelle commerciale qui utilise SQL.|
+    |1980 |	IBM présente System R, le système de gestion de bases de données relationnelles basé sur SQL.|
+    |1981 |	SQL/DS, le premier SGBD complet à fonctionner sur des ordinateurs personnels, est lancé par IBM.|
+    |1983 |	La première version de DB2 d’IBM est publiée pour les ordinateurs centraux.|
+    |1986 |	Le Manifeste sur les systèmes de bases de données orientées objet est publié, donnant une impulsion significative au développement des bases de données orientées objet.|
+    |1996 |	Lancement de PostgreSQL, l’un des premiers systèmes de gestion de bases de données relationnelles à code source ouvert.|
+    |1998 |	MySQL, un autre SGRD à source ouverte important, est publié pour Windows 95 et NT.|
+    |1998 |	Microsoft lance SQL Server 7.0, une réécriture complète de son SGBD.|
+    |2000 |	Les start-ups de l’Internet adoptent les bases de données XML.|
+    |2004 |Le terme “NoSQL” gagne en popularité et donne naissance à une nouvelle génération de bases de données non relationnelles et distribuées.|
+    |2006 |	Google publie un article sur BigTable, sa base de données NoSQL interne, influençant une nouvelle vague de bases de données NoSQL open-source|
+    |2012 |	|Amazon présente DynamoDB, une base de données NoSQL propriétaire.|
+    |2013 |	Publication de FoundationDB, une base de données distribuée conçue pour traiter de grands volumes de données structurées.|
+    |2017 |	Google annonce Spanner, une base de données distribuée à l’échelle mondiale.|
+    |2020s |	Poursuite du développement et de l’innovation dans la technologie des SGBD, en mettant l’accent sur les bases de données cloud-natives, les bases de données edge et les améliorations de l’intégration de l’IA pour la gestion des bases de données. Les bases de données blockchain deviennent également un sujet d’intérêt important.|
+
+    source : [technopedia](https://www.techopedia.com/fr/dictionnaire/sgbd-systeme-de-gestion-de-base-de-donnees)
+
+# 2 Les modèles de base de données 
+
+## 2.1 Le modèle hiérarchique 
+
+Conçu à la NASA pour la gestion des données du programme spatial Apollo, les données sont classées hiérarchiquement, selon une arborescence descendante. Ce modèle utilise des **pointeurs** entre les différents enregistrements. Bien adapté à des données de type nomenclatures avec une relation **1** vers **N** mais inapproprié aux structures de données complexes. 
+
+![hiérarchique](./data/modele_hierarchique.gif){: width=50% .center}
 
 Les fichiers XML constituent une réminiscence des bases de données hiérarchiques. 
  
-Figure 4 : exemple d'arborescence et de contenu de fichier XML
-Exemples : 
-	La classification du vivant relève du modèle hiérarchique de base de données : Le chat appartient à la famille des félidés, du sous-ordre féliformes de l’ordre des carnivores, de la classe des mammifères, du sous-embranchement des vertébrés du règne animal. 
+![exemple d'arborescence et de contenu de fichier XML](./data/XML.png){: width=50% .center}
 
-	Vu de l’utilisateur, un système de fichiers s’apparente à une base de données hiérarchique (arborescence des dossiers) 
+Exemples de base de données naturelles hiérarchiques : <br />
+:snake: La classification du vivant relève du modèle hiérarchique de base de données : Le chat appartient à la famille des félidés, du sous-ordre féliformes de l’ordre des carnivores, de la classe des mammifères, du sous-embranchement des vertébrés du règne animal. <br />
+:file_folder: Vu de l’utilisateur, un système de fichiers s’apparente à une base de données hiérarchique (arborescence des dossiers) <br />
 
-Le point d’accès de l’information est unique (la racine). Il faut parfois parcourir toute l’arborescence pour trouver une information.
+
+:x: **Problème :** Le point d’accès de l’information est unique (la racine). Il faut parfois parcourir toute l’arborescence pour trouver une information.
 
  
-2	Le modèle réseau
+## 2.2 Le modèle réseau
 
-Ce modèle constitue une extension du modèle hiérarchique, il utilise des pointeurs vers des enregistrements selon une structure arborescente. Il est cependant possible d’établir des liens sans restriction entre les différents éléments.
- Imaginé par Charles Bachman, sa spécification a été publiée en 1969 par le consortium Codasyl, à l’origine du langage Cobol. Plus que le modèle hiérarchique, le modèle réseau implique une connaissance de la structure de la base de données pour permettre l’accès aux données : les logiciels sont dépendants de la structure de la base. 
+Ce modèle constitue une extension du modèle hiérarchique, il utilise des pointeurs vers des enregistrements selon une structure arborescente. Il est cependant possible d’établir des liens sans restriction entre les différents éléments.<br />
 
-Exemple : 
-Des données généalogiques peuvent être organisées selon le modèle réseau. 
-Un enregistrement de type parent dispose d’un pointeur vers chacun des membres de sa descendance. Chaque membre de la descendance dispose d’un pointeur vers son aîné et d’un autre vers son cadet.
+![réseau](./data/modele_reseau.gif){: width=30% .center}
 
-Pour retrouver une donnée dans une telle représentation, il faut connaître le chemin d'accès (les liens) ce qui rend les programmes dépendants de la structure de données
+Imaginé par _Charles Bachman_, sa spécification a été publiée en 1969 par le consortium Codasyl, à l’origine du langage Cobol. Plus que le modèle hiérarchique, le modèle réseau implique une connaissance de la structure de la base de données pour permettre l’accès aux données : les logiciels sont **dépendants** de la structure de la base. <br />
 
-3	Le modèle relationnel
+Exemple : <br />
+:link: Des données généalogiques peuvent être organisées selon le modèle réseau : Un enregistrement de type parent dispose d’un pointeur vers chacun des membres de sa descendance. Chaque membre de la descendance dispose d’un pointeur vers son aîné et d’un autre vers son cadet.
 
-Ce modèle est fondé sur la théorie mathématique des relations. Le schéma conceptuel peut être vu comme un ensemble de tables (ou relations) à n colonnes, n désignant le degré de la relation. 
-Avec le modèle relationnel, une table sert à représenter aussi bien une classe d’objets qu’une association entre des classes d’objets. Chaque élément d’une table est appelé un n-uplet (ou tupple). 
-Le terme objet représente ici un élément, un acteur du système d’information (une facture, un produit, un client …)
+:x: **Problème :** Pour retrouver une donnée dans une telle représentation, il faut connaître le chemin d'accès (les liens) ce qui rend les programmes dépendants de la structure de données
+
+## 2.3 Le modèle relationnel
+
+Ce modèle du milieu des années 70 est fondé sur la ==théorie mathématique des relations==. Un modèle relationnel peut être vu comme un ensemble de **tables** (ou **relations**) à $n$ colonnes, $n$ désignant le degré de la relation. <br />
  
-Figure 6 : Modèle relationnel
-A partir des années 70
-Dans l’exemple de la Fig. 6, la table INSCRIPTION décrit l’association entre la classe d’objets ETUDIANT et la classe MODULE. Elle permet de modéliser le fait qu’un étudiant peut s’inscrire à 0, 1 ou plusieurs modules. Ce modèle est le plus fréquent, il fera l’objet d’un paragraphe un peu plus loin.
- Les logiciels qui s’appuient sur ce modèle sont les SGBDR (R pour relationnel) 
-Le langage dédié aux opérations sur les données est le SQL (Structured Query Language)
+![Modèle relationnel](./data/relationnel.png){: width=50% .center}
+
+==Une base de données relationnelle est donc constituée d’un ensemble de données structurées sous forme de relations.==<br />
+
+Une base de données relationnelles est très efficace dans la plupart des cas pour gérer les données. Mais Une structuration inadéquate des données peut suivant les cas :<br />
+
+> :arrow_down: être source de redondance, c’est-à-dire de répétition inutile d’information. Cette redondance pouvant à son tour entraîner des incohérences lors de mises à jour, si on ne modifie pas l’information redondante partout où elle est présente <br />
+> :arrow_down: être contradictoire avec les hypothèses, et ne pas permettre de représenter une information correcte <br />
+> :arrow_down: avoir une incidence sur le nombre d’opérations nécessaires pour chercher une information ou pour les mettre à jour.
 
  
-4	Le modèle objet
+## 2.4 Le modèle objet
 
-La notion de bases de données objet ou relationnel-objet est plus récente. 
-Les données sont représentées sous forme d'objets. Comme en programmation orientée objet, les objets contiennent les données qui les décrivent ainsi que la logique qui permet de les utiliser ou de les modifier. Chaque enregistrement de la base de données constitue une instance de la classe d’objets correspondante. Ces instances sont classées de manière hiérarchique dans la base de données. 
+La notion de bases de données objet ou relationnel-objet est plus récente. <br />
+Les données sont représentées sous forme d'**objets**. Comme en programmation orientée objet, les objets contiennent les données qui les décrivent ainsi que la logique qui permet de les utiliser ou de les modifier. Chaque enregistrement de la base de données constitue une instance de la classe d’objets correspondante. Ces instances sont classées de manière hiérarchique dans la base de données. 
 
-Les SGBDO (Systèmes de Gestion de Bases de Données orientés Objet) sont recommandés pour les applications nécessitant des performances élevées dans la manipulation de données complexes. 
-Ils ont pour inconvénient principal une très 'importante quantité de ressources (mémoire et temps de calcul. Ils sont par conséquent cantonnés à des niches telles que l’ingénierie, les études spatiales, ou encore la recherche fondamentale en physique et en biologie moléculaire.
+![modele objet](./data/modele_objet.gif){: width=30% .center}
+
+Les SGBDO (Systèmes de Gestion de Bases de Données orientés Objet) sont recommandés pour les applications nécessitant des performances élevées dans la manipulation de données complexes. <br />
+
+:x: **Problème :** Ils ont pour inconvénient principal une très importante quantité de ressources (mémoire et temps de calcul). Ils sont par conséquent cantonnés à des niches telles que l’ingénierie, les études spatiales, ou encore la recherche fondamentale en physique et en biologie moléculaire.
 
  
-3.	Les SGBDR
+# 3 Le système relationnel
+
+!!! info "Définition SGBD"
+    Ensemble des programmes permettant la gestion et l’accès à une base de données
+
+Elle est dite **SGBDR** lorsqu’elle concerne une base de données relationnelle.<br />
+Les SGBD relationnels sont à l’heure actuelle les plus diffusés sur le marché.<br />
+> Ils permettent d’organiser les données sous formes de tables. <br />
+> La description de la base de données est faite grâce à un schéma conceptuel ou relationnel permettant de décrire toutes les tables (relations) implantées sur disque. <br />
+> Un SGBDR sert à effectuer des opérations ordinaires telles que **consulter**, **modifier**, **construire**, **organiser**, **transformer**, **copier**, **sauvegarder** ou **restaurer** des bases de données.<br />
+ 
+## 3.1 Les objectifs d’un SGBDR
+
+:one: **Indépendance physique**: un remaniement de l’organisation physique des données n’entraîne pas de modification des programmes d’application (traitements)<br />
+Exemple : indépendante des structures de stockage utilisées. Changement de serveur.<br />
+
+:two: **Indépendance logique** : un remaniement de l’organisation logique des fichiers n’entraîne pas de  modification dans les programmes d’application non concernés. <br />
+Exemple : ajout d’une rubrique (date de naissance d’un étudiant)<br />
+
+:three: **Manipulation facile des données** : un utilisateur non-informaticien doit pouvoir manipuler simplement les données (interrogation et mise à jour)<br />
+
+:four: **Administration facile des données** : un SGBD doit fournir des outils pour décrire les données, permettre le suivi de ces structures et autoriser leur évolution.<br />
+
+:five: **Efficacité des accès aux données** : garantie d’un bon débit (nombre de transactions par seconde) et d’un bon temps de réponse (temps d’attente moyen pour une transaction)<br />
+
+:six: **Redondance contrôlée des données** : diminution du volume de stockage, pas de mise à jour multiple ni d’incohérence.<br />
+
+:seven: **Cohérence des données** : exemple : L’âge d’une personne doit être un nombre entier positif. Le SGBD doit veiller à ce que les applications respectent cette règle. <br />
+
+:eight: **Partage des données** : utilisation simultanée des données par différentes applications<br />
+
+:nine: **Sécurité des données** : les données doivent être protégées contre les accès non-autorisés ou en cas de panne.<br />
+
+## 3.2 Les composants d’un SGBDR
+
+Un SGBD est un ensemble de logiciels parmi lesquels il y a un ==moteur de base de données==, ==un interprète du langage SQL==, ==une interface de programmation==, et ==diverses interfaces utilisateur==. 
+
+![comosant](./data/dbms-image-1.png){: width=50% .center}
+
+:arrow_forward: **Le moteur de base de données**: C’est le composant central du SGBD qui effectue la majorité des traitements de manipulation du contenu des bases de données. 
 
 
+:arrow_forward: **Interprèteur SQL** : SQL est un langage informatique qui sert à exprimer des requêtes d'opérations sur les bases de données. L'interprète SQL décode les requêtes, et les transforme en un plan d'exécution détaillé, qui est alors transmis au moteur de base de données. 
 
+
+:arrow_forward: **Interface de programmation** : C’est une bibliothèque logicielle qui permet à un programme tiers de communiquer avec le SGBD, de demander des opérations et de récupérer des données provenant des bases de données. Le détail des demandes est souvent formulé en langage SQL. 
+
+
+:arrow_forward: **Interface utilisateur** : C’est l’interface graphique (homme-machine) qui permet de mettre en oeuvre toutes les fonctionnalités proposées par le SGBD. On retrouve parfois une interface dédiée à l’interrogation des données appelée QBE (Query By Example) : Le principe est que l'utilisateur présente un exemple du résultat de recherche attendu (sous forme d'une matrice), puis le soumet au SGBD.
+
+## 3.3 Les fonctions d’un SGDBR
+
+Un SGBDR possède plusieurs fonctions : 
+
+:arrow_forward: **Description des données LDD** : Langage de définition de Données : permet de décrire et de maintenir le structure des données (nom, longueur, type …) constituant la base.<br />
+
+A une base de données est associée un schéma, appelé MPD (Modèle physique de Donnée), qui décrit la structure et le type des données qu'elle contient et éventuellement quelques règles (ou contraintes) qui doivent être toujours vérifiées.<br />
+
+:arrow_forward: **Manipulation de données LMD** : Langage de manipulation de Données : recherche, mise à jour, transformation des données.<br />
+
+:arrow_forward: **Contrôle de l’intégrité des données LCD** : respect des contraintes d’intégrité (Il ne peut y avoir qu’un seul fournisseur f1, unicité d’une ligne)<br />
+
+:arrow_forward: **Gestion des transactions** : atomicité des transactions (pas de mélange entre transactions), accès simultané aux mêmes données rendu possible grâce à des techniques de verrou et sécurité (mot de passe, etc …)<br />
+
+Ces fonctions permettent :<br />
+:arrow_right_hook:	l'utilisation par des « non-informaticiens », c'est-à-dire n'ayant pas besoin de connaissance en système ou en programmation (mais l'apprentissage du langage d'extraction des données est lui indispensable) <br />
+:arrow_right_hook:	l'écriture de programmes ==indépendants== de la structure des données.<br />
+
+## 3.4 Les différents type d’utilisateurs
+
+On peut distinguer plusieurs rôles que doivent jouer un individu ou un groupe d’individus pour concevoir, créer, mettre en œuvre et exploiter une base de données. <br />
+
+:woman: Le **développeur d’applications** (ou analyste programmeur) : Après modélisation du système d’information étudié, c’est lui qui propose le modèle relationnel de la future base de données. Il est chargé ensuite d’élaborer les programmes pour exploiter la base de données. <br />
+
+:man: L’**administrateur de la base de données** : C’est lui qui (à partir du modèle relationnel) est chargé de l’aspect plus technique de la création de la base. Il assure les fonctionnalités d’administration et de sécurité des données. <br />
+
+:woman: L’**utilisateur** : Il s’agit de caractériser ici la personne qui se sert simplement de la base de données et qu’on appelle couramment l’utilisateur final (End User en anglais). Ces personnes ne sont pas des informaticiens, elles utilisent les ressources logicielles mises à disposition par le développeur et l’administrateur. L’utilisateur « averti » est capable d’interroger la base en utilisant le langage SQL.
+ 
+# 4. Le modèle relationnel
+
+## 4.1 Notions de table et de relation
+
+L’unité de stockage dans une base de données relationnelle est la **table**.<br />
+
+!!! info "définition"
+    Une **table** regroupe un ^^ensemble de données qui décrivent un même objet^^. On la représente graphiquement sous une forme de tableau dans lequel les lignes sont appelés **enregistrements** ou **tuple** ou **nuplet** et l’intitulé des colonnes les **champs** ou **attributs**.<br />
+    A l’intersection d’une ligne et d’une colonne figure une **valeur**.
+
+![schéma de vocabulaire](./data/schema_voca.png){: width=80% .center}
+
+Au niveau relationnel, ces tables correspondent aux relations ci-dessous : <br />
+
+GARCON(dossard, nom, prenom, datenais, enseigne) <br />
+PRODUIT(refproduit, designproduit, commentaireproduit, prixttcproduit, codegamme) <br />
+
+Ce mode de représentation est appelé ==« en intention »==, il représente la structure de la base de données (son schéma, son plan…). Par convention, le nom d’une table s’écrit en **MAJUSCULE**.<br />
+
+Au niveau relationnel, on parlera d’**occurrences** pour désigner les enregistrements et d’**attributs** pour parler des champs.<br />
+
+Chaque propriété de l’objet contenu dans la table doit être décrit par :<br />
+:memo: Son nom<br />
+:memo:Son type de données <br />
+
+|Champ	|Type|
+|:--:|:--:|
+|numCla	|Numérique|
+|libelléCla	|Texte|
+
+^^exemple de type de données :^^<br />
+:book: Texte : liste de caractères (lettres, chiffres, signes de ponctuation)<br />
+:1234: Numérique : données numériques utilisées dans des opérations mathématiques<br />
+:clock10: Date/Heure : valeur de date et heure<br />
+:ballot_box_with_check: Booléen : utilisé pour décrire un champ qui ne peut prendre qu’une des 2 valeurs Oui/Non ou Vrai/Faux ou Actif/Inactif.
+
+
+## 4.2 Attributs et clés
+
+!!! info "Définition"
+    Un **attribut** est une information, une ==donnée élémentaire==, une rubrique désignant le plus petit élément d’information manipulable. Il est caractérisé par un nom et un type. 
+
+^^Exemples :^^<br />
+:man: nomClient : attribut de type **alphabétique** (ex. de valeur : "DUPOND", "PAYET", ...) <br />
+:seven: qteCmdee : attribut de type **entier** (ex. de valeurs : 5, 10, 2, ...)<br />
+
+### APPLICATION
+
+Soit la relation <br />
+LECTEUR (nomLecteur, prenomLecteur) <br />
+
+et le contenu de la table correspondante : 
+
+![table lecteur](./data/lecteur.png){: width=50% .center}
+
+??? question "Que pensez-vous de l’exemple ci-dessus ?"
+    Il faut définir une clé pour cette relation. <br />
+
+    La clé est un attribut qui permet de distinguer chaque occurrence d’une relation par rapport à tous les autres. Toutes les valeurs de cet attribut doivent être uniques. <br />
+
+    :warning: Une relation doit posséder ^^au moins^^ un attribut et si c’est le cas, ce doit être la clé. 
+
+> **A faire :** Représentez une table valide avec deux attributs exactement, pourvu de 6 occurrences.
+
+ 
+## 4.3 Clé candidate et clé primaire
+
+### 4.3.1 Notion de clé primaire
+
+!!! info "Définition"
+    Dans une base de données relationnelle, une clé primaire est la donnée qui permet d'identifier de manière UNIQUE un enregistrement dans une table.
+
+> ==Une clé primaire est un attribut dont les valeurs sont UNIQUES et NON NULLES==<br />
+
+Les clés candidates sont des attributs susceptibles de pouvoir jouer le rôle de clé. <br />
+
+Dans le cas de la Table lecteur, aucun des champs ne peut jouer le rôle de clé. On rajoute alors un champ supplémentaire qui permettra de distinguer chaque lecteur : <br />
+
+LECTEUR (^^numLecteur^^, nomLecteur, prenomLecteur) 
+
+Le champ **numLecteur** devient alors la clé primaire de la relation. Par convention, ce doit être le premier attribut de la relation et il doit être ^^souligné^^. Dans la plupart des SGBDR, un type numérique spécial est dédié à ce type clé. Appelé NuméroAuto, AutoIncrement… il est géré automatiquement par le SGBDR.
+
+!!! info "Compléments"
+    Une clé primaire peut être composée d'une ou de plusieurs colonnes de la table. Deux lignes distinctes de la table ne peuvent pas avoir les mêmes valeurs dans les colonnes définies comme clé primaire. Il est possible de définir pour une même table plusieurs contraintes d'unicité, mais au plus une seule clé primaire. Une clé primaire est choisie parmi les clés candidates. Suivant les cas il peut être nécessaire ou préférable d'utiliser une clé artificielle ajoutée aux données comme clé primaire. 
+
+> **A faire :** Dans l’exemple ci-dessous, précisez pour chaque champ s’il peut ou non être clé candidate. Justifiez.
  
+![eleve](./data/eleve.png){: width=80% .center}
 
+## 4.4 Clé étrangère
 
+Ce type d’attribut permet de matérialiser les liens entre les différentes tables. <br />
 
-Définition SGBD : Ensemble des programmes permettant la gestion et l’accès à une base de données
-Elle est dite SGBDR, lorsqu’elle concerne une base de données relationnelle.
-Les SGBD relationnels sont à l’heure actuelle les plus diffusés sur le marché.
- Ils permettent d’organiser les données sous formes de tables. La description de la base de données est faite grâce à un schéma conceptuel ou relationnel permettant de décrire toutes les tables (relations) implantées sur disque. 
-Un SGBDR sert à effectuer des opérations ordinaires telles que consulter, modifier, construire, organiser, transformer, copier, sauvegarder ou restaurer des bases de données.
- 
-1	Les objectifs d’un SGBDR
+:bangbang: Une clé étrangère correspond à la clé primaire d’une autre table. <br />
 
-Indépendance physique : un remaniement de l’organisation physique des données n’entraîne pas de modification des programmes d’application (traitements)
-Exemple : indépendante des structures de stockage utilisées. Changement de serveur.
-Indépendance logique : un remaniement de l’organisation logique des fichiers n’entraîne pas de  modification dans les programmes d’application non concernés. 
-Exemple : ajout d’une rubrique (date de naissance d’un étudiant)
-Manipulation facile des données : un utilisateur non-informaticien doit pouvoir manipuler simplement les données (interrogation et mise à jour)
-Administration facile des données : un SGBD doit fournir des outils pour décrire les données, permettre le suivi de ces structures et autoriser leur évolution.
-Efficacité des accès aux données : garantie d’un bon débit (nombre de transactions par seconde) et d’un bon temps de réponse (temps d’attente moyen pour une transaction)
-Redondance contrôlée des données : diminution du volume de stockage, pas de mise à jour multiple ni d’incohérence.
-Cohérence des données : exemple : L’âge d’une personne doit être un nombre entier positif. Le SGBD doit veiller à ce que les applications respectent cette règle. 
-Partage des données : utilisation simultanée des données par différentes applications
-Sécurité des données : les données doivent être protégées contre les accès non-autorisés ou en cas de panne.
-2	Les composants d’un SGBDR
+![gamme](./data/gamme.png){: width=25% .center}
+![produit](./data/produit.png){: width=85% .center}
 
-Un SGBD est un ensemble de logiciels parmi lesquels il y a un moteur de base de données, un interprète du langage SQL, une interface de programmation, et diverses interfaces utilisateur. 
-Le moteur de base de données : C’est le composant central du SGBD qui effectue la majorité des traitements de manipulation du contenu des bases de données. 
-Interprète SQL : SQL est un langage informatique qui sert à exprimer des requêtes d'opérations sur les bases de données. L'interprète SQL décode les requêtes, et les transforme en un plan d'exécution détaillé, qui est alors transmis au moteur de base de données. 
-Interface de programmation : C’est une bibliothèque logicielle qui permet à un programme tiers de communiquer avec le SGBD, de demander des opérations et de récupérer des données provenant des bases de données. Le détail des demandes est souvent formulé en langage SQL. 
-ODBC est un logiciel médiateur (middleware) qui permet à des logiciels, par l'intermédiaire d'une interface de programmation unique de communiquer avec différents SGBD ayant chacun une interface de programmation différente. C'est un logiciel souvent utilisé avec les SGBD. 
- Interface utilisateur : C’est l’interface graphique (homme-machine) qui permet de mettre en oeuvre toutes les fonctionnalités proposées par le SGBD. On retrouve parfois une interface dédiée à l’interrogation des données appelée QBE (Query By Example) : Le principe est que l'utilisateur présente un exemple du résultat de recherche attendu (sous forme d'une matrice), puis le soumet au SGBD.
-3	Les fonctions d’un SGDBR
+Dans l’exemple ci dessus le dernier champ de la table PRODUIT appelé **codeGamme** correspond en fait à une valeur existante dans une autre table GAMME.
 
-Description des données LDD : Langage de définition de Données : permet de décrire et de maintenir le structure des données (nom, longueur, type …) constituant la base.
-A une base de données est associée un schéma, appelé MPD (Modèle physique de Donnée), qui décrit la structure et le type des données qu'elle contient et éventuellement quelques règles (ou contraintes) qui doivent être toujours vérifiées.
-Manipulation de données LMD : Langage de manipulation de Données : recherche, mise à jour, transformation des données.
-Contrôle de l’intégrité des données LCD : respect des contraintes d’intégrité (Il ne peut y avoir qu’un seul fournisseur f1, unicité d’une ligne)
-Gestion des transactions : atomicité des transactions (pas de mélange entre transactions), accès simultané aux mêmes données rendu possible grâce à des techniques de verrou et sécurité (mot de passe, etc …)
-Ces langages permettent :
-	l'utilisation par des « non-informaticiens », c'est-à-dire n'ayant pas besoin de connaissance en système ou en programmation (mais l'apprentissage du langage d'extraction des données est lui indispensable) 
-	l'écriture de programmes indépendants de la structure des données.
+Le champ **codeGamme** assure la liaison entre les deux tables. Ainsi, dans la table PRODUIT, on note que le produit désigné par « Lit 140x 190 cm » fait partie de la gamme n°3.<br />
+Dans la table GAMME on trouvera que la gamme n°3 correspond aux produits fabriqué en teck. <br />
+Le schéma relationnel de cette base peut s’écrire comme ci-dessous : <br />
 
-4	Les différents type d’utilisateurs
+GAMME (^^codegamme^^, libellegamme) <br />
+PRODUIT (^^refproduit^^, designproduit, commentaireproduit, prixttcproduit, #codegamme) <br />
 
-On peut distinguer plusieurs rôles que doivent jouer un individu ou un groupe d’individus pour concevoir, créer, mettre en œuvre et exploiter une base de données. 
-Le développeur d’applications (ou analyste programmeur) : Après modélisation du système d’information étudié, c’est lui qui propose le modèle relationnel de la future base de données. Il est chargé ensuite d’élaborer les programmes pour exploiter la base de données. 
-L’administrateur de la base de données : C’est lui qui (à partir du modèle relationnel) est chargé de l’aspect plus technique de la création de la base. Il assure les fonctionnalités d’administration et de sécurité des données. 
-L’utilisateur : Il s’agit de caractériser ici la personne qui se sert simplement de la base de données et qu’on appelle couramment l’utilisateur final (End User en anglais). Ces personnes ne sont pas des informaticiens, elles utilisent les ressources logicielles mises à disposition par le développeur et l’administrateur. L’utilisateur « averti » est capable d’interroger la base en utilisant le langage SQL.
- 
-4.	Le modèle relationnel
-
-1	Notions de table et de relation
-
-L’unité de stockage dans une base de données relationnelle est la table.
-Une table regroupe un ensemble de données qui décrivent un même objet. On la représente graphiquement sous une forme de tableau dans lequel les lignes sont appelés enregistrements (ou tupple) et l’intitulé des colonnes les champs.
-A l’intersection d’une ligne et d’une colonne figure une valeur.
-
-
-
-
-
-
-Au niveau relationnel, ces tables correspondent aux relations ci-dessous : 
-GARCON(dossard, nom, prenom, datenais, enseigne) 
-PRODUIT(refproduit, designproduit, commentaireproduit, prixttcproduit, codegamme) 
-Ce mode de représentation est appelé « en intention », il représente la structure de la base de données (son schéma, son plan…). Par convention, le nom d’une table s’écrit en MAJUSCULE.
-Au niveau relationnel, on parlera d’occurrences pour désigner les enregistrements et d’attributs pour parler des champs.
-Chaque propriété de l’objet contenu dans la table doit être décrit par :
-Son nom
-Son type de données
-Champ	Type
-numCla	Numérique
-libelléCla	Texte
-	
-
-2	Attributs et clés
-
-Un attribut est une information, une donnée élémentaire, une rubrique désignant le plus petit élément d’information manipulable. Il est caractérisé par un nom et un type. 
-Exemples : 
-nomClient : attribut de type alphabétique (ex. de valeur : "DUPOND", "PAYET", ...) 
-qteCmdee : attribut de type entier (ex. de valeurs : 5, 10, 2, ...)
-Soit la relation Lecteur(nomLecteur, prenomLecteur) et le contenu de la table correspondante : 
-
-
-
-
-
-
-
-Que pensez-vous de l’exemple ci-dessus ? 
-Réponse : 
-
-
-Il faut définir une clé pour cette relation. 
-La clé est un attribut qui permet de distinguer chaque occurrence d’une relation par rapport à tous les autres. Toutes les valeurs de cet attribut doivent être uniques. 
- Une relation doit posséder au moins un attribut et si c’est le cas, ce doit être la clé. 
-A faire : Représentez une table valide avec deux attributs exactement, pourvu de 6 occurrences.
+Par convention, une clé étrangère est précédée d’un # et est placée en *dernier* dans la liste des attributs d’une relation.
 
  
-3	Clé candidate et clé primaire
+## 4.5 Notions d’intégrité
 
-Les clés candidates sont des attributs susceptibles de pouvoir jouer le rôle de clé. 
-Dans le cas de la « Fig. 10 : Table lecteur », aucun des champs ne peut jouer le rôle de clé. On rajoute alors un champ supplémentaire qui permettra de distinguer chaque lecteur : 
-LECTEUR (numLecteur, nomLecteur, prenomLecteur) 
+Dans le domaine des bases de données, l’**intégrité des données** regroupe l’intégrité d’entité, l’intégrité de domaine, l’intégrité référentielle et l’intégrité définie par l’utilisateur.<br />
 
-Le champ numLecteur devient alors la clé primaire de la relation. Par convention, ce doit être le premier attribut de la relation et il doit être souligné. Dans la plupart des SGBDR, un type numérique spécial est dédié à ce type clé. Appelé NuméroAuto, AutoIncrement… il est géré automatiquement par le SGBDR.
+Dans le paragraphe «3.1 Les objectifs d’un SGBDR» nous avons vu que l’un des principaux objectifs d’un SGBDR était d’assurer la cohérence des données appelée également intégrité des données. <br />
 
+Cette cohérence est en partie assurée par la mise en place de contraintes d’intégrité. <br />
 
+!!! info "Intégrité d’entité"
+    L’**intégrité d’entité** définit une ligne comme étant une entité unique pour une table particulière. Elle garantit l’intégrité des colonnes d’identification ou de la clé primaire d’une table.<br />
+    
+    Chaque table dispose d’une clé primaire et UNE SEULE. <br />
 
+!!! info "Intégrité de domaine"
+    L’**intégrité de domaine** définit un ensemble de valeurs acceptables qu’une colonne est autorisée à contenir. Cette intégrité peut inclure des contraintes et d’autres mesures limitant le format, type et nombre de données saisies.<br />
+    Les contraintes de domaines sont liées aux colonnes des tables (attribut non nul, entier positif, valeurs comprises dans un intervalle…) 
 
+!!! info "Intégrité référentielle"
+    L’**intégrité référentielle** garantit la cohérence des valeurs de clés entre les tables. Ce type de cohérence impose qu’il n’y ait aucune référence à des valeurs inexistantes.<br />
 
-Dans l’exemple ci-dessous, précisez pour chaque champ s’il peut ou non être clé candidate. Justifiez.
- 
-Figure 12 : Table Eleve
-
-Réponse :
-
-
-
-
-
- 
-4	Clé étrangère
-
-Ce type d’attribut permet de matérialiser les liens entre les différentes tables. 
- Une clé étrangère correspond à la clé primaire d’une autre table. 
-Dans l’exemple de la « Figure 9 : Une table MySQL » le dernier champ appelé codeGamme correspond en fait à une valeur existante dans une autre table : GAMME.
-
-
-
-
-
-Le champ codeGamme assure la liaison entre les deux tables. Ainsi, dans la table Produit, on note que le produit désigné par « Lit 140x 190 cm » fait partie de la gamme n°3.
- Dans la table Gamme on trouvera que la gamme n°3 correspond aux produits fabriqué en teck. 
-Le schéma relationnel de cette base peut s’écrire comme ci-dessous : 
-GAMME (codegamme, libellegamme) 
-PRODUIT (refproduit, designproduit, commentaireproduit, prixttcproduit, #codegamme) 
-Par convention, une clé étrangère est précédée d’un # et est placée en dernier dans la liste des attributs d’une relation.
-
- 
- 
-5	Notions d’intégrité
-
-Dans le paragraphe «3.1 Les objectifs d’un SGBDR» nous avons vu que l’un des principaux objectifs d’un SGBDR était d’assurer la cohérence des données appelée également intégrité des données. 
-Cette cohérence est en partie assurée par la mise en place de contraintes d’intégrité. 
-a) Intégrité de « niveau table » 
-Dans la plupart des cas, chaque table dispose d’une clé primaire. 
-Les contraintes de domaines sont liées aux colonnes des tables (attribut non nul, entier positif, valeurs comprises dans un intervalle…) 
-b) Intégrité référentielle 
-Il s’agit ici pour le SGBDR de vérifier la cohérence clé étrangère/clé primaire. 
-La définition d’une telle contrainte forcera le SGBDR à faire les contrôles suivants : 
-o	Dans un champ clé étrangère il est impossible de renseigner une valeur qui n’existe pas dans la clé primaire (Le code gamme n° 4 ne peut être affecté à un produit si la gamme n’existe pas) 
-o	Impossible de supprimer un enregistrement de la table contenant la clé primaire s’il existe des enregistrements liés (Dans la table gamme, l’enregistrement correspondant au code gamme n°2 ne pourra être supprimé car il existe, dans la table produit, des enregistrements liés. 
-o	Impossible de modifier une valeur de clé primaire dans la table primaire si cet enregistrement a des enregistrements liés. 
+    Il s’agit ici pour le SGBDR de vérifier la cohérence clé étrangère/clé primaire. <br />
+    La définition d’une telle contrainte forcera le SGBDR à faire les contrôles suivants : <br />
+  	:heavy_check_mark: Dans un champ clé étrangère il est impossible de renseigner une valeur qui n’existe pas dans la clé primaire (Le code gamme n° 4 ne peut être affecté à un produit si la gamme n’existe pas) <br />
+    :heavy_check_mark: Impossible de supprimer un enregistrement de la table contenant la clé primaire s’il existe des enregistrements liés (Dans la table gamme, l’enregistrement correspondant au code gamme n°2 ne pourra être supprimé car il existe, dans la table produit, des enregistrements liés. <br />
+    :heavy_check_mark:I mpossible de modifier une valeur de clé primaire dans la table primaire si cet enregistrement a des enregistrements liés. 
