@@ -61,18 +61,9 @@ Exemple : Dans une entreprise on souhaite réaliser une base de données « four
 
 ![plan modélisation](./data/schema_global.png){: width=50% .center}
 
- L’organisation sémantique des informations peut être réalisée suivant plusieurs modèles de données. Les principaux modèles de base de données sont les suivants : <br />
 
-![modeles BD](./data/sgbd.webp){: width=70% .center}
-
-:arrow_lower_right: Le modèle hiérarchique <br />
-:arrow_lower_right: Le modèle réseau <br />
-:arrow_lower_right: Le modèle relationnel <br />
-:arrow_lower_right: Le modèle objet 
 
 Notons cependant que le modèle relationnel est aujourd’hui utilisé par la grande majorité des SGBD (environ ¾) et que l’on retrouve également d’autres modèles (ex. : navigationnel et déductif)
-
-![quelques SGBD](./data/SGBD_2023.png){: width=50% .center}
 
 ??? note "Un peu d'histoire"
 
@@ -101,7 +92,17 @@ Notons cependant que le modèle relationnel est aujourd’hui utilisé par la gr
 
     source : [technopedia](https://www.techopedia.com/fr/dictionnaire/sgbd-systeme-de-gestion-de-base-de-donnees)
 
+
 # 2 Les modèles de base de données 
+
+ L’organisation sémantique des informations peut être réalisée suivant plusieurs modèles de données. Les principaux modèles de base de données sont les suivants : <br />
+
+![modeles BD](./data/sgbd.webp){: width=70% .center}
+
+:arrow_lower_right: Le modèle hiérarchique <br />
+:arrow_lower_right: Le modèle réseau <br />
+:arrow_lower_right: Le modèle relationnel <br />
+:arrow_lower_right: Le modèle objet 
 
 ## 2.1 Le modèle hiérarchique 
 
@@ -147,7 +148,6 @@ Une base de données relationnelles est très efficace dans la plupart des cas p
 > :arrow_down: être source de redondance, c’est-à-dire de répétition inutile d’information. Cette redondance pouvant à son tour entraîner des incohérences lors de mises à jour, si on ne modifie pas l’information redondante partout où elle est présente <br />
 > :arrow_down: être contradictoire avec les hypothèses, et ne pas permettre de représenter une information correcte <br />
 > :arrow_down: avoir une incidence sur le nombre d’opérations nécessaires pour chercher une information ou pour les mettre à jour.
-
  
 ## 2.4 Le modèle objet
 
@@ -160,6 +160,20 @@ Les SGBDO (Systèmes de Gestion de Bases de Données orientés Objet) sont recom
 
 :x: **Problème :** Ils ont pour inconvénient principal une très importante quantité de ressources (mémoire et temps de calcul). Ils sont par conséquent cantonnés à des niches telles que l’ingénierie, les études spatiales, ou encore la recherche fondamentale en physique et en biologie moléculaire.
 
+## 2.5 Le Modèle NoSQL
+
+Le modèle **NoSQL** (Not Only SQL) est un type de système de gestion de bases de données qui offre une approche flexible pour stocker et gérer des données, en contraste avec les bases de données relationnelles traditionnelles (SQL). Contrairement aux bases de données relationnelles qui reposent sur des tables fixes et des schémas stricts, NoSQL est conçu pour gérer des données non structurées ou semi-structurées et s'adapte mieux à des volumes massifs de données avec des structures de données variées.<br />
+
+Plusieurs types principaux de bases de données NoSQL :<br />
+:arrow_forward: Bases de données de type clé-valeur : Stockent les données sous forme de paires clé-valeur (ex. Redis, DynamoDB).<br />
+:arrow_forward: Bases de données documentaires : Stockent les données sous forme de documents (souvent JSON ou BSON), avec des champs flexibles (ex. MongoDB, CouchDB).<br />
+:arrow_forward: Bases de données en colonnes : Organisent les données en colonnes plutôt qu’en lignes, adaptées à des requêtes massives (ex. Cassandra, HBase).<br />
+:arrow_forward: Bases de données de type graphe : Gèrent des données fortement interconnectées, souvent pour des applications de réseaux sociaux ou de recommandations (ex. Neo4j, OrientDB).<br />
+
+:ballot_box_with_check: Avantage : Flexibilité des schémas, évolutivité massive en terme de taille, performance élévée en lecture/écriture<br />
+:x: **Problème :** Manque de normalisation des données, Difficulté avec les requêtes complexes, complexité de gestion des données déportée côté développement<br />
+
+![quelques SGBD](./data/SGBD_2023.png){: width=50% .center}
  
 # 3 Le système relationnel
 
@@ -261,8 +275,8 @@ Ce mode de représentation est appelé ==« en intention »==, il représente la
 Au niveau relationnel, on parlera d’**occurrences** pour désigner les enregistrements et d’**attributs** pour parler des champs.<br />
 
 Chaque propriété de l’objet contenu dans la table doit être décrit par :<br />
-:memo: Son nom<br />
-:memo:Son type de données <br />
+:hash: Son nom<br />
+:hash: Son type de données <br />
 
 |Champ	|Type|
 |:--:|:--:|
@@ -301,8 +315,6 @@ et le contenu de la table correspondante :
 
     :warning: Une relation doit posséder ^^au moins^^ un attribut et si c’est le cas, ce doit être la clé. 
 
-> **A faire :** Représentez une table valide avec deux attributs exactement, pourvu de 6 occurrences.
-
  
 ## 4.3 Clé candidate et clé primaire
 
@@ -315,7 +327,7 @@ et le contenu de la table correspondante :
 
 Les clés candidates sont des attributs susceptibles de pouvoir jouer le rôle de clé. <br />
 
-Dans le cas de la Table lecteur, aucun des champs ne peut jouer le rôle de clé. On rajoute alors un champ supplémentaire qui permettra de distinguer chaque lecteur : <br />
+Dans le cas de la Table LECTEUR, aucun des champs ne peut jouer le rôle de clé. On rajoute alors un champ supplémentaire qui permettra de distinguer chaque lecteur : <br />
 
 LECTEUR (^^numLecteur^^, nomLecteur, prenomLecteur) 
 
@@ -324,9 +336,6 @@ Le champ **numLecteur** devient alors la clé primaire de la relation. Par conve
 !!! info "Compléments"
     Une clé primaire peut être composée d'une ou de plusieurs colonnes de la table. Deux lignes distinctes de la table ne peuvent pas avoir les mêmes valeurs dans les colonnes définies comme clé primaire. Il est possible de définir pour une même table plusieurs contraintes d'unicité, mais au plus une seule clé primaire. Une clé primaire est choisie parmi les clés candidates. Suivant les cas il peut être nécessaire ou préférable d'utiliser une clé artificielle ajoutée aux données comme clé primaire. 
 
-> **A faire :** Dans l’exemple ci-dessous, précisez pour chaque champ s’il peut ou non être clé candidate. Justifiez.
- 
-![eleve](./data/eleve.png){: width=80% .center}
 
 ## 4.4 Clé étrangère
 
@@ -347,6 +356,33 @@ GAMME (^^codegamme^^, libellegamme) <br />
 PRODUIT (^^refproduit^^, designproduit, commentaireproduit, prixttcproduit, #codegamme) <br />
 
 Par convention, une clé étrangère est précédée d’un # et est placée en *dernier* dans la liste des attributs d’une relation.
+
+!!! question "Base étudiant"
+    === "Énoncé"
+     
+        Un établissement scolaire a besoin d'enregistrer des étudiants, ainsi que les modules (cours) auxquels ils sont inscrits. Un analyste a esquissé le schéma conceptuel suivants.<br />
+        ![eleve](./data/relationnel.png){: width=80% .center}
+        1. Donner des exemples d'occurrences pour chaque table.<br />
+        2. Précisez pour chaque champ s’il peut ou non être clé candidate pour être clé primaire. <br />
+        Justifiez.<br />
+        3. Donner le schéma relationnel 'en intention' de la base Etudiant
+
+    === "Correction"
+        ![etudiant correction](./data/etudiant_corr.png)
+        Pour la table ETUDIANT :<br />
+        seul num peut être un attribut candidat. nom et prenom ne peuvent servir d'identifiant de personne du fait des homonymes.<br />
+        Pour la table MODULE : <br />
+        Les deux champs peuvent être candidat si l'on part du postulat que deux cours ne peuvent pas porter le même nom. Le champ code est plus adequate car plus synthétique.<br />
+        Pour la table INSCRIPTION : <br />
+        Le champ `num` ne peut pas être candidat : un etudiant peut suivre plusieurs matières (ici voir A001)<br />
+        Le champ `code` ne peut pas être candidat : une matière est suivie par plusieurs etudiants (ici SI3)<br />
+        Le champ `note` ne peut pas être candidat : Une note peut être attibuée plusieurs fois.<br />
+        Il est possible créer un champ artificiel numéroté mais une autre solution est de choisir une combinaison de champ. Ici la clé primaire est la combinaison des champs `num` et `code`. c'est également cohérent avec le fonctionnel, un etudiant suit un cours.<br />
+        ==Il y a une et une seule clé primaire qui porte sur plusieurs champs.==<br />
+
+        ETUDIANT(^^num^^,nom, prenom)<br />
+        MODULE(^^code^^, titre)<br />
+        INSCRIPTION(^^num, code^^, note)<br />
 
  
 ## 4.5 Notions d’intégrité
@@ -369,7 +405,7 @@ Cette cohérence est en partie assurée par la mise en place de contraintes d’
 !!! info "Intégrité référentielle"
     L’**intégrité référentielle** garantit la cohérence des valeurs de clés entre les tables. Ce type de cohérence impose qu’il n’y ait aucune référence à des valeurs inexistantes.<br />
 
-    Il s’agit ici pour le SGBDR de vérifier la cohérence clé étrangère/clé primaire. <br />
+    Plus précisément, il s’agit ici pour le SGBDR de vérifier la cohérence clé étrangère/clé primaire. <br />
     La définition d’une telle contrainte forcera le SGBDR à faire les contrôles suivants : <br />
   	:heavy_check_mark: Dans un champ clé étrangère il est impossible de renseigner une valeur qui n’existe pas dans la clé primaire (Le code gamme n° 4 ne peut être affecté à un produit si la gamme n’existe pas) <br />
     :heavy_check_mark: Impossible de supprimer un enregistrement de la table contenant la clé primaire s’il existe des enregistrements liés (Dans la table gamme, l’enregistrement correspondant au code gamme n°2 ne pourra être supprimé car il existe, dans la table produit, des enregistrements liés. <br />
