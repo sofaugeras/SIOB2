@@ -1,7 +1,7 @@
 # sommaire
 
-1. [Introduction au Base de données](./1.1_introduction/cours.md)
-2. [Langage de Manipulation de données]()
+1. [Introduction au Base de données](./1_introduction/cours.md)
+2. [Langage de Manipulation de données](./2_LMD/cours.md)
 3. [Langage de Création de données]()
 4. [SQL Complexe]()
 

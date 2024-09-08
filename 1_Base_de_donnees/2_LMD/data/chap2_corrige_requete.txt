@@ -1,0 +1,150 @@
+R1 : 
+SELECT * 
+FROM AVION ;
+
+R2 : 
+SELECT NomAvion, capacite
+FROM AVION ;
+
+R3 : 
+SELECT DISTINCT nomAvion, capacite
+FROM AVION;
+
+R4 : 
+SELECT NomAvion, Capacite
+FROM AVION
+WHERE capacite >= 100 ;
+
+R5 :
+SELECT nomPilote, bonus, salaire
+FROM PILOTE
+WHERE bonus > salaire ;
+
+R6 : 
+SELECT nomPilote, bonus
+FROM PILOTE
+WHERE bonus BETWEEN 800 and 1000 ;
+
+R6Bis : 
+SELECT nomPilote, bonus
+FROM PILOTE
+WHERE bonus >= 800 and bonus <=1000 ;
+
+R7 :
+SELECT nomPilote
+FROM PILOTE
+WHERE nomPilote LIKE "DUP%" ;
+
+R8 : 
+SELECT numVol
+FROM VOL
+WHERE villeArrivee IN ("GILLOT", "MAURICE") ;
+
+R8Bis : 
+SELECT numVol
+FROM VOL
+WHERE villeArrivee="GILLOT" OR  villeArrivee="MAURICE") ;
+
+R9 :
+SELECT nomPilote, bonus
+FROM PILOTE
+WHERE (adresse LIKE "%STE MARIE" OR adresse LIKE "%ST DENIS") AND bonus > 1000 ;
+
+R10 :
+SELECT NumPilote, NomPilote, bonus
+FROM PILOTE
+WHERE bonus IS NULL ;
+
+R11 :
+SELECT NumVol, NomAvion
+FROM VOL INNER JOIN AVION
+ON VOL.numAvion = AVION.numAvion ;
+
+R12 :
+SELECT nomPilote
+FROM PILOTE INNER JOIN VOL
+ON PILOTE.numPilote = VOL.numPilote
+WHERE numVol = 'AF7684' ;
+
+R13 :
+SELECT nomPilote
+FROM PILOTE INNER JOIN VOL
+ON PILOTE.numPilote = VOL.numPilote
+WHERE nomAvion LIKE "%747-400%" ;
+
+R14 :
+SELECT numAvion, NomAvion, capacite
+FROM AVION
+ORDER BY nomAvion ; (ASC est facultatif, car c'est la valeur par defaut)
+
+R15 :
+SELECT NomPilote, bonus
+FROM PILOTE
+WHERE bonus IS NOT NULL
+ORDER BY bonus DESC ;
+
+R16 :
+SELECT nomPilote
+FROM PILOTE
+WHERE (salaire + bonus) > 4200 OR salaire > 4200 ;
+
+R17 : 
+SELECT AVG(salaire)
+FROM PILOTE ;
+
+R18 :
+SELECT MAX(salaire) AS plusGrosSalaire
+FROM PILOTE ;
+
+R19 :
+SELECT COUNT(*)
+FROM AVION
+WHERE capacite > 100 ;
+
+R20 :
+SELECT COUNT(*)
+FROM AVION ;
+
+R21 :
+SELECT COUNT(bonus)/COUNT(*)x100
+FROM PILOTE ;
+
+R22 : 
+SELECT VilleDepart, COUNT(*) AS nbVols
+FROM VOL 
+GROUP BY VilleDepart ;
+
+R23 :
+SELECT VilleDepart, SUM(capacite) AS NbPlaces
+FROM VOL INNER JOIN AVION
+ON VOL.numAvion = AVION.numAvion
+GROUP BY VilleDepart ;
+
+R24 :
+SELECT VilleDepart, COUNT(*) AS nbVols
+FROM VOL 
+GROUP BY VilleDepart 
+HAVING COUNT(*) >= 2 ;
+
+Ra :
+INSERT INTO AVION(numAvion, NomAvion, capacite)
+VALUES (7, "A319", 100) ;
+
+Rb :
+UPDATE PILOTE
+SET salaire = salaire * 1.05 ;
+
+Rc :
+UPDATE PILOTE
+SET bonus = bonus + 25
+WHERE bonus < 1000 ;
+
+UPDATE PILOTE
+SET bonus = 25
+WHERE bonus IS NULL ;
+
+Rd :
+DELETE FROM AVION
+WHERE numAvion = 7 ;
+
+

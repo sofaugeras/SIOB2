@@ -2,19 +2,24 @@
 
 !!! warning "Actu SIO1"
 
+    :pushpin: Thème en cours : [Generalités SQL](./1_Base_de_donnees/1_introduction/cours.md)
+
     :school_satchel: Rentrée le 4 septembre 2024<br />
     :bus: Journée d'intégration : Mardi 17 septembre<br />
     :closed_book: Premiere série de DS : du 25 au 29 Novembre 2024<br />
     :date: Stage SIO1 : 19 mai au 20 juin 2025
 
-    
 
 !!! warning "Actu SIO2"
+
+    :pushpin: Thème en cours B2 : Révisions SQL : Cas Anabase<br />
+    :pushpin: Thème en cours B3 : Cas bijoo
 
     :school_satchel: Rentrée le 4 septembre 2024<br />
     :bus: Journée d'intégration : Mardi 17 septembre<br />
     :closed_book: Premiere série de DS : du 12 au 15 novembre 2024<br />
     :date: Stage SIO2 : 6 janvier au 14 février 2025
+
 
 !!! tip "les essentiels"
     - [Lien vers le BO](https://www.reseaucerta.org/sites/default/files/sio/BTS_ServicesInformatiquesOrganisations2019.pdf)

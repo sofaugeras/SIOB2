@@ -1,6 +1,6 @@
-# 1 Généralités 
+## 1. Généralités
 
-## 1.1 Définition 
+### 1.1 Définition 
 
 **Définition générale :** Une Base de données est un ensemble organisé d'informations avec un objectif commun. <br />
 
@@ -25,7 +25,7 @@ Une base de données peut être locale ou répartie. Elle est dite *locale* quan
     [vidéo](https://www.youtube.com/watch?v=pvVWqQTX3OQ)
 
 
-## 1.2 Historique 
+### 1.2 Historique 
 
 Au  début de l'informatique, on a voulu construire des systèmes pour effectuer des calculs (équations différentielles, calcul matriciel, ...). L’approche classique de mise en place d’une application informatique dans une entreprise, consistait le plus souvent à l’écriture d’un certain nombre de programmes destinés à l’exploitation d’un ensemble de fichiers qu’il fallait aussi créer. 
  
@@ -41,7 +41,7 @@ Ce système par fichier est toujours exploité dans les grandes entreprises. Sys
 Aujourd’hui, la tendance actuelle est la gestion de grandes voire très grandes quantités d'informations. Cela revient à stocker des données et manipuler ces données. Notons que les données peuvent être de natures diverses, les opérations plus ou moins compliquées et nombre d’utilisateurs plus ou moins important. <br />
 
 
-## 1.3 Le système de gestion de base de données SGDB
+### 1.3 Le système de gestion de base de données SGDB
 
 Une base de données est un ensemble d’informations stocké sur un système informatique. <br />
 Cet ensemble est implanté physiquement sous la forme d’un ou plusieurs fichiers. <br />
@@ -60,8 +60,6 @@ L’objectif est de modéliser le domaine étudié. (On n’abordera pas les mé
 Exemple : Dans une entreprise on souhaite réaliser une base de données « fournisseurs » La modélisation consistera à recenser les informations nécessaires concernant les fournisseurs (raison sociale, téléphone, e-mail…) et les produits (référence, désignation, prix…) ainsi que les liens entre ces deux entités (Qui fournit quoi ?)
 
 ![plan modélisation](./data/schema_global.png){: width=50% .center}
-
-
 
 Notons cependant que le modèle relationnel est aujourd’hui utilisé par la grande majorité des SGBD (environ ¾) et que l’on retrouve également d’autres modèles (ex. : navigationnel et déductif)
 
@@ -92,8 +90,7 @@ Notons cependant que le modèle relationnel est aujourd’hui utilisé par la gr
 
     source : [technopedia](https://www.techopedia.com/fr/dictionnaire/sgbd-systeme-de-gestion-de-base-de-donnees)
 
-
-# 2 Les modèles de base de données 
+## 2 Les modèles de base de données 
 
  L’organisation sémantique des informations peut être réalisée suivant plusieurs modèles de données. Les principaux modèles de base de données sont les suivants : <br />
 
@@ -104,7 +101,7 @@ Notons cependant que le modèle relationnel est aujourd’hui utilisé par la gr
 :arrow_lower_right: Le modèle relationnel <br />
 :arrow_lower_right: Le modèle objet 
 
-## 2.1 Le modèle hiérarchique 
+### 2.1 Le modèle hiérarchique 
 
 Conçu à la NASA pour la gestion des données du programme spatial Apollo, les données sont classées hiérarchiquement, selon une arborescence descendante. Ce modèle utilise des **pointeurs** entre les différents enregistrements. Bien adapté à des données de type nomenclatures avec une relation **1** vers **N** mais inapproprié aux structures de données complexes. 
 
@@ -122,7 +119,7 @@ Exemples de base de données naturelles hiérarchiques : <br />
 :x: **Problème :** Le point d’accès de l’information est unique (la racine). Il faut parfois parcourir toute l’arborescence pour trouver une information.
 
  
-## 2.2 Le modèle réseau
+### 2.2 Le modèle réseau
 
 Ce modèle constitue une extension du modèle hiérarchique, il utilise des pointeurs vers des enregistrements selon une structure arborescente. Il est cependant possible d’établir des liens sans restriction entre les différents éléments.<br />
 
@@ -135,7 +132,7 @@ Exemple : <br />
 
 :x: **Problème :** Pour retrouver une donnée dans une telle représentation, il faut connaître le chemin d'accès (les liens) ce qui rend les programmes dépendants de la structure de données
 
-## 2.3 Le modèle relationnel
+### 2.3 Le modèle relationnel
 
 Ce modèle du milieu des années 70 est fondé sur la ==théorie mathématique des relations==. Un modèle relationnel peut être vu comme un ensemble de **tables** (ou **relations**) à $n$ colonnes, $n$ désignant le degré de la relation. <br />
  
@@ -149,7 +146,7 @@ Une base de données relationnelles est très efficace dans la plupart des cas p
 > :arrow_down: être contradictoire avec les hypothèses, et ne pas permettre de représenter une information correcte <br />
 > :arrow_down: avoir une incidence sur le nombre d’opérations nécessaires pour chercher une information ou pour les mettre à jour.
  
-## 2.4 Le modèle objet
+### 2.4 Le modèle objet
 
 La notion de bases de données objet ou relationnel-objet est plus récente. <br />
 Les données sont représentées sous forme d'**objets**. Comme en programmation orientée objet, les objets contiennent les données qui les décrivent ainsi que la logique qui permet de les utiliser ou de les modifier. Chaque enregistrement de la base de données constitue une instance de la classe d’objets correspondante. Ces instances sont classées de manière hiérarchique dans la base de données. 
@@ -160,7 +157,7 @@ Les SGBDO (Systèmes de Gestion de Bases de Données orientés Objet) sont recom
 
 :x: **Problème :** Ils ont pour inconvénient principal une très importante quantité de ressources (mémoire et temps de calcul). Ils sont par conséquent cantonnés à des niches telles que l’ingénierie, les études spatiales, ou encore la recherche fondamentale en physique et en biologie moléculaire.
 
-## 2.5 Le Modèle NoSQL
+### 2.5 Le Modèle NoSQL
 
 Le modèle **NoSQL** (Not Only SQL) est un type de système de gestion de bases de données qui offre une approche flexible pour stocker et gérer des données, en contraste avec les bases de données relationnelles traditionnelles (SQL). Contrairement aux bases de données relationnelles qui reposent sur des tables fixes et des schémas stricts, NoSQL est conçu pour gérer des données non structurées ou semi-structurées et s'adapte mieux à des volumes massifs de données avec des structures de données variées.<br />
 
@@ -175,7 +172,7 @@ Plusieurs types principaux de bases de données NoSQL :<br />
 
 ![quelques SGBD](./data/SGBD_2023.png){: width=50% .center}
  
-# 3 Le système relationnel
+## 3 Le système relationnel
 
 !!! info "Définition SGBD"
     Ensemble des programmes permettant la gestion et l’accès à une base de données
@@ -186,7 +183,7 @@ Les SGBD relationnels sont à l’heure actuelle les plus diffusés sur le march
 > La description de la base de données est faite grâce à un schéma conceptuel ou relationnel permettant de décrire toutes les tables (relations) implantées sur disque. <br />
 > Un SGBDR sert à effectuer des opérations ordinaires telles que **consulter**, **modifier**, **construire**, **organiser**, **transformer**, **copier**, **sauvegarder** ou **restaurer** des bases de données.<br />
  
-## 3.1 Les objectifs d’un SGBDR
+### 3.1 Les objectifs d’un SGBDR
 
 :one: **Indépendance physique**: un remaniement de l’organisation physique des données n’entraîne pas de modification des programmes d’application (traitements)<br />
 Exemple : indépendante des structures de stockage utilisées. Changement de serveur.<br />
@@ -225,7 +222,7 @@ Un SGBD est un ensemble de logiciels parmi lesquels il y a un ==moteur de base d
 
 :arrow_forward: **Interface utilisateur** : C’est l’interface graphique (homme-machine) qui permet de mettre en oeuvre toutes les fonctionnalités proposées par le SGBD. On retrouve parfois une interface dédiée à l’interrogation des données appelée QBE (Query By Example) : Le principe est que l'utilisateur présente un exemple du résultat de recherche attendu (sous forme d'une matrice), puis le soumet au SGBD.
 
-## 3.3 Les fonctions d’un SGDBR
+### 3.3 Les fonctions d’un SGDBR
 
 Un SGBDR possède plusieurs fonctions : 
 
@@ -243,7 +240,7 @@ Ces fonctions permettent :<br />
 :arrow_right_hook:	l'utilisation par des « non-informaticiens », c'est-à-dire n'ayant pas besoin de connaissance en système ou en programmation (mais l'apprentissage du langage d'extraction des données est lui indispensable) <br />
 :arrow_right_hook:	l'écriture de programmes ==indépendants== de la structure des données.<br />
 
-## 3.4 Les différents type d’utilisateurs
+### 3.4 Les différents type d’utilisateurs
 
 On peut distinguer plusieurs rôles que doivent jouer un individu ou un groupe d’individus pour concevoir, créer, mettre en œuvre et exploiter une base de données. <br />
 
@@ -253,9 +250,9 @@ On peut distinguer plusieurs rôles que doivent jouer un individu ou un groupe d
 
 :woman: L’**utilisateur** : Il s’agit de caractériser ici la personne qui se sert simplement de la base de données et qu’on appelle couramment l’utilisateur final (End User en anglais). Ces personnes ne sont pas des informaticiens, elles utilisent les ressources logicielles mises à disposition par le développeur et l’administrateur. L’utilisateur « averti » est capable d’interroger la base en utilisant le langage SQL.
  
-# 4. Le modèle relationnel
+## 4 Le modèle relationnel
 
-## 4.1 Notions de table et de relation
+### 4.1 Notions de table et de relation
 
 L’unité de stockage dans une base de données relationnelle est la **table**.<br />
 
@@ -290,7 +287,7 @@ Chaque propriété de l’objet contenu dans la table doit être décrit par :<b
 :ballot_box_with_check: Booléen : utilisé pour décrire un champ qui ne peut prendre qu’une des 2 valeurs Oui/Non ou Vrai/Faux ou Actif/Inactif.
 
 
-## 4.2 Attributs et clés
+### 4.2 Attributs et clés
 
 !!! info "Définition"
     Un **attribut** est une information, une ==donnée élémentaire==, une rubrique désignant le plus petit élément d’information manipulable. Il est caractérisé par un nom et un type. 
@@ -299,7 +296,7 @@ Chaque propriété de l’objet contenu dans la table doit être décrit par :<b
 :man: nomClient : attribut de type **alphabétique** (ex. de valeur : "DUPOND", "PAYET", ...) <br />
 :seven: qteCmdee : attribut de type **entier** (ex. de valeurs : 5, 10, 2, ...)<br />
 
-### APPLICATION
+#### APPLICATION
 
 Soit la relation <br />
 LECTEUR (nomLecteur, prenomLecteur) <br />
@@ -316,9 +313,9 @@ et le contenu de la table correspondante :
     :warning: Une relation doit posséder ^^au moins^^ un attribut et si c’est le cas, ce doit être la clé. 
 
  
-## 4.3 Clé candidate et clé primaire
+### 4.3 Clé candidate et clé primaire
 
-### 4.3.1 Notion de clé primaire
+#### 4.3.1 Notion de clé primaire
 
 !!! info "Définition"
     Dans une base de données relationnelle, une clé primaire est la donnée qui permet d'identifier de manière UNIQUE un enregistrement dans une table.
@@ -337,7 +334,7 @@ Le champ **numLecteur** devient alors la clé primaire de la relation. Par conve
     Une clé primaire peut être composée d'une ou de plusieurs colonnes de la table. Deux lignes distinctes de la table ne peuvent pas avoir les mêmes valeurs dans les colonnes définies comme clé primaire. Il est possible de définir pour une même table plusieurs contraintes d'unicité, mais au plus une seule clé primaire. Une clé primaire est choisie parmi les clés candidates. Suivant les cas il peut être nécessaire ou préférable d'utiliser une clé artificielle ajoutée aux données comme clé primaire. 
 
 
-## 4.4 Clé étrangère
+#### 4.3.2 Notion de Clé étrangère
 
 Ce type d’attribut permet de matérialiser les liens entre les différentes tables. <br />
 
@@ -385,7 +382,7 @@ Par convention, une clé étrangère est précédée d’un # et est placée en 
         INSCRIPTION(^^num, code^^, note)<br />
 
  
-## 4.5 Notions d’intégrité
+### 4.5 Notions d’intégrité
 
 Dans le domaine des bases de données, l’**intégrité des données** regroupe l’intégrité d’entité, l’intégrité de domaine, l’intégrité référentielle et l’intégrité définie par l’utilisateur.<br />
 

@@ -1,0 +1,32 @@
+R25 : Quels sont les vols (NumVol) triés par ordre croissant, assurés par Toto ? 
+SELECT NumVol 
+FROM VOL
+INNER JOIN PILOTE
+ON VOL.NumPilote = PILOTE.NumPilote
+Where NomPilote = "Toto";
+
+R26 : Combien de vols y a-t-il au départ de Gillot ? 
+SELECT Count(NumVol) AS NbVolGillot
+FROM VOL
+WHERE VilleDepart = "Gillot" ;
+
+R27 : Combien de vols sont assurés par des ATR ? 
+SELECT Count(VOL.NumVol) AS NbATR
+FROM VOL INNER JOIN AVION ON AVION.NumAvion = VOL.NumAvion
+WHERE AVION.NomAvion Like "ATR*";
+
+R28 : Liste des vols (NumVol et NumAvion) au départ de Paris dont la capacité est supérieure à 400 places ? 
+SELECT VOL.NumVol, AVION.NumAvion
+FROM VOL
+INNER JOIN AVION
+ON VOL.NumAvion = AVION.NumAvion
+WHERE AVION.Capacite > 400;
+
+R29 : Liste des avions (NumAvion et NomAvion) pilotés par le pilote nommé Hoareau au départ de Gillot ? 
+SELECT AVION.NumAVion, AVION.NomAvion
+FROM ((AVION INNER JOIN VOL
+ON AVION.NumAvion = Vol.NumAvion)
+INNER JOIN PILOTE
+ON VOL.NumPilote = PILOTE.NumPilote)
+WHERE  PILOTE.NomPilote = "Hoareau"
+AND VOL.VilleDepart = "Gillot" ;
