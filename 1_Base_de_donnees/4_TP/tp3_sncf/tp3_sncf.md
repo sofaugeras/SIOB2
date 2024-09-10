@@ -2,18 +2,18 @@
 
 ![gif](./data/tp3/99Ug.gif){: width=50% .center}
 
-Soient les relations suivantes :
+Soient les relations suivantes :<br />
 
-GARE (CodeGare, NomGare, NomVille)
-TRAIN (NumTrain, #CodGareDep, #CodGareArr, Hdep, Harr, CodTrf)
-COMPOSITION (#NumTrain, DatDep, Ass1, Ass2, Cch1, Cch2)
-EXCEPTION (#NumTrain, DatDep)
+**GARE** (^^CodeGare^^, NomGare, NomVille)<br />
+**TRAIN** (^^NumTrain^^, #CodGareDep, #CodGareArr, Hdep, Harr, CodTrf)<br />
+**COMPOSITION** (^^#NumTrain, DatDep^^, Ass1, Ass2, Cch1, Cch2)<br />
+**EXCEPTION** (^^#NumTrain, DatDep^^)<br />
 
 
-CodTrf : Code trafic (Q: quotidien, D: samedi, dimanche et fêtes)
-Ass1, Ass2 : nombre de wagons place assise en 1° classe et 2°classe
-Cch1, Cch2 : nombre de wagons couchette en 1° classe et 2° classe
-La présence d'un tuple dans l'objet EXCEPTION indique que le train ne roulera pas ce jour là, quel que soit son code trafic.
+:arrow_forward: **CodTrf** : Code trafic (Q: quotidien, D: samedi, dimanche et fêtes)<br />
+:arrow_forward: **Ass1, Ass2** : nombre de wagons place assise en 1° classe et 2°classe<br />
+:arrow_forward: **Cch1, Cch2** : nombre de wagons couchette en 1° classe et 2° classe<br />
+:arrow_forward: La présence d'un tuple dans l'objet **EXCEPTION** indique que le train ne roulera pas ce jour là, quel que soit son code trafic.
 
 
 Réalisez le script SQL pour :

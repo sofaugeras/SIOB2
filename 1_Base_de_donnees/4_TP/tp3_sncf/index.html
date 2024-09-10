@@ -3006,15 +3006,15 @@
 
 <h1 id="tp3-contexte-sncf">TP3 Contexte SNCF<a class="headerlink" href="#tp3-contexte-sncf" title="Permanent link">⚓︎</a></h1>
 <p><img alt="gif" class="center" src="../data/tp3/99Ug.gif" width="50%" /></p>
-<p>Soient les relations suivantes :</p>
-<p>GARE (CodeGare, NomGare, NomVille)
-TRAIN (NumTrain, #CodGareDep, #CodGareArr, Hdep, Harr, CodTrf)
-COMPOSITION (#NumTrain, DatDep, Ass1, Ass2, Cch1, Cch2)
-EXCEPTION (#NumTrain, DatDep)</p>
-<p>CodTrf : Code trafic (Q: quotidien, D: samedi, dimanche et fêtes)
-Ass1, Ass2 : nombre de wagons place assise en 1° classe et 2°classe
-Cch1, Cch2 : nombre de wagons couchette en 1° classe et 2° classe
-La présence d'un tuple dans l'objet EXCEPTION indique que le train ne roulera pas ce jour là, quel que soit son code trafic.</p>
+<p>Soient les relations suivantes :<br /></p>
+<p><strong>GARE</strong> (<ins>CodeGare</ins>, NomGare, NomVille)<br />
+<strong>TRAIN</strong> (<ins>NumTrain</ins>, #CodGareDep, #CodGareArr, Hdep, Harr, CodTrf)<br />
+<strong>COMPOSITION</strong> (<ins>#NumTrain, DatDep</ins>, Ass1, Ass2, Cch1, Cch2)<br />
+<strong>EXCEPTION</strong> (<ins>#NumTrain, DatDep</ins>)<br /></p>
+<p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> <strong>CodTrf</strong> : Code trafic (Q: quotidien, D: samedi, dimanche et fêtes)<br />
+<img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> <strong>Ass1, Ass2</strong> : nombre de wagons place assise en 1° classe et 2°classe<br />
+<img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> <strong>Cch1, Cch2</strong> : nombre de wagons couchette en 1° classe et 2° classe<br />
+<img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> La présence d'un tuple dans l'objet <strong>EXCEPTION</strong> indique que le train ne roulera pas ce jour là, quel que soit son code trafic.</p>
 <p>Réalisez le script SQL pour :</p>
 <p>1) Créez les tables correspondantes.</p>
 <p>2) Ajoutez au moins un enregistrement par table, l’ordre des ajouts doit être cohérent.</p>
