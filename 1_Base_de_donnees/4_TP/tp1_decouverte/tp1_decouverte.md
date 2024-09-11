@@ -81,7 +81,8 @@ Il suffit de compléter les différentes zones de saisie pour créer les champs 
     ![relations](./data/bonnetableRelations.png){: width=60% .center}
 
     1. Donner le schéma "en intention" de la base bonneTable<br />
-    2. Continuer la création de la base à l'aide du schéma suivant. Vous veillerez à choisir les types adéquates à chaque fois. <br /> Si deux champs portent le même nom, ce n'est pas un souci mais veillez à ce qu'ils aient le ==même== type.
+    2. Continuer la création de la base à l'aide du schéma suivant. Vous veillerez à choisir les types adéquates à chaque fois. <br /> Si deux champs portent le même nom, ce n'est pas un souci mais veillez à ce qu'ils aient le ==même== type. Ajoutez bien les clés primaires lors de la création de la table<br /> 
+    4. Ajoutez les clés étrangères en passant par l'interface concepteur (drag en drop de la clé primaire vers la clé étrangère)
 
    
 Une fois terminé, vous pouvez visualiser vos tables en sélectionnant la Base bonnetable (liste à gauche) et en allant dans le menu déroulant complètement à droite en choisissant `concepteur`.
