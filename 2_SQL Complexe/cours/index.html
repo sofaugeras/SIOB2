@@ -12,13 +12,13 @@
         <meta name="author" content="Sophie FAUGERAS">
       
       
-        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/4_Laravel/sommaire/">
+        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/2_SQL%20Complexe/cours/">
       
       
-        <link rel="prev" href="../../3_UML/3.5_etudeDeCas/reseauSocial/">
+        <link rel="prev" href="../../1_Base_de_donnees/4_TP/anabase/">
       
       
-        <link rel="next" href="../4.1_installation/cours/">
+        <link rel="next" href="../sommaire/">
       
       
       <link rel="icon" href="../../xtra/favTNSI.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Laravel - Saint Sauveur BTS SIO SLAM</title>
+        <title>SQL avancé - Saint Sauveur BTS SIO SLAM</title>
       
     
     
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#laravel" class="md-skip">
+        <a href="#sql-avance" class="md-skip">
           Aller au contenu
         </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Laravel
+              SQL avancé
             
           </span>
         </div>
@@ -278,11 +278,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../2_SQL%20Complexe/cours/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   SQL complexe
@@ -314,13 +316,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../4_Laravel/sommaire/" class="md-tabs__link">
           
   
   Laravel
@@ -917,25 +917,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -946,7 +949,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             SQL complexe
@@ -957,10 +960,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../2_SQL%20Complexe/cours/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    SQL avancé
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -969,6 +992,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-les-requetes-imbriquees" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Les requêtes imbriquées
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-operateurs-ensemblistes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. OPérateurs ensemblistes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-les-vues" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Les vues
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-les-differents-types-de-jointures" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. les différents types de jointures
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -981,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2_SQL%20Complexe/sommaire/" class="md-nav__link">
+      <a href="../sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1650,28 +1729,25 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1682,7 +1758,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Laravel
@@ -1693,19 +1769,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../4_Laravel/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1714,7 +1781,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1767,7 +1833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../4.1_installation/cours/" class="md-nav__link">
+      <a href="../../4_Laravel/4.1_installation/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1836,7 +1902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../4.2_toDo/4.2.1_initialisation/" class="md-nav__link">
+      <a href="../../4_Laravel/4.2_toDo/4.2.1_initialisation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1857,7 +1923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../4.2_toDo/4.2.2_Ajout_cat%C3%A9gorie/" class="md-nav__link">
+      <a href="../../4_Laravel/4.2_toDo/4.2.2_Ajout_cat%C3%A9gorie/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1878,7 +1944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../4.2_toDo/4.2.3_prolongement_middleware/" class="md-nav__link">
+      <a href="../../4_Laravel/4.2_toDo/4.2.3_prolongement_middleware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3046,11 +3112,29 @@
   
 
 
-<h1 id="laravel">Laravel<a class="headerlink" href="#laravel" title="Permanent link">⚓︎</a></h1>
-<ol>
-<li><a href="../4.1_installation/cours/">Installation</a></li>
-<li><a href="../4.2_toDo/4.2.1_initialisation/">Création Projet ToDo</a></li>
-</ol>
+<h1 id="sql-avance">SQL avancé<a class="headerlink" href="#sql-avance" title="Permanent link">⚓︎</a></h1>
+<h2 id="1-les-requetes-imbriquees">1. Les requêtes imbriquées<a class="headerlink" href="#1-les-requetes-imbriquees" title="Permanent link">⚓︎</a></h2>
+<p>Les requêtes imbriquées sont basées sur le mot-clé IN (vu au III) qui permet de sélectionner des enregistrements parmi une liste.
+Le principe consiste à construire une sous-requête qui donne un résultat équivalent à une liste. Ensuite la requête principale permet de sélectionner des lignes dans la liste précédemment construite.</p>
+<p><img alt="requete imbriquée" class="center" src="../data/imbricataionIN.png" width="50%" /></p>
+<p>Le mot-clé IN peut-être remplacé par un opérateur de comparaison (=, &lt;&gt;, &lt;,&lt;=,&gt;, &gt;=). Dans ce cas, le résultat de la sous-requête ne consiste qu’en une seule valeur
+1 Utilisation des requêtes imbriquées pour réaliser des jointures
+Lorsque le résultat d’une requête ne se trouve que dans une seule table, il est conseillé de la réaliser avec des requêtes imbriquées. En effet, pour le SGBD, cette solution est beaucoup plus rapide.
+Exemple : si je veux connaître le nom et le prénom des congressistes envoyés par l’organisme : le Lycée Valadon de Limoges, je peux écrire la requête suivante :
+SELECT nom_congressiste, prénom_congressiste FROM CONGRESSISTE WHERE N°_organisme IN ( SELECT N°_organisme FROM ORGANISME_PAYEUR WHERE nom_organisme = 'Lycée Valadon' AND adresse_organisme = 'Limoges')
+La requête imbriquée renvoie le n° organisme payeur recherché et la première requête permet de sélectionner les congressistes dépendant de l’organisme payeur ainsi obtenu.
+Requête principale
+Sous-requête
+BTS2 SIO Bases de données - Révisions SQL
+19/
+Le SGBD exécute toujours en premier la requête imbriquée. Si l’on avait voulu la même requête en faisant afficher le nom de l’organisme payeur, cette solution n’aurait pas été adéquate. Il aurait fallu écrire une jointure comme décrite au chapitre 5.
+2 Utilisation des requêtes imbriquées avec des fonctions
+Les requêtes utilisant les fonctions AVG, COUNT, SUM, MAX et MIN ne renvoient qu’une seule valeur. Ces requêtes peuvent être utilisées comme sous requêtes afin que l’on puisse faire des comparaisons en utilisant les opérateurs classiques : =, &lt; ,&gt;, &lt;&gt;…
+Exemple : select N°_Produit, nom_Produit , prix_produit = (select max(prix_produit) from Produit)
+→Permet d’afficher les caractéristiques du produit le plus cher.</p>
+<h2 id="2-operateurs-ensemblistes">2. OPérateurs ensemblistes<a class="headerlink" href="#2-operateurs-ensemblistes" title="Permanent link">⚓︎</a></h2>
+<h2 id="3-les-vues">3. Les vues<a class="headerlink" href="#3-les-vues" title="Permanent link">⚓︎</a></h2>
+<h2 id="4-les-differents-types-de-jointures">4. les différents types de jointures<a class="headerlink" href="#4-les-differents-types-de-jointures" title="Permanent link">⚓︎</a></h2>
 
 
 

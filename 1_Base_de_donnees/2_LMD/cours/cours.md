@@ -783,6 +783,7 @@ Il peut être intéressant de regrouper des résultats afin de faire des opérat
 
 La clause `HAVING` va de pair avec la clause `GROUP BY`, elle permet d'appliquer une **restriction** sur les groupes créés grâce à la clause `GROUP BY`. On introduit le filtre `HAVING` qui porte, non pas sur les données, mais sur les calculs résultants des regroupements.
 
+:warning: Attention à ne pas confondre ``HAVING`` et ``WHERE`` : ``HAVING`` permet la sélection de groupes à la suite d’une requête avec regroupement alors que WHERE permet de sélectionner des lignes pour construire la requête.
 
 !!! question "R24" 
     === "Enoncé"
