@@ -132,7 +132,7 @@ Nous allons remplir la table `PRODUIT` avec les données contenues dans un fichi
 
     [Télécharger fichier Composant :arrow_down:](./data/composant.csv){ .md-button .md-button--primary }<br /><br />
 
-    [Télécharger fichier Composition :arrow_down:](./data/composant.csv){ .md-button .md-button--primary }
+    [Télécharger fichier Composition :arrow_down:](./data/composition.csv){ .md-button .md-button--primary }
 
 
 ## 5 Interrogation des tables
