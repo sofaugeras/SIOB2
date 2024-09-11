@@ -1,5 +1,7 @@
 # Révision SIO2 : Cas Anabase
 
+![illustration](./data/anabase/illustration.png){: width=50% .center}
+
 Pour illustrer ces révisions, j’ai décidé de m’appuyer sur un cas créé dans les années 80 et bien connu des enseignants en informatique : le cas « **Anabase** » dont voici quelques extraits :
 
 !!! success "Cas Anabase"

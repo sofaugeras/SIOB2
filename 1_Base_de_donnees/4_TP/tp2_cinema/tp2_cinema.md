@@ -128,11 +128,12 @@ ROLE (^^#idFilm, #idActeur^^, nomRole)<br />
 
 Les dates sont un type complexe en SQL. et même si ils ressemblent à une chaîne de caractère, on ne peut pas les manipuler en tant que telle. Les SGBD ([documentation MySQL](https://dev.mysql.com/doc/refman/8.4/en/date-and-time-functions.html)) mettent à notre disposition des fonctions de manipulations dédiés.<br />
 ^^exemple :^^ <br />
-- la date du jour : CURRENT_DATE
-- l'heure : CURRENT_TIME
-- YEAR(nom_attribut) : la partie année de la date
-- MONTH(attribut) : la partie mois de la date
-- DAY(attribut) : la parte jour de la date
+
+- la date du jour : ``CURRENT_DATE``<br />
+- l'heure : ``CURRENT_TIME``<br />
+- ``YEAR(nom_attribut) ``: la partie année de la date<br />
+- ``MONTH(attribut)`` : la partie mois de la date<br />
+- ``DAY(attribut) ``: la parte jour de la date<br />
 etc.....
 
 Combien de film ont été réalisés en 2005 ?
@@ -190,9 +191,6 @@ WHERE YEAR(sortie)='2005';
         GROUP BY idActeur;
         ```
 
-13)	
-
-
 !!! question "Q13"
     === "Enoncé"
         Affichez le nombre de film pour chaque catégorie
@@ -205,7 +203,7 @@ WHERE YEAR(sortie)='2005';
         GROUP BY idgenre;
         ```
 
-!!! question "Q1"
+!!! question "Q14"
     === "Enoncé"
         Affichez pour chaque année le film qui a réalisé le plus de recettes
 
@@ -217,7 +215,7 @@ WHERE YEAR(sortie)='2005';
         GROUP BY annee ;
         ```
 
-!!! question "Q1"
+!!! question "Q15"
     === "Enoncé"
         afficher le nom et la date de naissance des acteurs qui ont moins de 45 ans. (essayer dans un premier temps de trouver comment afficher l'année en cours)
 
@@ -229,7 +227,7 @@ WHERE YEAR(sortie)='2005';
         WHere (YEAR(CURRENT_DATE)- anneeNaiss ) <= 45
         ```
 
-!!! question "Q1"
+!!! question "Q16"
     === "Enoncé"
         Combien de films sont sortie au mois de septembre ?
 
@@ -241,7 +239,7 @@ WHERE YEAR(sortie)='2005';
         WHERE MONTH(sortie) = 9;
         ```
 
-!!! question "Q1"
+!!! question "Q17"
     === "Enoncé"
         afficher les réalisateurs et la somme des recettes générées par leurs films classés par ordre décroissant des recettes ?
 

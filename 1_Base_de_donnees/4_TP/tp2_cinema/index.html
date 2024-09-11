@@ -3254,13 +3254,15 @@ ROLE (<ins>#idFilm, #idActeur</ins>, nomRole)<br /></p>
 <h2 id="point-de-cours-sur-les-dates">Point de cours sur les dates<a class="headerlink" href="#point-de-cours-sur-les-dates" title="Permanent link">⚓︎</a></h2>
 <p><img alt="date" class="center" src="../data/tp2/date.png" width="75%" /></p>
 <p>Les dates sont un type complexe en SQL. et même si ils ressemblent à une chaîne de caractère, on ne peut pas les manipuler en tant que telle. Les SGBD (<a href="https://dev.mysql.com/doc/refman/8.4/en/date-and-time-functions.html">documentation MySQL</a>) mettent à notre disposition des fonctions de manipulations dédiés.<br />
-<ins>exemple :</ins> <br />
-- la date du jour : CURRENT_DATE
-- l'heure : CURRENT_TIME
-- YEAR(nom_attribut) : la partie année de la date
-- MONTH(attribut) : la partie mois de la date
-- DAY(attribut) : la parte jour de la date
-etc.....</p>
+<ins>exemple :</ins> <br /></p>
+<ul>
+<li>la date du jour : <code>CURRENT_DATE</code><br /></li>
+<li>l'heure : <code>CURRENT_TIME</code><br /></li>
+<li><code>YEAR(nom_attribut)</code>: la partie année de la date<br /></li>
+<li><code>MONTH(attribut)</code> : la partie mois de la date<br /></li>
+<li><code>DAY(attribut)</code>: la parte jour de la date<br />
+etc.....</li>
+</ul>
 <p>Combien de film ont été réalisés en 2005 ?
 <div class="language-SQL highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">Film</span>
@@ -3331,7 +3333,6 @@ etc.....</p>
 </div>
 </div>
 </div>
-<p>13) </p>
 <div class="admonition question">
 <p class="admonition-title">Q13</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Enoncé</label><label for="__tabbed_13_2">Correction</label></div>
@@ -3349,7 +3350,7 @@ etc.....</p>
 </div>
 </div>
 <div class="admonition question">
-<p class="admonition-title">Q1</p>
+<p class="admonition-title">Q14</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Enoncé</label><label for="__tabbed_14_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3366,7 +3367,7 @@ etc.....</p>
     ```</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">Q1</p>
+<p class="admonition-title">Q15</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Enoncé</label><label for="__tabbed_15_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3382,7 +3383,7 @@ etc.....</p>
 </div>
 </div>
 <div class="admonition question">
-<p class="admonition-title">Q1</p>
+<p class="admonition-title">Q16</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Enoncé</label><label for="__tabbed_16_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3398,7 +3399,7 @@ etc.....</p>
 </div>
 </div>
 <div class="admonition question">
-<p class="admonition-title">Q1</p>
+<p class="admonition-title">Q17</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">Enoncé</label><label for="__tabbed_17_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
