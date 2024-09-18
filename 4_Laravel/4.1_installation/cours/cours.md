@@ -9,6 +9,13 @@
     - [phptherightway](https://phptherightway.com/)
     - Livre : Laravel par Raphaël Huchet aux éditions ENI
 
+!!! warning "Préalable"
+
+    - :warning: Vérifier la version de PHP de votre WAMP
+    ![version PHP](../data/versionPHP.png){: width=30% .center}
+
+    - :warning: vérifier la présence d'une variable d'environnement vers votre dossier PHP
+    ![variable d'environnement](../data/var_env.png){: width=30% .center}
 
 # Installation Composer
 
@@ -58,12 +65,12 @@ Votre poste est maintenant configuré pour Laravel, vous pouvez donc créer un n
 
 ```prompt
 CD C:\\wamp\www\
-composer create-project --prefer-dist laravel/laravel monProjet
+composer create-project --prefer-dist laravel/laravel monProjet "10.*"
 ```
 
 Après quelques minutes, on obtient l’arborescence suivante :
  
-![arborescence Laravel](../data/arbo_laravel.png)
+![arborescence Laravel](../data/monProjet10.png)
 
 ## Description arborescence Laravel
 

@@ -3061,6 +3061,19 @@
 <li>Livre : Laravel par Raphaël Huchet aux éditions ENI</li>
 </ul>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Préalable</p>
+<ul>
+<li>
+<p><img alt="⚠️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/26a0.svg" title=":warning:" /> Vérifier la version de PHP de votre WAMP
+<img alt="version PHP" class="center" src="../../data/versionPHP.png" width="30%" /></p>
+</li>
+<li>
+<p><img alt="⚠️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/26a0.svg" title=":warning:" /> vérifier la présence d'une variable d'environnement vers votre dossier PHP
+<img alt="variable d'environnement" class="center" src="../../data/var_env.png" width="30%" /></p>
+</li>
+</ul>
+</div>
 <h1 id="installation-composer">Installation Composer<a class="headerlink" href="#installation-composer" title="Permanent link">⚓︎</a></h1>
 <p>Récupérer l’exécutable de <a href="https://getcomposer.org/">composer</a> et l’exécuter. 
 L’installateur vous demandera où se trouve php.exe (en général : <code>C:\wamp\bin\php\phpX.X.X</code>). Cela installe Composer et met à jour le PATH de façon à ce que l'on puisse taper la commande composer en ligne de commande depuis n'importe quel répertoire.</p>
@@ -3095,10 +3108,10 @@ Composer fonctionne en ligne de commande.<br />
 <p>Votre poste est maintenant configuré pour Laravel, vous pouvez donc créer un nouveau projet grâce à la commande ci- dessous:<br /></p>
 <p><img alt="💥" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4a5.svg" title=":boom:" /> Attention, le projet sera créé dans le dossier courant. Déplacer votre invite de commande dans le bon répertoire avant de lancer votre commande de création de projet: </p>
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>CD C:\\wamp\www\
-composer create-project --prefer-dist laravel/laravel monProjet
+composer create-project --prefer-dist laravel/laravel monProjet &quot;10.*&quot;
 </code></pre></div>
 <p>Après quelques minutes, on obtient l’arborescence suivante :</p>
-<p><img alt="arborescence Laravel" src="../../data/arbo_laravel.png" /></p>
+<p><img alt="arborescence Laravel" src="../../data/monProjet10.png" /></p>
 <h2 id="description-arborescence-laravel">Description arborescence Laravel<a class="headerlink" href="#description-arborescence-laravel" title="Permanent link">⚓︎</a></h2>
 <p>Dans le répertoire <code>\app</code>, on trouve les dossiers suivants.</p>
 <ul>
