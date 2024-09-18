@@ -343,7 +343,7 @@ Ainsi, les requêtes R6 et R8 peuvent être écrites d'une autre façon :
         SELECT nomPilote, bonus, salaire, adresse
         FROM PILOTE
         WHERE (bonus <800) OR
-              (salaire < 3500 AND ville LIKE "%Paris");
+              (salaire < 3500 AND adresse LIKE "%Paris");
         ```
 
         Remarques : 
@@ -353,7 +353,7 @@ Ainsi, les requêtes R6 et R8 peuvent être écrites d'une autre façon :
         SELECT nomPilote, bonus, salaire, adresse
         FROM PILOTE
         WHERE bonus <800 OR
-              salaire < 3500 AND ville LIKE "%Paris";
+              salaire < 3500 AND adresse LIKE "%Paris";
         ```
 
 !!! question "R9 bis" 
