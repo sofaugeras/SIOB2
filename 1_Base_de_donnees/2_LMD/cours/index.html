@@ -3672,7 +3672,7 @@ Ces caractères peuvent être différents suivant le SGBDR utilisé. Il faut se 
 <div class="tabbed-block">
 <div class="language-SQL highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">nomPilote</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;DUP*&quot;</span><span class="w"> </span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">nomPilote</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;DUP%&quot;</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 </div>
 </div>
@@ -3835,14 +3835,14 @@ note 2 : On ne peut pas mettre l'opérateur <code>AND</code> ici car une ville n
 <div class="language-SQL highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span><span class="p">,</span><span class="w"> </span><span class="n">bonus</span><span class="p">,</span><span class="w"> </span><span class="n">salaire</span><span class="p">,</span><span class="w"> </span><span class="n">adresse</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">bonus</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">800</span><span class="p">)</span><span class="w"> </span><span class="k">OR</span>
-<span class="w">      </span><span class="p">(</span><span class="n">salaire</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">3500</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">ville</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%Paris&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="p">(</span><span class="n">salaire</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3500</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">ville</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%Paris&quot;</span><span class="p">);</span>
 </code></pre></div>
 <p>Remarques : 
 - L’opérateur <code>AND</code> est prioritaire par rapport à l’opérateur <code>OR</code>. </p>
 <div class="language-SQL highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span><span class="p">,</span><span class="w"> </span><span class="n">bonus</span><span class="p">,</span><span class="w"> </span><span class="n">salaire</span><span class="p">,</span><span class="w"> </span><span class="n">adresse</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">bonus</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">800</span><span class="w"> </span><span class="k">OR</span>
-<span class="w">      </span><span class="n">salaire</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">3500</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">ville</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%Paris&quot;</span><span class="p">;</span>
+<span class="w">      </span><span class="n">salaire</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3500</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">ville</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%Paris&quot;</span><span class="p">;</span>
 </code></pre></div>
 </div>
 </div>
