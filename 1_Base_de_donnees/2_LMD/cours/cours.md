@@ -477,6 +477,8 @@ La clause `WHERE` contiendra les éventuelles restrictions. <br />
         SELECT nomPilote
         FROM PILOTE INNER JOIN VOL
         ON PILOTE.numPilote = VOL.numPilote
+        INNER JOIN AVION
+        ON AVION.numAvion = VOL.numAvion
         WHERE nomAvion LIKE "%747-400%" ;
         ```
 
