@@ -2,8 +2,8 @@
 
 1. [Introduction au Base de données](./1_introduction/cours.md)
 2. [Langage de Manipulation de données](./2_LMD/cours.md)
-3. [Langage de Création de données]()
-4. [SQL Complexe]()
+3. [Langage de Création de données](./3_LCD/cours.md)
+4. [SQL Complexe](./4_SQLComplexe/cours.md)
 
 !!! note "Sources"
 
@@ -20,3 +20,9 @@
     - [http://sql.developpez.com/:](http://sql.developpez.com/): le cours complet de SQL de A à Z.<br />
     - [http://cerig.efpg.inpg.fr/tutoriel/bases-de-donnees/chap18.htm](http://cerig.efpg.inpg.fr/tutoriel/bases-de-donnees/chap18.htm)<br />
     - [http://webtic.free.fr/sql/](http://webtic.free.fr/sql/)
+
+!!! tip "Exerciseur"
+
+    - [SQL zoo](https://sqlzoo.net/wiki/SQL_Tutorial)<br />
+    - [colibri](https://colibri.unistra.fr/fr/course/list/notions-de-base-en-sql)<br />
+    - [sql.sh](https://sql.sh/)
