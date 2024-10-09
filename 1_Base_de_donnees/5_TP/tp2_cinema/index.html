@@ -3638,14 +3638,13 @@ etc.....</li>
 <p>Affichez pour chaque année le film qui a réalisé le plus de recettes</p>
 </div>
 <div class="tabbed-block">
-<p>```SQL</p>
+<div class="language-SQL highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">recettes</span><span class="p">),</span><span class="n">titre</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">film</span><span class="o">`</span><span class="w"> </span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
-<p>SELECT MAX(recettes),titre 
-    FROM <code>film</code> 
-    GROUP BY annee ;
-    ```</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Q15</p>

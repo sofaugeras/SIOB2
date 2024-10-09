@@ -213,7 +213,7 @@ WHERE YEAR(sortie)='2005';
     === "Correction"
 
         ```SQL
-       SELECT MAX(recettes),titre 
+        SELECT MAX(recettes),titre 
         FROM `film` 
         GROUP BY annee ;
         ```

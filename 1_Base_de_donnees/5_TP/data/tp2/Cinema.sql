@@ -14,6 +14,49 @@ CREATE TABLE Artiste (
 ) ;
 
 #
+# Table structure for table `Film`
+#
+
+DROP TABLE IF EXISTS Film;
+CREATE TABLE `Film` (
+  idfilm int PRIMARY KEY  auto_increment,
+  titre varchar(100) NOT NULL default '',
+  annee int NOT NULL default 2000,
+  prenom_realisateur varchar(50) NOT NULL default '',
+  nom_realisateur varchar(50) NOT NULL default '',
+  genre int NOT NULL default '1' references Genre(id),
+  sortie date NOT NULL default '2000-12-12',
+  recettes int NOT NULL default 0
+) ;
+
+#
+# Table structure for table `Genre`
+#
+
+DROP TABLE IF EXISTS Genre;
+CREATE TABLE Genre (
+  id int(11) NOT NULL PRIMARY KEY auto_increment,
+  nomGenre varchar(100) NOT NULL default '',
+  CONSTRAINT fk_genre FOREIGN KEY (genre) REFERENCES Genre(id)
+) ;
+
+#
+# Table structure for table `Role`
+#
+
+DROP TABLE IF EXISTS Role;
+CREATE TABLE Role (
+  idfilm int(11),
+  idActeur int(11),
+  nomRole varchar(30) default NULL ,
+  PRIMARY KEY  (idfilm,idActeur),
+  CONSTRAINT fk_film FOREIGN KEY (idfilm) REFERENCES Film(idfilm),
+  CONSTRAINT fk_acteur FOREIGN KEY (idActeur) REFERENCES Artiste(idActeur)
+) ;
+
+
+
+#
 # Dumping data for table `Artiste`
 #
 
@@ -136,23 +179,6 @@ INSERT INTO Artiste VALUES (120, 'Anglade', 'Jean-Hughes', 1955);
 INSERT INTO Artiste VALUES (121, 'Barr', 'Jean-Marc', 1960);
 # --------------------------------------------------------
 
-#
-# Table structure for table `Film`
-#
-
-DROP TABLE IF EXISTS Film;
-CREATE TABLE `Film` (
-  `idfilm` int(11) PRIMARY KEY  auto_increment,
-  `titre` varchar(100) NOT NULL default '',
-   annee int(11) NOT NULL default 2000,
-  `prenom_realisateur` varchar(50) NOT NULL default '',
-  `nom_realisateur` varchar(50) NOT NULL default '',
-  `genre` int(11) NOT NULL default '1' references Genre(id),
-  `sortie` date NOT NULL default '2000-12-12',
-  `recettes` int(20) NOT NULL default 0
-) ;
-
-
 --
 --  data for table `Film`
 --
@@ -211,16 +237,7 @@ INSERT INTO `Film` VALUES
 (50,'Spider-Man 3',2007,'Sam','Raimi',4,'2007-9-1',890);
 
 
-#
-# Table structure for table `Genre`
-#
 
-DROP TABLE IF EXISTS Genre;
-CREATE TABLE Genre (
-  id int(11) NOT NULL PRIMARY KEY auto_increment,
-  nomGenre varchar(100) NOT NULL default ''
-  
-) ;
 
 #
 # Dumping data for table `Genre`
@@ -235,24 +252,9 @@ INSERT INTO Genre VALUES (6, 'Drame');
 INSERT INTO Genre VALUES (7, 'Science fiction');
 INSERT INTO Genre VALUES (8, 'Aventure');
 
-ALTER TABLE film
-ADD CONSTRAINT fk_genre FOREIGN KEY (genre) REFERENCES Genre(id);
+
 
 # --------------------------------------------------------
-
-#
-# Table structure for table `Role`
-#
-
-DROP TABLE IF EXISTS Role;
-CREATE TABLE Role (
-  idfilm int(11),
-  idActeur int(11),
-  nomRole varchar(30) default NULL ,
-  PRIMARY KEY  (idfilm,idActeur),
-  FOREIGN KEY (idfilm) REFERENCES Film(idfilm),
-  FOREIGN KEY (idActeur) REFERENCES Artiste(idActeur)
-) ;
 
 #
 # Dumping data for table `Role`
