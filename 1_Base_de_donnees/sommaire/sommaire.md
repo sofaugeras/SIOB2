@@ -4,6 +4,14 @@
 2. [Langage de Manipulation de données](./2_LMD/cours.md)
 3. [Langage de Création de données](./3_LCD/cours.md)
 4. [SQL Complexe](./4_SQLComplexe/cours.md)
+5. [Travaux pratiques](./5_TP/)
+
+!!! abstract "Compétences"
+    B1.3 Développer la présence en ligne de l’organisation
+    > Cette compétence suppose qu'un site web existe pour l'organisation cliente, dans un premier temps il s'agit de l'étudier pour connaître le système de gestion de contenu (CMS) ou l'architecture utilisé, ==la base de données associée==, la charte graphique mise en place, le code utilisé. C'est là l'occasion d'une initiation à la programmation web avec différents langages : langages à balise (HTML, CSS, XML), langages de contrôle (Javascript, PHP, Python...) et ==langages d‟accès aux données et d'interrogation==.
+
+    Participer à l'évolution d'un site Web exploitant les données de l'organisation.
+    > langage d'accès aux données, langage de contrôle, Langage d'interrogation de données
 
 !!! note "Sources"
 

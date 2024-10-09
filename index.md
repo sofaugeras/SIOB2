@@ -2,7 +2,7 @@
 
 !!! warning "Actu SIO1"
 
-    :pushpin: Thème en cours : [Generalités SQL](./1_Base_de_donnees/1_introduction/cours.md)
+    :pushpin: Thème en cours : [Generalités SQL](./1_Base_de_donnees/2_LMD/cours.md)
 
     :closed_book: Premiere série de DS : du 25 au 29 Novembre 2024<br />
     :date: Stage SIO1 : 19 mai au 20 juin 2025
@@ -20,8 +20,8 @@
 
     |Date|Nom|Thème|
     |:--:|:--:|:--:|
-    |24.09|Léa|Panorama de la Cyber|
-    |01.10|Valentin|Sécurité des périphériques externes|
+    |:white_check_mark:|Léa|Panorama de la Cyber|
+    |:white_check_mark:|Valentin|Sécurité des périphériques externes|
     |08.10|Evan|Fichier en provenance d'internet|
     |15.10|Enzo|Sécurité des données|
     |05.11|Guillaume|Messagerie électronique|

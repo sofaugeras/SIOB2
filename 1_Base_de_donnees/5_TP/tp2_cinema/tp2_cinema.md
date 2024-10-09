@@ -1,4 +1,7 @@
-# TP 2 Cinéma
+# TP Cinéma
+
+!!! note "Objectif du TP"
+	travailler sur la manipulation des données à l'aide d'un langage de requêtes SANS Jointure.
 
 ![gif](./data/tp2/cinema.gif){: width=50% .center}
 

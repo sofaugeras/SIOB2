@@ -1,4 +1,4 @@
-# TP 1 Découverte phpMyAdmin
+# TP Découverte phpMyAdmin
 PhpMyAdmin est une application web gratuite et open source qui permet de gérer les bases de données MySQL via une interface graphique web.
 
 Elle facilite la gestion des bases de données, des tables, etc., sans nécessiter de connaissances en commandes SQL.
