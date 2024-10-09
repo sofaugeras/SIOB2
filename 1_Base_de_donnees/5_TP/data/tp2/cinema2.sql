@@ -10,7 +10,7 @@ INSERT INTO nation VALUES (1,'USA'),
 (4,'Brésil'),
 (5,'France'),
 (6,'Mexique'),
-(7,'Allemagne')
+(7,'Allemagne'),
 (8,'Canada');
 
 --
