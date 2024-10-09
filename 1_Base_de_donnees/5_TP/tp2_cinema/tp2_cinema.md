@@ -120,7 +120,7 @@ ROLE (^^#idFilm, #idActeur^^, nomRole)<br />
 
         ```SQL
         SELECT titre, recettes
-        FROM `Film` 
+        FROM Film 
         WHERE genre = 3
         ORDER BY recettes DESC 
         ```
@@ -154,7 +154,7 @@ WHERE YEAR(sortie)='2005';
 
         ```SQL
         SELECT * 
-        FROM `Film` 
+        FROM Film 
         WHERE genre = 4
         AND YEAR( sortie ) BETWEEN 2000 AND 2010 
         ```
@@ -167,7 +167,7 @@ WHERE YEAR(sortie)='2005';
 
         ```SQL
         SELECT * 
-        FROM `Film` 
+        FROM Film 
         WHERE titre LIKE "T%"
         ```
 !!! question "Q11"
@@ -178,7 +178,7 @@ WHERE YEAR(sortie)='2005';
 
         ```SQL
         SELECT * 
-        FROM `Film` 
+        FROM Film 
         WHERE titre LIKE "%Monde%"
         ```
 
@@ -201,9 +201,9 @@ WHERE YEAR(sortie)='2005';
     === "Correction"
 
         ```SQL
-        SELECT COUNT(*), idGenre
-        FROM `film` 
-        GROUP BY idgenre;
+        SELECT COUNT(*), genre
+        FROM film 
+        GROUP BY genre;
         ```
 
 !!! question "Q14"
@@ -214,7 +214,7 @@ WHERE YEAR(sortie)='2005';
 
         ```SQL
         SELECT MAX(recettes),titre 
-        FROM `film` 
+        FROM film
         GROUP BY annee ;
         ```
 
