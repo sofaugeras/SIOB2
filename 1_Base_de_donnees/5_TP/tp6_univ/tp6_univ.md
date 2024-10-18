@@ -20,7 +20,7 @@ CHERCHEUR (idChercheur, nomChercheur, idArticle, idUniversite)
         clé étrangère : idArticle référence ARTICLE(idArticle)
                         idUniversite référence UNIVERSITE(idUniversite).
 ```
-![contenu](./data/tp5/contenu.png){: width=50% .center}
+![contenu](./data/tp5/contenu.png){: width=80% .center}
 
 **R1 :** Créez les tables correspondantes.:warning: L'ordre de création des tables doit être cohérent.
 
