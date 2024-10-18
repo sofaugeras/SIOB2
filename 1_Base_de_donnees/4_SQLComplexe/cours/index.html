@@ -1174,42 +1174,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#transformation-dune-jointure-gauche-en-jointure-droite" class="md-nav__link">
-    <span class="md-ellipsis">
-      Transformation d'une Jointure Gauche en Jointure Droite
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#transformation-dune-jointure-droite-en-jointure-gauche" class="md-nav__link">
-    <span class="md-ellipsis">
-      Transformation d'une Jointure Droite en Jointure Gauche
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exemple-pratique" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemple Pratique
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#points-cles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Points Clés
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#44-application" class="md-nav__link">
     <span class="md-ellipsis">
       4.4 Application
@@ -4342,7 +4306,7 @@ Jointure droite (RIGHT JOINT sans l’intersection A)
 <details class="warning">
 <summary>Isomorphisme</summary>
 <p>Oui, il est tout à fait possible de transformer une jointure gauche (LEFT JOIN) en jointure droite (RIGHT JOIN) et vice versa. En fait, une jointure gauche et une jointure droite sont essentiellement la même opération, mais appliquées dans des directions opposées. Voici comment vous pouvez les transformer :</p>
-<h3 id="transformation-dune-jointure-gauche-en-jointure-droite">Transformation d'une Jointure Gauche en Jointure Droite<a class="headerlink" href="#transformation-dune-jointure-gauche-en-jointure-droite" title="Permanent link">⚓︎</a></h3>
+<p><strong>Transformation d'une Jointure Gauche en Jointure Droite</strong></p>
 <p>Supposons que nous ayons la jointure gauche suivante :</p>
 <div class="language-sql highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">nom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">prénom_cli</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_com</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">dat_com</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">CLIENT</span><span class="w"> </span><span class="n">cl</span>
@@ -4353,7 +4317,7 @@ Jointure droite (RIGHT JOINT sans l’intersection A)
 <span class="k">FROM</span><span class="w"> </span><span class="n">COMMANDE</span><span class="w"> </span><span class="k">c</span>
 <span class="k">RIGHT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">CLIENT</span><span class="w"> </span><span class="n">cl</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_cli</span><span class="p">;</span>
 </code></pre></div>
-<h3 id="transformation-dune-jointure-droite-en-jointure-gauche">Transformation d'une Jointure Droite en Jointure Gauche<a class="headerlink" href="#transformation-dune-jointure-droite-en-jointure-gauche" title="Permanent link">⚓︎</a></h3>
+<p><strong>Transformation d'une Jointure Droite en Jointure Gauche</strong></p>
 <p>De la même manière, si nous avons une jointure droite :</p>
 <div class="language-sql highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">nom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">prénom_cli</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_com</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">dat_com</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">COMMANDE</span><span class="w"> </span><span class="k">c</span>
@@ -4364,18 +4328,18 @@ Jointure droite (RIGHT JOINT sans l’intersection A)
 <span class="k">FROM</span><span class="w"> </span><span class="n">CLIENT</span><span class="w"> </span><span class="n">cl</span>
 <span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_cli</span><span class="p">;</span>
 </code></pre></div>
-<h3 id="exemple-pratique">Exemple Pratique<a class="headerlink" href="#exemple-pratique" title="Permanent link">⚓︎</a></h3>
-<h4 id="jointure-gauche-left-join">Jointure Gauche (LEFT JOIN)<a class="headerlink" href="#jointure-gauche-left-join" title="Permanent link">⚓︎</a></h4>
+<p><strong><ins>Exemple Pratique</ins></strong></p>
+<p><strong>Jointure Gauche (LEFT JOIN)</strong></p>
 <div class="language-sql highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">nom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">prénom_cli</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_com</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">dat_com</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">CLIENT</span><span class="w"> </span><span class="n">cl</span>
 <span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_cli</span><span class="p">;</span>
 </code></pre></div>
-<h4 id="jointure-droite-right-join">Jointure Droite (RIGHT JOIN)<a class="headerlink" href="#jointure-droite-right-join" title="Permanent link">⚓︎</a></h4>
+<p><strong>Jointure Droite (RIGHT JOIN)</strong></p>
 <div class="language-sql highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">nom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">prénom_cli</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_com</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">dat_com</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">COMMANDE</span><span class="w"> </span><span class="k">c</span>
 <span class="k">RIGHT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">CLIENT</span><span class="w"> </span><span class="n">cl</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_cli</span><span class="p">;</span>
 </code></pre></div>
-<h3 id="points-cles">Points Clés<a class="headerlink" href="#points-cles" title="Permanent link">⚓︎</a></h3>
+<p><strong>Points Clés</strong></p>
 <ul>
 <li><strong>Ordre des Tables</strong> : L'ordre des tables est inversé lorsque vous transformez une jointure gauche en jointure droite et vice versa.</li>
 <li><strong>Type de Jointure</strong> : Changez le type de jointure de LEFT JOIN à RIGHT JOIN ou de RIGHT JOIN à LEFT JOIN.</li>

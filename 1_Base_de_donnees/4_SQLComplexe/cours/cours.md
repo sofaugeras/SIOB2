@@ -759,7 +759,7 @@ La jointure droite est utile lorsque vous souhaitez inclure toutes les lignes de
 ??? warning "Isomorphisme"
     Oui, il est tout à fait possible de transformer une jointure gauche (LEFT JOIN) en jointure droite (RIGHT JOIN) et vice versa. En fait, une jointure gauche et une jointure droite sont essentiellement la même opération, mais appliquées dans des directions opposées. Voici comment vous pouvez les transformer :
 
-    ### Transformation d'une Jointure Gauche en Jointure Droite
+    **Transformation d'une Jointure Gauche en Jointure Droite**
 
     Supposons que nous ayons la jointure gauche suivante :
 
@@ -777,7 +777,7 @@ La jointure droite est utile lorsque vous souhaitez inclure toutes les lignes de
     RIGHT JOIN CLIENT cl ON cl.num_cli = c.num_cli;
     ```
 
-    ### Transformation d'une Jointure Droite en Jointure Gauche
+    **Transformation d'une Jointure Droite en Jointure Gauche**
 
     De la même manière, si nous avons une jointure droite :
 
@@ -795,9 +795,9 @@ La jointure droite est utile lorsque vous souhaitez inclure toutes les lignes de
     LEFT JOIN COMMANDE c ON cl.num_cli = c.num_cli;
     ```
 
-    ### Exemple Pratique
+    **^^Exemple Pratique^^**
 
-    #### Jointure Gauche (LEFT JOIN)
+    **Jointure Gauche (LEFT JOIN)**
 
     ```sql
     SELECT cl.nom_cli, cl.prénom_cli, c.num_com, c.dat_com
@@ -805,7 +805,7 @@ La jointure droite est utile lorsque vous souhaitez inclure toutes les lignes de
     LEFT JOIN COMMANDE c ON cl.num_cli = c.num_cli;
     ```
 
-    #### Jointure Droite (RIGHT JOIN)
+    **Jointure Droite (RIGHT JOIN)**
 
     ```sql
     SELECT cl.nom_cli, cl.prénom_cli, c.num_com, c.dat_com
@@ -813,7 +813,7 @@ La jointure droite est utile lorsque vous souhaitez inclure toutes les lignes de
     RIGHT JOIN CLIENT cl ON cl.num_cli = c.num_cli;
     ```
 
-    ### Points Clés
+    **Points Clés**
 
     - **Ordre des Tables** : L'ordre des tables est inversé lorsque vous transformez une jointure gauche en jointure droite et vice versa.
     - **Type de Jointure** : Changez le type de jointure de LEFT JOIN à RIGHT JOIN ou de RIGHT JOIN à LEFT JOIN.
