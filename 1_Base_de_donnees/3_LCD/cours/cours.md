@@ -210,8 +210,6 @@ CREATE TABLE tbl_name
     ); 
     ```
 
-Pour la table ``Ouvrage``, on ne souhaite pas gérer ``NumOuvrage`` (un numéro automatique devra être généré). 
-
 ??? question "Donnez la commande SQL de création de la table en utilisant l’autre syntaxe pour préciser la clé primaire"
 
     ```SQL
@@ -225,6 +223,30 @@ Pour la table ``Ouvrage``, on ne souhaite pas gérer ``NumOuvrage`` (un numéro 
 ^^**Dans la définition de la colonne :**^^<br />
 ``CONSTRAINT lecteur_pk PRIMARY KEY (NumLecteur) `` VS ``numLecteur INT PRIMARY KEY``<br />
 La partie CONSTRAINT lecteur_pk est optionnelle,  MAIS obligatoire dans ce cours. Cette méthode d’écriture permet de mieux comprendre la structure de la base et de pouvoir nommer ce que l’on manipule. 
+
+!!! note "A faire"
+
+    === "Table Ouvrage"
+        1. ajouter la requête de création de la table ``Ouvrage``
+        2. Pour la table ``Ouvrage``, on ne souhaite pas gérer ``NumOuvrage`` (un numéro automatique devra être généré). 
+    
+    === "Correction"
+
+        ```SQL
+        CREATE TABLE IF NOT EXISTS OUVRAGE (
+            numouvrage INT,
+            titreouvrage varchar(50) default NULL,
+            anneeparution INT default NULL,
+            CONSTRAINT pk_ouvrage PRIMARY KEY  (numouvrage)
+            ) ;
+
+        ALTER TABLE OUVRAGE
+            DROP PRIMARY KEY;
+        ALTER TABLE OUVRAGE 
+            MODIFY COLUMN numouvrage INT AUTO_INCREMENT;
+        ALTER TABLE OUVRAGE 
+            ADD CONSTRAINT pk_ouvrage PRIMARY KEY  (numouvrage);
+        ```
 
 ^^**le cas des clés étrangères :**^^
 

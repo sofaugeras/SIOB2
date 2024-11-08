@@ -813,7 +813,8 @@ La jointure droite est utile lorsque vous souhaitez inclure toutes les lignes de
     RIGHT JOIN CLIENT cl ON cl.num_cli = c.num_cli;
     ```
 
-    **Points Clés**
+     
+     **Points Clés**
 
     - **Ordre des Tables** : L'ordre des tables est inversé lorsque vous transformez une jointure gauche en jointure droite et vice versa.
     - **Type de Jointure** : Changez le type de jointure de LEFT JOIN à RIGHT JOIN ou de RIGHT JOIN à LEFT JOIN.

@@ -3814,7 +3814,6 @@ Ainsi une colonne déclarée en <code>VARCHAR(30)</code> nécessitera au maximum
 <span class="p">);</span><span class="w"> </span>
 </code></pre></div>
 </div>
-<p>Pour la table <code>Ouvrage</code>, on ne souhaite pas gérer <code>NumOuvrage</code> (un numéro automatique devra être généré). </p>
 <details class="question">
 <summary>Donnez la commande SQL de création de la table en utilisant l’autre syntaxe pour préciser la clé primaire</summary>
 <div class="language-SQL highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">OUVRAGE</span><span class="w"> </span><span class="p">(</span>
@@ -3827,6 +3826,35 @@ Ainsi une colonne déclarée en <code>VARCHAR(30)</code> nécessitera au maximum
 <p><ins><strong>Dans la définition de la colonne :</strong></ins><br />
 <code>CONSTRAINT lecteur_pk PRIMARY KEY (NumLecteur)</code> VS <code>numLecteur INT PRIMARY KEY</code><br />
 La partie CONSTRAINT lecteur_pk est optionnelle,  MAIS obligatoire dans ce cours. Cette méthode d’écriture permet de mieux comprendre la structure de la base et de pouvoir nommer ce que l’on manipule. </p>
+<div class="admonition note">
+<p class="admonition-title">A faire</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Table Ouvrage</label><label for="__tabbed_1_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>ajouter la requête de création de la table <code>Ouvrage</code></li>
+<li>Pour la table <code>Ouvrage</code>, on ne souhaite pas gérer <code>NumOuvrage</code> (un numéro automatique devra être généré). </li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="language-SQL highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">OUVRAGE</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">numouvrage</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">titreouvrage</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">    </span><span class="n">anneeparution</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">    </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">pk_ouvrage</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w">  </span><span class="p">(</span><span class="n">numouvrage</span><span class="p">)</span>
+<span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">OUVRAGE</span>
+<span class="w">    </span><span class="k">DROP</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">OUVRAGE</span><span class="w"> </span>
+<span class="w">    </span><span class="k">MODIFY</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">numouvrage</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">OUVRAGE</span><span class="w"> </span>
+<span class="w">    </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">pk_ouvrage</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w">  </span><span class="p">(</span><span class="n">numouvrage</span><span class="p">);</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
 <p><ins><strong>le cas des clés étrangères :</strong></ins></p>
 <p>Exemple pour la table Emprunter <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:" /> </p>
 <div class="language-SQL highlight"><span class="filename">🗂️ Requête SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Emprunter</span><span class="p">(</span><span class="w"> </span>
