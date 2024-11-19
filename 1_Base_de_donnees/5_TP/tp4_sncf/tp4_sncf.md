@@ -35,7 +35,7 @@ CREATE DATABASE IF NOT EXISTS sncf ;
     	CHECK 
         ```
 
-    ** Définir une valeur par défaut**<br />
+    **Définir une valeur par défaut**<br />
     Le langage SQL permet de définir une valeur par défaut lorsqu'un champ de la base n'est pas renseigné grâce à la clause ``DEFAULT``. Cela permet notamment de faciliter la création de tables, ainsi que de garantir qu'un champ ne sera pas vide. 
     La clause ``DEFAULT`` doit être suivie par la valeur à affecter. Cette valeur peut être un des types suivants : <br />
 
