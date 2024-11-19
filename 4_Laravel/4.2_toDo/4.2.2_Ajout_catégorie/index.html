@@ -26,7 +26,7 @@
     
     
       
-        <title>2. Evolution : Gestion des catégories - Saint Sauveur BTS SIO SLAM</title>
+        <title>2. Gestion des catégories - Saint Sauveur BTS SIO SLAM</title>
       
     
     
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2-evolution-gestion-des-categories" class="md-skip">
+        <a href="#2-gestion-des-categories" class="md-skip">
           Aller au contenu
         </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2. Evolution : Gestion des catégories
+              2. Gestion des catégories
             
           </span>
         </div>
@@ -2475,7 +2475,7 @@
           
   
   <span class="md-ellipsis">
-    2. Evolution : Gestion des catégories
+    2. Gestion des catégories
   </span>
   
 
@@ -2486,7 +2486,7 @@
         
   
   <span class="md-ellipsis">
-    2. Evolution : Gestion des catégories
+    2. Gestion des catégories
   </span>
   
 
@@ -2653,7 +2653,7 @@
         
   
   <span class="md-ellipsis">
-    4. Projet ToDo Gestion des listes
+    4. Gestion des listes
   </span>
   
 
@@ -3521,7 +3521,7 @@
   
 
 
-<h1 id="2-evolution-gestion-des-categories">2. Evolution : Gestion des catégories<a class="headerlink" href="#2-evolution-gestion-des-categories" title="Permanent link">⚓︎</a></h1>
+<h1 id="2-gestion-des-categories">2. Gestion des catégories<a class="headerlink" href="#2-gestion-des-categories" title="Permanent link">⚓︎</a></h1>
 <p>Dans ce TP nous allons réaliser une application web, « TODO » ou aussi appelé liste de tâches.<br />
 Une TODO List est un procédé qui se veut simple et efficace pour gérer les tâches d'un projet. Ces tâches peuvent être indépendantes ou devoir, au contraire, être accomplies dans un certain ordre. Ces tâches pourront également être catégorisées (pro, perso, famille, ...).<br /></p>
 <p>Voilà la liste des fonctionnalités de l’application que l'on va ajouter :<br />
@@ -3807,8 +3807,8 @@ php artisan migrate:fresh --seed --seeder=CategoriesSeeder
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Relancer la migration et les seeders <code>php artisan migrate:fresh --seed</code></p>
 </details>
 <h3 id="216-adapter-le-code-de-savetodo-pour-enregister-la-categorie-du-todo">2.1.6 Adapter le code de SaveTodo pour enregister la catégorie du Todo<a class="headerlink" href="#216-adapter-le-code-de-savetodo-pour-enregister-la-categorie-du-todo" title="Permanent link">⚓︎</a></h3>
-<p>Pour la gestion de la catégorie, je vous rappelle que nous avons déjà géré<code>les jointures par magie :sparkles:. On va continuer à utiliser cette mécanique pour la sauvegarde.&lt;br /&gt;
-On envoie par la vue</code>home<code>un tableau de catégories</code>name="categories[]"`.
+<p>Pour la gestion de la catégorie, je vous rappelle que nous avons déjà géré les jointures par magie <img alt="✨" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2728.svg" title=":sparkles:" />. On va continuer à utiliser cette mécanique pour la sauvegarde.<br />
+On envoie par la vue <code>home</code> un tableau de catégories <code>name="categories[]"</code>.
 Lisez un peu de documentation <a href="https://laravel.sillo.org/cours-laravel-10-les-donnees-la-relation-nn/">ici</a> et essayer de l'adapter à votre projet.</p>
 <details class="tips">
 <summary>Solution</summary>
