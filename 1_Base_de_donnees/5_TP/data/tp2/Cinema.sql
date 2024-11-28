@@ -14,6 +14,16 @@ CREATE TABLE Artiste (
 ) ;
 
 #
+# Table structure for table `Genre`
+#
+
+DROP TABLE IF EXISTS Genre;
+CREATE TABLE Genre (
+  id int(11) NOT NULL PRIMARY KEY auto_increment,
+  nomGenre varchar(100) NOT NULL default ''
+) ;
+
+#
 # Table structure for table `Film`
 #
 
@@ -24,21 +34,13 @@ CREATE TABLE `Film` (
   annee int NOT NULL default 2000,
   prenom_realisateur varchar(50) NOT NULL default '',
   nom_realisateur varchar(50) NOT NULL default '',
-  genre int NOT NULL default '1' references Genre(id),
+  genre int NOT NULL default '1',
   sortie date NOT NULL default '2000-12-12',
-  recettes int NOT NULL default 0
-) ;
-
-#
-# Table structure for table `Genre`
-#
-
-DROP TABLE IF EXISTS Genre;
-CREATE TABLE Genre (
-  id int(11) NOT NULL PRIMARY KEY auto_increment,
-  nomGenre varchar(100) NOT NULL default '',
+  recettes int NOT NULL default 0,
   CONSTRAINT fk_genre FOREIGN KEY (genre) REFERENCES Genre(id)
 ) ;
+
+
 
 #
 # Table structure for table `Role`
@@ -54,7 +56,18 @@ CREATE TABLE Role (
   CONSTRAINT fk_acteur FOREIGN KEY (idActeur) REFERENCES Artiste(idActeur)
 ) ;
 
+#
+# Dumping data for table `Genre`
+#
 
+INSERT INTO Genre VALUES (1, 'Histoire');
+INSERT INTO Genre VALUES (2, 'Policier');
+INSERT INTO Genre VALUES (3, 'Animation');
+INSERT INTO Genre VALUES (4, 'Fantastique');
+INSERT INTO Genre VALUES (5, 'Comedie');
+INSERT INTO Genre VALUES (6, 'Drame');
+INSERT INTO Genre VALUES (7, 'Science fiction');
+INSERT INTO Genre VALUES (8, 'Aventure');
 
 #
 # Dumping data for table `Artiste`
@@ -239,18 +252,7 @@ INSERT INTO `Film` VALUES
 
 
 
-#
-# Dumping data for table `Genre`
-#
 
-INSERT INTO Genre VALUES (1, 'Histoire');
-INSERT INTO Genre VALUES (2, 'Policier');
-INSERT INTO Genre VALUES (3, 'Animation');
-INSERT INTO Genre VALUES (4, 'Fantastique');
-INSERT INTO Genre VALUES (5, 'Comedie');
-INSERT INTO Genre VALUES (6, 'Drame');
-INSERT INTO Genre VALUES (7, 'Science fiction');
-INSERT INTO Genre VALUES (8, 'Aventure');
 
 
 

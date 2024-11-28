@@ -16,6 +16,7 @@
 | Todo|Suppression |
 | Todo|Soft Delete |
 | Todo|Page de compteur |
+|Todo|Softdelete|
 | catégorie|Affichage liste|
 | catégorie|Affection d'un todo |
 | catégorie|ajout/suppression catégorie |

@@ -5,6 +5,7 @@
 3. [Langage de Création de données](./3_LCD/cours.md)
 4. [SQL Complexe](./4_SQLComplexe/cours.md)
 5. [Travaux pratiques](./5_TP/)
+6. [découverte du NoSQL](./6_NoSQL/cours.md)
 
 !!! abstract "Compétences"
     B1.3 Développer la présence en ligne de l’organisation
