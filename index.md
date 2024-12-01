@@ -1,5 +1,15 @@
 ![logo BTS](./images/logo-bts-sio-300x143.png){ .center width=20%}
 
+!!! warning "Calendrier de l'avent"
+
+    ![cal](./images/Free-Printable-Advent-Calendars-jpg.webp){: width=50% .center}
+
+    Pour cette période de Noël, je vous propose un petit jeu.<br />
+    Chaque jour, je posterais une énigme en ligne. Le premier à y répondre par message Ecole Directe marquera 3️⃣ points, le second 2️⃣ points et le troisième 1️⃣ points.<br />
+    Le vendredi 20 décembre, lors du secret 🎅's, je remettrais un prix aux trois gagnants 🏆.
+
+    lien vers le calendrier : [ici !](./calendrier.md)
+
 !!! warning "Actu SIO1"
 
     :pushpin: Thème en cours : [TP Sauvegarde](./1_Base_de_donnees/5_TP/tp8_sauvegarde.md)
