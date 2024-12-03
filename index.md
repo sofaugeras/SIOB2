@@ -36,17 +36,17 @@
     - :pig: [fleury Michon 2019](https://www.lemagit.fr/etude/Fleury-Michon-histoire-dune-crise-de-cybersecurite-qui-a-bien-tourne)
     - :hospital: [hopital de rennes 2023](https://www.radiofrance.fr/francebleu/podcasts/l-invite-d-ici/cyberattaque-d-une-clinique-a-rennes-les-rancons-ne-sont-jamais-payees-selon-un-specialiste-9882547) 
 
-    :calendar: date disponible :<br />
-    10.12.24 / 17.12.24 / 25.02.24 / 04.03.24 / 18.03.24
+    :calendar: date prévue des exposés :<br />
 
     |Date|Nom|Thème|
     |:--:|:--:|:--:|
-    | 11.03.24 |Léa| Centre hospitalier Corbeil Esssonne 2022|
-    | |Valentin| |
-    | |Evan| |
-    | |Enzo| |
-    | |Guillaume| |
-    | |Vincent| |
+    | 10.12.24 |Vincent|Solarwind 2020 |
+    | 17.12.24 |Valentin| Maersh - Not Petya|
+    | 25.02.25 |Evan| Change healthcare |
+    | 04.03.25 |Enzo| Capgemini 2023 |
+    | 11.03.25 |Léa| Centre hospitalier Corbeil Esssonne 2022|
+    | 18.03.25 |Guillaume| Stuxnet 2010 |
+    
 
 
 !!! tip "les essentiels"

@@ -11,9 +11,60 @@
 
 |Position|Joueur|Nb de points|
 |:--|:--|:--|
-|1|Raphaël| 3 |
-|2|Vincent| 2 |
-|3|Yanis|1 |
+|1|Raphaël| 5 |
+|2|Enzo|3|
+|3|Vincent| 2 |
+|4|Yanis|1 |
+|4|François|1|
+
+<!--
+!!! danger "Jour 5 ⭐️⭐️"
+    === "Cyber à l'heure du facteur"
+        Le facteur d'un village, que l'on ne nommera pas, a la sale manie d'ouvrir toutes les lettres et les colis qui lui passent entre les mains.<br />
+        Comment pouvez vous envoyer une lettre à une amie qui habite dans ce village en vous assuranr qu'elle ne sera pas lue ?
+
+    === "Solution"
+        <!--
+        c'est le principe du chiffrement asymétrique à clé privée. <br />
+        Vous l'envoyez dans une boite fermée d'un cadenas ; votre amie vous la renvoie en ajoutant un cadenas à la boîte. Vous enlevez votre cadenas et vous renvoyez la boîte ; votre amie n'a plus qu'à l'ouvrir en utilisant sa propre clé.<br />
+        Certes, il ne faut pas être pressé ...
+        
+-->
+
+<!--
+!!! danger "Jour 4 ⭐️"
+    === "Les quatres cadrans"
+        Quatre horloges indiquent respectivemennt les heures suivantes : 14h30, 15h00, 14h50 et 14h20. L'une d'elles avance de 20 minutes, une autre retarde de 10 minutes, une s'est arrêtée, une seule est à la bonne heure. <br />
+        Quelle heure est-il ?
+
+    === "Solution"
+        <!--
+        Il est 14h30.
+-->
+
+!!! danger "Jour 3 ⭐️"
+    === "Anniversaire"
+        Avant-hier, Marie avait 17 ans ; l'année prochaine, elle aura 20 ans. Comment est-ce possible ?
+
+    === "Solution"
+    
+        <!--
+        Hier, on était le 31 décembre, elle a eu 18 ans. Cette année, elle va avoir 19 ans et l'année prochaine, 20 ans
+        -->
+
+!!! danger "Jour 2 ⭐️"
+    === "les pyramides"
+
+        Compléter les 2 pyramides.
+
+        ![pyramide 1](./images/pyramide1.jpg){ .center width=50%}
+
+        ![pyramide 2](./images/pyramide2.jpg){ .center width=50%}
+
+        Vous pouvez me répondre avec un fichier excel ou en modifiant les photos.
+
+    === "Solution"
+        ![correction J2](./images/j2_corr.jpg){ .center width=50%}
 
 !!! danger "Jour 1 ⭐️"
     === "math"
@@ -29,15 +80,4 @@
         La réponse est $1/2$. En effet $0.5/0.5 = 1$
 
 
-!!! danger "Jour 2 ⭐️"
-    === "les pyramides"
 
-        Compléter les 2 pyramides.
-
-        ![pyramide 1](./images/pyramide1.jpg){ .center width=50%}
-
-        ![pyramide 2](./images/pyramide2.jpg){ .center width=50%}
-
-        Vous pouvez me répondre avec un fichier excel ou en modifiant les photos.
-
-    === "Solution"
