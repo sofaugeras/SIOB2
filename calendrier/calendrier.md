@@ -12,10 +12,11 @@
 |Position|Joueur|Nb de points|
 |:--|:--|:--|
 |1|Raphaël| 5 |
-|2|Enzo|3|
-|3|Vincent| 2 |
-|4|Yanis|1 |
-|4|François|1|
+|1|Enzo|5|
+|2|Vincent| 3 |
+|3|Yanis|1 |
+|3|François|1|
+|3|Maël|1|
 
 <!--
 !!! danger "Jour 5 ⭐️⭐️"
@@ -31,7 +32,6 @@
         
 -->
 
-<!--
 !!! danger "Jour 4 ⭐️"
     === "Les quatres cadrans"
         Quatre horloges indiquent respectivemennt les heures suivantes : 14h30, 15h00, 14h50 et 14h20. L'une d'elles avance de 20 minutes, une autre retarde de 10 minutes, une s'est arrêtée, une seule est à la bonne heure. <br />
@@ -40,7 +40,7 @@
     === "Solution"
         <!--
         Il est 14h30.
--->
+        -->
 
 !!! danger "Jour 3 ⭐️"
     === "Anniversaire"
@@ -48,9 +48,8 @@
 
     === "Solution"
     
-        <!--
         Hier, on était le 31 décembre, elle a eu 18 ans. Cette année, elle va avoir 19 ans et l'année prochaine, 20 ans
-        -->
+
 
 !!! danger "Jour 2 ⭐️"
     === "les pyramides"
