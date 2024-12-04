@@ -11,14 +11,16 @@
 
 |Position|Joueur|Nb de points|
 |:--|:--|:--|
-|1|Raphaël| 5 |
-|1|Enzo|5|
-|2|Vincent| 3 |
-|3|Yanis|1 |
-|3|François|1|
-|3|Maël|1|
+| |Raphaël| 5 |
+||Enzo|5|
+||Vincent| 3 |
+||Yanis|1 |
+||François|1|
+||Maël|4|
+||Enzo J|2|
+||Jules|1|
 
-<!--
+
 !!! danger "Jour 5 ⭐️⭐️"
     === "Cyber à l'heure du facteur"
         Le facteur d'un village, que l'on ne nommera pas, a la sale manie d'ouvrir toutes les lettres et les colis qui lui passent entre les mains.<br />
@@ -26,11 +28,10 @@
 
     === "Solution"
         <!--
-        c'est le principe du chiffrement asymétrique à clé privée. <br />
+        c'est le principe du chiffrement symétrique à clé privée. <br />
         Vous l'envoyez dans une boite fermée d'un cadenas ; votre amie vous la renvoie en ajoutant un cadenas à la boîte. Vous enlevez votre cadenas et vous renvoyez la boîte ; votre amie n'a plus qu'à l'ouvrir en utilisant sa propre clé.<br />
         Certes, il ne faut pas être pressé ...
-        
--->
+-       -->
 
 !!! danger "Jour 4 ⭐️"
     === "Les quatres cadrans"

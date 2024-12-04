@@ -3817,7 +3817,9 @@
 <p>👉 Expliquer la commande de base pour sauvegarder une base de données </p>
 <p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>mysqldump<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>tp_sauvegarde<span class="w"> </span>&gt;<span class="w"> </span>sauvegarde_tp.sql
 </code></pre></div>
-👉 Vérifier que le fichier de sauvegarde est bien créé. Où a t'il été créé ?</p>
+<strong>note</strong> : le mot de passe demandé à l'execution de la commande est celui de la base de données (associé au <code>root</code>)</p>
+<p><strong>indication</strong> : lire la <a href="https://dev.mysql.com/doc/refman/8.4/en/mysqldump.html" target="blank">documentation</a></p>
+<p>👉 Vérifier que le fichier de sauvegarde est bien créé. Où a t'il été créé ?</p>
 <details class="question">
 <summary>solution</summary>
 <p>Le fichier <code>sauvegarde_tp.sql</code> est créé dans le répertoire où la commande a été exécutée.</p>

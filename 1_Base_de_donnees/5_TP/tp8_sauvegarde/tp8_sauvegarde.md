@@ -53,6 +53,10 @@
    ```bash
    mysqldump -u root -p tp_sauvegarde > sauvegarde_tp.sql
    ```
+**note** : le mot de passe demandé à l'execution de la commande est celui de la base de données (associé au ``root``)
+
+**indication** : lire la [documentation](https://dev.mysql.com/doc/refman/8.4/en/mysqldump.html){: target="blank"}
+
 👉 Vérifier que le fichier de sauvegarde est bien créé. Où a t'il été créé ?
 
 ??? question "solution"
