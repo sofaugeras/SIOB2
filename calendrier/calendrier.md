@@ -31,7 +31,7 @@
         c'est le principe du chiffrement symétrique à clé privée. <br />
         Vous l'envoyez dans une boite fermée d'un cadenas ; votre amie vous la renvoie en ajoutant un cadenas à la boîte. Vous enlevez votre cadenas et vous renvoyez la boîte ; votre amie n'a plus qu'à l'ouvrir en utilisant sa propre clé.<br />
         Certes, il ne faut pas être pressé ...
--       -->
+        -->
 
 !!! danger "Jour 4 ⭐️"
     === "Les quatres cadrans"

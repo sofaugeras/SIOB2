@@ -37,14 +37,14 @@
 ??? warning "préalable"
 
       - localiser ``mysqldump.exe`` qui doit etre dans ``C:\wamp64\bin\mysql\mysqlX.X.X\bin``<br />
-      - Ajouter ce chemin dans les variables d'environnement de Windows<br />
-      - Cela permettra d'utiliser la commande MySQLdump depuis une invite de commande peu importe le répertoire ou l'on se trouve<br />
-      - tester si cela fonctionne en ouvrant une invite de commande **cmd** et en tapant ``mysqldump --version``<br />
+      - Ajouter ce chemin dans les variables d'environnement de Windows. Cela permettra d'utiliser la commande MySQLdump depuis une invite de commande peu importe le répertoire ou l'on se trouve<br />
+      
       **Détail**  <br />
       - Accédez à **Panneau de configuration > Système > Paramètres avancés > Variables d'environnement**.<br />
       - Trouvez la variable **Path** dans la section ==Système== et cliquez sur Modifier.<br />
       - Ajoutez le chemin vers le répertoire bin de MySQL (par exemple, ``C:\Program Files\MySQL\MySQL Server X.X\bin``).<br />
       - Redémarrez l’Invite de commandes.
+      - tester si cela fonctionne en ouvrant une invite de commande **cmd** et en tapant ``mysqldump --version``<br />
 
 #### 2.1 Sauvegarde avec `mysqldump`
 
