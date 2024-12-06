@@ -1,4 +1,4 @@
-# Calendrier de l'avent 
+# Calendrier de l'avent 🎄
 
 ![advent SIO](./images/logique,%20math%20et%20défi.png){ .center width=50%}
 
@@ -11,15 +11,23 @@
 
 |Position|Joueur|Nb de points|
 |:--|:--|:--|
-| |Raphaël| 5 |
-||Enzo|5|
-||Vincent| 3 |
+|1|Vincent| 6 |
+|2|Raphaël| 5 |
+|2|Enzo|5|
+|3|Maël|4|
+|3|Enzo J|4|
 ||Yanis|1 |
 ||François|1|
-||Maël|4|
-||Enzo J|2|
 ||Jules|1|
+||Guillaume|1|
 
+
+
+!!! danger "Jour 6 ⭐️"
+    === "Sudoku"
+        ![sudoku](./images/sudoku.jpg){ .center width=50%}
+    === "Solution"
+        ![sudoku](){ .center width=50%}
 
 !!! danger "Jour 5 ⭐️⭐️"
     === "Cyber à l'heure du facteur"
@@ -27,11 +35,9 @@
         Comment pouvez vous envoyer une lettre à une amie qui habite dans ce village en vous assuranr qu'elle ne sera pas lue ?
 
     === "Solution"
-        <!--
         c'est le principe du chiffrement symétrique à clé privée. <br />
         Vous l'envoyez dans une boite fermée d'un cadenas ; votre amie vous la renvoie en ajoutant un cadenas à la boîte. Vous enlevez votre cadenas et vous renvoyez la boîte ; votre amie n'a plus qu'à l'ouvrir en utilisant sa propre clé.<br />
         Certes, il ne faut pas être pressé ...
-        -->
 
 !!! danger "Jour 4 ⭐️"
     === "Les quatres cadrans"
