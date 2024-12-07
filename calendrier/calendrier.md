@@ -12,22 +12,34 @@
 |Position|Joueur|Nb de points|
 |:--|:--|:--|
 |1|Vincent| 6 |
-|2|Raphaël| 5 |
-|2|Enzo|5|
-|3|Maël|4|
-|3|Enzo J|4|
+|2|Enzo R|8|
+|3|Raphaël| 7 |
+|4|Maël|5|
+|5|Enzo J|4|
 ||Yanis|1 |
 ||François|1|
 ||Jules|1|
 ||Guillaume|1|
 
+!!! danger "Jour 7 ⭐️"
+    === "Chasse aux nombres"
 
+        ![dessin](./images/nombreManquant.jpg){ .center width=50%}
+
+        Pourrais tu compléter l'équation afin qu'ell soit correcte ?
+        ![equation](./images/equation.jpg){ .center width=50%}
+
+    === "Solution"
+        <!--
+        2
+        $3-4+8+5-2=10$
+        -->
 
 !!! danger "Jour 6 ⭐️"
     === "Sudoku"
         ![sudoku](./images/sudoku.jpg){ .center width=50%}
     === "Solution"
-        ![sudoku](){ .center width=50%}
+        ![sudoku](./images/sudoku_solution.jpg){ .center width=50%}
 
 !!! danger "Jour 5 ⭐️⭐️"
     === "Cyber à l'heure du facteur"
