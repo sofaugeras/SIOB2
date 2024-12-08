@@ -21,6 +21,18 @@
 ||Jules|1|
 ||Guillaume|1|
 
+!!! danger "Jour 8 ⭐️"
+    === "Anagrammes"
+        démêler les mots pour retrouver leur forme correcte<br />
+
+        **nldcehale**<br />
+
+        **ipacndéepi**
+    === "Solution"
+        <!--
+        chandelle et pain d'épice
+        -->
+
 !!! danger "Jour 7 ⭐️"
     === "Chasse aux nombres"
 
@@ -30,10 +42,9 @@
         ![equation](./images/equation.jpg){ .center width=50%}
 
     === "Solution"
-        <!--
         2
         $3-4+8+5-2=10$
-        -->
+    
 
 !!! danger "Jour 6 ⭐️"
     === "Sudoku"
