@@ -11,15 +11,28 @@
 
 |Position|Joueur|Nb de points|
 |:--|:--|:--|
-|1|Vincent| 6 |
-|2|Enzo R|8|
-|3|Raphaël| 7 |
-|4|Maël|5|
-|5|Enzo J|4|
+||Vincent| 8 |
+||Enzo R|8|
+||Raphaël| 8 |
+||Maël|8|
+||Elouan|6|
+||Enzo J|4|
 ||Yanis|1 |
 ||François|1|
 ||Jules|1|
 ||Guillaume|1|
+
+!!! danger "jour 9 ⭐️⭐️"
+    === "L'espion 👤 qui venait du froid"
+        En mission pour la DGSE, vous avez localisé un espion parmi 3 personnes de nationalités différentes, qui habitent 3 maisons contiguës et qui ont chacun un activité différente. Vous savez que le russe habite la maison du milieu, que le chinois est architecte, rien sur l'américain, et que votre espion habite la première maison.
+        **Quelle est sa nationalité ?**
+        
+        <br />
+        pour ceux qui aiment les énigmes comme celle ci : [l'enigme du zèbre](https://www.gilray.ca/zebre.html).
+    === "Solution"
+        <!--
+        l'espion est américain
+        -->
 
 !!! danger "Jour 8 ⭐️"
     === "Anagrammes"
@@ -29,9 +42,9 @@
 
         **ipacndéepi**
     === "Solution"
-        <!--
+
         chandelle et pain d'épice
-        -->
+        
 
 !!! danger "Jour 7 ⭐️"
     === "Chasse aux nombres"

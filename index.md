@@ -12,7 +12,7 @@
 
 !!! warning "Actu SIO1"
 
-    :pushpin: Thème en cours : [TP Sauvegarde](./1_Base_de_donnees/5_TP/tp8_sauvegarde.md)
+    :pushpin: Thème en cours : 
 
     :closed_book: Deuxième série de DS : du 17 au 21 Mars 2025<br />
     :date: Stage SIO1 : 19 mai au 20 juin 2025
@@ -23,7 +23,7 @@
 !!! warning "Actu SIO2"
 
     :pushpin: Thème en cours B2 : [Initiation NoSQL](./1_Base_de_donnees/6_NoSQL/cours.md)<br />
-    :pushpin: Thème en cours B3 : Exposition aux données sensibles
+    :pushpin: Thème en cours B3 : Contrôle des accès
 
     :date: Stage SIO2 : 6 janvier au 14 février 2025<br />
     :closed_book: BTS Blanc : du 24 au 28 mars 2025<br />
