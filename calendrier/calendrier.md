@@ -11,16 +11,29 @@
 
 |Position|Joueur|Nb de points|
 |:--|:--|:--|
-||Vincent| 8 |
-||Enzo R|8|
+||Vincent| 11 |
+||Enzo R|10|
 ||Raphaël| 8 |
-||Maël|8|
+||Maël|9|
 ||Elouan|6|
 ||Enzo J|4|
 ||Yanis|1 |
 ||François|1|
 ||Jules|1|
 ||Guillaume|1|
+
+!!! danger "Jour 10 ⭐️"
+    === "Usual suspects"
+        Une villa vient d'être cambriolée. Trois personnes sont suspectes : **Léo**, **Théo** et **Mario**. L'inspecteur sait que Théo ne ment jamais, que Léo ment toujours et que Mario dit parfois la vérité et parfois des mensonges. Voici leur déclarations :<br />
+        Léo : "Javoue, je suis le coupable !"<br />
+        Théo : "Mario est innocent"<br />
+        Mario : "C'est Léo qui a fait le coup."<br />
+        Qui est le coupable ?
+    === "Solution"
+        <!--
+        C'est Théo le coupable
+        -->
+
 
 !!! danger "jour 9 ⭐️⭐️"
     === "L'espion 👤 qui venait du froid"
@@ -30,9 +43,9 @@
         <br />
         pour ceux qui aiment les énigmes comme celle ci : [l'enigme du zèbre](https://www.gilray.ca/zebre.html).
     === "Solution"
-        <!--
+
         l'espion est américain
-        -->
+        
 
 !!! danger "Jour 8 ⭐️"
     === "Anagrammes"
