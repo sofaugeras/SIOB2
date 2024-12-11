@@ -24,12 +24,15 @@
 
 !!! danger "Jour 11 ⭐️⭐️"
     === "Quel est le code ?"
-        ![carre](./images/carre.jpg){: width=50% }
+        ![carre](./images/carre.jpg){: width=50% }<br />
         195 : Aucun numéro n'est bon<br />
         421 : Deux numéros sont bons mais mal placés<br />
         983 : Aucun numéro n'est bon<br />
         804 : Deux numéros sont bons mais mal placés<br />
         302 : Deux numéros sont bons, dont un qui est mal placé et un autre bien placé<br />
+
+       ** Quel est le code ?**
+
     === "Solution"
         <!--
         Le code est 042
