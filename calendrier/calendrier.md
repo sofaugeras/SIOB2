@@ -11,8 +11,8 @@
 
 |Position|Joueur|Nb de points|
 |:--|:--|:--|
+||Enzo R|13|
 ||Vincent| 11 |
-||Enzo R|10|
 ||Raphaël| 8 |
 ||Maël|9|
 ||Elouan|6|
@@ -22,6 +22,20 @@
 ||Jules|1|
 ||Guillaume|1|
 
+!!! danger "Jour 11 ⭐️⭐️"
+    === "Quel est le code ?"
+        🔲🔲🔲<br />
+        195 : Aucun numéro n'est bon
+        421 : Deux numéros sont bons mais mal placés
+        983 : Aucun numéro n'est bon
+        804 : Deux numéros sont bons mais mal placés
+        302 : Deux numéros sont bons, dont un qui est mal placé et un autre bien placé
+    === "Solution"
+        <!--
+        Le code est 042
+        -->
+
+
 !!! danger "Jour 10 ⭐️"
     === "Usual suspects"
         Une villa vient d'être cambriolée. Trois personnes sont suspectes : **Léo**, **Théo** et **Mario**. L'inspecteur sait que Théo ne ment jamais, que Léo ment toujours et que Mario dit parfois la vérité et parfois des mensonges. Voici leur déclarations :<br />
@@ -30,9 +44,9 @@
         Mario : "C'est Léo qui a fait le coup."<br />
         Qui est le coupable ?
     === "Solution"
-        <!--
+
         C'est Théo le coupable
-        -->
+
 
 
 !!! danger "jour 9 ⭐️⭐️"
