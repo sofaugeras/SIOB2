@@ -11,16 +11,27 @@
 
 |Position|Joueur|Nb de points|
 |:--|:--|:--|
+||Maël|15|
 ||Enzo R|13|
 ||Vincent| 11 |
+||Elouan|11|
 ||Raphaël| 8 |
-||Maël|9|
-||Elouan|6|
-||Enzo J|4|
+||Enzo J|6|
 ||Yanis|1 |
 ||François|1|
 ||Jules|1|
 ||Guillaume|1|
+
+!!! danger "Jour 12 ⭐️⭐️"
+    === "Accorder les pendules"
+        Vous aviez synchronisé votre réveil avec votre montre, mais cela fait un moment qu'ils ne vous donnent plus la même heure. Votre réveil affiche 9 heures, mais vpus savez qu'il avance de 10 minutes par heure ; votre montre 7 heures, mais vous savez qu'elle retarde de 10 minutes par heure.<br />
+        **Quelle heure est-il exactement ?**
+
+    === "Solution"
+
+        <!--
+        18h. Chaque heure qui passe, votre réveil et votre montre accusent une différence de 20 minutes. Quand elles ont deux heures de décalage, cela fait donc 6 heures qu'elles divergent. Conséquences : votre réveil a 60 minutes d'avance et votre montre, 60 minutes de retard.
+        -->
 
 !!! danger "Jour 11 ⭐️⭐️"
     === "Quel est le code ?"
@@ -34,9 +45,9 @@
        ** Quel est le code ?**
 
     === "Solution"
-        <!--
+        
         Le code est 042
-        -->
+        
 
 
 !!! danger "Jour 10 ⭐️"
