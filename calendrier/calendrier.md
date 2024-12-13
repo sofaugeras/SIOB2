@@ -11,10 +11,10 @@
 
 |Position|Joueur|Nb de points|
 |:--|:--|:--|
-||Maël|15|
+||Maël|18|
 ||Enzo R|13|
+||Elouan|13|
 ||Vincent| 11 |
-||Elouan|11|
 ||Raphaël| 8 |
 ||Enzo J|6|
 ||Yanis|1 |
@@ -22,16 +22,23 @@
 ||Jules|1|
 ||Guillaume|1|
 
+!!! danger "Jour 13 ⭐️⭐️"
+    === "Famille nombreuse"
+        Hugo et Zoé font partie d'une famille nombreuse. Hugo a deux fois plus de soeurs que de frères, et Zoé a autant de frères que de soeurs. <br />
+        **Combien d'enfants y a-t-il en tout ? de filles, de garçon ?**
+
+    === "Solution"
+        Il y a sept enfants en tout : quatre filles et 3 garçons.
+
 !!! danger "Jour 12 ⭐️⭐️"
     === "Accorder les pendules"
-        Vous aviez synchronisé votre réveil avec votre montre, mais cela fait un moment qu'ils ne vous donnent plus la même heure. Votre réveil affiche 9 heures, mais vpus savez qu'il avance de 10 minutes par heure ; votre montre 7 heures, mais vous savez qu'elle retarde de 10 minutes par heure.<br />
+        Vous aviez synchronisé votre réveil avec votre montre, mais cela fait un moment qu'ils ne vous donnent plus la même heure. Votre réveil affiche 9 heures, mais vous savez qu'il avance de 10 minutes par heure ; votre montre 7 heures, mais vous savez qu'elle retarde de 10 minutes par heure.<br />
         **Quelle heure est-il exactement ?**
 
     === "Solution"
 
-        <!--
-        18h. Chaque heure qui passe, votre réveil et votre montre accusent une différence de 20 minutes. Quand elles ont deux heures de décalage, cela fait donc 6 heures qu'elles divergent. Conséquences : votre réveil a 60 minutes d'avance et votre montre, 60 minutes de retard.
-        -->
+        8h. Chaque heure qui passe, votre réveil et votre montre accusent une différence de 20 minutes. Quand elles ont deux heures de décalage, cela fait donc 6 heures qu'elles divergent. Conséquences : votre réveil a 60 minutes d'avance et votre montre, 60 minutes de retard.
+        (sur mon livre, la réponse est 18h, mais je ne suis pas d'accord !!)
 
 !!! danger "Jour 11 ⭐️⭐️"
     === "Quel est le code ?"
