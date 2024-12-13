@@ -11,16 +11,18 @@
 
 |Position|Joueur|Nb de points|
 |:--|:--|:--|
-||Maël|18|
-||Enzo R|13|
+||Maël|21|
+||Vincent| 14 |
+||Enzo R|14|
 ||Elouan|13|
-||Vincent| 11 |
-||Raphaël| 8 |
+||Raphaël| 9 |
 ||Enzo J|6|
 ||Yanis|1 |
 ||François|1|
 ||Jules|1|
 ||Guillaume|1|
+
+
 
 !!! danger "Jour 13 ⭐️⭐️"
     === "Famille nombreuse"
@@ -28,7 +30,7 @@
         **Combien d'enfants y a-t-il en tout ? de filles, de garçon ?**
 
     === "Solution"
-        Il y a sept enfants en tout : quatre filles et 3 garçons.
+        <!--Il y a sept enfants en tout : quatre filles et 3 garçons.-->
 
 !!! danger "Jour 12 ⭐️⭐️"
     === "Accorder les pendules"
@@ -49,7 +51,7 @@
         804 : Deux numéros sont bons mais mal placés<br />
         302 : Deux numéros sont bons, dont un qui est mal placé et un autre bien placé<br />
 
-       ** Quel est le code ?**
+       **Quel est le code ?**
 
     === "Solution"
         
