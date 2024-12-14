@@ -22,7 +22,17 @@
 ||Jules|1|
 ||Guillaume|1|
 
+!!! danger "Jour 14 ⭐️"
+    === "Cryptage"
+        Peux tu decrypter cette phrase célèbre ?<br />
 
+        **"W' ymn oh jyncn jum jiol f'biggy"**
+
+    === "Solution"
+
+        <!--C'est un décalage de César de l'ordre de -7.<br />
+        "**C'est un petit pas pour l'homme**" - Neil Amstrong
+        -->
 
 !!! danger "Jour 13 ⭐️⭐️"
     === "Famille nombreuse"
@@ -51,7 +61,7 @@
         804 : Deux numéros sont bons mais mal placés<br />
         302 : Deux numéros sont bons, dont un qui est mal placé et un autre bien placé<br />
 
-       **Quel est le code ?**
+        **Quel est le code ?**
 
     === "Solution"
         
