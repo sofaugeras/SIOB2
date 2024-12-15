@@ -22,6 +22,15 @@
 ||Jules|1|
 ||Guillaume|1|
 
+!!! danger "Jour 15 ⭐️"
+    === "des étoiles"
+        Complète les étoiles pour que chaque branche soit égale à 26.
+
+        ![etoile](./images/IMG_4086.jpg)
+
+    === "Solution"
+        ![etoile]()
+
 !!! danger "Jour 14 ⭐️"
     === "Cryptage"
         Peux tu decrypter cette phrase célèbre ?<br />
@@ -30,9 +39,9 @@
 
     === "Solution"
 
-        <!--C'est un décalage de César de l'ordre de -7.<br />
+        C'est un décalage de César de l'ordre de -7.<br />
         "**C'est un petit pas pour l'homme**" - Neil Amstrong
-        -->
+        
 
 !!! danger "Jour 13 ⭐️⭐️"
     === "Famille nombreuse"
