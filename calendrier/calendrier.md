@@ -12,15 +12,24 @@
 |Position|Joueur|Nb de points|
 |:--|:--|:--|
 ||Maël|21|
+||Enzo R|17|
 ||Vincent| 14 |
-||Enzo R|14|
-||Elouan|13|
-||Raphaël| 9 |
+||Elouan|14|
+||Raphaël| 11 |
 ||Enzo J|6|
 ||Yanis|1 |
 ||François|1|
 ||Jules|1|
 ||Guillaume|1|
+
+!!! danger "Jour 16 ⭐️"
+    === "Séquence"
+        11 = 4 <br/>
+        6 = 3<br/>
+        2 = 4<br/>
+        1 = ?
+    === "Solution"
+        <!--2. On compte le nombre de lettres dans chaque nombre -->
 
 !!! danger "Jour 15 ⭐️"
     === "des étoiles"
@@ -29,7 +38,7 @@
         ![etoile](./images/IMG_4086.jpg)
 
     === "Solution"
-        ![etoile]()
+        ![etoile](./images/IMG_4088.jpg)
 
 !!! danger "Jour 14 ⭐️"
     === "Cryptage"
