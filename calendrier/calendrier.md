@@ -11,16 +11,31 @@
 
 |Position|Joueur|Nb de points|
 |:--|:--|:--|
-||Maël|21|
-||Enzo R|17|
+||Maël|22|
+||Enzo R|20|
+||Elouan|16|
 ||Vincent| 14 |
-||Elouan|14|
 ||Raphaël| 11 |
 ||Enzo J|6|
 ||Yanis|1 |
 ||François|1|
 ||Jules|1|
 ||Guillaume|1|
+
+!!! danger "Jour 17 ⭐️"
+    === "Enquête"
+        Le jour de la rentrée scolaire, un drame survient : un professeur d'informatique est retrouvé assassiné. Quatre membres du personnel sont suspectés : le jardinier, le professeur de physique, l'entraîneur de football et le directeur de l'école. Leurs alibis respectifs sont les suivants : <br />
+        
+        - Le jardinier était en train de tailler des buissons.<br />
+        - Le professeur de physique corrigeait une évaluation d'élèves.<br />
+        - L'entraîneur de foot était en train de faire du sport.<br />
+        - Le directeur se trouvait dans son bureau.<br />
+
+        La police n'a pas tardé à arrêter l'auteur du crime. **Qui est le coupable ?**
+
+    === "Solution"
+
+        <!--Qui a des copies à corriger le jour de la rentrée !! C'est le prof de Physique qui est l'assassin. -->
 
 !!! danger "Jour 16 ⭐️"
     === "Séquence"
@@ -29,7 +44,7 @@
         2 = 4<br/>
         1 = ?
     === "Solution"
-        <!--2. On compte le nombre de lettres dans chaque nombre -->
+        2. On compte le nombre de lettres dans chaque nombre 
 
 !!! danger "Jour 15 ⭐️"
     === "des étoiles"
