@@ -226,8 +226,10 @@ pour effectuer les requêtes sur la collection Restaurants, il faut ouvrir un sh
         ```js          
         db.restaurants.find(
             { },
-            { restaurant_id: 1, name: 1, borough:1, zipcode:1 , _id:0}
+            { restaurant_id: 1, name: 1, borough:1, "address.zipcode":1 , _id:0}
         )
+        //ou
+        db.restaurants.find({},{"restaurant_id" : 1,"name":1,"borough":1,"address.zipcode" :1,"_id":0});
         ```
 
 !!! question "R5"

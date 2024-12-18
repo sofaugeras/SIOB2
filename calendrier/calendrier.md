@@ -12,15 +12,30 @@
 |Position|Joueur|Nb de points|
 |:--|:--|:--|
 ||Maël|22|
-||Enzo R|20|
+||Enzo R|22|
+||Raphaël|17|
 ||Elouan|16|
-||Vincent| 14 |
-||Raphaël| 11 |
+||Vincent|14|
 ||Enzo J|6|
-||Yanis|1 |
+||Valentin|4|
+||Yanis|1|
 ||François|1|
 ||Jules|1|
 ||Guillaume|1|
+
+!!! danger "Jour 18 ⭐️"
+    === "Quel est le code ?"
+        ![carre](./images/carre.jpg){: width=50% }<br />
+        243 : Aucun numéro n'est bon<br />
+        710 : Deux numéros sont bons mais mal placés<br />
+        237 : Un des numéro est bon mais mal placé<br />
+        031 : Un des numéro est bon et bien placé<br />
+        254 : Un des numéro est bon mais mal placé<br />
+    
+        **Quel est le code ?**
+
+    === "Solution"
+        <!-- 0 7 5   -->
 
 !!! danger "Jour 17 ⭐️"
     === "Enquête"
@@ -35,7 +50,7 @@
 
     === "Solution"
 
-        <!--Qui a des copies à corriger le jour de la rentrée !! C'est le prof de Physique qui est l'assassin. -->
+        Qui a des copies à corriger le jour de la rentrée !! C'est le prof de Physique qui est l'assassin.
 
 !!! danger "Jour 16 ⭐️"
     === "Séquence"
