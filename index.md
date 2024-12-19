@@ -22,8 +22,8 @@
 
 !!! warning "Actu SIO2"
 
-    :pushpin: Thème en cours B2 : [Initiation NoSQL](./1_Base_de_donnees/6_NoSQL/cours.md)<br />
-    :pushpin: Thème en cours B3 : Contrôle des accès
+    :pushpin: Thème en cours B2 : <br />
+    :pushpin: Thème en cours B3 : 
 
     :date: Stage SIO2 : 6 janvier au 14 février 2025<br />
     :closed_book: BTS Blanc : du 24 au 28 mars 2025<br />
@@ -40,8 +40,8 @@
 
     |Date|Nom|Thème|
     |:--:|:--:|:--:|
-    | 10.12.24 |Vincent|Solarwind 2020 |
-    | 17.12.24 |Valentin| Maersh - Not Petya|
+    | ✅ |Vincent|Solarwind 2020 |
+    | ✅ |Valentin| Maersh - Not Petya|
     | 25.02.25 |Evan| Change healthcare |
     | 04.03.25 |Enzo| Capgemini 2023 |
     | 11.03.25 |Léa| Centre hospitalier Corbeil Esssonne 2022|

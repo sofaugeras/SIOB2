@@ -13,15 +13,27 @@
 |:--|:--|:--|
 ||Maël|22|
 ||Enzo R|22|
-||Raphaël|17|
-||Elouan|16|
+||Raphaël|20|
+||Elouan|17|
 ||Vincent|14|
 ||Enzo J|6|
-||Valentin|4|
+||Valentin|2|
 ||Yanis|1|
 ||François|1|
 ||Jules|1|
 ||Guillaume|1|
+
+!!! danger "Jour 19 ⭐️"
+    === "philosophie"
+        "Tout ce qui est rare est cher,<br />
+        Un cheval bon marché est rare,<br />
+        Donc un cheval bon marché est cher"
+
+        **Comment s'appelle ce type de phrase et quel homme célèbre etait un adepte de ces raisonnements ?**
+
+        Il me faut les deux élèments pour valider la participation.
+
+    === "Solution"
 
 !!! danger "Jour 18 ⭐️"
     === "Quel est le code ?"
