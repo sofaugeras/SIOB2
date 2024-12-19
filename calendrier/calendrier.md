@@ -29,7 +29,7 @@
         Un cheval bon marché est rare,<br />
         Donc un cheval bon marché est cher"
 
-        **Comment s'appelle ce type de phrase et quel mathématicien et écrivain célèbre etait un adepte de ces raisonnements ?**
+        **Comment s'appelle ce type de phrase et quel écrivain (et mathématicien à ces heures) célèbre etait un adepte de ces raisonnements ?**
 
         Il me faut les deux élèments pour valider la participation.
 
