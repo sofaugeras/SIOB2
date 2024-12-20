@@ -11,11 +11,11 @@
 
 |Position|Joueur|Nb de points|
 |:--|:--|:--|
-||Enzo R|24|
-||Maël|22|
-||Raphaël|20|
+|1|Maël|25|
+|2|Enzo R|24|
+|3|Raphaël|22|
+||Vincent|21|
 ||Elouan|17|
-||Vincent|20|
 ||Enzo J|6|
 ||Guillaume|2|
 ||Valentin|2|
@@ -30,6 +30,7 @@
 
         **De quoi s'agit-il ?**
     === "Solution"
+        Le silence
 
 !!! danger "Jour 19 ⭐️"
     === "philosophie"
