@@ -11,17 +11,25 @@
 
 |Position|Joueur|Nb de points|
 |:--|:--|:--|
+||Enzo R|24|
 ||Maël|22|
-||Enzo R|22|
 ||Raphaël|20|
 ||Elouan|17|
-||Vincent|14|
+||Vincent|20|
 ||Enzo J|6|
+||Guillaume|2|
 ||Valentin|2|
 ||Yanis|1|
 ||François|1|
 ||Jules|1|
-||Guillaume|1|
+
+
+!!! danger "Jour 20 ⭐️"
+    === "L'enigme de Métrodore"
+        "Ne parle pas, et tu exprimeras mon nom; mais si tu me nommes, en disant mon nom, Ô prodige ! tu ne m'exprimeras pas."<br />
+
+        **De quoi s'agit-il ?**
+    === "Solution"
 
 !!! danger "Jour 19 ⭐️"
     === "philosophie"
@@ -34,6 +42,9 @@
         Il me faut les deux élèments pour valider la participation.
 
     === "Solution"
+        Il s'agit d'un syllogisme et de lewis Caroll.<br />
+        Un des plus connus est : <br />
+        « Tous les hommes sont mortels, or Socrate est un homme ; donc Socrate est mortel »
 
 !!! danger "Jour 18 ⭐️"
     === "Quel est le code ?"
