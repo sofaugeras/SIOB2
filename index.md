@@ -1,31 +1,21 @@
 ![logo BTS](./images/logo-bts-sio-300x143.png){ .center width=20%}
 
-!!! warning "Calendrier de l'avent"
 
-    ![cal](./images/Free-Printable-Advent-Calendars-jpg.webp){: width=50% .center}
+!!! warning "Actu SIO1 SLAM"
 
-    Pour cette période de Noël, je vous propose un petit jeu.<br />
-    Chaque jour, je posterais une énigme en ligne. Le premier à y répondre par message Ecole Directe marquera 3️⃣ points, le second 2️⃣ points et le troisième 1️⃣ points.<br />
-    Le vendredi 20 décembre, lors du secret 🎅's, je remettrais un prix aux trois gagnants 🏆.
-
-    lien vers le calendrier : [ici !](./calendrier.md)
-
-!!! warning "Actu SIO1"
-
-    :pushpin: Thème en cours : 
+    :pushpin: Thème en cours : [UML](./3_UML/sommaire/)
 
     :closed_book: Deuxième série de DS : du 17 au 21 Mars 2025<br />
     :date: Stage SIO1 : 19 mai au 20 juin 2025
 
-    ![Secret Santa](./images/Secret%20Santa%20SIO1.png){: width=40% .center}
 
+!!! warning "Actu SIO2 SLAM"
 
-!!! warning "Actu SIO2"
+    :date: Stage SIO2 : 6 janvier au 14 février 2025<br />
 
     :pushpin: Thème en cours B2 : <br />
     :pushpin: Thème en cours B3 : 
 
-    :date: Stage SIO2 : 6 janvier au 14 février 2025<br />
     :closed_book: BTS Blanc : du 24 au 28 mars 2025<br />
 
     :mega: ^^liste des exposés^^ :
@@ -51,3 +41,17 @@
 
 !!! tip "les essentiels"
     - [Lien vers le BO](https://www.reseaucerta.org/sites/default/files/sio/BTS_ServicesInformatiquesOrganisations2019.pdf)
+
+
+
+<!--
+!!! warning "Calendrier de l'avent"
+
+    ![cal](./images/Free-Printable-Advent-Calendars-jpg.webp){: width=50% .center}
+
+    Pour cette période de Noël, je vous propose un petit jeu.<br />
+    Chaque jour, je posterais une énigme en ligne. Le premier à y répondre par message Ecole Directe marquera 3️⃣ points, le second 2️⃣ points et le troisième 1️⃣ points.<br />
+    Le vendredi 20 décembre, lors du secret 🎅's, je remettrais un prix aux trois gagnants 🏆.
+
+    lien vers le calendrier : [ici !](./calendrier.md)
+-->
