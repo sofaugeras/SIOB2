@@ -6,7 +6,7 @@ La validation du bloc Informatique est composé de trois épreuves, 1 oral et un
 2. [Epreuve E5, épreuve pratique](./E5.md)
 3. [Epreuve E6, épreuve écrite Cyber](./E6.md)
 
-![Coef matières](./info/data/E456.png)
+![Coef matières](./data/E456.png)
 
 ## Note sur le rattrapage BTS 
 
