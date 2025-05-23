@@ -409,13 +409,14 @@ Pour rappel, on travaille sur le schéma relationnel suivant :
 ??? question "correction"
 
     ```SQL
-    SELECT num_cli, nom_cli, prénom_cli
-    FROM CLIENT, COMMANDE
-    WHERE CLIENT.num_cli = COMMANDE.num_cli
+    SELECT CLIENT.num_cli, CLIENT.nom_cli, CLIENT.prénom_cli
+    FROM CLIENT INNER JOIN COMMANDE
+    ON CLIENT.num_cli = COMMANDE.num_cli
     INTERSECT
-    SELECT num_cli, nom_cli, prénom_cli
+    (SELECT CLIENT.num_cli, CLIENT.nom_cli, CLIENT.prénom_cli
     FROM CLIENT
-    WHERE Vil_Cli = "Redon";
+    WHERE Vil_Cli = "Redon");
+
     /* Autre solution */
     SELECT num_cli, nom_cli, prénom_cli
     FROM CLIENT INNER JOIN COMMANDE

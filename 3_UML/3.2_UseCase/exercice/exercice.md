@@ -115,8 +115,9 @@ Le supermarché possède également des superviseurs qui peuvent effectuer des o
 4. En utilisant un point d'extension, faites figurer la prise en compte des coupons de réductions.
 
 ??? tip "Correction"
+    ![correction](./data/caisseEnregistreuseCorr.png){ .center width=75%}
     
-## Exercice 3 : Société de livraison express à domicile
+## 3. Société de livraison express à domicile
 
 On s'intéresse à une société de livraison express à domicile. Le service _Clientèle_ reçoit chaque jour les clients qui désirent une livraison en France ou à l'étranger. Ce service gère deux catégories de paquets :<br />
 
