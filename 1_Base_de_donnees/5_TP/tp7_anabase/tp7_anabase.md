@@ -74,7 +74,7 @@ Pour illustrer ces révisions, j’ai décidé de m’appuyer sur un cas créé 
 
 !!! question "R5"
     === "Enoncé"
-        Donner la liste des congressistes situés dans les hôtels 2 ou 4.
+        Donner la liste des congressistes situés dans les hôtels de 2 à 4.
     === "Correction"
         ```sql
         SELECT * FROM CONGRESSISTE WHERE N_HOTEL in (2,3,4);

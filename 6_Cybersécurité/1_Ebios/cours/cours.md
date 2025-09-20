@@ -9,7 +9,8 @@
 !!! tip "Compétences"
 
     B3 SLAM : Assurer la cybersécurité d’une solution applicative et de son développement
-        > 🎯 Analyser des incidents de sécurité, proposer et mettre en oeuvre des contre-mesures
+
+    > 🎯 Analyser des incidents de sécurité, proposer et mettre en oeuvre des contre-mesures
 
 La sécurité du système d'information d'une entreprise est un requis important pour la poursuite de ses activités. Qu'il s'agisse de la dégradation de son image de marque, du vol de ses secrets de fabrication ou de la perte de ses données clients. Une catastrophe informatique a toujours des conséquences fâcheuses pouvant aller jusqu'au dépôt de bilan. 
 
@@ -118,7 +119,7 @@ La méthode EBIOS se compose de ^^cinq guides^^ (Introduction, Démarche, Techni
 4. Identification des objectifs de sécurité 
 5. Détermination des exigences de sécurité
 
-![etapes EBIOS](./data/ebios-etapes.gif){: width=50% .center}
+![etapes EBIOS](./data/ebios-etapes.gif){: width=80% .center}
 
 L'**étude du contexte** permet d'identifier quel système d'information est la cible de l'étude. Cette étape délimite le périmètre de l'étude : présentation de l'entreprise, architecture du système d'information, contraintes techniques et réglementaires, enjeux commerciaux. Mais est aussi étudié le détail des équipements, des logiciels et de l'organisation humaine de l'entreprise.
 
@@ -267,7 +268,7 @@ une échelle de gravité à 5 niveaux.
 
 **📌 Autre exemple :**
 
-![catégorie x gavité](./data/risque6.png){: width=80% .center}
+![catégorie x gavité](./data/risque6.png){: .center}
 
 ## 3. Comment utiliser la Méthode EBIOS Risk Manager ?
 

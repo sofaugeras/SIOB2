@@ -3,19 +3,18 @@
 
 !!! warning "Actu SIO1"
 
-    📌 Thème en cours B1 : Base de données : définitions et concepts<br />
-    ⌛️  A venir : Base de données : Langage de manipulation de données <br />
+    📌 Thème en cours B1 : [Base de données : LMD](./1_Base_de_donnees/2_LMD/cours.md)<br />
+    ⌛️  A venir : [Base de données : LCD](./1_Base_de_donnees/3_LCD/cours.md) <br />
     📕 Evaluation Vendredi 26 septembre <br />
     
-    📅 Journée d'intégration : Mercredi 17 septembre<br />
-    📅 Conseil de prof : Mardi 30 septembre, semaine de remédiation du 6 au 10 octobre<br />
+    📅 Conseil de prof : Lundi 29 septembre, semaine de remédiation du 6 au 10 octobre<br />
     📅 Rencontre Parent/Prof/etudiant : Mercredi 15 octobre<br />
     📅 Stage SIO1 : lundi 18 mai - vendredi 19 juin 2026, retour au lycée le lundi 22 juin de 8h30 à 12h30 <br />
 
 !!! warning "Actu SIO2 SLAM"
 
-    📌 Thème en cours B2 : Anabase : revision SQL<br />
-    ⌛️ A venir B2 : Laravel : Bac à sable<br />
+    📌 Thème en cours B2 : [Laravel : Bac à sable](./4_Laravel/4.1_installation/cours.md)<br />
+    ⌛️ A venir B2 : [Laravel : ToDo](./4_Laravel/4.2_toDo/4.2.1_initialisation.md)<br />
 
     📌 Thème en cours B3 : Bijoo : TP1 Mauvaise configuration de sécurité<br />
     ⌛️ A venir B3 : Injection SQL
@@ -31,17 +30,17 @@
     :arrow_forward: Analyse de cas Cyber : <br />
     Analyser une attaque Cyber connue et documentée : point d'entrée, impacts de l'attaque, reprise de l'activité, actions à postériori
 
-    - 🐖 [fleury Michon 2019](https://www.lemagit.fr/etude/Fleury-Michon-histoire-dune-crise-de-cybersecurite-qui-a-bien-tourne) {target="_blank"}
+    - 🐖 [fleury Michon 2019](https://www.lemagit.fr/etude/Fleury-Michon-histoire-dune-crise-de-cybersecurite-qui-a-bien-tourne){target="_blank"}
     - 🚑 [hopital de rennes 2023](https://www.radiofrance.fr/francebleu/podcasts/l-invite-d-ici/cyberattaque-d-une-clinique-a-rennes-les-rancons-ne-sont-jamais-payees-selon-un-specialiste-9882547){target="_blank"}
-    - 🔨 [Manutan](https://www.lemagit.fr/etude/Recit-comment-Manutan-sest-sorti-de-la-cyberattaque-du-21-fevrier) {target="_blank"}
+    - 🔨 [Manutan](https://www.lemagit.fr/etude/Recit-comment-Manutan-sest-sorti-de-la-cyberattaque-du-21-fevrier){target="_blank"}
 
     :calendar: date prévue des exposés :<br />
 
     |Date|Nom|Thème|
     |:--:|:--:|:--:|
-    |  |Elouan|  |
-    |  |Alexandre|  |
-    |  |Maël|   |
+    | 14/10 |Elouan| Kiabi 2024 |
+    | 7/10 |Alexandre| Peugeot 2024 |
+    | 30/09 |Maël| free 2024  |
    
 
 !!! tip "les essentiels"

@@ -4,6 +4,9 @@
     Cours élaboré par David Roumanet - Lycée Louise Michel (Grenoble) <br />
     Partage sous [licence Creative Commons](https://creativecommons.org/share-your-work/cclicenses/) "by-nc-sa" ![licence](./data/Cc-by-nc-sa_icon.svg.png){: width=10%}
 
+!!! note "Compétences : B3 Cyber"
+    **Mots de passe & authentification** : Politique de mots de passe robustes (M10), Protection des mots de passe stockés (M11), MFA (M13)  
+
 ![logo](./data/regex.png){: width=30% .center}
 
 ## 1. Introduction

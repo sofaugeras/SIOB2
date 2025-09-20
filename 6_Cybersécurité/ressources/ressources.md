@@ -1,4 +1,17 @@
-# Pages de ressources en Cybersécurité SLAM
+# Sommaire
+
+!!! info "Compétences Cyber SLAM"
+
+    **Activité B3.5**. Cybersécurisation d’une solution applicative et de son développement
+
+    - Vérification des éléments contribuant à la qualité d’un développement informatique
+    - Prise en compte de la sécurité dans un projet de développement d’une solution applicative
+    - Mise en oeuvre et vérification de la conformité d’une solution applicative et de son développement à un référentiel, une norme ou un standard de sécurité
+    - Prévention des attaques
+    - Analyse des connexions (logs)
+    - Analyse d’incidents de sécurité, proposition et mise en oeuvre de contre-mesures
+
+## Pages de ressources en Cybersécurité SLAM
 
 - [SecNumAcademie](https://secnumacademie.gouv.fr/){:target="_blank"}
 

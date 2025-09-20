@@ -30,3 +30,31 @@ Réalisation de la solution attendue et présentée lors de la première phase.<
 Au terme de la préparation, le jury procède à la recette de la solution et mène un entretien d’explicitation<br />
 
 :boom: L’usage de l’environnement de travail est placé sous la seule responsabilité de la personne candidate, dans le respect des consignes de sécurité, de sauvegarde des données et des ressources utilisées.
+
+!!! note "BO"
+    ▶️ L'environnement technologique supportant le système d‘information de l'organisation cliente
+    comporte au moins :
+
+    - un ou deux environnements de développement disposant d'outils de gestion de tests et
+    supportant un cadre applicatif (framework) et au moins deux langages ;
+    - une bibliothèque de composants logiciels ;
+    - un SGBD avec langage de programmation associé ;
+    - un logiciel de gestion de versions et de suivi de problèmes d’ordre logiciel ;
+    - une solution permettant de tester les comportements anormaux d'une application.
+
+    ▶️ Les activités de l'organisation cliente s'appuient sur aux moins deux solutions applicatives
+    opérationnelles permettant d'offrir un accès sécurisé à des données hébergées sur un site distant. Au
+    sein des architectures de ces solutions applicatives doivent figurer l'exploitation de mécanismes
+    d'appel à des services applicatifs distants et au moins trois des situations ci-dessous :
+
+    - du code exécuté sur le système d'exploitation d'une solution technique d'accès fixe (type
+    client lourd) ;
+    - du code exécuté dans un navigateur Web (type client léger ou riche) ;
+    - du code exécuté sur le système d'exploitation d'une solution technique d'accès mobile ;
+    - du code exécuté sur le système d'exploitation d'un serveur.
+
+    ▶️ Une solution applicative peut être issue d'un développement spécifique ou de la modification du
+    code d'un logiciel notamment open source.
+
+    ▶️ Les solutions applicatives présentes dans le contexte sont opérationnelles et leur code source est
+    accessible dans un environnement de développement opérationnel au moment de l'épreuve.

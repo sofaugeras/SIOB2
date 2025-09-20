@@ -9,6 +9,15 @@
     - [phptherightway](https://phptherightway.com/)
     - Livre : Laravel par Raphaël Huchet aux éditions ENI
 
+!!! note "Compétences"
+
+    **B2.1. Conception et développement d’une solution applicative**
+
+    * Participation à la conception de l’architecture d’une solution applicative
+    * Exploitation des ressources du cadre applicatif (framework)
+    * Exploitation des technologies Web et mobile pour mettre en oeuvre les échanges entre applications
+    * Utilisation de composants d’accès aux données
+
 !!! warning "Préalable"
 
     - :warning: Vérifier la version de PHP de votre WAMP
@@ -20,7 +29,7 @@
 # Installation Composer
 
 Récupérer l’exécutable de [composer](https://getcomposer.org/) et l’exécuter. 
-L’installateur vous demandera où se trouve php.exe (en général : `C:\wamp\bin\php\phpX.X.X`). Cela installe Composer et met à jour le PATH de façon à ce que l'on puisse taper la commande composer en ligne de commande depuis n'importe quel répertoire.
+L’installateur vous demandera où se trouve php.exe (en général : `C:\wamp64\bin\php\phpX.X.X`). Cela installe Composer et met à jour le PATH de façon à ce que l'on puisse taper la commande composer en ligne de commande depuis n'importe quel répertoire.
 
 ??? warning "erreur opensssl"
     Si erreur "The openssl extension is missing which means that secure https transfer are impossible"
@@ -64,7 +73,7 @@ Votre poste est maintenant configuré pour Laravel, vous pouvez donc créer un n
 :boom: Attention, le projet sera créé dans le dossier courant. Déplacer votre invite de commande dans le bon répertoire avant de lancer votre commande de création de projet: 
 
 ```prompt
-CD C:\\wamp\www\
+CD C:\\wamp64\www\
 composer create-project --prefer-dist laravel/laravel monProjet "10.*"
 ```
 
@@ -147,7 +156,7 @@ Votre nouveau projet contient un fichier `.env` ouvrez le, et ajouter en début 
 Laravel intègre un serveur de test permettant de valider son développement avec rien d’autre que PHP sur sa machine. 
 
 ```prompt
-CD c:\\wamp\www\monProjet
+CD c:\\wamp64\www\monProjet
 php artisan serve
 ```
 

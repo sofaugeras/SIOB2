@@ -101,3 +101,19 @@ L'option ``GRANT OPTION`` permet de supprimer le droit d'un utilisateur à accor
     Cela garantit que cet utilisateur ne peut que manipuler les données sans affecter la structure de la base de données.
 
     En suivant ces principes, on minimise les risques et réduit l'impact potentiel d'une violation de sécurité.
+
+!!! warning "Recommandations ANSII"
+
+    source : [ANSII : mise en œuvre sécurisée de bases de données (BDD) relationnelles](https://cyber.gouv.fr/publications/bases-de-donnees-relationnelles)
+
+    **Sécuriser les accès :**
+
+    - utiliser des comptes d’accès distincts (pour les utilisateurs humains et les applications) avec une définition claire de leur usage 
+    - authentifier systématiquement les accès (attention aux comptes par défaut et aux accès directs) et utiliser des mécanismes cryptographiques à l’état de l’art 
+    - analyser régulièrement le compte administrateur natif, qui ne doit être utilisé qu’en dernier recours 
+    - mettre en place une authentification multifacteur pour les administrateurs (revoir les Recommandations relatives à l’authentification multifacteur et aux mots de passe.)
+
+    **Appliquer le principe de moindre privilège :**
+
+    - limiter les droits des utilisateurs au strict nécessaire 
+    - définir des rôles et les affecter aux utilisateurs

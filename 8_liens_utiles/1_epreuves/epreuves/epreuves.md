@@ -2,11 +2,16 @@
 
 La validation du bloc Informatique est composé de trois épreuves, 1 oral et une épreuve pratique organisé en CCF, et une epreuve écrite. 
 
-1. [Epreuve E4, oral de professionalisation](./Ep_pro_E5.md)
-2. [Epreuve E5, épreuve pratique](./Ep_pratique_E6.md)
-3. [Epreuve E6, épreuve écrite Cyber](./Ecrit_Cyber_E7.md)
+1. [Epreuve E5, oral de professionalisation](./Ep_pro_E5.md)
+2. [Epreuve E6, épreuve pratique](./Ep_pratique_E6.md)
+3. [Epreuve E7, épreuve écrite Cyber](./Ecrit_Cyber_E7.md)
 
-![Coef matières](./data/E456.png)
+| **Blocs de compétences**                                             | **Épreuves du BTS SIO**                                          | **Commentaires / Liens**                                                                                               |
+| -------------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| **Bloc 1** – Support et mise à disposition de services informatiques | **E5** – Support et mise à disposition de services informatiques | Oral professionnelle. Portfolio, portefeuille de compétences        |
+| **Bloc 2** – Conception et développement d’applications              | **E6** – Conception et développement d’applications            | Épreuve pratique. Lien direct : analyse, conception, programmation, validation et mise en production. |
+| **Bloc 3** – Cybersécurité des services informatiques                | **E7**– Cybersécurité des services informatiques               | Ecrit de 4h.         |
+
 
 ## Note sur le rattrapage BTS 
 

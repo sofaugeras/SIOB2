@@ -1,5 +1,16 @@
-B3.2 Préserver l'identité numérique de l’organisation
 
+
+Activité 3.4. Garantie de la disponibilité, de l’intégrité et de la confidentialité des services
+informatiques et des données de l’organisation face à des cyberattaques
+- Caractérisation des risques liés à l’utilisation malveillante d’un service informatique
+- Recensement des conséquences d’une perte de disponibilité, d’intégrité ou de
+confidentialité
+- Identification des obligations légales qui s’imposent en matière d’archivage et de protection
+des données de l’organisation
+- Organisation de la collecte et de la conservation de la preuve électronique
+- Application des procédures garantissant le respect des obligations légales
+
+B3.2 Préserver l'identité numérique de l’organisation
 Déployer les moyens appropriés de preuve électronique
 
 Déployer les moyens appropriés de preuve électronique

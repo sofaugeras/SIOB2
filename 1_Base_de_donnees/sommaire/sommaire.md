@@ -24,6 +24,7 @@
     - Alain VAN SANTE et Michel AUGUSTE, « Variations pédagogiques autour de l’enseignement du modèle relationnel et des SGBDR en 1ère STG », Réseau CERTA 2005 Pierre VETTER, « Introduction aux bases de données », B1 SUPINFO, 2011 <br />
     - Wikipédia, « Base de données et Système de gestion de base de données », 2011
 
+
 !!! info "Ressources"
 
     - [http://sql.developpez.com/:](http://sql.developpez.com/): le cours complet de SQL de A à Z.<br />
