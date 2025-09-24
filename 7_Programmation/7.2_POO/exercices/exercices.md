@@ -1,5 +1,8 @@
 # 💻 Application POO en PHP
 
+!!! note "note"
+    création à l'aide de ChatGPT5
+
 ## 🏦 Exercice 1 – Classe `CompteBancaire`
 
 #### 🎯 Objectifs 
@@ -118,9 +121,6 @@ $c1->afficher(); // Devrait afficher : Alice - Solde : 150 €
     - Le constructeur contrôle que le solde initial n’est pas négatif.
     - Les méthodes métier (deposer, retirer) contiennent des règles de validation.
     - afficher() sert de méthode utilitaire simple.
-
-
-Parfait 👍 Voici l’**Exercice 2** avec **Compte Épargne** et **Compte Courant**, dans la continuité du TP banque.
 
 ---
 

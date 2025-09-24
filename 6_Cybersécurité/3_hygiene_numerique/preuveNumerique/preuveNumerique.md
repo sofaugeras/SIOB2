@@ -1,27 +1,30 @@
+# 🔎 La preuve numérique
+
+!!! note "Compétences"
+
+    **B3.2 Préserver l'identité numérique de l’organisation
+    Déployer les moyens appropriés de preuve électronique**
+
+    **Activité 3.4. Garantie de la disponibilité, de l’intégrité et de la confidentialité des services
+    informatiques et des données de l’organisation face à des cyberattaques**
+
+    - Caractérisation des risques liés à l’utilisation malveillante d’un service informatique
+    - Recensement des conséquences d’une perte de disponibilité, d’intégrité ou de
+    confidentialité
+    - Identification des obligations légales qui s’imposent en matière d’archivage et de protection
+    des données de l’organisation
+    - Organisation de la collecte et de la conservation de la preuve électronique
+    - Application des procédures garantissant le respect des obligations légales
 
 
-Activité 3.4. Garantie de la disponibilité, de l’intégrité et de la confidentialité des services
-informatiques et des données de l’organisation face à des cyberattaques
-- Caractérisation des risques liés à l’utilisation malveillante d’un service informatique
-- Recensement des conséquences d’une perte de disponibilité, d’intégrité ou de
-confidentialité
-- Identification des obligations légales qui s’imposent en matière d’archivage et de protection
-des données de l’organisation
-- Organisation de la collecte et de la conservation de la preuve électronique
-- Application des procédures garantissant le respect des obligations légales
-
-B3.2 Préserver l'identité numérique de l’organisation
-Déployer les moyens appropriés de preuve électronique
-
-Déployer les moyens appropriés de preuve électronique
-Cette compétence implique de traiter les bases de l‟authentification, de la confidentialité et de la preuve afin d‟en comprendre les principes et mettre en œuvre des outils simples. Des éléments incontournables, comme ceux qui suivent, permettent d'appuyer les compétences :
+**Déployer les moyens appropriés de preuve électronique :** <br />
+Cette compétence implique de traiter les bases de **l‟authentification**, de la **confidentialité** et de la **preuve** afin d‟en comprendre les principes et mettre en œuvre des outils simples. Des éléments incontournables, comme ceux qui suivent, permettent d'appuyer les compétences :
 
 ● principes du chiffrement symétrique et asymétrique ;
-● principes de l‟authentification : hachage, signature ;
+● principes de l'authentification : hachage, signature ;
 ● principes de la preuve numérique : horodatage, certificats, chaîne de blocs (Blockchain) ;
 ● conservation de la preuve numérique ;
-● l‟identité numérique sécurisée : authentification numérique, principes et outils prouvant une identité numérique, schéma d‟authentification numérique,
-OpenId, identité institutionnelle
+● l'identité numérique sécurisée : authentification numérique, principes et outils prouvant une identité numérique, schéma d‟authentification numérique, OpenId, identité institutionnelle
 
 Ressources
 https://www.cnil.fr/fr/maitriser-mes-donnees

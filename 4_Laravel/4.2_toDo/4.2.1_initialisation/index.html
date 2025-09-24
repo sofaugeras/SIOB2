@@ -4942,16 +4942,14 @@ les deux champs ont une syntaxe particulière. Ce sont des fonctions propres à 
 </div>
 </div>
 <p>Nous allons définir notre schéma  pour y ajouter les 3 colonnes qui nous serons utiles <strong>texte, termine et important</strong>. L'ORM étant une librairie objet, la définition de nouveaux champs se fait via une méthode, dans notre cas :</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```php
-$table-&gt;integer(&#39;id&#39;);
-$table-&gt;string(&#39;texte&#39;);
-$table-&gt;boolean(&#39;termine&#39;)-&gt;default(0);
-$table-&gt;boolean(&#39;important&#39;)-&gt;default(0);
-#Déclaraction de la clé primaire
-$table-&gt;primary(&#39;id&#39;);
-```
+<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">    $table-&gt;integer(&#39;id&#39;);</span>
+<span class="x">    $table-&gt;string(&#39;texte&#39;);</span>
+<span class="x">    $table-&gt;boolean(&#39;termine&#39;)-&gt;default(0);</span>
+<span class="x">    $table-&gt;boolean(&#39;important&#39;)-&gt;default(0);</span>
+<span class="x">    #Déclaraction de la clé primaire</span>
+<span class="x">    $table-&gt;primary(&#39;id&#39;);</span>
 </code></pre></div>
-<p>Ajouter les champs dans la méthode <code>up</code> du fichier.</p>
+Ajouter les champs dans la méthode <code>up</code> du fichier.</p>
 <details class="note">
 <summary>fonction up</summary>
 <div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
@@ -5017,8 +5015,10 @@ Vérifier votre console et votre travail dans phpMyAdmin. </p>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Modèle relationnel</label><label for="__tabbed_5_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Faites la même chose avec les tables CATEGORIES et CATEGORISE
+<p>Faites la même chose avec les tables CATEGORIES et CATEGORIES_TODOS
 Sachant que CATEGORISE possède également deux clés étrangères.</p>
+<p>CATEGORIE(<u>idcat</u>, libelle)<br />
+CATEGORIES_TODOS (<u>id</u>,<u>idcat</u>)<br /></p>
 </div>
 <div class="tabbed-block">
 <p>La difficulté ici est de créer la bonne relation entre clés primaires et clés étrangères.<br />
@@ -5037,11 +5037,11 @@ Pour rappel, en Base de données, on ne peut référencer un champ en clé étra
 <span class="x">    Schema::create(&#39;categories_todos&#39;, function (Blueprint $table) {</span>
 <span class="x">        $table-&gt;integer(&#39;categories_id&#39;);</span>
 <span class="x">        $table-&gt;integer(&#39;todos_id&#39;);</span>
+<span class="x">        $table-&gt;primary([&#39;categories_id&#39;, &#39;todos_id&#39;]);</span>
 
 <span class="x">        $table-&gt;foreign(&#39;categories_id&#39;)-&gt;references(&#39;id&#39;)-&gt;on(&#39;categories&#39;);</span>
 <span class="x">        $table-&gt;foreign(&#39;todos_id&#39;)-&gt;references(&#39;id&#39;)-&gt;on(&#39;todos&#39;);</span>
 
-<span class="x">        $table-&gt;primary([&#39;categories_id&#39;, &#39;todos_id&#39;]);</span>
 <span class="x">        $table-&gt;timestamps();</span>
 <span class="x">    });</span>
 <span class="x">}</span>
@@ -5237,10 +5237,12 @@ dans <code>app.js</code>, ajouter
 <p>Dans votre template, ajouter dans le <code>head</code> la ligne <code>@vite(['resources/js/app.js'])</code></p>
 <details class="note">
 <summary><img alt="👀" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f440.svg" title=":eyes:" /> tester</summary>
-<p>pour tester vos manips, ajouer du code bootstrap dans votre template.
-- [ ] Mettre en commentaire la route vers le controller Todo
-- [ ] Créer une route vers la vue template <code>Route :: view ('/test', 'template');</code>
-- [ ] Dans le template, mettre mettre le code ci dessous contenant du bootstrap</p>
+<p>pour tester vos manips, ajouer du code bootstrap dans votre template.</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> Mettre en commentaire la route vers le controller Todo</li>
+<li class="task-list-item"><input type="checkbox"/> Créer une route vers la vue template <code>Route :: view ('/test', 'template');</code></li>
+<li class="task-list-item"><input type="checkbox"/> Dans le template, mettre le code ci dessous contenant du bootstrap</li>
+</ul>
 <div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&lt;nav class=&quot;navbar navbar-expand-md navbar-dark bg-dark&quot;&gt;</span>
 <span class="x">    &lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;Ma Todo List&lt;/a&gt;</span>
 <span class="x">    &lt;a class=&quot;navbar-brand btn btn-primary&quot; href=&quot;liste&quot;&gt;&lt;i class=&quot;bi bi-app&quot;&gt;&lt;/i&gt;Liste&lt;/a&gt;</span>
@@ -5248,6 +5250,79 @@ dans <code>app.js</code>, ajouter
 <span class="x">    &lt;a class=&quot;navbar-brand btn btn-danger&quot; href=&quot;compteur&quot;&gt;Compteur&lt;/a&gt;</span>
 <span class="x">&lt;/nav&gt;</span>
 </code></pre></div>
+</details>
+<details class="warning">
+<summary>Fixer les erreurs </summary>
+<p>🚀 Installer Bootstrap avec Laravel 12, Vite et Vue/Inertia</p>
+<p><strong>1. Nettoyer et réinstaller les dépendances</strong></p>
+<p>Dans cmd ou PowerShell :</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>rmdir /s /q node_modules
+del package-lock.json
+npm i -D vite@^7 laravel-vite-plugin@^2 @vitejs/plugin-vue@^6 vue@^3
+npm i @inertiajs/vue3
+npm i -D sass
+</code></pre></div>
+<p><strong>2. Configurer Vite</strong></p>
+<p>👉 fichier : vite.config.js
+<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">defineConfig</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;vite&#39;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">laravel</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;laravel-vite-plugin&#39;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">vue</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@vitejs/plugin-vue&#39;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;path&#39;</span>
+
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">defineConfig</span><span class="p">({</span>
+<span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="nx">laravel</span><span class="p">({</span>
+<span class="w">    </span><span class="nx">input</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;resources/sass/app.scss&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;resources/js/app.js&#39;</span><span class="p">],</span>
+<span class="w">    </span><span class="nx">refresh</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="p">}),</span>
+<span class="w">    </span><span class="nx">vue</span><span class="p">(),</span>
+<span class="p">],</span>
+<span class="nx">css</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">preprocessorOptions</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">scss</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">quietDeps</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// masque les warnings des dépendances</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="p">},</span>
+<span class="nx">resolve</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">alias</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s1">&#39;@&#39;</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;resources/js&#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="p">},</span>
+<span class="p">})</span>
+</code></pre></div></p>
+<p><strong>3. Ajouter Bootstrap en SCSS</strong></p>
+<p>👉 fichier : resources/sass/app.scss
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>@use &quot;bootstrap/scss/bootstrap&quot;;    
+</code></pre></div></p>
+<p>👉 fichier : resources/sass/_variables.scss (optionnel, pour surcharger des variables Bootstrap)
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>// Exemple d’override
+$primary: #0d6efd;
+$enable-rounded: true;
+
+// Import avec variables personnalisées
+@use &quot;bootstrap/scss/bootstrap&quot; with (
+$primary: $primary,
+$enable-rounded: $enable-rounded
+);
+</code></pre></div></p>
+<p><strong>4. Charger Bootstrap JS</strong></p>
+<p>👉 fichier : resources/js/app.js
+<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="s1">&#39;bootstrap&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// JS Bootstrap (dropdowns, modals…)</span>
+</code></pre></div></p>
+<p><strong>5. Blade Layout</strong></p>
+<p>👉 fichier : resources/views/layouts/template.blade.php
+<div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    ...
+    @vite([&#39;resources/sass/app.scss&#39;, &#39;resources/js/app.js&#39;])
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<p>⚠️ Supprimer les anciens :
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&lt;link href=&quot;{{ asset(&#39;css/app.css&#39;) }}&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;script src=&quot;{{ asset(&#39;js/app.js&#39;) }}&quot;&gt;&lt;/script&gt;
+</code></pre></div></p>
+<p><strong>6. Compiler</strong></p>
+<p>En développement : <code>npm run dev</code></p>
 </details>
 <h2 id="16-liste-des-todos">1.6 Liste des todos<a class="headerlink" href="#16-liste-des-todos" title="Permanent link">⚓︎</a></h2>
 <h3 id="161-le-template-home">1.6.1 Le template Home<a class="headerlink" href="#161-le-template-home" title="Permanent link">⚓︎</a></h3>

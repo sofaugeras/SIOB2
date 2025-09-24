@@ -243,7 +243,7 @@ Route::get('/ping', function () {
 
 !!! question 
     === "question"
-        Quelle URL avez-vous utilisé ?
+        Quelle URL avez-vous utilisé pour afficher "pong" ?
     === "réponse"
         http://localhost:8000/ping
 
