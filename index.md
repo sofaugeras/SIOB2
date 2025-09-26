@@ -13,14 +13,13 @@
 
 !!! warning "Actu SIO2 SLAM"
 
-    📌 Thème en cours B2 : [Laravel : Bac à sable](./4_Laravel/4.1_installation/cours.md)<br />
-    ⌛️ A venir B2 : [Laravel : ToDo](./4_Laravel/4.2_toDo/4.2.1_initialisation.md)<br />
+    📌 Thème en cours B2 : [Laravel : ToDo Installation](./4_Laravel/4.2_toDo/4.2.1_initialisation.md)<br />
+    ⌛️ A venir B2 : [Laravel : ToDo Gestion des catégories](./4_Laravel/4.2_toDo/4.2.2_Ajout_catégorie.md)<br />
 
-    📌 Thème en cours B3 : Bijoo : TP1 Mauvaise configuration de sécurité<br />
-    ⌛️ A venir B3 : Injection SQL
+    📌 Thème en cours B3 : Bijoo : TP1 Injection SQL <br />
+    ⌛️ A venir B3 : Violation de Gestion d'Authentification et de Session<br />
     📣 Exposé : Exposé : Analyse de cas Cyber
 
-    📅 Journée d'intégration : Mercredi 17 septembre<br />
     📅 fin du 1er semestre : Vendredi 21 novembre<br />
     📅 Stage SIO2 : lundi 5 janvier - vendredi 13 février 2026<br />
 
