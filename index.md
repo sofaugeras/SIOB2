@@ -5,7 +5,7 @@
 
     📌 Thème en cours B1 : [Base de données : LMD](./1_Base_de_donnees/2_LMD/cours.md)<br />
     ⌛️  A venir : [Base de données : LCD](./1_Base_de_donnees/3_LCD/cours.md) <br />
-    📕 Evaluation Vendredi 26 septembre <br />
+    📕 Evaluation : Série de DS : du 12 au 18 novembre <br />
     
     📅 Conseil de prof : Lundi 29 septembre, semaine de remédiation du 6 au 10 octobre<br />
     📅 Rencontre Parent/Prof/etudiant : Mercredi 15 octobre<br />
@@ -19,6 +19,8 @@
     📌 Thème en cours B3 : Bijoo : TP1 Injection SQL <br />
     ⌛️ A venir B3 : Violation de Gestion d'Authentification et de Session<br />
     📣 Exposé : Exposé : Analyse de cas Cyber
+
+    📕 Evaluation : Série de DS : du 13 au 16 octobre <br />
 
     📅 fin du 1er semestre : Vendredi 21 novembre<br />
     📅 Stage SIO2 : lundi 5 janvier - vendredi 13 février 2026<br />
