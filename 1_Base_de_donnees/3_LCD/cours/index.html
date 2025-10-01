@@ -4709,12 +4709,12 @@
 
 <h1 id="langage-de-description-des-donnees">Langage de description des données<a class="headerlink" href="#langage-de-description-des-donnees" title="Permanent link">⚓︎</a></h1>
 <h2 id="1-introduction">1. Introduction<a class="headerlink" href="#1-introduction" title="Permanent link">⚓︎</a></h2>
-<p>Dans le précédant chapitre, nous avons étudié les commandes <code>SQL</code> qui permettent d’interroger et de mettre à jour une base de données. Ces commandes appartiennent au langage de manipulation de données (LMD). Dans ce chapitre, nous étudierons le <strong>langage de description de données</strong> (LDD). Ce langage représente l’ensemble des instructions <code>SQL</code> qui permettent la création et la modification de la structure de bases de données. <br />
+<p>Dans le précédant chapitre, nous avons étudié les commandes <code class="language-text highlight">SQL</code> qui permettent d’interroger et de mettre à jour une base de données. Ces commandes appartiennent au langage de manipulation de données (LMD). Dans ce chapitre, nous étudierons le <strong>langage de description de données</strong> (LDD). Ce langage représente l’ensemble des instructions <code class="language-text highlight">SQL</code> qui permettent la création et la modification de la structure de bases de données. <br />
 La conception d’une base de données, comme tout objet technique, nécessite une phase de conception. Concernant les données, cette étape consiste à modéliser à l’aide de schémas le système d’information étudié. De ce schéma on déduit le schéma relationnel que nous avons abordé dans les précédents chapitres.</p>
 <blockquote>
 <p>Le schéma relationnel est « universel » et ne dépend pas du SGBDR utilisé. C’est un peu le même principe concernant les algorithmes et leur mise en œuvre dans tel ou tel langage. </p>
 </blockquote>
-<p><img alt="⚠️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/26a0.svg" title=":warning:" /> Le <code>SQL</code> lié au LDD possède plus de variations syntaxiques lié au SGBD. La plupart des instructions se retrouvent mais leur syntaxe diffère parfois. Il est nécessaire de consulter la documentation. Dans ce cours nous aborderons la syntaxe de MySQL .
+<p><img alt="⚠️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/26a0.svg" title=":warning:" /> Le <code class="language-text highlight">SQL</code> lié au LDD possède plus de variations syntaxiques lié au SGBD. La plupart des instructions se retrouvent mais leur syntaxe diffère parfois. Il est nécessaire de consulter la documentation. Dans ce cours nous aborderons la syntaxe de MySQL .
  </p>
 <h2 id="2-presentation-du-theme">2. Présentation du thème<a class="headerlink" href="#2-presentation-du-theme" title="Permanent link">⚓︎</a></h2>
 <p>Pour illustrer les commandes de base du langage de description des données, nous utiliserons la base de données bibliothèque du chapitre LMD. Pour rappel, voici les différentes représentations possibles de son schéma relationnel :</p>
@@ -4740,7 +4740,7 @@ NumOuvrage : Clé étrangère en référence à NumOuvrage de OUVRAGE</p>
 <h3 id="21-les-types-numeriques">2.1 Les types numériques<a class="headerlink" href="#21-les-types-numeriques" title="Permanent link">⚓︎</a></h3>
 <h5 id="211-types-numeriques-exacts">2.1.1 Types numériques exacts<a class="headerlink" href="#211-types-numeriques-exacts" title="Permanent link">⚓︎</a></h5>
 <p><strong>Les types « Entier »</strong></p>
-<p>Le tableau ci-dessous présente les intervalles de valeurs en fonction des types entiers proposés par <code>MySQL</code> :</p>
+<p>Le tableau ci-dessous présente les intervalles de valeurs en fonction des types entiers proposés par <code class="language-text highlight">MySQL</code> :</p>
 <table>
 <thead>
 <tr>
@@ -4783,14 +4783,14 @@ NumOuvrage : Clé étrangère en référence à NumOuvrage de OUVRAGE</p>
 </tr>
 </tbody>
 </table>
-<p>Par défaut, <code>MySQL</code> gère les nombres négatifs. Il possible de préciser à l’aide du mot clé <code>UNSIGNED</code> (non signé) que les nombres seront exclusivement positifs (ou nuls). Ce qui augmente du même coup, la plage de valeur.</p>
+<p>Par défaut, <code class="language-text highlight">MySQL</code> gère les nombres négatifs. Il possible de préciser à l’aide du mot clé <code class="language-text highlight">UNSIGNED</code> (non signé) que les nombres seront exclusivement positifs (ou nuls). Ce qui augmente du même coup, la plage de valeur.</p>
 <p>Exemple : Quel est l’intervalle de valeurs du champ QteCmde déclaré comme ci-dessous : </p>
 <details class="question">
 <summary>QteCmde TINYINT UNSIGNED</summary>
 <p>de 0 à 255. le bit de poids fort de l'octet etant utilisé pour coder une puissance supplémentaire.</p>
 </details>
 <p><strong>Le type « décimal »</strong></p>
-<p>Le type dédié aux nombres décimaux est : <code>DECIMAL</code>
+<p>Le type dédié aux nombres décimaux est : <code class="language-text highlight">DECIMAL</code>
 Lors de la déclaration, on précisera le nombre total de chiffres nécessaires suivi du nombre de chiffres après la virgule. Lorsqu'une valeur ayant trop de décimales est affectée à une colonne, la valeur est arrondie. </p>
 <p>Exemple : 
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="n">prixHT</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
@@ -4823,7 +4823,7 @@ Lors de la déclaration, on précisera le nombre total de chiffres nécessaires 
 </table>
 <p>Le nombre de décimales peut être précisé. Consultez le <a href="https://dev.mysql.com/doc/refman/8.4/en/floating-point-types.html">manuel de référence</a> en cas de besoin.</p>
 <h3 id="22-les-types-chaines-de-caracteres">2.2 Les types chaînes de caractères<a class="headerlink" href="#22-les-types-chaines-de-caracteres" title="Permanent link">⚓︎</a></h3>
-<p>Certainement le type de données le plus utilisé en informatique de gestion. Il correspond au type <code>String</code> ou <code>str</code> de nombreux langages de programmation. </p>
+<p>Certainement le type de données le plus utilisé en informatique de gestion. Il correspond au type <code class="language-text highlight">String</code> ou <code class="language-text highlight">str</code> de nombreux langages de programmation. </p>
 <p>Voici les principaux types utilisés :</p>
 <table>
 <thead>
@@ -4856,8 +4856,8 @@ Lors de la déclaration, on précisera le nombre total de chiffres nécessaires 
 </tbody>
 </table>
 <p>Dans ce tableau, <strong>M</strong> représente la longueur maximale de la chaîne et <strong>L</strong> sa longueur effective. 
-Ainsi une colonne déclarée en <code>VARCHAR(30)</code> nécessitera au maximum <code>31</code> octets. </p>
-<p>Note : Une donnée déclarée <code>CHAR(30)</code> sera complétée par des espaces si <span class="arithmatex">\(L &lt; 30\)</span>. Ce type est utilisé généralement pour stocker des valeurs dont la <mark>longueur est toujours fixe</mark> (exemple : code ISO, numéro de téléphone, code postal, ....)</p>
+Ainsi une colonne déclarée en <code class="language-text highlight">VARCHAR(30)</code> nécessitera au maximum <code class="language-cbmbas highlight"><span class="mf">31</span></code> octets. </p>
+<p>Note : Une donnée déclarée <code class="language-text highlight">CHAR(30)</code> sera complétée par des espaces si <span class="arithmatex">\(L &lt; 30\)</span>. Ce type est utilisé généralement pour stocker des valeurs dont la <mark>longueur est toujours fixe</mark> (exemple : code ISO, numéro de téléphone, code postal, ....)</p>
 <p>L’option <strong>BINARY</strong> permet de tenir compte de la casse.
  </p>
 <h3 id="23-les-types-temporels">2.3 Les types temporels<a class="headerlink" href="#23-les-types-temporels" title="Permanent link">⚓︎</a></h3>
@@ -4915,16 +4915,16 @@ Ainsi une colonne déclarée en <code>VARCHAR(30)</code> nécessitera au maximum
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">Bibliotheque</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
 </code></pre></div>
 </div>
-<p>Les options <code>create_specification</code> peuvent être données pour spécifier des caractéristiques de la base. Cela concerne essentiellement le jeu de caractères utilisé. </p>
+<p>Les options <code class="language-scdoc highlight">create_specification</code> peuvent être données pour spécifier des caractéristiques de la base. Cela concerne essentiellement le jeu de caractères utilisé. </p>
 <p>exemple : 
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">Bibliotheque</span>
 <span class="nb">CHARACTER</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">utf8mb4</span>
 <span class="k">COLLATE</span><span class="w"> </span><span class="n">utf8mb4_general_ci</span><span class="p">;</span>
 </code></pre></div></p>
-<p><code>utf8mb4</code> est une version améliorée de utf8 supportant plus de caractères (comme les emojis).</p>
+<p><code class="language-text highlight">utf8mb4</code> est une version améliorée de utf8 supportant plus de caractères (comme les emojis).</p>
 <details class="note">
 <summary>IF NOT EXISTS</summary>
-<p>Il est fréquent de devoir relancer un script de création de base pour ajouter une précision, une table. Si la base existe déjà, cela provoquera une erreur. On peut alors ignorer la clause <code>CREATE DATABASE</code>, en ajoutant la précision <code>IF NOT EXISTS</code>.</p>
+<p>Il est fréquent de devoir relancer un script de création de base pour ajouter une précision, une table. Si la base existe déjà, cela provoquera une erreur. On peut alors ignorer la clause <code class="language-text highlight">CREATE DATABASE</code>, en ajoutant la précision <code class="language-teratermmacro highlight"><span class="k">IF</span><span class="w"> </span><span class="nv">NOT</span><span class="w"> </span><span class="nv">EXISTS</span></code>.</p>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">Bibliotheque</span>
 </code></pre></div>
 </details>
@@ -4934,7 +4934,7 @@ Ainsi une colonne déclarée en <code>VARCHAR(30)</code> nécessitera au maximum
 </p>
 </details>
 <h3 id="32-creation-des-tables">3.2 Création des tables<a class="headerlink" href="#32-creation-des-tables" title="Permanent link">⚓︎</a></h3>
-<p>La création d’une table est réalisée à l’aide de l’instruction <code>CREATE TABLE</code>. Les informations minimales à préciser sont : <br /></p>
+<p>La création d’une table est réalisée à l’aide de l’instruction <code class="language-text highlight">CREATE TABLE</code>. Les informations minimales à préciser sont : <br /></p>
 <ul>
 <li>Le <strong>nom</strong> de la table </li>
 <li>Les <strong>champs</strong> (colonnes) de la table <ul>
@@ -4992,7 +4992,7 @@ Ainsi une colonne déclarée en <code>VARCHAR(30)</code> nécessitera au maximum
 </code></pre></div>
 </details>
 <p><ins><strong>Dans la définition de la colonne :</strong></ins><br />
-<code>CONSTRAINT lecteur_pk PRIMARY KEY (NumLecteur)</code> VS <code>numLecteur INT PRIMARY KEY</code><br />
+<code class="language-scdoc highlight">CONSTRAINT lecteur_pk PRIMARY KEY (NumLecteur)</code> VS <code class="language-text highlight">numLecteur INT PRIMARY KEY</code><br />
 La partie CONSTRAINT lecteur_pk est optionnelle,  MAIS obligatoire dans ce cours. Cette méthode d’écriture permet de mieux comprendre la structure de la base et de pouvoir nommer ce que l’on manipule. </p>
 <div class="admonition note">
 <p class="admonition-title">A faire</p>
@@ -5000,8 +5000,8 @@ La partie CONSTRAINT lecteur_pk est optionnelle,  MAIS obligatoire dans ce cours
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ol>
-<li>ajouter la requête de création de la table <code>Ouvrage</code></li>
-<li>Pour la table <code>Ouvrage</code>, on ne souhaite pas gérer <code>NumOuvrage</code> (un numéro automatique devra être généré). </li>
+<li>ajouter la requête de création de la table <code class="language-text highlight">Ouvrage</code></li>
+<li>Pour la table <code class="language-text highlight">Ouvrage</code>, on ne souhaite pas gérer <code class="language-text highlight">NumOuvrage</code> (un numéro automatique devra être généré). </li>
 </ol>
 </div>
 <div class="tabbed-block">
@@ -5040,20 +5040,20 @@ La partie CONSTRAINT lecteur_pk est optionnelle,  MAIS obligatoire dans ce cours
 <div class="admonition warning">
 <p class="admonition-title">A retenir</p>
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Le nommage des contraintes devra respecter les conventions suivantes : </p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>- nomdetable_champcléprimaire_pk 
-- nomdetable_champcléétrangère_fk
+<div class="language-scdoc highlight"><span class="filename">Scdoc</span><pre><span></span><code><span class="k">-</span> nomdetable_champcléprimaire_pk 
+<span class="k">-</span> nomdetable_champcléétrangère_fk
 </code></pre></div>
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> MySQL ne conserve pas le nom donnée à une contrainte de clé primaire mais la syntaxe est acceptée par soucis de compatibilité avec les autres SGBD. </p>
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" />Afin de respecter l’intégrité référentielle, les tables contenant exclusivement des clés primaires doivent être crées en premier. </p>
-<p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" />Pour obtenir l’instruction de création d’une table MySQL, utiliser la commande : <code>SHOW CREATE TABLE tbl_name</code></p>
+<p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" />Pour obtenir l’instruction de création d’une table MySQL, utiliser la commande : <code class="language-scdoc highlight">SHOW CREATE TABLE tbl_name</code></p>
 </div>
 <h3 id="34-suppression-dune-base-de-donnees-etou-de-table">3.4 Suppression d’une base de données (et/ou) de table<a class="headerlink" href="#34-suppression-dune-base-de-donnees-etou-de-table" title="Permanent link">⚓︎</a></h3>
 <p>La <strong>suppression</strong> d’une <mark>base de données</mark> est réalisée à l’aide de la commande : </p>
-<p><code>DROP DATABASE [IF EXISTS] db_name</code></p>
+<p><code class="language-objective-c highlight"><span class="n">DROP</span><span class="w"> </span><span class="n">DATABASE</span><span class="w"> </span><span class="p">[</span><span class="n">IF</span><span class="w"> </span><span class="n">EXISTS</span><span class="p">]</span><span class="w"> </span><span class="n">db_name</span></code></p>
 <p>La <strong>suppression</strong> d’une <mark>table</mark> est réalisée comme ci-dessous : </p>
-<p><code>DROP TABLE [IF EXISTS] tbl_name [, tbl_name] ...</code></p>
-<p>L’option <code>IF EXISTS</code> évite l’affichage d’une erreur si l’élément n’existe pas. </p>
-<p>La suppression d’une table liée par une contrainte d’intégrité référentielle ne sera <strong>pas</strong> possible et ce même si les tables sont vides. Dans le cas de la base <code>bibliothèque</code>, seule la table <code>EMPRUNTER</code> pourra être effacée sans conditions préalables.
+<p><code class="language-objective-c highlight"><span class="n">DROP</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="p">[</span><span class="n">IF</span><span class="w"> </span><span class="n">EXISTS</span><span class="p">]</span><span class="w"> </span><span class="n">tbl_name</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="n">tbl_name</span><span class="p">]</span><span class="w"> </span><span class="p">...</span></code></p>
+<p>L’option <code class="language-teratermmacro highlight"><span class="k">IF</span><span class="w"> </span><span class="nv">EXISTS</span></code> évite l’affichage d’une erreur si l’élément n’existe pas. </p>
+<p>La suppression d’une table liée par une contrainte d’intégrité référentielle ne sera <strong>pas</strong> possible et ce même si les tables sont vides. Dans le cas de la base <code class="language-text highlight">bibliothèque</code>, seule la table <code class="language-text highlight">EMPRUNTER</code> pourra être effacée sans conditions préalables.
  </p>
 <h3 id="35-modification-des-tables">3.5 Modification des tables<a class="headerlink" href="#35-modification-des-tables" title="Permanent link">⚓︎</a></h3>
 <p>La <strong>modification</strong> d’une table consiste ici à modifier son nom, sa structure ou bien ses champs. Les opérations consisteront à : </p>
@@ -5085,11 +5085,11 @@ La partie CONSTRAINT lecteur_pk est optionnelle,  MAIS obligatoire dans ce cours
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">exemple fondateur</p>
-<p>pour ajouter une colonne <code>dateNaissance</code> à la table <code>LECTEUR</code></p>
+<p>pour ajouter une colonne <code class="language-text highlight">dateNaissance</code> à la table <code class="language-text highlight">LECTEUR</code></p>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">LECTEUR</span>
 <span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">dateNaissance</span><span class="w"> </span><span class="nb">INT</span><span class="p">;</span>
 </code></pre></div>
-<p><img alt="⚠️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/26a0.svg" title=":warning:" /> A chaque modification, il faut répéter la commande <code>ALTER TABLE nomTable</code></p>
+<p><img alt="⚠️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/26a0.svg" title=":warning:" /> A chaque modification, il faut répéter la commande <code class="language-text highlight">ALTER TABLE nomTable</code></p>
 </div>
 
 

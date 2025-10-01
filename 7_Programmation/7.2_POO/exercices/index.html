@@ -4586,7 +4586,7 @@
 <p class="admonition-title">note</p>
 <p>création à l'aide de ChatGPT5</p>
 </div>
-<h2 id="exercice-1-classe-comptebancaire">🏦 Exercice 1 – Classe <code>CompteBancaire</code><a class="headerlink" href="#exercice-1-classe-comptebancaire" title="Permanent link">⚓︎</a></h2>
+<h2 id="exercice-1-classe-comptebancaire">🏦 Exercice 1 – Classe <code class="language-text highlight">CompteBancaire</code><a class="headerlink" href="#exercice-1-classe-comptebancaire" title="Permanent link">⚓︎</a></h2>
 <h4 id="objectifs">🎯 Objectifs<a class="headerlink" href="#objectifs" title="Permanent link">⚓︎</a></h4>
 <ul>
 <li>Définir une <strong>classe simple</strong> en PHP</li>
@@ -4597,13 +4597,13 @@
 <p>On souhaite modéliser un <strong>compte bancaire</strong> en PHP.</p>
 <ol>
 <li>
-<p>Créer une classe <code>CompteBancaire</code> avec les attributs suivants (tous <strong>privés</strong>) :</p>
+<p>Créer une classe <code class="language-text highlight">CompteBancaire</code> avec les attributs suivants (tous <strong>privés</strong>) :</p>
 </li>
 <li>
-<p><code>titulaire : string</code> → nom du titulaire du compte</p>
+<p><code class="language-actionscript3 highlight"><span class="n">titulaire</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">string</span></code> → nom du titulaire du compte</p>
 </li>
 <li>
-<p><code>solde : float</code> → solde du compte</p>
+<p><code class="language-actionscript3 highlight"><span class="n">solde</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">float</span></code> → solde du compte</p>
 </li>
 <li>
 <p>Le <strong>constructeur</strong> initialise le titulaire et le solde initial (qui ne peut pas être négatif).</p>
@@ -4612,20 +4612,20 @@
 <p>Ajouter les méthodes suivantes :</p>
 </li>
 <li>
-<p><code>getSolde()</code> : retourne le solde actuel</p>
+<p><code class="language-text highlight">getSolde()</code> : retourne le solde actuel</p>
 </li>
-<li><code>deposer(float $montant)</code> : ajoute de l’argent au solde (uniquement si le montant est positif)</li>
-<li><code>retirer(float $montant)</code> : retire de l’argent (uniquement si le montant est positif et ≤ solde actuel)</li>
-<li><code>afficher()</code> : affiche le titulaire et le solde du compte</li>
+<li><code class="language-text highlight">deposer(float $montant)</code> : ajoute de l’argent au solde (uniquement si le montant est positif)</li>
+<li><code class="language-text highlight">retirer(float $montant)</code> : retire de l’argent (uniquement si le montant est positif et ≤ solde actuel)</li>
+<li><code class="language-text highlight">afficher()</code> : affiche le titulaire et le solde du compte</li>
 </ol>
 <p>✅ Attendus</p>
 <ul>
-<li>Encapsulation respectée (<code>private</code>)</li>
+<li>Encapsulation respectée (<code class="language-text highlight">private</code>)</li>
 <li>Contrôle des valeurs (pas de solde négatif, pas de dépôt/retrait impossible)</li>
 <li>Affichage clair du titulaire et du solde</li>
 </ul>
 <h4 id="squelette-de-code-a-completer">💻 Squelette de code à compléter<a class="headerlink" href="#squelette-de-code-a-completer" title="Permanent link">⚓︎</a></h4>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
 
 <span class="k">class</span> <span class="nc">CompteBancaire</span> <span class="p">{</span>
@@ -4650,7 +4650,7 @@
 </code></pre></div>
 <details class="tip">
 <summary>Correction</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
 
 <span class="k">class</span> <span class="nc">CompteBancaire</span> <span class="p">{</span>
@@ -4707,62 +4707,62 @@
 </ul>
 </details>
 <hr />
-<h2 id="exercice-2-heritage-compteepargne-comptecourant">🧬 Exercice 2 – Héritage : <code>CompteEpargne</code> &amp; <code>CompteCourant</code><a class="headerlink" href="#exercice-2-heritage-compteepargne-comptecourant" title="Permanent link">⚓︎</a></h2>
+<h2 id="exercice-2-heritage-compteepargne-comptecourant">🧬 Exercice 2 – Héritage : <code class="language-text highlight">CompteEpargne</code> &amp; <code class="language-text highlight">CompteCourant</code><a class="headerlink" href="#exercice-2-heritage-compteepargne-comptecourant" title="Permanent link">⚓︎</a></h2>
 <h4 id="objectifs_1">🎯 Objectifs<a class="headerlink" href="#objectifs_1" title="Permanent link">⚓︎</a></h4>
 <ul>
-<li>Mettre en œuvre <strong>l’héritage</strong> à partir de <code>CompteBancaire</code></li>
-<li>Utiliser les <strong>visibilités</strong> (<code>private</code>, <code>protected</code>) intelligemment</li>
+<li>Mettre en œuvre <strong>l’héritage</strong> à partir de <code class="language-text highlight">CompteBancaire</code></li>
+<li>Utiliser les <strong>visibilités</strong> (<code class="language-text highlight">private</code>, <code class="language-text highlight">protected</code>) intelligemment</li>
 <li>Pratiquer la <strong>redéfinition</strong> (override) de méthodes</li>
 <li>Approcher un début de <strong>polymorphisme</strong> (même interface d’usage)</li>
 </ul>
 <h4 id="enonce_1">📋 Énoncé<a class="headerlink" href="#enonce_1" title="Permanent link">⚓︎</a></h4>
-<p>À partir de la classe <code>CompteBancaire</code> (Exercice 1), créer deux classes filles :</p>
+<p>À partir de la classe <code class="language-text highlight">CompteBancaire</code> (Exercice 1), créer deux classes filles :</p>
 <ol>
 <li>
-<p><strong><code>CompteEpargne</code></strong></p>
+<p><strong><code class="language-text highlight">CompteEpargne</code></strong></p>
 </li>
 <li>
-<p>Attribut privé : <code>tauxInteret: float</code> (ex : <code>0.03</code> pour 3%)</p>
+<p>Attribut privé : <code class="language-actionscript3 highlight"><span class="n">tauxInteret</span><span class="o">:</span><span class="w"> </span><span class="n">float</span></code> (ex : <code class="language-cbmbas highlight"><span class="mf">0.03</span></code> pour 3%)</p>
 </li>
-<li>Méthode : <code>appliquerInteret()</code> → augmente le solde de <code>solde * tauxInteret</code></li>
+<li>Méthode : <code class="language-text highlight">appliquerInteret()</code> → augmente le solde de <code class="language-scdoc highlight">solde * tauxInteret</code></li>
 <li>
-<p>Redéfinir <code>afficher()</code> pour indiquer le taux</p>
+<p>Redéfinir <code class="language-text highlight">afficher()</code> pour indiquer le taux</p>
 </li>
 <li>
-<p><strong><code>CompteCourant</code></strong></p>
+<p><strong><code class="language-text highlight">CompteCourant</code></strong></p>
 </li>
 <li>
 <p>Attributs privés :</p>
 </li>
 <li>
-<p><code>decouvertAutorise: float</code> (ex : 200.0)</p>
+<p><code class="language-actionscript3 highlight"><span class="n">decouvertAutorise</span><span class="o">:</span><span class="w"> </span><span class="n">float</span></code> (ex : 200.0)</p>
 </li>
-<li><code>fraisDecouvert: float</code> (ex : 8.0)</li>
+<li><code class="language-actionscript3 highlight"><span class="n">fraisDecouvert</span><span class="o">:</span><span class="w"> </span><span class="n">float</span></code> (ex : 8.0)</li>
 <li>
-<p>Redéfinir <code>retirer(float $montant)</code> :</p>
+<p>Redéfinir <code class="language-text highlight">retirer(float $montant)</code> :</p>
 </li>
 <li>
-<p>autoriser un solde <strong>jusqu’à <code>-decouvertAutorise</code></strong></p>
+<p>autoriser un solde <strong>jusqu’à <code class="language-text highlight">-decouvertAutorise</code></strong></p>
 </li>
-<li>si le solde passe <strong>strictement négatif</strong> après le retrait, <strong>appliquer</strong> <code>fraisDecouvert</code> immédiatement</li>
-<li>Redéfinir <code>afficher()</code> pour indiquer découvert et éventuel solde négatif</li>
+<li>si le solde passe <strong>strictement négatif</strong> après le retrait, <strong>appliquer</strong> <code class="language-text highlight">fraisDecouvert</code> immédiatement</li>
+<li>Redéfinir <code class="language-text highlight">afficher()</code> pour indiquer découvert et éventuel solde négatif</li>
 </ol>
 <p><strong>Contraintes générales</strong></p>
 <ul>
 <li>Conserver l’<strong>encapsulation</strong> : les nouveaux attributs restent <strong>privés</strong></li>
-<li>Utiliser <code>parent::__construct(...)</code> dans les constructeurs des classes filles</li>
+<li>Utiliser <code class="language-gdscript highlight"><span class="n">parent</span><span class="p">::</span><span class="n">__construct</span><span class="p">(</span><span class="o">...</span><span class="p">)</span></code> dans les constructeurs des classes filles</li>
 <li>
-<p>Lever une <code>InvalidArgumentException</code> si :</p>
+<p>Lever une <code class="language-text highlight">InvalidArgumentException</code> si :</p>
 </li>
 <li>
-<p><code>tauxInteret &lt; 0</code></p>
+<p><code class="language-text highlight">tauxInteret &lt; 0</code></p>
 </li>
-<li><code>decouvertAutorise &lt; 0</code> ou <code>fraisDecouvert &lt; 0</code></li>
-<li>PHP ≥ 8.0, <strong>propriétés typées</strong>, <code>declare(strict_types=1);</code></li>
+<li><code class="language-text highlight">decouvertAutorise &lt; 0</code> ou <code class="language-text highlight">fraisDecouvert &lt; 0</code></li>
+<li>PHP ≥ 8.0, <strong>propriétés typées</strong>, <code class="language-carbon highlight"><span class="nx">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="p">=</span><span class="mi">1</span><span class="p">);</span></code></li>
 </ul>
 <details class="question">
 <summary>💻 Squelette de code à compléter</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
 
 <span class="k">class</span> <span class="nc">CompteBancaire</span> <span class="p">{</span>
@@ -4843,46 +4843,46 @@
 <hr />
 </details>
 <h4 id="scenarios-de-test-scripts-rapides">🔎 Scénarios de test (scripts rapides)<a class="headerlink" href="#scenarios-de-test-scripts-rapides" title="Permanent link">⚓︎</a></h4>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">// 1) Épargne</span>
-<span class="x">$e = new CompteEpargne(&quot;Alice&quot;, 1000, 0.05);</span>
-<span class="x">$e-&gt;appliquerInteret();           // solde attendu: 1050</span>
-<span class="x">$e-&gt;afficher();                   // doit indiquer le taux</span>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="c1">// 1) Épargne</span>
+<span class="nv">$e</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CompteEpargne</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">);</span>
+<span class="nv">$e</span><span class="o">-&gt;</span><span class="na">appliquerInteret</span><span class="p">();</span>           <span class="c1">// solde attendu: 1050</span>
+<span class="nv">$e</span><span class="o">-&gt;</span><span class="na">afficher</span><span class="p">();</span>                   <span class="c1">// doit indiquer le taux</span>
 
-<span class="x">// 2) Courant sans découvert</span>
-<span class="x">$c1 = new CompteCourant(&quot;Bob&quot;, 200, 0, 0);</span>
-<span class="x">$c1-&gt;retirer(250);                // devrait refuser (pas de découvert)</span>
-<span class="x">$c1-&gt;afficher();</span>
+<span class="c1">// 2) Courant sans découvert</span>
+<span class="nv">$c1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CompteCourant</span><span class="p">(</span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="nv">$c1</span><span class="o">-&gt;</span><span class="na">retirer</span><span class="p">(</span><span class="mi">250</span><span class="p">);</span>                <span class="c1">// devrait refuser (pas de découvert)</span>
+<span class="nv">$c1</span><span class="o">-&gt;</span><span class="na">afficher</span><span class="p">();</span>
 
-<span class="x">// 3) Courant avec découvert autorisé</span>
-<span class="x">$c2 = new CompteCourant(&quot;Chloe&quot;, 100, 200, 8);</span>
-<span class="x">$c2-&gt;retirer(250);                // passe à -150 =&gt; appliquer 8€ de frais =&gt; -158</span>
-<span class="x">$c2-&gt;afficher();                  // solde attendu: -158</span>
+<span class="c1">// 3) Courant avec découvert autorisé</span>
+<span class="nv">$c2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CompteCourant</span><span class="p">(</span><span class="s2">&quot;Chloe&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>
+<span class="nv">$c2</span><span class="o">-&gt;</span><span class="na">retirer</span><span class="p">(</span><span class="mi">250</span><span class="p">);</span>                <span class="c1">// passe à -150 =&gt; appliquer 8€ de frais =&gt; -158</span>
+<span class="nv">$c2</span><span class="o">-&gt;</span><span class="na">afficher</span><span class="p">();</span>                  <span class="c1">// solde attendu: -158</span>
 
-<span class="x">// 4) Dépassement du découvert autorisé</span>
-<span class="x">$c2-&gt;retirer(60);                 // -158 - 60 = -218 -&gt; refuser si dépasse -200 (ou tenir compte de nouveaux frais)</span>
-<span class="x">$c2-&gt;afficher();</span>
+<span class="c1">// 4) Dépassement du découvert autorisé</span>
+<span class="nv">$c2</span><span class="o">-&gt;</span><span class="na">retirer</span><span class="p">(</span><span class="mi">60</span><span class="p">);</span>                 <span class="c1">// -158 - 60 = -218 -&gt; refuser si dépasse -200 (ou tenir compte de nouveaux frais)</span>
+<span class="nv">$c2</span><span class="o">-&gt;</span><span class="na">afficher</span><span class="p">();</span>
 
-<span class="x">// 5) Cas invalides (doivent lever exception)</span>
-<span class="x">try { new CompteEpargne(&quot;Dan&quot;, 500, -0.01); } catch (InvalidArgumentException $e) { echo &quot;OK\n&quot;; }</span>
-<span class="x">try { new CompteCourant(&quot;Eve&quot;, 500, -100, 5); } catch (InvalidArgumentException $e) { echo &quot;OK\n&quot;; }</span>
-<span class="x">try { new CompteCourant(&quot;Fay&quot;, 500, 100, -2); } catch (InvalidArgumentException $e) { echo &quot;OK\n&quot;; }</span>
+<span class="c1">// 5) Cas invalides (doivent lever exception)</span>
+<span class="k">try</span> <span class="p">{</span> <span class="k">new</span> <span class="nx">CompteEpargne</span><span class="p">(</span><span class="s2">&quot;Dan&quot;</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">);</span> <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">InvalidArgumentException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span> <span class="k">echo</span> <span class="s2">&quot;OK</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">try</span> <span class="p">{</span> <span class="k">new</span> <span class="nx">CompteCourant</span><span class="p">(</span><span class="s2">&quot;Eve&quot;</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span> <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">InvalidArgumentException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span> <span class="k">echo</span> <span class="s2">&quot;OK</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">try</span> <span class="p">{</span> <span class="k">new</span> <span class="nx">CompteCourant</span><span class="p">(</span><span class="s2">&quot;Fay&quot;</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">);</span> <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">InvalidArgumentException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span> <span class="k">echo</span> <span class="s2">&quot;OK</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span> <span class="p">}</span>
 </code></pre></div>
 <h4 id="points-dattention-erreurs-frequentes-conseils">🧠 Points d’attention / erreurs fréquentes : Conseils<a class="headerlink" href="#points-dattention-erreurs-frequentes-conseils" title="Permanent link">⚓︎</a></h4>
 <ul>
-<li>Oublier d’appeler <code>parent::__construct(...)</code> dans les classes filles</li>
-<li>Laisser passer des valeurs négatives pour <code>tauxInteret</code>, <code>decouvertAutorise</code>, <code>fraisDecouvert</code></li>
+<li>Oublier d’appeler <code class="language-gdscript highlight"><span class="n">parent</span><span class="p">::</span><span class="n">__construct</span><span class="p">(</span><span class="o">...</span><span class="p">)</span></code> dans les classes filles</li>
+<li>Laisser passer des valeurs négatives pour <code class="language-text highlight">tauxInteret</code>, <code class="language-text highlight">decouvertAutorise</code>, <code class="language-text highlight">fraisDecouvert</code></li>
 <li>Ne pas gérer le cas où l’application des <strong>frais</strong> ferait <strong>dépasser</strong> le découvert autorisé</li>
-<li>Redéfinir <code>retirer()</code> mais ne pas respecter la <strong>signature</strong> (retour <code>void</code> attendu)</li>
+<li>Redéfinir <code class="language-text highlight">retirer()</code> mais ne pas respecter la <strong>signature</strong> (retour <code class="language-text highlight">void</code> attendu)</li>
 </ul>
 <h4 id="pour-aller-plus-loin">⭐ Pour aller plus loin<a class="headerlink" href="#pour-aller-plus-loin" title="Permanent link">⚓︎</a></h4>
 <ul>
-<li>Ajouter <code>getTauxInteret()</code>, <code>setTauxInteret()</code> avec validation</li>
-<li>Ajouter dans <code>CompteCourant</code> une méthode <code>estADecouvert(): bool</code></li>
-<li>Ajouter une méthode <strong>commune</strong> <code>resume()</code> (même nom dans les deux classes) → tester un <strong>tableau polymorphe</strong> de comptes et appeler <code>resume()</code> en boucle</li>
+<li>Ajouter <code class="language-text highlight">getTauxInteret()</code>, <code class="language-text highlight">setTauxInteret()</code> avec validation</li>
+<li>Ajouter dans <code class="language-text highlight">CompteCourant</code> une méthode <code class="language-text highlight">estADecouvert(): bool</code></li>
+<li>Ajouter une méthode <strong>commune</strong> <code class="language-text highlight">resume()</code> (même nom dans les deux classes) → tester un <strong>tableau polymorphe</strong> de comptes et appeler <code class="language-text highlight">resume()</code> en boucle</li>
 </ul>
 <details class="tip">
 <summary>Correction</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
 
 <span class="sd">/**</span>

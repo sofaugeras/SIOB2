@@ -5116,10 +5116,10 @@ seul num peut être un attribut candidat. nom et prenom ne peuvent servir d'iden
 Pour la table MODULE : <br />
 Les deux champs peuvent être candidat si l'on part du postulat que deux cours ne peuvent pas porter le même nom. Le champ code est plus adequate car plus synthétique.<br />
 Pour la table INSCRIPTION : <br />
-Le champ <code>num</code> ne peut pas être candidat : un etudiant peut suivre plusieurs matières (ici voir A001)<br />
-Le champ <code>code</code> ne peut pas être candidat : une matière est suivie par plusieurs etudiants (ici SI3)<br />
-Le champ <code>note</code> ne peut pas être candidat : Une note peut être attibuée plusieurs fois.<br />
-Il est possible créer un champ artificiel numéroté mais une autre solution est de choisir une combinaison de champ. Ici la clé primaire est la combinaison des champs <code>num</code> et <code>code</code>. c'est également cohérent avec le fonctionnel, un etudiant suit un cours.<br />
+Le champ <code class="language-text highlight">num</code> ne peut pas être candidat : un etudiant peut suivre plusieurs matières (ici voir A001)<br />
+Le champ <code class="language-text highlight">code</code> ne peut pas être candidat : une matière est suivie par plusieurs etudiants (ici SI3)<br />
+Le champ <code class="language-text highlight">note</code> ne peut pas être candidat : Une note peut être attibuée plusieurs fois.<br />
+Il est possible créer un champ artificiel numéroté mais une autre solution est de choisir une combinaison de champ. Ici la clé primaire est la combinaison des champs <code class="language-text highlight">num</code> et <code class="language-text highlight">code</code>. c'est également cohérent avec le fonctionnel, un etudiant suit un cours.<br />
 <mark>Il y a une et une seule clé primaire qui porte sur plusieurs champs.</mark><br /></p>
 <p>ETUDIANT(<ins>num</ins>,nom, prenom)<br />
 MODULE(<ins>code</ins>, titre)<br />

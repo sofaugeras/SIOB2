@@ -4,11 +4,11 @@
 !!! warning "Actu SIO1"
 
     📌 Thème en cours B1 : [Base de données : LMD](./1_Base_de_donnees/2_LMD/cours.md)<br />
-    ⌛️  A venir : [Base de données : LCD](./1_Base_de_donnees/3_LCD/cours.md) <br />
+    ⌛️ A venir : [Base de données : LCD](./1_Base_de_donnees/3_LCD/cours.md) <br />
     📕 Evaluation : Série de DS : du 12 au 18 novembre <br />
     
-    📅 Conseil de prof : Lundi 29 septembre, semaine de remédiation du 6 au 10 octobre<br />
-    📅 Rencontre Parent/Prof/etudiant : Mercredi 15 octobre<br />
+    📅 Semaine de remédiation du 6 au 10 octobre<br />
+    📅 Rencontre Parent/Prof/etudiant : ~~Mercredi 15 octobre~~ Date prochaine en cours de validation<br />
     📅 Stage SIO1 : lundi 18 mai - vendredi 19 juin 2026, retour au lycée le lundi 22 juin de 8h30 à 12h30 <br />
 
 !!! warning "Actu SIO2 SLAM"

@@ -4594,9 +4594,9 @@
 <p>Les transactions sont une fonctionnalité absolument indispensable, permettant de sécuriser une application utilisant une base de données. Sans transactions, certaines opérations risqueraient d'être à <mark>moitié</mark> réalisées, et la moindre erreur, la moindre interruption pourraient avoir des conséquences énormes. En effet, les transactions permettent de regrouper des requêtes dans des blocs, et de faire en sorte que tout le bloc soit exécuté en une seule fois, cela afin de préserver l'intégrité des données de la base.
 <br />
 Une transaction permet d'exécuter un groupe d'instructions. Si pour une raison ou une autre l'une de ces instructions n'a pas pu être exécutée, tous le groupe d'instructions est annulé (le tout ou rien) :<br />
-▶️  Pour démarrer une transaction on utilise l'instruction <code>START TRANSACTION</code>
-▶️  Pour valider la transaction et rendre les traitements qui lui sont associés effectifs, on utilise l'instruction <code>COMMIT</code>
-▶️  interrompre une transaction en cours qui n'a pas encore été validée, on utilise l'instruction <code>ROLLBACK</code>
+▶️  Pour démarrer une transaction on utilise l'instruction <code class="language-text highlight">START TRANSACTION</code>
+▶️  Pour valider la transaction et rendre les traitements qui lui sont associés effectifs, on utilise l'instruction <code class="language-text highlight">COMMIT</code>
+▶️  interrompre une transaction en cours qui n'a pas encore été validée, on utilise l'instruction <code class="language-text highlight">ROLLBACK</code>
 ▶️  Si plusieurs transactions peuvent être en cours, on peut leur attribuer des noms pour les distinguer</p>
 <h2 id="syntaxe">Syntaxe<a class="headerlink" href="#syntaxe" title="Permanent link">⚓︎</a></h2>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">START</span><span class="w"> </span><span class="k">TRANSACTION</span>
@@ -4620,7 +4620,7 @@ Une transaction permet d'exécuter un groupe d'instructions. Si pour une raison 
 <span class="k">COMMIT</span><span class="p">;</span>
 </code></pre></div>
 <h2 id="application">Application<a class="headerlink" href="#application" title="Permanent link">⚓︎</a></h2>
-<p>Supposons qu'il n'existe pas de contrainte clé étrangère entre le champ <code>NumCom</code> de la table <code>LigneCommande</code> et le champ <code>NumCom</code> de la <code>Commande</code>. On souhaite supprimer la commande numéro 5 ainsi que la liste de ces articles. <br />
+<p>Supposons qu'il n'existe pas de contrainte clé étrangère entre le champ <code class="language-text highlight">NumCom</code> de la table <code class="language-text highlight">LigneCommande</code> et le champ <code class="language-text highlight">NumCom</code> de la <code class="language-text highlight">Commande</code>. On souhaite supprimer la commande numéro 5 ainsi que la liste de ces articles. <br />
 Le programme serait :</p>
 <p>```sql
 Delete from Commande where NumCom=5

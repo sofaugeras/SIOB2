@@ -4838,9 +4838,9 @@ Ce qui est l'équuivalent de ...</p>
 <span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">liste</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">colonnes</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">regroupement</span><span class="w"> </span>
 <span class="k">HAVING</span><span class="w"> </span><span class="n">colonne</span><span class="w"> </span><span class="n">testée</span><span class="w"> </span><span class="p">(</span><span class="n">ordre</span><span class="w"> </span><span class="k">SELECT</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
-<img alt="⚠️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/26a0.svg" title=":warning:" /> <code>GROUP BY</code> et <code>HAVING</code> sont possibles dans une requête imbriquée mais <code>ORDER BY</code> est impossible.</p>
+<img alt="⚠️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/26a0.svg" title=":warning:" /> <code class="language-text highlight">GROUP BY</code> et <code class="language-text highlight">HAVING</code> sont possibles dans une requête imbriquée mais <code class="language-text highlight">ORDER BY</code> est impossible.</p>
 <h3 id="13-operateurs-de-comparaison-modifies-par-any-ou-all">1.3 Opérateurs de comparaison modifiés par ANY ou ALL<a class="headerlink" href="#13-operateurs-de-comparaison-modifies-par-any-ou-all" title="Permanent link">⚓︎</a></h3>
-<p>Les opérateurs de comparaison peuvent voir leur comportement modifié par les mots-clés <code>ANY</code> ou <code>ALL</code>. Ceux-ci s’utilisent généralement avec une liste de valeurs ou une liste résultat d’une sous-requête.</p>
+<p>Les opérateurs de comparaison peuvent voir leur comportement modifié par les mots-clés <code class="language-text highlight">ANY</code> ou <code class="language-text highlight">ALL</code>. Ceux-ci s’utilisent généralement avec une liste de valeurs ou une liste résultat d’une sous-requête.</p>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> : Liste des articles dont le prix est supérieur au prix de tous les produits rouges<br /></p>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">art_num</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">ARTICLE</span><span class="w"> </span>
@@ -5019,13 +5019,13 @@ Comment réagit votre requête si deux articles ont tous les deux le prix le plu
 <p>Ils sont au nombre de 3 :</p>
 <ul>
 <li>
-<p><strong>UNION</strong> : Cet opérateur permet de combiner les résultats de deux requêtes SELECT en éliminant les doublons. Si vous souhaitez conserver les doublons, vous pouvez utiliser <code>UNION ALL</code>.</p>
+<p><strong>UNION</strong> : Cet opérateur permet de combiner les résultats de deux requêtes SELECT en éliminant les doublons. Si vous souhaitez conserver les doublons, vous pouvez utiliser <code class="language-text highlight">UNION ALL</code>.</p>
 </li>
 <li>
-<p><strong>INTERSECT</strong> : Cet opérateur retourne les lignes communes aux résultats de deux requêtes <code>SELECT</code>. Notez que <code>INTERSECT</code> n’est pas implémenté dans tous les systèmes de gestion de bases de données (SGBD).</p>
+<p><strong>INTERSECT</strong> : Cet opérateur retourne les lignes communes aux résultats de deux requêtes <code class="language-text highlight">SELECT</code>. Notez que <code class="language-text highlight">INTERSECT</code> n’est pas implémenté dans tous les systèmes de gestion de bases de données (SGBD).</p>
 </li>
 <li>
-<p><strong>EXCEPT</strong> : Aussi connu sous le nom de <code>MINUS</code> dans certains SGBD, cet opérateur retourne les lignes présentes dans la première requête <code>SELECT</code> mais pas dans la seconde.</p>
+<p><strong>EXCEPT</strong> : Aussi connu sous le nom de <code class="language-text highlight">MINUS</code> dans certains SGBD, cet opérateur retourne les lignes présentes dans la première requête <code class="language-text highlight">SELECT</code> mais pas dans la seconde.</p>
 </li>
 </ul>
 <div class="admonition warning">
@@ -5033,7 +5033,7 @@ Comment réagit votre requête si deux articles ont tous les deux le prix le plu
 <ol>
 <li><strong>Colonnes correspondantes</strong> : Les deux requêtes doivent sélectionner le même nombre de colonnes, et ces colonnes doivent être de types compatibles.</li>
 <li><strong>Ordre des colonnes</strong> : L’ordre des colonnes dans les deux requêtes doit être le même.</li>
-<li><strong>Élimination des doublons</strong> : Comme avec <code>UNION</code>, l’opérateur <code>INTERSECT</code> élimine automatiquement les doublons dans le résultat final.</li>
+<li><strong>Élimination des doublons</strong> : Comme avec <code class="language-text highlight">UNION</code>, l’opérateur <code class="language-text highlight">INTERSECT</code> élimine automatiquement les doublons dans le résultat final.</li>
 </ol>
 </div>
 <h3 id="21-intersection">2.1 Intersection<a class="headerlink" href="#21-intersection" title="Permanent link">⚓︎</a></h3>
@@ -5054,7 +5054,7 @@ Comment réagit votre requête si deux articles ont tous les deux le prix le plu
 <span class="k">ON</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_ven</span>
 <span class="k">WHERE</span><span class="w">  </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO2&#39;</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
-<p>MySQL ne propose malheureusement pas cette commande SQL, heureusement le fonctionnement de cette requête peut-être simulé grâce à une petite astuce. L'emploi d'une requête imbriquée avec <code>IN</code> comme ci-dessous est l’alternative à <code>INTERSECT</code> :</p>
+<p>MySQL ne propose malheureusement pas cette commande SQL, heureusement le fonctionnement de cette requête peut-être simulé grâce à une petite astuce. L'emploi d'une requête imbriquée avec <code class="language-text highlight">IN</code> comme ci-dessous est l’alternative à <code class="language-text highlight">INTERSECT</code> :</p>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_ven</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_ven</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span>
 <span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
@@ -5067,7 +5067,7 @@ Comment réagit votre requête si deux articles ont tous les deux le prix le plu
 <span class="w">                        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO2&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 <h3 id="22-union">2.2 UNION<a class="headerlink" href="#22-union" title="Permanent link">⚓︎</a></h3>
-<p><img alt="♥️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2665.svg" title=":hearts:" /> combine les résultats de plusieurs requêtes <code>SELECT</code> en éliminant les doublons</p>
+<p><img alt="♥️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2665.svg" title=":hearts:" /> combine les résultats de plusieurs requêtes <code class="language-text highlight">SELECT</code> en éliminant les doublons</p>
 <p><img alt="union" class="center" src="../data/sql-ensemble-union-300.png" width="30%" /></p>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" />  Liste des vendeurs qui ont travaillé avec les clients C01 ou C02</p>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_ven</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_ven</span>
@@ -5086,7 +5086,7 @@ Comment réagit votre requête si deux articles ont tous les deux le prix le plu
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Attention</p>
-<p>doivent correspondre dans les 2 ordres <code>SELECT</code>:</p>
+<p>doivent correspondre dans les 2 ordres <code class="language-text highlight">SELECT</code>:</p>
 <ul>
 <li>le nombre de colonnes affichées<br /></li>
 <li><strong>ET</strong> le type des données</li>
@@ -5101,7 +5101,7 @@ Comment réagit votre requête si deux articles ont tous les deux le prix le plu
 <span class="k">OR</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;C02&#39;</span><span class="p">);</span><span class="w"> </span>
 </code></pre></div>
 <h3 id="23-difference">2.3 Différence<a class="headerlink" href="#23-difference" title="Permanent link">⚓︎</a></h3>
-<p>L’opérateur <code>EXCEPT</code> (ou MINUS dans certains systèmes de gestion de bases de données) est utilisé pour retourner les lignes présentes dans le résultat de la première requête <code>SELECT</code> mais pas dans le résultat de la seconde. C’est un moyen efficace de trouver des différences entre deux ensembles de données.</p>
+<p>L’opérateur <code class="language-text highlight">EXCEPT</code> (ou MINUS dans certains systèmes de gestion de bases de données) est utilisé pour retourner les lignes présentes dans le résultat de la première requête <code class="language-text highlight">SELECT</code> mais pas dans le résultat de la seconde. C’est un moyen efficace de trouver des différences entre deux ensembles de données.</p>
 <p><img alt="except" class="center" src="../data/sql-ensemble-minus-300.png" width="30%" /></p>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> Liste des vendeurs qui ont travaillé avec le client C01 mais pas avec C02</p>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_ven</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_ven</span>
@@ -5175,7 +5175,7 @@ Comment réagit votre requête si deux articles ont tous les deux le prix le plu
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 12. Liste des articles vendus au moins une fois sauf ceux de couleur rouge.</p>
 <details class="question">
 <summary>correction</summary>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```SQL
+<div class="language-scdoc highlight"><span class="filename">Scdoc</span><pre><span></span><code>```SQL
 SELECT num_art, des_art
 FROM ARTICLE INNER JOIN DETAIL
 ON ARTICLE.Num_Art = DETAIL.Num_Art
@@ -5196,7 +5196,7 @@ WHERE Coul_art = &#39;Rouge&#39; ;
 </details>
 <h2 id="3-les-vues">3. Les vues<a class="headerlink" href="#3-les-vues" title="Permanent link">⚓︎</a></h2>
 <h3 id="31-definition">3.1 Définition<a class="headerlink" href="#31-definition" title="Permanent link">⚓︎</a></h3>
-<p>Une vue peut être considérée comme une **table virtuelle**construite à partir de l’exécution d’une requête d’interrogation <code>SELECT</code>.<br /> 
+<p>Une vue peut être considérée comme une **table virtuelle**construite à partir de l’exécution d’une requête d’interrogation <code class="language-text highlight">SELECT</code>.<br /> 
 Elle n’a pas d’existence physique permanente et est construite dynamiquement.<br /></p>
 <div class="admonition warning">
 <p class="admonition-title">Utilisation</p>
@@ -5223,7 +5223,7 @@ Pour éviter de répéter les jointures à chaque requête, on définira la vue 
 <span class="k">FROM</span><span class="w"> </span><span class="n">Lecteur</span><span class="w"> </span><span class="n">L</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Emprunter</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">L</span><span class="p">.</span><span class="n">NumLecteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">E</span><span class="p">.</span><span class="n">NumLecteur</span>
 <span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Ouvrage</span><span class="w"> </span><span class="n">O</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">E</span><span class="p">.</span><span class="n">NumOuvrage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">O</span><span class="p">.</span><span class="n">NumOuvrage</span>
 </code></pre></div></p>
-<p>note : Par convention le nom des vues est généralement préfixé par <code>v_</code></p>
+<p>note : Par convention le nom des vues est généralement préfixé par <code class="language-scdoc highlight">v_</code></p>
 <p>Sous phpMyAdmin, la vue apparaît dans la liste des tables avec une icône différente :
 <img alt="vue" src="../data/vue.jpg" width="0%" /></p>
 <p>Les requêtes seront ainsi simplifiées :</p>
@@ -5250,7 +5250,7 @@ Il sera possible ici de rajouter un ouvrage :
 <span class="k">Values</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;TCP/IP pour les nuls&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2001</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
 </code></pre></div>
 L’insertion est bien entendu réalisée dans la table Ouvrage.
-Cela est possible car tous les champs nécessaires de la table Ouvrage sont renseignés, que l’identifiant est un numéro automatique et que la projection porte sur <code>O.NumGenre</code>.</p>
+Cela est possible car tous les champs nécessaires de la table Ouvrage sont renseignés, que l’identifiant est un numéro automatique et que la projection porte sur <code class="language-text highlight">O.NumGenre</code>.</p>
 <h3 id="33-les-alternatives-aux-vues">3.3 Les alternatives aux vues<a class="headerlink" href="#33-les-alternatives-aux-vues" title="Permanent link">⚓︎</a></h3>
 <p>Il existe plusieurs alternatives aux vues en SQL pour gérer et manipuler les données de manière efficace. Voici quelques-unes des principales alternatives :</p>
 <p><strong>Tables temporaires</strong></p>
@@ -5290,8 +5290,8 @@ Cela est possible car tous les champs nécessaires de la table Ouvrage sont rens
 <h2 id="4-histoire-de-jointures">4. Histoire de jointures<a class="headerlink" href="#4-histoire-de-jointures" title="Permanent link">⚓︎</a></h2>
 <p>Les jointures en SQL permettent d’associer plusieurs tables dans une même requête. Cela permet d’exploiter la puissance des bases de données relationnelles pour obtenir des résultats qui combinent les données de plusieurs tables de manière efficace.</p>
 <h3 id="41-exemple">4.1 Exemple<a class="headerlink" href="#41-exemple" title="Permanent link">⚓︎</a></h3>
-<p>En général, les jointures consistent à associer des lignes de 2 tables en associant l’égalité des valeurs d’une colonne d’une première table par rapport à la valeur d’une colonne d’une seconde table. Imaginons qu’une base de 2 données possède une table <code>utilisateur</code> et une autre table  <code>adresse</code> qui contient les adresses de ces utilisateurs. Avec une jointure, il est possible d’obtenir les données de l’utilisateur et de son adresse en une seule requête.<br />
-<img alt="♥️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2665.svg" title=":hearts:" /> C'est ce que vous avez l'habitude d'utiliser lorsque vous faites des <code>INNER JOIN</code> !</p>
+<p>En général, les jointures consistent à associer des lignes de 2 tables en associant l’égalité des valeurs d’une colonne d’une première table par rapport à la valeur d’une colonne d’une seconde table. Imaginons qu’une base de 2 données possède une table <code class="language-text highlight">utilisateur</code> et une autre table  <code class="language-text highlight">adresse</code> qui contient les adresses de ces utilisateurs. Avec une jointure, il est possible d’obtenir les données de l’utilisateur et de son adresse en une seule requête.<br />
+<img alt="♥️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2665.svg" title=":hearts:" /> C'est ce que vous avez l'habitude d'utiliser lorsque vous faites des <code class="language-text highlight">INNER JOIN</code> !</p>
 <p>On peut aussi imaginer qu’un site web possède une table pour les articles (titre, contenu, date de publication …) et une autre pour les rédacteurs (nom, date d’inscription, date de naissance …). Avec une jointure il est possible d’effectuer une seule recherche pour afficher un article et le nom du rédacteur. Mais plus fort, une jointure permettra aussi de connaître les rédacteurs n'ayant pas rédigé d'articles (sans utiliser de requête imbriquée) !!</p>
 <h3 id="42-types-de-jointures">4.2 Types de jointures<a class="headerlink" href="#42-types-de-jointures" title="Permanent link">⚓︎</a></h3>
 <p><img alt="jointure" class="center" src="../data/ob_68b4f5_real-gif-1.gif" width="50%" /></p>
@@ -5374,7 +5374,7 @@ Jointure droite (RIGHT JOINT sans l’intersection A)
 <span class="k">WHERE</span><span class="w"> </span><span class="n">B</span><span class="p">.</span><span class="k">key</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span>
 </code></pre></div></p>
 <p><strong>Exemple Pratique</strong></p>
-<p>Supposons que nous ayons deux tables : <code>CLIENT</code> et <code>COMMANDE</code>.</p>
+<p>Supposons que nous ayons deux tables : <code class="language-text highlight">CLIENT</code> et <code class="language-text highlight">COMMANDE</code>.</p>
 <p><strong>CLIENT</strong></p>
 <table>
 <thead>
@@ -5467,7 +5467,7 @@ Jointure droite (RIGHT JOINT sans l’intersection A)
 </table>
 <p><strong>Points Clés</strong></p>
 <ul>
-<li><strong>Toutes les lignes de la table de droite</strong> : La jointure droite retourne toutes les lignes de la table de droite (<code>COMMANDE</code>), même si elles n'ont pas de correspondance dans la table de gauche (<code>CLIENT</code>).</li>
+<li><strong>Toutes les lignes de la table de droite</strong> : La jointure droite retourne toutes les lignes de la table de droite (<code class="language-text highlight">COMMANDE</code>), même si elles n'ont pas de correspondance dans la table de gauche (<code class="language-text highlight">CLIENT</code>).</li>
 <li><strong>Valeurs NULL</strong> : Les colonnes de la table de gauche seront NULL si aucune correspondance n'est trouvée.</li>
 </ul>
 <p><strong>Utilisation Pratique</strong></p>

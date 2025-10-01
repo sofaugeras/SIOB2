@@ -4803,7 +4803,7 @@ indication : <br />
 - Vérifier dans le volet de gauche que vous avez toutes vos tables ainsi que les données.<br /></p>
 </details>
 <h2 id="3-la-consultation-des-donnees">3. La Consultation des données<a class="headerlink" href="#3-la-consultation-des-donnees" title="Permanent link">⚓︎</a></h2>
-<p>La <strong>consultation</strong> (ou l’interrogation) des données constitue l’opération la plus fréquemment utilisée en langage <code>SQL</code>. Elle est réalisée en utilisant la commande <code>SELECT</code>. </p>
+<p>La <strong>consultation</strong> (ou l’interrogation) des données constitue l’opération la plus fréquemment utilisée en langage <code class="language-text highlight">SQL</code>. Elle est réalisée en utilisant la commande <code class="language-text highlight">SELECT</code>. </p>
 <p>Sa syntaxe générale est la suivante :</p>
 <p><div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="p">[</span><span class="k">ALL</span><span class="p">]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">[</span><span class="k">DISTINCT</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="n">liste</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">noms</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">colonnes</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">*</span>
 <span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Liste</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">tables</span><span class="o">&gt;</span>
@@ -4868,7 +4868,7 @@ Note : Les instructions entre crochets [  ] sont facultatives.</p>
 </div>
 </div>
 </div>
-<p>Tous les tuples de la relation <code>AVION</code> sont ainsi sélectionnés. <br /></p>
+<p>Tous les tuples de la relation <code class="language-text highlight">AVION</code> sont ainsi sélectionnés. <br /></p>
 <p>La projection peut être limitée à un choix d’attributs en indiquant, à la place de l’astérisque (*), une liste de noms d’attributs. </p>
 <div class="admonition question">
 <p class="admonition-title">R2</p>
@@ -4919,7 +4919,7 @@ Note : Les instructions entre crochets [  ] sont facultatives.</p>
 </div>
 </div>
 </div>
-<p>La clause <code>DISTINCT</code> ajoutée à la clause <code>SELECT</code> permet d’éliminer les doublons (dans notre cas, les infos sur le B747-400). <br />
+<p>La clause <code class="language-text highlight">DISTINCT</code> ajoutée à la clause <code class="language-text highlight">SELECT</code> permet d’éliminer les doublons (dans notre cas, les infos sur le B747-400). <br />
 Ainsi, si dans le résultat plusieurs tuples sont identiques, un seul sera conservé.</p>
 <div class="admonition question">
 <p class="admonition-title">R3</p>
@@ -4966,10 +4966,10 @@ Ainsi, si dans le résultat plusieurs tuples sont identiques, un seul sera conse
 </div>
 </div>
 </div>
-<p><ins>Note :</ins> L'option <code>ALL</code> est, par opposition à l'option <code>DISTINCT</code>, l'option par défaut. Elle permet de sélectionner l'ensemble des lignes.</p>
+<p><ins>Note :</ins> L'option <code class="language-text highlight">ALL</code> est, par opposition à l'option <code class="language-text highlight">DISTINCT</code>, l'option par défaut. Elle permet de sélectionner l'ensemble des lignes.</p>
 <h3 id="32-la-selection-ou-restriction">3.2 La sélection (ou restriction)<a class="headerlink" href="#32-la-selection-ou-restriction" title="Permanent link">⚓︎</a></h3>
 <p>La <strong>sélection</strong> est l'opération qui permet de sélectionner des occurrences d'une ou plusieurs tables répondant à certains critères. <br />
-En <code>SQL</code>, les restrictions s'expriment à l'aide de la clause <code>WHERE</code> suivie d'une <strong>condition logique</strong> exprimée à l'aide d'opérateurs logiques. La condition (expression logique booléenne Vrai/Faux) sera évaluée pour chaque occurrence. 
+En <code class="language-text highlight">SQL</code>, les restrictions s'expriment à l'aide de la clause <code class="language-text highlight">WHERE</code> suivie d'une <strong>condition logique</strong> exprimée à l'aide d'opérateurs logiques. La condition (expression logique booléenne Vrai/Faux) sera évaluée pour chaque occurrence. 
 Les tuples pour lesquels la condition est «Vraie » sont ainsi sélectionnés.</p>
 <h4 id="321-condition-logique-simple">3.2.1 Condition logique simple<a class="headerlink" href="#321-condition-logique-simple" title="Permanent link">⚓︎</a></h4>
 <p>C’est le résultat de la comparaison de deux expressions au moyen d’un opérateur de comparaison :</p>
@@ -5014,12 +5014,12 @@ Les tuples pour lesquels la condition est «Vraie » sont ainsi sélectionnés.<
 <details class="warning">
 <summary>LIKE %</summary>
 <p>Le prédicat LIKE permet de faire des comparaisons sur des chaînes grâce à des caractères, appelés caractères jokers.
-Ces caractères peuvent être différents suivant le SGBDR utilisé. Il faut se Référer à la documentation du SGBDR. Pour MySQL, il s'agit du <code>%</code></p>
-<p><img alt="🔃" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f503.svg" title=":arrows_clockwise:" /> <code>LIKE '%a'</code> : le caractère “%” est un caractère joker qui remplace tous les autres caractères. Ainsi, ce modèle permet de rechercher toutes les chaines de caractère qui se termine par un “a”.<br />
-<img alt="🔃" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f503.svg" title=":arrows_clockwise:" /> <code>LIKE 'a%'</code> : ce modèle permet de rechercher toutes les lignes de “colonne” qui commence par un “a”.<br />
-<img alt="🔃" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f503.svg" title=":arrows_clockwise:" /> <code>LIKE '%a%'</code> : ce modèle est utilisé pour rechercher tous les enregistrement qui utilisent le caractère “a”.<br />
-<img alt="🔃" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f503.svg" title=":arrows_clockwise:" /> <code>LIKE 'pa%on'</code> : ce modèle permet de rechercher les chaines qui commence par “pa” et qui se terminent par “on”, comme “pantalon” ou “pardon”.<br />
-<img alt="🔃" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f503.svg" title=":arrows_clockwise:" /> <code>LIKE 'a_c'</code> : peu utilisé, le caractère “_” (underscore) peut être remplacé par n’importe quel caractère, mais un seul caractère uniquement (alors que le symbole pourcentage “%” peut être remplacé par un nombre incalculable de caractères . Ainsi, ce modèle permet de retourner les lignes “aac”, “abc” ou même “azc”.
+Ces caractères peuvent être différents suivant le SGBDR utilisé. Il faut se Référer à la documentation du SGBDR. Pour MySQL, il s'agit du <code class="language-matlab highlight"><span class="c">%</span></code></p>
+<p><img alt="🔃" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f503.svg" title=":arrows_clockwise:" /> <code class="language-text highlight">LIKE &#39;%a&#39;</code> : le caractère “%” est un caractère joker qui remplace tous les autres caractères. Ainsi, ce modèle permet de rechercher toutes les chaines de caractère qui se termine par un “a”.<br />
+<img alt="🔃" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f503.svg" title=":arrows_clockwise:" /> <code class="language-text highlight">LIKE &#39;a%&#39;</code> : ce modèle permet de rechercher toutes les lignes de “colonne” qui commence par un “a”.<br />
+<img alt="🔃" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f503.svg" title=":arrows_clockwise:" /> <code class="language-text highlight">LIKE &#39;%a%&#39;</code> : ce modèle est utilisé pour rechercher tous les enregistrement qui utilisent le caractère “a”.<br />
+<img alt="🔃" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f503.svg" title=":arrows_clockwise:" /> <code class="language-text highlight">LIKE &#39;pa%on&#39;</code> : ce modèle permet de rechercher les chaines qui commence par “pa” et qui se terminent par “on”, comme “pantalon” ou “pardon”.<br />
+<img alt="🔃" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f503.svg" title=":arrows_clockwise:" /> <code class="language-scdoc highlight">LIKE &#39;a_c&#39;</code> : peu utilisé, le caractère “_” (underscore) peut être remplacé par n’importe quel caractère, mais un seul caractère uniquement (alors que le symbole pourcentage “%” peut être remplacé par un nombre incalculable de caractères . Ainsi, ce modèle permet de retourner les lignes “aac”, “abc” ou même “azc”.
 <a href="https://sql.sh/cours/where/like">Source sql.sh</a></p>
 </details>
 <div class="admonition question">
@@ -5203,7 +5203,7 @@ Ces caractères peuvent être différents suivant le SGBDR utilisé. Il faut se 
 </div>
 </div>
 <h4 id="322-conditions-logiques-composees">3.2.2 Conditions logiques composées<a class="headerlink" href="#322-conditions-logiques-composees" title="Permanent link">⚓︎</a></h4>
-<p>Les opérateurs logiques <code>AND</code> et <code>OR</code> sont utilisés pour combiner plusieurs conditions. <br />
+<p>Les opérateurs logiques <code class="language-text highlight">AND</code> et <code class="language-text highlight">OR</code> sont utilisés pour combiner plusieurs conditions. <br />
 Ainsi, les requêtes R6 et R8 peuvent être écrites d'une autre façon :</p>
 <div class="admonition question">
 <p class="admonition-title">R6 bis</p>
@@ -5282,7 +5282,7 @@ note : le champ de restriction doit absolument être répété.</p>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">villeArrivee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;GILLOT&#39;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">villeArrivee</span><span class="w"> </span><span class="o">=</span><span class="s1">&#39;MAURICE&#39;</span><span class="p">;</span>
 </code></pre></div>
 note : le champ de restriction doit absolument être répété.
-note 2 : On ne peut pas mettre l'opérateur <code>AND</code> ici car une ville ne peut pas en même temps être GILLOT <strong>et</strong> Maurice.</p>
+note 2 : On ne peut pas mettre l'opérateur <code class="language-text highlight">AND</code> ici car une ville ne peut pas en même temps être GILLOT <strong>et</strong> Maurice.</p>
 </div>
 </div>
 </div>
@@ -5325,7 +5325,7 @@ note 2 : On ne peut pas mettre l'opérateur <code>AND</code> ici car une ville n
 <span class="w">      </span><span class="p">(</span><span class="n">salaire</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3500</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">adresse</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%Paris&quot;</span><span class="p">);</span>
 </code></pre></div>
 <p>Remarques : 
-- L’opérateur <code>AND</code> est prioritaire par rapport à l’opérateur <code>OR</code>. </p>
+- L’opérateur <code class="language-text highlight">AND</code> est prioritaire par rapport à l’opérateur <code class="language-text highlight">OR</code>. </p>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span><span class="p">,</span><span class="w"> </span><span class="n">bonus</span><span class="p">,</span><span class="w"> </span><span class="n">salaire</span><span class="p">,</span><span class="w"> </span><span class="n">adresse</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">bonus</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">800</span><span class="w"> </span><span class="k">OR</span>
@@ -5367,7 +5367,7 @@ note : le parenthésage est ici obligatoire.</p>
 </div>
 </div>
 <h4 id="323-restriction-sur-une-valeur-manquante">3.2.3 Restriction sur une valeur manquante<a class="headerlink" href="#323-restriction-sur-une-valeur-manquante" title="Permanent link">⚓︎</a></h4>
-<p>Lorsqu'un champ n'est pas renseigné, le SGBD lui attribue une valeur spéciale que l'on note NULL. La recherche de cette valeur ne peut pas se faire à l'aide des opérateurs classiques, il faut utiliser les prédicats <code>IS NULL</code> ou bien <code>IS NOT NULL</code>. </p>
+<p>Lorsqu'un champ n'est pas renseigné, le SGBD lui attribue une valeur spéciale que l'on note NULL. La recherche de cette valeur ne peut pas se faire à l'aide des opérateurs classiques, il faut utiliser les prédicats <code class="language-text highlight">IS NULL</code> ou bien <code class="language-text highlight">IS NOT NULL</code>. </p>
 <p><img alt="null différent de zéro" class="center" src="../data/null.webp" width="50%" /></p>
 <div class="admonition question">
 <p class="admonition-title">R10</p>
@@ -5410,12 +5410,12 @@ Une jointure est formulée en spécifiant : <br />
 <p><ins>Note :</ins> Les jointures portent TOUJOURS sur les clés primaires et les clés étrangères des relations. <br /></p>
 <p><ins>Exemple :</ins> « Pour chaque numéro de vol, on désire connaître le nom des avions » <br /></p>
 <p>Cette requête concerne des attributs provenant de plusieurs relations : <br />
-- <code>NumVol</code> dans la relation <code>VOL</code> <br />
-- <code>NomAvion</code> dans la relation <code>AVION</code> </p>
+- <code class="language-text highlight">NumVol</code> dans la relation <code class="language-text highlight">VOL</code> <br />
+- <code class="language-text highlight">NomAvion</code> dans la relation <code class="language-text highlight">AVION</code> </p>
 <h4 id="331-syntaxe-sql92-sql-2">3.3.1  Syntaxe SQL92 (SQL-2)<a class="headerlink" href="#331-syntaxe-sql92-sql-2" title="Permanent link">⚓︎</a></h4>
-<p>La clause <code>FROM</code>, combinée avec une nouvelle clause <code>INNER JOIN</code>, devra indiquer la liste des relations concernées : <code>VOL</code> et <code>AVION</code> ainsi que les champs sur lesquels portera la jointure. <br />
-l'égalité de jointure devra se faire sur les champs en égalité ... Ici, l'intégrité référentielle entre les tables <code>VOL</code> et <code>AVION</code> se fait sur les champs <code>numAvion</code> de <code>AVION</code> (clé primaire) et <code>numAvion</code> de <code>VOL</code> (clé étrangère).<br />
-La clause <code>WHERE</code> contiendra les éventuelles restrictions. <br />
+<p>La clause <code class="language-text highlight">FROM</code>, combinée avec une nouvelle clause <code class="language-text highlight">INNER JOIN</code>, devra indiquer la liste des relations concernées : <code class="language-text highlight">VOL</code> et <code class="language-text highlight">AVION</code> ainsi que les champs sur lesquels portera la jointure. <br />
+l'égalité de jointure devra se faire sur les champs en égalité ... Ici, l'intégrité référentielle entre les tables <code class="language-text highlight">VOL</code> et <code class="language-text highlight">AVION</code> se fait sur les champs <code class="language-text highlight">numAvion</code> de <code class="language-text highlight">AVION</code> (clé primaire) et <code class="language-text highlight">numAvion</code> de <code class="language-text highlight">VOL</code> (clé étrangère).<br />
+La clause <code class="language-text highlight">WHERE</code> contiendra les éventuelles restrictions. <br />
 <img alt="💪" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4aa.svg" title=":muscle:" /> C’est le point fort du SQL-2 : séparer ce qui relève de la jointure du reste de la requête. </p>
 <div class="admonition question">
 <p class="admonition-title">R11</p>
@@ -5463,8 +5463,8 @@ La clause <code>WHERE</code> contiendra les éventuelles restrictions. <br />
 <span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">AVION</span>
 <span class="k">ON</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">numAvion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AVION</span><span class="p">.</span><span class="n">numAvion</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
-<p><ins>note :</ins> dans notre requête, <code>numAvion</code> désigne deux champs différents dans la base <code>VOL</code>. Il est nécessaire de préciser celui dont on parle, en préfixant le champ avec le nom de sa table.</p>
-<p>Si ce n'est pas fait, le moteur SQL provoquera une erreur <code>#1052 - Champ: 'numAvion' dans on clause est ambigu</code></p>
+<p><ins>note :</ins> dans notre requête, <code class="language-text highlight">numAvion</code> désigne deux champs différents dans la base <code class="language-text highlight">VOL</code>. Il est nécessaire de préciser celui dont on parle, en préfixant le champ avec le nom de sa table.</p>
+<p>Si ce n'est pas fait, le moteur SQL provoquera une erreur <code class="language-text highlight">#1052 - Champ: &#39;numAvion&#39; dans on clause est ambigu</code></p>
 </div>
 </div>
 </div>
@@ -5534,8 +5534,8 @@ La clause <code>WHERE</code> contiendra les éventuelles restrictions. <br />
 </div>
 <h4 id="332-syntaxe-sql89-sql-1">3.3.2  Syntaxe SQL89 (SQL-1)<a class="headerlink" href="#332-syntaxe-sql89-sql-1" title="Permanent link">⚓︎</a></h4>
 <p>Une plus ancienne façon d'écrire les jointures existe dans la norme SQL-1. Mais elle est bien moins performante que les jointures interne INNER JOIN. Elle est présenté ici car elle peut être croiser dans des "vieux" codes. On pourra la nommer "equi-jointure".<br /></p>
-<p>La clause <code>FROM</code> devra indiquer la liste des relations concernées : VOL et AVION. </p>
-<p>La clause <code>WHERE</code> devra contenir : 
+<p>La clause <code class="language-text highlight">FROM</code> devra indiquer la liste des relations concernées : VOL et AVION. </p>
+<p>La clause <code class="language-text highlight">WHERE</code> devra contenir : 
 - une condition sur l'égalité de jointure. Si les attributs concernés portent le même nom, on les préfixera du nom de la relation correspondante. 
 - Des conditions de restrictions en fonction du besoin</p>
 <div class="admonition question">
@@ -5767,7 +5767,7 @@ Les critères de <strong>tri</strong> sont indiqués dans la clause ORDER BY don
 <p><ins>note :</ins> On peut très bien trié un attribut non présent dans la projection (ie dans la clause SELECT)</p>
 <h3 id="35-calculs-arithmetiques">3.5 Calculs arithmétiques<a class="headerlink" href="#35-calculs-arithmetiques" title="Permanent link">⚓︎</a></h3>
 <h4 id="351-calculs-sur-attributs">3.5.1 Calculs sur attributs<a class="headerlink" href="#351-calculs-sur-attributs" title="Permanent link">⚓︎</a></h4>
-<p>Les attributs numériques d’une table peuvent être utilisés pour réaliser des calculs. On réalise alors directement les principales opérations mathématiques dans les clauses <code>SELECT</code> ou <code>WHERE</code>.</p>
+<p>Les attributs numériques d’une table peuvent être utilisés pour réaliser des calculs. On réalise alors directement les principales opérations mathématiques dans les clauses <code class="language-text highlight">SELECT</code> ou <code class="language-text highlight">WHERE</code>.</p>
 <div class="admonition question">
 <p class="admonition-title">R16</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="22:2"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">Enoncé</label><label for="__tabbed_22_2">Requête</label></div>
@@ -5807,7 +5807,7 @@ Les critères de <strong>tri</strong> sont indiqués dans la clause ORDER BY don
 <span class="k">MIN</span><span class="p">(</span><span class="o">&lt;</span><span class="n">Attribut</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Valeur</span><span class="w"> </span><span class="n">minimum</span><span class="w"> </span>
 <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">&lt;</span><span class="n">Attribut</span><span class="o">&gt;</span><span class="p">),</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Attribut</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Nombre</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">tuples</span>
 </code></pre></div>
-Ils s'utilisent <mark>EXCLUSIVEMENT</mark> dans la clause <code>SELECT</code> (ou dans la clause <code>HAVING</code> que l'on verra un peu plus tard)</p>
+Ils s'utilisent <mark>EXCLUSIVEMENT</mark> dans la clause <code class="language-text highlight">SELECT</code> (ou dans la clause <code class="language-text highlight">HAVING</code> que l'on verra un peu plus tard)</p>
 <div class="admonition question">
 <p class="admonition-title">R17</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="23:2"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><input id="__tabbed_23_2" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="__tabbed_23_1">Enoncé</label><label for="__tabbed_23_2">Requête</label></div>
@@ -5835,7 +5835,7 @@ Ils s'utilisent <mark>EXCLUSIVEMENT</mark> dans la clause <code>SELECT</code> (o
 </div>
 </div>
 </div>
-<p>Note : L'utilisation de <code>AS</code> permet de donner un nom d’alias au calcul résultant. </p>
+<p>Note : L'utilisation de <code class="language-text highlight">AS</code> permet de donner un nom d’alias au calcul résultant. </p>
 <div class="admonition question">
 <p class="admonition-title">R18</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="24:2"><input checked="checked" id="__tabbed_24_1" name="__tabbed_24" type="radio" /><input id="__tabbed_24_2" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="__tabbed_24_1">Enoncé</label><label for="__tabbed_24_2">Requête</label></div>
@@ -5918,7 +5918,7 @@ Ils s'utilisent <mark>EXCLUSIVEMENT</mark> dans la clause <code>SELECT</code> (o
 </div>
 </div>
 </div>
-<p>Mais en réalité, il n'y en a que 5 modèles. On peut affiner notre requête en utilisant la clause <code>DISTINCT</code> déjà vu.</p>
+<p>Mais en réalité, il n'y en a que 5 modèles. On peut affiner notre requête en utilisant la clause <code class="language-text highlight">DISTINCT</code> déjà vu.</p>
 <div class="admonition question">
 <p class="admonition-title">R20 bis</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="27:2"><input checked="checked" id="__tabbed_27_1" name="__tabbed_27" type="radio" /><input id="__tabbed_27_2" name="__tabbed_27" type="radio" /><div class="tabbed-labels"><label for="__tabbed_27_1">Enoncé</label><label for="__tabbed_27_2">Requête</label></div>
@@ -5974,7 +5974,7 @@ Ils s'utilisent <mark>EXCLUSIVEMENT</mark> dans la clause <code>SELECT</code> (o
 </div>
 </div>
 <h3 id="36-regroupement-des-resultats">3.6 Regroupement des résultats<a class="headerlink" href="#36-regroupement-des-resultats" title="Permanent link">⚓︎</a></h3>
-<p>Il peut être intéressant de regrouper des résultats afin de faire des opérations par groupe (opérations statistiques par exemple). Cette opération se réalise à l'aide de la clause <code>GROUP BY</code>, suivie du nom de chaque colonne sur laquelle on veut effectuer des regroupements. </p>
+<p>Il peut être intéressant de regrouper des résultats afin de faire des opérations par groupe (opérations statistiques par exemple). Cette opération se réalise à l'aide de la clause <code class="language-text highlight">GROUP BY</code>, suivie du nom de chaque colonne sur laquelle on veut effectuer des regroupements. </p>
 <div class="admonition question">
 <p class="admonition-title">R22</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="29:2"><input checked="checked" id="__tabbed_29_1" name="__tabbed_29" type="radio" /><input id="__tabbed_29_2" name="__tabbed_29" type="radio" /><div class="tabbed-labels"><label for="__tabbed_29_1">Enoncé</label><label for="__tabbed_29_2">Requête</label></div>
@@ -6064,8 +6064,8 @@ Ils s'utilisent <mark>EXCLUSIVEMENT</mark> dans la clause <code>SELECT</code> (o
 <p class="admonition-title">Explication</p>
 <p><iframe width="560" height="315" src="https://www.youtube.com/embed/LzVyZEFhQ1w?si=g-Fo9iksHS7nB9Q1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 </div>
-<p>La clause <code>HAVING</code> va de pair avec la clause <code>GROUP BY</code>, elle permet d'appliquer une <strong>restriction</strong> sur les groupes créés grâce à la clause <code>GROUP BY</code>. On introduit le filtre <code>HAVING</code> qui porte, non pas sur les données, mais sur les calculs résultants des regroupements.</p>
-<p><img alt="⚠️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/26a0.svg" title=":warning:" /> Attention à ne pas confondre <code>HAVING</code> et <code>WHERE</code> : <code>HAVING</code> permet la sélection de groupes à la suite d’une requête avec regroupement alors que WHERE permet de sélectionner des lignes pour construire la requête.</p>
+<p>La clause <code class="language-text highlight">HAVING</code> va de pair avec la clause <code class="language-text highlight">GROUP BY</code>, elle permet d'appliquer une <strong>restriction</strong> sur les groupes créés grâce à la clause <code class="language-text highlight">GROUP BY</code>. On introduit le filtre <code class="language-text highlight">HAVING</code> qui porte, non pas sur les données, mais sur les calculs résultants des regroupements.</p>
+<p><img alt="⚠️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/26a0.svg" title=":warning:" /> Attention à ne pas confondre <code class="language-text highlight">HAVING</code> et <code class="language-text highlight">WHERE</code> : <code class="language-text highlight">HAVING</code> permet la sélection de groupes à la suite d’une requête avec regroupement alors que WHERE permet de sélectionner des lignes pour construire la requête.</p>
 <div class="admonition question">
 <p class="admonition-title">R24</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="31:2"><input checked="checked" id="__tabbed_31_1" name="__tabbed_31" type="radio" /><input id="__tabbed_31_2" name="__tabbed_31" type="radio" /><div class="tabbed-labels"><label for="__tabbed_31_1">Enoncé</label><label for="__tabbed_31_2">Requête</label></div>
@@ -6127,14 +6127,14 @@ Sa syntaxe générale est la suivante :
 </div>
 </div>
 <h3 id="42-modification-de-donnees">4.2 Modification de données<a class="headerlink" href="#42-modification-de-donnees" title="Permanent link">⚓︎</a></h3>
-<p>La <strong>modification</strong> de données consiste à modifier des occurrences dans une table à l’aide de la commande <code>UPDATE</code>. La modification à effectuer est précisée après la clause <code>SET</code>.<br />
+<p>La <strong>modification</strong> de données consiste à modifier des occurrences dans une table à l’aide de la commande <code class="language-text highlight">UPDATE</code>. La modification à effectuer est précisée après la clause <code class="language-text highlight">SET</code>.<br />
 Sa syntaxe générale est la suivante : <br />
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">Nom_de_la_table</span><span class="w"> </span>
 <span class="k">SET</span><span class="w"> </span><span class="n">Attribut1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Valeur_Ou_Expression1</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="n">Attribut2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Val_Ou_Expr2</span><span class="p">]...</span><span class="w"> </span><span class="p">[</span><span class="k">WHERE</span><span class="w"> </span><span class="n">Conditions</span><span class="p">]</span><span class="w"> </span>
 </code></pre></div></p>
 <p><ins>Note :</ins><br /> 
-- Valeur_Ou_Expression peut être une expression algébrique, une constante ou un résultat provenant d'une clause <code>SELECT</code>. <br /> 
-- La clause facultative <code>WHERE</code> permet de préciser les tuples sur lesquels la mise à jour aura lieu. L'oublier, sera alors dommageable. Toutes les valeurs de cet attribut serait mis à jour ! Et je vous rappelle qu'il n'existe pas de <code>CTRL+Z</code> en base de données !<br /> </p>
+- Valeur_Ou_Expression peut être une expression algébrique, une constante ou un résultat provenant d'une clause <code class="language-text highlight">SELECT</code>. <br /> 
+- La clause facultative <code class="language-text highlight">WHERE</code> permet de préciser les tuples sur lesquels la mise à jour aura lieu. L'oublier, sera alors dommageable. Toutes les valeurs de cet attribut serait mis à jour ! Et je vous rappelle qu'il n'existe pas de <code class="language-text highlight">CTRL+Z</code> en base de données !<br /> </p>
 <div class="admonition question">
 <p class="admonition-title">Rb</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="33:2"><input checked="checked" id="__tabbed_33_1" name="__tabbed_33" type="radio" /><input id="__tabbed_33_2" name="__tabbed_33" type="radio" /><div class="tabbed-labels"><label for="__tabbed_33_1">Enoncé</label><label for="__tabbed_33_2">Requête</label></div>
@@ -6181,9 +6181,9 @@ Sa syntaxe générale est la suivante : <br />
 <span class="p">[</span><span class="k">WHERE</span><span class="w"> </span><span class="n">Condition</span><span class="p">]</span><span class="w"> </span>
 </code></pre></div></p>
 <p><ins>Note :</ins> <br />
-- La commande <code>DELETE</code> est à utiliser avec précaution car l'opération de suppression est irréversible.<br />
+- La commande <code class="language-text highlight">DELETE</code> est à utiliser avec précaution car l'opération de suppression est irréversible.<br />
  - Il préférable et surtout plus prudent de s'assurer dans un premier temps que les lignes sélectionnées sont bien les lignes que l'on désire supprimer ! <br />
-- La clause <code>WHERE</code> est facultative mais sera la plupart du temps renseignée sans quoi, c’est le contenu complet de la table qui sera effacé. 
+- La clause <code class="language-text highlight">WHERE</code> est facultative mais sera la plupart du temps renseignée sans quoi, c’est le contenu complet de la table qui sera effacé. 
 Rd : « »</p>
 <div class="admonition question">
 <p class="admonition-title">Rd</p>

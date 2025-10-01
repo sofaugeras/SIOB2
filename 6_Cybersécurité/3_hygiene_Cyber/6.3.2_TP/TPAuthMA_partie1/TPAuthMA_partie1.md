@@ -31,7 +31,7 @@
 👉 Placez vous dans `mfa-php/` et exécutez la commande suivante : <br />
 ``composer require spomky-labs/otphp``
 
-3. Dans MySQL, créez une base `mfa_demo` et exécutez `schema.sql`.
+3. Dans MySQL, créez une base `demo` et créer la table ci-dessous.
 
 ### 1.2 Modèle de données
 

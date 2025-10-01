@@ -4558,7 +4558,7 @@ CHERCHEUR (idChercheur, nomChercheur, idArticle, idUniversite)
 <summary>Correction</summary>
 <p><a class="md-button md-button--primary" href="../data/tp5/conference.sql">Télécharger fichier Création de la base <img alt="⬇️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2b07.svg" title=":arrow_down:" /></a></p>
 </details>
-<p><strong>R2 :</strong> Créer une vue <code>Paris13</code> qui affiche les chercheurs de l’université 13.</p>
+<p><strong>R2 :</strong> Créer une vue <code class="language-text highlight">Paris13</code> qui affiche les chercheurs de l’université 13.</p>
 <details class="question">
 <summary>Correction</summary>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">Paris13</span><span class="w"> </span><span class="k">as</span>
@@ -4577,7 +4577,7 @@ CHERCHEUR (idChercheur, nomChercheur, idArticle, idUniversite)
 <span class="w">    </span><span class="k">as</span><span class="w"> </span><span class="n">Paris13</span><span class="p">;</span>
 </code></pre></div>
 </details>
-<p><strong>R4 :</strong> Modifier le nom du chercheur “Pierre” en “Ali” dans la table CHERCHEUR. Vérifier que la vue <code>Paris13</code> a change.</p>
+<p><strong>R4 :</strong> Modifier le nom du chercheur “Pierre” en “Ali” dans la table CHERCHEUR. Vérifier que la vue <code class="language-text highlight">Paris13</code> a change.</p>
 <details class="question">
 <summary>Correction</summary>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">CHERCHEUR</span><span class="w"> </span>
@@ -4588,7 +4588,7 @@ CHERCHEUR (idChercheur, nomChercheur, idArticle, idUniversite)
 <span class="k">FROM</span><span class="w"> </span><span class="n">Paris13</span><span class="p">;</span>
 </code></pre></div>
 </details>
-<p><strong>R5 :</strong> Inserer un nouveau chercheur de l’universite Paris 13 dans la table CHERCHEUR et vérifier le contenu de <code>Paris13</code> a bien change.</p>
+<p><strong>R5 :</strong> Inserer un nouveau chercheur de l’universite Paris 13 dans la table CHERCHEUR et vérifier le contenu de <code class="language-text highlight">Paris13</code> a bien change.</p>
 <details class="question">
 <summary>Correction</summary>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">CHERCHEUR</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Annie&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">);</span><span class="w">    </span>
@@ -4597,7 +4597,7 @@ CHERCHEUR (idChercheur, nomChercheur, idArticle, idUniversite)
 <span class="k">FROM</span><span class="w"> </span><span class="n">Paris13</span><span class="p">;</span>
 </code></pre></div>
 </details>
-<p><strong>R6 :</strong> Donner les noms de tous les chercheurs de Paris 13 a partir de la vue <code>Paris13</code></p>
+<p><strong>R6 :</strong> Donner les noms de tous les chercheurs de Paris 13 a partir de la vue <code class="language-text highlight">Paris13</code></p>
 <details class="question">
 <summary>Correction</summary>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomChercheur</span>
@@ -4614,9 +4614,9 @@ CHERCHEUR (idChercheur, nomChercheur, idArticle, idUniversite)
 <span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">CHERCHEUR</span><span class="p">;</span>
 </code></pre></div>
-La <strong>table</strong> CHERCHEUR a été mise à jour à partir de la mise à jour effectuée sur la vue <code>Paris13</code></p>
+La <strong>table</strong> CHERCHEUR a été mise à jour à partir de la mise à jour effectuée sur la vue <code class="language-text highlight">Paris13</code></p>
 </details>
-<p><strong>R8 :</strong> Créer une vue <code>Universites</code> qui affiche les noms des chercheurs avec les noms de leurs universités et les identifiants de leurs articles.</p>
+<p><strong>R8 :</strong> Créer une vue <code class="language-text highlight">Universites</code> qui affiche les noms des chercheurs avec les noms de leurs universités et les identifiants de leurs articles.</p>
 <details class="question">
 <summary>Correction</summary>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">Universites</span><span class="w"> </span><span class="k">AS</span>
@@ -4636,7 +4636,7 @@ La <strong>table</strong> CHERCHEUR a été mise à jour à partir de la mise à
 <span class="k">WHERE</span><span class="w"> </span><span class="n">idArticle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 </code></pre></div>
 </details>
-<p><strong>R10 :</strong> Afficher les noms des chercheurs travaillant à <code>Paris6</code>.</p>
+<p><strong>R10 :</strong> Afficher les noms des chercheurs travaillant à <code class="language-text highlight">Paris6</code>.</p>
 <details class="question">
 <summary>Correction</summary>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomChercheur</span>
@@ -4644,7 +4644,7 @@ La <strong>table</strong> CHERCHEUR a été mise à jour à partir de la mise à
 <span class="k">WHERE</span><span class="w"> </span><span class="n">nomUniversite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Paris6&#39;</span><span class="p">;</span>
 </code></pre></div>
 </details>
-<p><strong>R11 :</strong> Afficher les noms des articles des chercheurs de Paris 6 à partir de la vue <code>Universites</code> et de la table <code>ARTICLE</code>.</p>
+<p><strong>R11 :</strong> Afficher les noms des articles des chercheurs de Paris 6 à partir de la vue <code class="language-text highlight">Universites</code> et de la table <code class="language-text highlight">ARTICLE</code>.</p>
 <details class="question">
 <summary>Correction</summary>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomArticle</span>
@@ -4653,7 +4653,7 @@ La <strong>table</strong> CHERCHEUR a été mise à jour à partir de la mise à
 <span class="k">WHERE</span><span class="w"> </span><span class="n">nomUniversite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Paris6&#39;</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 </details>
-<p><strong>R12 :</strong> Créer une vue à partir de <code>Universites</code> qui affiche les noms des chercheurs, les noms de leurs univer- sites, ainsi que les noms de leurs articles.</p>
+<p><strong>R12 :</strong> Créer une vue à partir de <code class="language-text highlight">Universites</code> qui affiche les noms des chercheurs, les noms de leurs univer- sites, ainsi que les noms de leurs articles.</p>
 <details class="question">
 <summary>Correction</summary>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">Details</span><span class="w"> </span><span class="k">AS</span>
@@ -4665,7 +4665,7 @@ La <strong>table</strong> CHERCHEUR a été mise à jour à partir de la mise à
 <span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Details</span><span class="p">;</span>
 </code></pre></div>
 </details>
-<p><strong>R13 :</strong> Créer une vue <code>ArticlesChercheur</code> qui affiche le nombre d’articles par chercheur et une autre vue<code>ArticlesUniversite</code>qui affiche le nombre d’articles par université. </p>
+<p><strong>R13 :</strong> Créer une vue <code class="language-text highlight">ArticlesChercheur</code> qui affiche le nombre d’articles par chercheur et une autre vue<code class="language-text highlight">ArticlesUniversite</code>qui affiche le nombre d’articles par université. </p>
 <details class="question">
 <summary>Correction</summary>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">ArticlesChercheur</span><span class="w"> </span><span class="k">AS</span>

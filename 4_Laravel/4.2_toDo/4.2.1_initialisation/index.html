@@ -4875,16 +4875,16 @@ Voilà la liste des fonctionnalités de l’application que l'on va créer :<br 
 <p class="admonition-title">Configurer le projet</p>
 <p>Configurer le projet : <strong>.env</strong><br />
 Le projet qui vient d'être créé est « générique » c'est à dire qu'il ne possède aucune personnalisation et peut donc servir de base quelques soit votre développement.<br />
-La première étape est donc d'éditer le fichier <code>.env</code> pour configurer les options de base de votre projet tel que :<br />
+La première étape est donc d'éditer le fichier <code class="language-gas highlight"><span class="na">.env</span></code> pour configurer les options de base de votre projet tel que :<br />
 - Le nom : ToDoList<br />
 - Le type de base de données<br />
 - …<br /></p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Sécurité</p>
-<p><img alt="🚧" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f6a7.svg" title=":construction:" /> Créer une base de données <code>todo2024</code> sous MySQL <br />
+<p><img alt="🚧" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f6a7.svg" title=":construction:" /> Créer une base de données <code class="language-text highlight">todo2024</code> sous MySQL <br />
 <img alt="💥" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4a5.svg" title=":boom:" /> créer un user de base de données à périmètre restreint pour votre application<br />
-<img alt="↪️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/21aa.svg" title=":arrow_right_hook:" /> Mettre à jour le <code>.env</code>
+<img alt="↪️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/21aa.svg" title=":arrow_right_hook:" /> Mettre à jour le <code class="language-gas highlight"><span class="na">.env</span></code>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">&#39;nouveau_utilisateur&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;mot_de_passe&#39;</span><span class="p">;</span>
 <span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">`</span><span class="n">todo2024</span><span class="o">`</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;nouveau_utilisateur&#39;</span><span class="o">@</span><span class="s1">&#39;%s&#39;</span><span class="p">;</span><span class="w"> </span>
 <span class="n">FLUSH</span><span class="w"> </span><span class="k">PRIVILEGES</span>
@@ -4901,16 +4901,16 @@ CATEGORIES_TODOS (<u>id</u>,<u>idcat</u>)<br /></p>
 <p>Laravel utilise un <strong>ORM</strong> pour manipuler la base de données. Pour rappel un ORM est Un <strong>mapping objet-relationnel</strong> (en anglais object-relational mapping) est une technique de programmation informatique qui crée l'illusion d'une base de données orientée objet à partir d'une base de données relationnelle en définissant des correspondances entre cette base de données et les objets du langage utilisé.<br />
 L'ORM utilisé par Laravel est <strong>Eloquent</strong>, il est à la fois puissant et relativement simple. Autrement dit avec un ORM dans la plus part des cas vous n'écrivez plus de requête SQL mais vous manipulez des objets représentant la base de données.<br /></p>
 <p>Comme pour la création du projet, la création de la définition de vos table va se faire via une requête dans votre terminal en utilisant Artisan.</p>
-<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>php artisan make:migration create_todos_table --create=todos
+<p><div class="language-scdoc highlight"><span class="filename">Scdoc</span><pre><span></span><code>php artisan make:migration create_todos_table --create=todos
 </code></pre></div>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>INFO  Migration [C:\wamp64\www\todo2024\database\migrations/2023_11_21_084423_create_todos_table.php] created successfully.
+<div class="language-scdoc highlight"><span class="filename">Scdoc</span><pre><span></span><code>INFO  Migration [C:\wamp64\www\todo2024\database\migrations/2023_11_21_084423_create_todos_table.php] created successfully.
 </code></pre></div></p>
-<p>L’option <code>--create=todos</code> dans la première méthode permet d’indiquer le nom du modèle de la table à créer.<br />
+<p>L’option <code class="language-text highlight">--create=todos</code> dans la première méthode permet d’indiquer le nom du modèle de la table à créer.<br />
 La commande vient de créer un nouveau fichier dans le dossier database/migration. Dans mon cas le fichier se nomme :
 /todo2024/database/migrations/2023_11_21_084423_create_todo_table.php</p>
 <details class="note">
 <summary>contenu du fichier</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="o">&lt;?</span><span class="nx">php</span>
 
     <span class="k">use</span> <span class="nx">Illuminate\Database\Migrations\Migration</span><span class="p">;</span>
     <span class="k">use</span> <span class="nx">Illuminate\Database\Schema\Blueprint</span><span class="p">;</span>
@@ -4966,8 +4966,8 @@ La commande vient de créer un nouveau fichier dans le dossier database/migratio
 </div>
 <div class="tabbed-block">
 <p><img alt="Id" src="https://laravel.com/docs/10.x/migrations#column-method-id" /> et <img alt="timestamp" src="https://laravel.com/docs/10.x/migrations#column-method-timestamps" /></p>
-<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">$table-&gt;integer(&#39;id&#39;);</span>
-<span class="x">$table-&gt;timestamps();</span>
+<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="nv">$table</span><span class="o">-&gt;</span><span class="na">integer</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">);</span>
+<span class="nv">$table</span><span class="o">-&gt;</span><span class="na">timestamps</span><span class="p">();</span>
 </code></pre></div>
 les deux champs ont une syntaxe particulière. Ce sont des fonctions propres à Laravel. Il en existe beaucoup dans la <img alt="documentation" src="https://laravel.com/docs/10.x/migrations#column-method-timestamps" />.</p>
 </div>
@@ -4975,28 +4975,28 @@ les deux champs ont une syntaxe particulière. Ce sont des fonctions propres à 
 </div>
 </div>
 <p>Nous allons définir notre schéma  pour y ajouter les 3 colonnes qui nous serons utiles <strong>texte, termine et important</strong>. L'ORM étant une librairie objet, la définition de nouveaux champs se fait via une méthode, dans notre cas :</p>
-<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">    $table-&gt;integer(&#39;id&#39;);</span>
-<span class="x">    $table-&gt;string(&#39;texte&#39;);</span>
-<span class="x">    $table-&gt;boolean(&#39;termine&#39;)-&gt;default(0);</span>
-<span class="x">    $table-&gt;boolean(&#39;important&#39;)-&gt;default(0);</span>
-<span class="x">    #Déclaraction de la clé primaire</span>
-<span class="x">    $table-&gt;primary(&#39;id&#39;);</span>
+<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code>    <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">integer</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">);</span>
+    <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">string</span><span class="p">(</span><span class="s1">&#39;texte&#39;</span><span class="p">);</span>
+    <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">boolean</span><span class="p">(</span><span class="s1">&#39;termine&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">default</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">boolean</span><span class="p">(</span><span class="s1">&#39;important&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">default</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="c1">#Déclaraction de la clé primaire</span>
+    <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">primary</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">);</span>
 </code></pre></div>
-Ajouter les champs dans la méthode <code>up</code> du fichier.</p>
+Ajouter les champs dans la méthode <code class="language-text highlight">up</code> du fichier.</p>
 <details class="note">
 <summary>fonction up</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
-<span class="x">{</span>
-<span class="x">    Schema::create(&#39;todos&#39;, function (Blueprint $table) {</span>
-<span class="x">        $table-&gt;integer(&#39;id&#39;)</span>
-<span class="x">        $table-&gt;string(&#39;texte&#39;);</span>
-<span class="x">        $table-&gt;boolean(&#39;termine&#39;)-&gt;default(0);</span>
-<span class="x">        $table-&gt;boolean(&#39;important&#39;)-&gt;default(0);</span>
-<span class="x">        #Déclaraction de la clé primaire</span>
-<span class="x">        $table-&gt;primary(&#39;id&#39;);</span>
-<span class="x">        $table-&gt;timestamps();</span>
-<span class="x">    });</span>
-<span class="x">}</span>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="k">public</span> <span class="k">function</span> <span class="nf">up</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span>
+<span class="p">{</span>
+    <span class="nx">Schema</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;todos&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nx">Blueprint</span> <span class="nv">$table</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">integer</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
+        <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">string</span><span class="p">(</span><span class="s1">&#39;texte&#39;</span><span class="p">);</span>
+        <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">boolean</span><span class="p">(</span><span class="s1">&#39;termine&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">default</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+        <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">boolean</span><span class="p">(</span><span class="s1">&#39;important&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">default</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+        <span class="c1">#Déclaraction de la clé primaire</span>
+        <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">primary</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">);</span>
+        <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">timestamps</span><span class="p">();</span>
+    <span class="p">});</span>
+<span class="p">}</span>
 </code></pre></div>
 </details>
 <h3 id="123-creation-en-base">1.2.3 Création en base<a class="headerlink" href="#123-creation-en-base" title="Permanent link">⚓︎</a></h3>
@@ -5004,29 +5004,29 @@ Ajouter les champs dans la méthode <code>up</code> du fichier.</p>
 <div class="admonition warning">
 <p class="admonition-title"><img alt="💥" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4a5.svg" title=":boom:" /></p>
 <p>Remplacer dans config/database.php</p>
-<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&#39;charset&#39; =&gt; &#39;utf8mb4&#39;,</span>
-<span class="x">&#39;collation&#39; =&gt; &#39;utf8mb4_unicode_ci&#39;,</span>
-<span class="x">#Par </span>
-<span class="x">&#39;charset&#39; =&gt; &#39;utf8&#39;,</span>
-<span class="x">&#39;collation&#39; =&gt; &#39;utf8_unicode_ci&#39;,</span>
+<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="s1">&#39;charset&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;utf8mb4&#39;</span><span class="p">,</span>
+<span class="s1">&#39;collation&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;utf8mb4_unicode_ci&#39;</span><span class="p">,</span>
+<span class="c1">#Par </span>
+<span class="s1">&#39;charset&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;utf8&#39;</span><span class="p">,</span>
+<span class="s1">&#39;collation&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;utf8_unicode_ci&#39;</span><span class="p">,</span>
 </code></pre></div>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&#39;engine&#39; =&gt; null,</span>
-<span class="x">#par</span>
-<span class="x">&#39;engine&#39; =&gt; &#39;InnoDB&#39;,</span>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="s1">&#39;engine&#39;</span> <span class="o">=&gt;</span> <span class="k">null</span><span class="p">,</span>
+<span class="c1">#par</span>
+<span class="s1">&#39;engine&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;InnoDB&#39;</span><span class="p">,</span>
 </code></pre></div></p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Checklist</p>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox"/> Terminal : <code>C:\wamp64\www\todo2024&gt;</code></li>
-<li class="task-list-item"><input type="checkbox"/> base de données <code>todo2024</code> créée</li>
+<li class="task-list-item"><input type="checkbox"/> Terminal : <code class="language-text highlight">C:\wamp64\www\todo2024&gt;</code></li>
+<li class="task-list-item"><input type="checkbox"/> base de données <code class="language-text highlight">todo2024</code> créée</li>
 <li class="task-list-item"><input type="checkbox"/> user base de donnée créé</li>
 <li class="task-list-item"><input type="checkbox"/> .env mis à jour</li>
-<li class="task-list-item"><input type="checkbox"/> métode <code>up</code> de la migration mise à jour</li>
+<li class="task-list-item"><input type="checkbox"/> métode <code class="language-text highlight">up</code> de la migration mise à jour</li>
 </ul>
 </div>
 <p>Retour dans la ligne de commande :</p>
-<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>C:\wamp64\www\todo2024&gt;php artisan migrate:fresh  
+<p><div class="language-scdoc highlight"><span class="filename">Scdoc</span><pre><span></span><code>C:\wamp64\www\todo2024&gt;php artisan migrate:fresh  
 
   Dropping all tables ..................................................................................................... 146ms DONE
 
@@ -5055,29 +5055,29 @@ CATEGORIES_TODOS (<u>id</u>,<u>idcat</u>)<br /></p>
 </div>
 <div class="tabbed-block">
 <p>La difficulté ici est de créer la bonne relation entre clés primaires et clés étrangères.<br />
-Pour rappel, en Base de données, on ne peut référencer un champ en clé étrangère vers une clé primaire que si les deux champs sont exactement du MEME type. or ici, si on utilise <code>id()</code> pour catégorie, on aura du mal à construire la clé étrangère dans la table CATEGORISE</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
-<span class="x">{</span>
-<span class="x">    Schema::create(&#39;categories&#39;, function (Blueprint $table) {</span>
-<span class="x">        $table-&gt;integer(&#39;id&#39;);</span>
-<span class="x">        $table-&gt;string(&#39;libelle&#39;);</span>
-<span class="x">        $table-&gt;primary(&#39;id&#39;);</span>
-<span class="x">        $table-&gt;timestamps();</span>
-<span class="x">    });</span>
-<span class="x">}</span>
-<span class="x">public function up(): void</span>
-<span class="x">{</span>
-<span class="x">    Schema::create(&#39;categories_todos&#39;, function (Blueprint $table) {</span>
-<span class="x">        $table-&gt;integer(&#39;categories_id&#39;);</span>
-<span class="x">        $table-&gt;integer(&#39;todos_id&#39;);</span>
-<span class="x">        $table-&gt;primary([&#39;categories_id&#39;, &#39;todos_id&#39;]);</span>
+Pour rappel, en Base de données, on ne peut référencer un champ en clé étrangère vers une clé primaire que si les deux champs sont exactement du MEME type. or ici, si on utilise <code class="language-text highlight">id()</code> pour catégorie, on aura du mal à construire la clé étrangère dans la table CATEGORISE</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="k">public</span> <span class="k">function</span> <span class="nf">up</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span>
+<span class="p">{</span>
+    <span class="nx">Schema</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;categories&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nx">Blueprint</span> <span class="nv">$table</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">integer</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">);</span>
+        <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">string</span><span class="p">(</span><span class="s1">&#39;libelle&#39;</span><span class="p">);</span>
+        <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">primary</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">);</span>
+        <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">timestamps</span><span class="p">();</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">up</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span>
+<span class="p">{</span>
+    <span class="nx">Schema</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;categories_todos&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nx">Blueprint</span> <span class="nv">$table</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">integer</span><span class="p">(</span><span class="s1">&#39;categories_id&#39;</span><span class="p">);</span>
+        <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">integer</span><span class="p">(</span><span class="s1">&#39;todos_id&#39;</span><span class="p">);</span>
+        <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">primary</span><span class="p">([</span><span class="s1">&#39;categories_id&#39;</span><span class="p">,</span> <span class="s1">&#39;todos_id&#39;</span><span class="p">]);</span>
 
-<span class="x">        $table-&gt;foreign(&#39;categories_id&#39;)-&gt;references(&#39;id&#39;)-&gt;on(&#39;categories&#39;);</span>
-<span class="x">        $table-&gt;foreign(&#39;todos_id&#39;)-&gt;references(&#39;id&#39;)-&gt;on(&#39;todos&#39;);</span>
+        <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">foreign</span><span class="p">(</span><span class="s1">&#39;categories_id&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">references</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">on</span><span class="p">(</span><span class="s1">&#39;categories&#39;</span><span class="p">);</span>
+        <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">foreign</span><span class="p">(</span><span class="s1">&#39;todos_id&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">references</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">on</span><span class="p">(</span><span class="s1">&#39;todos&#39;</span><span class="p">);</span>
 
-<span class="x">        $table-&gt;timestamps();</span>
-<span class="x">    });</span>
-<span class="x">}</span>
+        <span class="nv">$table</span><span class="o">-&gt;</span><span class="na">timestamps</span><span class="p">();</span>
+    <span class="p">});</span>
+<span class="p">}</span>
 </code></pre></div>
 </div>
 </div>
@@ -5086,32 +5086,32 @@ Pour rappel, en Base de données, on ne peut référencer un champ en clé étra
 <p>Votre base de données est maintenant prête à être utilisée. Vous pouvez aller voir le contenu grâce à phpMyAdmin. Verifier votre structures et vos contraintes.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Cours</p>
-<p>L’ORM eloquent permet de créer une correspondance entre les classes PHP et la base de données. On peut créer une <strong>classe</strong><code>maTable</code> associée à une <strong>table</strong> <code>maTable</code>. On pourra accéder aux colonnes de la table au travers des propriétés de la classe et bénéficier de méthodes pour charger un élément ou une liste d’éléments, enregistrer, mettre à jour …</p>
+<p>L’ORM eloquent permet de créer une correspondance entre les classes PHP et la base de données. On peut créer une <strong>classe</strong><code class="language-text highlight">maTable</code> associée à une <strong>table</strong> <code class="language-text highlight">maTable</code>. On pourra accéder aux colonnes de la table au travers des propriétés de la classe et bénéficier de méthodes pour charger un élément ou une liste d’éléments, enregistrer, mettre à jour …</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
 <p>Exemple de commande pour manipuler facilement des retours de requêtes en base de données. Tout est Objet !</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">$user = User ::find(5) ;</span>
-<span class="x">Echo $user-&gt;name ;</span>
-<span class="x">$user-&gt;age=32 ;</span>
-<span class="x">$user-&gt;save() ;</span>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="nv">$user</span> <span class="o">=</span> <span class="nx">User</span> <span class="o">::</span><span class="na">find</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="p">;</span>
+<span class="k">Echo</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">name</span> <span class="p">;</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">age</span><span class="o">=</span><span class="mi">32</span> <span class="p">;</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">()</span> <span class="p">;</span>
 </code></pre></div>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">piloter la création de la base</p>
 <p>Il est rare de réussir sa migration du premier coup. Il faut donc lancer plusieurs fois la migration. En utilisant fresh, vous aurez une erreur, puisque vos tables existent déjà.<br />
 Mais vous avez d'autres commandes à disposition : <br />
-<img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Réinitialiser les migrations (rollback de toutes les migrations) : <code>php artisan migrate:reset</code><br />
-<img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Migrer et réinitialiser en même temps : <code>php artisan migrate:refresh</code><br />
-<img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Voir l'historique des migrations exécutées : <code>php artisan migrate:status</code><br />
-<img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Créer une nouvelle migration de modification de table : <code>php artisan make:migration add_nom_de_la_colonne_to_nom_de_la_table --table=nom_de_la_table</code><br /></p>
+<img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Réinitialiser les migrations (rollback de toutes les migrations) : <code class="language-text highlight">php artisan migrate:reset</code><br />
+<img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Migrer et réinitialiser en même temps : <code class="language-text highlight">php artisan migrate:refresh</code><br />
+<img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Voir l'historique des migrations exécutées : <code class="language-text highlight">php artisan migrate:status</code><br />
+<img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Créer une nouvelle migration de modification de table : <code class="language-scdoc highlight">php artisan make:migration add_nom_de_la_colonne_to_nom_de_la_table --table=nom_de_la_table</code><br /></p>
 </div>
 <h2 id="13-le-modele">1.3 Le modèle<a class="headerlink" href="#13-le-modele" title="Permanent link">⚓︎</a></h2>
 <p>Maintenant que nous avons fait le script de création / migration, nous allons définir notre <strong>model</strong>.</p>
-<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>$ php artisan make:model Todos
+<p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>$<span class="w"> </span>php<span class="w"> </span>artisan<span class="w"> </span>make:model<span class="w"> </span>Todos
 </code></pre></div>
-<img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> La commande va créer le fichier <code>Todos.php</code> dans le dossier <code>app/</code>.</p>
-<p>Ajouter dans la class <code>Todos.php</code> :</p>
+<img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> La commande va créer le fichier <code class="language-text highlight">Todos.php</code> dans le dossier <code class="language-text highlight">app/</code>.</p>
+<p>Ajouter dans la class <code class="language-text highlight">Todos.php</code> :</p>
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```php
 protected $fillable = [&#39;texte&#39;, &#39;termine&#39;, &#39;important&#39;];
 ```
@@ -5125,7 +5125,7 @@ protected $fillable = [&#39;texte&#39;, &#39;termine&#39;, &#39;important&#39;];
 <p>Faites la même chose avec les tables CATEGORIE</p>
 </div>
 <div class="tabbed-block">
-<p>Inutile d'ajouter des attributs <code>fillable</code> pour cette table puisque nous ne créerons pas de catégorie via l'interface Web.</p>
+<p>Inutile d'ajouter des attributs <code class="language-text highlight">fillable</code> pour cette table puisque nous ne créerons pas de catégorie via l'interface Web.</p>
 </div>
 </div>
 </div>
@@ -5148,23 +5148,23 @@ protected $fillable = [&#39;texte&#39;, &#39;termine&#39;, &#39;important&#39;];
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>php artisan make:controller TodosController
 php artisan make:controller CategoriesController
 </code></pre></div>
-<p>Le fichier <code>TodosController.php</code> viens d'être créé dans le chemin suivant <code>app/Http/Controllers/</code>.<br /></p>
-<p><img alt="⚠️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/26a0.svg" title=":warning:" /> Dans la version <code>Laravel 10</code>, les controllers sont créés automatiquement (toujours dans <code>app/Http/Controllers/</code>).</p>
+<p>Le fichier <code class="language-text highlight">TodosController.php</code> viens d'être créé dans le chemin suivant <code class="language-text highlight">app/Http/Controllers/</code>.<br /></p>
+<p><img alt="⚠️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/26a0.svg" title=":warning:" /> Dans la version <code class="language-text highlight">Laravel 10</code>, les controllers sont créés automatiquement (toujours dans <code class="language-text highlight">app/Http/Controllers/</code>).</p>
 <p>Notre code est prêt. Nous allons créer les méthodes permettant la manipulation de notre base de données tout en répondant à nos problématique d'interface (liste, création, terminer, suppression<img alt="➡️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/27a1.svg" title=":arrow_right:" /><strong>CRUD</strong>).<br /></p>
 <p>Nous allons écrire une méthode pour chaque action. Avec les différentes conditions nécessaires au bon fonctionnement de l'application.</p>
 <h3 id="142-la-methode-liste">1.4.2 La méthode « Liste »<a class="headerlink" href="#142-la-methode-liste" title="Permanent link">⚓︎</a></h3>
-<p>La méthode liste est certainement la plus simple, nous allons faire appel à la méthode <code>all()</code> de Eloquent. 
+<p>La méthode liste est certainement la plus simple, nous allons faire appel à la méthode <code class="language-text highlight">all()</code> de Eloquent. 
 ✋ Dans un premier temp nous n'allons pas integrer la base de données, mais uniquement définir notre méthode. Et tester 
 l'interface de notre projet.</p>
-<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function liste(){</span>
-<span class="x">    return &quot;Liste&quot;;</span>
-<span class="x">}</span>
+<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="k">public</span> <span class="k">function</span> <span class="nf">liste</span><span class="p">(){</span>
+    <span class="k">return</span> <span class="s2">&quot;Liste&quot;</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
-<img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Nous allons tester la route <code>/</code> (page d'acccueil du projet), pour ça nous allons remplacer le contenu du fichier routes/web.php par :
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use Illuminate\Support\Facades\Route;</span>
-<span class="x">use App\Http\Controllers\TodosController;</span>
+<img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Nous allons tester la route <code class="language-text highlight">/</code> (page d'acccueil du projet), pour ça nous allons remplacer le contenu du fichier routes/web.php par :
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="k">use</span> <span class="nx">Illuminate\Support\Facades\Route</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">App\Http\Controllers\TodosController</span><span class="p">;</span>
 
-<span class="x">Route::get(&#39;/&#39;, [TodosController::class, &#39;liste&#39;]);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="p">[</span><span class="nx">TodosController</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="s1">&#39;liste&#39;</span><span class="p">]);</span>
 </code></pre></div></p>
 <div class="admonition abstract">
 <p class="admonition-title">serveur de test</p>
@@ -5198,26 +5198,26 @@ Notre vue va être découpée en 3 partie :</p>
 •   La structure commune </p>
 <details class="abstract">
 <summary>template.blade.php</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&lt;html&gt;</span>
-<span class="x">    &lt;head&gt;</span>
-<span class="x">        &lt;meta charset=&quot;utf-8&quot;&gt;</span>
-<span class="x">        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</span>
-<span class="x">        &lt;meta name=&quot;csrf-token&quot; content=&quot;{{ csrf_token() }}&quot;&gt;</span>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="o">&lt;</span><span class="nx">html</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">charset</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;viewport&quot;</span> <span class="nx">content</span><span class="o">=</span><span class="s2">&quot;width=device-width, initial-scale=1&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;csrf-token&quot;</span> <span class="nx">content</span><span class="o">=</span><span class="s2">&quot;{{ csrf_token() }}&quot;</span><span class="o">&gt;</span>
 
-<span class="x">        &lt;title&gt;@yield(&#39;title&#39;)&lt;/title&gt;</span>
+        <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;@</span><span class="k">yield</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">)</span><span class="o">&lt;/</span><span class="nx">title</span><span class="o">&gt;</span>
 
-<span class="x">        &lt;link href=&quot;{{ asset(&#39;css/app.css&#39;) }}&quot; rel=&quot;stylesheet&quot;&gt;</span>
-<span class="x">        &lt;script type=&quot;text/javascript&quot; src=&quot;{{ asset(&#39;js/app.js&#39;) }}&quot;&gt;&lt;/script&gt;</span>
-<span class="x">    &lt;/head&gt;</span>
-<span class="x">    &lt;body&gt;</span>
-<span class="x">        &lt;nav class=&quot;navbar navbar-expand-md navbar-dark bg-dark&quot;&gt;</span>
-<span class="x">            &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Ma Todo List&lt;/a&gt;</span>
-<span class="x">        &lt;/nav&gt;</span>
+        <span class="o">&lt;</span><span class="nb">link</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&quot;{{ asset(&#39;css/app.css&#39;) }}&quot;</span> <span class="nx">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;{{ asset(&#39;js/app.js&#39;) }}&quot;</span><span class="o">&gt;&lt;/</span><span class="nx">script</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="nx">head</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">nav</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;navbar navbar-expand-md navbar-dark bg-dark&quot;</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;navbar-brand&quot;</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&quot;#&quot;</span><span class="o">&gt;</span><span class="nx">Ma</span> <span class="nx">Todo</span> <span class="k">List</span><span class="o">&lt;/</span><span class="nx">a</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="nx">nav</span><span class="o">&gt;</span>
 
-<span class="x">        @yield(&#39;content&#39;)</span>
+        <span class="o">@</span><span class="k">yield</span><span class="p">(</span><span class="s1">&#39;content&#39;</span><span class="p">)</span>
 
-<span class="x">    &lt;/body&gt;</span>
-<span class="x">&lt;/html&gt;</span>
+    <span class="o">&lt;/</span><span class="nx">body</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="nx">html</span><span class="o">&gt;</span>
 </code></pre></div>
 </details>
 <details class="question">
@@ -5227,9 +5227,9 @@ Notre vue va être découpée en 3 partie :</p>
 <details class="question">
 <summary>À quoi correspond {{ asset('…') }} ?</summary>
 <p>The asset function generates a URL for an asset using the current scheme of the request (HTTP or HTTPS):</p>
-<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">    $url = asset(&#39;css/style.css &#39;);</span>
+<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code>    <span class="nv">$url</span> <span class="o">=</span> <span class="nx">asset</span><span class="p">(</span><span class="s1">&#39;css/style.css &#39;</span><span class="p">);</span>
 </code></pre></div>
-essaiera de charger <code>/mon-site/ma/route/web/web/css/style.css</code></p>
+essaiera de charger <code class="language-text highlight">/mon-site/ma/route/web/web/css/style.css</code></p>
 </details>
 <details class="question">
 <summary>À quoi correspond la directive « yield »? En quoi est-ce très important ?</summary>
@@ -5245,43 +5245,43 @@ Blade propose un système pour ajouter des éléments de plusieurs endroits dans
 <p>petit aparté pour détailler l'utilisation des assets front-end (JavaScript / CSS) dans le cadre de Laravel. Lorsque l'on commence à travailler sur du JavaScript on a très rapidement besoin d'outils comme des bundlers pour travailler efficacement. Malheureusement ces outils sont souvent pensés pour des sites web statiques et l'intégration avec une application backend n'est pas forcément évident.<br /></p>
 <p>Lors de son installation Laravel dispose déjà d'une configuration permettant d'utiliser le bundler Vite avec un fichier package.json pré-rempli.</p>
 <p><img alt="💥" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4a5.svg" title=":boom:" /> Installer au préalable node.js <a href="https://nodejs.org/en/download/">ici</a></p>
-<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>composer require laravel/breeze --dev
-php artisan breeze:install vue
-npm install
-npm install --save-dev vite laravel-vite-plugin
-npm install --save-dev @vitejs/plugin-vue
+<p><div class="language-tsql highlight"><span class="filename">Transact-SQL</span><pre><span></span><code><span class="n">composer</span><span class="w"> </span><span class="n">require</span><span class="w"> </span><span class="n">laravel</span><span class="o">/</span><span class="n">breeze</span><span class="w"> </span><span class="o">--</span><span class="n">dev</span>
+<span class="n">php</span><span class="w"> </span><span class="n">artisan</span><span class="w"> </span><span class="nl">breeze</span><span class="p">:</span><span class="n">install</span><span class="w"> </span><span class="n">vue</span>
+<span class="n">npm</span><span class="w"> </span><span class="n">install</span>
+<span class="n">npm</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">--</span><span class="k">save</span><span class="o">-</span><span class="n">dev</span><span class="w"> </span><span class="n">vite</span><span class="w"> </span><span class="n">laravel</span><span class="o">-</span><span class="n">vite</span><span class="o">-</span><span class="n">plugin</span>
+<span class="n">npm</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="c1">--save-dev @vitejs/plugin-vue</span>
 </code></pre></div>
 <img alt="vite" src="../data/vite.png" /></p>
 <p>On trouve aussi un nouveau fichier de configuration
 <img alt="Config VITE" src="../data/configVite.png" /></p>
 <h2 id="154-installation-de-bootstrap-5">1.5.4 Installation de Bootstrap 5<a class="headerlink" href="#154-installation-de-bootstrap-5" title="Permanent link">⚓︎</a></h2>
-<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>composer require laravel/ui
-npm i --save bootstrap @popperjs/core
-npm install bootstrap-icons
-npm install
-npm run build
+<p><div class="language-tsql highlight"><span class="filename">Transact-SQL</span><pre><span></span><code><span class="n">composer</span><span class="w"> </span><span class="n">require</span><span class="w"> </span><span class="n">laravel</span><span class="o">/</span><span class="n">ui</span>
+<span class="n">npm</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">--</span><span class="k">save</span><span class="w"> </span><span class="n">bootstrap</span><span class="w"> </span><span class="nv">@popperjs</span><span class="o">/</span><span class="n">core</span>
+<span class="n">npm</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">bootstrap</span><span class="o">-</span><span class="n">icons</span>
+<span class="n">npm</span><span class="w"> </span><span class="n">install</span>
+<span class="n">npm</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">build</span>
 </code></pre></div>
-dans <code>app.js</code>, ajouter 
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">import &#39;./bootstrap&#39;;</span>
-<span class="x">import &#39;bootstrap/dist/css/bootstrap.min.css&#39;;</span>
-<span class="x">import &#39;bootstrap-icons/font/bootstrap-icons.css&#39;;</span>
-<span class="x">import &#39;@popperjs/core&#39;;</span>
+dans <code class="language-text highlight">app.js</code>, ajouter 
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="nx">import</span> <span class="s1">&#39;./bootstrap&#39;</span><span class="p">;</span>
+<span class="nx">import</span> <span class="s1">&#39;bootstrap/dist/css/bootstrap.min.css&#39;</span><span class="p">;</span>
+<span class="nx">import</span> <span class="s1">&#39;bootstrap-icons/font/bootstrap-icons.css&#39;</span><span class="p">;</span>
+<span class="nx">import</span> <span class="s1">&#39;@popperjs/core&#39;</span><span class="p">;</span>
 </code></pre></div></p>
-<p>Dans votre template, ajouter dans le <code>head</code> la ligne <code>@vite(['resources/js/app.js'])</code></p>
+<p>Dans votre template, ajouter dans le <code class="language-text highlight">head</code> la ligne <code class="language-tsql highlight"><span class="nv">@vite</span><span class="p">(</span><span class="o">[</span><span class="n">&#39;resources/js/app.js&#39;</span><span class="o">]</span><span class="p">)</span></code></p>
 <details class="note">
 <summary><img alt="👀" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f440.svg" title=":eyes:" /> tester</summary>
 <p>pour tester vos manips, ajouer du code bootstrap dans votre template.</p>
 <ul class="task-list">
 <li class="task-list-item"><input type="checkbox"/> Mettre en commentaire la route vers le controller Todo</li>
-<li class="task-list-item"><input type="checkbox"/> Créer une route vers la vue template <code>Route :: view ('/test', 'template');</code></li>
+<li class="task-list-item"><input type="checkbox"/> Créer une route vers la vue template <code class="language-text highlight">Route :: view (&#39;/test&#39;, &#39;template&#39;);</code></li>
 <li class="task-list-item"><input type="checkbox"/> Dans le template, mettre le code ci dessous contenant du bootstrap</li>
 </ul>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&lt;nav class=&quot;navbar navbar-expand-md navbar-dark bg-dark&quot;&gt;</span>
-<span class="x">    &lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;Ma Todo List&lt;/a&gt;</span>
-<span class="x">    &lt;a class=&quot;navbar-brand btn btn-primary&quot; href=&quot;liste&quot;&gt;&lt;i class=&quot;bi bi-app&quot;&gt;&lt;/i&gt;Liste&lt;/a&gt;</span>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="o">&lt;</span><span class="nx">nav</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;navbar navbar-expand-md navbar-dark bg-dark&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;navbar-brand&quot;</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="o">&gt;</span><span class="nx">Ma</span> <span class="nx">Todo</span> <span class="k">List</span><span class="o">&lt;/</span><span class="nx">a</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;navbar-brand btn btn-primary&quot;</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&quot;liste&quot;</span><span class="o">&gt;&lt;</span><span class="nx">i</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;bi bi-app&quot;</span><span class="o">&gt;&lt;/</span><span class="nx">i</span><span class="o">&gt;</span><span class="nx">Liste</span><span class="o">&lt;/</span><span class="nx">a</span><span class="o">&gt;</span>
 
-<span class="x">    &lt;a class=&quot;navbar-brand btn btn-danger&quot; href=&quot;compteur&quot;&gt;Compteur&lt;/a&gt;</span>
-<span class="x">&lt;/nav&gt;</span>
+    <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;navbar-brand btn btn-danger&quot;</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&quot;compteur&quot;</span><span class="o">&gt;</span><span class="nx">Compteur</span><span class="o">&lt;/</span><span class="nx">a</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="nx">nav</span><span class="o">&gt;</span>
 </code></pre></div>
 </details>
 <details class="warning">
@@ -5289,11 +5289,11 @@ dans <code>app.js</code>, ajouter
 <p>🚀 Installer Bootstrap avec Laravel 12, Vite et Vue/Inertia</p>
 <p><strong>1. Nettoyer et réinstaller les dépendances</strong></p>
 <p>Dans cmd ou PowerShell :</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>rmdir /s /q node_modules
-del package-lock.json
-npm i -D vite@^7 laravel-vite-plugin@^2 @vitejs/plugin-vue@^6 vue@^3
-npm i @inertiajs/vue3
-npm i -D sass
+<div class="language-carbon highlight"><span class="filename">Carbon</span><pre><span></span><code><span class="nx">rmdir</span><span class="w"> </span><span class="o">/</span><span class="nx">s</span><span class="w"> </span><span class="o">/</span><span class="nx">q</span><span class="w"> </span><span class="nx">node_modules</span>
+<span class="nx">del</span><span class="w"> </span><span class="kn">package</span><span class="o">-</span><span class="nx">lock</span><span class="p">.</span><span class="nx">json</span>
+<span class="nx">npm</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">-</span><span class="nx">D</span><span class="w"> </span><span class="nx">vite</span><span class="err">@</span><span class="o">^</span><span class="mi">7</span><span class="w"> </span><span class="nx">laravel</span><span class="o">-</span><span class="nx">vite</span><span class="o">-</span><span class="nx">plugin</span><span class="err">@</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="err">@</span><span class="nx">vitejs</span><span class="o">/</span><span class="nx">plugin</span><span class="o">-</span><span class="nx">vue</span><span class="err">@</span><span class="o">^</span><span class="mi">6</span><span class="w"> </span><span class="nx">vue</span><span class="err">@</span><span class="o">^</span><span class="mi">3</span>
+<span class="nx">npm</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="err">@</span><span class="nx">inertiajs</span><span class="o">/</span><span class="nx">vue3</span>
+<span class="nx">npm</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">-</span><span class="nx">D</span><span class="w"> </span><span class="nx">sass</span>
 </code></pre></div>
 <p><strong>2. Configurer Vite</strong></p>
 <p>👉 fichier : vite.config.js
@@ -5326,18 +5326,18 @@ npm i -D sass
 </code></pre></div></p>
 <p><strong>3. Ajouter Bootstrap en SCSS</strong></p>
 <p>👉 fichier : resources/sass/app.scss
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>@use &quot;bootstrap/scss/bootstrap&quot;;    
+<div class="language-tsql highlight"><span class="filename">Transact-SQL</span><pre><span></span><code><span class="nv">@use</span><span class="w"> </span><span class="ss">&quot;bootstrap/scss/bootstrap&quot;</span><span class="p">;</span><span class="w">    </span>
 </code></pre></div></p>
 <p>👉 fichier : resources/sass/_variables.scss (optionnel, pour surcharger des variables Bootstrap)
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>// Exemple d’override
-$primary: #0d6efd;
-$enable-rounded: true;
+<div class="language-gdscript highlight"><span class="filename">GDScript</span><pre><span></span><code><span class="o">//</span><span class="w"> </span><span class="n">Exemple</span><span class="w"> </span><span class="n">d</span><span class="err">’</span><span class="n">override</span>
+<span class="o">$</span><span class="n">primary</span><span class="p">:</span><span class="w"> </span><span class="c1">#0d6efd;</span>
+<span class="o">$</span><span class="n">enable</span><span class="o">-</span><span class="n">rounded</span><span class="p">:</span><span class="w"> </span><span class="bp">true</span><span class="p">;</span>
 
-// Import avec variables personnalisées
-@use &quot;bootstrap/scss/bootstrap&quot; with (
-$primary: $primary,
-$enable-rounded: $enable-rounded
-);
+<span class="o">//</span><span class="w"> </span><span class="n">Import</span><span class="w"> </span><span class="n">avec</span><span class="w"> </span><span class="n">variables</span><span class="w"> </span><span class="n">personnalisées</span>
+<span class="err">@</span><span class="n">use</span><span class="w"> </span><span class="s2">&quot;bootstrap/scss/bootstrap&quot;</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="p">(</span>
+<span class="o">$</span><span class="n">primary</span><span class="p">:</span><span class="w"> </span><span class="o">$</span><span class="n">primary</span><span class="p">,</span>
+<span class="o">$</span><span class="n">enable</span><span class="o">-</span><span class="n">rounded</span><span class="p">:</span><span class="w"> </span><span class="o">$</span><span class="n">enable</span><span class="o">-</span><span class="n">rounded</span>
+<span class="p">);</span>
 </code></pre></div></p>
 <p><strong>4. Charger Bootstrap JS</strong></p>
 <p>👉 fichier : resources/js/app.js
@@ -5351,11 +5351,64 @@ $enable-rounded: $enable-rounded
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 </code></pre></div></p>
 <p>⚠️ Supprimer les anciens :
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&lt;link href=&quot;{{ asset(&#39;css/app.css&#39;) }}&quot; rel=&quot;stylesheet&quot;&gt;
-&lt;script src=&quot;{{ asset(&#39;js/app.js&#39;) }}&quot;&gt;&lt;/script&gt;
+<div class="language-xml+django highlight"><span class="filename">XML+Django/Jinja</span><pre><span></span><code><span class="nt">&lt;link</span><span class="w"> </span><span class="na">href=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">asset</span><span class="o">(</span><span class="s1">&#39;css/app.css&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="w"> </span><span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">asset</span><span class="o">(</span><span class="s1">&#39;js/app.js&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 </code></pre></div></p>
 <p><strong>6. Compiler</strong></p>
-<p>En développement : <code>npm run dev</code></p>
+<p>En développement : <code class="language-text highlight">npm run dev</code></p>
+</details>
+<details class="note">
+<summary>Surcharge Bootstrap 🎨</summary>
+<p>Il est difficile de surcharger les thèmes Bootstrap avec une utilisation CDN ou avec <code class="language-text highlight">app.js</code>. Mais c'est possible à faire avec <code class="language-text highlight">sass</code>.<br />
+L'idée est de surcharger le CSS des class par défaut de bootstrap, par exemple <code class="language-text highlight">primary</code> ou <code class="language-text highlight">bg-dark</code> que l'on retrouve dans les balises des templates <code class="language-text highlight">&lt;nav class=&quot;navbar bg-dark&quot;&gt;</code></p>
+<p>👉 contenu de app.scss</p>
+<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code>    <span class="o">@</span><span class="k">use</span> <span class="s2">&quot;./variables&quot;</span> <span class="k">as</span> <span class="o">*</span><span class="p">;</span>
+
+    <span class="o">@</span><span class="k">use</span> <span class="s2">&quot;bootstrap/scss/bootstrap&quot;</span> <span class="nx">with</span> <span class="p">(</span>
+    <span class="nv">$font</span><span class="o">-</span><span class="nx">family</span><span class="o">-</span><span class="nx">sans</span><span class="o">-</span><span class="nx">serif</span><span class="o">:</span> <span class="nv">$font</span><span class="o">-</span><span class="nx">family</span><span class="o">-</span><span class="nx">sans</span><span class="o">-</span><span class="nx">serif</span><span class="p">,</span>
+    <span class="nv">$font</span><span class="o">-</span><span class="nx">size</span><span class="o">-</span><span class="nx">base</span><span class="o">:</span> <span class="nv">$font</span><span class="o">-</span><span class="nx">size</span><span class="o">-</span><span class="nx">base</span><span class="p">,</span>
+    <span class="nv">$line</span><span class="o">-</span><span class="nx">height</span><span class="o">-</span><span class="nx">base</span><span class="o">:</span> <span class="nv">$line</span><span class="o">-</span><span class="nx">height</span><span class="o">-</span><span class="nx">base</span><span class="p">,</span>
+    <span class="nv">$primary</span><span class="o">:</span> <span class="nv">$primary</span><span class="p">,</span>
+    <span class="nv">$danger</span><span class="o">:</span> <span class="nv">$danger</span><span class="p">,</span>
+    <span class="nv">$info</span><span class="o">:</span> <span class="nv">$info</span><span class="p">,</span>
+    <span class="nv">$body</span><span class="o">-</span><span class="nx">bg</span><span class="o">:</span> <span class="nv">$body</span><span class="o">-</span><span class="nx">bg</span><span class="p">,</span>
+    <span class="nv">$body</span><span class="o">-</span><span class="nx">color</span><span class="o">:</span> <span class="nv">$body</span><span class="o">-</span><span class="nx">color</span><span class="p">,</span>
+    <span class="nv">$btn</span><span class="o">-</span><span class="nx">border</span><span class="o">-</span><span class="nx">radius</span><span class="o">:</span> <span class="nv">$btn</span><span class="o">-</span><span class="nx">border</span><span class="o">-</span><span class="nx">radius</span><span class="p">,</span>
+    <span class="nv">$btn</span><span class="o">-</span><span class="nx">padding</span><span class="o">-</span><span class="nx">y</span><span class="o">:</span> <span class="nv">$btn</span><span class="o">-</span><span class="nx">padding</span><span class="o">-</span><span class="nx">y</span><span class="p">,</span>
+    <span class="nv">$btn</span><span class="o">-</span><span class="nx">padding</span><span class="o">-</span><span class="nx">x</span><span class="o">:</span> <span class="nv">$btn</span><span class="o">-</span><span class="nx">padding</span><span class="o">-</span><span class="nx">x</span><span class="p">,</span>
+    <span class="nv">$navbar</span><span class="o">-</span><span class="nx">dark</span><span class="o">-</span><span class="nx">color</span><span class="o">:</span> <span class="nv">$navbar</span><span class="o">-</span><span class="nx">dark</span><span class="o">-</span><span class="nx">color</span><span class="p">,</span>
+    <span class="nv">$dark</span><span class="o">:</span> <span class="nv">$dark</span>
+    <span class="p">);</span>
+</code></pre></div>
+👉 contenu de _variables.scss</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code>    <span class="c1">// ---- Variables perso (AUCUN @use ici) ----</span>
+
+    <span class="c1">// Typographie</span>
+    <span class="nv">$font</span><span class="o">-</span><span class="nx">family</span><span class="o">-</span><span class="nx">sans</span><span class="o">-</span><span class="nx">serif</span><span class="o">:</span> <span class="s1">&#39;Nunito&#39;</span><span class="p">,</span> <span class="nx">sans</span><span class="o">-</span><span class="nx">serif</span><span class="p">;</span>
+    <span class="nv">$font</span><span class="o">-</span><span class="nx">size</span><span class="o">-</span><span class="nx">base</span><span class="o">:</span> <span class="mf">0.9</span><span class="nx">rem</span><span class="p">;</span>
+    <span class="nv">$line</span><span class="o">-</span><span class="nx">height</span><span class="o">-</span><span class="nx">base</span><span class="o">:</span> <span class="mf">1.6</span><span class="p">;</span>
+
+    <span class="c1">// Couleurs</span>
+    <span class="nv">$primary</span><span class="o">:</span> <span class="c1">#198754; // vert</span>
+    <span class="nv">$danger</span><span class="o">:</span> <span class="c1">#dc3545;</span>
+    <span class="nv">$info</span><span class="o">:</span> <span class="c1">#0dcaf0;</span>
+
+    <span class="c1">// Fond + texte</span>
+    <span class="nv">$body</span><span class="o">-</span><span class="nx">bg</span><span class="o">:</span> <span class="c1">#f8f9fa;</span>
+    <span class="nv">$body</span><span class="o">-</span><span class="nx">color</span><span class="o">:</span> <span class="c1">#212529;</span>
+
+    <span class="c1">// Boutons</span>
+    <span class="nv">$btn</span><span class="o">-</span><span class="nx">border</span><span class="o">-</span><span class="nx">radius</span><span class="o">:</span> <span class="mi">2</span><span class="nx">rem</span><span class="p">;</span>
+    <span class="nv">$btn</span><span class="o">-</span><span class="nx">padding</span><span class="o">-</span><span class="nx">y</span><span class="o">:</span> <span class="o">.</span><span class="mi">6</span><span class="nx">rem</span><span class="p">;</span>
+    <span class="nv">$btn</span><span class="o">-</span><span class="nx">padding</span><span class="o">-</span><span class="nx">x</span><span class="o">:</span> <span class="mf">1.5</span><span class="nx">rem</span><span class="p">;</span>
+
+    <span class="c1">// Navbar</span>
+    <span class="c1">// Astuce : .navbar-dark.bg-dark prend la couleur $dark</span>
+    <span class="nv">$dark</span><span class="o">:</span> <span class="c1">#14532d; // vert foncé pour bg-dark</span>
+    <span class="c1">// et couleurs du mode &quot;dark&quot; de la navbar :</span>
+    <span class="nv">$navbar</span><span class="o">-</span><span class="nx">dark</span><span class="o">-</span><span class="nx">color</span><span class="o">:</span> <span class="c1">#e9ecef;</span>
+</code></pre></div>
+<p>⚠️ ne pas oublier de faire un <code class="language-text highlight">npm run build</code> pour précompiler le sass.</p>
 </details>
 <h2 id="16-liste-des-todos">1.6 Liste des todos<a class="headerlink" href="#16-liste-des-todos" title="Permanent link">⚓︎</a></h2>
 <h3 id="161-le-template-home">1.6.1 Le template Home<a class="headerlink" href="#161-le-template-home" title="Permanent link">⚓︎</a></h3>
@@ -5377,86 +5430,86 @@ $enable-rounded: $enable-rounded
 Créér un nouveau fichier resources/views/home.blade.php et y mettre le contenu suivant :</p>
 <details class="note">
 <summary>home.blade.php</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">@extends(&quot;template&quot;)</span>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="o">@</span><span class="k">extends</span><span class="p">(</span><span class="s2">&quot;template&quot;</span><span class="p">)</span>
 
-<span class="x">@section(&quot;title&quot;, &quot;Ma Todo List&quot;)</span>
+<span class="o">@</span><span class="nx">section</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">,</span> <span class="s2">&quot;Ma Todo List&quot;</span><span class="p">)</span>
 
-<span class="x">@section(&quot;content&quot;)</span>
-<span class="x">&lt;div class=&quot;container&quot;&gt;</span>
-<span class="x">    &lt;div class=&quot;card&quot;&gt;</span>
-<span class="x">        &lt;div class=&quot;card-body&quot;&gt;</span>
-<span class="x">            &lt;!-- Action --&gt;</span>
-<span class="x">            &lt;form action=&quot;{{ route(&#39;todo.save&#39;) }}&quot; method=&quot;POST&quot; class=&quot;add&quot;&gt;</span>
-<span class="x">                @csrf &lt;!-- &lt;&lt;L&#39;annotation ici ! --&gt;</span>
-<span class="x">                &lt;div class=&quot;input-group&quot;&gt;</span>
-<span class="x">                    &lt;span class=&quot;input-group-addon&quot; id=&quot;basic-addon1&quot;&gt;&lt;span class=&quot;oi oi-pencil&quot;&gt;&lt;/span&gt;&lt;/span&gt;</span>
-<span class="x">                    &lt;input id=&quot;texte&quot; name=&quot;texte&quot; type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Prendre une note...&quot; aria-label=&quot;My new idea&quot; aria-describedby=&quot;basic-addon1&quot;&gt;</span>
-<span class="x">                    @if (session(&#39;message&#39;))</span>
-<span class="x">                        &lt;p class=&quot;alert alert-danger&quot;&gt;{{ session(&#39;message&#39;) }}&lt;/p&gt;</span>
-<span class="x">                    @endif</span>
-<span class="x">                &lt;/div&gt;</span>
-<span class="x">                &lt;div class=&quot;priority-choice&quot;&gt;</span>
-<span class="x">                    Importance : </span>
-<span class="x">                    &lt;input type=&quot;radio&quot; name=&quot;priority&quot; id=&quot;lowpr&quot; value=&quot;0&quot; checked&gt;&lt;label for=&quot;lowpr&quot;&gt;&lt;i class=&quot;bi bi-reception-1&quot;&gt;&lt;/i&gt;&lt;/label&gt;</span>
-<span class="x">                    &lt;input type=&quot;radio&quot; name=&quot;priority&quot; id=&quot;highpr&quot; value=&quot;1&quot;&gt;&lt;label for=&quot;highpr&quot;&gt;&lt;i class=&quot;bi bi-reception-4&quot;&gt;&lt;/i&gt;&lt;/label&gt;</span>
-<span class="x">                    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;&lt;i class=&quot;bi bi-save&quot;&gt;&lt;/i&gt;&lt;/button&gt;</span>
-<span class="x">                &lt;/div&gt;</span>
-<span class="x">            &lt;/form&gt;</span>
+<span class="o">@</span><span class="nx">section</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="nx">div</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;container&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;card&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;card-body&quot;</span><span class="o">&gt;</span>
+            <span class="o">&lt;!--</span> <span class="nx">Action</span> <span class="o">--&gt;</span>
+            <span class="o">&lt;</span><span class="nx">form</span> <span class="nx">action</span><span class="o">=</span><span class="s2">&quot;{{ route(&#39;todo.save&#39;) }}&quot;</span> <span class="nx">method</span><span class="o">=</span><span class="s2">&quot;POST&quot;</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;add&quot;</span><span class="o">&gt;</span>
+                <span class="o">@</span><span class="nx">csrf</span> <span class="o">&lt;!--</span> <span class="o">&lt;&lt;</span><span class="nx">L</span><span class="s1">&#39;annotation ici ! --&gt;</span>
+<span class="s1">                &lt;div class=&quot;input-group&quot;&gt;</span>
+<span class="s1">                    &lt;span class=&quot;input-group-addon&quot; id=&quot;basic-addon1&quot;&gt;&lt;span class=&quot;oi oi-pencil&quot;&gt;&lt;/span&gt;&lt;/span&gt;</span>
+<span class="s1">                    &lt;input id=&quot;texte&quot; name=&quot;texte&quot; type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Prendre une note...&quot; aria-label=&quot;My new idea&quot; aria-describedby=&quot;basic-addon1&quot;&gt;</span>
+<span class="s1">                    @if (session(&#39;</span><span class="nx">message</span><span class="s1">&#39;))</span>
+<span class="s1">                        &lt;p class=&quot;alert alert-danger&quot;&gt;{{ session(&#39;</span><span class="nx">message</span><span class="s1">&#39;) }}&lt;/p&gt;</span>
+<span class="s1">                    @endif</span>
+<span class="s1">                &lt;/div&gt;</span>
+<span class="s1">                &lt;div class=&quot;priority-choice&quot;&gt;</span>
+<span class="s1">                    Importance : </span>
+<span class="s1">                    &lt;input type=&quot;radio&quot; name=&quot;priority&quot; id=&quot;lowpr&quot; value=&quot;0&quot; checked&gt;&lt;label for=&quot;lowpr&quot;&gt;&lt;i class=&quot;bi bi-reception-1&quot;&gt;&lt;/i&gt;&lt;/label&gt;</span>
+<span class="s1">                    &lt;input type=&quot;radio&quot; name=&quot;priority&quot; id=&quot;highpr&quot; value=&quot;1&quot;&gt;&lt;label for=&quot;highpr&quot;&gt;&lt;i class=&quot;bi bi-reception-4&quot;&gt;&lt;/i&gt;&lt;/label&gt;</span>
+<span class="s1">                    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;&lt;i class=&quot;bi bi-save&quot;&gt;&lt;/i&gt;&lt;/button&gt;</span>
+<span class="s1">                &lt;/div&gt;</span>
+<span class="s1">            &lt;/form&gt;</span>
 
-<span class="x">            &lt;!-- Liste --&gt;</span>
-<span class="x">            &lt;ul class=&quot;list-group&quot;&gt;</span>
-<span class="x">                @forelse ($todos as $todo)</span>
-<span class="x">                    &lt;li class=&quot;list-group-item&quot;&gt;</span>
-<span class="x">                        &lt;!-- Affichage de la priorité --&gt;</span>
-<span class="x">                        @if ($todo-&gt;important == 0)</span>
-<span class="x">                            &lt;i class=&quot;bi bi-reception-1&quot;&gt;&lt;/i&gt;</span>
-<span class="x">                        @elseif ($todo-&gt;important == 1)</span>
-<span class="x">                            &lt;i class=&quot;bi bi-reception-4&quot;&gt;&lt;/i&gt;</span>
-<span class="x">                        @endif</span>
-<span class="x">                        &lt;!-- Affichage du texte --&gt;</span>
-<span class="x">                        &lt;span&gt;{{ $todo-&gt;texte }}&lt;/span&gt;</span>
-<span class="x">                        &lt;!-- Action à ajouter pour Terminer et supprimer --&gt;</span>
-<span class="x">                        @if ($todo-&gt;termine === 0)</span>
-<span class="x">                            &lt;!-- Si un ToDo n&#39;est pas terminé, Action à ajouter pour terminer --&gt;</span>
-<span class="x">                            &lt;a href=&quot;{{ route(&#39;todo.done&#39;, [&#39;id&#39; =&gt; $todo-&gt;id]) }}&quot; class=&quot;btn btn-success&quot;&gt;&lt;i class=&quot;bi bi-check2-square&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span>
-<span class="x">                            &lt;!--&lt;button class=&quot;btn btn-primary btn-lg&quot;&gt;&lt;span class=&quot;fa fa-user&quot;&gt;&lt;/span&gt;&lt;br&gt;Terminer&lt;/button&gt;--&gt;</span>
-<span class="x">                        @elseif ($todo-&gt;termine === 1)</span>
-<span class="x">                            &lt;!-- Si un ToDo est terminé, Action à ajouter pour supprimer --&gt;</span>
-<span class="x">                            &lt;a href=&quot;{{ route(&#39;todo.delete&#39;, [&#39;id&#39; =&gt; $todo-&gt;id]) }}&quot; class=&quot;btn btn-danger&quot;&gt;&lt;i class=&quot;bi bi-trash3&quot;&gt;&lt;/i&gt;&lt;/i&gt;&lt;/a&gt;</span>
-<span class="x">                            @if (session(&#39;validation&#39;))</span>
-<span class="x">                                &lt;p class=&quot;alert alert-success&quot;&gt;{{ session(&#39;validation&#39;) }}&lt;/p&gt;</span>
-<span class="x">                            @endif</span>
-<span class="x">                        @endif</span>
-<span class="x">                        @if ($todo-&gt;important == 0)</span>
-<span class="x">                            &lt;!-- Action à ajouter pour monter la priorité --&gt;</span>
-<span class="x">                            &lt;a href=&quot;{{ route(&#39;todo.raise&#39;, [&#39;id&#39;=&gt; $todo-&gt;id]) }}&quot;&gt;&lt;i class=&quot;bi bi-arrow-up-circle&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span>
-<span class="x">                        @elseif ($todo-&gt;important == 1)</span>
-<span class="x">                            &lt;!-- Action à ajouter pour descendre la priorité --&gt;</span>
-<span class="x">                            &lt;a href=&quot;{{ route(&#39;todo.lower&#39;, [&#39;id&#39; =&gt; $todo-&gt;id]) }}&quot;&gt;&lt;i class=&quot;bi bi-arrow-down-circle&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span>
-<span class="x">                        @endif</span>
-<span class="x">                    &lt;/li&gt;</span>
-<span class="x">                @empty</span>
-<span class="x">                    &lt;li class=&quot;list-group-item text-center&quot;&gt;C&#39;est vide !&lt;/li&gt;</span>
-<span class="x">                @endforelse</span>
-<span class="x">            &lt;/ul&gt;</span>
-<span class="x">        &lt;/div&gt;</span>
-<span class="x">    &lt;/div&gt;</span>
-<span class="x">&lt;/div&gt;</span>
-<span class="x">@endsection</span>
+<span class="s1">            &lt;!-- Liste --&gt;</span>
+<span class="s1">            &lt;ul class=&quot;list-group&quot;&gt;</span>
+<span class="s1">                @forelse ($todos as $todo)</span>
+<span class="s1">                    &lt;li class=&quot;list-group-item&quot;&gt;</span>
+<span class="s1">                        &lt;!-- Affichage de la priorité --&gt;</span>
+<span class="s1">                        @if ($todo-&gt;important == 0)</span>
+<span class="s1">                            &lt;i class=&quot;bi bi-reception-1&quot;&gt;&lt;/i&gt;</span>
+<span class="s1">                        @elseif ($todo-&gt;important == 1)</span>
+<span class="s1">                            &lt;i class=&quot;bi bi-reception-4&quot;&gt;&lt;/i&gt;</span>
+<span class="s1">                        @endif</span>
+<span class="s1">                        &lt;!-- Affichage du texte --&gt;</span>
+<span class="s1">                        &lt;span&gt;{{ $todo-&gt;texte }}&lt;/span&gt;</span>
+<span class="s1">                        &lt;!-- Action à ajouter pour Terminer et supprimer --&gt;</span>
+<span class="s1">                        @if ($todo-&gt;termine === 0)</span>
+<span class="s1">                            &lt;!-- Si un ToDo n&#39;</span><span class="nx">est</span> <span class="nx">pas</span> <span class="nx">terminé</span><span class="p">,</span> <span class="nx">Action</span> <span class="nx">à</span> <span class="nx">ajouter</span> <span class="nx">pour</span> <span class="nx">terminer</span> <span class="o">--&gt;</span>
+                            <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&quot;{{ route(&#39;todo.done&#39;, [&#39;id&#39; =&gt; </span><span class="si">$todo-&gt;id</span><span class="s2">]) }}&quot;</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;btn btn-success&quot;</span><span class="o">&gt;&lt;</span><span class="nx">i</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;bi bi-check2-square&quot;</span><span class="o">&gt;&lt;/</span><span class="nx">i</span><span class="o">&gt;&lt;/</span><span class="nx">a</span><span class="o">&gt;</span>
+                            <span class="o">&lt;!--&lt;</span><span class="nx">button</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;btn btn-primary btn-lg&quot;</span><span class="o">&gt;&lt;</span><span class="nx">span</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;fa fa-user&quot;</span><span class="o">&gt;&lt;/</span><span class="nx">span</span><span class="o">&gt;&lt;</span><span class="nx">br</span><span class="o">&gt;</span><span class="nx">Terminer</span><span class="o">&lt;/</span><span class="nx">button</span><span class="o">&gt;--&gt;</span>
+                        <span class="o">@</span><span class="k">elseif</span> <span class="p">(</span><span class="nv">$todo</span><span class="o">-&gt;</span><span class="na">termine</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span>
+                            <span class="o">&lt;!--</span> <span class="nx">Si</span> <span class="nx">un</span> <span class="nx">ToDo</span> <span class="nx">est</span> <span class="nx">terminé</span><span class="p">,</span> <span class="nx">Action</span> <span class="nx">à</span> <span class="nx">ajouter</span> <span class="nx">pour</span> <span class="nx">supprimer</span> <span class="o">--&gt;</span>
+                            <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&quot;{{ route(&#39;todo.delete&#39;, [&#39;id&#39; =&gt; </span><span class="si">$todo-&gt;id</span><span class="s2">]) }}&quot;</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;btn btn-danger&quot;</span><span class="o">&gt;&lt;</span><span class="nx">i</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;bi bi-trash3&quot;</span><span class="o">&gt;&lt;/</span><span class="nx">i</span><span class="o">&gt;&lt;/</span><span class="nx">i</span><span class="o">&gt;&lt;/</span><span class="nx">a</span><span class="o">&gt;</span>
+                            <span class="o">@</span><span class="k">if</span> <span class="p">(</span><span class="nx">session</span><span class="p">(</span><span class="s1">&#39;validation&#39;</span><span class="p">))</span>
+                                <span class="o">&lt;</span><span class="nx">p</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;alert alert-success&quot;</span><span class="o">&gt;</span><span class="p">{{</span> <span class="nx">session</span><span class="p">(</span><span class="s1">&#39;validation&#39;</span><span class="p">)</span> <span class="p">}}</span><span class="o">&lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+                            <span class="o">@</span><span class="k">endif</span>
+                        <span class="o">@</span><span class="k">endif</span>
+                        <span class="o">@</span><span class="k">if</span> <span class="p">(</span><span class="nv">$todo</span><span class="o">-&gt;</span><span class="na">important</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+                            <span class="o">&lt;!--</span> <span class="nx">Action</span> <span class="nx">à</span> <span class="nx">ajouter</span> <span class="nx">pour</span> <span class="nx">monter</span> <span class="nx">la</span> <span class="nx">priorité</span> <span class="o">--&gt;</span>
+                            <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&quot;{{ route(&#39;todo.raise&#39;, [&#39;id&#39;=&gt; </span><span class="si">$todo-&gt;id</span><span class="s2">]) }}&quot;</span><span class="o">&gt;&lt;</span><span class="nx">i</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;bi bi-arrow-up-circle&quot;</span><span class="o">&gt;&lt;/</span><span class="nx">i</span><span class="o">&gt;&lt;/</span><span class="nx">a</span><span class="o">&gt;</span>
+                        <span class="o">@</span><span class="k">elseif</span> <span class="p">(</span><span class="nv">$todo</span><span class="o">-&gt;</span><span class="na">important</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+                            <span class="o">&lt;!--</span> <span class="nx">Action</span> <span class="nx">à</span> <span class="nx">ajouter</span> <span class="nx">pour</span> <span class="nx">descendre</span> <span class="nx">la</span> <span class="nx">priorité</span> <span class="o">--&gt;</span>
+                            <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&quot;{{ route(&#39;todo.lower&#39;, [&#39;id&#39; =&gt; </span><span class="si">$todo-&gt;id</span><span class="s2">]) }}&quot;</span><span class="o">&gt;&lt;</span><span class="nx">i</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;bi bi-arrow-down-circle&quot;</span><span class="o">&gt;&lt;/</span><span class="nx">i</span><span class="o">&gt;&lt;/</span><span class="nx">a</span><span class="o">&gt;</span>
+                        <span class="o">@</span><span class="k">endif</span>
+                    <span class="o">&lt;/</span><span class="nx">li</span><span class="o">&gt;</span>
+                <span class="o">@</span><span class="k">empty</span>
+                    <span class="o">&lt;</span><span class="nx">li</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;list-group-item text-center&quot;</span><span class="o">&gt;</span><span class="nx">C</span><span class="err">&#39;</span><span class="nx">est</span> <span class="nx">vide</span> <span class="o">!&lt;/</span><span class="nx">li</span><span class="o">&gt;</span>
+                <span class="o">@</span><span class="nx">endforelse</span>
+            <span class="o">&lt;/</span><span class="nx">ul</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="nx">div</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="nx">div</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="nx">div</span><span class="o">&gt;</span>
+<span class="o">@</span><span class="nx">endsection</span>
 </code></pre></div>
 </details>
 <div class="admonition warning">
 <p class="admonition-title">tip</p>
 <p>Vous n'aurez pas besoin de tout le contenu du home.blade.php dans un premier temps. <br />
 Je vous conseille de mettre de côté ce code et de dans le home.blade.php de supprimer  de :
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&lt;!-- Action à ajouter pour Terminer et supprimer --&gt;</span>
-<span class="x">@if ($todo-&gt;termine === 0)</span>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="o">&lt;!--</span> <span class="nx">Action</span> <span class="nx">à</span> <span class="nx">ajouter</span> <span class="nx">pour</span> <span class="nx">Terminer</span> <span class="nx">et</span> <span class="nx">supprimer</span> <span class="o">--&gt;</span>
+<span class="o">@</span><span class="k">if</span> <span class="p">(</span><span class="nv">$todo</span><span class="o">-&gt;</span><span class="na">termine</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span>
 </code></pre></div>
 à 
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">    @elseif ($todo-&gt;important == 1)</span>
-<span class="x">    &lt;!-- Action à ajouter pour descendre la priorité --&gt;</span>
-<span class="x">    &lt;a href=&quot;{{ route(&#39;todo.lower&#39;, [&#39;id&#39; =&gt; $todo-&gt;id]) }}&quot;&gt;&lt;i class=&quot;bi bi-arrow-down-circle&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span>
-<span class="x">@endif</span>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code>    <span class="o">@</span><span class="k">elseif</span> <span class="p">(</span><span class="nv">$todo</span><span class="o">-&gt;</span><span class="na">important</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="o">&lt;!--</span> <span class="nx">Action</span> <span class="nx">à</span> <span class="nx">ajouter</span> <span class="nx">pour</span> <span class="nx">descendre</span> <span class="nx">la</span> <span class="nx">priorité</span> <span class="o">--&gt;</span>
+    <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&quot;{{ route(&#39;todo.lower&#39;, [&#39;id&#39; =&gt; </span><span class="si">$todo-&gt;id</span><span class="s2">]) }}&quot;</span><span class="o">&gt;&lt;</span><span class="nx">i</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;bi bi-arrow-down-circle&quot;</span><span class="o">&gt;&lt;/</span><span class="nx">i</span><span class="o">&gt;&lt;/</span><span class="nx">a</span><span class="o">&gt;</span>
+<span class="o">@</span><span class="k">endif</span>
 </code></pre></div></p>
 </div>
 <details class="question">
@@ -5476,8 +5529,8 @@ Je vous conseille de mettre de côté ce code et de dans le home.blade.php de su
 Il faut maintenant assembler l'ensemble pour que votre page s'affiche lors d'une requête HTTP.</p>
 </div>
 <h3 id="162-creation-des-routes">1.6.2 Création des routes<a class="headerlink" href="#162-creation-des-routes" title="Permanent link">⚓︎</a></h3>
-<p>La définition des routes se fait dans le fichier <code>routes/web.php</code>, <br />
-décommenter <code>Route::get('/', [TodosController::class, 'liste'])-&gt;name('todo.liste');</code> <br /></p>
+<p>La définition des routes se fait dans le fichier <code class="language-text highlight">routes/web.php</code>, <br />
+décommenter <code class="language-css+lasso highlight"><span class="nt">Route</span><span class="p">::</span><span class="nd">get</span><span class="o">(</span><span class="s1">&#39;/&#39;</span><span class="o">,</span><span class="w"> </span><span class="cp">[</span><span class="nx">TodosController</span><span class="p">::</span><span class="nl">class</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;liste&#39;</span><span class="cp">]</span><span class="o">)</span><span class="nt">-</span><span class="o">&gt;</span><span class="nt">name</span><span class="o">(</span><span class="s1">&#39;todo.liste&#39;</span><span class="o">);</span></code> <br /></p>
 <details class="question">
 <summary>À quoi correspond la notation TodosController@liste ?</summary>
 <p>Lien vers le controller Todos</p>
@@ -5485,15 +5538,15 @@ décommenter <code>Route::get('/', [TodosController::class, 'liste'])-&gt;name('
 <p><img alt="👀" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f440.svg" title=":eyes:" /> Tester
 Vous voyez « Liste » ? C'est <img alt="🆗" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f197.svg" title=":ok:" /></p>
 <h3 id="163-affichage-de-la-liste">1.6.3 Affichage de la liste<a class="headerlink" href="#163-affichage-de-la-liste" title="Permanent link">⚓︎</a></h3>
-<p>On va modifier la méthode <code>liste()</code> pour qu'elle appelle la bonne vue ici <code>home</code> et qu'elle aille chercher la collection des todos en base :</p>
+<p>On va modifier la méthode <code class="language-text highlight">liste()</code> pour qu'elle appelle la bonne vue ici <code class="language-text highlight">home</code> et qu'elle aille chercher la collection des todos en base :</p>
 <details class="note">
 <summary>Code de la fonction liste</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use App\Models\Todos;</span>
-<span class="x">//Liste</span>
-<span class="x">public function liste()</span>
-<span class="x">{</span>
-<span class="x">    return view(&quot;home&quot;, [&quot;todos&quot; =&gt; Todos::all()]);</span>
-<span class="x">}</span>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="k">use</span> <span class="nx">App\Models\Todos</span><span class="p">;</span>
+<span class="c1">//Liste</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">liste</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="nx">view</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;todos&quot;</span> <span class="o">=&gt;</span> <span class="nx">Todos</span><span class="o">::</span><span class="na">all</span><span class="p">()]);</span>
+<span class="p">}</span>
 </code></pre></div>
 </details>
 <details class="note">
@@ -5508,37 +5561,37 @@ Vous voyez « Liste » ? C'est <img alt="🆗" class="emojione" src="https://cdn
 <p>Pour utiliser les fonctionnalités Eloqent, vous pouvez consulter la documentation <a href="https://laravel.com/docs/10.x/eloquent">ici</a>.</p>
 <details class="warning">
 <summary>fonction save</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x"> public function saveTodo(Request $request){</span>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code> <span class="k">public</span> <span class="k">function</span> <span class="nf">saveTodo</span><span class="p">(</span><span class="nx">Request</span> <span class="nv">$request</span><span class="p">){</span>
 
-<span class="x">    $texte = $request-&gt;input(&#39;texte&#39;);</span>
+    <span class="nv">$texte</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">input</span><span class="p">(</span><span class="s1">&#39;texte&#39;</span><span class="p">);</span>
 
-<span class="x">    if($texte){</span>
-<span class="x">        $todo = new Todos();</span>
-<span class="x">        $todo-&gt;texte = $texte;</span>
-<span class="x">        $todo-&gt;termine = 0;</span>
-<span class="x">        $todo-&gt;Important = 0;</span>
-<span class="x">        $todo-&gt;save();</span>
+    <span class="k">if</span><span class="p">(</span><span class="nv">$texte</span><span class="p">){</span>
+        <span class="nv">$todo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Todos</span><span class="p">();</span>
+        <span class="nv">$todo</span><span class="o">-&gt;</span><span class="na">texte</span> <span class="o">=</span> <span class="nv">$texte</span><span class="p">;</span>
+        <span class="nv">$todo</span><span class="o">-&gt;</span><span class="na">termine</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="nv">$todo</span><span class="o">-&gt;</span><span class="na">Important</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="nv">$todo</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
 
-<span class="x">        return redirect()-&gt;route(&#39;todo.liste&#39;);</span>
-<span class="x">    } else{</span>
-<span class="x">        return redirect()-&gt;route(&#39;todo.liste&#39;)-&gt;with(&#39;message&#39;, &quot;Veuillez saisir une note à ajouter&quot;);</span>
-<span class="x">    }     </span>
-<span class="x">}</span>
+        <span class="k">return</span> <span class="nx">redirect</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">route</span><span class="p">(</span><span class="s1">&#39;todo.liste&#39;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span><span class="p">{</span>
+        <span class="k">return</span> <span class="nx">redirect</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">route</span><span class="p">(</span><span class="s1">&#39;todo.liste&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">with</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="s2">&quot;Veuillez saisir une note à ajouter&quot;</span><span class="p">);</span>
+    <span class="p">}</span>     
+<span class="p">}</span>
 </code></pre></div>
 </details>
 <p>Vous prendrez le temps de <ins>remarquer</ins> que ce code gère les messages d'erreur avec Bootstrap.<br />
 On "attrape" l'erreur en testant le champ texte, qui doit ici être non vide et on ajoute un élément à la route.
 Element qui sera mappé avec la vue <em>home</em> et plus précisement avec le champ <em>message</em>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">@if (session(&#39;message&#39;))</span>
-<span class="x">    &lt;p class=&quot;alert alert-danger&quot;&gt;{{ session(&#39;message&#39;) }}&lt;/p&gt;</span>
-<span class="x">@endif</span>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="o">@</span><span class="k">if</span> <span class="p">(</span><span class="nx">session</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">))</span>
+    <span class="o">&lt;</span><span class="nx">p</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;alert alert-danger&quot;</span><span class="o">&gt;</span><span class="p">{{</span> <span class="nx">session</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">)</span> <span class="p">}}</span><span class="o">&lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+<span class="o">@</span><span class="k">endif</span>
 </code></pre></div>
 Il manque encore un élément pour finaliser ce besoin : La route.<br />
 Il faut ajouter le lien vers la fonction saveTodo du controleur.</p>
-<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">Route::post(&#39;/action/add&#39;, [TodosController::class, &#39;saveTodo&#39;])-&gt;name(&#39;todo.save&#39;);</span>
+<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="nx">Route</span><span class="o">::</span><span class="na">post</span><span class="p">(</span><span class="s1">&#39;/action/add&#39;</span><span class="p">,</span> <span class="p">[</span><span class="nx">TodosController</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="s1">&#39;saveTodo&#39;</span><span class="p">])</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">(</span><span class="s1">&#39;todo.save&#39;</span><span class="p">);</span>
 </code></pre></div>
 et encore faut il appeler cette route lorsque l'on clique sur le bouton "Save" ! Vérifier dans la vue home que vous ayez bien l'appel à votre route.</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&lt;form action=&quot;{{ route(&#39;todo.save&#39;) }}&quot; method=&quot;POST&quot; class=&quot;add&quot;&gt;</span>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="o">&lt;</span><span class="nx">form</span> <span class="nx">action</span><span class="o">=</span><span class="s2">&quot;{{ route(&#39;todo.save&#39;) }}&quot;</span> <span class="nx">method</span><span class="o">=</span><span class="s2">&quot;POST&quot;</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;add&quot;</span><span class="o">&gt;</span>
 </code></pre></div>
 <div class="admonition tips">
 <p class="admonition-title">Erreur à traiter</p>
@@ -5549,8 +5602,8 @@ et encore faut il appeler cette route lorsque l'on clique sur le bouton "Save" !
 </div>
 <div class="tabbed-block">
 <p>Il faut passer le champ id en autoIncrément et relancer le fresh de migration.</p>
-<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">$table-&gt;integer(&#39;id&#39;)-&gt;autoIncrement();</span>
-<span class="x">#$table-&gt;primary(&#39;id&#39;);</span>
+<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="nv">$table</span><span class="o">-&gt;</span><span class="na">integer</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">autoIncrement</span><span class="p">();</span>
+<span class="c1">#$table-&gt;primary(&#39;id&#39;);</span>
 </code></pre></div>
 Dans ce cas, laravel créé un index sur le champ id, il devient inutile de le déclarer en primary key. Mais dans la base de donnée, le champ est bien clé primaire.</p>
 </div>
@@ -5563,34 +5616,34 @@ Dans ce cas, laravel créé un index sur le champ id, il devient inutile de le d
 <details class="warning">
 <summary>solution</summary>
 <p>Modifier la fonction "Save" du contrôleur</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x"> public function saveTodo(Request $request){</span>
-<span class="x">    $texte = $request-&gt;input(&#39;texte&#39;);</span>
-<span class="x">    $button = $request-&gt;input(&#39;priority&#39;);</span>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code> <span class="k">public</span> <span class="k">function</span> <span class="nf">saveTodo</span><span class="p">(</span><span class="nx">Request</span> <span class="nv">$request</span><span class="p">){</span>
+    <span class="nv">$texte</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">input</span><span class="p">(</span><span class="s1">&#39;texte&#39;</span><span class="p">);</span>
+    <span class="nv">$button</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">input</span><span class="p">(</span><span class="s1">&#39;priority&#39;</span><span class="p">);</span>
 
-<span class="x">    if($texte){</span>
-<span class="x">        $todo = new Todos();</span>
-<span class="x">        $todo-&gt;texte = $texte;</span>
-<span class="x">        $todo-&gt;termine = 0;</span>
-<span class="x">        #Gestion du bouton Important</span>
-<span class="x">        if($button==&#39;1&#39;){</span>
-<span class="x">            $todo-&gt;Important = 1;</span>
-<span class="x">        } elseif($button==&#39;0&#39;){</span>
-<span class="x">            $todo-&gt;Important = 0;</span>
-<span class="x">        }</span>
-<span class="x">        $todo-&gt;save();</span>
-<span class="x">        return redirect()-&gt;route(&#39;todo.liste&#39;);</span>
-<span class="x">    } else{</span>
-<span class="x">        return redirect()-&gt;route(&#39;todo.liste&#39;)-&gt;with(&#39;message&#39;, &quot;Veuillez saisir une note à ajouter&quot;);</span>
-<span class="x">    }</span>
+    <span class="k">if</span><span class="p">(</span><span class="nv">$texte</span><span class="p">){</span>
+        <span class="nv">$todo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Todos</span><span class="p">();</span>
+        <span class="nv">$todo</span><span class="o">-&gt;</span><span class="na">texte</span> <span class="o">=</span> <span class="nv">$texte</span><span class="p">;</span>
+        <span class="nv">$todo</span><span class="o">-&gt;</span><span class="na">termine</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="c1">#Gestion du bouton Important</span>
+        <span class="k">if</span><span class="p">(</span><span class="nv">$button</span><span class="o">==</span><span class="s1">&#39;1&#39;</span><span class="p">){</span>
+            <span class="nv">$todo</span><span class="o">-&gt;</span><span class="na">Important</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">elseif</span><span class="p">(</span><span class="nv">$button</span><span class="o">==</span><span class="s1">&#39;0&#39;</span><span class="p">){</span>
+            <span class="nv">$todo</span><span class="o">-&gt;</span><span class="na">Important</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nv">$todo</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+        <span class="k">return</span> <span class="nx">redirect</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">route</span><span class="p">(</span><span class="s1">&#39;todo.liste&#39;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span><span class="p">{</span>
+        <span class="k">return</span> <span class="nx">redirect</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">route</span><span class="p">(</span><span class="s1">&#39;todo.liste&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">with</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="s2">&quot;Veuillez saisir une note à ajouter&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
 
-<span class="x">}</span>
+<span class="p">}</span>
 </code></pre></div>
 </details>
 <h3 id="182-user-story-1-baisser-limportance-dun-todo">1.8.2  User story 1 : Baisser l'importance d'un toDo.<a class="headerlink" href="#182-user-story-1-baisser-limportance-dun-todo" title="Permanent link">⚓︎</a></h3>
 <p>Besoin : A la saisie, on peut choisir l'importance d'un Todo.<br />
 Fonctionnalité : Pouvoir ajuster L'importance de chaque ToDo </p>
 <h3 id="183-user-story-2-passer-un-todo-a-termine">1.8.3 User story 2 : Passer un ToDo à Terminé.<a class="headerlink" href="#183-user-story-2-passer-un-todo-a-termine" title="Permanent link">⚓︎</a></h3>
-<p>Sur l'icone <code>&lt;i class="bi bi-check2-square"&gt;&lt;/i&gt;</code>, ajouter l'action de passer un Todo à Terminé</p>
+<p>Sur l'icone <code class="language-xml highlight"><span class="nt">&lt;i</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;bi bi-check2-square&quot;</span><span class="nt">&gt;&lt;/i&gt;</span></code>, ajouter l'action de passer un Todo à Terminé</p>
 <h3 id="184-user-story-3-supprimer-un-todo">1.8.4 User Story 3 : Supprimer un ToDo<a class="headerlink" href="#184-user-story-3-supprimer-un-todo" title="Permanent link">⚓︎</a></h3>
 <p><img alt="🚫" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f6ab.svg" title=":no_entry_sign:" /> On ne peut pas supprimer un Todo qui n'est pas terminé</p>
 <h3 id="185-user-story-4-compteur">1.8.5 User Story 4 : Compteur<a class="headerlink" href="#185-user-story-4-compteur" title="Permanent link">⚓︎</a></h3>

@@ -4649,26 +4649,26 @@
 <p><img alt="illustation" class="center" src="../data/mvc.png" width="50%" /></p>
 <h2 id="2-le-controleur-c">2. Le Contrôleur (C)<a class="headerlink" href="#2-le-controleur-c" title="Permanent link">⚓︎</a></h2>
 <ul>
-<li>👂 Rôle : recevoir la <strong>requête HTTP</strong> (ex. URL <code>/accounts</code>).</li>
+<li>👂 Rôle : recevoir la <strong>requête HTTP</strong> (ex. URL <code class="language-text highlight">/accounts</code>).</li>
 <li>📞 Appelle le Modèle pour récupérer ou modifier des données.</li>
 <li>📤 Transmet ces données à une Vue.</li>
 </ul>
 <h4 id="exemple-laravel">📌 Exemple Laravel<a class="headerlink" href="#exemple-laravel" title="Permanent link">⚓︎</a></h4>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">// routes/web.php</span>
-<span class="x">use App\Http\Controllers\AccountController;</span>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="c1">// routes/web.php</span>
+<span class="k">use</span> <span class="nx">App\Http\Controllers\AccountController</span><span class="p">;</span>
 
-<span class="x">Route::get(&#39;/accounts&#39;, [AccountController::class, &#39;index&#39;]);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/accounts&#39;</span><span class="p">,</span> <span class="p">[</span><span class="nx">AccountController</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="s1">&#39;index&#39;</span><span class="p">]);</span>
 </code></pre></div>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">// app/Http/Controllers/AccountController.php</span>
-<span class="x">namespace App\Http\Controllers;</span>
-<span class="x">use App\Models\Account;</span>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="c1">// app/Http/Controllers/AccountController.php</span>
+<span class="k">namespace</span> <span class="nx">App\Http\Controllers</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">App\Models\Account</span><span class="p">;</span>
 
-<span class="x">class AccountController extends Controller {</span>
-<span class="x">    public function index() {</span>
-<span class="x">        $accounts = Account::all();</span>
-<span class="x">        return view(&#39;accounts.index&#39;, compact(&#39;accounts&#39;));</span>
-<span class="x">    }</span>
-<span class="x">}</span>
+<span class="k">class</span> <span class="nc">AccountController</span> <span class="k">extends</span> <span class="nx">Controller</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nv">$accounts</span> <span class="o">=</span> <span class="nx">Account</span><span class="o">::</span><span class="na">all</span><span class="p">();</span>
+        <span class="k">return</span> <span class="nx">view</span><span class="p">(</span><span class="s1">&#39;accounts.index&#39;</span><span class="p">,</span> <span class="nb">compact</span><span class="p">(</span><span class="s1">&#39;accounts&#39;</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 <h2 id="3-la-vue-v">3. La Vue (V)<a class="headerlink" href="#3-la-vue-v" title="Permanent link">⚓︎</a></h2>
 <ul>
@@ -4676,13 +4676,13 @@
 <li>❌ Pas de logique métier → uniquement présentation.</li>
 </ul>
 <h4 id="exemple-laravel-blade">📌 Exemple Laravel (Blade)<a class="headerlink" href="#exemple-laravel-blade" title="Permanent link">⚓︎</a></h4>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>{{-- resources/views/accounts/index.blade.php --}}
-&lt;h1&gt;💳 Liste des comptes&lt;/h1&gt;
-&lt;ul&gt;
-@foreach ($accounts as $a)
-  &lt;li&gt;{{ $a-&gt;owner }} : {{ number_format($a-&gt;balance, 2, &#39;,&#39;, &#39; &#39;) }} €&lt;/li&gt;
-@endforeach
-&lt;/ul&gt;
+<div class="language-objective-c highlight"><span class="filename">Objective-C</span><pre><span></span><code><span class="p">{{</span><span class="o">--</span><span class="w"> </span><span class="n">resources</span><span class="o">/</span><span class="n">views</span><span class="o">/</span><span class="n">accounts</span><span class="o">/</span><span class="n">index</span><span class="p">.</span><span class="n">blade</span><span class="p">.</span><span class="n">php</span><span class="w"> </span><span class="o">--</span><span class="p">}}</span>
+<span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="err">💳</span><span class="w"> </span><span class="n">Liste</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">comptes</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ul</span><span class="o">&gt;</span>
+<span class="p">@</span><span class="n">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">$accounts</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">$a</span><span class="p">)</span>
+<span class="w">  </span><span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;</span><span class="p">{{</span><span class="w"> </span><span class="n">$a</span><span class="o">-&gt;</span><span class="n">owner</span><span class="w"> </span><span class="p">}}</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{{</span><span class="w"> </span><span class="n">number_format</span><span class="p">(</span><span class="n">$a</span><span class="o">-&gt;</span><span class="n">balance</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;,&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">)</span><span class="w"> </span><span class="p">}}</span><span class="w"> </span><span class="err">€</span><span class="o">&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+<span class="p">@</span><span class="n">endforeach</span>
+<span class="o">&lt;/</span><span class="n">ul</span><span class="o">&gt;</span>
 </code></pre></div>
 <h2 id="4-le-modele-m">4. Le Modèle (M)<a class="headerlink" href="#4-le-modele-m" title="Permanent link">⚓︎</a></h2>
 <ul>
@@ -4690,24 +4690,24 @@
 <li>🔗 Connecté à la base via <strong>Eloquent ORM</strong> sous Laravel.</li>
 </ul>
 <h4 id="exemple-laravel_1">📌 Exemple Laravel<a class="headerlink" href="#exemple-laravel_1" title="Permanent link">⚓︎</a></h4>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">// app/Models/Account.php</span>
-<span class="x">namespace App\Models;</span>
-<span class="x">use Illuminate\Database\Eloquent\Model;</span>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="c1">// app/Models/Account.php</span>
+<span class="k">namespace</span> <span class="nx">App\Models</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Model</span><span class="p">;</span>
 
-<span class="x">class Account extends Model {</span>
-<span class="x">    protected $fillable = [&#39;owner&#39;, &#39;balance&#39;];</span>
-<span class="x">    public $timestamps = false;</span>
-<span class="x">}</span>
+<span class="k">class</span> <span class="nc">Account</span> <span class="k">extends</span> <span class="nx">Model</span> <span class="p">{</span>
+    <span class="k">protected</span> <span class="nv">$fillable</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;owner&#39;</span><span class="p">,</span> <span class="s1">&#39;balance&#39;</span><span class="p">];</span>
+    <span class="k">public</span> <span class="nv">$timestamps</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
 <hr />
 <h2 id="5-les-routes">5. Les Routes<a class="headerlink" href="#5-les-routes" title="Permanent link">⚓︎</a></h2>
 <ul>
 <li>🧭 Une <strong>route</strong> associe une <strong>URL</strong> + une <strong>méthode HTTP</strong> à un <strong>contrôleur</strong>.</li>
-<li>📍 Définies dans <code>routes/web.php</code>.</li>
+<li>📍 Définies dans <code class="language-text highlight">routes/web.php</code>.</li>
 </ul>
 <h4 id="exemple-laravel_2">📌 Exemple Laravel<a class="headerlink" href="#exemple-laravel_2" title="Permanent link">⚓︎</a></h4>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">Route::get(&#39;/accounts&#39;, [AccountController::class, &#39;index&#39;]);</span>
-<span class="x">Route::post(&#39;/accounts/transfer&#39;, [AccountController::class, &#39;transfer&#39;]);</span>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/accounts&#39;</span><span class="p">,</span> <span class="p">[</span><span class="nx">AccountController</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="s1">&#39;index&#39;</span><span class="p">]);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">post</span><span class="p">(</span><span class="s1">&#39;/accounts/transfer&#39;</span><span class="p">,</span> <span class="p">[</span><span class="nx">AccountController</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="s1">&#39;transfer&#39;</span><span class="p">]);</span>
 </code></pre></div>
 <hr />
 <h2 id="6-schema-de-synthese">6. Schéma de synthèse<a class="headerlink" href="#6-schema-de-synthese" title="Permanent link">⚓︎</a></h2>

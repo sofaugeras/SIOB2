@@ -4839,7 +4839,7 @@ On va alors regrouper ensemble ces informations reliées.</p>
 <h3 id="21-definitions-dune-classe">2.1 Définitions d'une classe<a class="headerlink" href="#21-definitions-dune-classe" title="Permanent link">⚓︎</a></h3>
 <p>Une Classe ou <strong>Entité</strong> représente un objet du SI (acteur, document, concept, …), ou plus exactement un <mark>ensemble d’objets ayant les <ins>mêmes</ins> caractéristiques</mark>.</p>
 <p>Dans une Classe, on met les informations nécessaires et suffisantes pour caractériser cette entité. Ces informations sont appelées <strong>propriétés</strong> ou <strong>attributs</strong>. Les propriétés sont collectées lors de l’établissement du <strong>dictionnaire des données</strong>. Les propriétés prennent des valeurs pour chaque occurrence d’une entité. Chaque propriété est <strong>typée</strong>.</p>
-<p>Une propriété particulière, appelée <strong>identifiant</strong>, permet de distinguer sans ambiguïté toutes les occurrences de l’entité. L’identifiant est suivi de l’indication <code>&lt;&lt;id&gt;&gt;</code>. L’identifiant est une propriété qui ne peut pas changer au cours du temps pour une occurrence.</p>
+<p>Une propriété particulière, appelée <strong>identifiant</strong>, permet de distinguer sans ambiguïté toutes les occurrences de l’entité. L’identifiant est suivi de l’indication <code class="language-text highlight">&lt;&lt;id&gt;&gt;</code>. L’identifiant est une propriété qui ne peut pas changer au cours du temps pour une occurrence.</p>
 <p><img alt="notation" class="center" src="../data/DC.png" width="80%" /></p>
 <h3 id="22-les-methodes">2.2 Les méthodes<a class="headerlink" href="#22-les-methodes" title="Permanent link">⚓︎</a></h3>
 <p>Une <strong>opération</strong> est la modélisation d’un service qui peut être sollicité au titre de n’importe quel objet d’une <ins>même</ins> classe pour déclencher un comportement.<br />
@@ -4849,11 +4849,11 @@ afficher() {abstract} <br />
 SetNombreFace(in nbFace : Integer =6) <br />
 afficher(:Integer) <br />
 afficher(:String) <br /></p>
-<p>Il existe des méthodes particulières, utilisé en POO : les <strong>Constructeurs et desctructeurs</strong> : stéréotype <code>« create »</code> ou <code>« destroy »</code></p>
+<p>Il existe des méthodes particulières, utilisé en POO : les <strong>Constructeurs et desctructeurs</strong> : stéréotype <code class="language-text highlight">« create »</code> ou <code class="language-text highlight">« destroy »</code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>La signature d'une méthode contient les paramètres d'entrée et leurs types, ainsi que le paramètre de retour si besoin
-<code>nomMethode (arg1 : type = val_defaut, arg2 : type = val_defaut,…) : type_retour</code></p>
+<code class="language-carbon highlight"><span class="nx">nomMethode</span><span class="w"> </span><span class="p">(</span><span class="nx">arg1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="k">type</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">val_defaut</span><span class="p">,</span><span class="w"> </span><span class="nx">arg2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="k">type</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">val_defaut</span><span class="p">,</span><span class="err">…</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nx">type_retour</span></code></p>
 </div>
 <p><img alt="action" class="center" src="../data/clap.jpg" width="20%" /></p>
 <h3 id="23-lencapsulation">2.3 L’encapsulation<a class="headerlink" href="#23-lencapsulation" title="Permanent link">⚓︎</a></h3>
@@ -4892,12 +4892,12 @@ Ces services constituent l’interface de la classe (sa vue externe). L’interf
 <p>Dans une bonne pratique du code, les attributs sont tous en <mark>privé</mark>. Et on dispose de méthodes <mark>getters/setters</mark> pour manipuler les attributs.</p>
 <p><img alt="correspondance UML java" class="center" src="../data/correspUMLjava.png" width="100%" /></p>
 <h3 id="24-attributs-particuliers">2.4 Attributs particuliers<a class="headerlink" href="#24-attributs-particuliers" title="Permanent link">⚓︎</a></h3>
-<p><strong>L'Attribut dérivé  <code>/</code> :</strong> </p>
+<p><strong>L'Attribut dérivé  <code class="language-text highlight">/</code> :</strong> </p>
 <p>Attribut dérivé = attribut dépendant d’autres attributs. (exemple : âge dans une classe personne, dépend de la date de naissance et de la date du jour).<br /></p>
 <p><img alt="attribut dérivé" class="center" src="../data/attribut_derive.png" width="50%" /></p>
-<p>Dans les diagrammes de classes, il est important que les informations ne soient pas redondantes. Une forme de redondance est un <ins>attribut dérivé</ins> dont la valeur se calcule à partir des valeurs d’un ou plusieurs autres attributs. Dans ce cas, l’attribut dérivé doit être signalé en préfixant le nom de l’attribut avec une barre oblique <code>/</code> afin d’indiquer au lecteur que cet attribut est redondant. C’est une indication importante pour ceux qui implantent l’application car les attributs dérivés demandent un traitement spécial : leur valeur change à chaque fois que la valeur des attributs à partir desquels ils sont calculés change. Dans notre exemple, le traitement est même un peu plus complexe car la valeur de l’attribut « âge » évolue aussi en fonction d’un paramètre indépendant de l’application : la date du jour. </p>
+<p>Dans les diagrammes de classes, il est important que les informations ne soient pas redondantes. Une forme de redondance est un <ins>attribut dérivé</ins> dont la valeur se calcule à partir des valeurs d’un ou plusieurs autres attributs. Dans ce cas, l’attribut dérivé doit être signalé en préfixant le nom de l’attribut avec une barre oblique <code class="language-text highlight">/</code> afin d’indiquer au lecteur que cet attribut est redondant. C’est une indication importante pour ceux qui implantent l’application car les attributs dérivés demandent un traitement spécial : leur valeur change à chaque fois que la valeur des attributs à partir desquels ils sont calculés change. Dans notre exemple, le traitement est même un peu plus complexe car la valeur de l’attribut « âge » évolue aussi en fonction d’un paramètre indépendant de l’application : la date du jour. </p>
 <p><strong>Attributs de classe :</strong></p>
-<p>Attribut commun à toutes les instances de classe. II n’existe <mark>qu’une seule</mark> instanciation de cet attribut pour toutes les occurrences de la classe. C’est l’équivalent du <code>static</code> en java.
+<p>Attribut commun à toutes les instances de classe. II n’existe <mark>qu’une seule</mark> instanciation de cet attribut pour toutes les occurrences de la classe. C’est l’équivalent du <code class="language-text highlight">static</code> en java.
 <br />
 Les instances ont accès à cet attribut mais n’en possède pas une copie. Il est partagé par l’ensemble des instances.<br />
 Les attributs de classe sont <ins>soulignés</ins>.<br />
@@ -5174,7 +5174,7 @@ Cette solution ne rend cependant pas compte du « ou exclusif » de la fin de la
 Par conséquent, un nom d'attribut doit <strong>toujours</strong> être au singulier.<br /></p>
 <p><ins>Exemple :</ins> Dans la propriété note d’une entité ELEVE, on ne peut avoir qu’une seule note. Si on veut la note de plusieurs matières, il faut mettre autant de propriétés qu’il y a de matières, par exemple noteANGL, noteEDM, noteMATH, etc.<br /></p>
 <h3 id="52-regles-concernant-les-classes">5.2 Règles concernant les classes<a class="headerlink" href="#52-regles-concernant-les-classes" title="Permanent link">⚓︎</a></h3>
-<p><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0031-20e3.svg" title=":one:" /> Toute classe doit comporter un <strong>identifiant</strong> qui permet de distinguer entre elles toutes les occurrences d’une même entité. L’identifiant est placé en tête des propriétés et il est suivi de <code>&lt;&lt;id&gt;&gt;</code>.<br /></p>
+<p><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0031-20e3.svg" title=":one:" /> Toute classe doit comporter un <strong>identifiant</strong> qui permet de distinguer entre elles toutes les occurrences d’une même entité. L’identifiant est placé en tête des propriétés et il est suivi de <code class="language-text highlight">&lt;&lt;id&gt;&gt;</code>.<br /></p>
 <p><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0032-20e3.svg" title=":two:" /> Le nombre d’attributs et de méthodes est variable selon chaque classe. Toutefois, un nombre élevé d’attributs et/ou de méthodes est déconseillé. Il ne reflète pas, en général, une bonne conception de la classe.<br /></p>
 <h3 id="53-regles-concernant-les-cardinalites">5.3 Règles concernant les cardinalités<a class="headerlink" href="#53-regles-concernant-les-cardinalites" title="Permanent link">⚓︎</a></h3>
 <p><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0031-20e3.svg" title=":one:" /> Une cardinalité ne doit pas être inventé mais dépend du contexte. En l’absence de spécification explicite, les cardinalités minimales et maximales valent 1.<br /></p>

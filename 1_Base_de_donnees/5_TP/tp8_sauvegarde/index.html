@@ -4617,14 +4617,14 @@
 <h1 id="sauvegarde-de-base-de-donnees-sous-mysql">Sauvegarde de Base de données sous MySQL<a class="headerlink" href="#sauvegarde-de-base-de-donnees-sous-mysql" title="Permanent link">⚓︎</a></h1>
 <h2 id="0-preparation-de-lenvironnement">0. Préparation de l’environnement<a class="headerlink" href="#0-preparation-de-lenvironnement" title="Permanent link">⚓︎</a></h2>
 <ol>
-<li>Récupérer la base de données exemple <code>tp_sauvegarde</code>.
+<li>Récupérer la base de données exemple <code class="language-scdoc highlight">tp_sauvegarde</code>.
 <a class="md-button md-button--primary" href="../data/tpSauv/tp_sauvegarde.sql">Télécharger base sauvegarde <img alt="⬇️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2b07.svg" title=":arrow_down:" /></a></li>
 </ol>
 <details class="note">
 <summary>Descriptif</summary>
-<p><code>utilisateurs</code> : contient les informations des utilisateurs inscrits.<br />
-  <code>commandes</code> : enregistre les commandes passées par les utilisateurs. Une relation existe entre les tables utilisateurs et commandes grâce à la clé étrangère <code>utilisateur_id</code>.<br />
-  <code>logs</code> : journalise les actions réalisées dans le système.</p>
+<p><code class="language-text highlight">utilisateurs</code> : contient les informations des utilisateurs inscrits.<br />
+  <code class="language-text highlight">commandes</code> : enregistre les commandes passées par les utilisateurs. Une relation existe entre les tables utilisateurs et commandes grâce à la clé étrangère <code class="language-scdoc highlight">utilisateur_id</code>.<br />
+  <code class="language-text highlight">logs</code> : journalise les actions réalisées dans le système.</p>
 </details>
 <ol>
 <li>Visualiser sa structure et son contenu :</li>
@@ -4646,28 +4646,28 @@
 <details class="warning">
 <summary>préalable</summary>
 <ul>
-<li>localiser <code>mysqldump.exe</code> qui doit etre dans <code>C:\wamp64\bin\mysql\mysqlX.X.X\bin</code><br /></li>
+<li>localiser <code class="language-text highlight">mysqldump.exe</code> qui doit etre dans <code class="language-text highlight">C:\wamp64\bin\mysql\mysqlX.X.X\bin</code><br /></li>
 <li>Ajouter ce chemin dans les variables d'environnement de Windows. Cela permettra d'utiliser la commande MySQLdump depuis une invite de commande peu importe le répertoire ou l'on se trouve<br /></li>
 </ul>
 <p><strong>Détail</strong>  <br />
   - Accédez à <strong>Panneau de configuration &gt; Système &gt; Paramètres avancés &gt; Variables d'environnement</strong>.<br />
   - Trouvez la variable <strong>Path</strong> dans la section <mark>Système</mark> et cliquez sur Modifier.<br />
-  - Ajoutez le chemin vers le répertoire bin de MySQL (par exemple, <code>C:\Program Files\MySQL\MySQL Server X.X\bin</code>).<br />
+  - Ajoutez le chemin vers le répertoire bin de MySQL (par exemple, <code class="language-text highlight">C:\Program Files\MySQL\MySQL Server X.X\bin</code>).<br />
   - Redémarrez l’Invite de commandes.
-  - tester si cela fonctionne en ouvrant une invite de commande <strong>cmd</strong> et en tapant <code>mysqldump --version</code><br /></p>
+  - tester si cela fonctionne en ouvrant une invite de commande <strong>cmd</strong> et en tapant <code class="language-text highlight">mysqldump --version</code><br /></p>
 </details>
-<h4 id="21-sauvegarde-avec-mysqldump">2.1 Sauvegarde avec <code>mysqldump</code><a class="headerlink" href="#21-sauvegarde-avec-mysqldump" title="Permanent link">⚓︎</a></h4>
+<h4 id="21-sauvegarde-avec-mysqldump">2.1 Sauvegarde avec <code class="language-text highlight">mysqldump</code><a class="headerlink" href="#21-sauvegarde-avec-mysqldump" title="Permanent link">⚓︎</a></h4>
 <p>👉 Expliquer la commande de base pour sauvegarder une base de données </p>
 <p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>mysqldump<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>tp_sauvegarde<span class="w"> </span>&gt;<span class="w"> </span>sauvegarde_tp.sql
 </code></pre></div>
-<strong>note</strong> : le mot de passe demandé à l'execution de la commande est celui de la base de données (associé au <code>root</code>)</p>
+<strong>note</strong> : le mot de passe demandé à l'execution de la commande est celui de la base de données (associé au <code class="language-text highlight">root</code>)</p>
 <p><strong>indication</strong> : lire la <a href="https://dev.mysql.com/doc/refman/8.4/en/mysqldump.html" target="blank">documentation</a></p>
 <p>👉 Vérifier que le fichier de sauvegarde est bien créé. Où a t'il été créé ?</p>
 <details class="question">
 <summary>solution</summary>
-<p>Le fichier <code>sauvegarde_tp.sql</code> est créé dans le répertoire où la commande a été exécutée.</p>
+<p>Le fichier <code class="language-scdoc highlight">sauvegarde_tp.sql</code> est créé dans le répertoire où la commande a été exécutée.</p>
 </details>
-<p>👉 Lancer un éditeur de texte pour explorer le contenu de <code>sauvegarde_tp.sql</code> et expliquer le format des sauvegardes (fichiers SQL).</p>
+<p>👉 Lancer un éditeur de texte pour explorer le contenu de <code class="language-scdoc highlight">sauvegarde_tp.sql</code> et expliquer le format des sauvegardes (fichiers SQL).</p>
 <p>❓ Quelles sont les informations présentes dans le fichier de sauvegarde ?</p>
 <details class="question">
 <summary>correction</summary>
@@ -4700,7 +4700,7 @@
 👉 Vérifier que les données sont restaurées :
    <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">logs</span><span class="p">;</span>
 </code></pre></div></p>
-<p>❓ Que se passe-t-il si la base de données <code>tp_sauvegarde</code> n’existe pas avant la restauration ?</p>
+<p>❓ Que se passe-t-il si la base de données <code class="language-scdoc highlight">tp_sauvegarde</code> n’existe pas avant la restauration ?</p>
 <details class="question">
 <summary>proposition</summary>
 <p>Erreur SQL, la base n'existe pas.</p>
@@ -4708,14 +4708,14 @@
 <p>❓ Que faire pour éviter ce problème lors de grandes restaurations ?</p>
 <details class="question">
 <summary>proposition</summary>
-<p>Inclure l'option <code>--add-drop-database</code> lors de la sauvegarde pour que le fichier contienne la commande <code>DROP DATABASE IF EXISTS</code>.</p>
+<p>Inclure l'option <code class="language-text highlight">--add-drop-database</code> lors de la sauvegarde pour que le fichier contienne la commande <code class="language-teratermmacro highlight"><span class="nv">DROP</span><span class="w"> </span><span class="nv">DATABASE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="nv">EXISTS</span></code>.</p>
 </details>
 <h4 id="24-automatisation-des-sauvegardes">2.4 Automatisation des sauvegardes<a class="headerlink" href="#24-automatisation-des-sauvegardes" title="Permanent link">⚓︎</a></h4>
 <p>👉 Expliquer comment planifier des sauvegardes régulières avec le planificateur de tâches sous Windows.</p>
 <details class="question">
 <summary>proposition</summary>
 <p><strong>Étape 1 : Préparer le script de sauvegarde</strong><br />
-  1. Créez un fichier batch (par exemple, <code>backup_mysql.bat</code>) :
+  1. Créez un fichier batch (par exemple, <code class="language-scdoc highlight">backup_mysql.bat</code>) :
      <div class="language-batch highlight"><span class="filename">Batchfile</span><pre><span></span><code><span class="p">@</span><span class="k">echo</span> off
 <span class="k">set</span> <span class="nv">BACKUP_DIR</span><span class="p">=</span>C:\backups
 <span class="k">set</span> <span class="nv">TIMESTAMP</span><span class="p">=</span><span class="nv">%date:~10,4%</span>-<span class="nv">%date:~4,2%</span>-<span class="nv">%date:~7,2%</span>
@@ -4737,8 +4737,8 @@ mysqldump -u <span class="nv">%MYSQL_USER%</span> -p<span class="nv">%MYSQL_PASS
 </code></pre></div>
   <strong>Explications des variables :</strong></p>
 <ul>
-<li><strong>BACKUP_DIR</strong> : Répertoire où les sauvegardes seront enregistrées. Vous pouvez modifier <code>C:\backups</code> par un chemin de votre choix.<br /></li>
-<li><strong>MYSQL_USER</strong> et <strong>MYSQL_PASSWORD</strong> : Identifiants de connexion à votre serveur MySQL. Remplacez VotreMotDePasse par le mot de passe du compte MySQL <code>root</code> (ou un autre utilisateur disposant des droits nécessaires).<br /></li>
+<li><strong>BACKUP_DIR</strong> : Répertoire où les sauvegardes seront enregistrées. Vous pouvez modifier <code class="language-text highlight">C:\backups</code> par un chemin de votre choix.<br /></li>
+<li><strong>MYSQL_USER</strong> et <strong>MYSQL_PASSWORD</strong> : Identifiants de connexion à votre serveur MySQL. Remplacez VotreMotDePasse par le mot de passe du compte MySQL <code class="language-text highlight">root</code> (ou un autre utilisateur disposant des droits nécessaires).<br /></li>
 <li>
 <p><strong>TIMESTAMP</strong> : Génère une date au format YYYY-MM-DD pour inclure dans le nom du fichier.</p>
 </li>
@@ -4747,12 +4747,12 @@ mysqldump -u <span class="nv">%MYSQL_USER%</span> -p<span class="nv">%MYSQL_PASS
 </li>
 </ul>
 <p><strong>Étape 2 : Configurer le Planificateur de tâches</strong><br />
-  1. Ouvrez le <strong>Planificateur de tâches</strong> : Appuyez sur <code>Win + R</code>, tapez <code>taskschd.msc</code> et appuyez sur Entrée.<br />
+  1. Ouvrez le <strong>Planificateur de tâches</strong> : Appuyez sur <code class="language-text highlight">Win + R</code>, tapez <code class="language-text highlight">taskschd.msc</code> et appuyez sur Entrée.<br />
   2. Créez une nouvelle tâche :Cliquez sur <strong>Créer une tâche...</strong> dans le menu de droite.<br />
   3. Configurez la tâche :<br />
   <strong>Général :</strong> Donnez un nom à la tâche, par exemple, "Sauvegarde MySQL", puis Cochez <strong>Exécuter même si l'utilisateur n'est pas connecté</strong> et sélectionnez <strong>Exécuter avec les autorisations maximales</strong>.<br />
   <strong>Déclencheurs :</strong> Cliquez sur <strong>Nouveau...</strong> et planifiez l'exécution (par exemple, quotidiennement à 2h du matin).<br />
-  <strong>Actions :</strong> Cliquez sur <strong>Nouveau...</strong>, choisissez <strong>Démarrer un programme</strong>, et indiquez le chemin vers votre fichier batch (<code>backup_mysql.bat</code>).<br />
+  <strong>Actions :</strong> Cliquez sur <strong>Nouveau...</strong>, choisissez <strong>Démarrer un programme</strong>, et indiquez le chemin vers votre fichier batch (<code class="language-scdoc highlight">backup_mysql.bat</code>).<br />
   4. Sauvegardez et testez : Cliquez sur <strong>OK</strong> et exécutez la tâche manuellement pour vérifier son fonctionnement.</p>
 </details>
 <p>❓ Donner une commande sauvegarder 2 bases de données en même temps.</p>

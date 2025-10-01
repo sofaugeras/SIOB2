@@ -4532,71 +4532,71 @@
 <p><img alt="base bibliothèque" class="center" src="../../2_LMD/data/bibli.png" width="50%" /></p>
 <p><a class="md-button md-button--primary" href="../data/script_creation_bibli.sql">Télécharger fichier Création de la base BIBLI <img alt="⬇️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2b07.svg" title=":arrow_down:" /></a></p>
 <p>Donner les instructions SQL pour réaliser les traitements qui suivent.</p>
-<p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Actions réalisées par l’administrateur (compte <code>root</code>) :</p>
-<p><strong>R1 :</strong> L’utilisateur <code>bibliAdm</code> peut consulter toutes les tables des bases de données présentes sur le serveur.</p>
+<p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Actions réalisées par l’administrateur (compte <code class="language-text highlight">root</code>) :</p>
+<p><strong>R1 :</strong> L’utilisateur <code class="language-text highlight">bibliAdm</code> peut consulter toutes les tables des bases de données présentes sur le serveur.</p>
 <details class="question">
 <summary>Solution</summary>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code>
 </code></pre></div>
 </details>
-<p><strong>R2 :</strong> <code>bibliAdm</code>  peut  créer  des  utilisateurs et  leur attribuer ses droits.</p>
+<p><strong>R2 :</strong> <code class="language-text highlight">bibliAdm</code>  peut  créer  des  utilisateurs et  leur attribuer ses droits.</p>
 <details class="question">
 <summary>Solution</summary>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code>
 </code></pre></div>
 </details>
-<p><strong>R3 :</strong> <code>bibliAdm</code> possède tous les droits sur la base « bibli ».</p>
+<p><strong>R3 :</strong> <code class="language-text highlight">bibliAdm</code> possède tous les droits sur la base « bibli ».</p>
 <details class="question">
 <summary>Solution</summary>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code>
 </code></pre></div>
 </details>
-<p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Actions réalisées par l’administrateur de la base « bibli » (compte <code>bibliAdm</code>) :</p>
-<p><strong>R4 :</strong> Création d’un utilisateur <code>bibliCli</code> avec pour mot de passe « cli974 ».</p>
+<p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Actions réalisées par l’administrateur de la base « bibli » (compte <code class="language-text highlight">bibliAdm</code>) :</p>
+<p><strong>R4 :</strong> Création d’un utilisateur <code class="language-text highlight">bibliCli</code> avec pour mot de passe « cli974 ».</p>
 <details class="question">
 <summary>Solution</summary>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code>
 </code></pre></div>
 </details>
-<p><strong>R5 :</strong> <code>bibliCli</code> peut consulter toutes les tables de la base « bibli ».</p>
+<p><strong>R5 :</strong> <code class="language-text highlight">bibliCli</code> peut consulter toutes les tables de la base « bibli ».</p>
 <details class="question">
 <summary>Solution</summary>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code>
 </code></pre></div>
 </details>
-<p><strong>R6 :</strong> <code>bibliCli</code> peut ajouter et modifier les enregistrements dans la table « emprunter ».</p>
+<p><strong>R6 :</strong> <code class="language-text highlight">bibliCli</code> peut ajouter et modifier les enregistrements dans la table « emprunter ».</p>
 <details class="question">
 <summary>Solution</summary>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code>
 </code></pre></div>
 </details>
-<p><strong>R7 :</strong> <code>bibliCli</code> peut modifier le prénom des lecteurs dans la table « lecteur ».</p>
+<p><strong>R7 :</strong> <code class="language-text highlight">bibliCli</code> peut modifier le prénom des lecteurs dans la table « lecteur ».</p>
 <details class="question">
 <summary>Solution</summary>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code>
 </code></pre></div>
 </details>
-<p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Actions réalisées par l’administrateur de la base « bibli » (compte <code>bibliAdm</code>) :</p>
-<p><strong>R8 :</strong> L’utilisateur <code>bibliCli</code> n’a plus le droit de modifier la table <code>emprunter</code>.</p>
+<p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Actions réalisées par l’administrateur de la base « bibli » (compte <code class="language-text highlight">bibliAdm</code>) :</p>
+<p><strong>R8 :</strong> L’utilisateur <code class="language-text highlight">bibliCli</code> n’a plus le droit de modifier la table <code class="language-text highlight">emprunter</code>.</p>
 <details class="question">
 <summary>Solution</summary>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code>
 </code></pre></div>
 </details>
-<p><strong>R9 :</strong> L’utilisateur <code>bibliCli</code> n’a plus le droit de modifier la colonne <code>prenomlecteur</code> de la table <code>lecteur</code>.</p>
+<p><strong>R9 :</strong> L’utilisateur <code class="language-text highlight">bibliCli</code> n’a plus le droit de modifier la colonne <code class="language-text highlight">prenomlecteur</code> de la table <code class="language-text highlight">lecteur</code>.</p>
 <details class="question">
 <summary>Solution</summary>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code>
 </code></pre></div>
 </details>
-<p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Actions réalisées par l’administrateur (compte <code>root</code>) :</p>
-<p><strong>R10 :</strong> L’utilisateur <code>bibliAdm</code> ne peut plus consulter les autres bases que « bibli ».</p>
+<p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Actions réalisées par l’administrateur (compte <code class="language-text highlight">root</code>) :</p>
+<p><strong>R10 :</strong> L’utilisateur <code class="language-text highlight">bibliAdm</code> ne peut plus consulter les autres bases que « bibli ».</p>
 <details class="question">
 <summary>Solution</summary>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code>
 </code></pre></div>
 </details>
-<p><strong>R11 :</strong> L’utilisateur <code>bibliAdm</code> n’a plus le droit d’attribuer des privilèges aux utilisateurs.</p>
+<p><strong>R11 :</strong> L’utilisateur <code class="language-text highlight">bibliAdm</code> n’a plus le droit d’attribuer des privilèges aux utilisateurs.</p>
 <details class="question">
 <summary>Solution</summary>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code>

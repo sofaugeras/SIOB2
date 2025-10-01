@@ -4563,22 +4563,22 @@ CHECK
 ```
 </code></pre></div>
 <p><strong>Définir une valeur par défaut</strong><br />
-Le langage SQL permet de définir une valeur par défaut lorsqu'un champ de la base n'est pas renseigné grâce à la clause <code>DEFAULT</code>. Cela permet notamment de faciliter la création de tables, ainsi que de garantir qu'un champ ne sera pas vide. 
-La clause <code>DEFAULT</code> doit être suivie par la valeur à affecter. Cette valeur peut être un des types suivants : <br /></p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>- constante numérique 
-- constante alphanumérique (chaîne de caractères) 
-- le mot clé ``USER`` (nom de l&#39;utilisateur) 
-- le mot clé ``NULL`` 
-- le mot clé ``CURRENT_DATE`` (date de saisie) 
-- le mot clé ``CURRENT_TIME`` (heure de saisie) 
-- le mot clé ``CURRENT_TIMESTAMP`` (date et heure de saisie)
+Le langage SQL permet de définir une valeur par défaut lorsqu'un champ de la base n'est pas renseigné grâce à la clause <code class="language-text highlight">DEFAULT</code>. Cela permet notamment de faciliter la création de tables, ainsi que de garantir qu'un champ ne sera pas vide. 
+La clause <code class="language-text highlight">DEFAULT</code> doit être suivie par la valeur à affecter. Cette valeur peut être un des types suivants : <br /></p>
+<div class="language-mysql highlight"><span class="filename">MySQL</span><pre><span></span><code><span class="o">-</span><span class="w"> </span><span class="n">constante</span><span class="w"> </span><span class="n">numérique</span><span class="w"> </span>
+<span class="o">-</span><span class="w"> </span><span class="n">constante</span><span class="w"> </span><span class="n">alphanumérique</span><span class="w"> </span><span class="p">(</span><span class="n">chaîne</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">caractères</span><span class="p">)</span><span class="w"> </span>
+<span class="o">-</span><span class="w"> </span><span class="n">le</span><span class="w"> </span><span class="n">mot</span><span class="w"> </span><span class="n">clé</span><span class="w"> </span><span class="n n-Quoted">``</span><span class="k">USER</span><span class="n n-Quoted">``</span><span class="w"> </span><span class="p">(</span><span class="n">nom</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">l</span><span class="s1">&#39;utilisateur) </span>
+<span class="s1">- le mot clé ``NULL`` </span>
+<span class="s1">- le mot clé ``CURRENT_DATE`` (date de saisie) </span>
+<span class="s1">- le mot clé ``CURRENT_TIME`` (heure de saisie) </span>
+<span class="s1">- le mot clé ``CURRENT_TIMESTAMP`` (date et heure de saisie)</span>
 </code></pre></div>
 <p><strong>Forcer la saisie d'un champ</strong><br />
-Le mot clé <code>NOT NULL</code> permet de spécifier qu'un champ doit être saisi, c'est-à-dire que le SGBD refusera d'insérer des tuples dont un champ comportant la clause <code>NOT NULL</code> n'est pas renseigné. <br /></p>
+Le mot clé <code class="language-text highlight">NOT NULL</code> permet de spécifier qu'un champ doit être saisi, c'est-à-dire que le SGBD refusera d'insérer des tuples dont un champ comportant la clause <code class="language-text highlight">NOT NULL</code> n'est pas renseigné. <br /></p>
 <p><strong>Emettre une condition sur un champ</strong><br />
-Il est possible de faire un test sur un champ grâce à la clause <code>CHECK()</code> comportant une condition logique portant sur une valeur entre les parenthèses. Si la valeur saisie est différente de <code>NULL</code>, le SGBD va effectuer un test grâce à la condition logique. Celui-ci peut évenutellement être une condition avec des ordres <code>SELECT...</code> <br /></p>
+Il est possible de faire un test sur un champ grâce à la clause <code class="language-text highlight">CHECK()</code> comportant une condition logique portant sur une valeur entre les parenthèses. Si la valeur saisie est différente de <code class="language-text highlight">NULL</code>, le SGBD va effectuer un test grâce à la condition logique. Celui-ci peut évenutellement être une condition avec des ordres <code class="language-text highlight">SELECT...</code> <br /></p>
 <p><strong>Tester l'unicité d'une valeur</strong><br />
-La clause <code>UNIQUE</code> permet de vérifier que la valeur saisie pour un champ n'existe pas déjà dans la table. Cela permet de garantir que toutes les valeurs d'une colonne d'une table seront différentes. </p>
+La clause <code class="language-text highlight">UNIQUE</code> permet de vérifier que la valeur saisie pour un champ n'existe pas déjà dans la table. Cela permet de garantir que toutes les valeurs d'une colonne d'une table seront différentes. </p>
 </details>
 <p><strong>R1 :</strong> Créez les tables correspondantes.<img alt="⚠️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/26a0.svg" title=":warning:" /> L'ordre de création des tables doit être cohérent.</p>
 <details class="question">
@@ -4622,21 +4622,21 @@ La clause <code>UNIQUE</code> permet de vérifier que la valeur saisie pour un c
 <span class="w">    </span><span class="p">(</span><span class="s1">&#39;134&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;5&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-10-01 11:41:44&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-10-01 15:41:44&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Q&#39;</span><span class="p">);</span>
 </code></pre></div>
 </details>
-<p><strong>R6 :</strong> Modifiez le tuple <code>(‘5’, ‘Montparnasse’, ‘Paris’)</code> en <code>(‘5’, ‘Paris Montparnasse’, ‘Paris’)</code>, quelles sont les mises à jour à effectuer sur la base ?</p>
+<p><strong>R6 :</strong> Modifiez le tuple <code class="language-text highlight">(‘5’, ‘Montparnasse’, ‘Paris’)</code> en <code class="language-text highlight">(‘5’, ‘Paris Montparnasse’, ‘Paris’)</code>, quelles sont les mises à jour à effectuer sur la base ?</p>
 <details class="question">
 <summary>Correction</summary>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">gare</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">nomGare</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Paris Montparnasse&#39;</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">gare</span><span class="p">.</span><span class="n">codeGare</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span>
 </code></pre></div>
 </details>
-<p><strong>R7 :</strong> Modifiez le tuple <code>(‘5’, ‘Paris Montparnasse’, ‘Paris’)</code> en <code>(‘15’, ‘Paris Montparnasse’, ‘Paris’)</code>, quelles sont les mises à jour à effectuer sur la base ?</p>
+<p><strong>R7 :</strong> Modifiez le tuple <code class="language-text highlight">(‘5’, ‘Paris Montparnasse’, ‘Paris’)</code> en <code class="language-text highlight">(‘15’, ‘Paris Montparnasse’, ‘Paris’)</code>, quelles sont les mises à jour à effectuer sur la base ?</p>
 <details class="question">
 <summary>Correction</summary>
-<p>Le point à noter ici est que le changement se fait sur la clé primaire. Or des enregistrements dans la table <code>TRAIN</code> y sont lié.
+<p>Le point à noter ici est que le changement se fait sur la clé primaire. Or des enregistrements dans la table <code class="language-text highlight">TRAIN</code> y sont lié.
 Dans la méthode, il faudra mieux :</p>
 <ul>
-<li>Créer un nouvel enregistrement <code>(‘15’, ‘Paris Montparnasse’, ‘Paris’)</code></li>
+<li>Créer un nouvel enregistrement <code class="language-text highlight">(‘15’, ‘Paris Montparnasse’, ‘Paris’)</code></li>
 <li>Mettre à jour les enregistrements liés</li>
-<li>Supprimer l'enregistrement <code>(‘5’, ‘Paris Montparnasse’, ‘Paris’)</code></li>
+<li>Supprimer l'enregistrement <code class="language-text highlight">(‘5’, ‘Paris Montparnasse’, ‘Paris’)</code></li>
 </ul>
 <p><div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">gare</span><span class="w"> </span><span class="p">(</span><span class="n">codeGare</span><span class="p">,</span><span class="w"> </span><span class="n">nomGare</span><span class="p">,</span><span class="w"> </span><span class="n">nomVille</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span>
 <span class="p">(</span><span class="s1">&#39;15&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Montparnasse&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Paris&#39;</span><span class="p">);</span>
@@ -4646,7 +4646,7 @@ Dans la méthode, il faudra mieux :</p>
 </code></pre></div>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">gare</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">gare</span><span class="p">.</span><span class="n">codeGare</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">gare</span><span class="p">.</span><span class="n">codeGare</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">;</span><span class="w"> </span>
 </code></pre></div>
-provoque l'erreur suivante : <code>#1451 - Cannot delete or update a parent row: a foreign key constraint fails (`sncf`.`train`, CONSTRAINT `fk_gareDep` FOREIGN KEY (`codeGareDep`) REFERENCES `gare` (`codeGare`))</code></p>
+provoque l'erreur suivante : <code class="language-mysql highlight"><span class="c1">#1451 - Cannot delete or update a parent row: a foreign key constraint fails (`sncf`.`train`, CONSTRAINT `fk_gareDep` FOREIGN KEY (`codeGareDep`) REFERENCES `gare` (`codeGare`))</span></code></p>
 </details>
 <p><strong>R8 :</strong> Créez un jeu de donnée pour des trains partant de Questembert. 
 Puis modifiez les données pour que Tous les trains qui partent de Questembert soient de type quotidien.</p>

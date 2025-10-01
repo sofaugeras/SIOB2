@@ -4629,9 +4629,9 @@ Dans ce paragraphe nous étudierons le langage de contrôle des données qui ass
 <p>Plusieurs  personnes  peuvent  travailler  simultanément  sur  une  base  de  données.  Ces personnes n'ont pas forcément les mêmes besoins : certaines peuvent par exemple nécessiter de modifier des données dans une table, tandis que les autres ne l'utiliseront que pour la consulter.</p>
 <p>Ainsi, il  est  possible de  définir des  permissions pour  chaque personne  (ou  plutôt  chaque utilisateur/connexion). Cette tâche incombe à l'<strong>administrateur de la base de données</strong> (en anglais DBA, DataBase Administrator). Il doit dans un premier temps définir les besoins de chacun, puis les appliquer à la(les) base(s) de données sous forme de permissions.</p>
 <h2 id="2-creation-dutilisateur">2. Création d’utilisateur<a class="headerlink" href="#2-creation-dutilisateur" title="Permanent link">⚓︎</a></h2>
-<p>La plupart du temps, lorsque l’on travaille en local avec WAMP, on utilise le compte <code>root</code> (administrateur) de MySQL pour se connecter au serveur et accéder aux bases de données. Cette manière de fonctionner n’est pas sans risques et ne reflète pas la réalité d’un système en production.</p>
+<p>La plupart du temps, lorsque l’on travaille en local avec WAMP, on utilise le compte <code class="language-text highlight">root</code> (administrateur) de MySQL pour se connecter au serveur et accéder aux bases de données. Cette manière de fonctionner n’est pas sans risques et ne reflète pas la réalité d’un système en production.</p>
 <p>Des utilisateurs peuvent être créés via phpMyAdmin ou encore, en utilisant la commande suivante :</p>
-<p><code>CREATE USER user [IDENTIFIED BY [PASSWORD] 'password'] [, user [IDENTIFIED BY [PASSWORD] 'password']]</code> ...</p>
+<p><code class="language-tsql highlight"><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="o">[</span><span class="n">IDENTIFIED BY [PASSWORD</span><span class="o">]</span><span class="w"> </span><span class="s1">&#39;password&#39;</span><span class="err">]</span><span class="w"> </span><span class="o">[</span><span class="n">, user [IDENTIFIED BY [PASSWORD</span><span class="o">]</span><span class="w"> </span><span class="s1">&#39;password&#39;</span><span class="err">]]</span></code> ...</p>
 <p>Pour pouvoir créer un utilisateur, il faut avoir les permissions pour le faire ou bien utiliser le compte administrateur (root)</p>
 <p>Exemple :</p>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">bibliAdm</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;adm974&#39;</span>
@@ -4639,7 +4639,7 @@ Dans ce paragraphe nous étudierons le langage de contrôle des données qui ass
 <p>L’utilisateur est créé, il peut se connecter au serveur MySQL mais il n’a aucun droit. Le privilège associé est nommé USAGE (seule la connexion au serveur est possible)
  </p>
 <h2 id="3-attribution-des-permissions">3. Attribution des permissions<a class="headerlink" href="#3-attribution-des-permissions" title="Permanent link">⚓︎</a></h2>
-<p>C’est la clause <code>GRANT</code> qui permet d'attribuer des permissions à un ou plusieurs utilisateurs sur un ou plusieurs éléments de la base de données.</p>
+<p>C’est la clause <code class="language-text highlight">GRANT</code> qui permet d'attribuer des permissions à un ou plusieurs utilisateurs sur un ou plusieurs éléments de la base de données.</p>
 <p>La syntaxe de cette clause est la suivante :</p>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">GRANT</span><span class="w"> </span><span class="n">Liste_de_permissions</span>
 <span class="k">ON</span><span class="w"> </span><span class="n">Liste_d_objets</span>
@@ -4649,36 +4649,36 @@ Dans ce paragraphe nous étudierons le langage de contrôle des données qui ass
 <h3 id="21-les-principales-permissions">2.1 Les principales permissions :<a class="headerlink" href="#21-les-principales-permissions" title="Permanent link">⚓︎</a></h3>
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> (Liste_de_permissions) :</p>
 <ul>
-<li><code>DELETE</code>     : Privilège de supprimer les données d'une table</li>
-<li><code>INSERT</code>     : Privilège d'ajouter des données à une table</li>
-<li><code>SELECT</code>     : Privilège d'accéder aux données d'une table</li>
-<li><code>UPDATE</code>     : Privilège de mettre à jour les données d'une table</li>
-<li><code>ALL</code>        : Tous les privilèges</li>
+<li><code class="language-text highlight">DELETE</code>     : Privilège de supprimer les données d'une table</li>
+<li><code class="language-text highlight">INSERT</code>     : Privilège d'ajouter des données à une table</li>
+<li><code class="language-text highlight">SELECT</code>     : Privilège d'accéder aux données d'une table</li>
+<li><code class="language-text highlight">UPDATE</code>     : Privilège de mettre à jour les données d'une table</li>
+<li><code class="language-text highlight">ALL</code>        : Tous les privilèges</li>
 </ul>
 <p>Il est également possible d’attribuer par exemple des permissions pour la création et la suppression d’une table, etc…
 La permission peut également porter sur certains champs d’une table. Ceux-ci devront être précisés entre parenthèses.</p>
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Ces permissions peuvent être appliquées sur (Liste_d_objets) :</p>
 <ul>
-<li><code>*.*</code>                   : L’ensemble des bases de données du serveur</li>
-<li><code>nom_base.*</code>            : Une base de données précise</li>
-<li><code>nom_base.une_table</code>    : Une table dans une base de données</li>
+<li><code class="language-scdoc highlight">*.*</code>                   : L’ensemble des bases de données du serveur</li>
+<li><code class="language-scdoc highlight">nom_base.*</code>            : Une base de données précise</li>
+<li><code class="language-scdoc highlight">nom_base.une_table</code>    : Une table dans une base de données</li>
 </ul>
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Enfin, ces permissions peuvent être accordées à (Liste_d_utilisateurs) :</p>
 <ul>
-<li><code>PUBLIC</code>           : L’ensemble des utilisateurs</li>
-<li><code>user [,user]...</code>  : Un ou plusieurs utilisateurs</li>
+<li><code class="language-text highlight">PUBLIC</code>           : L’ensemble des utilisateurs</li>
+<li><code class="language-text highlight">user [,user]...</code>  : Un ou plusieurs utilisateurs</li>
 </ul>
-<p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> L'option <code>WITH GRANT OPTION</code> permet de définir si l'utilisateur peut lui-même accorder à un autre utilisateur les permissions qu'on lui a accordées.</p>
+<p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> L'option <code class="language-text highlight">WITH GRANT OPTION</code> permet de définir si l'utilisateur peut lui-même accorder à un autre utilisateur les permissions qu'on lui a accordées.</p>
 <h2 id="4-suppression-des-permissions">4. Suppression des permissions<a class="headerlink" href="#4-suppression-des-permissions" title="Permanent link">⚓︎</a></h2>
-<p>C’est la clause <code>REVOKE</code> qui permet de retirer des permissions à un ou plusieurs utilisateurs sur un ou plusieurs éléments de la base de données. On parle également de révocation de permission.</p>
+<p>C’est la clause <code class="language-text highlight">REVOKE</code> qui permet de retirer des permissions à un ou plusieurs utilisateurs sur un ou plusieurs éléments de la base de données. On parle également de révocation de permission.</p>
 <p>La syntaxe de cette clause est la suivante :
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">REVOKE</span>
 <span class="p">[</span><span class="k">GRANT</span><span class="w"> </span><span class="k">OPTION</span><span class="p">]</span><span class="w"> </span><span class="n">Liste_de_permissions</span>
 <span class="k">ON</span><span class="w"> </span><span class="n">Liste_d_objets</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">Liste_d_utilisateurs</span><span class="p">;</span>
 </code></pre></div>
-<code>Liste_de_permissions</code>, <code>Liste_d_objets</code> et <code>Liste_d_utilisateurs</code> correspondent aux mêmes paramètres que pour la clause <code>GRANT</code>.</p>
-<p>L'option <code>GRANT OPTION</code> permet de supprimer le droit d'un utilisateur à accorder des permissions à un autre utilisateur.</p>
+<code class="language-scdoc highlight">Liste_de_permissions</code>, <code class="language-scdoc highlight">Liste_d_objets</code> et <code class="language-scdoc highlight">Liste_d_utilisateurs</code> correspondent aux mêmes paramètres que pour la clause <code class="language-text highlight">GRANT</code>.</p>
+<p>L'option <code class="language-text highlight">GRANT OPTION</code> permet de supprimer le droit d'un utilisateur à accorder des permissions à un autre utilisateur.</p>
 <div class="admonition warning">
 <p class="admonition-title">A retenir  <img alt="⚓️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2693.svg" title=":anchor:" /></p>
 <p>En cybersécurité, il est recommandé d'appliquer le <strong>principe du moindre privilège</strong>. Cela signifie qu'un utilisateur ne doit avoir que les droits strictement nécessaires pour accomplir ses tâches, et rien de plus. Créer un utilisateur distinct pour chaque base de données et lui accorder des droits limités est une pratique ABSOLUMENT nécessaire pour limiter les risques en cas de compromission.</p>
@@ -4686,7 +4686,7 @@ La permission peut également porter sur certains champs d’une table. Ceux-ci 
 <span class="k">GRANT</span><span class="w"> </span><span class="k">SELECT</span><span class="p">,</span><span class="w"> </span><span class="k">INSERT</span><span class="p">,</span><span class="w"> </span><span class="k">UPDATE</span><span class="p">,</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">mabase</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;utilisateur_mabase&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="p">;</span>
 <span class="n">FLUSH</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="p">;</span>
 </code></pre></div>
-Cela crée l'utilisateur <code>utilisateur_mabase</code>, lui donne tous les droits sur la base <code>mabase</code>, et actualise les privilèges pour que les changements soient pris en compte immédiatement.</p>
+Cela crée l'utilisateur <code class="language-scdoc highlight">utilisateur_mabase</code>, lui donne tous les droits sur la base <code class="language-text highlight">mabase</code>, et actualise les privilèges pour que les changements soient pris en compte immédiatement.</p>
 <p>Cela garantit que cet utilisateur ne peut que manipuler les données sans affecter la structure de la base de données.</p>
 <p>En suivant ces principes, on minimise les risques et réduit l'impact potentiel d'une violation de sécurité.</p>
 </div>

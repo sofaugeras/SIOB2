@@ -4608,36 +4608,36 @@
 <p>Mais actuellement, un attaquant pourrait tenter <strong>des milliers de mots de passe</strong> sur un même compte sans contrainte.<br />
 👉 Vous devez <strong>protéger la page de login</strong> contre les attaques par force brute.</p>
 <h2 id="2-travail-guide">2. Travail guidé<a class="headerlink" href="#2-travail-guide" title="Permanent link">⚓︎</a></h2>
-<p>1.<strong>Modifier la base de données <code>users</code></strong> pour ajouter des colonnes de sécurité :</p>
+<p>1.<strong>Modifier la base de données <code class="language-text highlight">users</code></strong> pour ajouter des colonnes de sécurité :</p>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="w">   </span><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span>
 <span class="w">   </span><span class="k">ADD</span><span class="w"> </span><span class="n">failed_attempts</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
 <span class="w">   </span><span class="k">ADD</span><span class="w"> </span><span class="n">last_failed_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">   </span><span class="k">ADD</span><span class="w"> </span><span class="n">lock_until</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
 </code></pre></div>
-<p>2.<strong>Mettre à jour <code>login.php</code></strong> pour :</p>
+<p>2.<strong>Mettre à jour <code class="language-text highlight">login.php</code></strong> pour :</p>
 <ul>
-<li>Vérifier si le compte est verrouillé (<code>lock_until &gt; NOW()</code>) → refuser la connexion.</li>
+<li>Vérifier si le compte est verrouillé (<code class="language-scdoc highlight">lock_until &gt; NOW()</code>) → refuser la connexion.</li>
 <li>
 <p>En cas d’échec de login :</p>
 <ul>
-<li>Incrémenter <code>failed_attempts</code> et mettre à jour <code>last_failed_at</code>.</li>
+<li>Incrémenter <code class="language-scdoc highlight">failed_attempts</code> et mettre à jour <code class="language-scdoc highlight">last_failed_at</code>.</li>
 <li>
 <p>Appliquer une politique :</p>
 </li>
 <li>
 <p>après 5 échecs consécutifs → ajouter un délai (sleep).</p>
 </li>
-<li>après 10 échecs → verrouiller le compte 15 minutes (<code>lock_until</code>).</li>
+<li>après 10 échecs → verrouiller le compte 15 minutes (<code class="language-scdoc highlight">lock_until</code>).</li>
 </ul>
 </li>
 <li>
-<p>En cas de succès → réinitialiser <code>failed_attempts</code>.</p>
+<p>En cas de succès → réinitialiser <code class="language-scdoc highlight">failed_attempts</code>.</p>
 </li>
 </ul>
 <p>3.<strong>Bonus (optionnel)</strong> :</p>
 <ul>
-<li>Protection par <strong>IP</strong> : créer une table <code>login_attempts (ip, attempts, last_attempt)</code>.</li>
-<li>Après 100 tentatives depuis une IP → bloquer 1 h. (utiliser un script python avec <code>`requests</code> pour lancer les 100 requêtes HTTP)</li>
+<li>Protection par <strong>IP</strong> : créer une table <code class="language-scdoc highlight">login_attempts (ip, attempts, last_attempt)</code>.</li>
+<li>Après 100 tentatives depuis une IP → bloquer 1 h. (utiliser un script python avec <code class="language-text highlight">`requests</code> pour lancer les 100 requêtes HTTP)</li>
 <li>Afficher un <strong>message générique</strong> (« Identifiants incorrects ») sans indiquer si l’email existe.</li>
 </ul>
 <p><strong>Comportement attendu :</strong></p>
@@ -4679,8 +4679,8 @@
 <tr>
 <td style="text-align: right;">B1</td>
 <td>Schéma DB mis à jour</td>
-<td><code>schema_tp2.sql</code> appliqué</td>
-<td>Vérifier colonnes <code>failed_attempts</code>, <code>lock_until</code></td>
+<td><code class="language-scdoc highlight">schema_tp2.sql</code> appliqué</td>
+<td>Vérifier colonnes <code class="language-scdoc highlight">failed_attempts</code>, <code class="language-scdoc highlight">lock_until</code></td>
 <td>Colonnes présentes</td>
 <td></td>
 </tr>
@@ -4689,7 +4689,7 @@
 <td>Échec simple incrémente compteur</td>
 <td>Compte existant</td>
 <td>Tenter login avec mot de passe incorrect 1 fois</td>
-<td><code>failed_attempts</code> = 1, <code>last_failed_at</code> mis à jour</td>
+<td><code class="language-scdoc highlight">failed_attempts</code> = 1, <code class="language-scdoc highlight">last_failed_at</code> mis à jour</td>
 <td></td>
 </tr>
 <tr>
@@ -4705,7 +4705,7 @@
 <td>Verrouillage temporaire</td>
 <td>Après 10 échecs consécutifs</td>
 <td>Faire 10ᵉ puis 11ᵉ échec</td>
-<td><code>lock_until</code> défini (NOW + 15min), messages appropriés</td>
+<td><code class="language-scdoc highlight">lock_until</code> défini (NOW + 15min), messages appropriés</td>
 <td></td>
 </tr>
 <tr>
@@ -4719,9 +4719,9 @@
 <tr>
 <td style="text-align: right;">B6</td>
 <td>Réinitialisation après succès</td>
-<td>Compte avec <code>failed_attempts</code>&gt;0</td>
+<td>Compte avec <code class="language-scdoc highlight">failed_attempts</code>&gt;0</td>
 <td>Réussir login avec mot de passe correct</td>
-<td><code>failed_attempts</code> remis à 0, <code>lock_until</code> NULL</td>
+<td><code class="language-scdoc highlight">failed_attempts</code> remis à 0, <code class="language-scdoc highlight">lock_until</code> NULL</td>
 <td></td>
 </tr>
 <tr>
@@ -4735,7 +4735,7 @@
 <tr>
 <td style="text-align: right;">B8</td>
 <td>Limite IP (soft) — bonus</td>
-<td>Table <code>login_attempts</code> présente</td>
+<td>Table <code class="language-scdoc highlight">login_attempts</code> présente</td>
 <td>Simuler &gt;100 tentatives depuis même IP en 1h</td>
 <td>Réponse : message "Trop de tentatives" ou blocage</td>
 <td></td>
@@ -4743,9 +4743,9 @@
 <tr>
 <td style="text-align: right;">B9</td>
 <td>Interaction MFA + lock</td>
-<td>Compte MFA activé et <code>failed_attempts</code> élevé</td>
+<td>Compte MFA activé et <code class="language-scdoc highlight">failed_attempts</code> élevé</td>
 <td>Après verrouillage, tenter bypass MFA</td>
-<td>Impossible d'atteindre <code>mfa_verify.php</code> sans mot de passe correct</td>
+<td>Impossible d'atteindre <code class="language-scdoc highlight">mfa_verify.php</code> sans mot de passe correct</td>
 <td></td>
 </tr>
 <tr>
@@ -4768,8 +4768,8 @@
 </table>
 <details class="question">
 <summary>Corrigé</summary>
-<p><strong>Exemple <code>login.php</code> (simplifié avec anti-bruteforce)</strong></p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="k">require</span> <span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/config.php&#39;</span><span class="p">;</span> <span class="cp">?&gt;</span>
+<p><strong>Exemple <code class="language-text highlight">login.php</code> (simplifié avec anti-bruteforce)</strong></p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="o">&lt;?</span><span class="nx">php</span> <span class="k">require</span> <span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/config.php&#39;</span><span class="p">;</span> <span class="cp">?&gt;</span>
 <span class="x">&lt;!DOCTYPE html&gt;</span>
 <span class="x">&lt;html lang=&quot;fr&quot;&gt;</span>
 <span class="x">&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Connexion sécurisée&lt;/title&gt;&lt;/head&gt;</span>

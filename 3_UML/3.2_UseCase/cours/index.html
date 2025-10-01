@@ -4816,7 +4816,7 @@ De plus, il est incorrect d’utiliser un trait plein pour relier deux cas d’u
 </details>
 <h2 id="3-relations-entre-cas-dutilisation">3. Relations entre cas d’utilisation<a class="headerlink" href="#3-relations-entre-cas-dutilisation" title="Permanent link">⚓︎</a></h2>
 <h3 id="31-inclusion">3.1 Inclusion<a class="headerlink" href="#31-inclusion" title="Permanent link">⚓︎</a></h3>
-<p><strong>Relation d’utilisation</strong> : <code>&lt;&lt;include&gt;&gt;</code> : Le cas d’utilisation contient un autre cas d’utilisation<br /></p>
+<p><strong>Relation d’utilisation</strong> : <code class="language-teratermmacro highlight"><span class="o">&lt;&lt;</span><span class="k">include</span><span class="o">&gt;&gt;</span></code> : Le cas d’utilisation contient un autre cas d’utilisation<br /></p>
 <p>L'inclusion est une relation entre deux cas d'utilisation, où l'un inclut l'exécution de l'autre à un endroit spécifié. Elle est représentée par une flèche pointant vers le cas d'utilisation inclus avec la mention «include». L'inclusion est utilisée pour réutiliser un ensemble de comportements communs dans plusieurs cas d'utilisation sans dupliquer le même scénario dans chacun d'eux. Le cas d'utilisation inclus est généralement appelé "sous-cas d'utilisation".</p>
 <p>Exemple :</p>
 <blockquote>
@@ -4825,7 +4825,7 @@ De plus, il est incorrect d’utiliser un trait plein pour relier deux cas d’u
 Dans cet exemple, "Sélectionner le mode de paiement" est inclus dans le cas d'utilisation "Acheter un produit en ligne".</p>
 </blockquote>
 <h3 id="32-extension">3.2 Extension<a class="headerlink" href="#32-extension" title="Permanent link">⚓︎</a></h3>
-<p><strong>Relation d’extension</strong> : <code>&lt;&lt;extend&gt;&gt;</code>:  Le cas d’utilisation étend (précise) les objectifs (le comportement) d’un autre cas d’utilisation</p>
+<p><strong>Relation d’extension</strong> : <code class="language-text highlight">&lt;&lt;extend&gt;&gt;</code>:  Le cas d’utilisation étend (précise) les objectifs (le comportement) d’un autre cas d’utilisation</p>
 <p>L'extension est une relation entre deux cas d'utilisation, où l'un étend le comportement de l'autre à un point spécifié sans modifier le scénario de base. Elle est représentée par une flèche pointant vers le cas d'utilisation étendu avec la mention «extend». L'extension est utilisée pour modéliser des comportements optionnels ou conditionnels qui peuvent enrichir le scénario de base. Le cas d'utilisation étendu est généralement appelé "extension".</p>
 <p>Exemple :</p>
 <blockquote>
@@ -4853,7 +4853,7 @@ Le système recalcule le coût avec le rabais.
 </code></pre></div>
 <p>Suite du Scénario Principal :
 3. Le client confirme la réservation.</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Le système enregistre la réservation.
+<div class="language-verilog highlight"><span class="filename">Verilog</span><pre><span></span><code><span class="n">Le</span><span class="w"> </span><span class="n">système</span><span class="w"> </span><span class="n">enregistre</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">réservation</span><span class="p">.</span>
 </code></pre></div>
 <p>Dans cet exemple, "Appliquer un Rabais Spécial" est le point d'extension, et il indique l'endroit où le scénario d'extension peut être activé sous certaines conditions (par exemple, si le client est un membre fidèle).</p>
 </details>

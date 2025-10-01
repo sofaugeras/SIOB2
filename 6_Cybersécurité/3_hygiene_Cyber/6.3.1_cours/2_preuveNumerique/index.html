@@ -4788,11 +4788,11 @@ Qu'en pensez vous ?</p>
 </div>
 <div class="tabbed-block">
 <p><strong>192.168.1.25 (machine interne)</strong></p>
-<p>Première requête classique : <code>GET /index.php?id=1</code>.</p>
-<p>Puis une requête suspecte : <code>GET /index.php?id=1 OR 1=1</code>.</p>
+<p>Première requête classique : <code class="language-text highlight">GET /index.php?id=1</code>.</p>
+<p>Puis une requête suspecte : <code class="language-text highlight">GET /index.php?id=1 OR 1=1</code>.</p>
 <p>👉 Cela ressemble à une tentative d’injection SQL, car l’expression OR 1=1 est typique pour contourner une requête SQL de connexion.</p>
 <p><strong>203.0.113.45 (IP externe)</strong></p>
-<p>Plusieurs accès à <code>/admin/login.php</code>.</p>
+<p>Plusieurs accès à <code class="language-text highlight">/admin/login.php</code>.</p>
 <p>Plusieurs requêtes POST avec codes 403 (Forbidden).
 👉 Cela ressemble à une tentative de brute force (essais répétés de mot de passe sur la page d’administration).</p>
 <p>🚨 <strong>Ce qui pourrait être en cause</strong></p>
@@ -4858,7 +4858,7 @@ Un attaquant chiffre un disque avec un ransomware. Si on capture la RAM immédia
 <li>Les <strong>métadonnées</strong> (auteur d’un document, date de création, géolocalisation d’une photo).</li>
 </ul>
 <p>💡 <strong>Exemple concret – logs :</strong>
-Un serveur web Apache garde une trace de toutes les connexions. On peut y retrouver une tentative d’attaque par injection SQL (<code>id=1 OR 1=1</code>). Ces logs, même conservés plusieurs mois plus tard, peuvent servir à démontrer qu’une attaque a bien eu lieu.</p>
+Un serveur web Apache garde une trace de toutes les connexions. On peut y retrouver une tentative d’attaque par injection SQL (<code class="language-text highlight">id=1 OR 1=1</code>). Ces logs, même conservés plusieurs mois plus tard, peuvent servir à démontrer qu’une attaque a bien eu lieu.</p>
 <h3 id="23-comparaison-entre-preuves-volatiles-et-non-volatiles">2.3 Comparaison entre preuves volatiles et non volatiles<a class="headerlink" href="#23-comparaison-entre-preuves-volatiles-et-non-volatiles" title="Permanent link">⚓︎</a></h3>
 <table>
 <thead>
@@ -4904,13 +4904,13 @@ Quelle(s) preuve(s) volatile(s) et non volatile(s) pourrais-tu collecter pour pr
 <div class="tabbed-block">
 <p>✅ Preuves <strong>volatiles</strong> :</p>
 <ul>
-<li>Les <strong>connexions réseau actives</strong> (<code>netstat -an</code> → montre l’IP de l’attaquant connectée en SSH).</li>
-<li>Les <strong>processus en cours</strong> (<code>ps aux</code> → peut montrer une session SSH ouverte).</li>
+<li>Les <strong>connexions réseau actives</strong> (<code class="language-text highlight">netstat -an</code> → montre l’IP de l’attaquant connectée en SSH).</li>
+<li>Les <strong>processus en cours</strong> (<code class="language-text highlight">ps aux</code> → peut montrer une session SSH ouverte).</li>
 <li>La <strong>RAM</strong> (peut contenir les commandes tapées par l’attaquant ou des clés de chiffrement).</li>
 </ul>
 <p>✅ Preuves <strong>non volatiles</strong> :</p>
 <ul>
-<li>Les <strong>logs SSH</strong> (<code>/var/log/auth.log</code>) → conservent les tentatives de connexion échouées et réussies.</li>
+<li>Les <strong>logs SSH</strong> (<code class="language-gdscript highlight"><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="nb">log</span><span class="o">/</span><span class="n">auth</span><span class="o">.</span><span class="n">log</span></code>) → conservent les tentatives de connexion échouées et réussies.</li>
 <li>Les <strong>fichiers système modifiés</strong> (ex. ajout d’un nouvel utilisateur par l’attaquant).</li>
 <li>Les <strong>sauvegardes</strong> → permettent de comparer l’état du système avant/après l’intrusion.</li>
 </ul>
@@ -4922,44 +4922,44 @@ Quelle(s) preuve(s) volatile(s) et non volatile(s) pourrais-tu collecter pour pr
 <p>👉 <a href="../data/tp_preuve_volatile.zip">Télécharger les fichiers à analyser</a></p>
 <p><strong>Ce que contient l’archive</strong></p>
 <ul>
-<li><code>ss.txt</code> — sortie simulée de <code>ss -tnp</code> (connexion SSH établie).</li>
-<li><code>psaux.txt</code> — sortie simulée de <code>ps aux</code> (processus <code>sshd</code> + <code>bash</code>).</li>
-<li><code>lsof.txt</code> — sortie simulée montrant le FD lié à la connexion SSH.</li>
-<li><code>auth.log</code> — extrait simulé des logs SSH (tentatives échouées + connexion réussie).</li>
-<li><code>notice_template.txt</code> — modèle à remplir pour la chaîne de conservation.</li>
-<li><code>README.txt</code> — consignes simplifiées et commandes utiles.</li>
+<li><code class="language-text highlight">ss.txt</code> — sortie simulée de <code class="language-text highlight">ss -tnp</code> (connexion SSH établie).</li>
+<li><code class="language-text highlight">psaux.txt</code> — sortie simulée de <code class="language-text highlight">ps aux</code> (processus <code class="language-text highlight">sshd</code> + <code class="language-text highlight">bash</code>).</li>
+<li><code class="language-text highlight">lsof.txt</code> — sortie simulée montrant le FD lié à la connexion SSH.</li>
+<li><code class="language-text highlight">auth.log</code> — extrait simulé des logs SSH (tentatives échouées + connexion réussie).</li>
+<li><code class="language-scdoc highlight">notice_template.txt</code> — modèle à remplir pour la chaîne de conservation.</li>
+<li><code class="language-text highlight">README.txt</code> — consignes simplifiées et commandes utiles.</li>
 </ul>
 <div class="admonition question">
 <p class="admonition-title">A faire</p>
 <ul>
 <li>Télécharger et extraire l’archive.</li>
-<li>Lire les fichiers <code>ss.txt</code>, <code>psaux.txt</code>, <code>lsof.txt</code> et <code>auth.log</code>.</li>
+<li>Lire les fichiers <code class="language-text highlight">ss.txt</code>, <code class="language-text highlight">psaux.txt</code>, <code class="language-text highlight">lsof.txt</code> et <code class="language-text highlight">auth.log</code>.</li>
 </ul>
 <p><strong>Répondre aux questions :</strong></p>
 <ol>
 <li>Quelle est l’adresse IP attaquante ?</li>
 <li>À quelle heure la connexion SSH a-t-elle été établie ?</li>
 <li>Quel compte semble compromis ?</li>
-<li>Calculer les SHA256 des fichiers (exemple : <code>sha256sum /root/evidence/ss_*.txt &gt; /root/evidence/hashes.txt</code>)</li>
+<li>Calculer les SHA256 des fichiers (exemple : <code class="language-scdoc highlight">sha256sum /root/evidence/ss_*.txt &gt; /root/evidence/hashes.txt</code>)</li>
+<li>Rédiger à l'aide de <code class="language-scdoc highlight">notice_template.txt</code> la notice pour <code class="language-text highlight">ss.txt</code></li>
 </ol>
 </div>
 <details class="question">
 <summary>Correction</summary>
 <ul>
-<li><strong>Quelle est l’adresse IP attaquante :</strong> <code>203.0.113.45</code> (visible dans <code>ss.txt</code>, <code>lsof.txt</code> et <code>auth.log</code>).</li>
-<li><strong>À quelle heure la connexion SSH a-t-elle été établie ? :</strong> <code>Sep 25 10:14:33</code> → on voit dans <code>auth.log</code> la ligne <code>Accepted password for user1 from 203.0.113.45 port 44528 ssh2</code> (la capture <code>ss.txt</code> contient une connexion ESTAB à la même période).</li>
-<li><strong>Quel compte semble compromis ? :</strong> <code>user1</code> (connexion acceptée dans <code>auth.log</code> et <code>psaux.txt</code> montre un <code>-bash</code> pour <code>user1</code>).</li>
+<li><strong>Quelle est l’adresse IP attaquante :</strong> <code class="language-cbmbas highlight"><span class="mf">203.0.113.45</span></code> (visible dans <code class="language-text highlight">ss.txt</code>, <code class="language-text highlight">lsof.txt</code> et <code class="language-text highlight">auth.log</code>).</li>
+<li><strong>À quelle heure la connexion SSH a-t-elle été établie ? :</strong> <code class="language-text highlight">Sep 25 10:14:33</code> → on voit dans <code class="language-text highlight">auth.log</code> la ligne <code class="language-teratermmacro highlight"><span class="nv">Accepted</span><span class="w"> </span><span class="nv">password</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">user1</span><span class="w"> </span><span class="nv">from</span><span class="w"> </span><span class="mi">203</span>.<span class="mi">0</span>.<span class="mi">113</span>.<span class="mi">45</span><span class="w"> </span><span class="nv">port</span><span class="w"> </span><span class="mi">44528</span><span class="w"> </span><span class="nv">ssh2</span></code> (la capture <code class="language-text highlight">ss.txt</code> contient une connexion ESTAB à la même période).</li>
+<li><strong>Quel compte semble compromis ? :</strong> <code class="language-text highlight">user1</code> (connexion acceptée dans <code class="language-text highlight">auth.log</code> et <code class="language-text highlight">psaux.txt</code> montre un <code class="language-text highlight">-bash</code> pour <code class="language-text highlight">user1</code>).</li>
 </ul>
 <p><strong>Valeurs SHA256 des fichiers fournis :</strong></p>
 <ul>
-<li><code>ss.txt</code> : <code>96b2767089a094f0d6cb21a420af0bda48a587d3468ca4589296e40ac25b74ca</code></li>
-<li><code>psaux.txt</code> : <code>eba68e3f48f01c16e4a4e9c5fad2fdee6ed15e25595c3e59fff81d85874a4955</code></li>
-<li><code>lsof.txt</code> : <code>f348a4948777ed941e22c4bf52d6ba4d2e6daf62ed016e8d6ad86e90eae78a19</code></li>
-<li><code>auth.log</code> : <code>3f13cfb51560d9190bb063ce7f1ccb617e28a453841dfedb8823fafe4c36a8b1</code></li>
-<li><code>notice_template.txt</code> : <code>832dda7c28561fbb52f187015073fd72591ce4931b899bfc1a981b7cd93b3889</code></li>
-<li><code>README.txt</code> : <code>f9335efd0bd778869df49186fbfbd2f2adff47cac858217af1264af38b643049</code></li>
+<li><code class="language-text highlight">ss.txt</code> : <code class="language-cbmbas highlight"><span class="mf">96</span><span class="n">b2767089a094f0d6cb21a420af0bda48a587d3468ca4589296e40ac25b74ca</span></code></li>
+<li><code class="language-text highlight">psaux.txt</code> : <code class="language-text highlight">eba68e3f48f01c16e4a4e9c5fad2fdee6ed15e25595c3e59fff81d85874a4955</code></li>
+<li><code class="language-text highlight">lsof.txt</code> : <code class="language-text highlight">f348a4948777ed941e22c4bf52d6ba4d2e6daf62ed016e8d6ad86e90eae78a19</code></li>
+<li><code class="language-text highlight">auth.log</code> : <code class="language-cbmbas highlight"><span class="mf">3</span><span class="n">f13cfb51560d9190bb063ce7f1ccb617e28a453841dfedb8823fafe4c36a8b1</span></code></li>
+<li><code class="language-scdoc highlight">notice_template.txt</code> : <code class="language-cbmbas highlight"><span class="mf">832</span><span class="n">dda7c28561fbb52f187015073fd72591ce4931b899bfc1a981b7cd93b3889</span></code></li>
 </ul>
-<p><strong>Exemple de notice de consignation sur <code>ss.txt</code></strong></p>
+<p><strong>Exemple de notice de consignation sur <code class="language-text highlight">ss.txt</code></strong></p>
 <p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Preuve: ss.txt 
 Collecté par: Enseignant
 Date/heure: 2025-09-25T10:14:30+02:00
@@ -4975,7 +4975,7 @@ Commentaires: Fichier simulé montrant une connexion SSH établie depuis l&#39;I
 <li>vérification des fichiers système,</li>
 <li>mise en place de protections (fail2ban, MFA),</li>
 <li>capture mémoire si possible pour recherches complémentaires.</li>
-<li>Vérifier la <strong>présence du fichier <code>hashes</code></strong> et la complétude de la notice de consignation.</li>
+<li>Vérifier la <strong>présence du fichier <code class="language-text highlight">hashes</code></strong> et la complétude de la notice de consignation.</li>
 </ul>
 </details>
 <h2 id="3-collecte-et-conservation-des-preuves-numeriques">3. 🛡️ Collecte et conservation des preuves numériques<a class="headerlink" href="#3-collecte-et-conservation-des-preuves-numeriques" title="Permanent link">⚓︎</a></h2>
@@ -4998,12 +4998,12 @@ Commentaires: Fichier simulé montrant une connexion SSH établie depuis l&#39;I
 <tr>
 <td><strong>2. Prioriser les preuves volatiles</strong> ⚡</td>
 <td>Elles disparaissent rapidement si la machine est éteinte/redémarrée.</td>
-<td>Dump mémoire (<code>avml</code>, <code>LiME</code>), <code>netstat</code>/<code>ss</code>, <code>ps aux</code>.</td>
+<td>Dump mémoire (<code class="language-text highlight">avml</code>, <code class="language-text highlight">LiME</code>), <code class="language-text highlight">netstat</code>/<code class="language-text highlight">ss</code>, <code class="language-text highlight">ps aux</code>.</td>
 </tr>
 <tr>
 <td><strong>3. Acquérir une copie</strong> 📥</td>
 <td>Préserver l’original intact pour garder la valeur probante.</td>
-<td>Image disque (<code>dd</code>, FTK Imager), export de logs, copie de fichiers.</td>
+<td>Image disque (<code class="language-text highlight">dd</code>, FTK Imager), export de logs, copie de fichiers.</td>
 </tr>
 <tr>
 <td><strong>4. Préserver la preuve</strong> 🔒</td>
@@ -5013,7 +5013,7 @@ Commentaires: Fichier simulé montrant une connexion SSH établie depuis l&#39;I
 <tr>
 <td><strong>5. Calculer un hash (SHA-256)</strong> ✔️</td>
 <td>Garantir l’intégrité : toute modification sera détectée.</td>
-<td><code>sha256sum</code>, HashCalc, logiciels forensics.</td>
+<td><code class="language-text highlight">sha256sum</code>, HashCalc, logiciels forensics.</td>
 </tr>
 <tr>
 <td><strong>6. Documenter la collecte</strong> 📝</td>

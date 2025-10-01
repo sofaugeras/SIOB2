@@ -4850,7 +4850,7 @@
 <p><strong>Utilisation de la rainbow Table</strong></p>
 <p><strong>Scénario :</strong> un utilisateur saisi un mot de passe dans un formulaire, qui est immédiatement chiffrer à l'aide l'algorithme MD5. Un hacker réussit grâce à une lecture de trame réseau à capter cette empreinte. </p>
 <p><strong>Activité supplémentaire :</strong></p>
-<p>Créer une fonction <code>find_password</code> qui prend en paramètre une rainbow Table sous forme de dictionnaire et une empreinte et qui retourne le mot de passe en clair ou "non trouvé" sinon.</p>
+<p>Créer une fonction <code class="language-scdoc highlight">find_password</code> qui prend en paramètre une rainbow Table sous forme de dictionnaire et une empreinte et qui retourne le mot de passe en clair ou "non trouvé" sinon.</p>
 <ul>
 <li>Ouverture et lecture du fichier csv contenant la rainbow Table</li>
 <li>Pour chaque ligne, comparaison de l'empreinte captée et de la valeur dans le dictionnaire.</li>
@@ -4885,7 +4885,7 @@ Vous pouvez tester votre adresse mail sur le site <a href="https://haveibeenpwne
 <p><ins>Mise en exemple :</ins> <br />
 Alphonse (al@mail.com) utilise le mot de passe "secret" pour les sites monsite.fr et concurrent.fr<br />
 Chacun des deux sites utilise la même méthode de chiffrement MD5.<br />
-Donc chacun des deux sites possèdent dans sa base le couple <code>al@mail.com</code> et <code>5ebe2294ecd0e0f08eab7690d2a6ee69</code>.<br />
+Donc chacun des deux sites possèdent dans sa base le couple <code class="language-tsql highlight"><span class="n">al</span><span class="nv">@mail</span><span class="p">.</span><span class="n">com</span></code> et <code class="language-cbmbas highlight"><span class="mf">5</span><span class="n">ebe2294ecd0e0f08eab7690d2a6ee69</span></code>.<br />
 monsite.fr subit une attaque et une fuite de données massive.<br />
 le pirate possède donc le moyen de se connecter à concurrent.fr avec le compte d'alphonse...</p>
 <p>C'est la que l'on introduit la notion de <strong>salage</strong>.</p>
@@ -4913,8 +4913,8 @@ le pirate possède donc le moyen de se connecter à concurrent.fr avec le compte
 <span class="n">pwd</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">pbkdf2_hmac</span><span class="p">(</span><span class="s1">&#39;md5&#39;</span><span class="p">,</span> <span class="sa">b</span><span class="s2">&quot;secret&quot;</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="mi">100000</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">pwd</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>5ebe2294ecd0e0f08eab7690d2a6ee69
-b&#39;\xc3;K\xc2\xfb\xb4z\xca`f\xc4T\xc9I\x1b.&#39;
+<div class="language-cbmbas highlight"><span class="filename">CBM BASIC V2</span><pre><span></span><code><span class="mf">5</span><span class="n">ebe2294ecd0e0f08eab7690d2a6ee69</span>
+<span class="n">b</span><span class="err">&#39;\</span><span class="n">xc3</span><span class="p">;</span><span class="n">K</span><span class="err">\</span><span class="n">xc2</span><span class="err">\</span><span class="n">xfb</span><span class="err">\</span><span class="n">xb4z</span><span class="err">\</span><span class="n">xca</span><span class="err">`</span><span class="n">f</span><span class="err">\</span><span class="n">xc4T</span><span class="err">\</span><span class="n">xc9I</span><span class="err">\</span><span class="n">x1b</span><span class="mf">.</span><span class="err">&#39;</span>
 </code></pre></div></p>
 <h2 id="3-lauthentification-multi-facteur-mfa">3. L'authentification multi-facteur (MFA)🔐<a class="headerlink" href="#3-lauthentification-multi-facteur-mfa" title="Permanent link">⚓︎</a></h2>
 <h3 id="31-introduction-au-mfa">3.1 Introduction au MFA<a class="headerlink" href="#31-introduction-au-mfa" title="Permanent link">⚓︎</a></h3>
@@ -5033,7 +5033,7 @@ Elle peut être mise en œuvre facilement par les développeurs via des solution
 <p>1.<strong>Limiter les tentatives par compte</strong> (user)</p>
 <ul>
 <li><em>Objectif</em> : empêcher un attaquant d’utiliser une attaque par force brut.</li>
-<li>Toujours enregistrer <code>failed_attempts</code>, <code>last_failed_at</code>, <code>lock_until</code>.</li>
+<li>Toujours enregistrer <code class="language-scdoc highlight">failed_attempts</code>, <code class="language-scdoc highlight">last_failed_at</code>, <code class="language-scdoc highlight">lock_until</code>.</li>
 <li>
 <p>Politique conseillée (exemple) :</p>
 <ul>
@@ -5098,14 +5098,14 @@ Elle peut être mise en œuvre facilement par les développeurs via des solution
 <li>Durée lockout temporaire : <strong>15 minutes</strong></li>
 <li>Durée lockout prolongé (abuse confirmé) : <strong>24 heures</strong></li>
 <li>Fenêtre pour compter tentatives (sliding window) : <strong>15–60 minutes</strong></li>
-<li>Rate limit IP (soft) : <strong>100–200 req/h</strong> sur endpoint <code>/login</code></li>
+<li>Rate limit IP (soft) : <strong>100–200 req/h</strong> sur endpoint <code class="language-text highlight">/login</code></li>
 <li>Window IP+user : <strong>20 tentatives / heure → blocage</strong></li>
 </ul>
 </details>
 <details class="info">
 <summary>Outils &amp; composants utiles</summary>
 <ul>
-<li><strong>Reverse proxy / WAF</strong>: Nginx <code>limit_req</code>, Cloudflare Rate Limiting, AWS WAF.</li>
+<li><strong>Reverse proxy / WAF</strong>: Nginx <code class="language-scdoc highlight">limit_req</code>, Cloudflare Rate Limiting, AWS WAF.</li>
 <li><strong>fail2ban</strong>: pour bloquer IPs après patterns d’échec (utile si logs accessibles).</li>
 <li><strong>Redis</strong>: pour compteurs et token bucket (rate limiting).</li>
 <li><strong>reCAPTCHA / hCaptcha</strong>: pour challenge adaptatif.</li>

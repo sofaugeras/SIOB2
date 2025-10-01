@@ -4667,13 +4667,13 @@ B3 Compétence 3.3 : Sécuriser les équipements et les usages des utilisateurs<
 <h3 id="11-valider-une-adresse-mac">1.1  Valider une adresse MAC<a class="headerlink" href="#11-valider-une-adresse-mac" title="Permanent link">⚓︎</a></h3>
 <p>Voici les éléments pour déterminer une adresse MAC valide :</p>
 <ul>
-<li>deux caractères compris entre <code>0</code> et <code>F</code> (0 à 9 et A à F)</li>
-<li>un séparateur <code>:</code></li>
+<li>deux caractères compris entre <code class="language-cbmbas highlight"><span class="mf">0</span></code> et <code class="language-text highlight">F</code> (0 à 9 et A à F)</li>
+<li>un séparateur <code class="language-text highlight">:</code></li>
 <li>5 fois le motif précédent</li>
-<li>deux caractères compris entre <code>0</code> et <code>F</code> (0 à 9 et A à F)</li>
+<li>deux caractères compris entre <code class="language-cbmbas highlight"><span class="mf">0</span></code> et <code class="language-text highlight">F</code> (0 à 9 et A à F)</li>
 </ul>
-<p>Vous utiliserez les éléments <code>[ ]</code> et <code>{ }</code>  et <code>\.</code> pour échapper le caractère spécial <code>'.'</code>.
-Vous pouvez également optimiser le travail avec les parenthèses, comme suit <code>(expr1){3}[expr2]</code></p>
+<p>Vous utiliserez les éléments <code class="language-text highlight">[ ]</code> et <code class="language-text highlight">{ }</code>  et <code class="language-text highlight">\.</code> pour échapper le caractère spécial <code class="language-text highlight">&#39;.&#39;</code>.
+Vous pouvez également optimiser le travail avec les parenthèses, comme suit <code class="language-tsql highlight"><span class="p">(</span><span class="n">expr1</span><span class="p">)</span><span class="err">{</span><span class="mi">3</span><span class="err">}</span><span class="o">[</span><span class="n">expr2</span><span class="o">]</span></code></p>
 <p>Liste de test des adresses MAC
 <div class="language-shell highlight"><span class="filename">Bash</span><pre><span></span><code>AA:BB:CC:DD:EE:FF
 AAA:BB:CC:DD:EE:FF
@@ -4685,11 +4685,11 @@ AA:aa:CC:DD:EE:FF
 AA<span class="p">;</span>BB:CC:DD:EE:FF
 :AA:BB:CC:DD:EE:FF
 </code></pre></div></p>
-<p>Pour les plus malins, essayez de permettre également le format <code>AA-BB-CC-DD-EE-FF</code> (tirets à la place des double-points) dans la même expression.<br />
-Ne cherchez pas à résoudre <code>AA:BB:CC-DD-EE:FF</code> car l'expression deviendrait trop complexe.</p>
+<p>Pour les plus malins, essayez de permettre également le format <code class="language-text highlight">AA-BB-CC-DD-EE-FF</code> (tirets à la place des double-points) dans la même expression.<br />
+Ne cherchez pas à résoudre <code class="language-actionscript3 highlight"><span class="n">AA</span><span class="o">:</span><span class="n">BB</span><span class="o">:</span><span class="n">CC</span><span class="o">-</span><span class="n">DD</span><span class="o">-</span><span class="n">EE</span><span class="o">:</span><span class="n">FF</span></code> car l'expression deviendrait trop complexe.</p>
 <details class="question">
 <summary>proposition</summary>
-<p><code>\b([0-9A-F]{2}:){5}[0-9A-F]{2}\b</code>
+<p><code class="language-text highlight">\b([0-9A-F]{2}:){5}[0-9A-F]{2}\b</code>
 </p>
 </details>
 <h3 id="12-valider-une-adresse-ip">1.2  Valider une adresse IP<a class="headerlink" href="#12-valider-une-adresse-ip" title="Permanent link">⚓︎</a></h3>
@@ -4718,22 +4718,22 @@ L'objectif reste la compréhension globale des expressions régulières : une so
 <p><img alt="Keep It Simple, Stupid" class="center" src="../data/Kiss_-_Keep_it_simple_stupid.jpg" width="30%" /></p>
 <details class="question">
 <summary>proposition</summary>
-<p><code>^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$</code></p>
+<p><code class="language-maxima highlight"><span class="o">^</span>\<span class="nv">d</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span>\<span class="o">.</span>\<span class="nv">d</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span>\<span class="o">.</span>\<span class="nv">d</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span>\<span class="o">.</span>\<span class="nv">d</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">}$</span></code></p>
 <p>Explication :</p>
-<p><code>^</code> et <code>$</code> :
-    Le caractère <code>^</code> indique le début de la chaîne.
-    Le caractère <code>$</code> indique la fin de la chaîne. Ces deux éléments garantissent que l'expression couvre l'intégralité de l'entrée.</p>
-<p><code>\d{1,3}</code> :
-    <code>\d</code> correspond à un chiffre (0 à 9).
-    <code>{1,3}</code> indique qu'il doit y avoir entre 1 et 3 chiffres consécutifs.</p>
-<p><code>\.</code> :
-    Le caractère <code>\.</code> correspond à un point littéral. Les trois premiers nombres doivent être séparés par des points.</p>
+<p><code class="language-text highlight">^</code> et <code class="language-maxima highlight"><span class="p">$</span></code> :
+    Le caractère <code class="language-text highlight">^</code> indique le début de la chaîne.
+    Le caractère <code class="language-maxima highlight"><span class="p">$</span></code> indique la fin de la chaîne. Ces deux éléments garantissent que l'expression couvre l'intégralité de l'entrée.</p>
+<p><code class="language-text highlight">\d{1,3}</code> :
+    <code class="language-text highlight">\d</code> correspond à un chiffre (0 à 9).
+    <code class="language-text highlight">{1,3}</code> indique qu'il doit y avoir entre 1 et 3 chiffres consécutifs.</p>
+<p><code class="language-text highlight">\.</code> :
+    Le caractère <code class="language-text highlight">\.</code> correspond à un point littéral. Les trois premiers nombres doivent être séparés par des points.</p>
 <p>Structure complète :
     L'expression recherche exactement 4 groupes de chiffres (1 à 3 chiffres chacun), séparés par des points pour les trois premiers groupes.</p>
 </details>
 <h3 id="12-valider-un-nom-de-fichier">1.2 Valider un nom de fichier<a class="headerlink" href="#12-valider-un-nom-de-fichier" title="Permanent link">⚓︎</a></h3>
 <p>Un professeur anonyme souhaite vérifier que ses étudiants utilisent le bon nom de fichier, sinon il enlève 2 points à la note du TP.</p>
-<p>Pour cela, il donne comme consigne le format de fichier avec <code>"monNOM"</code> en italique pour indiquer aux étudiants qu'ils doivent remplacer <code>monNOM</code> par leur propre nom de famille, en majuscules.</p>
+<p>Pour cela, il donne comme consigne le format de fichier avec <code class="language-text highlight">&quot;monNOM&quot;</code> en italique pour indiquer aux étudiants qu'ils doivent remplacer <code class="language-text highlight">monNOM</code> par leur propre nom de famille, en majuscules.</p>
 <p>Donnez l'expression régulière permettant de valider un nom de fichier correct : <mark>B1-TP_REGEX_monNOM.pdf</mark></p>
 <p>Liste de test des adresses IP :
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>B1-TP_REGEX_monNOM.pdf
@@ -4747,7 +4747,7 @@ B1-TP_REGEX_.pdf
 </code></pre></div></p>
 <details class="question">
 <summary>proposition</summary>
-<p><code>\bSI6-TP_REGEX_[A-Z\- ]{2,}.pdf</code></p>
+<p><code class="language-scdoc highlight">\bSI6-TP_REGEX_[A-Z\- ]{2,}.pdf</code></p>
 </details>
 <h2 id="2-creation-et-validation-dun-mot-de-passe-securise">2. Création et validation d'un mot de passe sécurisé<a class="headerlink" href="#2-creation-et-validation-dun-mot-de-passe-securise" title="Permanent link">⚓︎</a></h2>
 <p><strong>Objectif :</strong><br />
@@ -4765,7 +4765,7 @@ Créer un formulaire en HTML pour la saisie d'un mot de passe et utiliser JavaSc
 <li>Contient au moins une lettre majuscule.</li>
 <li>Contient au moins une lettre minuscule.</li>
 <li>Contient au moins un chiffre.</li>
-<li>Contient au moins un caractère spécial parmi <code>!@#$%^&amp;*()</code>.</li>
+<li>Contient au moins un caractère spécial parmi <code class="language-scdoc highlight">!@#$%^&amp;*()</code>.</li>
 </ul>
 <p>⚓️ <a href="https://www.cnil.fr/fr/mots-de-passe-une-nouvelle-recommandation-pour-maitriser-sa-securite">Recommandations de la CNIL sur les mots de passe</a></p>
 <h3 id="23-validation-avec-javascript">2.3 Validation avec JavaScript :<a class="headerlink" href="#23-validation-avec-javascript" title="Permanent link">⚓︎</a></h3>

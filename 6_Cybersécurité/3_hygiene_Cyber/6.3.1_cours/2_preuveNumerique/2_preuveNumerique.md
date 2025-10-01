@@ -218,6 +218,7 @@ Lors d’un incident, il faut **toujours commencer par collecter les preuves vol
     2. À quelle heure la connexion SSH a-t-elle été établie ?
     3. Quel compte semble compromis ?
     4. Calculer les SHA256 des fichiers (exemple : ``sha256sum /root/evidence/ss_*.txt > /root/evidence/hashes.txt``)
+    5. Rédiger à l'aide de `notice_template.txt` la notice pour `ss.txt`
 
 ??? question "Correction"
 
@@ -232,7 +233,6 @@ Lors d’un incident, il faut **toujours commencer par collecter les preuves vol
     * `lsof.txt` : `f348a4948777ed941e22c4bf52d6ba4d2e6daf62ed016e8d6ad86e90eae78a19`
     * `auth.log` : `3f13cfb51560d9190bb063ce7f1ccb617e28a453841dfedb8823fafe4c36a8b1`
     * `notice_template.txt` : `832dda7c28561fbb52f187015073fd72591ce4931b899bfc1a981b7cd93b3889`
-    * `README.txt` : `f9335efd0bd778869df49186fbfbd2f2adff47cac858217af1264af38b643049`
 
     **Exemple de notice de consignation sur ``ss.txt``**
 
