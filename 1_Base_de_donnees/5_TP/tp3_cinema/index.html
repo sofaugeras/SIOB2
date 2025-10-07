@@ -12,28 +12,28 @@
         <meta name="author" content="Sophie FAUGERAS">
       
       
-        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.2_TPOwasp/9_tpVulnerabilitesAuthentification/">
+        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/1_Base_de_donnees/5_TP/tp3_cinema/">
       
       
-        <link rel="prev" href="../8_tpManqueControleAccesFonctionnel/">
+        <link rel="prev" href="../tp2_inventaireParc/">
       
       
-        <link rel="next" href="../../../3_hygiene_Cyber/6.3.1_cours/1_recoANSII/">
+        <link rel="next" href="../tp4_cinema2/">
       
       
-      <link rel="icon" href="../../../../xtra/favTNSI.png">
+      <link rel="icon" href="../../../xtra/favTNSI.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
     
     
       
-        <title>7. TP Vulnérabilités liées à l’authentification et à la gestion des sessions - Saint Sauveur BTS SIO SLAM</title>
+        <title>TP3 Base Cinéma [LMD] - Saint Sauveur BTS SIO SLAM</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -51,8 +51,8 @@
     
       
     
-    <script src="../../../../xtra/webcomponentsjs/webcomponents-loader.js"></script>
-    <script src="../../../../xtra/gifplayer/gif-player.es6.js" defer async></script>
+    <script src="../../../xtra/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../../../xtra/gifplayer/gif-player.es6.js" defer async></script>
     <!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
@@ -66,9 +66,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -103,6 +103,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#tp-cinema" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -113,7 +118,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="../../../.." title="Saint Sauveur BTS SIO SLAM" class="md-header__button md-logo" aria-label="Saint Sauveur BTS SIO SLAM" data-md-component="logo">
+    <a href="../../.." title="Saint Sauveur BTS SIO SLAM" class="md-header__button md-logo" aria-label="Saint Sauveur BTS SIO SLAM" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/></svg>
@@ -133,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              7. TP Vulnérabilités liées à l’authentification et à la gestion des sessions
+              TP3 Base Cinéma [LMD]
             
           </span>
         </div>
@@ -240,12 +245,12 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
     
   
-  Home
+  Home 🏠
 
       </a>
     </li>
@@ -255,11 +260,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../../1_Base_de_donnees/sommaire/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../sommaire/" class="md-tabs__link">
           
   
   Base de données 🏁
@@ -277,7 +284,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../2_Programmation_SQL/sommaire/" class="md-tabs__link">
+        <a href="../../../2_Programmation_SQL/sommaire/" class="md-tabs__link">
           
   
   Programmation BdD
@@ -295,7 +302,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../3_UML/sommaire/" class="md-tabs__link">
+        <a href="../../../3_UML/sommaire/" class="md-tabs__link">
           
   
   UML 📝
@@ -313,7 +320,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../4_Laravel/sommaire/" class="md-tabs__link">
+        <a href="../../../4_Laravel/sommaire/" class="md-tabs__link">
           
   
   Laravel 🎢
@@ -331,7 +338,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../5_devops/sommaire/" class="md-tabs__link">
+        <a href="../../../5_devops/sommaire/" class="md-tabs__link">
           
   
   Devops 🔄
@@ -345,13 +352,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../ressources/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../6_Cybers%C3%A9curit%C3%A9/ressources/" class="md-tabs__link">
           
   
   Cyber SLAM ⚓️
@@ -369,7 +374,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../7_Programmation/sommaire/" class="md-tabs__link">
+        <a href="../../../7_Programmation/sommaire/" class="md-tabs__link">
           
   
   Programmation🚦
@@ -393,7 +398,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../8_liens_utiles/1_epreuves/epreuves/" class="md-tabs__link">
+        <a href="../../../8_liens_utiles/1_epreuves/epreuves/" class="md-tabs__link">
           
   
   Liens Utiles 🔦
@@ -414,7 +419,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../9_PostBTS/sommaire/" class="md-tabs__link">
+        <a href="../../../9_PostBTS/sommaire/" class="md-tabs__link">
           
   
   Poursuites d'études 📈
@@ -449,7 +454,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Saint Sauveur BTS SIO SLAM" class="md-nav__button md-logo" aria-label="Saint Sauveur BTS SIO SLAM" data-md-component="logo">
+    <a href="../../.." title="Saint Sauveur BTS SIO SLAM" class="md-nav__button md-logo" aria-label="Saint Sauveur BTS SIO SLAM" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/></svg>
@@ -479,11 +484,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Home
+    Home 🏠
   </span>
   
 
@@ -496,25 +501,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -525,7 +533,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Base de données 🏁
@@ -539,7 +547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/sommaire/" class="md-nav__link">
+      <a href="../../sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -600,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/1_introduction/cours/" class="md-nav__link">
+      <a href="../../1_introduction/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -669,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/2_LMD/cours/" class="md-nav__link">
+      <a href="../../2_LMD/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -690,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/2_LMD/vol/" class="md-nav__link">
+      <a href="../../2_LMD/vol/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -711,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/2_LMD/bibli/" class="md-nav__link">
+      <a href="../../2_LMD/bibli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -732,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/2_LMD/bts/" class="md-nav__link">
+      <a href="../../2_LMD/bts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -801,7 +809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/3_LCD/cours/" class="md-nav__link">
+      <a href="../../3_LCD/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -822,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/3_LCD/utilisateur/" class="md-nav__link">
+      <a href="../../3_LCD/utilisateur/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -843,7 +851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/3_LCD/TD_vol/" class="md-nav__link">
+      <a href="../../3_LCD/TD_vol/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -864,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/3_LCD/TD_bibli/" class="md-nav__link">
+      <a href="../../3_LCD/TD_bibli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -885,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/3_LCD/TD_lycee/" class="md-nav__link">
+      <a href="../../3_LCD/TD_lycee/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -906,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/3_LCD/TD_user/" class="md-nav__link">
+      <a href="../../3_LCD/TD_user/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -975,7 +983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/4_SQLComplexe/cours/" class="md-nav__link">
+      <a href="../../4_SQLComplexe/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -996,7 +1004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/4_SQLComplexe/TD_hopital/" class="md-nav__link">
+      <a href="../../4_SQLComplexe/TD_hopital/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1017,7 +1025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/4_SQLComplexe/TD_chenil/" class="md-nav__link">
+      <a href="../../4_SQLComplexe/TD_chenil/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1043,8 +1051,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -1052,13 +1062,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
         
           
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
@@ -1072,7 +1080,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             5 TP
@@ -1086,7 +1094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/5_TP/tp1_decouverte/" class="md-nav__link">
+      <a href="../tp1_decouverte/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1107,11 +1115,120 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/5_TP/tp2_cinema/" class="md-nav__link">
+      <a href="../tp2_inventaireParc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    TP2 Base Cinéma [LMD]
+    TP2 Inventaire de parc [LMD]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    TP3 Base Cinéma [LMD]
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    TP3 Base Cinéma [LMD]
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#schema-conceptuel-en-intention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schéma conceptuel "en intention" :
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modele-physique-des-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modèle Physique des données
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#point-de-cours-sur-les-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Point de cours sur les dates
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tp4_cinema2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP4 Base Cinéma2 [LMD]
   </span>
   
 
@@ -1128,11 +1245,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/5_TP/tp3_cinema2/" class="md-nav__link">
+      <a href="../tp5_sncf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    TP3 Base Cinéma2 [LMD]
+    TP5 SNCF [LDD]
   </span>
   
 
@@ -1149,11 +1266,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/5_TP/tp4_sncf/" class="md-nav__link">
+      <a href="../tp6_vol2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    TP4 SNCF [LDD]
+    TP6 VOL Complexe [SQL complexe]
   </span>
   
 
@@ -1170,11 +1287,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/5_TP/tp5_vol2/" class="md-nav__link">
+      <a href="../../../tp7_univ.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    TP5 VOL Complexe [SQL complexe]
+    TP7 Université [SQL complexe]
   </span>
   
 
@@ -1191,28 +1308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/5_TP/tp6_univ/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    TP6 Université [SQL complexe]
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/5_TP/tp7_anabase/" class="md-nav__link">
+      <a href="../tp8_anabase/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1233,11 +1329,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/5_TP/tp8_sauvegarde/" class="md-nav__link">
+      <a href="../tp9_sauvegarde/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    TP8 Sauvegarde de base de données
+    TP9 Sauvegarde de base de données
   </span>
   
 
@@ -1302,7 +1398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/6_NoSQL/cours/" class="md-nav__link">
+      <a href="../../6_NoSQL/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1378,7 +1474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../2_Programmation_SQL/sommaire/" class="md-nav__link">
+      <a href="../../../2_Programmation_SQL/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1439,7 +1535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../2_Programmation_SQL/5.1_Procedures_stockees/cours/" class="md-nav__link">
+      <a href="../../../2_Programmation_SQL/5.1_Procedures_stockees/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1460,7 +1556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../2_Programmation_SQL/5.1_Procedures_stockees/exercices/" class="md-nav__link">
+      <a href="../../../2_Programmation_SQL/5.1_Procedures_stockees/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1529,7 +1625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../2_Programmation_SQL/5.2_Transactions/cours/" class="md-nav__link">
+      <a href="../../../2_Programmation_SQL/5.2_Transactions/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1598,7 +1694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../2_Programmation_SQL/5.3_curseurs/cours/" class="md-nav__link">
+      <a href="../../../2_Programmation_SQL/5.3_curseurs/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1619,7 +1715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../2_Programmation_SQL/5.3_curseurs/exercices/" class="md-nav__link">
+      <a href="../../../2_Programmation_SQL/5.3_curseurs/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1688,7 +1784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../2_Programmation_SQL/5.4_Triggers_d%C3%A9clencheurs/cours/" class="md-nav__link">
+      <a href="../../../2_Programmation_SQL/5.4_Triggers_d%C3%A9clencheurs/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1709,7 +1805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../2_Programmation_SQL/5.4_Triggers_d%C3%A9clencheurs/exercices/" class="md-nav__link">
+      <a href="../../../2_Programmation_SQL/5.4_Triggers_d%C3%A9clencheurs/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1785,7 +1881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/sommaire/" class="md-nav__link">
+      <a href="../../../3_UML/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1846,7 +1942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.1_diagrammeClasse/3.1.0_IntroUML/" class="md-nav__link">
+      <a href="../../../3_UML/3.1_diagrammeClasse/3.1.0_IntroUML/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1867,7 +1963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.1_diagrammeClasse/3.1.1_diagrammeDeClasse/" class="md-nav__link">
+      <a href="../../../3_UML/3.1_diagrammeClasse/3.1.1_diagrammeDeClasse/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1888,7 +1984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.1_diagrammeClasse/3.1.2_CalculMPD/" class="md-nav__link">
+      <a href="../../../3_UML/3.1_diagrammeClasse/3.1.2_CalculMPD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1909,7 +2005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.1_diagrammeClasse/3.1.3_UML2java/" class="md-nav__link">
+      <a href="../../../3_UML/3.1_diagrammeClasse/3.1.3_UML2java/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1930,7 +2026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.1_diagrammeClasse/3.1.4_Methodologie/" class="md-nav__link">
+      <a href="../../../3_UML/3.1_diagrammeClasse/3.1.4_Methodologie/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1951,7 +2047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.1_diagrammeClasse/exerciceDC/" class="md-nav__link">
+      <a href="../../../3_UML/3.1_diagrammeClasse/exerciceDC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1972,7 +2068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.1_diagrammeClasse/exerciceMPD/" class="md-nav__link">
+      <a href="../../../3_UML/3.1_diagrammeClasse/exerciceMPD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2041,7 +2137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.2_UseCase/cours/" class="md-nav__link">
+      <a href="../../../3_UML/3.2_UseCase/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2062,7 +2158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.2_UseCase/exercice/" class="md-nav__link">
+      <a href="../../../3_UML/3.2_UseCase/exercice/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2131,7 +2227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.3_Sequence/cours/" class="md-nav__link">
+      <a href="../../../3_UML/3.3_Sequence/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2152,7 +2248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.3_Sequence/exercices/" class="md-nav__link">
+      <a href="../../../3_UML/3.3_Sequence/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2221,7 +2317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.4_etatTransition/cours/" class="md-nav__link">
+      <a href="../../../3_UML/3.4_etatTransition/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2242,7 +2338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.4_etatTransition/exercices/" class="md-nav__link">
+      <a href="../../../3_UML/3.4_etatTransition/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2311,7 +2407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.5_etudeDeCas/Viticulture/" class="md-nav__link">
+      <a href="../../../3_UML/3.5_etudeDeCas/Viticulture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2332,7 +2428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.5_etudeDeCas/commissariat/" class="md-nav__link">
+      <a href="../../../3_UML/3.5_etudeDeCas/commissariat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2353,7 +2449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.5_etudeDeCas/reseauSocial/" class="md-nav__link">
+      <a href="../../../3_UML/3.5_etudeDeCas/reseauSocial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2429,7 +2525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../4_Laravel/sommaire/" class="md-nav__link">
+      <a href="../../../4_Laravel/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2490,7 +2586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../4_Laravel/4.1_installation/cours/" class="md-nav__link">
+      <a href="../../../4_Laravel/4.1_installation/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2559,7 +2655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../4_Laravel/4.2_toDo/4.2.1_initialisation/" class="md-nav__link">
+      <a href="../../../4_Laravel/4.2_toDo/4.2.1_initialisation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2580,7 +2676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../4_Laravel/4.2_toDo/4.2.2_Ajout_cat%C3%A9gorie/" class="md-nav__link">
+      <a href="../../../4_Laravel/4.2_toDo/4.2.2_Ajout_cat%C3%A9gorie/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2601,7 +2697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../4_Laravel/4.2_toDo/4.2.3_prolongement_middleware/" class="md-nav__link">
+      <a href="../../../4_Laravel/4.2_toDo/4.2.3_prolongement_middleware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2622,7 +2718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../4_Laravel/4.2_toDo/4.2.4_GestionListes/" class="md-nav__link">
+      <a href="../../../4_Laravel/4.2_toDo/4.2.4_GestionListes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2698,7 +2794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_devops/sommaire/" class="md-nav__link">
+      <a href="../../../5_devops/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2759,7 +2855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_devops/5.1_notionDevops/cours/" class="md-nav__link">
+      <a href="../../../5_devops/5.1_notionDevops/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2828,7 +2924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_devops/5.2_docker/cours/" class="md-nav__link">
+      <a href="../../../5_devops/5.2_docker/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2861,28 +2957,25 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2893,7 +2986,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Cyber SLAM ⚓️
@@ -2907,7 +3000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ressources/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/ressources/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2968,7 +3061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Ebios/cours/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/1_Ebios/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2994,8 +3087,6 @@
                 
   
   
-    
-  
   
   
     
@@ -3005,11 +3096,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_3" >
         
           
           <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
@@ -3023,7 +3116,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_3">
             <span class="md-nav__icon md-icon"></span>
             2 OWASP Top 10 🔱
@@ -3077,7 +3170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6.2.1_cours/1_cours/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.1_cours/1_cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3098,7 +3191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6.2.1_cours/2_exercices/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.1_cours/2_exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3124,8 +3217,6 @@
                 
   
   
-    
-  
   
   
     
@@ -3135,11 +3226,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_3_2" >
         
           
           <label class="md-nav__link" for="__nav_7_3_2" id="__nav_7_3_2_label" tabindex="0">
@@ -3153,7 +3246,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_3_2">
             <span class="md-nav__icon md-icon"></span>
             6.2.2 TPOwasp
@@ -3167,7 +3260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3_tpOwasp/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.2_TPOwasp/0_tpOwasp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3188,7 +3281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1_tpMauvaiseConfiguration/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.2_TPOwasp/1_tpMauvaiseConfiguration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3209,7 +3302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2_tpInjectionSQL/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.2_TPOwasp/2_tpInjectionSQL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3230,7 +3323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../6_tpExpositionDonneesSensibles/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.2_TPOwasp/3_tpExpositionDonneesSensibles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3251,7 +3344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../7_tpViolationGestionAuthentification/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.2_TPOwasp/4_tpViolationGestionAuthentification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3272,7 +3365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../8_tpManqueControleAccesFonctionnel/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.2_TPOwasp/5_tpManqueControleAccesFonctionnel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3290,17 +3383,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.2_TPOwasp/6_tpVulnerabilitesAuthentification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3309,7 +3395,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -3418,7 +3503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_hygiene_Cyber/6.3.1_cours/1_recoANSII/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/3_hygiene_Cyber/6.3.1_cours/1_recoANSII/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3439,7 +3524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_hygiene_Cyber/6.3.1_cours/2_preuveNumerique/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/3_hygiene_Cyber/6.3.1_cours/2_preuveNumerique/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3460,7 +3545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_hygiene_Cyber/6.3.1_cours/3_authentification/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/3_hygiene_Cyber/6.3.1_cours/3_authentification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3481,7 +3566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_hygiene_Cyber/6.3.1_cours/4_archivage/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/3_hygiene_Cyber/6.3.1_cours/4_archivage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3550,7 +3635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_hygiene_Cyber/6.3.2_TP/TPAuthMA_partie1/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/3_hygiene_Cyber/6.3.2_TP/TPAuthMA_partie1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3571,7 +3656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_hygiene_Cyber/6.3.2_TP/TPAuthMA_partie2/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/3_hygiene_Cyber/6.3.2_TP/TPAuthMA_partie2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3655,7 +3740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../7_Programmation/sommaire/" class="md-nav__link">
+      <a href="../../../7_Programmation/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3716,7 +3801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../7_Programmation/7.1_Regex/cours/" class="md-nav__link">
+      <a href="../../../7_Programmation/7.1_Regex/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3737,7 +3822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../7_Programmation/7.1_Regex/tp/" class="md-nav__link">
+      <a href="../../../7_Programmation/7.1_Regex/tp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3806,7 +3891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../7_Programmation/7.2_POO/cours/" class="md-nav__link">
+      <a href="../../../7_Programmation/7.2_POO/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3827,7 +3912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../7_Programmation/7.2_POO/exercices/" class="md-nav__link">
+      <a href="../../../7_Programmation/7.2_POO/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3896,7 +3981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../7_Programmation/7.3_MVC/cours/" class="md-nav__link">
+      <a href="../../../7_Programmation/7.3_MVC/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3965,7 +4050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../7_Programmation/7.4_CMS/cours/" class="md-nav__link">
+      <a href="../../../7_Programmation/7.4_CMS/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4081,7 +4166,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../8_liens_utiles/1_epreuves/epreuves/" class="md-nav__link">
+      <a href="../../../8_liens_utiles/1_epreuves/epreuves/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4102,7 +4187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../8_liens_utiles/1_epreuves/Ep_pro_E5/" class="md-nav__link">
+      <a href="../../../8_liens_utiles/1_epreuves/Ep_pro_E5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4123,7 +4208,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../8_liens_utiles/1_epreuves/Ep_pratique_E6/" class="md-nav__link">
+      <a href="../../../8_liens_utiles/1_epreuves/Ep_pratique_E6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4144,7 +4229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../8_liens_utiles/1_epreuves/Ecrit_Cyber_E7/" class="md-nav__link">
+      <a href="../../../8_liens_utiles/1_epreuves/Ecrit_Cyber_E7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4213,7 +4298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../8_liens_utiles/2_conseils/organisation/" class="md-nav__link">
+      <a href="../../../8_liens_utiles/2_conseils/organisation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4234,7 +4319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../8_liens_utiles/2_conseils/notion/" class="md-nav__link">
+      <a href="../../../8_liens_utiles/2_conseils/notion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4255,7 +4340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../8_liens_utiles/2_conseils/git/" class="md-nav__link">
+      <a href="../../../8_liens_utiles/2_conseils/git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4276,7 +4361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../8_liens_utiles/2_conseils/veilleTechno/" class="md-nav__link">
+      <a href="../../../8_liens_utiles/2_conseils/veilleTechno/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4352,7 +4437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../9_PostBTS/sommaire/" class="md-nav__link">
+      <a href="../../../9_PostBTS/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4413,7 +4498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../9_PostBTS/possibilit%C3%A9s/9.1_LP_initial/" class="md-nav__link">
+      <a href="../../../9_PostBTS/possibilit%C3%A9s/9.1_LP_initial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4434,7 +4519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../9_PostBTS/possibilit%C3%A9s/9.2_LP_alt/" class="md-nav__link">
+      <a href="../../../9_PostBTS/possibilit%C3%A9s/9.2_LP_alt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4455,7 +4540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../9_PostBTS/possibilit%C3%A9s/9.3_fac/" class="md-nav__link">
+      <a href="../../../9_PostBTS/possibilit%C3%A9s/9.3_fac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4476,7 +4561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../9_PostBTS/possibilit%C3%A9s/9.4_Ecoles/" class="md-nav__link">
+      <a href="../../../9_PostBTS/possibilit%C3%A9s/9.4_Ecoles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4526,9 +4611,321 @@
   
 
 
-  <h1>7. TP Vulnérabilités liées à l’authentification et à la gestion des sessions</h1>
-
-
+<h1 id="tp-cinema">TP Cinéma<a class="headerlink" href="#tp-cinema" title="Permanent link">⚓︎</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Objectif du TP</p>
+<p>travailler sur la manipulation des données à l'aide d'un langage de requêtes SANS Jointure.</p>
+</div>
+<p><img alt="gif" class="center" src="../data/tp2/cinema.gif" width="50%" /></p>
+<p><a class="md-button md-button--primary" href="../data/tp2/Cinema.sql">Télécharger fichier Création de la base <img alt="⬇️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2b07.svg" title=":arrow_down:" /></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Crédit</p>
+<p>Adaptation d'un TP SIO de <a href="http://guyonst.free.fr">Stéphane Guyon</a></p>
+</div>
+<h2 id="schema-conceptuel-en-intention">Schéma conceptuel "en intention" :<a class="headerlink" href="#schema-conceptuel-en-intention" title="Permanent link">⚓︎</a></h2>
+<p>ARTISTE (<ins>idActeur, nom, prenom, anneeNaiss)<br />
+FILM (^^idFilm</ins>, titre, annee, prenom_realisateur, nom_realisateur, #genre, sortie, recettes)<br />
+GENRE (<ins>id</ins>, nomGenre)<br />
+ROLE (<ins>#idFilm, #idActeur</ins>, nomRole)<br /></p>
+<h2 id="modele-physique-des-donnees">Modèle Physique des données<a class="headerlink" href="#modele-physique-des-donnees" title="Permanent link">⚓︎</a></h2>
+<p><img alt="MPD" class="center" src="../data/tp2/MPD.png" width="75%" /></p>
+<div class="admonition question">
+<p class="admonition-title">Q1</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Enoncé</label><label for="__tabbed_1_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Sélectionner tous les films dont les recettes sont supérieures à 1000</p>
+</div>
+<div class="tabbed-block">
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="n">recettes</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">recettes</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Q2</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Enoncé</label><label for="__tabbed_2_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Sélectionner tous les films de George Lucas</p>
+</div>
+<div class="tabbed-block">
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">nom_realisateur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Lucas&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">prenom_realisateur</span><span class="o">=</span><span class="s1">&#39;Georges&#39;</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Q3</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Enoncé</label><label for="__tabbed_3_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Sélectionner tous les films dont les recettes sont supérieures à 1000 et inférieures ou égale à 1500. (Ecrire la requête de deux manières différentes)</p>
+</div>
+<div class="tabbed-block">
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="n">recettes</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">recettes</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="mi">1500</span><span class="p">;</span>
+<span class="cm">/*ou*/</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="n">recettes</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">recettes</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">recettes</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1500</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Q4</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Enoncé</label><label for="__tabbed_4_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Afficher les films entre 2000 et 2005<br /></p>
+<p>Est-ce que les bornes du BETWEEN sont inclusives ou exclusives ?</p>
+</div>
+<div class="tabbed-block">
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="n">annee</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="mi">2000</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="mi">2005</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Q5</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Enoncé</label><label for="__tabbed_5_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Sélectionner tous les films de Harry Potter</p>
+</div>
+<div class="tabbed-block">
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;Harry Potter%&#39;</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Q6</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Enoncé</label><label for="__tabbed_6_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Afficher le titre des films par ordre décroissant des recettes</p>
+</div>
+<div class="tabbed-block">
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="n">recettes</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">recettes</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Q7</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Enoncé</label><label for="__tabbed_7_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Quels sont les films fantastiques réalisés par Steven Spielberg ?</p>
+</div>
+<div class="tabbed-block">
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">nom_realisateur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Spielberg&quot;</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Q8</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Enoncé</label><label for="__tabbed_8_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Afficher le titre des films d'animation par ordre décroissant des recettes.</p>
+</div>
+<div class="tabbed-block">
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="w"> </span><span class="n">recettes</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">genre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">recettes</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<h2 id="point-de-cours-sur-les-dates">Point de cours sur les dates<a class="headerlink" href="#point-de-cours-sur-les-dates" title="Permanent link">⚓︎</a></h2>
+<p><img alt="date" class="center" src="../data/tp2/date.png" width="75%" /></p>
+<p>Les dates sont un type complexe en SQL. et même si ils ressemblent à une chaîne de caractère, on ne peut pas les manipuler en tant que telle. Les SGBD (<a href="https://dev.mysql.com/doc/refman/8.4/en/date-and-time-functions.html">documentation MySQL</a>) mettent à notre disposition des fonctions de manipulations dédiés.<br />
+<ins>exemple :</ins> <br /></p>
+<ul>
+<li>la date du jour : <code class="language-scdoc highlight">CURRENT_DATE</code><br /></li>
+<li>l'heure : <code class="language-scdoc highlight">CURRENT_TIME</code><br /></li>
+<li><code class="language-scdoc highlight">YEAR(nom_attribut)</code>: la partie année de la date<br /></li>
+<li><code class="language-text highlight">MONTH(attribut)</code> : la partie mois de la date<br /></li>
+<li><code class="language-text highlight">DAY(attribut)</code>: la parte jour de la date<br />
+etc.....</li>
+</ul>
+<p>Combien de film ont été réalisés en 2005 ?
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="n">sortie</span><span class="p">)</span><span class="o">=</span><span class="s1">&#39;2005&#39;</span><span class="p">;</span>
+</code></pre></div></p>
+<div class="admonition question">
+<p class="admonition-title">Q9</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Enoncé</label><label for="__tabbed_9_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Afficher tous les films fantastiques réalisés entre 2000 et 2010 .</p>
+</div>
+<div class="tabbed-block">
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">genre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<span class="k">AND</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="w"> </span><span class="n">sortie</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="mi">2000</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="mi">2010</span><span class="w"> </span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Q10</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Enoncé</label><label for="__tabbed_10_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Afficher tous les films dont le titre commence par « T ».</p>
+</div>
+<div class="tabbed-block">
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;T%&quot;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Q11</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Enoncé</label><label for="__tabbed_11_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Afficher tous les films dont le titre comporte le mot « Monde ».</p>
+</div>
+<div class="tabbed-block">
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%Monde%&quot;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Q12</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Enoncé</label><label for="__tabbed_12_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Affichez pour chaque acteur le nombre de ses films présents dans la base</p>
+</div>
+<div class="tabbed-block">
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="w"> </span><span class="n">idacteur</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">role</span><span class="w"> </span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">idActeur</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Q13</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Enoncé</label><label for="__tabbed_13_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Affichez le nombre de film pour chaque catégorie</p>
+</div>
+<div class="tabbed-block">
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="w"> </span><span class="n">genre</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">film</span><span class="w"> </span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">genre</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Q14</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Enoncé</label><label for="__tabbed_14_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Affichez pour chaque année le film qui a réalisé le plus de recettes</p>
+</div>
+<div class="tabbed-block">
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">recettes</span><span class="p">),</span><span class="n">titre</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">film</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Q15</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Enoncé</label><label for="__tabbed_15_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>afficher le nom et la date de naissance des acteurs qui ont moins de 45 ans. (essayer dans un premier temps de trouver comment afficher l'année en cours)</p>
+</div>
+<div class="tabbed-block">
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">anneeNaiss</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">artiste</span>
+<span class="k">WHere</span><span class="w"> </span><span class="p">(</span><span class="k">YEAR</span><span class="p">(</span><span class="k">CURRENT_DATE</span><span class="p">)</span><span class="o">-</span><span class="w"> </span><span class="n">anneeNaiss</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">45</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Q16</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Enoncé</label><label for="__tabbed_16_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Combien de films sont sortie au mois de septembre ?</p>
+</div>
+<div class="tabbed-block">
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">FILM</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">MONTH</span><span class="p">(</span><span class="n">sortie</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Q17</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">Enoncé</label><label for="__tabbed_17_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>afficher les réalisateurs et la somme des recettes générées par leurs films classés par ordre décroissant des recettes ?</p>
+</div>
+<div class="tabbed-block">
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_realisateur</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">recettes</span><span class="p">)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">FILM</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">nom_realisateur</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">recettes</span><span class="p">)</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
 
 
 
@@ -4544,7 +4941,7 @@
 
 
                 
-<script src="../../../../js/ide.js"></script>
+<script src="../../../js/ide.js"></script>
 <style>
     .jp-RenderedHTMLCommon p {
         font-size: 0.8rem;
@@ -4668,10 +5065,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
@@ -4683,13 +5080,13 @@
       
         <script src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
       
-        <script src="../../../../javascript/mermaid.js"></script>
+        <script src="../../../javascript/mermaid.js"></script>
       
-        <script src="../../../../javascript/mathjax.js"></script>
+        <script src="../../../javascript/mathjax.js"></script>
       
-        <script src="../../../../javascript/interpreter.js"></script>
+        <script src="../../../javascript/interpreter.js"></script>
       
-        <script src="../../../../javascript/ide.js"></script>
+        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

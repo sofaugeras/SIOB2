@@ -12,28 +12,28 @@
         <meta name="author" content="Sophie FAUGERAS">
       
       
-        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.2_TPOwasp/7_tpViolationGestionAuthentification/">
+        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/1_Base_de_donnees/5_TP/tp8_anabase/">
       
       
-        <link rel="prev" href="../6_tpExpositionDonneesSensibles/">
+        <link rel="prev" href="../tp6_vol2/">
       
       
-        <link rel="next" href="../8_tpManqueControleAccesFonctionnel/">
+        <link rel="next" href="../tp9_sauvegarde/">
       
       
-      <link rel="icon" href="../../../../xtra/favTNSI.png">
+      <link rel="icon" href="../../../xtra/favTNSI.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
     
     
       
-        <title>5. TP Violation de Gestion d'Authentification et de Session - Saint Sauveur BTS SIO SLAM</title>
+        <title>Cas Anabase [Revision SIO2] - Saint Sauveur BTS SIO SLAM</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -51,8 +51,8 @@
     
       
     
-    <script src="../../../../xtra/webcomponentsjs/webcomponents-loader.js"></script>
-    <script src="../../../../xtra/gifplayer/gif-player.es6.js" defer async></script>
+    <script src="../../../xtra/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../../../xtra/gifplayer/gif-player.es6.js" defer async></script>
     <!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
@@ -66,9 +66,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -103,6 +103,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#revision-sio2-cas-anabase" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -113,7 +118,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="../../../.." title="Saint Sauveur BTS SIO SLAM" class="md-header__button md-logo" aria-label="Saint Sauveur BTS SIO SLAM" data-md-component="logo">
+    <a href="../../.." title="Saint Sauveur BTS SIO SLAM" class="md-header__button md-logo" aria-label="Saint Sauveur BTS SIO SLAM" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/></svg>
@@ -133,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              5. TP Violation de Gestion d'Authentification et de Session
+              Cas Anabase [Revision SIO2]
             
           </span>
         </div>
@@ -240,12 +245,12 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
     
   
-  Home
+  Home 🏠
 
       </a>
     </li>
@@ -255,11 +260,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../../1_Base_de_donnees/sommaire/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../sommaire/" class="md-tabs__link">
           
   
   Base de données 🏁
@@ -277,7 +284,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../2_Programmation_SQL/sommaire/" class="md-tabs__link">
+        <a href="../../../2_Programmation_SQL/sommaire/" class="md-tabs__link">
           
   
   Programmation BdD
@@ -295,7 +302,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../3_UML/sommaire/" class="md-tabs__link">
+        <a href="../../../3_UML/sommaire/" class="md-tabs__link">
           
   
   UML 📝
@@ -313,7 +320,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../4_Laravel/sommaire/" class="md-tabs__link">
+        <a href="../../../4_Laravel/sommaire/" class="md-tabs__link">
           
   
   Laravel 🎢
@@ -331,7 +338,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../5_devops/sommaire/" class="md-tabs__link">
+        <a href="../../../5_devops/sommaire/" class="md-tabs__link">
           
   
   Devops 🔄
@@ -345,13 +352,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../ressources/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../6_Cybers%C3%A9curit%C3%A9/ressources/" class="md-tabs__link">
           
   
   Cyber SLAM ⚓️
@@ -369,7 +374,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../7_Programmation/sommaire/" class="md-tabs__link">
+        <a href="../../../7_Programmation/sommaire/" class="md-tabs__link">
           
   
   Programmation🚦
@@ -393,7 +398,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../8_liens_utiles/1_epreuves/epreuves/" class="md-tabs__link">
+        <a href="../../../8_liens_utiles/1_epreuves/epreuves/" class="md-tabs__link">
           
   
   Liens Utiles 🔦
@@ -414,7 +419,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../9_PostBTS/sommaire/" class="md-tabs__link">
+        <a href="../../../9_PostBTS/sommaire/" class="md-tabs__link">
           
   
   Poursuites d'études 📈
@@ -449,7 +454,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Saint Sauveur BTS SIO SLAM" class="md-nav__button md-logo" aria-label="Saint Sauveur BTS SIO SLAM" data-md-component="logo">
+    <a href="../../.." title="Saint Sauveur BTS SIO SLAM" class="md-nav__button md-logo" aria-label="Saint Sauveur BTS SIO SLAM" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/></svg>
@@ -479,11 +484,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Home
+    Home 🏠
   </span>
   
 
@@ -496,25 +501,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -525,7 +533,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Base de données 🏁
@@ -539,7 +547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/sommaire/" class="md-nav__link">
+      <a href="../../sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -600,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/1_introduction/cours/" class="md-nav__link">
+      <a href="../../1_introduction/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -669,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/2_LMD/cours/" class="md-nav__link">
+      <a href="../../2_LMD/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -690,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/2_LMD/vol/" class="md-nav__link">
+      <a href="../../2_LMD/vol/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -711,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/2_LMD/bibli/" class="md-nav__link">
+      <a href="../../2_LMD/bibli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -732,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/2_LMD/bts/" class="md-nav__link">
+      <a href="../../2_LMD/bts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -801,7 +809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/3_LCD/cours/" class="md-nav__link">
+      <a href="../../3_LCD/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -822,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/3_LCD/utilisateur/" class="md-nav__link">
+      <a href="../../3_LCD/utilisateur/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -843,7 +851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/3_LCD/TD_vol/" class="md-nav__link">
+      <a href="../../3_LCD/TD_vol/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -864,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/3_LCD/TD_bibli/" class="md-nav__link">
+      <a href="../../3_LCD/TD_bibli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -885,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/3_LCD/TD_lycee/" class="md-nav__link">
+      <a href="../../3_LCD/TD_lycee/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -906,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/3_LCD/TD_user/" class="md-nav__link">
+      <a href="../../3_LCD/TD_user/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -975,7 +983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/4_SQLComplexe/cours/" class="md-nav__link">
+      <a href="../../4_SQLComplexe/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -996,7 +1004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/4_SQLComplexe/TD_hopital/" class="md-nav__link">
+      <a href="../../4_SQLComplexe/TD_hopital/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1017,7 +1025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/4_SQLComplexe/TD_chenil/" class="md-nav__link">
+      <a href="../../4_SQLComplexe/TD_chenil/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1043,8 +1051,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -1052,13 +1062,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
         
           
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
@@ -1072,7 +1080,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             5 TP
@@ -1086,7 +1094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/5_TP/tp1_decouverte/" class="md-nav__link">
+      <a href="../tp1_decouverte/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1107,11 +1115,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/5_TP/tp2_cinema/" class="md-nav__link">
+      <a href="../tp2_inventaireParc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    TP2 Base Cinéma [LMD]
+    TP2 Inventaire de parc [LMD]
   </span>
   
 
@@ -1128,11 +1136,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/5_TP/tp3_cinema2/" class="md-nav__link">
+      <a href="../tp3_cinema/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    TP3 Base Cinéma2 [LMD]
+    TP3 Base Cinéma [LMD]
   </span>
   
 
@@ -1149,11 +1157,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/5_TP/tp4_sncf/" class="md-nav__link">
+      <a href="../tp4_cinema2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    TP4 SNCF [LDD]
+    TP4 Base Cinéma2 [LMD]
   </span>
   
 
@@ -1170,11 +1178,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/5_TP/tp5_vol2/" class="md-nav__link">
+      <a href="../tp5_sncf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    TP5 VOL Complexe [SQL complexe]
+    TP5 SNCF [LDD]
   </span>
   
 
@@ -1191,11 +1199,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/5_TP/tp6_univ/" class="md-nav__link">
+      <a href="../tp6_vol2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    TP6 Université [SQL complexe]
+    TP6 VOL Complexe [SQL complexe]
   </span>
   
 
@@ -1212,7 +1220,48 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/5_TP/tp7_anabase/" class="md-nav__link">
+      <a href="../../../tp7_univ.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP7 Université [SQL complexe]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Cas Anabase [Revision SIO2]
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1221,6 +1270,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-modelisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Modélisation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-exercices-de-requetes-de-projection" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Exercices de requêtes de projection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-exercices-de-requetes-de-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Exercices de requêtes de sélection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-exercices-de-requetes-avec-fonctions" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Exercices de requêtes avec fonctions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-exercices-de-requetes-de-jointure" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Exercices de requêtes de jointure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-exercices-de-requetes-de-requetes-imbriquees" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Exercices de requêtes de requêtes imbriquées
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1233,11 +1356,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/5_TP/tp8_sauvegarde/" class="md-nav__link">
+      <a href="../tp9_sauvegarde/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    TP8 Sauvegarde de base de données
+    TP9 Sauvegarde de base de données
   </span>
   
 
@@ -1302,7 +1425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Base_de_donnees/6_NoSQL/cours/" class="md-nav__link">
+      <a href="../../6_NoSQL/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1378,7 +1501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../2_Programmation_SQL/sommaire/" class="md-nav__link">
+      <a href="../../../2_Programmation_SQL/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1439,7 +1562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../2_Programmation_SQL/5.1_Procedures_stockees/cours/" class="md-nav__link">
+      <a href="../../../2_Programmation_SQL/5.1_Procedures_stockees/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1460,7 +1583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../2_Programmation_SQL/5.1_Procedures_stockees/exercices/" class="md-nav__link">
+      <a href="../../../2_Programmation_SQL/5.1_Procedures_stockees/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1529,7 +1652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../2_Programmation_SQL/5.2_Transactions/cours/" class="md-nav__link">
+      <a href="../../../2_Programmation_SQL/5.2_Transactions/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1598,7 +1721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../2_Programmation_SQL/5.3_curseurs/cours/" class="md-nav__link">
+      <a href="../../../2_Programmation_SQL/5.3_curseurs/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1619,7 +1742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../2_Programmation_SQL/5.3_curseurs/exercices/" class="md-nav__link">
+      <a href="../../../2_Programmation_SQL/5.3_curseurs/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1688,7 +1811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../2_Programmation_SQL/5.4_Triggers_d%C3%A9clencheurs/cours/" class="md-nav__link">
+      <a href="../../../2_Programmation_SQL/5.4_Triggers_d%C3%A9clencheurs/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1709,7 +1832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../2_Programmation_SQL/5.4_Triggers_d%C3%A9clencheurs/exercices/" class="md-nav__link">
+      <a href="../../../2_Programmation_SQL/5.4_Triggers_d%C3%A9clencheurs/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1785,7 +1908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/sommaire/" class="md-nav__link">
+      <a href="../../../3_UML/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1846,7 +1969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.1_diagrammeClasse/3.1.0_IntroUML/" class="md-nav__link">
+      <a href="../../../3_UML/3.1_diagrammeClasse/3.1.0_IntroUML/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1867,7 +1990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.1_diagrammeClasse/3.1.1_diagrammeDeClasse/" class="md-nav__link">
+      <a href="../../../3_UML/3.1_diagrammeClasse/3.1.1_diagrammeDeClasse/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1888,7 +2011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.1_diagrammeClasse/3.1.2_CalculMPD/" class="md-nav__link">
+      <a href="../../../3_UML/3.1_diagrammeClasse/3.1.2_CalculMPD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1909,7 +2032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.1_diagrammeClasse/3.1.3_UML2java/" class="md-nav__link">
+      <a href="../../../3_UML/3.1_diagrammeClasse/3.1.3_UML2java/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1930,7 +2053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.1_diagrammeClasse/3.1.4_Methodologie/" class="md-nav__link">
+      <a href="../../../3_UML/3.1_diagrammeClasse/3.1.4_Methodologie/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1951,7 +2074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.1_diagrammeClasse/exerciceDC/" class="md-nav__link">
+      <a href="../../../3_UML/3.1_diagrammeClasse/exerciceDC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1972,7 +2095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.1_diagrammeClasse/exerciceMPD/" class="md-nav__link">
+      <a href="../../../3_UML/3.1_diagrammeClasse/exerciceMPD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2041,7 +2164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.2_UseCase/cours/" class="md-nav__link">
+      <a href="../../../3_UML/3.2_UseCase/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2062,7 +2185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.2_UseCase/exercice/" class="md-nav__link">
+      <a href="../../../3_UML/3.2_UseCase/exercice/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2131,7 +2254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.3_Sequence/cours/" class="md-nav__link">
+      <a href="../../../3_UML/3.3_Sequence/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2152,7 +2275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.3_Sequence/exercices/" class="md-nav__link">
+      <a href="../../../3_UML/3.3_Sequence/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2221,7 +2344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.4_etatTransition/cours/" class="md-nav__link">
+      <a href="../../../3_UML/3.4_etatTransition/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2242,7 +2365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.4_etatTransition/exercices/" class="md-nav__link">
+      <a href="../../../3_UML/3.4_etatTransition/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2311,7 +2434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.5_etudeDeCas/Viticulture/" class="md-nav__link">
+      <a href="../../../3_UML/3.5_etudeDeCas/Viticulture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2332,7 +2455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.5_etudeDeCas/commissariat/" class="md-nav__link">
+      <a href="../../../3_UML/3.5_etudeDeCas/commissariat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2353,7 +2476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_UML/3.5_etudeDeCas/reseauSocial/" class="md-nav__link">
+      <a href="../../../3_UML/3.5_etudeDeCas/reseauSocial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2429,7 +2552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../4_Laravel/sommaire/" class="md-nav__link">
+      <a href="../../../4_Laravel/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2490,7 +2613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../4_Laravel/4.1_installation/cours/" class="md-nav__link">
+      <a href="../../../4_Laravel/4.1_installation/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2559,7 +2682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../4_Laravel/4.2_toDo/4.2.1_initialisation/" class="md-nav__link">
+      <a href="../../../4_Laravel/4.2_toDo/4.2.1_initialisation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2580,7 +2703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../4_Laravel/4.2_toDo/4.2.2_Ajout_cat%C3%A9gorie/" class="md-nav__link">
+      <a href="../../../4_Laravel/4.2_toDo/4.2.2_Ajout_cat%C3%A9gorie/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2601,7 +2724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../4_Laravel/4.2_toDo/4.2.3_prolongement_middleware/" class="md-nav__link">
+      <a href="../../../4_Laravel/4.2_toDo/4.2.3_prolongement_middleware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2622,7 +2745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../4_Laravel/4.2_toDo/4.2.4_GestionListes/" class="md-nav__link">
+      <a href="../../../4_Laravel/4.2_toDo/4.2.4_GestionListes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2698,7 +2821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_devops/sommaire/" class="md-nav__link">
+      <a href="../../../5_devops/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2759,7 +2882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_devops/5.1_notionDevops/cours/" class="md-nav__link">
+      <a href="../../../5_devops/5.1_notionDevops/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2828,7 +2951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_devops/5.2_docker/cours/" class="md-nav__link">
+      <a href="../../../5_devops/5.2_docker/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2861,28 +2984,25 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2893,7 +3013,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Cyber SLAM ⚓️
@@ -2907,7 +3027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ressources/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/ressources/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2968,7 +3088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Ebios/cours/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/1_Ebios/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2994,8 +3114,6 @@
                 
   
   
-    
-  
   
   
     
@@ -3005,11 +3123,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_3" >
         
           
           <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
@@ -3023,7 +3143,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_3">
             <span class="md-nav__icon md-icon"></span>
             2 OWASP Top 10 🔱
@@ -3077,7 +3197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6.2.1_cours/1_cours/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.1_cours/1_cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3098,7 +3218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6.2.1_cours/2_exercices/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.1_cours/2_exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3124,8 +3244,6 @@
                 
   
   
-    
-  
   
   
     
@@ -3135,11 +3253,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_3_2" >
         
           
           <label class="md-nav__link" for="__nav_7_3_2" id="__nav_7_3_2_label" tabindex="0">
@@ -3153,7 +3273,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_3_2">
             <span class="md-nav__icon md-icon"></span>
             6.2.2 TPOwasp
@@ -3167,7 +3287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3_tpOwasp/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.2_TPOwasp/0_tpOwasp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3188,7 +3308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1_tpMauvaiseConfiguration/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.2_TPOwasp/1_tpMauvaiseConfiguration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3209,7 +3329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2_tpInjectionSQL/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.2_TPOwasp/2_tpInjectionSQL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3230,7 +3350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../6_tpExpositionDonneesSensibles/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.2_TPOwasp/3_tpExpositionDonneesSensibles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3248,17 +3368,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.2_TPOwasp/4_tpViolationGestionAuthentification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3267,7 +3380,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -3280,7 +3392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../8_tpManqueControleAccesFonctionnel/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.2_TPOwasp/5_tpManqueControleAccesFonctionnel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3301,7 +3413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../9_tpVulnerabilitesAuthentification/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.2_TPOwasp/6_tpVulnerabilitesAuthentification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3418,7 +3530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_hygiene_Cyber/6.3.1_cours/1_recoANSII/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/3_hygiene_Cyber/6.3.1_cours/1_recoANSII/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3439,7 +3551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_hygiene_Cyber/6.3.1_cours/2_preuveNumerique/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/3_hygiene_Cyber/6.3.1_cours/2_preuveNumerique/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3460,7 +3572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_hygiene_Cyber/6.3.1_cours/3_authentification/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/3_hygiene_Cyber/6.3.1_cours/3_authentification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3481,7 +3593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_hygiene_Cyber/6.3.1_cours/4_archivage/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/3_hygiene_Cyber/6.3.1_cours/4_archivage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3550,7 +3662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_hygiene_Cyber/6.3.2_TP/TPAuthMA_partie1/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/3_hygiene_Cyber/6.3.2_TP/TPAuthMA_partie1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3571,7 +3683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_hygiene_Cyber/6.3.2_TP/TPAuthMA_partie2/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/3_hygiene_Cyber/6.3.2_TP/TPAuthMA_partie2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3655,7 +3767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../7_Programmation/sommaire/" class="md-nav__link">
+      <a href="../../../7_Programmation/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3716,7 +3828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../7_Programmation/7.1_Regex/cours/" class="md-nav__link">
+      <a href="../../../7_Programmation/7.1_Regex/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3737,7 +3849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../7_Programmation/7.1_Regex/tp/" class="md-nav__link">
+      <a href="../../../7_Programmation/7.1_Regex/tp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3806,7 +3918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../7_Programmation/7.2_POO/cours/" class="md-nav__link">
+      <a href="../../../7_Programmation/7.2_POO/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3827,7 +3939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../7_Programmation/7.2_POO/exercices/" class="md-nav__link">
+      <a href="../../../7_Programmation/7.2_POO/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3896,7 +4008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../7_Programmation/7.3_MVC/cours/" class="md-nav__link">
+      <a href="../../../7_Programmation/7.3_MVC/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3965,7 +4077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../7_Programmation/7.4_CMS/cours/" class="md-nav__link">
+      <a href="../../../7_Programmation/7.4_CMS/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4081,7 +4193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../8_liens_utiles/1_epreuves/epreuves/" class="md-nav__link">
+      <a href="../../../8_liens_utiles/1_epreuves/epreuves/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4102,7 +4214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../8_liens_utiles/1_epreuves/Ep_pro_E5/" class="md-nav__link">
+      <a href="../../../8_liens_utiles/1_epreuves/Ep_pro_E5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4123,7 +4235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../8_liens_utiles/1_epreuves/Ep_pratique_E6/" class="md-nav__link">
+      <a href="../../../8_liens_utiles/1_epreuves/Ep_pratique_E6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4144,7 +4256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../8_liens_utiles/1_epreuves/Ecrit_Cyber_E7/" class="md-nav__link">
+      <a href="../../../8_liens_utiles/1_epreuves/Ecrit_Cyber_E7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4213,7 +4325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../8_liens_utiles/2_conseils/organisation/" class="md-nav__link">
+      <a href="../../../8_liens_utiles/2_conseils/organisation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4234,7 +4346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../8_liens_utiles/2_conseils/notion/" class="md-nav__link">
+      <a href="../../../8_liens_utiles/2_conseils/notion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4255,7 +4367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../8_liens_utiles/2_conseils/git/" class="md-nav__link">
+      <a href="../../../8_liens_utiles/2_conseils/git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4276,7 +4388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../8_liens_utiles/2_conseils/veilleTechno/" class="md-nav__link">
+      <a href="../../../8_liens_utiles/2_conseils/veilleTechno/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4352,7 +4464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../9_PostBTS/sommaire/" class="md-nav__link">
+      <a href="../../../9_PostBTS/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4413,7 +4525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../9_PostBTS/possibilit%C3%A9s/9.1_LP_initial/" class="md-nav__link">
+      <a href="../../../9_PostBTS/possibilit%C3%A9s/9.1_LP_initial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4434,7 +4546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../9_PostBTS/possibilit%C3%A9s/9.2_LP_alt/" class="md-nav__link">
+      <a href="../../../9_PostBTS/possibilit%C3%A9s/9.2_LP_alt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4455,7 +4567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../9_PostBTS/possibilit%C3%A9s/9.3_fac/" class="md-nav__link">
+      <a href="../../../9_PostBTS/possibilit%C3%A9s/9.3_fac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4476,7 +4588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../9_PostBTS/possibilit%C3%A9s/9.4_Ecoles/" class="md-nav__link">
+      <a href="../../../9_PostBTS/possibilit%C3%A9s/9.4_Ecoles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4526,9 +4638,460 @@
   
 
 
-  <h1>5. TP Violation de Gestion d'Authentification et de Session</h1>
+<h1 id="revision-sio2-cas-anabase">Révision SIO2 : Cas Anabase<a class="headerlink" href="#revision-sio2-cas-anabase" title="Permanent link">⚓︎</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Objectif du TP</p>
+<p>Revoir les notions autour des bases de données, vu en SIO1, semestre 1.
+Correspond à la compétence <strong>B1.3 Développer la présence en ligne de l’organisation</strong></p>
+</div>
+<p><img alt="illustration" class="center" src="../data/anabase/illustration.png" width="50%" /></p>
+<p>Pour illustrer ces révisions, j’ai décidé de m’appuyer sur un cas créé dans les années 80 et bien connu des enseignants en informatique : le cas « <strong>Anabase</strong> » dont voici quelques extraits :</p>
+<div class="admonition success">
+<p class="admonition-title">Cas Anabase</p>
+<p>Le congrès se déroule sur une semaine de 5 jours ouvrables. Il comporte différentes sessions d’une demi-journée chacune, consacrées à des conférences, débats sur un thème donné.<br />
+Un congressiste peut participer à ce congrès envoyé par un organisme (entreprise, administration, université ou lycée) ou non.
+Il peut éventuellement être accompagné d’une personne. On suppose qu’un congressiste ne peut pas avoir plus d’un accompagnateur.<br />
+Le congressiste est affecté à un hôtel. Chaque hôtel a proposé un prix par participant et un supplément pour l’accompagnateur. Ces prix sont valables pour toutes les chambres d'un même hôtel.<br />
+Le bureau d’animation propose des activités culturelles (spectacles, excursions, concerts, visites de monuments...) pour meubler le temps des accompagnateurs et des congressistes qui ont des disponibilités dans leur emploi du temps. Chaque activité est repérée par un code activité, une désignation et un horaire de début et de fin.<br />
+Les congressistes et les accompagnateurs peuvent s’inscrire jusqu'à la veille au soir aux activités souhaitées.<br /></p>
+</div>
+<h2 id="1-modelisation">1. Modélisation<a class="headerlink" href="#1-modelisation" title="Permanent link">⚓︎</a></h2>
+<p><img alt="💡" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4a1.svg" title=":bulb:" /> Etablissez un modèle de donnée à partir des informations données ci-dessus.</p>
+<details class="info">
+<summary>Diagramme de classe</summary>
+<p><img alt="Diagramme de classe" class="center" src="../data/anabase/diagClasseAnabase.png" width="100%" /></p>
+</details>
+<details class="info">
+<summary>MPD</summary>
+<p>Le modèle relationnel obtenu est le suivant :</p>
+<p><img alt="MPD" class="center" src="../data/anabase/anabaseConcepteur.png" width="100%" /></p>
+</details>
+<p><a class="md-button md-button--primary" href="../data/anabase/anabase_mysql.sql">Télécharger fichier Création de la base Anabase <img alt="⬇️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2b07.svg" title=":arrow_down:" /></a></p>
+<h2 id="2-exercices-de-requetes-de-projection">2. Exercices de requêtes de projection<a class="headerlink" href="#2-exercices-de-requetes-de-projection" title="Permanent link">⚓︎</a></h2>
+<div class="admonition question">
+<p class="admonition-title">R1</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Enoncé</label><label for="__tabbed_1_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Afficher le nom, la date et l’heure de chaque activité.</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_ACTIVITE</span><span class="p">,</span><span class="w"> </span><span class="n">DATE_ACTIVITE</span><span class="p">,</span><span class="w"> </span><span class="n">HEURE_ACTIVITE</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ACTIVITE</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">R2</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Enoncé</label><label for="__tabbed_2_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Afficher les villes dont sont originaires les congressistes </p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">distinct</span><span class="w"> </span><span class="n">ADRESSE_CONGRESSISTE</span><span class="w">  </span>
+<span class="k">FROM</span><span class="w">  </span><span class="n">CONGRESSISTE</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<h2 id="3-exercices-de-requetes-de-selection">3. Exercices de requêtes de sélection<a class="headerlink" href="#3-exercices-de-requetes-de-selection" title="Permanent link">⚓︎</a></h2>
+<div class="admonition question">
+<p class="admonition-title">R3</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Enoncé</label><label for="__tabbed_3_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Donner la liste des organismes limougeauds.</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ORGANISME_PAYEUR</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">ADRESSE_ORGANISME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Limoges&#39;</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">R4</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Enoncé</label><label for="__tabbed_4_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Donner les noms et prénoms de congressistes ne dépendant pas d’un organisme.</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">PRENOM_CONGRESSISTE</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">N_ORGANISME</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">R5</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Enoncé</label><label for="__tabbed_5_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Donner la liste des congressistes situés dans les hôtels de 2 à 4.</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">N_HOTEL</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">R6</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Enoncé</label><label for="__tabbed_6_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Donner la liste des activités ayant lieu le 5 ou le 7 juin 2008.</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ACTIVITE</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">DATE_ACTIVITE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="n">D</span><span class="w"> </span><span class="s1">&#39;2008-06-05&#39;</span><span class="w"> </span><span class="err">}</span><span class="w"> </span>
+<span class="w">    </span><span class="k">OR</span><span class="w"> </span><span class="n">DATE_ACTIVITE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="n">D</span><span class="w"> </span><span class="s1">&#39;2008-06-07&#39;</span><span class="w"> </span><span class="err">}</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">R7</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Enoncé</label><label for="__tabbed_7_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Donner la liste des congressistes (nom et prénom) par ordre alphabétique.</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">PRENOM_CONGRESSISTE</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">PRENOM_CONGRESSISTE</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">R8</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Enoncé</label><label for="__tabbed_8_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Donner la liste des hôtels dont le prix participant est compris entre 35 et 52 €.</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_HOTEL</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX_PARTICIPANT</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">HOTEL</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w">  </span><span class="n">PRIX_PARTICIPANT</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="mi">35</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="mi">52</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">R9</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Enoncé</label><label for="__tabbed_9_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Donner la liste des congressistes (nom, prénom) dont le nom commence par un « M ».</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">PRENOM_CONGRESSISTE</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w">  </span><span class="n">NOM_CONGRESSISTE</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="s1">&#39;M%&#39;</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">R10</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Enoncé</label><label for="__tabbed_10_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Donner la liste des congressistes (nom, prénom) dont le nom contient un « A ».</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">PRENOM_CONGRESSISTE</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%A%&#39;</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">R11</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Enoncé</label><label for="__tabbed_11_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Donner la liste des congressistes (nom, prénom) dont le nom finit par un « T ».</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">PRENOM_CONGRESSISTE</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%T&#39;</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">R12</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Enoncé</label><label for="__tabbed_12_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Donner la liste des hôtels dont le prix participant varie entre 35 et 55 € et dont le prix supplément varie entre 20 et 30 €.</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_HOTEL</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX_PARTICIPANT</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX_SUPPL</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w">  </span><span class="n">HOTEL</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w">  </span><span class="n">PRIX_PARTICIPANT</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="mi">35</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="mi">55</span><span class="w"> </span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">PRIX_SUPPL</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">R13</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Enoncé</label><label for="__tabbed_13_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Donner pour chaque hôtel  la somme des deux prix (prix participant + prix supplément).</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_HOTEL</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX_PARTICIPANT</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX_SUPPL</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX_PARTICIPANT</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">PRIX_SUPPL</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">PRIX_TOTAL</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">HOTEL</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<h2 id="4-exercices-de-requetes-avec-fonctions">4. Exercices de requêtes avec fonctions<a class="headerlink" href="#4-exercices-de-requetes-avec-fonctions" title="Permanent link">⚓︎</a></h2>
+<div class="admonition question">
+<p class="admonition-title">R14</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Enoncé</label><label for="__tabbed_14_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Afficher le nombre total de congressistes.</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">R15</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Enoncé</label><label for="__tabbed_15_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Afficher le prix moyen d’une chambre à Biarritz et la même chose pour les suppléments.</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">PRIX_PARTICIPANT</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">MOY_PARTICIPANT</span><span class="p">,</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="w"> </span><span class="n">PRIX_SUPPL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">MOY_</span><span class="w"> </span><span class="n">SUPPL</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">HOTEL</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">ADRESSE_HOTEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Biarritz&#39;</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">R16</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Enoncé</label><label for="__tabbed_16_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Afficher pour chaque activité le nombre de personnes l’ayant choisie.</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">N_ACTIVITE</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">NB_FOIS</span><span class="w">  </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PARTICIPATION</span><span class="w"> </span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">N_ACTIVITE</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">R17</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">Enoncé</label><label for="__tabbed_17_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Pour chaque congressiste participant à plus de 2 activités, afficher la moyenne du nombre de personnes</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">N_CONGRESSISTE</span><span class="p">,</span><span class="k">AVG</span><span class="p">(</span><span class="n">NBRE_PERSONNES</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">moyenne</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PARTICIPATION</span><span class="w"> </span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">N_CONGRESSISTE</span>
+<span class="k">HAVING</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<h2 id="5-exercices-de-requetes-de-jointure">5. Exercices de requêtes de jointure<a class="headerlink" href="#5-exercices-de-requetes-de-jointure" title="Permanent link">⚓︎</a></h2>
+<div class="admonition question">
+<p class="admonition-title">R18</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:2"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">Enoncé</label><label for="__tabbed_18_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Afficher pour chaque congressiste son numéro, son nom et le nom de l’hôtel où il loge.</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">N_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">NOM_HOTEL</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">HOTEL</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HOTEL</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">R19</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">Enoncé</label><label for="__tabbed_19_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Même résultat que dans R18, mais afficher en plus le nom de l’organisme dont il dépend. Que remarquez-vous ?</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">N_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">NOM_HOTEL</span><span class="p">,</span><span class="w"> </span><span class="n">NOM_ORGANISME</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">HOTEL</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HOTEL</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w">  </span><span class="n">ORGANISME_PAYEUR</span><span class="w"> </span><span class="n">O</span><span class="w"> </span>
+<span class="n">ONCONGRESSISTE</span><span class="p">.</span><span class="n">N_ORGANISME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">O</span><span class="p">.</span><span class="n">N_ORGANISME</span><span class="w"> </span><span class="p">;</span>
 
-
+<span class="n">Il</span><span class="w"> </span><span class="n">faut</span><span class="w"> </span><span class="n">remarquer</span><span class="w"> </span><span class="n">que</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">congressistes</span><span class="w"> </span><span class="n">ne</span><span class="w"> </span><span class="n">dépendant</span><span class="w"> </span><span class="n">d</span><span class="err">’</span><span class="n">aucun</span><span class="w"> </span><span class="n">organisme</span><span class="w"> </span><span class="n">ne</span><span class="w"> </span><span class="n">figure</span><span class="w"> </span><span class="n">pas</span><span class="w"> </span><span class="n">comme</span><span class="w"> </span><span class="n">résultat</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">cette</span><span class="w"> </span><span class="n">requête</span><span class="w"> </span><span class="n">basée</span><span class="w"> </span><span class="n">sur</span><span class="w"> </span><span class="n">l</span><span class="err">’é</span><span class="n">galité</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">numéros</span><span class="w"> </span><span class="n">d</span><span class="err">’</span><span class="n">organisme</span><span class="p">.</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">R20</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">Enoncé</label><label for="__tabbed_20_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Afficher pour chaque congressiste son numéro, son nom et le nom de l’hôtel. Restituer cette liste par hôtel et par ordre alphabétique des congressistes.</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_HOTEL</span><span class="p">,</span><span class="w"> </span><span class="n">N_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="w">  </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">HOTEL</span><span class="w"> </span>
+<span class="k">ON</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HOTEL</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w">  </span><span class="n">CONGRESSISTE</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span><span class="p">,</span><span class="w">  </span><span class="n">NOM_CONGRESSISTE</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">R21</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">Enoncé</label><label for="__tabbed_21_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Même chose que pour R20, mais uniquement pour les congressistes des hôtels de Biarritz.</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_HOTEL</span><span class="p">,</span><span class="w"> </span><span class="n">N_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="w">  </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">HOTEL</span><span class="w"> </span>
+<span class="k">ON</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HOTEL</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span>
+<span class="k">AND</span><span class="w"> </span><span class="n">ADRESSE_HOTEL</span><span class="w"> </span><span class="o">=</span><span class="s1">&#39;Biarritz&#39;</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w">  </span><span class="n">CONGRESSISTE</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span><span class="p">,</span><span class="w">  </span><span class="n">NOM_CONGRESSISTE</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<h2 id="6-exercices-de-requetes-de-requetes-imbriquees">6. Exercices de requêtes de requêtes imbriquées<a class="headerlink" href="#6-exercices-de-requetes-de-requetes-imbriquees" title="Permanent link">⚓︎</a></h2>
+<div class="admonition question">
+<p class="admonition-title">R22</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:2"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">Enoncé</label><label for="__tabbed_22_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Afficher le nom et le prénom des congressistes allant au concert de Jazz.</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_congressiste</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_congressiste</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">N_congressiste</span><span class="w"> </span>
+<span class="w">    </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">N_congressiste</span><span class="w"> </span>
+<span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">PARTICIPATION</span><span class="w"> </span>
+<span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">N_activité</span><span class="w"> </span>
+<span class="w">        </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">N_ACTIVITE</span><span class="w"> </span>
+<span class="w">            </span><span class="k">FROM</span><span class="w"> </span><span class="n">ACTIVITE</span><span class="w"> </span>
+<span class="w">            </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NOM_ACTIVITE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Concert Jazz&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">R23</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:2"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><input id="__tabbed_23_2" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="__tabbed_23_1">Enoncé</label><label for="__tabbed_23_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Afficher le nom et le prénom des congressistes n’allant pas au tournoi de pelote basque.</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_congressiste</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_congressiste</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">N_congressiste</span><span class="w"> </span><span class="k">NOT</span><span class="w">  </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">N_congressiste</span><span class="w"> </span>
+<span class="w">                            </span><span class="k">FROM</span><span class="w"> </span><span class="n">PARTICIPATION</span><span class="w"> </span>
+<span class="w">                            </span><span class="k">WHERE</span><span class="w"> </span><span class="n">N_activité</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">N_ACTIVITE</span><span class="w"> </span>
+<span class="w">                                                </span><span class="k">FROM</span><span class="w"> </span><span class="n">ACTIVITE</span><span class="w"> </span>
+<span class="w">                                                </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NOM_ACTIVITE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Tournoi Pelote basque&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">R24</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="24:2"><input checked="checked" id="__tabbed_24_1" name="__tabbed_24" type="radio" /><input id="__tabbed_24_2" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="__tabbed_24_1">Enoncé</label><label for="__tabbed_24_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Afficher le nom et le prénom des congressistes ayant choisi une chambre d’hôtel dont le montant par jour est supérieur à 70 euros (prix chambre + prix supplémentaire).</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_congressiste</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_congressiste</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">N_hôtel</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">N_hôtel</span><span class="w"> </span>
+<span class="w">                    </span><span class="k">FROM</span><span class="w"> </span><span class="n">HOTEL</span><span class="w"> </span>
+<span class="w">                    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Prix_Participant</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Prix_Suppl</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">70</span><span class="w"> </span><span class="p">);</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">R25</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="25:2"><input checked="checked" id="__tabbed_25_1" name="__tabbed_25" type="radio" /><input id="__tabbed_25_2" name="__tabbed_25" type="radio" /><div class="tabbed-labels"><label for="__tabbed_25_1">Enoncé</label><label for="__tabbed_25_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Afficher le nom et le prénom des congressistes ayant choisi l’activité la moins chère.</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_congressiste</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_congressiste</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">N_congressiste</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">N_congressiste</span><span class="w"> </span>
+<span class="w">                        </span><span class="k">FROM</span><span class="w"> </span><span class="n">PARTICIPATION</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">N_activité</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">N_ACTIVITE</span><span class="w"> </span><span class="mi">1</span><span class="w">                </span>
+<span class="w">                                                                </span><span class="k">FROM</span><span class="w"> </span><span class="n">ACTIVITE</span><span class="w"> </span>
+<span class="w">                                                                </span><span class="k">WHERE</span><span class="w"> </span><span class="n">PRIX_ACTIVITE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">MIN</span><span class="p">(</span><span class="n">PRIX_ACTIVITE</span><span class="p">)</span><span class="w"> </span>
+<span class="w">                                                                                        </span><span class="k">FROM</span><span class="w"> </span><span class="n">ACTIVITE</span><span class="p">))</span><span class="w"> </span><span class="p">);</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
 
 
 
@@ -4544,7 +5107,7 @@
 
 
                 
-<script src="../../../../js/ide.js"></script>
+<script src="../../../js/ide.js"></script>
 <style>
     .jp-RenderedHTMLCommon p {
         font-size: 0.8rem;
@@ -4668,10 +5231,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
@@ -4683,13 +5246,13 @@
       
         <script src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
       
-        <script src="../../../../javascript/mermaid.js"></script>
+        <script src="../../../javascript/mermaid.js"></script>
       
-        <script src="../../../../javascript/mathjax.js"></script>
+        <script src="../../../javascript/mathjax.js"></script>
       
-        <script src="../../../../javascript/interpreter.js"></script>
+        <script src="../../../javascript/interpreter.js"></script>
       
-        <script src="../../../../javascript/ide.js"></script>
+        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

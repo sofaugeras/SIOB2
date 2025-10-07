@@ -8,14 +8,39 @@ description: Le meilleur moyen de comprendre la sécurisation d’une applicatio
 
 ## 2. 🧪 Accès et découverte de DVWA
 
-Lancer DVWA dans le navigateur à l’adresse : http://localhost/dvwa
+Damn Vulnerable Web Application (DVWA) est une application web PHP/MariaDB volontairement très vulnérable.
+Son objectif principal est :
 
-S’authentifier avec les identifiants par défaut :
+- d’aider les professionnels de la sécurité à tester leurs compétences et leurs outils dans un environnement légal
+- d’aider les développeurs web à mieux comprendre les mécanismes de sécurisation des applications web,
+- de servir de support aux étudiants et aux enseignants pour apprendre la sécurité des applications web dans un cadre pédagogique contrôlé.
 
-Login : admin
-Password : password
+[Lien vers le dépot GitHub 🔽 ](https://github.com/digininja/DVWA)
 
-Aller dans l’onglet **DVWA Security** et régler le niveau de sécurité sur ==Low==
+??? note "How To install"
+
+    - Place le dossier DVWA dans le répertoire `C:\wamp64\www\`
+    - Dans le dossier DVWA/config/, copie le fichier : config.inc.php.dist  →  config.inc.php
+    - Ouvre ``config.inc.php`` et ajuste la config :
+
+        ```php
+        $_DVWA[ 'db_user' ] = 'root';
+        $_DVWA[ 'db_password' ] = '';   // par défaut root n’a PAS de mot de passe sous WAMP
+        $_DVWA[ 'db_database' ] = 'dvwa';
+        ```
+    - Activer ``allow_url_include`` et ``gd`` dans `php.ini` :   Active/supprime le ``;`` si présent
+
+        ```php
+        allow_url_include = On
+        allow_url_fopen = On
+        extension=gd
+        ```
+    - Crée une nouvelle base appelée **dvwa**
+    - Lancer http://localhost/DVWA/setup.php > Create / Reset Database
+    - Connecte-toi avec : **Login** : admin et **Password** : password
+
+    Pour finir : Régler le niveau de sécurité<br />
+    Dans le menu DVWA → DVWA Security → choisis **Low** pour débuter.<br />
 
 
 ## 3. 💍 Site bijoo

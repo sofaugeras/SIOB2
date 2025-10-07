@@ -789,7 +789,7 @@ La clause `HAVING` va de pair avec la clause `GROUP BY`, elle permet d'appliquer
 
 !!! question "R24" 
     === "Enoncé"
-        Quelles sont les villes pour lesquelles il y a au moins 2 vols à l’arrivée »
+        Quelles sont les villes pour lesquelles il y a au moins 2 vols à l’arrivée ?
 
         |VilleArrivee|	NbArrivee|
         |:--:|:--:|

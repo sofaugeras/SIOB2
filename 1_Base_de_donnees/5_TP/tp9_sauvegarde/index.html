@@ -12,13 +12,13 @@
         <meta name="author" content="Sophie FAUGERAS">
       
       
-        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/3_UML/3.1_diagrammeClasse/3.1.2_CalculMPD/">
+        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/1_Base_de_donnees/5_TP/tp9_sauvegarde/">
       
       
-        <link rel="prev" href="../3.1.1_diagrammeDeClasse/">
+        <link rel="prev" href="../tp8_anabase/">
       
       
-        <link rel="next" href="../3.1.3_UML2java/">
+        <link rel="next" href="../../6_NoSQL/cours/">
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Calcul d'un MPD - Saint Sauveur BTS SIO SLAM</title>
+        <title>TP9 Sauvegarde de base de données - Saint Sauveur BTS SIO SLAM</title>
       
     
     
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#calcul-dun-mpd" class="md-skip">
+        <a href="#sauvegarde-de-base-de-donnees-sous-mysql" class="md-skip">
           Aller au contenu
         </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Calcul d'un MPD
+              TP9 Sauvegarde de base de données
             
           </span>
         </div>
@@ -260,11 +260,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../1_Base_de_donnees/sommaire/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../sommaire/" class="md-tabs__link">
           
   
   Base de données 🏁
@@ -296,13 +298,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../sommaire/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../3_UML/sommaire/" class="md-tabs__link">
           
   
   UML 📝
@@ -501,25 +501,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -530,7 +533,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Base de données 🏁
@@ -544,7 +547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/sommaire/" class="md-nav__link">
+      <a href="../../sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -605,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/1_introduction/cours/" class="md-nav__link">
+      <a href="../../1_introduction/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -674,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/2_LMD/cours/" class="md-nav__link">
+      <a href="../../2_LMD/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -695,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/2_LMD/vol/" class="md-nav__link">
+      <a href="../../2_LMD/vol/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -716,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/2_LMD/bibli/" class="md-nav__link">
+      <a href="../../2_LMD/bibli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -737,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/2_LMD/bts/" class="md-nav__link">
+      <a href="../../2_LMD/bts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -806,7 +809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/3_LCD/cours/" class="md-nav__link">
+      <a href="../../3_LCD/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -827,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/3_LCD/utilisateur/" class="md-nav__link">
+      <a href="../../3_LCD/utilisateur/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -848,7 +851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/3_LCD/TD_vol/" class="md-nav__link">
+      <a href="../../3_LCD/TD_vol/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -869,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/3_LCD/TD_bibli/" class="md-nav__link">
+      <a href="../../3_LCD/TD_bibli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -890,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/3_LCD/TD_lycee/" class="md-nav__link">
+      <a href="../../3_LCD/TD_lycee/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -911,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/3_LCD/TD_user/" class="md-nav__link">
+      <a href="../../3_LCD/TD_user/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -980,7 +983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/4_SQLComplexe/cours/" class="md-nav__link">
+      <a href="../../4_SQLComplexe/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1001,7 +1004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/4_SQLComplexe/TD_hopital/" class="md-nav__link">
+      <a href="../../4_SQLComplexe/TD_hopital/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1022,7 +1025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/4_SQLComplexe/TD_chenil/" class="md-nav__link">
+      <a href="../../4_SQLComplexe/TD_chenil/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1048,8 +1051,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -1057,13 +1062,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
         
           
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
@@ -1077,7 +1080,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             5 TP
@@ -1091,7 +1094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/5_TP/tp1_decouverte/" class="md-nav__link">
+      <a href="../tp1_decouverte/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1112,7 +1115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/5_TP/tp2_inventaireParc/" class="md-nav__link">
+      <a href="../tp2_inventaireParc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1133,7 +1136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/5_TP/tp3_cinema/" class="md-nav__link">
+      <a href="../tp3_cinema/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1154,7 +1157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/5_TP/tp4_cinema2/" class="md-nav__link">
+      <a href="../tp4_cinema2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1175,7 +1178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/5_TP/tp5_sncf/" class="md-nav__link">
+      <a href="../tp5_sncf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1196,7 +1199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/5_TP/tp6_vol2/" class="md-nav__link">
+      <a href="../tp6_vol2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1238,7 +1241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/5_TP/tp8_anabase/" class="md-nav__link">
+      <a href="../tp8_anabase/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1256,10 +1259,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/5_TP/tp9_sauvegarde/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    TP9 Sauvegarde de base de données
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1268,6 +1291,77 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-preparation-de-lenvironnement" class="md-nav__link">
+    <span class="md-ellipsis">
+      0. Préparation de l’environnement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-sauvegarde-par-phpmyadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Sauvegarde par PHPMyAdmin
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Sauvegarde par PHPMyAdmin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-sauvegarde-au-format-base-de-donnees-duplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Sauvegarde au format Base de données (duplication)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-sauvegarde-sous-forme-de-script-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Sauvegarde sous forme de script SQL
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-sauvegarde-par-mysqldump" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Sauvegarde par mysqldump
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1328,7 +1422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/6_NoSQL/cours/" class="md-nav__link">
+      <a href="../../6_NoSQL/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1768,28 +1862,25 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1800,7 +1891,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             UML 📝
@@ -1814,7 +1905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sommaire/" class="md-nav__link">
+      <a href="../../../3_UML/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1832,8 +1923,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1843,11 +1932,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -1861,7 +1952,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             3.1 diagrammeClasse
@@ -1875,7 +1966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3.1.0_IntroUML/" class="md-nav__link">
+      <a href="../../../3_UML/3.1_diagrammeClasse/3.1.0_IntroUML/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1896,7 +1987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3.1.1_diagrammeDeClasse/" class="md-nav__link">
+      <a href="../../../3_UML/3.1_diagrammeClasse/3.1.1_diagrammeDeClasse/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1914,30 +2005,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Calcul d'un MPD
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../3_UML/3.1_diagrammeClasse/3.1.2_CalculMPD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1946,44 +2017,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#les-5-regles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Les 5 règles
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gestion-de-lheritage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Gestion de l'héritage
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1996,7 +2029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3.1.3_UML2java/" class="md-nav__link">
+      <a href="../../../3_UML/3.1_diagrammeClasse/3.1.3_UML2java/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2017,7 +2050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3.1.4_Methodologie/" class="md-nav__link">
+      <a href="../../../3_UML/3.1_diagrammeClasse/3.1.4_Methodologie/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2038,7 +2071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../exerciceDC/" class="md-nav__link">
+      <a href="../../../3_UML/3.1_diagrammeClasse/exerciceDC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2059,7 +2092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../exerciceMPD/" class="md-nav__link">
+      <a href="../../../3_UML/3.1_diagrammeClasse/exerciceMPD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2128,7 +2161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.2_UseCase/cours/" class="md-nav__link">
+      <a href="../../../3_UML/3.2_UseCase/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2149,7 +2182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.2_UseCase/exercice/" class="md-nav__link">
+      <a href="../../../3_UML/3.2_UseCase/exercice/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2218,7 +2251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.3_Sequence/cours/" class="md-nav__link">
+      <a href="../../../3_UML/3.3_Sequence/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2239,7 +2272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.3_Sequence/exercices/" class="md-nav__link">
+      <a href="../../../3_UML/3.3_Sequence/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2308,7 +2341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.4_etatTransition/cours/" class="md-nav__link">
+      <a href="../../../3_UML/3.4_etatTransition/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2329,7 +2362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.4_etatTransition/exercices/" class="md-nav__link">
+      <a href="../../../3_UML/3.4_etatTransition/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2398,7 +2431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.5_etudeDeCas/Viticulture/" class="md-nav__link">
+      <a href="../../../3_UML/3.5_etudeDeCas/Viticulture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2419,7 +2452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.5_etudeDeCas/commissariat/" class="md-nav__link">
+      <a href="../../../3_UML/3.5_etudeDeCas/commissariat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2440,7 +2473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.5_etudeDeCas/reseauSocial/" class="md-nav__link">
+      <a href="../../../3_UML/3.5_etudeDeCas/reseauSocial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4602,96 +4635,182 @@
   
 
 
-<h1 id="calcul-dun-mpd">Calcul d'un MPD<a class="headerlink" href="#calcul-dun-mpd" title="Permanent link">⚓︎</a></h1>
-<p>ou <strong>Du diagramme de classe au modèle physique</strong></p>
-<h2 id="les-5-regles">Les 5 règles<a class="headerlink" href="#les-5-regles" title="Permanent link">⚓︎</a></h2>
+<h1 id="sauvegarde-de-base-de-donnees-sous-mysql">Sauvegarde de Base de données sous MySQL<a class="headerlink" href="#sauvegarde-de-base-de-donnees-sous-mysql" title="Permanent link">⚓︎</a></h1>
+<h2 id="0-preparation-de-lenvironnement">0. Préparation de l’environnement<a class="headerlink" href="#0-preparation-de-lenvironnement" title="Permanent link">⚓︎</a></h2>
+<ol>
+<li>Récupérer la base de données exemple <code class="language-scdoc highlight">tp_sauvegarde</code>.
+<a class="md-button md-button--primary" href="../data/tpSauv/tp_sauvegarde.sql">Télécharger base sauvegarde <img alt="⬇️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2b07.svg" title=":arrow_down:" /></a></li>
+</ol>
+<details class="note">
+<summary>Descriptif</summary>
+<p><code class="language-text highlight">utilisateurs</code> : contient les informations des utilisateurs inscrits.<br />
+  <code class="language-text highlight">commandes</code> : enregistre les commandes passées par les utilisateurs. Une relation existe entre les tables utilisateurs et commandes grâce à la clé étrangère <code class="language-scdoc highlight">utilisateur_id</code>.<br />
+  <code class="language-text highlight">logs</code> : journalise les actions réalisées dans le système.</p>
+</details>
+<ol>
+<li>Visualiser sa structure et son contenu :</li>
+</ol>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SHOW</span><span class="w"> </span><span class="n">TABLES</span><span class="p">;</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">nom_table</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="1-sauvegarde-par-phpmyadmin">1. Sauvegarde par PHPMyAdmin<a class="headerlink" href="#1-sauvegarde-par-phpmyadmin" title="Permanent link">⚓︎</a></h2>
+<h3 id="11-sauvegarde-au-format-base-de-donnees-duplication">1.1 Sauvegarde au format Base de données (duplication)<a class="headerlink" href="#11-sauvegarde-au-format-base-de-donnees-duplication" title="Permanent link">⚓︎</a></h3>
+<p><img alt="sauvegarde" class="center" src="../data/tpSauv/sauvegarde_phpMyAdmin.png" width="50%" /></p>
+<h3 id="12-sauvegarde-sous-forme-de-script-sql">1.2 Sauvegarde sous forme de script SQL<a class="headerlink" href="#12-sauvegarde-sous-forme-de-script-sql" title="Permanent link">⚓︎</a></h3>
+<p>👀 Prenez le temps d'observer toutes les options proposées par cet écran</p>
+<p><img alt="sauvegarde" class="center" src="../data/tpSauv/sauve1.png" width="50%" /></p>
+<details class="info">
+<summary>Résultat</summary>
+<p><a class="md-button md-button--primary" href="../data/tpSauv/tp_sauvegarde_script.sql">Télécharger le script obtenu <img alt="⬇️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2b07.svg" title=":arrow_down:" /></a></p>
+</details>
+<h2 id="2-sauvegarde-par-mysqldump">2. Sauvegarde par mysqldump<a class="headerlink" href="#2-sauvegarde-par-mysqldump" title="Permanent link">⚓︎</a></h2>
+<details class="warning">
+<summary>préalable</summary>
+<ul>
+<li>localiser <code class="language-text highlight">mysqldump.exe</code> qui doit etre dans <code class="language-text highlight">C:\wamp64\bin\mysql\mysqlX.X.X\bin</code><br /></li>
+<li>Ajouter ce chemin dans les variables d'environnement de Windows. Cela permettra d'utiliser la commande MySQLdump depuis une invite de commande peu importe le répertoire ou l'on se trouve<br /></li>
+</ul>
+<p><strong>Détail</strong>  <br />
+  - Accédez à <strong>Panneau de configuration &gt; Système &gt; Paramètres avancés &gt; Variables d'environnement</strong>.<br />
+  - Trouvez la variable <strong>Path</strong> dans la section <mark>Système</mark> et cliquez sur Modifier.<br />
+  - Ajoutez le chemin vers le répertoire bin de MySQL (par exemple, <code class="language-text highlight">C:\Program Files\MySQL\MySQL Server X.X\bin</code>).<br />
+  - Redémarrez l’Invite de commandes.
+  - tester si cela fonctionne en ouvrant une invite de commande <strong>cmd</strong> et en tapant <code class="language-text highlight">mysqldump --version</code><br /></p>
+</details>
+<h4 id="21-sauvegarde-avec-mysqldump">2.1 Sauvegarde avec <code class="language-text highlight">mysqldump</code><a class="headerlink" href="#21-sauvegarde-avec-mysqldump" title="Permanent link">⚓︎</a></h4>
+<p>👉 Expliquer la commande de base pour sauvegarder une base de données </p>
+<p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>mysqldump<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>tp_sauvegarde<span class="w"> </span>&gt;<span class="w"> </span>sauvegarde_tp.sql
+</code></pre></div>
+<strong>note</strong> : le mot de passe demandé à l'execution de la commande est celui de la base de données (associé au <code class="language-text highlight">root</code>)</p>
+<p><strong>indication</strong> : lire la <a href="https://dev.mysql.com/doc/refman/8.4/en/mysqldump.html" target="blank">documentation</a></p>
+<p>👉 Vérifier que le fichier de sauvegarde est bien créé. Où a t'il été créé ?</p>
+<details class="question">
+<summary>solution</summary>
+<p>Le fichier <code class="language-scdoc highlight">sauvegarde_tp.sql</code> est créé dans le répertoire où la commande a été exécutée.</p>
+</details>
+<p>👉 Lancer un éditeur de texte pour explorer le contenu de <code class="language-scdoc highlight">sauvegarde_tp.sql</code> et expliquer le format des sauvegardes (fichiers SQL).</p>
+<p>❓ Quelles sont les informations présentes dans le fichier de sauvegarde ?</p>
+<details class="question">
+<summary>correction</summary>
+<p>Le fichier comprend toutes les instructions pour recréer la base, structure et données</p>
+</details>
+<p>❓ Comment récupérer uniquement la structure des tables sans les données ?</p>
+<details class="question">
+<summary>proposition</summary>
+<p>Réaliser une sauvegarde contenant uniquement la structure :
+  <div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>mysqldump<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>--no-data<span class="w"> </span>tp_sauvegarde<span class="w"> </span>&gt;<span class="w"> </span>structure_tp.sql
+</code></pre></div></p>
+</details>
+<h4 id="22-simuler-une-perte-de-donnees">2.2 Simuler une perte de données<a class="headerlink" href="#22-simuler-une-perte-de-donnees" title="Permanent link">⚓︎</a></h4>
+<p>👉 Supprimer une table ou des données :</p>
+<details class="question">
+<summary>proposition</summary>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">logs</span><span class="p">;</span>
+</code></pre></div>
+</details>
+<p>👉 Vérifier que les données sont perdues :</p>
+<details class="question">
+<summary>proposition</summary>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">logs</span><span class="p">;</span>
+</code></pre></div>
+</details>
+<h4 id="23-restauration-des-donnees">2.3 Restauration des données<a class="headerlink" href="#23-restauration-des-donnees" title="Permanent link">⚓︎</a></h4>
+<p>👉 Restaurer la base à partir de la sauvegarde :
+   <div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>mysql<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>tp_sauvegarde<span class="w"> </span>&lt;<span class="w"> </span>sauvegarde_tp.sql
+</code></pre></div>
+👉 Vérifier que les données sont restaurées :
+   <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">logs</span><span class="p">;</span>
+</code></pre></div></p>
+<p>❓ Que se passe-t-il si la base de données <code class="language-scdoc highlight">tp_sauvegarde</code> n’existe pas avant la restauration ?</p>
+<details class="question">
+<summary>proposition</summary>
+<p>Erreur SQL, la base n'existe pas.</p>
+</details>
+<p>❓ Que faire pour éviter ce problème lors de grandes restaurations ?</p>
+<details class="question">
+<summary>proposition</summary>
+<p>Inclure l'option <code class="language-text highlight">--add-drop-database</code> lors de la sauvegarde pour que le fichier contienne la commande <code class="language-teratermmacro highlight"><span class="nv">DROP</span><span class="w"> </span><span class="nv">DATABASE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="nv">EXISTS</span></code>.</p>
+</details>
+<h4 id="24-automatisation-des-sauvegardes">2.4 Automatisation des sauvegardes<a class="headerlink" href="#24-automatisation-des-sauvegardes" title="Permanent link">⚓︎</a></h4>
+<p>👉 Expliquer comment planifier des sauvegardes régulières avec le planificateur de tâches sous Windows.</p>
+<details class="question">
+<summary>proposition</summary>
+<p><strong>Étape 1 : Préparer le script de sauvegarde</strong><br />
+  1. Créez un fichier batch (par exemple, <code class="language-scdoc highlight">backup_mysql.bat</code>) :
+     <div class="language-batch highlight"><span class="filename">Batchfile</span><pre><span></span><code><span class="p">@</span><span class="k">echo</span> off
+<span class="k">set</span> <span class="nv">BACKUP_DIR</span><span class="p">=</span>C:\backups
+<span class="k">set</span> <span class="nv">TIMESTAMP</span><span class="p">=</span><span class="nv">%date:~10,4%</span>-<span class="nv">%date:~4,2%</span>-<span class="nv">%date:~7,2%</span>
+<span class="k">set</span> <span class="nv">BACKUP_FILE</span><span class="p">=</span><span class="nv">%BACKUP_DIR%</span>\all_databases_<span class="nv">%TIMESTAMP%</span>.sql
+
+<span class="k">set</span> <span class="nv">MYSQL_USER</span><span class="p">=</span>root
+<span class="k">set</span> <span class="nv">MYSQL_PASSWORD</span><span class="p">=</span>VotreMotDePasse
+
+<span class="k">if</span> <span class="k">not</span> <span class="k">exist</span> <span class="s2">&quot;</span><span class="nv">%BACKUP_DIR%</span><span class="s2">&quot;</span> <span class="k">mkdir</span> <span class="s2">&quot;</span><span class="nv">%BACKUP_DIR%</span><span class="s2">&quot;</span>
+
+mysqldump -u <span class="nv">%MYSQL_USER%</span> -p<span class="nv">%MYSQL_PASSWORD%</span> --all-databases <span class="p">&gt;</span> <span class="s2">&quot;</span><span class="nv">%BACKUP_FILE%</span><span class="s2">&quot;</span>
+
+<span class="k">if</span> <span class="nv">%ERRORLEVEL%</span> <span class="ow">EQU</span> 0 <span class="p">(</span>
+   <span class="k">echo</span> Sauvegarde réussie : <span class="nv">%BACKUP_FILE%</span>
+<span class="p">)</span> <span class="k">else</span> <span class="p">(</span>
+   <span class="k">echo</span> Erreur lors de la sauvegarde
+<span class="p">)</span>
+<span class="k">pause</span>
+</code></pre></div>
+  <strong>Explications des variables :</strong></p>
+<ul>
+<li><strong>BACKUP_DIR</strong> : Répertoire où les sauvegardes seront enregistrées. Vous pouvez modifier <code class="language-text highlight">C:\backups</code> par un chemin de votre choix.<br /></li>
+<li><strong>MYSQL_USER</strong> et <strong>MYSQL_PASSWORD</strong> : Identifiants de connexion à votre serveur MySQL. Remplacez VotreMotDePasse par le mot de passe du compte MySQL <code class="language-text highlight">root</code> (ou un autre utilisateur disposant des droits nécessaires).<br /></li>
+<li>
+<p><strong>TIMESTAMP</strong> : Génère une date au format YYYY-MM-DD pour inclure dans le nom du fichier.</p>
+</li>
+<li>
+<p>Testez le fichier batch en double-cliquant dessus ou via l'Invite de commandes.</p>
+</li>
+</ul>
+<p><strong>Étape 2 : Configurer le Planificateur de tâches</strong><br />
+  1. Ouvrez le <strong>Planificateur de tâches</strong> : Appuyez sur <code class="language-text highlight">Win + R</code>, tapez <code class="language-text highlight">taskschd.msc</code> et appuyez sur Entrée.<br />
+  2. Créez une nouvelle tâche :Cliquez sur <strong>Créer une tâche...</strong> dans le menu de droite.<br />
+  3. Configurez la tâche :<br />
+  <strong>Général :</strong> Donnez un nom à la tâche, par exemple, "Sauvegarde MySQL", puis Cochez <strong>Exécuter même si l'utilisateur n'est pas connecté</strong> et sélectionnez <strong>Exécuter avec les autorisations maximales</strong>.<br />
+  <strong>Déclencheurs :</strong> Cliquez sur <strong>Nouveau...</strong> et planifiez l'exécution (par exemple, quotidiennement à 2h du matin).<br />
+  <strong>Actions :</strong> Cliquez sur <strong>Nouveau...</strong>, choisissez <strong>Démarrer un programme</strong>, et indiquez le chemin vers votre fichier batch (<code class="language-scdoc highlight">backup_mysql.bat</code>).<br />
+  4. Sauvegardez et testez : Cliquez sur <strong>OK</strong> et exécutez la tâche manuellement pour vérifier son fonctionnement.</p>
+</details>
+<p>❓ Donner une commande sauvegarder 2 bases de données en même temps.</p>
+<details class="question">
+<summary>proposition</summary>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>mysqldump<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>--databases<span class="w"> </span>tp_sauvegarde<span class="w"> </span>autre_base<span class="w"> </span>&gt;<span class="w"> </span>multi_backup.sql
+</code></pre></div>
+</details>
+<p>❓  Donner une commande pour sauvegarder et compresser la sauvegarde :</p>
+<details class="question">
+<summary>proposition</summary>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>mysqldump<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>tp_sauvegarde<span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>sauvegarde_tp.sql.gz
+</code></pre></div>
+</details>
 <div class="admonition info">
-<p class="admonition-title">Règle 1</p>
-<p><img alt="🔹" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f539.svg" title=":small_blue_diamond:" /> Toute classe devient une relation ayant pour clé primaire son identifiant.<br />
-<img alt="🔹" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f539.svg" title=":small_blue_diamond:" /> Chaque propriété se transforme en attribut.</p>
-<p><img alt="regle 1" class="center" src="../data/MPD1.png" width="30%" /></p>
-<p><strong>CLIENT</strong> (<ins>code_client</ins>, nom, prenom, adresse, code_postal, ville, téléphone)</p>
+<p class="admonition-title">Conseils généraux</p>
+<ol>
+<li><strong>Vérification des sauvegardes :</strong><ul>
+<li>Testez régulièrement les fichiers de sauvegarde en restaurant une base sur un environnement de test.</li>
+</ul>
+</li>
+<li><strong>Sécurisation :</strong><ul>
+<li>Stockez les sauvegardes dans un endroit sécurisé, idéalement sur un autre serveur ou un service cloud.</li>
+<li>Utilisez un mot de passe dédié à la sauvegarde.</li>
+</ul>
+</li>
+<li><strong>Compression des sauvegardes :</strong><ul>
+<li>Ajoutez une étape de compression pour économiser de l'espace :</li>
+<li>Sous Linux :
+    <div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>mysqldump<span class="w"> </span>...<span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>sauvegarde.sql.gz
+</code></pre></div></li>
+<li>Sous Windows, utilisez un outil comme 7-Zip dans le script.</li>
+</ul>
+</li>
+</ol>
+<p>Découvrir les outils de sauvegarde tiers comme <strong>Percona XtraBackup</strong> ou <strong>MySQL Enterprise Backup</strong>.</p>
 </div>
-<div class="admonition info">
-<p class="admonition-title">Règle 2</p>
-<p><img alt="🔹" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f539.svg" title=":small_blue_diamond:" /> Toute relation de type <mark>hiérarchique</mark> (de type [1, *]) se traduit par une clé étrangère. <br />
-<img alt="🔹" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f539.svg" title=":small_blue_diamond:" /> La clé primaire correspondant à l’entité fils (côté 1 ) « migre » comme clé étrangère correspondant à l’entité père (côté *)</p>
-<p><img alt="regle 2" class="center" src="../data/MPD2.png" width="30%" /></p>
-<p><strong>CLIENT</strong> (<ins>code_client</ins>, nom, prenom, adresse, code_postal, ville, téléphone)<br />
-<strong>COMMANDE</strong> (<ins>num_com</ins>, date, etat, montant_total, #code_client)</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Règle 3</p>
-<p><img alt="🔹" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f539.svg" title=":small_blue_diamond:" /> Toute relation <mark>non hiérarchique</mark> (de type [ * , * ] ou de dimension &gt; 2) devient une relation.<br />
-<img alt="🔹" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f539.svg" title=":small_blue_diamond:" /> La clé primaire est formé par la concaténation (juxtaposition) de l’ensemble des identifiants des entités reliées.<br />
-<img alt="🔹" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f539.svg" title=":small_blue_diamond:" /> Toutes les propriétés éventuelles deviennent des attributs qui ne peuvent pas faire partie de la clé.</p>
-<p><img alt="regle 3" class="center" src="../data/MPD3.png" width="60%" /></p>
-<p><strong>CLIENT</strong> (<ins>code_client</ins>, nom, prenom, adresse, code_postal, ville, téléphone)<br />
-<strong>COMMANDE</strong> (<ins>num_com</ins>, date, etat, montant_total, #code_client)<br />
-<strong>ARTICLE</strong> (<ins>ref_article</ins>, designation, prix_unitaire)<br />
-<strong>CONCERNE</strong> (<ins>#num_com, #ref_article</ins>)</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Règle 4</p>
-<p><img alt="🔹" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f539.svg" title=":small_blue_diamond:" /> C'est un cas particulier de la règle 3 sur les <mark>classes d'association</mark>.<br />
-<img alt="🔹" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f539.svg" title=":small_blue_diamond:" /> On applique la règle 3 en créant une table qui contiendra également l’attribut de la classe d’association. <br />
-<img alt="🔹" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f539.svg" title=":small_blue_diamond:" /> Mais l'attribut ne sera pas inclus dans la clé primaire.</p>
-<p><img alt="regle 4" class="center" src="../data/MPD3_1.png" width="60%" /></p>
-<p><strong>CLIENT</strong> (<ins>code_client</ins>, nom, prenom, adresse, code_postal, ville, téléphone)<br />
-<strong>COMMANDE</strong> (<ins>num_com</ins>, date, etat, montant_total, #code_client)<br />
-<strong>ARTICLE</strong> (<ins>ref_article</ins>, designation, prix_unitaire)<br />
-<strong>CONCERNE</strong> (<ins>#num_com, #ref_article</ins>, quantite)</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Règle 5</p>
-<p>C'est un cas particulier de la règle 2 et de la règle 3 sur les associations de type réflexive.</p>
-<p><strong>Les associations réfexives hiérarchiques</strong>
-<img alt="regle 5_1" class="center" src="../data/MPD5.jpg" width="30%" /></p>
-<p>On peut lire l'association ainsi : Un salarié a pour chef <span class="arithmatex">\(0\)</span> ou un seul salarié. un salarié est chef de <span class="arithmatex">\(0\)</span> ou <span class="arithmatex">\(n\)</span> salarié(s).</p>
-<p><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0031-20e3.svg" title=":one:" /> On applique la règle 1, donc on créer la table SALARIE contenant les propriétés de la classe et comme clé primaire l'identifiant, ici matricule.</p>
-<p><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0032-20e3.svg" title=":two:" /> Puis on applique la règle 2 des associations de type hiérarchique. On fait "descendre" la clé primaire de la table "fils" vers la table "père". <img alt="😨" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f628.svg" title=":fearful:" /> On va donc retrouver un deuxième matricule dans la table. Il nous faut alors préciser quelle role tient cet clé etrangère, ici c'est le matricule du chef.</p>
-<p><strong>SALARIE</strong>(<ins>matricule</ins>, nom, prenom, #matriculeChef)<br /></p>
-<blockquote>
-<p>clé primaire : matricule<br />
-clé étrangère : matriculeChef EN REFERENCE à matricule de SALARIE</p>
-</blockquote>
-<p><strong>Les associations réfexives hiérarchiques</strong>
-<img alt="regle 5_2" class="center" src="../data/MPD5_1.jpg.png" width="60%" /></p>
-<p>On peut lire l'association ainsi : Une pièce entre dans la composition de 0 à plusieurs autres pièces. Une pièce peut être composée de plusieurs autres pièces. Une pièce entre dans la composition d'une autre un certain nombre de fois.</p>
-<p><ins>Exemple :</ins> La pièce "voiture" est composée de 4 pièces "roue". La pièce "roue" est elle-même composée d'une pièce "pneu" et d'une autre "jante".</p>
-<p>Une pièce entrant dans la composition d'une autre est appelée composant. Une pièce composée d'autres pièces est appelée composé. Une roue est à la fois composant (de voiture) et un composé (de pneu et jante).</p>
-<p><img alt="🚨" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f6a8.svg" title=":rotating_light:" /> On applique la règle de 3 sur les associations non hiérarchiques. Il faut créer une table dont la clé primaire composée des identifiants composant la relation en spécifiant les rôles de chaque identifiant. </p>
-<p><strong>PIECE</strong> (<ins>reference</ins>, libelle)<br />
-<strong>COMPOSITION</strong>(<ins>#reference_compose, #reference_composant</ins>, nombre)  </p>
-</div>
-<h2 id="gestion-de-lheritage">Gestion de l'héritage<a class="headerlink" href="#gestion-de-lheritage" title="Permanent link">⚓︎</a></h2>
-<p><img alt="héritage emploi" class="center" src="../data/heritage_emploi.png" width="40%" /></p>
-<p>Pour le concept de l'héritage, il n'y a pas une seule solution. La solution d'implémentation va dépendre des besoins prioritaires.<br /></p>
-<blockquote>
-<p><img alt="🔹" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f539.svg" title=":small_blue_diamond:" /> Cohérence<br />
-<img alt="🔹" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f539.svg" title=":small_blue_diamond:" /> Evolutivité<br />
-<img alt="🔹" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f539.svg" title=":small_blue_diamond:" /> Volume des données<br />
-<img alt="🔹" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f539.svg" title=":small_blue_diamond:" /> Optimisation des traitements pour retrouver une donnée<br />
-<img alt="🔹" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f539.svg" title=":small_blue_diamond:" /> Mise à jours + Ajout<br /></p>
-</blockquote>
-<p><img alt="heritage tableau" class="center" src="../data/heritage_tableau.png" width="50%" /></p>
-<p><strong>Solution 1 : Duplication des attributs dans les sous-types</strong><br />
-<strong>EMPLOYE</strong> (<ins>matricule</ins>, nom, prénom, adresse, cp, ville, #serv_code)<br />
-<strong>CONTRACTUEL</strong> (<ins>matricule</ins>, nom, prénom, adresse, cp, ville, num_contrat)<br />
-<strong>TITULAIRE</strong> (<ins>matricule</ins>, nom, prénom, adresse, cp, ville, date_embauche)<br />
-<strong>SERVICE</strong> (<ins>serv_code</ins>, serv_nom)<br /></p>
-<p><strong>Solution 2 : conservation de l’entité générique</strong><br />
-<strong>EMPLOYE</strong> (<ins>matricule</ins>, nom, prénom, adresse, cp, ville, num_contrat, date_embauche, #serv_code)<br />
-<strong>SERVICE</strong> (<ins>serv-code</ins>, serv_nom)<br /></p>
-<p><strong>Solution 3 : conservation des entités spécifiques</strong><br />
-<strong>EMPLOYE_TITULAIRE</strong> (<ins>matricule</ins>, nom, prénom, adresse, cp, ville, date_embauche, #serv_code)<br />
-<strong>EMPLOYE_CONTRACTUEL</strong> (<ins>matricule</ins>, nom, prénom, adresse, cp, ville, num_contrat, #serv_code)<br />
-<strong>SERVICE</strong> (<ins>serv-code</ins>, serv_nom)</p>
-<p><strong>Solution 4 : conservation de toutes les entités</strong><br />
-<strong>EMPLOYE</strong> (<ins>matricule</ins>, nom, prénom, adresse, cp, ville, #serv_code)<br />
-<strong>EMPLOYE_CONTRACTUEL</strong> (<ins>matricule</ins>, num_contrat)<br />
-<strong>EMPLOYE_TITULIARE</strong> (<ins>matricule</ins>, date_embauche)<br />
-<strong>SERVICE</strong> (<ins>serv-code</ins>, serv_nom)</p>
 
 
 

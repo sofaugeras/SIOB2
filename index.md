@@ -1,32 +1,43 @@
+# Home 🏠
 ![logo BTS](./images/logo-bts-sio-300x143.png){ .center width=20%}
 
+!!! tip "les essentiels"
+    - [Lien vers le BO](./8_liens_utiles/2_epreuves/data/BTS_ServicesInformatiquesOrganisations_BO2024.pdf){target="_blank"}
+
+## Actus SIO1
 
 !!! warning "Actu SIO1"
 
-    📌 Thème en cours B1 : [Base de données : LMD](./1_Base_de_donnees/2_LMD/cours.md)<br />
-    ⌛️ A venir : [Base de données : LCD](./1_Base_de_donnees/3_LCD/cours.md) <br />
+    📌 Thème en cours B1 : [Base de données : LCD](./1_Base_de_donnees/3_LCD/cours.md) <br />
+    ⌛️ A venir : [Base de données : langages de contrôle des données]<br />
     📕 Evaluation : Série de DS : du 12 au 18 novembre <br />
     
-    📅 Semaine de remédiation du 6 au 10 octobre<br />
     📅 Rencontre Parent/Prof/etudiant : ~~Mercredi 15 octobre~~ Date prochaine en cours de validation<br />
     📅 Stage SIO1 : lundi 18 mai - vendredi 19 juin 2026, retour au lycée le lundi 22 juin de 8h30 à 12h30 <br />
 
+!!! note "🚨 *Thèmes traités*"
+
+    - [Base de données : introduction](./1_Base_de_donnees/1_introduction/cours.md)<br />
+    - [Base de données : Langage de manipulation de données](./1_Base_de_donnees/2_LMD/cours.md)<br />
+
+## Actus SIO2
+
 !!! warning "Actu SIO2 SLAM"
 
-    📌 Thème en cours B2 : [Laravel : ToDo Installation](./4_Laravel/4.2_toDo/4.2.1_initialisation.md)<br />
-    ⌛️ A venir B2 : [Laravel : ToDo Gestion des catégories](./4_Laravel/4.2_toDo/4.2.2_Ajout_catégorie.md)<br />
+    📌 Thème en cours B2 : [Laravel : ToDo Gestion des catégories](./4_Laravel/4.2_toDo/4.2.2_Ajout_catégorie.md)<br />
+    ⌛️ A venir B2 : [Laravel : installation des middleWares]<br />
 
-    📌 Thème en cours B3 : Bijoo : TP1 Injection SQL <br />
-    ⌛️ A venir B3 : Violation de Gestion d'Authentification et de Session<br />
-    📣 Exposé : Exposé : Analyse de cas Cyber
+    📌 Thème en cours B3 : [Authentification](./6_Cybersécurité/3_hygiene_Cyber/6.3.1_cours/3_authentification.md) <br />
+    ⌛️ A venir B3 :  [TP1 Injection SQL](./6_Cybersécurité/2_OWASP/6.2.2_TPOwasp/2_tpInjectionSQL.md)<br />
+    📣 Exposé : Exposé : Analyse de cas Cyber -> Prochaine date : Mardi 2 décembre
 
-    📕 Evaluation : Série de DS : du 13 au 16 octobre <br />
+    📕 Evaluation : Série de DS : du 13 au 17 octobre <br />
 
     📅 fin du 1er semestre : Vendredi 21 novembre<br />
     📅 Stage SIO2 : lundi 5 janvier - vendredi 13 février 2026<br />
 
 !!! question "Exposé SIO2"
-    📣 ^^liste des exposés^^ :
+    📣 ^^liste des exposés^^ : prochaine date : Mardi 2 décembre
 
     :arrow_forward: Analyse de cas Cyber : <br />
     Analyser une attaque Cyber connue et documentée : point d'entrée, impacts de l'attaque, reprise de l'activité, actions à postériori
@@ -39,13 +50,22 @@
 
     |Date|Nom|Thème|
     |:--:|:--:|:--:|
-    | 14/10 |Elouan| Kiabi 2024 |
-    | 7/10 |Alexandre| Peugeot 2024 |
-    | 30/09 |Maël| free 2024  |
+    | 2/12 |Elouan|  |
+    | 2/12 |Alexandre|  |
+    | 2/12 |Maël|  |
    
+!!! note "🚨 *Thèmes traités B2*"
+    - [Rappel Base de données : Anabase](./1_Base_de_donnees/5_TP/tp7_anabase.md)<br />
+    - [Modèle MVC : principes](./7_Programmation/7.3_MVC/cours.md)<br />
+    - [Laravel : installation Bac à sable](./4_Laravel/4.1_installation/cours.md)<br />
+    - [Laravel : Initilisation Projet ToDo](./4_Laravel/4.2_toDo/4.2.1_initialisation.md)<br />
 
-!!! tip "les essentiels"
-    - [Lien vers le BO](./8_liens_utiles/2_epreuves/data/BTS_ServicesInformatiquesOrganisations_BO2024.pdf){target="_blank"}
+!!! note "🚨 *Thèmes traités B3*"
+    - [Rappel MOOC ANSSI](./6_Cybersécurité/3_hygiene_Cyber/6.3.1_cours/1_recoANSII.md)<br />
+    - [Méthodes EBIOS](./6_Cybersécurité/1_Ebios/cours.md)<br />
+    - [Mauvaise gestion de configuration](./6_Cybersécurité/2_OWASP/6.2.2_TPOwasp/1_tpMauvaiseConfiguration.md)<br />
+    - [Preuve numérique](./6_Cybersécurité/3_hygiene_Cyber/6.3.1_cours/2_preuveNumerique.md)<br />
+    - [Authentication](./6_Cybersécurité/3_hygiene_Cyber/6.3.1_cours/3_authentification.md)<br />
 
 <!--
 !!! warning "Calendrier de l'avent"
