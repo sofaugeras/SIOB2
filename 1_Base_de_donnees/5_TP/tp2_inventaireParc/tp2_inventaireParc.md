@@ -14,7 +14,7 @@ Le service suit également les **pannes** signalées sur les équipements afin d
 
 ---
 
-## 1. Schéma de la base de données 🧩
+## 1. Schéma de la base de données 🔬
 
 ![schéma de la base](./data/parcInfo.png){: .center width=100%}
 
@@ -52,7 +52,7 @@ clé étrangère : #idUtilisateur : en référence à idUtilisateur de UTILISATE
 **INCIDENT**(^^idIncident^^, idPoste, dateIncident, description, statut)<br />
 clé primaire : ^^idIncident^^<br />
 ^^idIncident^^ : INT : Identifiant de l’incident (PK) <br />
-idPoste : INT : Poste concerné (FK en référence à idPoste de Poste) <br />
+idPoste : INT : Poste concerné <br />
 dateIncident : DATE : Date de la panne <br />
 description : VARCHAR(100) | Description du problème <br />
 statut : VARCHAR(20) : Statut du ticket (ouvert, en cours, résolu) <br />
@@ -60,7 +60,7 @@ clé étrangère : #idPoste : en référence à idPoste de POSTE
 
 [Télécharger fichier Création de la base :arrow_down:](./data/inventaire.sql){ .md-button .md-button--primary }
 
-??? info "💾 Jeu de Données"
+??? info "💾 Jeu de Données (partiel)"
 
     ```sql
     INSERT INTO Salle VALUES (1, 'B201', 15);
@@ -141,7 +141,7 @@ clé étrangère : #idPoste : en référence à idPoste de POSTE
     === "Correction"
 
         ```sql
-        INSERT INTO Incident VALUES (6,2, '2025-06-20', 'Blue screen', 'En cours')
+        INSERT INTO Incident VALUES (6,5, '2025-06-20', 'Blue screen', 'En cours')
         ```
 
 !!! question "Q5_2"

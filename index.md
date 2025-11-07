@@ -12,10 +12,10 @@
     ⌛️ A venir : [Base de données : langages de contrôle des données]<br />
     📕 Evaluation : Série de DS : du 12 au 18 novembre <br />
     
-    📅 Rencontre Parent/Prof/etudiant : ~~Mercredi 15 octobre~~ Date prochaine en cours de validation<br />
+    📅 Rencontre Parent/Prof/etudiant : Mercredi 26 Novembre<br />
     📅 Stage SIO1 : lundi 18 mai - vendredi 19 juin 2026, retour au lycée le lundi 22 juin de 8h30 à 12h30 <br />
 
-!!! note "🚨 *Thèmes traités*"
+??? note "🚨 *Thèmes traités*"
 
     - [Base de données : introduction](./1_Base_de_donnees/1_introduction/cours.md)<br />
     - [Base de données : Langage de manipulation de données](./1_Base_de_donnees/2_LMD/cours.md)<br />
@@ -24,17 +24,17 @@
 
 !!! warning "Actu SIO2 SLAM"
 
-    📌 Thème en cours B2 : [Laravel : ToDo Gestion des catégories](./4_Laravel/4.2_toDo/4.2.2_Ajout_catégorie.md)<br />
-    ⌛️ A venir B2 : [Laravel : installation des middleWares]<br />
+    📌 Thème en cours B2 : [Laravel : Installation Auth](./4_Laravel/4.2_toDo/4.2.3_prolongement_middleware.md)<br />
+    ⌛️ A venir B2 : [Laravel : Gestion des listes]<br />
 
-    📌 Thème en cours B3 : [Authentification](./6_Cybersécurité/3_hygiene_Cyber/6.3.1_cours/3_authentification.md) <br />
-    ⌛️ A venir B3 :  [TP1 Injection SQL](./6_Cybersécurité/2_OWASP/6.2.2_TPOwasp/2_tpInjectionSQL.md)<br />
+    📌 Thème en cours B3 : [Archivage](./6_Cybersécurité/3_hygiene_Cyber/6.3.1_cours/4_archivage.md) <br />
+    ⌛️ A venir B3 :  [TP Violation de gestion d'authentification et de session]()<br />
     📣 Exposé : Exposé : Analyse de cas Cyber -> Prochaine date : Mardi 2 décembre
-
-    📕 Evaluation : Série de DS : du 13 au 17 octobre <br />
 
     📅 fin du 1er semestre : Vendredi 21 novembre<br />
     📅 Stage SIO2 : lundi 5 janvier - vendredi 13 février 2026<br />
+
+    🌟 Ecrits BTS : du 18 au 21 mai
 
 !!! question "Exposé SIO2"
     📣 ^^liste des exposés^^ : prochaine date : Mardi 2 décembre
@@ -54,13 +54,14 @@
     | 2/12 |Alexandre|  |
     | 2/12 |Maël|  |
    
-!!! note "🚨 *Thèmes traités B2*"
+??? note "🚨 *Thèmes traités B2*"
     - [Rappel Base de données : Anabase](./1_Base_de_donnees/5_TP/tp7_anabase.md)<br />
     - [Modèle MVC : principes](./7_Programmation/7.3_MVC/cours.md)<br />
     - [Laravel : installation Bac à sable](./4_Laravel/4.1_installation/cours.md)<br />
     - [Laravel : Initilisation Projet ToDo](./4_Laravel/4.2_toDo/4.2.1_initialisation.md)<br />
+    - [Laravel : Gestion des catégories](./4_Laravel/4.2_toDo/4.2.2_Ajout_catégorie.md)
 
-!!! note "🚨 *Thèmes traités B3*"
+??? note "🚨 *Thèmes traités B3*"
     - [Rappel MOOC ANSSI](./6_Cybersécurité/3_hygiene_Cyber/6.3.1_cours/1_recoANSII.md)<br />
     - [Méthodes EBIOS](./6_Cybersécurité/1_Ebios/cours.md)<br />
     - [Mauvaise gestion de configuration](./6_Cybersécurité/2_OWASP/6.2.2_TPOwasp/1_tpMauvaiseConfiguration.md)<br />

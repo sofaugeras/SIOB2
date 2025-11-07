@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/4_Laravel/4.2_toDo/4.2.4_GestionListes/">
       
       
-        <link rel="prev" href="../4.2.3_prolongement_middleware/">
+        <link rel="prev" href="../4.2.3_middleware_Auth/">
       
       
         <link rel="next" href="../../../5_devops/sommaire/">
@@ -2630,11 +2630,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../4.2.3_prolongement_middleware/" class="md-nav__link">
+      <a href="../4.2.3_middleware_Auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    3. Utilisation des middlewares
+    3. Middelware d'authentification
   </span>
   
 
@@ -2660,6 +2660,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4. Gestion des listes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2669,6 +2680,61 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-analyse-dimpact-base-de-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Analyse d'impact Base de données
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-user-story-gestion-des-listes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 User story : Gestion des listes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-user-story-affectation-dun-todo-a-une-liste" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 User story : Affectation d'un todo à une liste
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-user-story-affichage-de-la-liste-des-todos" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 User story : Affichage de la liste des todos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2798,11 +2864,74 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../5_devops/5.1_notionDevops/cours/" class="md-nav__link">
+      <a href="../../../5_devops/5.1_notionDevops/1_cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Notion de devops
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../5_devops/5.1_notionDevops/2_ci/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intégration Continue : compilation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../5_devops/5.1_notionDevops/3_tests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../5_devops/5.1_notionDevops/4_deploiement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Déploiement
   </span>
   
 
@@ -2983,7 +3112,7 @@
             
   
   <span class="md-ellipsis">
-    1 Ebios
+    6.1 Ebios
   </span>
   
 
@@ -2993,7 +3122,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_2">
             <span class="md-nav__icon md-icon"></span>
-            1 Ebios
+            6.1 Ebios
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3004,7 +3133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/1_Ebios/cours/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_Ebios/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3072,6 +3201,27 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_OWASP/sommaire/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les failles OWASP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -3085,10 +3235,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_3_1" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_3_2" >
         
           
-          <label class="md-nav__link" for="__nav_7_3_1" id="__nav_7_3_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7_3_2" id="__nav_7_3_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3099,8 +3249,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_3_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_3_1">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3_2">
             <span class="md-nav__icon md-icon"></span>
             6.2.1 cours
           </label>
@@ -3113,11 +3263,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.1_cours/1_cours/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_OWASP/6.2.1_cours/1_cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    1. Cours
+    6.2.1 Cours
   </span>
   
 
@@ -3134,11 +3284,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.1_cours/2_exercices/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_OWASP/6.2.1_cours/2_exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    2. Exercices
+    6.2.2 Exercices
   </span>
   
 
@@ -3175,10 +3325,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_3_2" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_3_3" >
         
           
-          <label class="md-nav__link" for="__nav_7_3_2" id="__nav_7_3_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7_3_3" id="__nav_7_3_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3189,8 +3339,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_3_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3_3">
             <span class="md-nav__icon md-icon"></span>
             6.2.2 TPOwasp
           </label>
@@ -3203,7 +3353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.2_TPOwasp/0_tpOwasp/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_OWASP/6.2.2_TPOwasp/0_tpOwasp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3224,7 +3374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.2_TPOwasp/1_tpMauvaiseConfiguration/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_OWASP/6.2.2_TPOwasp/1_tpMauvaiseConfiguration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3245,7 +3395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.2_TPOwasp/2_tpInjectionSQL/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_OWASP/6.2.2_TPOwasp/2_tpInjectionSQL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3266,7 +3416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.2_TPOwasp/3_tpExpositionDonneesSensibles/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_OWASP/6.2.2_TPOwasp/3_tpExpositionDonneesSensibles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3287,7 +3437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.2_TPOwasp/4_tpViolationGestionAuthentification/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_OWASP/6.2.2_TPOwasp/4_tpViolationGestionAuthentification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3308,7 +3458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.2_TPOwasp/5_tpManqueControleAccesFonctionnel/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_OWASP/6.2.2_TPOwasp/5_tpManqueControleAccesFonctionnel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3329,7 +3479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/2_OWASP/6.2.2_TPOwasp/6_tpVulnerabilitesAuthentification/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_OWASP/6.2.2_TPOwasp/6_tpVulnerabilitesAuthentification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3446,7 +3596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/3_hygiene_Cyber/6.3.1_cours/1_recoANSII/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.3_hygiene_Cyber/6.3.1_cours/1_recoANSII/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3467,7 +3617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/3_hygiene_Cyber/6.3.1_cours/2_preuveNumerique/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.3_hygiene_Cyber/6.3.1_cours/2_preuveNumerique/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3488,7 +3638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/3_hygiene_Cyber/6.3.1_cours/3_authentification/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.3_hygiene_Cyber/6.3.1_cours/3_authentification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3509,7 +3659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/3_hygiene_Cyber/6.3.1_cours/4_archivage/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.3_hygiene_Cyber/6.3.1_cours/4_archivage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3578,11 +3728,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/3_hygiene_Cyber/6.3.2_TP/TPAuthMA_partie1/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.3_hygiene_Cyber/6.3.2_TP/TPAuthMA_partie1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    TP MFA avec TOTP 🔐
+    1. TP1 MFA OTP
   </span>
   
 
@@ -3599,11 +3749,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/3_hygiene_Cyber/6.3.2_TP/TPAuthMA_partie2/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.3_hygiene_Cyber/6.3.2_TP/TPAuthMA_partie2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    TP Protection contre la force brute 🔐
+    2. TP2 Protection Brut Force
   </span>
   
 
@@ -4555,20 +4705,65 @@
 
 
 <h1 id="4-gestion-des-listes">4. Gestion des listes<a class="headerlink" href="#4-gestion-des-listes" title="Permanent link">⚓︎</a></h1>
-<p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> User Story :</p>
-<p><img alt="📕" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4d5.svg" title=":closed_book:" />Pour faciliter l’organisation des toDo il vous est demandé de gérer une fonctionnalité de regroupement de Todos que l’on appellera <strong>Liste de Todos</strong>. Une Liste pourra contenir plusieurs Todos et un todo pourra être affecté à une et une seule liste (mais pourra également ne pas appartenir à une liste).<br />
-Il vous est demander de créer un nouvel écran de gestion de Liste, permettant de créer une nouvelle liste et d’affecter des Todos non déjà affectés à cette liste. 
-Sous ce formulaire, on pourra également avoir la liste des « listes » avec leurs Todos. </p>
-<p><img alt="liste" class="center" src="../../data/liste1.png" width="70%" /></p>
-<p><img alt="📗" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4d7.svg" title=":green_book:" /> Lors de la création de la création d’un Todo, on pourra affecter un todo à une liste par une liste déroulante. On devra également gérer le cas de ne pas affecter à une liste. </p>
-<p><img alt="liste" class="center" src="../../data/liste2.png" width="50%" /></p>
-<p><img alt="📘" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4d8.svg" title=":blue_book:" /> Dans un dernier temps, vous pourrez afficher le nom de la liste d’appartenance à chaque Todo. </p>
-<p><img alt="liste" class="center" src="../../data/liste3.png" width="30%" /></p>
-<details class="question">
-<summary>modélisation UML de la fonctionnalité</summary>
+<p><img alt="📕" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4d5.svg" title=":closed_book:" /> <strong>User Story</strong> : Pour faciliter l’organisation des toDo il vous est demandé de gérer une fonctionnalité de <strong>regroupement de Todos</strong> que l’on appellera <strong>Liste de Todos</strong>. Une Liste pourra contenir plusieurs Todos et un todo pourra être affecté à une et une seule liste (mais pourra également ne pas appartenir à une liste).<br /></p>
+<h2 id="41-analyse-dimpact-base-de-donnees">4.1 Analyse d'impact Base de données<a class="headerlink" href="#41-analyse-dimpact-base-de-donnees" title="Permanent link">⚓︎</a></h2>
+<p>En résumé des règles métier, on a : </p>
+<ul>
+<li>Un Todo appartient à 0 ou 1 Liste.</li>
+<li>Une Liste contient 0..* Todos.</li>
+<li>En cas de Suppression de Liste, pas de suppression des Todos en cascade. Les Todos restent, avec <code>list_id = NULL</code>.</li>
+</ul>
+<p>On peut visualiser le diagramme de classe associer à notre application.</p>
+<p><img alt="illustration Diagramme de classe" class="center" src="../data/diagClasse.png" width="25%" /></p>
+<div class="admonition question">
+<p class="admonition-title">A faire</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">MPD</label><label for="__tabbed_1_2">Modèle Physique de données</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Calculer le modèle physique de données</p>
+</div>
+<div class="tabbed-block">
+<p><strong>liste</strong>(id, titre)<br />
+clé primaire : id<br /></p>
+<p><strong>todo</strong>(id, texte, termine, important, liste_id, timestamp)<br />
+Clé primaire : id<br />
+clé étrangère : liste_id en référence à Liste(id)<br /></p>
+<p><strong>catégorie</strong>(id, libelle)<br />
+clé primaire : id<br /></p>
+<p><strong>catégorie_todo</strong>(categories_id, todo_id, timestamp)<br />
+clé primaire : categories_id, todo_id<br />
+clé étrangère : categories_id en référence à catégorie(id)<br />
+clé étrangère : todo_id en référece à todo(id)<br /></p>
+<p>⚠️ Pour rappel, on commence toujours par les tables sans clés étrangères ...</p>
+</div>
+</div>
+</div>
+</div>
+<p>▶️A vous de jouer pour les migrations et les seeders</p>
+<h2 id="42-user-story-gestion-des-listes">4.2 User story : Gestion des listes<a class="headerlink" href="#42-user-story-gestion-des-listes" title="Permanent link">⚓︎</a></h2>
+<p>Il vous est demander de créer un nouvel écran de gestion de Liste, permettant de créer une nouvelle liste et d’affecter des Todos non déjà affectés à cette liste. </p>
+<p>Bonus : Sous ce formulaire, on pourra également avoir la liste des « listes » avec leurs Todos. </p>
+<details class="tip">
+<summary>Analyse d'impact</summary>
+<ul>
+<li>Nouveau model avec ajout de la relation todos(): HasMany + impact sur le model Todo (ajout de la relation listes(): BelongsTo)</li>
+<li>Nouvelle Vue</li>
+<li>Nouveau controller</li>
+<li>Nouvelle Route</li>
+</ul>
 </details>
-<details class="question">
-<summary>Etude d'impact de la fonctionnalité</summary>
+<p><img alt="liste" class="center" src="../data/liste1.png" width="70%" /></p>
+<h2 id="43-user-story-affectation-dun-todo-a-une-liste">4.3 User story : Affectation d'un todo à une liste<a class="headerlink" href="#43-user-story-affectation-dun-todo-a-une-liste" title="Permanent link">⚓︎</a></h2>
+<p><img alt="📗" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4d7.svg" title=":green_book:" /> Lors de la création de la création d’un Todo, on pourra affecter un todo à une liste par une liste déroulante. On devra également gérer le cas de ne pas affecter à une liste. </p>
+<details class="tip">
+<summary>Analyse d'impact</summary>
+</details>
+<p><img alt="liste" class="center" src="../data/liste2.png" width="50%" /></p>
+<h2 id="44-user-story-affichage-de-la-liste-des-todos">4.4 User story : Affichage de la liste des todos<a class="headerlink" href="#44-user-story-affichage-de-la-liste-des-todos" title="Permanent link">⚓︎</a></h2>
+<p><img alt="📘" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4d8.svg" title=":blue_book:" /> Dans un dernier temps, vous pourrez afficher le nom de la liste d’appartenance à chaque Todo. </p>
+<p><img alt="liste" class="center" src="../data/liste3.png" width="30%" /></p>
+<details class="tip">
+<summary>Analyse d'impact</summary>
 </details>
 
 
