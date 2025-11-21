@@ -25,6 +25,7 @@
 ??? note "Script de création de base"
 
     ```SQL
+    CREATE DATABASE hopital;
     CREATE TABLE Patients (
         patient_id INT PRIMARY KEY,
         nom VARCHAR(255),
@@ -58,6 +59,34 @@
         date_traitement DATE,
         FOREIGN KEY (consultation_id) REFERENCES Consultations(consultation_id)
     );
+    ```
+??? note "Script d'insertion dans la base"
+
+    ```sql
+    INSERT INTO Patients (patient_id, nom, prenom, date_naissance, adresse) VALUES
+    (1, 'Martin', 'Alice', '1985-04-12', '12 rue de la Paix, Rennes'),
+    (2, 'Dupont', 'Lucas', '1992-09-03', '4 avenue Victor Hugo, Redon'),
+    (3, 'Bernard', 'Sophie', '1978-01-25', '8 place de la Liberté, Nantes'),
+    (4, 'Leroy', 'Thomas', '2001-11-18', '5 rue des Écoles, Vannes'),
+    (5, 'Roux', 'Camille', '1999-06-07', '27 boulevard Clémenceau, Brest');
+    INSERT INTO Medecins (medecin_id, nom, prenom, specialite) VALUES
+    (1, 'Legrand', 'Marc', 'Généraliste'),
+    (2, 'Faure', 'Nina', 'Dermatologie'),
+    (3, 'Petit', 'Hugo', 'Cardiologie');
+    INSERT INTO Consultations (consultation_id, patient_id, medecin_id, date_consultation, diagnostic) VALUES
+    (1, 1, 1, '2024-01-10', 'Grippe saisonnière'),
+    (2, 2, 1, '2024-02-15', 'Gastro-entérite'),
+    (3, 3, 3, '2024-03-05', 'Hypertension'),
+    (4, 1, 2, '2024-03-18', 'Éruption cutanée'),
+    (5, 4, 1, '2024-04-22', 'Migraine'),
+    (6, 5, 3, '2024-05-30', 'Palpitations cardiaques');
+    INSERT INTO Traitements (traitement_id, consultation_id, description, cout, date_traitement) VALUES
+    (1, 1, 'Antiviral et repos', 35.50, '2024-01-10'),
+    (2, 2, 'Réhydratation + antispasmodiques', 22.00, '2024-02-15'),
+    (3, 3, 'Mise sous antihypertenseurs', 78.90, '2024-03-05'),
+    (4, 4, 'Crème dermatologique', 18.20, '2024-03-18'),
+    (5, 5, 'Antalgique léger', 12.50, '2024-04-22'),
+    (6, 6, 'ECG + Bêtabloquants', 95.00, '2024-05-30');
     ```
 
 ## 1. Création des vues

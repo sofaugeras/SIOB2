@@ -467,7 +467,7 @@ Pour rappel, on travaille sur le schéma relationnel suivant :
 
 ### 3.1 Définition
 
-Une vue peut être considérée comme une **table virtuelle**construite à partir de l’exécution d’une requête d’interrogation ``SELECT``.<br /> 
+Une vue peut être considérée comme une **table virtuelle** construite à partir de l’exécution d’une requête d’interrogation ``SELECT``.<br /> 
 Elle n’a pas d’existence physique permanente et est construite dynamiquement.<br />
 
 !!! warning "Utilisation"
