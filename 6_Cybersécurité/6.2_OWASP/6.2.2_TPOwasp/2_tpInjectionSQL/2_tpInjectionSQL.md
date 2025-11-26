@@ -32,7 +32,41 @@ CREATE TABLE IF NOT EXISTS users (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ```
+??? note "Jeu de tests"
 
+    ```sql
+    INSERT INTO users (email, password_hash, mfa_secret, mfa_enabled, created_at) VALUES
+    ('alice.dupont@example.com',
+    '$2y$10$A1bCd2Ef3Gh4Ij5Kl6MnOu7Pq9RsTu0VwXyZaBcDeFgHiJkLmNoPq', 
+    NULL,
+    0,
+    '2025-01-12 10:15:30'),
+
+    ('bruno.martin@example.com',
+    '$2y$10$Z8yXw7Vu6Ts5Rq4Po3NmLk2Ji1HgFeDcBaZyXwVuT9Sr8Qp7On6Lm',
+    'JBSWY3DPEHPK3PXP',
+    1,
+    '2025-01-12 10:16:10'),
+
+    ('carla.robert@example.com',
+    '$2y$10$AcBdEfGhIjKlMnOpQrStUvWxYz12Tu34VwXyZaBcDeFgHiJkLmNoP',
+    NULL,
+    0,
+    '2025-01-12 10:17:45'),
+
+    ('david.lemoine@example.com',
+    '$2y$10$MnOpQrStUvWxYz12Tu34VwXyZaBcDeFgHiJkLmNoPAcBdEfGhIjKl',
+    'KRSXG5DSNFXGOIDP',
+    1,
+    '2025-01-12 10:19:02'),
+
+    ('emma.leroy@example.com',
+    '$2y$10$Tu34VwXyZaBcDeFgHiJkLmNoPMnOpQrStUvWxYz12AcBdEfGhIjKl',
+    NULL,
+    0,
+    '2025-01-12 10:20:18');
+
+    ```
 Commmençons par une requête simple que pourrait envoyer une application vulnérable :
 ```sql
 SELECT * FROM users WHERE id = '1';

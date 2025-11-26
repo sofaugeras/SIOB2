@@ -4874,6 +4874,7 @@ php artisan view:clear
 <h2 id="32-mot-de-passe-oublie-mail-sans-smtp">3.2 Mot de passe oublié / mail sans SMTP<a class="headerlink" href="#32-mot-de-passe-oublie-mail-sans-smtp" title="Permanent link">⚓︎</a></h2>
 <p>Pour éviter un vrai envoi d’email, mais conserver la fonctionnalité d'envoi de mail.</p>
 <p>▶️ On commence par créer un fichier de log dédié. Dans <code>config\logging.php</code> ajouter l'entrée suivante :</p>
+<p>Dans "<strong>channels</strong>", ajouter : </p>
 <p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>// canal dédié aux mails
         &#39;mail&#39; =&gt; [
             &#39;driver&#39; =&gt; &#39;single&#39;,
@@ -5080,7 +5081,7 @@ Tu dois avoir quelque chose de ce type (structure Laravel 11/12) :</p>
 <span class="x">    });</span>
 
 <span class="x">    // Tu peux laisser d’autres config ici si Laravel en a généré</span>
-<span class="x">})</span>
+<span class="x">})-&gt;create();</span>
 </code></pre></div></p>
 <details class="tip">
 <summary>Render VS report</summary>
@@ -5116,7 +5117,7 @@ Ce que montrent ces logs :</p>
 <li>User-Agent du script automatisé</li>
 <li>Heure exacte de l’incident</li>
 </ul>
-<p>Conclusion : Si tu veux tracer une attaque (brute force, flood HTTP, etc.), il faut intercepter l’exception au niveau où elle génère la réponse. 👉 C’est render(), pas report().</p>
+<p>Conclusion : Si tu veux tracer une attaque (brute force, flood HTTP, etc.), il faut intercepter l’exception au niveau où elle génère la réponse. 👉 C’est <code>render()</code>, pas <code>report()</code>.</p>
 <h3 id="337-journalisation-des-logins">3.3.7 Journalisation des logins<a class="headerlink" href="#337-journalisation-des-logins" title="Permanent link">⚓︎</a></h3>
 <p>Pour tracer les connexions réussies et échouées, le plus simple est de le faire directement dans le contrôleur d’authentification (<code>AuthenticatedSessionController</code>) en réutilisant ton canal security.</p>
 <p><strong>Objectif :</strong><br />
@@ -5184,6 +5185,19 @@ Login KO (mauvais mot de passe) → entrée “warning” dans security.log<br /
 <li>On trace IP, email, user_agent, éventuellement user_id si l’authentification a réussi.</li>
 </ul>
 <p>👀 Il faut tester !!</p>
+<details class="info">
+<summary>Niveau de logs</summary>
+<p>Vous pouvez consigner des informations dans les journaux à l'aide de la façade Log. Comme mentionné précédemment, le système de journalisation propose huit niveaux de journalisation définis.</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Log::emergency($message);
+Log::alert($message);
+Log::critical($message);
+Log::error($message);
+Log::warning($message);
+Log::notice($message);
+Log::info($message);
+Log::debug($message);
+</code></pre></div>
+</details>
 
 
 

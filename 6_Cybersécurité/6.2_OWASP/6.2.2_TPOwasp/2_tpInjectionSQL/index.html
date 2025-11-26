@@ -4827,6 +4827,40 @@
 <span class="w">  </span><span class="n">created_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span>
 <span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span><span class="p">;</span>
 </code></pre></div>
+<details class="note">
+<summary>Jeu de tests</summary>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span><span class="n">email</span><span class="p">,</span><span class="w"> </span><span class="n">password_hash</span><span class="p">,</span><span class="w"> </span><span class="n">mfa_secret</span><span class="p">,</span><span class="w"> </span><span class="n">mfa_enabled</span><span class="p">,</span><span class="w"> </span><span class="n">created_at</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span>
+<span class="p">(</span><span class="s1">&#39;alice.dupont@example.com&#39;</span><span class="p">,</span>
+<span class="s1">&#39;$2y$10$A1bCd2Ef3Gh4Ij5Kl6MnOu7Pq9RsTu0VwXyZaBcDeFgHiJkLmNoPq&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="k">NULL</span><span class="p">,</span>
+<span class="mi">0</span><span class="p">,</span>
+<span class="s1">&#39;2025-01-12 10:15:30&#39;</span><span class="p">),</span>
+
+<span class="p">(</span><span class="s1">&#39;bruno.martin@example.com&#39;</span><span class="p">,</span>
+<span class="s1">&#39;$2y$10$Z8yXw7Vu6Ts5Rq4Po3NmLk2Ji1HgFeDcBaZyXwVuT9Sr8Qp7On6Lm&#39;</span><span class="p">,</span>
+<span class="s1">&#39;JBSWY3DPEHPK3PXP&#39;</span><span class="p">,</span>
+<span class="mi">1</span><span class="p">,</span>
+<span class="s1">&#39;2025-01-12 10:16:10&#39;</span><span class="p">),</span>
+
+<span class="p">(</span><span class="s1">&#39;carla.robert@example.com&#39;</span><span class="p">,</span>
+<span class="s1">&#39;$2y$10$AcBdEfGhIjKlMnOpQrStUvWxYz12Tu34VwXyZaBcDeFgHiJkLmNoP&#39;</span><span class="p">,</span>
+<span class="k">NULL</span><span class="p">,</span>
+<span class="mi">0</span><span class="p">,</span>
+<span class="s1">&#39;2025-01-12 10:17:45&#39;</span><span class="p">),</span>
+
+<span class="p">(</span><span class="s1">&#39;david.lemoine@example.com&#39;</span><span class="p">,</span>
+<span class="s1">&#39;$2y$10$MnOpQrStUvWxYz12Tu34VwXyZaBcDeFgHiJkLmNoPAcBdEfGhIjKl&#39;</span><span class="p">,</span>
+<span class="s1">&#39;KRSXG5DSNFXGOIDP&#39;</span><span class="p">,</span>
+<span class="mi">1</span><span class="p">,</span>
+<span class="s1">&#39;2025-01-12 10:19:02&#39;</span><span class="p">),</span>
+
+<span class="p">(</span><span class="s1">&#39;emma.leroy@example.com&#39;</span><span class="p">,</span>
+<span class="s1">&#39;$2y$10$Tu34VwXyZaBcDeFgHiJkLmNoPMnOpQrStUvWxYz12AcBdEfGhIjKl&#39;</span><span class="p">,</span>
+<span class="k">NULL</span><span class="p">,</span>
+<span class="mi">0</span><span class="p">,</span>
+<span class="s1">&#39;2025-01-12 10:20:18&#39;</span><span class="p">);</span>
+</code></pre></div>
+</details>
 <p>Commmençons par une requête simple que pourrait envoyer une application vulnérable :
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;1&#39;</span><span class="p">;</span>
 </code></pre></div></p>
