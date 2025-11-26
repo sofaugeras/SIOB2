@@ -317,7 +317,7 @@ On va figer les règles de bases dans le projet dans un fichier ``pint.json`` mi
 
 lien vers la [Documentation](https://laravel.com/docs/12.x/pint)
 
-??? tip "`Synthèse Utilisation"
+??? tip "Synthèse Utilisation"
 
   - Crée ``pint.json`` à la racine du projet.
   - Corrige ton code avec : ``vendor/bin/pint``
