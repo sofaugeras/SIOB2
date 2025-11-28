@@ -2693,84 +2693,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#33-questions-de-cybersecurite" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3 Questions de CyberSécurité
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3.3 Questions de CyberSécurité">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#331-validation-des-entrees" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3.1 Validation des entrées
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#332-prevention-contre-sql-injection" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3.2 Prevention contre SQL Injection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#333-prevention-des-attaques-xss" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3.3 Prévention des attaques XSS
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#334-csrf-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3.4 CSRF Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#335-limitation-de-debit-et-regulation-des-requetes" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3.5 Limitation de débit et régulation des requêtes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#336-journalisation-et-supervision-throttlerequestsexception" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3.6 Journalisation et supervision : ThrottleRequestsException
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#337-journalisation-des-logins" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3.7 Journalisation des logins
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2792,6 +2714,27 @@
   
   <span class="md-ellipsis">
     4. Gestion des listes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.2.5_S%C3%A9curit%C3%A9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Questions de CyberSécurité
   </span>
   
 
@@ -4906,297 +4849,6 @@ MAIL_FROM_NAME=&quot;Laravel Todo 2026&quot;
 <li>Saisir le nouveau mot de passe</li>
 <li>Se reconnecter avec le nouveau mot de passe</li>
 </ul>
-</details>
-<h2 id="33-questions-de-cybersecurite">3.3 Questions de CyberSécurité<a class="headerlink" href="#33-questions-de-cybersecurite" title="Permanent link">⚓︎</a></h2>
-<p>Laravel est un framework très utilisé et donc sensible à une attaque Cyber. Il faut toujours rester en veille sur le framework et apporter les correctifs nécessaires dès que possible.</p>
-<p><strong>Ressources Documentaires :</strong></p>
-<ul>
-<li><a href="https://laravel.com/docs/12.x/authentication">https://laravel.com/docs/12.x/authentication</a></li>
-<li><a href="https://www.cybersecurity-help.cz/vdb/laravel/laravel_framework/12.0.0/">https://www.cybersecurity-help.cz/vdb/laravel/laravel_framework/12.0.0/</a></li>
-<li><a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-0238/">https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-0238/</a></li>
-</ul>
-<h3 id="331-validation-des-entrees">3.3.1 Validation des entrées<a class="headerlink" href="#331-validation-des-entrees" title="Permanent link">⚓︎</a></h3>
-<p>Toujours s’assurer que toutes les données saisies par l’utilisateur sont validées et assainies constitue la première ligne de défense contre de nombreuses attaques courantes, comme l’injection SQL ou le cross-site scripting (XSS). Laravel fournit de puissantes règles de validation que tu peux utiliser pour garantir l’intégrité des données.</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">$request-&gt;validate([</span>
-<span class="x">    &#39;username&#39; =&gt; &#39;required|string|max:255&#39;,</span>
-<span class="x">    &#39;email&#39; =&gt; &#39;required|email|unique:users,email&#39;,</span>
-<span class="x">    &#39;password&#39; =&gt; &#39;required|min:8|confirmed&#39;,</span>
-<span class="x">]);</span>
-</code></pre></div>
-<ul>
-<li>Required → champ obligatoire</li>
-<li>string → doit être une chaîne de caractères</li>
-<li>max:255 → longueur maximale 255 caractères</li>
-<li>email → doit être une adresse e-mail valide</li>
-<li>unique:users,email → l’e-mail ne doit pas déjà exister dans la table users</li>
-<li>min:8 → minimum 8 caractères</li>
-<li>confirmed → doit correspondre au champ password_confirmation</li>
-</ul>
-<p>Exemple déjà mis en place dans <code>NewPasswordController.php</code> : </p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function store(Request $request): RedirectResponse</span>
-<span class="x">    {</span>
-<span class="x">        $request-&gt;validate([</span>
-<span class="x">            &#39;token&#39; =&gt; [&#39;required&#39;],</span>
-<span class="x">            &#39;email&#39; =&gt; [&#39;required&#39;, &#39;email&#39;],</span>
-<span class="x">            &#39;password&#39; =&gt; [&#39;required&#39;, &#39;confirmed&#39;, Rules\Password::defaults()],</span>
-<span class="x">        ]);</span>
-</code></pre></div>
-<div class="admonition question">
-<p class="admonition-title">A faire</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Saisie d'un Todo</label><label for="__tabbed_1_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Ajouter une règle pour vérifier que le todo est une chaine obligatoire de caractères de moins de 256 car.</p>
-</div>
-<div class="tabbed-block">
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function saveTodo(Request $request)</span>
-<span class="x">    {</span>
-<span class="x">        // Vérification des entrées du formulaire</span>
-<span class="x">        $request-&gt;validate([</span>
-<span class="x">            &#39;texte&#39; =&gt; &#39;required|string|max:256&#39;,</span>
-<span class="x">        ]);</span>
-<span class="x">        ....</span>
-<span class="x">    }</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<h3 id="332-prevention-contre-sql-injection">3.3.2 Prevention contre SQL Injection<a class="headerlink" href="#332-prevention-contre-sql-injection" title="Permanent link">⚓︎</a></h3>
-<p>L'utilisation de l'ORM Eloquent aide à prévenir les attaques par injection SQL. Utilisez toujours des requêtes paramétrées et évitez de concaténer l'entrée de l'utilisateur dans les instructions SQL.</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">// Safe query using Eloquent</span>
-<span class="x">$user = User::where(&#39;email&#39;, $email)-&gt;first();</span>
-</code></pre></div>
-<h3 id="333-prevention-des-attaques-xss">3.3.3 Prévention des attaques XSS<a class="headerlink" href="#333-prevention-des-attaques-xss" title="Permanent link">⚓︎</a></h3>
-<p>Pour éviter les attaques XSS, toujours échapper à l'entrée de l'utilisateur avant de la rendre dans la vue. Le moteur de modèle Blade de Laravel échappe automatiquement à la sortie des données en utilisant le <code>{{ }}</code> syntaxe.</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&lt;!-- Rendu sûr dans Blade --&gt;</span>
-<span class="x">{{ $user-&gt;name }}</span>
-</code></pre></div>
-<h3 id="334-csrf-protection">3.3.4 CSRF Protection<a class="headerlink" href="#334-csrf-protection" title="Permanent link">⚓︎</a></h3>
-<p>Laravel inclut une protection intégrée de la CSRF. Assurez-vous que vos formulaires incluent le jeton CSRF en utilisant le @csrf Directive.</p>
-<p>dans template.blade.php : <code>&lt;meta name="csrf-token" content="{{ csrf_token() }}"&gt;</code>
-et dans home.blade.php :
-<div class="language-HTML highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;{{ route(&#39;todo.save&#39;) }}&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;add&quot;</span><span class="p">&gt;</span>
-    @csrf 
-</code></pre></div></p>
-<h3 id="335-limitation-de-debit-et-regulation-des-requetes">3.3.5 Limitation de débit et régulation des requêtes<a class="headerlink" href="#335-limitation-de-debit-et-regulation-des-requetes" title="Permanent link">⚓︎</a></h3>
-<p>Pour protéger l'application contre les attaques par force brute, on peut mettre en place une limitation du nombre de requêtes grâce au middleware <code>ThrottleRequests</code> de Laravel.</p>
-<p>dans <code>routes/auth.php</code>, repérer les routes <code>/login</code> et modifier les ainsi.
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">Route::get(&#39;login&#39;, [AuthenticatedSessionController::class, &#39;create&#39;])</span>
-<span class="x">        -&gt;middleware(&#39;throttle:10,1&#39;)   // 10 requêtes / min sur l’affichage du formulaire</span>
-<span class="x">        -&gt;name(&#39;login&#39;);</span>
-
-<span class="x">Route::post(&#39;login&#39;, [AuthenticatedSessionController::class, &#39;store&#39;])</span>
-<span class="x">    -&gt;middleware(&#39;throttle:5,1&#39;);   // 5 tentatives de connexion / min</span>
-</code></pre></div></p>
-<ul>
-<li>throttle:10,1 signifie : → maximum 10 requêtes par minute (le second chiffre indique la durée en minutes).</li>
-<li>Si la limite est dépassée, Laravel renvoie automatiquement une réponse 429 (Too Many Requests).</li>
-</ul>
-<p>le throttling est utile pour protéger :</p>
-<ul>
-<li>l’accès aux endpoints sensibles (ex : login)</li>
-<li>les API exposées publiques</li>
-<li>les formulaires soumis à répétition</li>
-</ul>
-<p>👀 Il faut tester !!</p>
-<p><div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">import</span> <span class="nn">time</span>
-
-<span class="n">URL</span> <span class="o">=</span> <span class="s2">&quot;http://localhost:8000/login&quot;</span>  <span class="c1"># adapte si besoin (port, domaine, etc.)</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">):</span>  <span class="c1"># 15 requêtes</span>
-    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Requête </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">: status = </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-    <span class="c1"># Affiche quelques headers utiles si présents</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  X-RateLimit-Limit     :&quot;</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;X-RateLimit-Limit&quot;</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  X-RateLimit-Remaining :&quot;</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;X-RateLimit-Remaining&quot;</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Retry-After           :&quot;</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Retry-After&quot;</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">40</span><span class="p">)</span>
-
-    <span class="c1"># On attend très peu pour rester dans la même minute</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># 2 secondes entre chaque requête</span>
-</code></pre></div>
-on obtient bien la trace : 
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>----------------------------------------
-Requête 4: status = 200
-  X-RateLimit-Limit     : 10
-  X-RateLimit-Remaining : 1
-  Retry-After           : None
-----------------------------------------
-Requête 5: status = 200
-  X-RateLimit-Limit     : 10
-  X-RateLimit-Remaining : 0
-  Retry-After           : None
-----------------------------------------
-Requête 6: status = 429
-  X-RateLimit-Limit     : 10
-  X-RateLimit-Remaining : 0
-  Retry-After           : 8
-----------------------------------------
-</code></pre></div></p>
-<p>💥 Ca sera bien de <strong>"rendre visible"</strong> le throttling dans les logs en interceptant l’exception <strong>429</strong> générée par le middleware throttle.</p>
-<h3 id="336-journalisation-et-supervision-throttlerequestsexception">3.3.6 Journalisation et supervision : ThrottleRequestsException<a class="headerlink" href="#336-journalisation-et-supervision-throttlerequestsexception" title="Permanent link">⚓︎</a></h3>
-<p>Lorsqu’un utilisateur dépasse la limite, Laravel lève une exception <code>ThrottleRequestsException</code>. Nous allons la capturer pour enregistrer un événement de sécurité.</p>
-<p>🔧 Étape 1 : Modifier la gestion des exceptions dans <code>bootstrap/app.php</code></p>
-<p>Ouvre <code>bootstrap/app.php</code>.
-Tu dois avoir quelque chose de ce type (structure Laravel 11/12) :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use Illuminate\Foundation\Application;</span>
-<span class="x">use Illuminate\Foundation\Configuration\Exceptions;</span>
-<span class="x">use Illuminate\Foundation\Configuration\Middleware;</span>
-
-<span class="x">return Application::configure(basePath: dirname(__DIR__))</span>
-<span class="x">    -&gt;withRouting(</span>
-<span class="x">        // ...</span>
-<span class="x">    )</span>
-<span class="x">    -&gt;withMiddleware(function (Middleware $middleware) {</span>
-<span class="x">        // ...</span>
-<span class="x">    })</span>
-<span class="x">    -&gt;withExceptions(function (Exceptions $exceptions) {</span>
-<span class="x">        // ...</span>
-<span class="x">    })</span>
-<span class="x">    -&gt;create();</span>
-</code></pre></div>
-<p>Nous allons compléter le bloc <code>withExceptions</code>.</p>
-<p>Ajoute les use nécessaires en haut du fichier :
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use Illuminate\Http\Exceptions\ThrottleRequestsException;</span>
-<span class="x">use Illuminate\Support\Facades\Log;</span>
-<span class="x">use Illuminate\Http\Request;</span>
-</code></pre></div></p>
-<p>Puis remplace / complète le bloc <code>withExceptions</code> ainsi :
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">-&gt;withExceptions(function (Exceptions $exceptions): void {</span>
-
-<span class="x">    // Logging sécurité pour les dépassements de limite (HTTP 429)</span>
-<span class="x">    $exceptions-&gt;render(function (ThrottleRequestsException $e, Request $request) {</span>
-<span class="x">        Log::channel(&#39;security&#39;)-&gt;warning(&#39;Brute-force / rate limit déclenché&#39;, [</span>
-<span class="x">            &#39;ip&#39;         =&gt; $request-&gt;ip(),</span>
-<span class="x">            &#39;url&#39;        =&gt; $request-&gt;fullUrl(),</span>
-<span class="x">            &#39;method&#39;     =&gt; $request-&gt;method(),</span>
-<span class="x">            &#39;user_agent&#39; =&gt; $request-&gt;userAgent(),</span>
-<span class="x">        ]);</span>
-
-<span class="x">        // Ne rien retourner ici =&gt; Laravel utilisera la réponse 429 par défaut</span>
-<span class="x">        // (page &quot;Too Many Attempts&quot; ou JSON selon le contexte).</span>
-<span class="x">    });</span>
-
-<span class="x">    // Tu peux laisser d’autres config ici si Laravel en a généré</span>
-<span class="x">})-&gt;create();</span>
-</code></pre></div></p>
-<details class="tip">
-<summary>Render VS report</summary>
-<p>Dans Laravel 11/12, les exceptions peuvent être interceptées à deux niveaux distincts :</p>
-<p><code>report()</code> : pour décider si une exception doit être enregistrée dans les logs<br />
-<code>report()</code> sert à signaler une exception (log, Sentry, Bugsnag, etc.). Laravel ne reporte pas toutes les exceptions.  Certaines exceptions sont explicitement ignorées (don’tReport).</p>
-<p>Et certaines, comme le <code>ThrottleRequestsException</code>, ne sont pas considérées comme « erreurs applicatives » mais comme comportements normaux du middleware RateLimiter.</p>
-<p>👉 Résultat : <code>ThrottleRequestsException</code> peut ne JAMAIS passer dans <code>report()</code> → donc aucun log, même si tu le demandes.</p>
-<p><code>render()</code> : pour intercepter toutes les exceptions juste avant la réponse HTTP<br />
-<code>render()</code> est appelé au moment où Laravel prépare la réponse HTTP :Quand une exception doit devenir un 429, 403, 404, 500, etc. Laravel appelle systématiquement render(), même si l’exception n’est pas "reportable".</p>
-<p>Donc avec <code>render()</code>: On est certain que la logique se déclenche à chaque dépassement Throttle.</p>
-</details>
-<p>🔧 Étape 2 : Modifier <code>config/logging.php</code></p>
-<p>Création d’un canal de log dédié à la sécurité 📁🛡️. Pour isoler les traces d’attaque dans un fichier spécifique : <code>storage/logs/security.log</code></p>
-<p>Dans "<strong>channels</strong>", ajouter :
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&#39;security&#39; =&gt; [</span>
-<span class="x">    &#39;driver&#39; =&gt; &#39;single&#39;,</span>
-<span class="x">    &#39;path&#39;   =&gt; storage_path(&#39;logs/security.log&#39;),</span>
-<span class="x">    &#39;level&#39;  =&gt; &#39;warning&#39;,</span>
-<span class="x">],</span>
-</code></pre></div>
-💥💥 Relancer le script Python qui simule l'attaque par force brute</p>
-<h4 id="analyse-des-logs-de-securite">Analyse des logs de sécurité 📜🕵️‍♂️<a class="headerlink" href="#analyse-des-logs-de-securite" title="Permanent link">⚓︎</a></h4>
-<p>Ouvrir les logs <code>storage/logs/security.log</code></p>
-<p>Vous devez voir des entrées de ce type :
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>[2025-11-25 20:01:45] local.WARNING: Brute-force / rate limit déclenché {&quot;ip&quot;:&quot;127.0.0.1&quot;,&quot;url&quot;:&quot;http://localhost:8000/login&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;user_agent&quot;:&quot;python-requests/2.31.0&quot;} 
-</code></pre></div>
-Ce que montrent ces logs :</p>
-<ul>
-<li>IP de l’attaquant</li>
-<li>URL cible</li>
-<li>Méthode HTTP</li>
-<li>User-Agent du script automatisé</li>
-<li>Heure exacte de l’incident</li>
-</ul>
-<p>Conclusion : Si tu veux tracer une attaque (brute force, flood HTTP, etc.), il faut intercepter l’exception au niveau où elle génère la réponse. 👉 C’est <code>render()</code>, pas <code>report()</code>.</p>
-<h3 id="337-journalisation-des-logins">3.3.7 Journalisation des logins<a class="headerlink" href="#337-journalisation-des-logins" title="Permanent link">⚓︎</a></h3>
-<p>Pour tracer les connexions réussies et échouées, le plus simple est de le faire directement dans le contrôleur d’authentification (<code>AuthenticatedSessionController</code>) en réutilisant ton canal security.</p>
-<p><strong>Objectif :</strong><br />
-Login OK → entrée “info” dans security.log<br />
-Login KO (mauvais mot de passe) → entrée “warning” dans security.log<br /></p>
-<h4 id="preparation-canal-de-log">Préparation : canal de log<a class="headerlink" href="#preparation-canal-de-log" title="Permanent link">⚓︎</a></h4>
-<p>On réutilise le même canal que pour le <code>throttle</code> (déjà en place) dans <code>config/logging.php</code> :</p>
-<p>'channels' =&gt; [
-    // ...</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&#39;security&#39; =&gt; [
-    &#39;driver&#39; =&gt; &#39;single&#39;,
-    &#39;path&#39;   =&gt; storage_path(&#39;logs/security.log&#39;),
-    // Gestion du niveaux de logs dans le .env
-    &#39;level&#39;  =&gt; env(&#39;LOG_LEVEL&#39;, &#39;debug&#39;),
-],
-</code></pre></div>
-<p>],</p>
-<h4 id="journaliser-dans-authenticatedsessioncontroller">Journaliser dans AuthenticatedSessionController<a class="headerlink" href="#journaliser-dans-authenticatedsessioncontroller" title="Permanent link">⚓︎</a></h4>
-<p>Ouvre <code>app/Http/Controllers/Auth/AuthenticatedSessionController.php</code>.</p>
-<p>En haut du fichier, ajoute les use suivants :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use Illuminate\Support\Facades\Log;</span>
-<span class="x">use Illuminate\Validation\ValidationException;</span>
-</code></pre></div>
-<p>Puis adapte la méthode <code>store</code> comme suit  :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use Illuminate\Support\Facades\Log;</span>
-<span class="x">use App\Providers\RouteServiceProvider;</span>
-<span class="x">use Illuminate\Validation\ValidationException;  </span>
-
-<span class="x">public function store(LoginRequest $request): RedirectResponse</span>
-<span class="x">{</span>
-<span class="x">    try {</span>
-<span class="x">        // Tentative d&#39;authentification (throw ValidationException si KO)</span>
-<span class="x">        $request-&gt;authenticate();</span>
-
-<span class="x">        // Regénération de la session en cas de succès</span>
-<span class="x">        $request-&gt;session()-&gt;regenerate();</span>
-
-<span class="x">        // LOG: connexion réussie</span>
-<span class="x">        Log::channel(&#39;security&#39;)-&gt;info(&#39;Login OK&#39;, [</span>
-<span class="x">            &#39;ip&#39;         =&gt; $request-&gt;ip(),</span>
-<span class="x">            &#39;email&#39;      =&gt; $request-&gt;input(&#39;email&#39;),</span>
-<span class="x">            &#39;user_id&#39;    =&gt; optional($request-&gt;user())-&gt;id,</span>
-<span class="x">            &#39;user_agent&#39; =&gt; $request-&gt;userAgent(),</span>
-<span class="x">        ]);</span>
-
-<span class="x">        return redirect()-&gt;intended(&#39;/&#39;);</span>
-<span class="x">    } catch (ValidationException $e) {</span>
-<span class="x">        // LOG: tentative de connexion échouée</span>
-<span class="x">        Log::channel(&#39;security&#39;)-&gt;warning(&#39;Login KO&#39;, [</span>
-<span class="x">            &#39;ip&#39;         =&gt; $request-&gt;ip(),</span>
-<span class="x">            &#39;email&#39;      =&gt; $request-&gt;input(&#39;email&#39;),</span>
-<span class="x">            &#39;user_agent&#39; =&gt; $request-&gt;userAgent(),</span>
-<span class="x">            &#39;errors&#39;     =&gt; $e-&gt;errors(),   // optionnel, pour tracer le type d’erreur</span>
-<span class="x">        ]);</span>
-
-<span class="x">        // On relance l’exception pour laisser Laravel gérer le retour formulaire + messages</span>
-<span class="x">        throw $e;</span>
-<span class="x">    }</span>
-<span class="x">}</span>
-</code></pre></div>
-<p>**note : **</p>
-<ul>
-<li><code>LoginRequest::authenticate()</code> lève une ValidationException quand les identifiants sont faux.</li>
-<li>Le <strong>try/catch</strong> permet d’instrumenter cette exception sans changer le comportement utilisateur.</li>
-<li>On trace IP, email, user_agent, éventuellement user_id si l’authentification a réussi.</li>
-</ul>
-<p>👀 Il faut tester !!</p>
-<details class="info">
-<summary>Niveau de logs</summary>
-<p>Vous pouvez consigner des informations dans les journaux à l'aide de la façade Log. Comme mentionné précédemment, le système de journalisation propose huit niveaux de journalisation définis.</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Log::emergency($message);
-Log::alert($message);
-Log::critical($message);
-Log::error($message);
-Log::warning($message);
-Log::notice($message);
-Log::info($message);
-Log::debug($message);
-</code></pre></div>
 </details>
 
 

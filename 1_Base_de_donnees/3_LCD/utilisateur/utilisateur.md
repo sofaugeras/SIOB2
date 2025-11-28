@@ -3,7 +3,7 @@
 !!! note "source"
 
     - N. Defay, Lycée Bellepierre, La réunion (licence Creative Commons BY-NC-SA) <br />
-    - [Documatation MySQL Account Management Statements](https://dev.mysql.com/doc/refman/8.4/en/account-management-statements.html)
+    - [Documentation MySQL Account Management Statements](https://dev.mysql.com/doc/refman/8.4/en/account-management-statements.html)
     - [tuto en ligne de commande](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql)
 
 Jusqu’à présent nous avons abordé le langage de manipulation de données puis le langage de description de données.<br />

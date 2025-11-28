@@ -13,7 +13,9 @@ Donner les instructions SQL pour réaliser les traitements qui suivent.
 ??? question "Solution"
 
     ```SQL
-
+    CREATE USER 'bibliAdm'@'localhost' IDENTIFIED BY 'password';
+    GRANT SELECT ON * . * TO 'bibliAdm'@'localhost';
+    FLUSH PRIVILEGES ;
     ```
 
 **R2 :** ``bibliAdm``  peut  créer  des  utilisateurs et  leur attribuer ses droits.
@@ -21,7 +23,7 @@ Donner les instructions SQL pour réaliser les traitements qui suivent.
 ??? question "Solution"
 
     ```SQL
-
+    GRANT CREATE USER, GRANT OPTION ON *.* TO 'bibliAdm'@'localhost'; 
     ```
 
 **R3 :** ``bibliAdm`` possède tous les droits sur la base « bibli ».
@@ -29,7 +31,7 @@ Donner les instructions SQL pour réaliser les traitements qui suivent.
 ??? question "Solution"
 
     ```SQL
-
+    GRANT ALL PRIVILEGES ON * . * TO 'bibliAdm2'@'localhost';
     ```
 
 :arrow_forward: Actions réalisées par l’administrateur de la base « bibli » (compte ``bibliAdm``) :
@@ -39,7 +41,7 @@ Donner les instructions SQL pour réaliser les traitements qui suivent.
 ??? question "Solution"
 
     ```SQL
-
+    CREATE USER 'bibliCli'@'localhost' IDENTIFIED BY 'cli974'; 
     ```
 
 **R5 :** ``bibliCli`` peut consulter toutes les tables de la base « bibli ».
@@ -47,7 +49,7 @@ Donner les instructions SQL pour réaliser les traitements qui suivent.
 ??? question "Solution"
 
     ```SQL
-
+    GRANT SELECT ON bibli.* TO 'bibliCli'@'localhost';
     ```
 
 **R6 :** ``bibliCli`` peut ajouter et modifier les enregistrements dans la table « emprunter ».
@@ -55,7 +57,7 @@ Donner les instructions SQL pour réaliser les traitements qui suivent.
 ??? question "Solution"
 
     ```SQL
-
+    GRANT INSERT, UPDATE ON bibli.emprunter TO 'bibliCli'@'localhost';
     ```
 
 **R7 :** ``bibliCli`` peut modifier le prénom des lecteurs dans la table « lecteur ».
@@ -63,7 +65,7 @@ Donner les instructions SQL pour réaliser les traitements qui suivent.
 ??? question "Solution"
 
     ```SQL
-
+    GRANT UPDATE (prenomlecteur) ON bibli.lecteur TO 'bibliCli'@'localhost';
     ```
 
 :arrow_forward: Actions réalisées par l’administrateur de la base « bibli » (compte ``bibliAdm``) :
@@ -73,7 +75,7 @@ Donner les instructions SQL pour réaliser les traitements qui suivent.
 ??? question "Solution"
 
     ```SQL
-
+    REVOKE INSERT, UPDATE ON bibli.emprunter FROM 'bibliCli'@'localhost';
     ```
 
 **R9 :** L’utilisateur ``bibliCli`` n’a plus le droit de modifier la colonne ``prenomlecteur`` de la table ``lecteur``.
@@ -81,8 +83,9 @@ Donner les instructions SQL pour réaliser les traitements qui suivent.
 ??? question "Solution"
 
     ```SQL
-
+    REVOKE UPDATE (prenomlecteur) ON bibli.lecteur FROM 'bibliCli'@'localhost';
     ```
+    
 
 :arrow_forward: Actions réalisées par l’administrateur (compte ``root``) :
 
@@ -91,13 +94,15 @@ Donner les instructions SQL pour réaliser les traitements qui suivent.
 ??? question "Solution"
 
     ```SQL
-
+    REVOKE SELECT ON *.* FROM 'bibliAdm'@'localhost';
     ```
+    Il garde uniquement ses droits sur « bibli » (accordés en R3).
 
 **R11 :** L’utilisateur ``bibliAdm`` n’a plus le droit d’attribuer des privilèges aux utilisateurs.
 
 ??? question "Solution"
 
     ```SQL
-
+    REVOKE GRANT OPTION ON *.* FROM 'bibliAdm'@'localhost';
+    REVOKE CREATE USER ON *.* FROM 'bibliAdm'@'localhost';
     ```
