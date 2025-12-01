@@ -1,4 +1,4 @@
-# 🛠️ TP 2 : Mauvaise gestion de configuration 
+# 🛠️ TP Mauvaise gestion de configuration 
 
 ## 1. Présentation
 

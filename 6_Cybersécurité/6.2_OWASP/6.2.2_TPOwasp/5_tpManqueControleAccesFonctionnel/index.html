@@ -103,6 +103,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#tp-manque-de-controle-dacces-au-niveau-fonctionnel" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -3404,6 +3409,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    6. TP Manque de contrôle d'accès au niveau fonctionnel
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -3414,6 +3432,94 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-acces-direct-aux-pages-dadministration" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 🔐 Accès direct aux pages d’administration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-modification-de-produits-sans-authentification" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 📝 Modification de produits sans authentification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 📝 Modification de produits sans authentification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#23-consultation-ou-vol-de-commandes-dautres-utilisateurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 🛒 Consultation ou vol de commandes d’autres utilisateurs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-suppression-de-produit-via-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 🗑️ Suppression de produit via URL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-execution-dactions-sensibles-par-parametre" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 📤 Exécution d’actions sensibles par paramètre
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-escalade-de-privileges" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 🧑‍💼 Escalade de privilèges
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-partie-corrective-bonnes-pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 🛡️ Partie corrective : bonnes pratiques
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4416,6 +4522,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../8_liens_utiles/2_conseils/cv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5 CV et Lettre de motivation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4652,9 +4779,97 @@
   
 
 
-  <h1>6. TP Manque de contrôle d'accès au niveau fonctionnel</h1>
-
-<p><img alt="en connstruction" src="../../images/enConstruction.png" /></p>
+<h1 id="tp-manque-de-controle-dacces-au-niveau-fonctionnel">TP Manque de contrôle d'accès au niveau fonctionnel 📘<a class="headerlink" href="#tp-manque-de-controle-dacces-au-niveau-fonctionnel" title="Permanent link">⚓︎</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Définition (OWASP Top 10 – A07 :2021)</p>
+<p>A07:2021 – Identification and Authentication Failures désigne l’ensemble des failles liées à l’identification et à la gestion de l’authentification, permettant à un attaquant de contourner ou de compromettre les mécanismes de connexion d’une application.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">🎯 Objectifs pédagogiques</p>
+<ul>
+<li>Identifier et exploiter des <strong>failles d’autorisation insuffisante</strong></li>
+<li>Démontrer l’impact d’un <strong>manque de contrôle d’accès au niveau fonctionnel</strong></li>
+<li>Comprendre les risques : IDOR, accès directs, escalade de privilèges</li>
+<li>Proposer des <strong>contre-mesures robustes</strong></li>
+</ul>
+</div>
+<h2 id="1-acces-direct-aux-pages-dadministration">1. 🔐 Accès direct aux pages d’administration<a class="headerlink" href="#1-acces-direct-aux-pages-dadministration" title="Permanent link">⚓︎</a></h2>
+<p>❓ Q1. Tenter d’accéder directement à des pages administrateur :</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>/admin/
+/admin/gestion_produits.php
+</code></pre></div>
+<p>Décrire le comportement observé.</p>
+<details class="question">
+<summary>Solution Q1</summary>
+<p>Plusieurs pages d’administration s’ouvrent sans contrôle préalable.<br />
+L’application n’effectue pas de test de session ni de rôle.<br />
+C’est un exemple typique de <strong>Broken Access Control – A07:2021</strong>.</p>
+</details>
+<h2 id="2-modification-de-produits-sans-authentification">2. 📝 Modification de produits sans authentification<a class="headerlink" href="#2-modification-de-produits-sans-authentification" title="Permanent link">⚓︎</a></h2>
+<p>❓ Q2. Accéder à <code>/admin/modif_produit.php?id=3</code> et Tester :</p>
+<ul>
+<li>affichage du formulaire</li>
+<li>validation d’une modification</li>
+<li>impact en base</li>
+</ul>
+<details class="question">
+<summary>Solution Q2</summary>
+<p>Le formulaire est accessible sans authentification.<br />
+La modification est possible et appliquée.<br />
+Cela révèle un <strong>contrôle d’accès absents sur les actions de gestion des produits</strong>.</p>
+</details>
+<h3 id="23-consultation-ou-vol-de-commandes-dautres-utilisateurs">2.3 🛒 Consultation ou vol de commandes d’autres utilisateurs<a class="headerlink" href="#23-consultation-ou-vol-de-commandes-dautres-utilisateurs" title="Permanent link">⚓︎</a></h3>
+<p>❓Q3. Tester l’accès à <code>/compte/commande.php?id=1</code> Puis changer l’ID <code>/compte/commande.php?id=2</code></p>
+<p>Comparer les résultats.</p>
+<details class="question">
+<summary>Solution Q3</summary>
+<p>L’application affiche les commandes d’autres utilisateurs.<br />
+Elle ne vérifie pas que l’ID de la commande correspond à l’utilisateur connecté.<br />
+C’est une <strong>IDOR (Insecure Direct Object Reference)</strong>.</p>
+</details>
+<h3 id="24-suppression-de-produit-via-url">2.4 🗑️ Suppression de produit via URL<a class="headerlink" href="#24-suppression-de-produit-via-url" title="Permanent link">⚓︎</a></h3>
+<p>❓Q4. Tester <code>/admin/delete_produit.php?id=4</code> Même sans être connecté.</p>
+<details class="question">
+<summary>Solution Qn°4</summary>
+<p>L’action fonctionne sans authentification.<br />
+La suppression se fait via une simple requête GET.<br />
+Double problème de sécurité :<br /></p>
+<ul>
+<li>pas de contrôle d’accès</li>
+<li>utilisation d’un GET pour une action destructive</li>
+</ul>
+</details>
+<h3 id="25-execution-dactions-sensibles-par-parametre">2.5 📤 Exécution d’actions sensibles par paramètre<a class="headerlink" href="#25-execution-dactions-sensibles-par-parametre" title="Permanent link">⚓︎</a></h3>
+<p>❓Q5. Identifier une fonctionnalité reposant sur un paramètre (ex : <code>?delete=true</code>, <code>?action=valid</code>), puis l’appeler directement par l’URL sans passer par le bouton.</p>
+<details class="question">
+<summary>Solution Qn°5</summary>
+<p>L’action s’exécute même sans vérifier que l’utilisateur est autorisé.<br />
+L’application associe naïvement une action à un paramètre GET.<br />
+Cela rend <strong>toutes les actions sensibles exploitables via accès direct</strong>.</p>
+</details>
+<h3 id="26-escalade-de-privileges">2.6 🧑‍💼 Escalade de privilèges<a class="headerlink" href="#26-escalade-de-privileges" title="Permanent link">⚓︎</a></h3>
+<p>❓Q6. Depuis un compte utilisateur simple :</p>
+<ul>
+<li>repérer une action réservée à l’administrateur</li>
+<li>copier l’URL</li>
+<li>la tester directement</li>
+</ul>
+<details class="question">
+<summary>Solution Q6</summary>
+<p>L’accès est autorisé même pour un utilisateur standard.<br />
+L’application ne vérifie pas le rôle dans les pages sensibles.<br />
+Cela permet une <strong>montée en privilège</strong>.</p>
+</details>
+<h2 id="3-partie-corrective-bonnes-pratiques">3. 🛡️ Partie corrective : bonnes pratiques<a class="headerlink" href="#3-partie-corrective-bonnes-pratiques" title="Permanent link">⚓︎</a></h2>
+<p>❓Q7. Citer trois contre-mesures essentielles permettant de corriger ce type de vulnérabilité.</p>
+<details class="question">
+<summary>Solution Q7</summary>
+<ul>
+<li>Vérification systématique d’une session valide avant d’accéder à toute page sensible.</li>
+<li>Vérification stricte du rôle (RBAC) pour chaque action.</li>
+<li>Interdiction des actions critiques via GET ; utiliser POST + jeton CSRF.</li>
+</ul>
+</details>
 
 
 

@@ -103,6 +103,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#tp-violation-de-gestion-dauthentification-et-de-session" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -3383,6 +3388,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    5. TP Violation de Gestion d'Authentification et de Session
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -3393,6 +3411,118 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-rappels-theoriques" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Rappels théoriques 🧠
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Rappels théoriques 🧠">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-attaques-liees-a-lauthentification" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Attaques liées à l’authentification 🔓
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-authentification-brisee-owasp-a07" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Authentification brisée (OWASP A07) 🛑
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-comportement-du-formulaire-dauthentification" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Comportement du formulaire d’authentification 🔍
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-interception-des-requetes-avec-burp-suite" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Interception des requêtes avec Burp Suite 🛰️
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Interception des requêtes avec Burp Suite 🛰️">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-installation-burpsuite" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Installation BurpSuite
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-attaque-par-force-brute-burp-intruder" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Attaque par force brute (Burp Intruder) 🚀
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-analyse-de-la-gestion-de-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Analyse de la gestion de session 🕒
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-recommandations-de-securite" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 🛡️ Recommandations de sécurité
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4416,6 +4546,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../8_liens_utiles/2_conseils/cv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5 CV et Lettre de motivation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4652,9 +4803,182 @@
   
 
 
-  <h1>5. TP Violation de Gestion d'Authentification et de Session</h1>
-
-<p><img alt="en connstruction" src="../../images/enConstruction.png" /></p>
+<h1 id="tp-violation-de-gestion-dauthentification-et-de-session">TP Violation de Gestion d'authentification et de session 🔐<a class="headerlink" href="#tp-violation-de-gestion-dauthentification-et-de-session" title="Permanent link">⚓︎</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Définition (OWASP Top 10 – A07 :2021)</p>
+<p>A07:2021 – Identification and Authentication Failures désigne l’ensemble des failles liées à l’identification et à la gestion de l’authentification, permettant à un attaquant de contourner ou de compromettre les mécanismes de connexion d’une application.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">🎯 Objectifs pédagogiques</p>
+<ul>
+<li>Identifier les vulnérabilités liées à l’authentification et à la gestion de session.</li>
+<li>Réaliser une attaque par force brute avec Burp Suite Intruder.</li>
+<li>Mettre en évidence une injection SQL sur formulaire d’authentification.</li>
+<li>Évaluer la robustesse des mécanismes de session.</li>
+<li>Proposer des contre-mesures alignées sur les bonnes pratiques OWASP/ANSSI.</li>
+</ul>
+</div>
+<h2 id="1-rappels-theoriques">1. Rappels théoriques 🧠<a class="headerlink" href="#1-rappels-theoriques" title="Permanent link">⚓︎</a></h2>
+<h3 id="11-attaques-liees-a-lauthentification">1.1 Attaques liées à l’authentification 🔓<a class="headerlink" href="#11-attaques-liees-a-lauthentification" title="Permanent link">⚓︎</a></h3>
+<p><strong>Risques :</strong></p>
+<ul>
+<li>force brute automatisée  </li>
+<li>comptes par défaut</li>
+<li>mots de passe faibles</li>
+<li>stockage non sécurisé</li>
+</ul>
+<p><strong>Protections :</strong></p>
+<ul>
+<li>limitation d’essais</li>
+<li>délais progressifs</li>
+<li>journalisation</li>
+<li>non-divulgation des erreurs d’authentification</li>
+<li>élimination des comptes par défaut</li>
+</ul>
+<h3 id="12-authentification-brisee-owasp-a07">1.2 Authentification brisée (OWASP A07) 🛑<a class="headerlink" href="#12-authentification-brisee-owasp-a07" title="Permanent link">⚓︎</a></h3>
+<p>Un site est vulnérable si :</p>
+<ul>
+<li>il autorise la force brute</li>
+<li>il stocke les mots de passe en clair</li>
+<li>il expose les ID de session</li>
+<li>il n’invalide pas les jetons</li>
+<li>il n’utilise pas (ou mal) le MFA</li>
+</ul>
+<p><strong>Conséquences :</strong></p>
+<ul>
+<li>👉 prise de contrôle d’un compte</li>
+<li>👉 usurpation d’identité</li>
+<li>👉 exfiltration de données sensibles</li>
+</ul>
+<h2 id="2-comportement-du-formulaire-dauthentification">2. Comportement du formulaire d’authentification 🔍<a class="headerlink" href="#2-comportement-du-formulaire-dauthentification" title="Permanent link">⚓︎</a></h2>
+<ol>
+<li>Ouvrir :
+   <code>http://localhost/breizhsecu/admin/</code></li>
+<li>Réaliser volontairement <strong>5 tentatives erronées</strong>.</li>
+</ol>
+<p>❓ Q1. Y a-t-il une limitation du nombre d’essais ?</p>
+<details class="question">
+<summary>Solution Question n°1</summary>
+<p>Aucune limitation n’est appliquée : l’utilisateur peut essayer un nombre illimité de mots de passe.
+C’est une faiblesse majeure facilitant la force brute.</p>
+</details>
+<p>❓ Q2. Le message d’erreur précise-t-il si le login ou le mot de passe est incorrect ?</p>
+<details class="question">
+<summary>Solution Question n°2</summary>
+<p>Oui, le message distingue parfois login/mot de passe incorrect.
+Cela informe l’attaquant sur la validité du login et viole les bonnes pratiques OWASP.</p>
+</details>
+<h2 id="3-interception-des-requetes-avec-burp-suite">3. Interception des requêtes avec Burp Suite 🛰️<a class="headerlink" href="#3-interception-des-requetes-avec-burp-suite" title="Permanent link">⚓︎</a></h2>
+<h3 id="31-installation-burpsuite">3.1. Installation BurpSuite<a class="headerlink" href="#31-installation-burpsuite" title="Permanent link">⚓︎</a></h3>
+<p>🔽 Installer depuis la page https://portswigger.net/burp/releases/professional-community-2021-12-1?requestededition=community</p>
+<p><strong>Burp</strong> est conçu pour être utilisé avec votre navigateur. Il fonctionne comme un <strong>serveur proxy HTTP</strong> et tout le trafic HTTP/S de votre navigateur passe par Burp. Pour vous assurer que l'écouteur proxy de Burp fonctionne, accédez à l'onglet Proxy et assurez-vous que Intercept est activé, comme indiqué ci-dessous.</p>
+<details class="tip">
+<summary>HowTo</summary>
+<p><img alt="b1" src="../data/b1.png" />
+Maintenant, vous devez configurer votre navigateur pour utiliser l'écouteur Burp Proxy comme serveur proxy HTTP. Pour ce faire, vous devez modifier les paramètres de proxy de votre navigateur pour utiliser l'adresse de l'hôte proxy (127.0.0.1) et le port 8080 pour les protocoles HTTP et HTTPS. Dans Firefox, allez dans Préférences. Cliquez sur Avancé, sélectionnez l'onglet Réseau et cliquez sur Paramètres, comme indiqué ci-dessous.
+<img alt="" src="../data/b2.png" />
+Sélectionnez le bouton radio Configuration manuelle du proxy. Entrez 127.0.0.1 dans le champ Proxy HTTP et entrez 8080 dans le champ Port. Assurez-vous que la case Utiliser ce serveur proxy pour tous les protocoles est cochée. Supprimez tout ce qui se trouve dans le champ Aucun proxy pour le champ. Enregistrez les paramètres.
+<img alt="" src="../data/b3.png" />
+Maintenant, si tout est configuré correctement, tout votre trafic HTTP/S devrait passer par Burp. Chaque fois que vous visitez un site Web, l'onglet Proxy de Burp changera sa couleur en orange et Burp conservera la demande jusqu'à ce que vous décidiez quoi en faire. À ce stade, vous pouvez désactiver l'interception et ne l'activer que lorsque vous en avez besoin.</p>
+</details>
+<ol>
+<li>Configurer Firefox → Proxy manuel → <strong>127.0.0.1:8080</strong></li>
+<li>Activer <strong>Intercept On</strong>.</li>
+<li>Intercepter une tentative de connexion.</li>
+</ol>
+<p>❓ Q3. Quels champs sont transmis dans la requête ?</p>
+<details class="question">
+<summary>Solution Question n°3</summary>
+<p>Le POST contient typiquement :</p>
+<ul>
+<li><code>username=...</code></li>
+<li><code>password=...</code></li>
+<li>parfois un <code>token</code> CSRF (selon version)</li>
+</ul>
+</details>
+<p>❓ Q4. Le mot de passe circule-t-il en clair dans la requête ?</p>
+<details class="question">
+<summary>Solution Question n°4</summary>
+<p>Oui, le mot de passe apparaît en clair dans le champ POST (non chiffré si HTTP).</p>
+</details>
+<h3 id="32-attaque-par-force-brute-burp-intruder">3.2. Attaque par force brute (Burp Intruder) 🚀<a class="headerlink" href="#32-attaque-par-force-brute-burp-intruder" title="Permanent link">⚓︎</a></h3>
+<ol>
+<li>Envoyer la requête vers Intruder.</li>
+<li>Définir les positions (<code>username</code>, <code>password</code>).</li>
+<li>Type d’attaque : <strong>Cluster Bomb</strong>.</li>
+<li>Charger des listes de logins et mots de passe.</li>
+<li>Lancer l’attaque.</li>
+</ol>
+<p>❓ Q5. Quel couple login/mot de passe permet l’accès ?</p>
+<details class="question">
+<summary>Solution Question n°5</summary>
+<p>Selon la configuration fournie dans le TP, le couple trouvé est souvent :
+<strong>login : admin</strong>
+<strong>password : admin</strong>
+ou encore un mot de passe trivial contenu dans <code>rockyou.txt</code>.</p>
+</details>
+<p>❓ Q6. Pourquoi cette attaque est-elle possible ?</p>
+<details class="question">
+<summary>Solution Question n°6</summary>
+<ul>
+<li>absence de limitation d’essais</li>
+<li>absence de délai progressif</li>
+<li>mots de passe faibles ou par défaut</li>
+<li>absence de filtrage d’IP</li>
+<li>messages d’erreur explicites</li>
+</ul>
+</details>
+<h2 id="4-analyse-de-la-gestion-de-session">4.  Analyse de la gestion de session 🕒<a class="headerlink" href="#4-analyse-de-la-gestion-de-session" title="Permanent link">⚓︎</a></h2>
+<p>Si vous étiez un pirate qui tentait d'accéder à la partie back-end de l'application, c’est-à-dire la partie ou l'administrateur du site va se connecter, quelles url tenteriez-vous rapidement pour retrouver la page permettant à un administrateur de s'authentifier ?</p>
+<ul>
+<li>http://localhost/breizhsecu/backend</li>
+<li>http://localhost/breizhsecu/administrateur</li>
+<li>http://localhost/breizhsecu/manager</li>
+<li>http://localhost/breizhsecu/admin</li>
+<li>http://localhost/breizhsecu/secure</li>
+</ul>
+<p>Tentez chacune de ces URL, laquelle vous mène vers quelque chose d'exploitable ? Notez bien cette URL. <br />
+Connectez-vous ensuite à un compte utilisateur, puis retournez sur cette url. Que se passe-t-il ? Potentiellement rien, mais si vous appliquez la même logique de programmation pour la partie dédiée aux utilisateurs que celle dédiée aux administrateurs, quelle url serait-il judicieux de tester ?</p>
+<p><strong>Actions :</strong></p>
+<ul>
+<li>se connecter</li>
+<li>récupérer le cookie de session</li>
+<li>vérifier présence d’un ID dans l’URL</li>
+<li>tester la déconnexion</li>
+</ul>
+<p>❓ Q9. Le cookie de session contient-il un identifiant simple ?</p>
+<details class="question">
+<summary>Solution Question n°9</summary>
+<p>Sur de nombreuses versions du TP, l’ID de session est simple (ex : valeur séquentielle).
+Cela facilite l’usurpation de session.</p>
+</details>
+<p>❓ Q10. L’ID de session apparaît-il dans l’URL ?</p>
+<details class="question">
+<summary>Solution Question n°10</summary>
+<p>Dans certains cas oui : <code>?PHPSESSID=...</code>
+C’est une mauvaise pratique sévèrement interdite par l’OWASP.</p>
+</details>
+<p>❓ Q11. Que se passe-t-il en cas de fermeture d’onglet / retour / déconnexion ?</p>
+<details class="question">
+<summary>Solution Question n°11</summary>
+<ul>
+<li>fermeture d’onglet : session encore active</li>
+<li>retour sur l’accueil : utilisateur toujours connecté</li>
+<li>déconnexion : parfois le cookie n’est pas invalidé → session réutilisable</li>
+</ul>
+</details>
+<h2 id="5-recommandations-de-securite">5. 🛡️ Recommandations de sécurité<a class="headerlink" href="#5-recommandations-de-securite" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>mise en place MFA</li>
+<li>limitation d’essais</li>
+<li>délais progressifs</li>
+<li>hashing robuste (bcrypt/argon2)</li>
+<li>suppression des comptes par défaut</li>
+<li>invalidation stricte des sessions</li>
+<li>non-exposition des IDs de session</li>
+<li>utilisation de requêtes préparées (SQL)</li>
+<li>journalisation et alertes sur échecs répétés</li>
+</ul>
 
 
 

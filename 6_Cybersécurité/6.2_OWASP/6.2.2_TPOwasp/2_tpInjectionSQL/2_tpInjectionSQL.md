@@ -1,5 +1,8 @@
 # TP Injection SQL 💉
 
+!!! info "Définition (OWASP Top 10 – A03 :2021)"
+    Les attaques par **injection SQL** sont un type d'attaque par injection dans lequel des commandes SQL sont injectées dans les données d'entrée du plan de données afin d'affecter l'exécution de commandes SQL prédéfinies.
+
 ## 1. Les grands principes : Exploiter la faille SQL
 
 **🎯 Objectif :** accéder aux données sans connaître les identifiants réels.

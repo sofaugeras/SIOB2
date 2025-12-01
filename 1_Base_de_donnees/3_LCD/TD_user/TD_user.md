@@ -31,7 +31,7 @@ Donner les instructions SQL pour réaliser les traitements qui suivent.
 ??? question "Solution"
 
     ```SQL
-    GRANT ALL PRIVILEGES ON * . * TO 'bibliAdm2'@'localhost';
+    GRANT ALL PRIVILEGES ON * . * TO 'bibliAdm'@'localhost';
     ```
 
 :arrow_forward: Actions réalisées par l’administrateur de la base « bibli » (compte ``bibliAdm``) :

@@ -103,6 +103,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#tp-exposition-aux-donnees-sensibles" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -3362,6 +3367,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -4416,6 +4423,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../8_liens_utiles/2_conseils/cv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5 CV et Lettre de motivation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4652,9 +4680,453 @@
   
 
 
-  <h1>4. TP Exposition de données sensibles</h1>
-
-<p><img alt="en connstruction" src="../../images/enConstruction.png" /></p>
+<h1 id="tp-exposition-aux-donnees-sensibles">TP Exposition aux données sensibles<a class="headerlink" href="#tp-exposition-aux-donnees-sensibles" title="Permanent link">⚓︎</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Définition (OWASP Top 10 – A02 :2021)</p>
+<p><strong>A02:2021 Cryptographic Failures</strong>, qui englobe l’exposition des données sensibles, le mauvais chiffrement, les transferts non sécurisés et le stockage non protégé des données critiques.</p>
+</div>
+<h1 id="1-introduction">1. Introduction 🧩<a class="headerlink" href="#1-introduction" title="Permanent link">⚓︎</a></h1>
+<p>L’exposition de données sensibles correspond à toute situation où des informations confidentielles deviennent accessibles à un acteur non autorisé. Cette vulnérabilité fait partie de l’OWASP Top 10 et constitue un risque majeur pour les organisations.</p>
+<p>🔐 <strong>Exemples de données sensibles</strong> :</p>
+<ul>
+<li>Mots de passe, tokens de session</li>
+<li>Données personnelles (nom, email, adresse, téléphone)</li>
+<li>Données financières (IBAN, carte bancaire)</li>
+<li>Données médicales</li>
+<li>Clés API, secrets d’application</li>
+<li>Fichiers de configuration contenant des identifiants</li>
+</ul>
+<h1 id="2-pourquoi-cette-vulnerabilite-survient-elle">2. Pourquoi cette vulnérabilité survient-elle ? ⚠️<a class="headerlink" href="#2-pourquoi-cette-vulnerabilite-survient-elle" title="Permanent link">⚓︎</a></h1>
+<p>🔎 <strong>Causes principales</strong> :</p>
+<ul>
+<li>📡 Données en clair lors de la transmission (HTTP, FTP, SMTP non sécurisé)</li>
+<li>💾 Stockage non chiffré ou hachage faible (MD5, SHA1…)</li>
+<li>🗂️ Exposition de fichiers sensibles (.env, .sql, .bak, logs)</li>
+<li>🧩 Upload de fichiers non contrôlé, permettant d’exécuter du code</li>
+<li>🛠️ Mauvaise configuration serveur (directory listing, absence de headers)</li>
+<li>🧪 Messages d'erreur trop bavards</li>
+<li>🔑 Gestion défaillante des clés et certificats</li>
+</ul>
+<h1 id="3-impacts-possibles">3. Impacts possibles 🎯<a class="headerlink" href="#3-impacts-possibles" title="Permanent link">⚓︎</a></h1>
+<ul>
+<li>Compromission de comptes</li>
+<li>Déchiffrement ou vol de données sensibles</li>
+<li>Escalade de privilèges</li>
+<li>Intrusion totale dans le système</li>
+<li>Sanctions réglementaires (RGPD)</li>
+<li>Perte de confiance, atteinte à l’image de l’organisation</li>
+</ul>
+<h1 id="4-methodologie-danalyse">4. Méthodologie d’analyse 🧭<a class="headerlink" href="#4-methodologie-danalyse" title="Permanent link">⚓︎</a></h1>
+<p>📝 <strong>Questions à se poser</strong> :</p>
+<ul>
+<li>Les données circulent-elles en clair ? HTTP, SMTP, et FTP ...</li>
+<li>Les mots de passe sont-ils hachés avec un algorithme robuste ?</li>
+<li>Y a-t-il des fichiers sensibles accessibles ?</li>
+<li>Le serveur expose-t-il trop d’informations ?</li>
+<li>Les uploads sont-ils contrôlés ?</li>
+<li>Les réponses API contiennent-elles des informations inutiles ?</li>
+<li>Les certificats et clés sont-ils bien gérés ?</li>
+</ul>
+<h1 id="5-bonnes-pratiques">🛡️ 5. Bonnes pratiques<a class="headerlink" href="#5-bonnes-pratiques" title="Permanent link">⚓︎</a></h1>
+<p>🔐 <strong>Chiffrement</strong></p>
+<ul>
+<li>Utiliser HTTPS (TLS 1.2 minimum)</li>
+<li>Activer HSTS</li>
+<li>Désactiver les protocoles obsolètes</li>
+<li>Utiliser des certificats valides</li>
+</ul>
+<p>🔑 <strong>Mots de passe</strong></p>
+<ul>
+<li>Hachage via bcrypt, Argon2</li>
+<li>Jamais en clair, jamais en MD5/SHA1</li>
+<li>Utilisation d’un sel automatique</li>
+<li>Politique de robustesse</li>
+</ul>
+<p>🗃️ <strong>Stockage</strong></p>
+<ul>
+<li>Chiffrement des données sensibles</li>
+<li>Rotation des clés</li>
+<li>Coffre-fort (Vault, Keyring, AWS Secrets Manager…)</li>
+</ul>
+<p>🔒 <strong>Application</strong></p>
+<ul>
+<li>Interdire l’exécution des fichiers uploadés</li>
+<li>Valider strictement les extensions</li>
+<li>Ajouter les en-têtes HTTP :</li>
+<li>Content-Security-Policy</li>
+<li>X-Frame-Options: DENY</li>
+<li>X-Content-Type-Options: nosniff</li>
+<li>Referrer-Policy</li>
+</ul>
+<h2 id="6-application">6. Application📘<a class="headerlink" href="#6-application" title="Permanent link">⚓︎</a></h2>
+<div class="admonition note">
+<p class="admonition-title">🎯 Objectifs pédagogiques</p>
+<ul>
+<li>Comprendre les mécanismes d’exposition de données sensibles</li>
+<li>Observer concrètement ce qu’un attaquant peut intercepter</li>
+<li>Sécuriser une application web (HTTPS, hachage, filtrage d’upload)</li>
+<li>Manipuler mkcert, password_hash, John The Ripper</li>
+<li>Identifier et appliquer les bonnes pratiques</li>
+</ul>
+</div>
+<h3 id="61-analyse-de-lexposition-des-donnees-sensibles">🔎 6.1. Analyse de l’exposition des données sensibles<a class="headerlink" href="#61-analyse-de-lexposition-des-donnees-sensibles" title="Permanent link">⚓︎</a></h3>
+<p>Cette première partie vise à comprendre <strong>comment</strong> des données sensibles peuvent fuiter ou être récupérées par un attaquant.</p>
+<h4 id="611-analyse-du-trafic-reseau">6.1.1 Analyse du trafic réseau 🔍<a class="headerlink" href="#611-analyse-du-trafic-reseau" title="Permanent link">⚓︎</a></h4>
+<ol>
+<li>Ouvrir Firefox → <strong>Outils supplémentaires → Outils de développement → Réseau</strong></li>
+<li>Naviguer sur le site bijoo</li>
+<li>Tenter une connexion (login / mot de passe)</li>
+<li>Observer les requêtes HTTP</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">❓ Questions</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Enoncé</label><label for="__tabbed_1_2">Réponse Q1</label><label for="__tabbed_1_3">Réponse Q2</label><label for="__tabbed_1_4">Réponse Q3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Q1 : Que voyez-vous dans les requêtes ? Les données sont-elles en clair ?</li>
+<li>Q2 : Le site utilise-t-il HTTPS ? Comment le confirmer ?</li>
+<li>Q3 : Quel est le risque si un attaquant est connecté au même Wi-Fi ?</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Oui.
+Sur un site en HTTP, les informations comme :</p>
+<ul>
+<li>identifiant,</li>
+<li>mot de passe,</li>
+<li>cookie de session,</li>
+</ul>
+<p>transitent en clair dans la requête.
+Elles apparaissent dans l’onglet Réseau <strong>sans aucune protection</strong>.</p>
+<p><img alt="connexion" src="../data/tp3_1.png" />
+<img alt="header" src="../data/tp3_2.png" /></p>
+<p>Un pirate se connectant à un réseau sans-fil en libre accès peut collecter les mêmes informations. Il peut récupérer le jeton de session et accède ainsi aux données, sauf si les données sont cryptées avec du SSL.</p>
+</div>
+<div class="tabbed-block">
+<p>Vérifications possibles :</p>
+<ul>
+<li>la barre d’adresse comporte http:// et pas de cadenas,</li>
+<li>Firefox affiche une mention « Connexion non sécurisée »,</li>
+<li>dans l’onglet Sécurité, aucun certificat n’est chargé.</li>
+</ul>
+<p><strong>Conclusion</strong> : non, le site n’utilise pas HTTPS.</p>
+</div>
+<div class="tabbed-block">
+<p>Un attaquant peut réaliser :</p>
+<ul>
+<li>du sniffing (Wireshark, tcpdump),</li>
+<li>du vol de session (session hijacking),</li>
+<li>du vol de mot de passe,</li>
+<li>de l’usurpation d'identité.</li>
+</ul>
+<p>Risque majeur : prise de contrôle du compte.</p>
+</div>
+</div>
+</div>
+</div>
+<h4 id="612-exploitation-dun-upload-non-securise">6.1.2 Exploitation d’un upload non sécurisé 🗂️<a class="headerlink" href="#612-exploitation-dun-upload-non-securise" title="Permanent link">⚓︎</a></h4>
+<ol>
+<li>Repérer un champ d’upload sur le site</li>
+<li>Voir quel type de fichier est accepté</li>
+<li>Essayer d’envoyer un fichier contenant :</li>
+</ol>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="s2">&quot;Exploit OK&quot;</span><span class="p">;</span> <span class="cp">?&gt;</span>
+</code></pre></div>
+<ol>
+<li>Tenter d’accéder au fichier via l’URL</li>
+<li>Modifier le fichier pour afficher l’arborescence :</li>
+</ol>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="nb">print_r</span><span class="p">(</span><span class="nb">scandir</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">));</span> <span class="cp">?&gt;</span>
+</code></pre></div>
+<ol>
+<li>Rechercher les fichiers sensibles (config, accès base, etc.)</li>
+</ol>
+<details class="question">
+<summary>éléments</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Point 1</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="mon compte" src="../data/tp3_3.png" /></p>
+</div>
+</div>
+</div>
+</details>
+<h3 id="questions">❓ Questions<a class="headerlink" href="#questions" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>Q4 : Le fichier s’exécute-t-il côté serveur ?</li>
+<li>Q5 : Quels fichiers intéressants pouvez-vous identifier ?</li>
+<li>Q6 : Quel risque représente l’exécution d’un fichier uploadé ?</li>
+</ul>
+<details class="question">
+<summary>Solutions</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Q4</label><label for="__tabbed_3_2">Q5</label><label for="__tabbed_3_3">Q6</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Oui, si l’upload n’est pas filtré et que le fichier est placé dans un répertoire accessible.<br />
+Un fichier .php appelé via l’URL est exécuté par Apache → Cela prouve une exécution de code à distance (RCE).</p>
+</div>
+<div class="tabbed-block">
+<p>Quels fichiers sensibles peut-on identifier ?<br /></p>
+<p><strong>Fichiers généralement trouvés :</strong></p>
+<ul>
+<li><code>config.php</code></li>
+<li><code>connexion.php</code></li>
+<li><code>db.php</code></li>
+<li>backups <code>.sql</code></li>
+<li>fichiers contenant des identifiants SQL</li>
+<li>fichiers <code>.env</code></li>
+</ul>
+<p><strong>Ils peuvent contenir :</strong></p>
+<ul>
+<li>login SQL</li>
+<li>mot de passe SQL</li>
+<li>nom de serveur</li>
+<li>structure BDD</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><strong>Risque maximal :</strong></p>
+<ul>
+<li>exécution de commandes serveur</li>
+<li>lecture / suppression / modification de fichiers</li>
+<li>récupération complète de la base de données</li>
+<li>pivot vers d’autres services</li>
+<li>compromission totale du serveur (ROOT TAKEOVER)</li>
+</ul>
+<p>C’est l’une des failles les plus critiques.</p>
+</div>
+</div>
+</div>
+</details>
+<h4 id="613-extraction-de-fichiers-sensibles">6.1.3 Extraction de fichiers sensibles 🧩<a class="headerlink" href="#613-extraction-de-fichiers-sensibles" title="Permanent link">⚓︎</a></h4>
+<ol>
+<li>
+<p>Repérer les fichiers contenant des informations critiques</p>
+</li>
+<li>
+<p>fichiers <code>.php</code> de configuration</p>
+</li>
+<li>
+<p>fichiers contenant des identifiants SQL</p>
+</li>
+<li>
+<p>Utiliser <code>highlight_file()</code> pour les afficher :</p>
+</li>
+</ol>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="nb">highlight_file</span><span class="p">(</span><span class="s1">&#39;config.php&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span>
+</code></pre></div>
+<ol>
+<li>Tenter d’afficher la BDD via un script PHP</li>
+<li>Noter les informations obtenues</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">A faire</p>
+<p>Modifier l'ensemble des scripts d'enregistrement et de connexion du site pour que les formulaires soient en POST.</p>
+</div>
+<h3 id="questions_1">❓ Questions<a class="headerlink" href="#questions_1" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>Q7 : Quelles données sensibles avez-vous pu extraire ?</li>
+<li>Q8 : Quel serait l’impact d’une telle fuite ?</li>
+</ul>
+<details class="question">
+<summary>Solutions</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Q7</label><label for="__tabbed_4_2">Q8</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Selon l'application, on peut souvent obtenir :</p>
+<ul>
+<li>identifiants SQL (host / user / password)</li>
+<li>nom de la base</li>
+<li>configuration SMTP</li>
+<li>chemins internes du serveur</li>
+<li>contenu de tables sensibles (via script PHP)</li>
+</ul>
+<p>Ce type de fuite est <strong>catastrophique</strong>.</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>prise de contrôle de la base</li>
+<li>vol massif de données personnelles</li>
+<li>altération des données</li>
+<li>injection de faux comptes / transactions</li>
+<li>pertes financières</li>
+<li>violation RGPD</li>
+</ul>
+</div>
+</div>
+</div>
+</details>
+<h3 id="62-mise-en-place-des-mesures-de-protection">6.2. Mise en place des mesures de protection 🛡️<a class="headerlink" href="#62-mise-en-place-des-mesures-de-protection" title="Permanent link">⚓︎</a></h3>
+<p>Votre serveur web est accessible depuis l’adresse <code>http://localhost</code> ainsi, si votre ordinateur est accessible sur le port 80 dans votre navigateur, le site qui s’affiche considère votre ordinateur comme un serveur.  Votre serveur peut héberger plusieurs applications notamment le site Bijoo sur l'url http://localhost/breizhsecu <br />
+Un <strong>certificat SSL</strong> sert à identifier un site unique, on passe la plupart du temps par un tiers de confiance auprès duquel on achète un certificat, ou on génère un certificat SSL pour son site que l'on installe sur le serveur. <br />
+Nous allons profiter d'utiliser le protocole <code>https</code> en local pour pouvoir coder en local dans les conditions les plus proches de ce que vous devrez avoir en production.</p>
+<h4 id="621-installation-du-https-en-local">6.2.1 Installation du HTTPS en local 🔐<a class="headerlink" href="#621-installation-du-https-en-local" title="Permanent link">⚓︎</a></h4>
+<p>Nous allons utiliser <strong>mkcert</strong> pour créer un certificat reconnu par votre navigateur.</p>
+<p>Mkcert est un logiciel qui va nous permettre de créer un certificat personnel en respectant les étapes suivantes :</p>
+<p>•   Télécharger et installer mkcert.
+•   Produire un certificat pour notre site.
+•   Activer le https sur notre apache local.
+•   L'activer pour localhost.</p>
+<p>Téléchargez <strong>mkcert</strong> depuis Github depuis l'adresse  https://github.com/FiloSottile/mkcert  et récupérez le contenu dans un répertoire mkcert.</p>
+<p>Nous allons également installer <strong>Certutil</strong>, un utilitaire en ligne de commande qui va nous permettre de répertorier, générer, modifier ou supprimer des certificats. Il peut même être utilisé pour créer ou modifier le mot de passe, générer de nouvelles paires de clés publiques et privées.</p>
+<p>🧪 <strong>Étapes</strong></p>
+<ol>
+<li>Installer mkcert</li>
+<li>Exécuter :</li>
+</ol>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>mkcert<span class="w"> </span>-install
+mkcert<span class="w"> </span>localhost
+</code></pre></div>
+<p>→ génère :</p>
+<ul>
+<li><code>localhost.pem</code></li>
+<li>
+<p><code>localhost-key.pem</code></p>
+</li>
+<li>
+<p>Activer SSL dans Apache (port 443) :</p>
+</li>
+</ul>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>a2enmod<span class="w"> </span>ssl
+</code></pre></div>
+<ol>
+<li>Modifier <code>default-ssl.conf</code> pour y placer les chemins des certificats</li>
+<li>Redémarrer Apache</li>
+</ol>
+<p>❓ <strong>Questions</strong></p>
+<ul>
+<li>Q9 : Pourquoi HTTPS ne protège-t-il pas des attaques côté serveur (upload, injections…) ?</li>
+</ul>
+<details class="question">
+<summary>Q9</summary>
+<p>HTTPS ne chiffre que le transport entre client et serveur.</p>
+<p>Il n’empêche pas :</p>
+<ul>
+<li>les injections SQL,</li>
+<li>l’upload malveillant,</li>
+<li>l’accès à des fichiers sensibles,</li>
+<li>les mauvaises configurations,</li>
+<li>l’énumération de répertoires.</li>
+</ul>
+<p>HTTPS ≠ Sécurité applicative.<br />
+Il protège uniquement le transit, pas le serveur.</p>
+</details>
+<h4 id="622-hachage-robuste-des-mots-de-passe">6.2.2 Hachage robuste des mots de passe 🔑<a class="headerlink" href="#622-hachage-robuste-des-mots-de-passe" title="Permanent link">⚓︎</a></h4>
+<p>Les mots de passe <strong>ne doivent jamais</strong> être stockés en clair ou hachés via MD5/SHA1.</p>
+<p>🧪 <strong>Étape 1 : hachage sécurisé</strong></p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">$password = &quot;monMotDePasse&quot;;</span>
+<span class="x">$hash = password_hash($password, PASSWORD_DEFAULT);</span>
+</code></pre></div>
+<p>🧪 <strong>Étape 2 : vérification</strong></p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">password_verify($passwordSaisi, $hash);</span>
+</code></pre></div>
+<p>❓ <strong>Questions</strong></p>
+<ul>
+<li>Q10 : Pourquoi le hachage produit-il toujours un résultat différent ?</li>
+<li>Q11 : Pourquoi MD5 n’est-il plus fiable aujourd’hui ?</li>
+</ul>
+<details class="question">
+<summary>Solutions</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Q10</label><label for="__tabbed_5_2">Q11</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Parce que password_hash() génère :</p>
+<ul>
+<li>un sel aléatoire (unique par hachage),</li>
+<li>un paramètre de coût,</li>
+<li>un formatage différent à chaque appel.</li>
+</ul>
+<p>Même mot de passe → hachage toujours différent → protection contre attaques par dictionnaire.</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>extrêmement rapide (bon pour les GPU)</li>
+<li>vulnérable au brute-force massif</li>
+<li>collisions connues</li>
+<li>dictionnaires géants disponibles en ligne</li>
+<li>peu résistant aux attaques modernes</li>
+</ul>
+<p><strong>Conclusion</strong> : obsolète et dangereux.</p>
+</div>
+</div>
+</div>
+</details>
+<h4 id="623-test-de-robustesse-avec-john-the-ripper-optionnel">6.2.3 Test de robustesse avec John The Ripper (optionnel) ⚙️<a class="headerlink" href="#623-test-de-robustesse-avec-john-the-ripper-optionnel" title="Permanent link">⚓︎</a></h4>
+<p>Téléchargez l'application jTr sur https://www.openwall.com/john/</p>
+<ul>
+<li>Tester un fichier contenant des hachages MD5</li>
+</ul>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>john<span class="w"> </span>--show<span class="w"> </span>passwordfile
+</code></pre></div>
+<ul>
+<li>Tester avec un dictionnaire (ex : rockyou)</li>
+</ul>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>john<span class="w"> </span>--wordlist<span class="o">=</span>rockyou.txt<span class="w"> </span>passwordfile
+</code></pre></div>
+<h3 id="questions_2">❓ Questions<a class="headerlink" href="#questions_2" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>Q12 : Que constatez-vous ?</li>
+<li>Q13 : Pourquoi les fonctions rapides sont-elles une mauvaise idée ?</li>
+</ul>
+<details class="question">
+<summary>Solutions</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Q12</label><label for="__tabbed_6_2">Q13</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>craqué en quelques secondes</li>
+<li>attaque par dictionnaire souvent suffisante</li>
+<li>rapidité extrême des tests</li>
+</ul>
+<p><strong>Conclusion</strong> : MD5 est instantanément cassable.</p>
+</div>
+<div class="tabbed-block">
+<p>Un hachage rapide = → un pirate peut tester des millions à milliards de combinaisons par seconde.<br />
+Les fonctions modernes (bcrypt, Argon2) sont lentes volontairement.</p>
+</div>
+</div>
+</div>
+</details>
+<h4 id="624-securisation-de-lupload">6.2.4 Sécurisation de l’upload 📁<a class="headerlink" href="#624-securisation-de-lupload" title="Permanent link">⚓︎</a></h4>
+<p>🧪 <strong>Actions à réaliser</strong></p>
+<ul>
+<li>Restreindre les extensions autorisées</li>
+<li>Générer des noms aléatoires</li>
+<li>Placer les fichiers <strong>en dehors du répertoire public</strong></li>
+<li>Interdire l’exécution via la configuration serveur</li>
+</ul>
+<p>❓ <strong>Questions</strong></p>
+<ul>
+<li>Q14 : Pourquoi un simple fichier image peut-il être dangereux ?</li>
+</ul>
+<details class="question">
+<summary>Q14</summary>
+<p>Les attaques typiques :</p>
+<ul>
+<li>fichier image.jpg.php → exécution PHP</li>
+<li>fichier contenant un payload malveillant (polyglots)</li>
+<li>malware déguisé en image</li>
+<li>exploitation de failles dans les librairies d’images</li>
+</ul>
+<p>Même une image peut être un <strong>vecteur d’exécution</strong>.</p>
+</details>
+<h4 id="625-renforcement-des-en-tetes-http">6.2.5 Renforcement des en-têtes HTTP 🛡️<a class="headerlink" href="#625-renforcement-des-en-tetes-http" title="Permanent link">⚓︎</a></h4>
+<p>À ajouter dans <code>Apache</code> :</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+Content-Security-Policy: default-src &#39;self&#39;;
+Referrer-Policy: strict-origin
+</code></pre></div>
+<h3 id="questions_3">❓ Questions<a class="headerlink" href="#questions_3" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>Q15 : Quelle directive empêche le clickjacking ?</li>
+</ul>
+<details class="question">
+<summary>Q15</summary>
+<p>👉 X-Frame-Options: DENY <br />
+Il empêche le site d’être chargé dans un <iframe>, ce qui bloque les attaques de type clickjacking.</p>
+</details>
 
 
 
