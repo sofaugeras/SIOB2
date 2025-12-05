@@ -6,11 +6,47 @@
 
 Pour progresser en développement il faut se maintenir à jour, et pour cela il faut pratiquer. Dans cette page vous trouverez des ressources utiles à votre progression.
 
+**Compétence demandée :** Veille informationnelle et curation : sources d’information, stratégies et outils.
+
+**Organiser son développement professionnel**
+
+* Mettre en place son environnement d’apprentissage personnel<br />
+* Mettre en oeuvre des outils et stratégies de veille informationnelle<br />
+* Gérer son identité professionnelle<br />
+* Développer son projet professionnel 
+
+Les besoins de formation sont identifiés pour assurer le support ou mettre à disposition un service. L’environnement d’apprentissage personnel est délimité et expliqué. La veille est régulière et vise à : 
+
+- repérer les techniques et technologies émergentes du secteur informatique 
+- utiliser de manière approfondie des moyens de recherche d'information 
+- renforcer ses compétences. L’identité professionnelle est pertinente et visible sur un réseau social professionnel.|
+
+Cette compétence est vérifié lors de l'oral professionnel [E5](./../1_epreuves/Ep_pro_E5.md)
+
+!!! info "Comment faire ?"
+    La veille informationnelle technologique vous est propre. Chacun a sa manière de procéder. Certains utilisent des agrégateurs de flux RSS (feedly), d'autres des IA de curation (scoop.it), ou encore des réseaux sociaux (X ou youtube). <br />
+    Vous devez trouver votre manière de procéder. Mais la veille informationnelle doit être **régulière**, dans vos moments perdus par par exemple (🚽 ou 🚋). 
+
+Vous trouverez ci dessous quelques idées d'abonnements pertinents pour votre formation ... au moins en SLAM.
+
 Site officiel du BTS SIO : [CERTA](https://www.reseaucerta.org/accueil)
 
 ## Site de cours de collègues SIO 
 - [David Roumanet - Grenoble](https://nuage03.apps.education.fr/index.php/s/cLFoMwBEFce9wiH?path=%2F)
 - [Valentin Brosseau - Angers](https://cours.brosseau.ovh)
+
+## Agrégateurs RSS 
+
+- [Feedly](https://feedly.com/)
+
+## Cyber 
+
+- [ANSII](https://cyber.gouv.fr/)
+- [US CERT (LA SOURCE)](https://www.us-cert.gov/)
+- [FR CERT](https://www.cert.ssi.gouv.fr/)
+- [The Hacker News](http://thehackernews.com/)
+- [Zataz](https://www.zataz.com/) @zataz
+- [Reddit NetSec](https://www.reddit.com/r/netsec/)
 
 ## Generalistes 
 
@@ -44,14 +80,6 @@ Site officiel du BTS SIO : [CERTA](https://www.reseaucerta.org/accueil)
 - [Le journal du hacker](https://www.journalduhacker.net/)
 - [Youtube](https://www.youtube.com/)
 
-## Cyber 
-
-- [ANSII](https://cyber.gouv.fr/)
-- [US CERT (LA SOURCE)](https://www.us-cert.gov/)
-- [FR CERT](https://www.cert.ssi.gouv.fr/)
-- [The Hacker News](http://thehackernews.com/)
-- [Zataz](https://www.zataz.com/) @zataz
-- [Reddit NetSec](https://www.reddit.com/r/netsec/)
 
 ## [X](https://twitter.com/)
 - @ComcyberFR
@@ -59,13 +87,6 @@ Site officiel du BTS SIO : [CERTA](https://www.reseaucerta.org/accueil)
 - @damien_Bancal
 - @CERT_FR
 - @ANSSI_FR
-
-
-## Agrégateurs RSS 
-
-- [Feedly](https://feedly.com/)
-- [netvibes](https://www.netvibes.com/)
-
 
 ## Outillage 
 

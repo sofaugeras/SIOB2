@@ -26,7 +26,7 @@
     
     
       
-        <title>CI - tests - Saint Sauveur BTS SIO SLAM</title>
+        <title>CI - Tests unitaires et fonctionnels sous Laravel + CI GitHub Actions 🧪 - Saint Sauveur BTS SIO SLAM</title>
       
     
     
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ci-tests" class="md-skip">
+        <a href="#ci-tests-unitaires-et-fonctionnels-sous-laravel-ci-github-actions" class="md-skip">
           Aller au contenu
         </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CI - tests
+              CI - Tests unitaires et fonctionnels sous Laravel + CI GitHub Actions 🧪
             
           </span>
         </div>
@@ -356,7 +356,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../6_Cybers%C3%A9curit%C3%A9/ressources/" class="md-tabs__link">
+        <a href="../../../6_Cybers%C3%A9curit%C3%A9/sommaire/" class="md-tabs__link">
           
   
   Cyber SLAM ⚓️
@@ -2673,7 +2673,7 @@
         
   
   <span class="md-ellipsis">
-    Questions de CyberSécurité
+    5. Questions de CyberSécurité
   </span>
   
 
@@ -2860,15 +2860,192 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    CI - Tests unitaires et fonctionnels sous Laravel + CI GitHub Actions 🧪
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    CI - tests
+    CI - Tests unitaires et fonctionnels sous Laravel + CI GitHub Actions 🧪
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#etape-1-initialisation-de-lenvironnement-de-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏗️ Étape 1 — Initialisation de l’environnement de test
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-2-premier-test-smoke-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Étape 2 — Premier test “Smoke test”
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-3-tests-unitaires-modele-eloquent" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧱 Étape 3 — Tests Unitaires : modèle Eloquent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-4-tests-de-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧮 Étape 4 — Tests de validation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-5-gestion-de-la-base-de-donnees-pendant-les-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧰 Étape 5 — Gestion de la base de données pendant les tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-6-tests-dauthentification-et-de-politique-dacces" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔒 Étape 6 — Tests d’authentification et de politique d’accès
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔒 Étape 6 — Tests d’authentification et de politique d’accès">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cas-1-utilisateur-invite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cas 1 : utilisateur invité
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cas-2-un-utilisateur-ne-peut-pas-modifier-le-todo-dun-autre" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cas 2 : un utilisateur ne peut pas modifier le Todo d’un autre
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-7-tests-avec-fakes-mail-queue-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      📬 Étape 7 — Tests avec Fakes (Mail, Queue, Storage)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📬 Étape 7 — Tests avec Fakes (Mail, Queue, Storage)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-mail-fake" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple : Mail fake
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-8-tests-dapi-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 Étape 8 — Tests d’API JSON
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-9-mesure-de-la-couverture" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Étape 9 — Mesure de la couverture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-10-integration-dans-github-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Étape 10 — Intégration dans GitHub Actions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pour-aller-plus-loin" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧭 Pour aller plus loin
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3027,7 +3204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/ressources/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3067,7 +3244,7 @@
             
   
   <span class="md-ellipsis">
-    6.1 Ebios
+    6.1 cours
   </span>
   
 
@@ -3077,7 +3254,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_2">
             <span class="md-nav__icon md-icon"></span>
-            6.1 Ebios
+            6.1 cours
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3088,11 +3265,116 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_Ebios/cours/" class="md-nav__link">
+      <a href="../../../1_cours.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    La méthode EBIOS
+    6.2.1 Cours
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2_exercices.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.2.2 Exercices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1_recoANSII.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Selon l'ANSII
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. La preuve numérique
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3_authentification.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Notion d'authentification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../4_archivage.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. La protection et l'archivage des données
   </span>
   
 
@@ -3136,7 +3418,7 @@
             
   
   <span class="md-ellipsis">
-    2 OWASP Top 10 🔱
+    6.2 TP
   </span>
   
 
@@ -3146,7 +3428,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_3">
             <span class="md-nav__icon md-icon"></span>
-            2 OWASP Top 10 🔱
+            6.2 TP
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3157,158 +3439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_OWASP/sommaire/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Les failles OWASP
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_3_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_7_3_2" id="__nav_7_3_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    6.2.1 cours
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_3_2">
-            <span class="md-nav__icon md-icon"></span>
-            6.2.1 cours
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_OWASP/6.2.1_cours/1_cours/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    6.2.1 Cours
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_OWASP/6.2.1_cours/2_exercices/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    6.2.2 Exercices
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_3_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_7_3_3" id="__nav_7_3_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    6.2.2 TPOwasp
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_3_3">
-            <span class="md-nav__icon md-icon"></span>
-            6.2.2 TPOwasp
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_OWASP/6.2.2_TPOwasp/0_tpOwasp/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_TP/0_tpOwasp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3329,7 +3460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_OWASP/6.2.2_TPOwasp/1_tpMauvaiseConfiguration/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_TP/1_tpMauvaiseConfiguration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3350,7 +3481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_OWASP/6.2.2_TPOwasp/2_tpInjectionSQL/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_TP/2_tpInjectionSQL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3371,7 +3502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_OWASP/6.2.2_TPOwasp/3_tpExpositionDonneesSensibles/" class="md-nav__link">
+      <a href="../../../3_tpExpositionDonneesSensibles.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3392,7 +3523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_OWASP/6.2.2_TPOwasp/4_tpViolationGestionAuthentification/" class="md-nav__link">
+      <a href="../../../4_tpViolationGestionAuthentification.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3413,7 +3544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_OWASP/6.2.2_TPOwasp/5_tpManqueControleAccesFonctionnel/" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_TP/5_tpManqueControleAccesFonctionnel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3434,7 +3565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_OWASP/6.2.2_TPOwasp/6_tpVulnerabilitesAuthentification/" class="md-nav__link">
+      <a href="../../../6_tpVulnerabilitesAuthentification.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3443,284 +3574,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    3. Principes Généraux ➰
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_4">
-            <span class="md-nav__icon md-icon"></span>
-            3. Principes Généraux ➰
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_4_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_7_4_1" id="__nav_7_4_1_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    6.3.1 cours
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_4_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_4_1">
-            <span class="md-nav__icon md-icon"></span>
-            6.3.1 cours
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.3_hygiene_Cyber/6.3.1_cours/1_recoANSII/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    1. Selon l'ANSII
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.3_hygiene_Cyber/6.3.1_cours/2_preuveNumerique/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    2. La preuve numérique
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.3_hygiene_Cyber/6.3.1_cours/3_authentification/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    3. Notion d'authentification
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.3_hygiene_Cyber/6.3.1_cours/4_archivage/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    4. La protection et l'archivage des données
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_4_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_7_4_2" id="__nav_7_4_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    6.3.2 TP
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_4_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_4_2">
-            <span class="md-nav__icon md-icon"></span>
-            6.3.2 TP
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.3_hygiene_Cyber/6.3.2_TP/TPAuthMA_partie1/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    1. TP1 MFA OTP
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.3_hygiene_Cyber/6.3.2_TP/TPAuthMA_partie2/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    2. TP2 Protection Brut Force
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -4680,7 +4533,7 @@
   
 
 
-<h1 id="ci-tests">CI - tests<a class="headerlink" href="#ci-tests" title="Permanent link">⚓︎</a></h1>
+<h1 id="ci-tests-unitaires-et-fonctionnels-sous-laravel-ci-github-actions">CI - Tests unitaires et fonctionnels sous Laravel + CI GitHub Actions  🧪<a class="headerlink" href="#ci-tests-unitaires-et-fonctionnels-sous-laravel-ci-github-actions" title="Permanent link">⚓︎</a></h1>
 <p><img alt="en connstruction" src="../../../images/enConstruction.png" /></p>
 <p>L’exécution de tests unitaires et d’intégrations est au coeur de la démarche DevOps et d’intégration continue. C’est eux qui vont permettre de détecter les anomalies dans les développements réalisés. Github Actions, si un ou plusieurs tests sont en erreur, va fournir les rapports détaillés permettant d’identifier l’origine de l’erreur, et va signaler que la tâche est en erreur. Cela peut par exemple empêcher un merge de se réaliser dans Github.</p>
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>- name: Run tests with coverage
@@ -4688,14 +4541,239 @@
     XDEBUG_MODE: coverage 
     run: php artisan test --coverage --min=80
 </code></pre></div>
-<p>TP — Tests Laravel + Intégration CI</p>
-<p>Objectifs pédagogiques : </p>
+<div class="admonition info">
+<p class="admonition-title">🎯 Objectifs pédagogiques</p>
+</div>
 <ul>
-<li>Structurer une suite de tests Unit et Feature sous Laravel.</li>
-<li>Tester validation, auth, politiques, Eloquent, API, mails/queues/storage via fakes.</li>
-<li>Produire un rapport de couverture et fixer un seuil minimal.</li>
-<li>Exécuter les tests en CI GitHub Actions avec base de données dédiée.</li>
+<li>Comprendre la structure des tests <strong>Unit</strong> et <strong>Feature</strong> dans Laravel.  </li>
+<li>Écrire, exécuter et interpréter des tests automatisés.  </li>
+<li>Intégrer les tests dans une <strong>pipeline d’intégration continue (CI)</strong>.  </li>
+<li>Mesurer la <strong>couverture de code</strong> et fixer un seuil minimal de qualité.</li>
 </ul>
+<h2 id="etape-1-initialisation-de-lenvironnement-de-test">🏗️ Étape 1 — Initialisation de l’environnement de test<a class="headerlink" href="#etape-1-initialisation-de-lenvironnement-de-test" title="Permanent link">⚓︎</a></h2>
+<p>Crée un environnement dédié aux tests.</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>cp<span class="w"> </span>.env<span class="w"> </span>.env.testing
+php<span class="w"> </span>artisan<span class="w"> </span>key:generate
+<span class="sb">````</span>
+
+<span class="c1">### ⚙️ Configure `.env.testing`</span>
+
+Option<span class="w"> </span>rapide<span class="w"> </span><span class="o">(</span>SQLite<span class="w"> </span>en<span class="w"> </span>mémoire<span class="o">)</span><span class="w"> </span>:
+
+<span class="sb">```</span>env
+<span class="nv">DB_CONNECTION</span><span class="o">=</span>sqlite
+<span class="nv">DB_DATABASE</span><span class="o">=</span>:memory:
+</code></pre></div>
+<details class="question">
+<summary>💡 Solution</summary>
+</details>
+<p>L’utilisation d’une base <strong>SQLite en mémoire</strong> permet d’exécuter les tests très rapidement, sans dépendre d’un serveur MySQL.
+Laravel crée la base à chaque test et la supprime automatiquement.</p>
+<h2 id="etape-2-premier-test-smoke-test">🧩 Étape 2 — Premier test “Smoke test”<a class="headerlink" href="#etape-2-premier-test-smoke-test" title="Permanent link">⚓︎</a></h2>
+<p>Crée un test pour vérifier que la page d’accueil est accessible.</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>make:test<span class="w"> </span>AccueilTest
+</code></pre></div>
+<p>Modifie <code>tests/Feature/AccueilTest.php</code> :</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function test_accueil_est_accessible()</span>
+<span class="x">{</span>
+<span class="x">    $response = $this-&gt;get(&#39;/&#39;);</span>
+<span class="x">    $response-&gt;assertStatus(200);</span>
+<span class="x">    $response-&gt;assertSee(&#39;Bienvenue&#39;);</span>
+<span class="x">}</span>
+</code></pre></div>
+<p>Lance les tests :</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span><span class="nb">test</span>
+</code></pre></div>
+<details class="question">
+<summary>💡 Solution</summary>
+</details>
+<p>Le test <code>assertStatus(200)</code> confirme que la route <code>/</code> fonctionne correctement.
+<code>assertSee('Bienvenue')</code> vérifie que le mot “Bienvenue” est affiché dans la page.</p>
+<h2 id="etape-3-tests-unitaires-modele-eloquent">🧱 Étape 3 — Tests Unitaires : modèle Eloquent<a class="headerlink" href="#etape-3-tests-unitaires-modele-eloquent" title="Permanent link">⚓︎</a></h2>
+<p>Créons un test pour vérifier la relation entre <code>Todo</code> et <code>Liste</code>.</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>make:test<span class="w"> </span>TodoModelTest<span class="w"> </span>--unit
+</code></pre></div>
+<p>Modifie <code>tests/Unit/TodoModelTest.php</code> :</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use App\Models\Liste;</span>
+<span class="x">use App\Models\Todo;</span>
+
+<span class="x">public function test_un_todo_appartient_a_une_liste()</span>
+<span class="x">{</span>
+<span class="x">    $liste = Liste::factory()-&gt;create();</span>
+<span class="x">    $todo  = Todo::factory()-&gt;for($liste)-&gt;create();</span>
+
+<span class="x">    $this-&gt;assertTrue($todo-&gt;liste-&gt;is($liste));</span>
+<span class="x">}</span>
+</code></pre></div>
+<details class="question">
+<summary>💡 Solution</summary>
+</details>
+<p>Le test vérifie la <strong>relation belongsTo()</strong> définie dans le modèle <code>Todo</code>.
+Si <code>$todo-&gt;liste</code> retourne bien l’objet <code>Liste</code> associé, la relation est correctement configurée.</p>
+<h2 id="etape-4-tests-de-validation">🧮 Étape 4 — Tests de validation<a class="headerlink" href="#etape-4-tests-de-validation" title="Permanent link">⚓︎</a></h2>
+<p>Crée un test pour s’assurer qu’un champ requis est bien validé dans ton contrôleur.</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function test_store_valide_le_champ_texte()</span>
+<span class="x">{</span>
+<span class="x">    $response = $this-&gt;post(&#39;/todos&#39;, [&#39;texte&#39; =&gt; &#39;&#39;]);</span>
+<span class="x">    $response-&gt;assertSessionHasErrors(&#39;texte&#39;);</span>
+<span class="x">}</span>
+</code></pre></div>
+<details class="question">
+<summary>💡 Solution</summary>
+</details>
+<p><code>assertSessionHasErrors('texte')</code> permet de confirmer que Laravel renvoie une erreur de validation sur le champ <code>texte</code>.</p>
+<h2 id="etape-5-gestion-de-la-base-de-donnees-pendant-les-tests">🧰 Étape 5 — Gestion de la base de données pendant les tests<a class="headerlink" href="#etape-5-gestion-de-la-base-de-donnees-pendant-les-tests" title="Permanent link">⚓︎</a></h2>
+<p>Ajoute le trait suivant dans ta classe de test :</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use Illuminate\Foundation\Testing\RefreshDatabase;</span>
+
+<span class="x">class TodosTest extends TestCase</span>
+<span class="x">{</span>
+<span class="x">    use RefreshDatabase;</span>
+<span class="x">}</span>
+</code></pre></div>
+<p>Exemple de test :</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function test_store_cree_un_todo()</span>
+<span class="x">{</span>
+<span class="x">    $payload = [&#39;texte&#39; =&gt; &#39;Acheter du café&#39;];</span>
+<span class="x">    $this-&gt;post(&#39;/todos&#39;, $payload)-&gt;assertRedirect();</span>
+<span class="x">    $this-&gt;assertDatabaseHas(&#39;todos&#39;, $payload);</span>
+<span class="x">}</span>
+</code></pre></div>
+<details class="question">
+<summary>💡 Solution</summary>
+</details>
+<p><code>RefreshDatabase</code> relance les migrations avant chaque test.
+<code>assertDatabaseHas</code> vérifie la présence du nouvel enregistrement dans la table <code>todos</code>.</p>
+<h2 id="etape-6-tests-dauthentification-et-de-politique-dacces">🔒 Étape 6 — Tests d’authentification et de politique d’accès<a class="headerlink" href="#etape-6-tests-dauthentification-et-de-politique-dacces" title="Permanent link">⚓︎</a></h2>
+<h3 id="cas-1-utilisateur-invite">Cas 1 : utilisateur invité<a class="headerlink" href="#cas-1-utilisateur-invite" title="Permanent link">⚓︎</a></h3>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function test_invite_redirige_vers_login()</span>
+<span class="x">{</span>
+<span class="x">    $this-&gt;post(&#39;/todos&#39;, [&#39;texte&#39;=&gt;&#39;x&#39;])-&gt;assertRedirect(&#39;/login&#39;);</span>
+<span class="x">}</span>
+</code></pre></div>
+<h3 id="cas-2-un-utilisateur-ne-peut-pas-modifier-le-todo-dun-autre">Cas 2 : un utilisateur ne peut pas modifier le Todo d’un autre<a class="headerlink" href="#cas-2-un-utilisateur-ne-peut-pas-modifier-le-todo-dun-autre" title="Permanent link">⚓︎</a></h3>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function test_un_user_ne_modifie_pas_le_todo_d_un_autre()</span>
+<span class="x">{</span>
+<span class="x">    $owner = User::factory()-&gt;create();</span>
+<span class="x">    $other = User::factory()-&gt;create();</span>
+<span class="x">    $todo  = Todo::factory()-&gt;for($owner, &#39;user&#39;)-&gt;create();</span>
+
+<span class="x">    $this-&gt;actingAs($other)</span>
+<span class="x">         -&gt;patch(&quot;/todos/{$todo-&gt;id}&quot;, [&#39;texte&#39;=&gt;&#39;hack&#39;])</span>
+<span class="x">         -&gt;assertForbidden();</span>
+<span class="x">}</span>
+</code></pre></div>
+<details class="question">
+<summary>💡 Solution</summary>
+</details>
+<p>Ces tests valident la <strong>policy Laravel</strong> associée à l’action <code>update</code>.
+L’utilisateur connecté ne doit pas pouvoir modifier le todo d’un autre.</p>
+<h2 id="etape-7-tests-avec-fakes-mail-queue-storage">📬 Étape 7 — Tests avec <em>Fakes</em> (Mail, Queue, Storage)<a class="headerlink" href="#etape-7-tests-avec-fakes-mail-queue-storage" title="Permanent link">⚓︎</a></h2>
+<h3 id="exemple-mail-fake">Exemple : Mail fake<a class="headerlink" href="#exemple-mail-fake" title="Permanent link">⚓︎</a></h3>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use Illuminate\Support\Facades\Mail;</span>
+
+<span class="x">Mail::fake();</span>
+
+<span class="x">public function test_envoi_mail_confirmation()</span>
+<span class="x">{</span>
+<span class="x">    $user = User::factory()-&gt;create();</span>
+<span class="x">    $this-&gt;actingAs($user)-&gt;post(&#39;/todos&#39;, [&#39;texte&#39;=&gt;&#39;test&#39;]);</span>
+<span class="x">    Mail::assertQueued(TodoCreeMail::class);</span>
+<span class="x">}</span>
+</code></pre></div>
+<details class="question">
+<summary>💡 Solution</summary>
+</details>
+<p><code>Mail::fake()</code> empêche l’envoi réel d’e-mails.
+<code>assertQueued()</code> vérifie que le mail a bien été planifié dans la file d’envoi.</p>
+<h2 id="etape-8-tests-dapi-json">🌐 Étape 8 — Tests d’API JSON<a class="headerlink" href="#etape-8-tests-dapi-json" title="Permanent link">⚓︎</a></h2>
+<p>Crée un test API avec <code>Sanctum</code> :</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>make:test<span class="w"> </span>ApiTodosTest
+</code></pre></div>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use Laravel\Sanctum\Sanctum;</span>
+
+<span class="x">public function test_api_liste_renvoie_json()</span>
+<span class="x">{</span>
+<span class="x">    Sanctum::actingAs(User::factory()-&gt;create());</span>
+<span class="x">    Todo::factory()-&gt;count(2)-&gt;create();</span>
+
+<span class="x">    $this-&gt;getJson(&#39;/api/todos&#39;)</span>
+<span class="x">         -&gt;assertOk()</span>
+<span class="x">         -&gt;assertJsonStructure([[&#39;id&#39;,&#39;texte&#39;,&#39;done&#39;]]);</span>
+<span class="x">}</span>
+</code></pre></div>
+<details class="question">
+<summary>💡 Solution</summary>
+</details>
+<p><code>Sanctum::actingAs()</code> simule une authentification API.
+<code>assertJsonStructure()</code> vérifie la structure du JSON renvoyé.</p>
+<h2 id="etape-9-mesure-de-la-couverture">📊 Étape 9 — Mesure de la couverture<a class="headerlink" href="#etape-9-mesure-de-la-couverture" title="Permanent link">⚓︎</a></h2>
+<p>Active Xdebug localement :</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span class="nv">XDEBUG_MODE</span><span class="o">=</span>coverage<span class="w"> </span>php<span class="w"> </span>artisan<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--coverage<span class="w"> </span>--min<span class="o">=</span><span class="m">80</span>
+</code></pre></div>
+<details class="question">
+<summary>💡 Solution</summary>
+</details>
+<p>L’option <code>--min=80</code> force la commande à échouer si la couverture descend sous 80 %.
+Cela aide à maintenir un haut niveau de qualité dans le code.</p>
+<h2 id="etape-10-integration-dans-github-actions">⚙️ Étape 10 — Intégration dans GitHub Actions<a class="headerlink" href="#etape-10-integration-dans-github-actions" title="Permanent link">⚓︎</a></h2>
+<p>Crée un fichier <code>.github/workflows/tests.yml</code> :</p>
+<div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tests</span>
+
+<span class="nt">on</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">pull_request</span><span class="p">:</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">laravel-tests</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shivammathur/setup-php@v2</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">php-version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;8.3&#39;</span>
+<span class="w">          </span><span class="nt">extensions</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mbstring, dom, sqlite, pdo_sqlite</span>
+<span class="w">          </span><span class="nt">coverage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xdebug</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">composer install --no-interaction --prefer-dist</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Prepare env</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">cp .env .env.testing</span>
+<span class="w">          </span><span class="no">printf &quot;DB_CONNECTION=sqlite\nDB_DATABASE=:memory:\n&quot; &gt;&gt; .env.testing</span>
+<span class="w">          </span><span class="no">php artisan key:generate</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run tests with coverage</span>
+<span class="w">        </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">XDEBUG_MODE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">coverage</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">php artisan test --coverage --min=80</span>
+</code></pre></div>
+<details class="question">
+<summary>💡 Solution</summary>
+</details>
+<p>Ce workflow :
+- installe PHP et SQLite,
+- configure un <code>.env.testing</code>,
+- exécute tous les tests,
+- vérifie que la couverture dépasse <strong>80 %</strong>.</p>
+<h2 id="conclusion">✅ Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">⚓︎</a></h2>
+<p>Tu as maintenant :</p>
+<ul>
+<li>Un environnement de test Laravel fonctionnel.</li>
+<li>Des tests unitaires, fonctionnels et API.</li>
+<li>Une mesure automatique de couverture.</li>
+<li>Une exécution automatisée en CI GitHub Actions.</li>
+</ul>
+<h2 id="pour-aller-plus-loin">🧭 Pour aller plus loin<a class="headerlink" href="#pour-aller-plus-loin" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>Générer un rapport HTML :</li>
+</ul>
+<p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--coverage-html<span class="o">=</span>build/coverage
+</code></pre></div>
+* Ajouter <code>phpstan</code> et <code>laravel/pint</code> à la CI pour vérifier la qualité du code.
+* Fixer des seuils de qualité et des <em>badges</em> dans le README.</p>
 
 
 

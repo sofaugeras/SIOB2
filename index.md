@@ -8,8 +8,9 @@
 
 !!! warning "Actu SIO1"
 
-    📌 Thème en cours B1 : [Base de données : langages de contrôle des données](./1_Base_de_donnees/3_LCD/utilisateur.md) <br />
-    ⌛️ A venir : Gestion de projet <br />
+    📌 Thème en cours B1 : Gestion de projet <br />
+    📣 A rendre : Lundi 15 décembre : Gestion de projet : Projet Noël
+    ⌛️ A venir :  TP NOté Lundi 8 décembre <br />
     
     📅 Stage SIO1 : lundi 18 mai - vendredi 19 juin 2026, retour au lycée le lundi 22 juin de 8h30 à 12h30 <br />
 
@@ -18,6 +19,7 @@
     - [Base de données : introduction](./1_Base_de_donnees/1_introduction/cours.md)<br />
     - [Base de données : Langage de manipulation de données](./1_Base_de_donnees/2_LMD/cours.md)<br />
     - [Base de données : LCD](./1_Base_de_donnees/3_LCD/cours.md) <br />
+    - [Base de données : langages de contrôle des données](./1_Base_de_donnees/3_LCD/utilisateur.md)
 
 ## Actus SIO2
 
@@ -26,9 +28,10 @@
     📌 Thème en cours B2 :  <br />
     ⌛️ A venir B2 : <br />
 
-    📌 Thème en cours B3 : [TP Injection SQL](./6_Cybersécurité/6.2_OWASP/6.2.2_TPOwasp/2_tpInjectionSQL.md) <br />
-    ⌛️ A venir B3 :  [TP Violation de gestion d'authentification et de session]()<br />
-    📣 Exposé : Exposé : Analyse de cas Cyber -> Prochaine date : Mardi 2 décembre
+    📌 Thème en cours B3 :  <br />
+    ⌛️ A venir B3 :  <br />
+    📣 Exposé : Analyse de cas Cyber -> Prochaine date : Mardi 9 décembre
+    📣 Etude de cas de 4h : Mercredi 10 décembre 8h-12h
 
     📅 Stage SIO2 : lundi 5 janvier - vendredi 13 février 2026<br />
 
@@ -69,6 +72,9 @@
     - [Authentication](./6_Cybersécurité/3_hygiene_Cyber/6.3.1_cours/3_authentification.md)<br />
     - [Archivage](./6_Cybersécurité/3_hygiene_Cyber/6.3.1_cours/4_archivage.md)
     - [Laravel : Question Cyber](./4_Laravel/4.2_toDo/4.2.3_middleware_Auth.md)
+    - [TP Injection SQL](./6_Cybersécurité/6.2_OWASP/6.2.2_TPOwasp/2_tpInjectionSQL.md)
+    - [TP Exposition aux données sensibles](./6_Cybersécurité/6.2_OWASP/6.2.2_TPOwasp/3_tpExpositionDonneesSensibles.md)
+    - [TP Violation de gestion d'authentification et de session](./6_Cybersécurité/6.2_OWASP/6.2.2_TPOwasp/4_tpViolationGestionAuthentification.md)
 
 <!--
 !!! warning "Calendrier de l'avent"

@@ -1,5 +1,12 @@
 # Laravel
 
+!!! info "Compétences visées B2 SLAM"
+
+    - **B2.1 SLAM** – Concevoir et développer une solution applicative
+    - **B2.2 SLAM** – Assurer la maintenance corrective ou évolutive d’une solution applicative
+    - **B2.3 SLAM** – Gérer les données
+
+
 :bookmark_tabs: ^^Plan de Cours^^ :
 
 1. [Installation](./4.1_installation/cours.md)
