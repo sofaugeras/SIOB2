@@ -1,7 +1,5 @@
 # CI - Tests unitaires 🧪
 
-![en connstruction](../../images/enConstruction.png)
-
 L’exécution de tests unitaires et d’intégrations est au coeur de la démarche DevOps et d’intégration continue. C’est eux qui vont permettre de détecter les anomalies dans les développements réalisés. **Github Actions**, si un ou plusieurs tests sont en erreur, va fournir les rapports détaillés permettant d’identifier l’origine de l’erreur, et va signaler que la tâche est en erreur. Cela peut par exemple empêcher un merge de se réaliser dans Github.
 
 ```
@@ -927,6 +925,8 @@ public function test_un_utilisateur_ne_peut_pas_modifier_le_todo_d_un_autre()
 ```
 
 Laravel renverra automatiquement 403 Forbidden si la policy refuse l’accès.
+
+![en connstruction](../../images/enConstruction.png){: .center width=50%}
 
 ## 8. Intégration dans GitHub Actions ⚙️
 
