@@ -1,4 +1,4 @@
-# CI - compilation
+# CI - compilation 🔂
 
 ## 1. Concepts et définition
 

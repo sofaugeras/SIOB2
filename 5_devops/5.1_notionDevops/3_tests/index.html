@@ -26,7 +26,7 @@
     
     
       
-        <title>CI - Tests unitaires et fonctionnels sous Laravel + CI GitHub Actions 🧪 - Saint Sauveur BTS SIO SLAM</title>
+        <title>CI - Tests unitaires 🧪 - Saint Sauveur BTS SIO SLAM</title>
       
     
     
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ci-tests-unitaires-et-fonctionnels-sous-laravel-ci-github-actions" class="md-skip">
+        <a href="#ci-tests-unitaires" class="md-skip">
           Aller au contenu
         </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CI - Tests unitaires et fonctionnels sous Laravel + CI GitHub Actions 🧪
+              CI - Tests unitaires 🧪
             
           </span>
         </div>
@@ -2834,7 +2834,7 @@
         
   
   <span class="md-ellipsis">
-    CI - compilation
+    CI - compilation 🔂
   </span>
   
 
@@ -2864,7 +2864,7 @@
           
   
   <span class="md-ellipsis">
-    CI - Tests unitaires et fonctionnels sous Laravel + CI GitHub Actions 🧪
+    CI - Tests unitaires 🧪
   </span>
   
 
@@ -2875,7 +2875,7 @@
         
   
   <span class="md-ellipsis">
-    CI - Tests unitaires et fonctionnels sous Laravel + CI GitHub Actions 🧪
+    CI - Tests unitaires 🧪
   </span>
   
 
@@ -2897,73 +2897,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#etape-1-initialisation-de-lenvironnement-de-test" class="md-nav__link">
+  <a href="#1-initialisation-de-lenvironnement-de-test" class="md-nav__link">
     <span class="md-ellipsis">
-      🏗️ Étape 1 — Initialisation de l’environnement de test
+      1. Initialisation de l’environnement de test 🏗️
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#etape-2-premier-test-smoke-test" class="md-nav__link">
+  <a href="#2-premier-test-smoke-test" class="md-nav__link">
     <span class="md-ellipsis">
-      🧩 Étape 2 — Premier test “Smoke test”
+      2. Premier test “Smoke test” 🧩
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#etape-3-tests-unitaires-modele-eloquent" class="md-nav__link">
+  <a href="#3-les-factories-eloquent" class="md-nav__link">
     <span class="md-ellipsis">
-      🧱 Étape 3 — Tests Unitaires : modèle Eloquent
+      3. Les factories Eloquent 🏭
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#etape-4-tests-de-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧮 Étape 4 — Tests de validation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#etape-5-gestion-de-la-base-de-donnees-pendant-les-tests" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧰 Étape 5 — Gestion de la base de données pendant les tests
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#etape-6-tests-dauthentification-et-de-politique-dacces" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔒 Étape 6 — Tests d’authentification et de politique d’accès
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔒 Étape 6 — Tests d’authentification et de politique d’accès">
+    <nav class="md-nav" aria-label="3. Les factories Eloquent 🏭">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cas-1-utilisateur-invite" class="md-nav__link">
+  <a href="#31-verifier-la-factory-user" class="md-nav__link">
     <span class="md-ellipsis">
-      Cas 1 : utilisateur invité
+      3.1. Vérifier la factory User 🧑‍💻
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#cas-2-un-utilisateur-ne-peut-pas-modifier-le-todo-dun-autre" class="md-nav__link">
+  <a href="#32-creer-une-factory-pour-listes" class="md-nav__link">
     <span class="md-ellipsis">
-      Cas 2 : un utilisateur ne peut pas modifier le Todo d’un autre
+      3.2. Créer une factory pour Listes 📂
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-todo-lie-a-une-liste-et-a-un-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Todo lié à une Liste et à un User 🔗
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-verifier-le-bon-fonctionnement-des-factories" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Vérifier le bon fonctionnement des factories 🎢
     </span>
   </a>
   
@@ -2975,19 +2966,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#etape-7-tests-avec-fakes-mail-queue-storage" class="md-nav__link">
+  <a href="#4-tests-unitaires-modele-eloquent" class="md-nav__link">
     <span class="md-ellipsis">
-      📬 Étape 7 — Tests avec Fakes (Mail, Queue, Storage)
+      4. Tests Unitaires : modèle Eloquent 🧱
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📬 Étape 7 — Tests avec Fakes (Mail, Queue, Storage)">
+    <nav class="md-nav" aria-label="4. Tests Unitaires : modèle Eloquent 🧱">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#exemple-mail-fake" class="md-nav__link">
+  <a href="#41-creation-du-test-de-modele" class="md-nav__link">
     <span class="md-ellipsis">
-      Exemple : Mail fake
+      4.1 Création du test de modèle 🧪
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-tester-la-relation-todos-listes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Tester la relation Todos → Listes 🔗
     </span>
   </a>
   
@@ -2999,47 +2999,161 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#etape-8-tests-dapi-json" class="md-nav__link">
+  <a href="#5tests-de-validation" class="md-nav__link">
     <span class="md-ellipsis">
-      🌐 Étape 8 — Tests d’API JSON
+      5.Tests de validation 🧮
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.Tests de validation 🧮">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-preparer-un-test-dedie" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Préparer un test dédié 📄
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#etape-9-mesure-de-la-couverture" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#52-texte-est-obligatoire" class="md-nav__link">
     <span class="md-ellipsis">
-      📊 Étape 9 — Mesure de la couverture
+      5.2 texte est obligatoire ✏️
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#etape-10-integration-dans-github-actions" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#53-cas-nominal-donnees-valides" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚙️ Étape 10 — Intégration dans GitHub Actions
+      5.3 Cas nominal : données valides ➕✔️
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Conclusion
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pour-aller-plus-loin" class="md-nav__link">
+  <a href="#6-gestion-de-la-base-de-donnees-pendant-les-tests" class="md-nav__link">
     <span class="md-ellipsis">
-      🧭 Pour aller plus loin
+      6. Gestion de la base de données pendant les tests 🧰
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="6. Gestion de la base de données pendant les tests 🧰">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-le-trait-refreshdatabase" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Le trait RefreshDatabase 🔄
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-quelle-base-est-utilisee-pour-les-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Quelle base est utilisée pour les tests ? 🗄️
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-executer-les-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Exécuter les tests ▶️
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-tests-dauthentification" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Tests d’authentification 🔐
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Tests d’authentification 🔐">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#72-tests-dacces-aux-routes-protegees-middleware-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Tests d’accès aux routes protégées (middleware auth) 🔒
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-tests-lies-a-lautorisation-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 Tests liés à l'autorisation (Policies) 🧭
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-integration-dans-github-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Intégration dans GitHub Actions ⚙️
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Intégration dans GitHub Actions ⚙️">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-creer-le-workflow-testsyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1. Créer le workflow tests.yml 🧾
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-mesurer-la-couverture-en-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2. Mesurer la couverture en local 📊
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-lancer-la-ci-apres-les-modifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3. Lancer la CI après les modifications ✅
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4533,9 +4647,9 @@
   
 
 
-<h1 id="ci-tests-unitaires-et-fonctionnels-sous-laravel-ci-github-actions">CI - Tests unitaires et fonctionnels sous Laravel + CI GitHub Actions  🧪<a class="headerlink" href="#ci-tests-unitaires-et-fonctionnels-sous-laravel-ci-github-actions" title="Permanent link">⚓︎</a></h1>
+<h1 id="ci-tests-unitaires">CI - Tests unitaires 🧪<a class="headerlink" href="#ci-tests-unitaires" title="Permanent link">⚓︎</a></h1>
 <p><img alt="en connstruction" src="../../../images/enConstruction.png" /></p>
-<p>L’exécution de tests unitaires et d’intégrations est au coeur de la démarche DevOps et d’intégration continue. C’est eux qui vont permettre de détecter les anomalies dans les développements réalisés. Github Actions, si un ou plusieurs tests sont en erreur, va fournir les rapports détaillés permettant d’identifier l’origine de l’erreur, et va signaler que la tâche est en erreur. Cela peut par exemple empêcher un merge de se réaliser dans Github.</p>
+<p>L’exécution de tests unitaires et d’intégrations est au coeur de la démarche DevOps et d’intégration continue. C’est eux qui vont permettre de détecter les anomalies dans les développements réalisés. <strong>Github Actions</strong>, si un ou plusieurs tests sont en erreur, va fournir les rapports détaillés permettant d’identifier l’origine de l’erreur, et va signaler que la tâche est en erreur. Cela peut par exemple empêcher un merge de se réaliser dans Github.</p>
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>- name: Run tests with coverage
   env: 
     XDEBUG_MODE: coverage 
@@ -4550,175 +4664,825 @@
 <li>Intégrer les tests dans une <strong>pipeline d’intégration continue (CI)</strong>.  </li>
 <li>Mesurer la <strong>couverture de code</strong> et fixer un seuil minimal de qualité.</li>
 </ul>
-<h2 id="etape-1-initialisation-de-lenvironnement-de-test">🏗️ Étape 1 — Initialisation de l’environnement de test<a class="headerlink" href="#etape-1-initialisation-de-lenvironnement-de-test" title="Permanent link">⚓︎</a></h2>
+<h2 id="1-initialisation-de-lenvironnement-de-test">1. Initialisation de l’environnement de test 🏗️<a class="headerlink" href="#1-initialisation-de-lenvironnement-de-test" title="Permanent link">⚓︎</a></h2>
 <p>Crée un environnement dédié aux tests.</p>
 <div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>cp<span class="w"> </span>.env<span class="w"> </span>.env.testing
 php<span class="w"> </span>artisan<span class="w"> </span>key:generate
-<span class="sb">````</span>
-
-<span class="c1">### ⚙️ Configure `.env.testing`</span>
-
-Option<span class="w"> </span>rapide<span class="w"> </span><span class="o">(</span>SQLite<span class="w"> </span>en<span class="w"> </span>mémoire<span class="o">)</span><span class="w"> </span>:
-
-<span class="sb">```</span>env
-<span class="nv">DB_CONNECTION</span><span class="o">=</span>sqlite
-<span class="nv">DB_DATABASE</span><span class="o">=</span>:memory:
 </code></pre></div>
-<details class="question">
-<summary>💡 Solution</summary>
+<p>▶️ Configure <code>.env.testing</code> ⚙️</p>
+<p>D'abord la base de données de Test :</p>
+<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">CREATE DATABASE todo_test;</span>
+<span class="x">CREATE USER &#39;laravel_test&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;secret&#39;;</span>
+<span class="x">GRANT ALL PRIVILEGES ON todo_test.* TO &#39;laravel_test&#39;@&#39;localhost&#39;;</span>
+<span class="x">FLUSH PRIVILEGES;</span>
+</code></pre></div>
+puis la configuration</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">DB_CONNECTION=mysql </span>
+<span class="x">DB_HOST=127.0.0.1 </span>
+<span class="x">DB_PORT=3306 </span>
+<span class="x">DB_DATABASE=todo_test </span>
+<span class="x">DB_USERNAME=laravel_test </span>
+<span class="x">DB_PASSWORD=secret</span>
+</code></pre></div>
+<details class="warning">
+<summary>💡 fix probléme sqlite</summary>
 </details>
-<p>L’utilisation d’une base <strong>SQLite en mémoire</strong> permet d’exécuter les tests très rapidement, sans dépendre d’un serveur MySQL.
-Laravel crée la base à chaque test et la supprime automatiquement.</p>
-<h2 id="etape-2-premier-test-smoke-test">🧩 Étape 2 — Premier test “Smoke test”<a class="headerlink" href="#etape-2-premier-test-smoke-test" title="Permanent link">⚓︎</a></h2>
+<p>dans le fichier <code>phpunit.xml</code> à la racine du projet
+  <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>  &lt;!--
+  &lt;server name=&quot;DB_CONNECTION&quot; value=&quot;sqlite&quot;/&gt;
+  &lt;server name=&quot;DB_DATABASE&quot; value=&quot;:memory:&quot;/&gt;
+  --&gt;
+  &lt;server name=&quot;DB_CONNECTION&quot; value=&quot;mysql&quot;/&gt;
+  &lt;server name=&quot;DB_DATABASE&quot; value=&quot;todo_test&quot;/&gt;
+  &lt;server name=&quot;DB_USERNAME&quot; value=&quot;laravel_test&quot;/&gt;
+  &lt;server name=&quot;DB_PASSWORD&quot; value=&quot;secret&quot;/&gt;
+</code></pre></div></p>
+<h2 id="2-premier-test-smoke-test">2. Premier test “Smoke test” 🧩<a class="headerlink" href="#2-premier-test-smoke-test" title="Permanent link">⚓︎</a></h2>
 <p>Crée un test pour vérifier que la page d’accueil est accessible.</p>
 <div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>make:test<span class="w"> </span>AccueilTest
 </code></pre></div>
-<p>Modifie <code>tests/Feature/AccueilTest.php</code> :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function test_accueil_est_accessible()</span>
+<p>Cela créé un nouveau répertoire <code>tests</code>, modifions à présent <code>tests/Feature/AccueilTest.php</code> :</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function test_invite_est_redirige_depuis_accueil_vers_login()</span>
 <span class="x">{</span>
 <span class="x">    $response = $this-&gt;get(&#39;/&#39;);</span>
-<span class="x">    $response-&gt;assertStatus(200);</span>
-<span class="x">    $response-&gt;assertSee(&#39;Bienvenue&#39;);</span>
+<span class="x">    $response-&gt;assertRedirect(route(&#39;login&#39;));</span>
 <span class="x">}</span>
-</code></pre></div>
-<p>Lance les tests :</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span><span class="nb">test</span>
-</code></pre></div>
-<details class="question">
-<summary>💡 Solution</summary>
-</details>
-<p>Le test <code>assertStatus(200)</code> confirme que la route <code>/</code> fonctionne correctement.
-<code>assertSee('Bienvenue')</code> vérifie que le mot “Bienvenue” est affiché dans la page.</p>
-<h2 id="etape-3-tests-unitaires-modele-eloquent">🧱 Étape 3 — Tests Unitaires : modèle Eloquent<a class="headerlink" href="#etape-3-tests-unitaires-modele-eloquent" title="Permanent link">⚓︎</a></h2>
-<p>Créons un test pour vérifier la relation entre <code>Todo</code> et <code>Liste</code>.</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>make:test<span class="w"> </span>TodoModelTest<span class="w"> </span>--unit
-</code></pre></div>
-<p>Modifie <code>tests/Unit/TodoModelTest.php</code> :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use App\Models\Liste;</span>
-<span class="x">use App\Models\Todo;</span>
 
-<span class="x">public function test_un_todo_appartient_a_une_liste()</span>
-<span class="x">{</span>
-<span class="x">    $liste = Liste::factory()-&gt;create();</span>
-<span class="x">    $todo  = Todo::factory()-&gt;for($liste)-&gt;create();</span>
-
-<span class="x">    $this-&gt;assertTrue($todo-&gt;liste-&gt;is($liste));</span>
-<span class="x">}</span>
-</code></pre></div>
-<details class="question">
-<summary>💡 Solution</summary>
-</details>
-<p>Le test vérifie la <strong>relation belongsTo()</strong> définie dans le modèle <code>Todo</code>.
-Si <code>$todo-&gt;liste</code> retourne bien l’objet <code>Liste</code> associé, la relation est correctement configurée.</p>
-<h2 id="etape-4-tests-de-validation">🧮 Étape 4 — Tests de validation<a class="headerlink" href="#etape-4-tests-de-validation" title="Permanent link">⚓︎</a></h2>
-<p>Crée un test pour s’assurer qu’un champ requis est bien validé dans ton contrôleur.</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function test_store_valide_le_champ_texte()</span>
-<span class="x">{</span>
-<span class="x">    $response = $this-&gt;post(&#39;/todos&#39;, [&#39;texte&#39; =&gt; &#39;&#39;]);</span>
-<span class="x">    $response-&gt;assertSessionHasErrors(&#39;texte&#39;);</span>
-<span class="x">}</span>
-</code></pre></div>
-<details class="question">
-<summary>💡 Solution</summary>
-</details>
-<p><code>assertSessionHasErrors('texte')</code> permet de confirmer que Laravel renvoie une erreur de validation sur le champ <code>texte</code>.</p>
-<h2 id="etape-5-gestion-de-la-base-de-donnees-pendant-les-tests">🧰 Étape 5 — Gestion de la base de données pendant les tests<a class="headerlink" href="#etape-5-gestion-de-la-base-de-donnees-pendant-les-tests" title="Permanent link">⚓︎</a></h2>
-<p>Ajoute le trait suivant dans ta classe de test :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use Illuminate\Foundation\Testing\RefreshDatabase;</span>
-
-<span class="x">class TodosTest extends TestCase</span>
-<span class="x">{</span>
-<span class="x">    use RefreshDatabase;</span>
-<span class="x">}</span>
-</code></pre></div>
-<p>Exemple de test :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function test_store_cree_un_todo()</span>
-<span class="x">{</span>
-<span class="x">    $payload = [&#39;texte&#39; =&gt; &#39;Acheter du café&#39;];</span>
-<span class="x">    $this-&gt;post(&#39;/todos&#39;, $payload)-&gt;assertRedirect();</span>
-<span class="x">    $this-&gt;assertDatabaseHas(&#39;todos&#39;, $payload);</span>
-<span class="x">}</span>
-</code></pre></div>
-<details class="question">
-<summary>💡 Solution</summary>
-</details>
-<p><code>RefreshDatabase</code> relance les migrations avant chaque test.
-<code>assertDatabaseHas</code> vérifie la présence du nouvel enregistrement dans la table <code>todos</code>.</p>
-<h2 id="etape-6-tests-dauthentification-et-de-politique-dacces">🔒 Étape 6 — Tests d’authentification et de politique d’accès<a class="headerlink" href="#etape-6-tests-dauthentification-et-de-politique-dacces" title="Permanent link">⚓︎</a></h2>
-<h3 id="cas-1-utilisateur-invite">Cas 1 : utilisateur invité<a class="headerlink" href="#cas-1-utilisateur-invite" title="Permanent link">⚓︎</a></h3>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function test_invite_redirige_vers_login()</span>
-<span class="x">{</span>
-<span class="x">    $this-&gt;post(&#39;/todos&#39;, [&#39;texte&#39;=&gt;&#39;x&#39;])-&gt;assertRedirect(&#39;/login&#39;);</span>
-<span class="x">}</span>
-</code></pre></div>
-<h3 id="cas-2-un-utilisateur-ne-peut-pas-modifier-le-todo-dun-autre">Cas 2 : un utilisateur ne peut pas modifier le Todo d’un autre<a class="headerlink" href="#cas-2-un-utilisateur-ne-peut-pas-modifier-le-todo-dun-autre" title="Permanent link">⚓︎</a></h3>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function test_un_user_ne_modifie_pas_le_todo_d_un_autre()</span>
-<span class="x">{</span>
-<span class="x">    $owner = User::factory()-&gt;create();</span>
-<span class="x">    $other = User::factory()-&gt;create();</span>
-<span class="x">    $todo  = Todo::factory()-&gt;for($owner, &#39;user&#39;)-&gt;create();</span>
-
-<span class="x">    $this-&gt;actingAs($other)</span>
-<span class="x">         -&gt;patch(&quot;/todos/{$todo-&gt;id}&quot;, [&#39;texte&#39;=&gt;&#39;hack&#39;])</span>
-<span class="x">         -&gt;assertForbidden();</span>
-<span class="x">}</span>
-</code></pre></div>
-<details class="question">
-<summary>💡 Solution</summary>
-</details>
-<p>Ces tests valident la <strong>policy Laravel</strong> associée à l’action <code>update</code>.
-L’utilisateur connecté ne doit pas pouvoir modifier le todo d’un autre.</p>
-<h2 id="etape-7-tests-avec-fakes-mail-queue-storage">📬 Étape 7 — Tests avec <em>Fakes</em> (Mail, Queue, Storage)<a class="headerlink" href="#etape-7-tests-avec-fakes-mail-queue-storage" title="Permanent link">⚓︎</a></h2>
-<h3 id="exemple-mail-fake">Exemple : Mail fake<a class="headerlink" href="#exemple-mail-fake" title="Permanent link">⚓︎</a></h3>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use Illuminate\Support\Facades\Mail;</span>
-
-<span class="x">Mail::fake();</span>
-
-<span class="x">public function test_envoi_mail_confirmation()</span>
+<span class="x">public function test_utilisateur_auth_peut_acceder_a_l_accueil()</span>
 <span class="x">{</span>
 <span class="x">    $user = User::factory()-&gt;create();</span>
-<span class="x">    $this-&gt;actingAs($user)-&gt;post(&#39;/todos&#39;, [&#39;texte&#39;=&gt;&#39;test&#39;]);</span>
-<span class="x">    Mail::assertQueued(TodoCreeMail::class);</span>
+
+<span class="x">    $response = $this-&gt;actingAs($user)</span>
+<span class="x">                     -&gt;followingRedirects()</span>
+<span class="x">                     -&gt;get(&#39;/&#39;);</span>
+
+<span class="x">    $response-&gt;assertOk();</span>
+<span class="x">    // On vérifiera qu&#39;on voit bien le texte &quot;Ma Todo List&quot; dans la page</span>
+<span class="x">    $response-&gt;assertSee(&#39;Ma Todo List&#39;);</span>
 <span class="x">}</span>
 </code></pre></div>
-<details class="question">
-<summary>💡 Solution</summary>
-</details>
-<p><code>Mail::fake()</code> empêche l’envoi réel d’e-mails.
-<code>assertQueued()</code> vérifie que le mail a bien été planifié dans la file d’envoi.</p>
-<h2 id="etape-8-tests-dapi-json">🌐 Étape 8 — Tests d’API JSON<a class="headerlink" href="#etape-8-tests-dapi-json" title="Permanent link">⚓︎</a></h2>
-<p>Crée un test API avec <code>Sanctum</code> :</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>make:test<span class="w"> </span>ApiTodosTest
+<ul>
+<li><code>assertRedirect(route('login'))</code> montre le comportement pour un invité.</li>
+<li><code>actingAs($user)</code> + <code>followingRedirects()</code> illustre le scénario d’un utilisateur authentifié.</li>
+<li>L’assertion porte sur un texte réel de la vue, pas sur le nom de la route.</li>
+</ul>
+<p>🏃 Lançons les tests :</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span><span class="nb">test</span>
 </code></pre></div>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use Laravel\Sanctum\Sanctum;</span>
+<details class="warning">
+<summary>💡 fix probléme</summary>
+</details>
+<ul>
+<li>Mettre en commentaire le contenu de exampleTest.php</li>
+<li>
+<p>Réparer le test d'authentification</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x"> FAILED  Tests\Feature\Auth\AuthenticationTest &gt; users can authenticate using the login screen</span>
+<span class="x">Failed asserting that two strings are equal.</span>
+<span class="x">--- Expected</span>
+<span class="x">+++ Actual</span>
+<span class="x">@@ @@</span>
+<span class="x">-&#39;http://localhost/dashboard&#39;</span>
+<span class="x">+&#39;http://localhost&#39;</span>
+<span class="x">+++ Actual</span>
+<span class="x">@@ @@</span>
+<span class="x">-&#39;http://localhost/dashboard&#39;</span>
+<span class="x">+&#39;http://localhost&#39;</span>
+<span class="x">@@ @@</span>
+<span class="x">-&#39;http://localhost/dashboard&#39;</span>
+<span class="x">+&#39;http://localhost&#39;</span>
+<span class="x">-&#39;http://localhost/dashboard&#39;</span>
+<span class="x">+&#39;http://localhost&#39;</span>
+<span class="x">+&#39;http://localhost&#39;</span>
+</code></pre></div>
+</li>
+</ul>
+<p>???  success "résultats"
+  <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>(base) PS C:\wamp64\www\todo2026&gt; php artisan test
 
-<span class="x">public function test_api_liste_renvoie_json()</span>
+ PASS  Tests\Unit\ExampleTest
+✓ that true is true                                                                                                           0.02s  
+
+ PASS  Tests\Feature\AccueilTest
+✓ invite est redirige depuis accueil vers login                                                                               0.63s  
+✓ utilisateur auth peut acceder a l accueil                                                                                   0.58s  
+
+ PASS  Tests\Feature\Auth\AuthenticationTest
+✓ login screen can be rendered                                                                                                3.22s  
+✓ users can authenticate using the login screen                                                                               0.17s  
+✓ users can not authenticate with invalid password                                                                            0.29s  
+✓ users can logout                                                                                                            0.10s  
+
+ PASS  Tests\Feature\Auth\EmailVerificationTest
+✓ email verification screen can be rendered                                                                                   0.14s  
+✓ email can be verified                                                                                                       0.08s  
+✓ email is not verified with invalid hash                                                                                     0.10s  
+
+ PASS  Tests\Feature\Auth\PasswordConfirmationTest
+✓ confirm password screen can be rendered                                                                                     0.12s  
+✓ password can be confirmed                                                                                                   0.07s  
+✓ password is not confirmed with invalid password                                                                             0.30s  
+
+ PASS  Tests\Feature\Auth\PasswordResetTest
+✓ reset password link screen can be rendered                                                                                  0.07s  
+✓ reset password link can be requested                                                                                        0.27s  
+✓ reset password screen can be rendered                                                                                       0.38s  
+✓ password can be reset with valid token                                                                                      0.33s  
+
+ PASS  Tests\Feature\Auth\PasswordUpdateTest
+✓ password can be updated                                                                                                     0.08s  
+✓ correct password must be provided to update password                                                                        0.08s  
+
+ PASS  Tests\Feature\Auth\RegistrationTest
+✓ registration screen can be rendered                                                                                         0.07s  
+✓ new users can register                                                                                                      0.07s  
+
+ PASS  Tests\Feature\ProfileTest
+✓ profile page is displayed                                                                                                   0.19s  
+✓ profile information can be updated                                                                                          0.07s  
+✓ email verification status is unchanged when the email address is unchanged                                                  0.08s  
+✓ user can delete their account                                                                                               0.08s  
+✓ correct password must be provided to delete account                                                                         0.10s  
+
+Tests:    26 passed (64 assertions)
+Duration: 8.40s
+</code></pre></div></p>
+<h2 id="3-les-factories-eloquent">3. Les factories Eloquent 🏭<a class="headerlink" href="#3-les-factories-eloquent" title="Permanent link">⚓︎</a></h2>
+<p>🧩 Qu’est-ce qu’une Factory Laravel ?</p>
+<p>Une factory est un outil fourni par Laravel pour <strong>générer automatiquement des données de test réalistes</strong>. </p>
+<p>Elle permet de créer facilement :</p>
+<ul>
+<li>des objets Eloquent cohérents (User, Todo, Liste, etc.),</li>
+<li>avec des valeurs aléatoires mais crédibles (texte, dates, booléens…),</li>
+<li>et surtout sans écrire manuellement chaque champ.</li>
+</ul>
+<p>Les factories sont essentielles pour les tests, car elles permettent :</p>
+<ul>
+<li>de simplifier la création d’entrées en base,</li>
+<li>d’éviter de dupliquer du code,</li>
+<li>d’isoler les tests (chaque test crée ses propres données),</li>
+</ul>
+<p>et d’obtenir des tests précis, reproductibles et rapides.</p>
+<p>Les fichiers de factories se trouvent dans le dossier :</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>database/factories/
+</code></pre></div>
+<p>**note :**Laravel fournit déjà une factory pour User : <code>UserFactory.php</code>.</p>
+<h3 id="31-verifier-la-factory-user">3.1. Vérifier la factory User 🧑‍💻<a class="headerlink" href="#31-verifier-la-factory-user" title="Permanent link">⚓︎</a></h3>
+<p>Ouvre le fichier suivant : <code>database/factories/UserFactory.php</code></p>
+<p>Tu dois y trouver une méthode <code>definition()</code> qui ressemble à ceci :</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function definition(): array</span>
 <span class="x">{</span>
-<span class="x">    Sanctum::actingAs(User::factory()-&gt;create());</span>
-<span class="x">    Todo::factory()-&gt;count(2)-&gt;create();</span>
+<span class="x">    return [</span>
+<span class="x">        &#39;name&#39; =&gt; fake()-&gt;name(),</span>
+<span class="x">        &#39;email&#39; =&gt; fake()-&gt;unique()-&gt;safeEmail(),</span>
+<span class="x">        &#39;email_verified_at&#39; =&gt; now(),</span>
+<span class="x">        &#39;password&#39; =&gt; &#39;$2y$10$&#39;.strtr(&#39;password-hash&#39;, [&#39;.&#39; =&gt; &#39;/&#39;]), // ou Hash::make(...)</span>
+<span class="x">        &#39;remember_token&#39; =&gt; Str::random(10),</span>
+<span class="x">    ];</span>
+<span class="x">}</span>
+</code></pre></div>
+<p>L’important pour nous est :</p>
+<p>👉 <code>User::factory()-&gt;create()</code> permet de créer facilement un utilisateur de test valide.</p>
+<h3 id="32-creer-une-factory-pour-listes">3.2. Créer une factory pour Listes 📂<a class="headerlink" href="#32-creer-une-factory-pour-listes" title="Permanent link">⚓︎</a></h3>
+<p>On veut pouvoir générer des listes de Todos pour les tests (ex. “Maison”, “Travail”, etc.).</p>
+<p>Crée la factory : <code>php artisan make:factory ListesFactory --model=Listes</code></p>
+<p>Puis complète <code>database/factories/ListesFactory.php</code> :</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use App\Models\Listes;</span>
+<span class="x">use Illuminate\Database\Eloquent\Factories\Factory;</span>
 
-<span class="x">    $this-&gt;getJson(&#39;/api/todos&#39;)</span>
-<span class="x">         -&gt;assertOk()</span>
-<span class="x">         -&gt;assertJsonStructure([[&#39;id&#39;,&#39;texte&#39;,&#39;done&#39;]]);</span>
+<span class="x">class ListesFactory extends Factory</span>
+<span class="x">{</span>
+<span class="x">   protected $model = Listes::class;</span>
+
+<span class="x">    public function definition(): array</span>
+<span class="x">    {</span>
+<span class="x">        return [</span>
+<span class="x">            &#39;titre&#39; =&gt; fake()-&gt;words(2, true), // par ex. &quot;Maison&quot;, &quot;Bureau perso&quot;</span>
+<span class="x">        ];</span>
+<span class="x">    }</span>
+
 <span class="x">}</span>
 </code></pre></div>
 <details class="question">
-<summary>💡 Solution</summary>
+<summary>💡 Explication ListeFactory</summary>
 </details>
-<p><code>Sanctum::actingAs()</code> simule une authentification API.
-<code>assertJsonStructure()</code> vérifie la structure du JSON renvoyé.</p>
-<h2 id="etape-9-mesure-de-la-couverture">📊 Étape 9 — Mesure de la couverture<a class="headerlink" href="#etape-9-mesure-de-la-couverture" title="Permanent link">⚓︎</a></h2>
-<p>Active Xdebug localement :</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span class="nv">XDEBUG_MODE</span><span class="o">=</span>coverage<span class="w"> </span>php<span class="w"> </span>artisan<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--coverage<span class="w"> </span>--min<span class="o">=</span><span class="m">80</span>
+<p>Ici, on utilise <code>fake()-&gt;words(2, true)</code> pour générer un nom de liste avec 2 mots.<br />
+  À partir de là, un simple <code>Listes::factory()-&gt;create()</code> dans un test insérera une ligne dans la table <code>listes</code> avec un champ <code>titre</code> cohérent.</p>
+<div class="admonition question">
+<p class="admonition-title">A faire</p>
+</div>
+<p>=== "Enoncé"
+    ✅ Créer une factory pour Todo (sans relations)
+  === "Solution"</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```php
+  &lt;?php
+
+  namespace Database\Factories;
+
+  use Illuminate\Database\Eloquent\Factories\Factory;
+  use App\Models\Todos;
+  use App\Models\Listes;
+  use App\Models\User;    
+
+  /**
+   * @extends \Illuminate\Database\Eloquent\Factories\Factory&lt;\App\Models\Todos&gt;
+   */
+  class TodosFactory extends Factory
+  {
+      protected $model = Todos::class;
+
+      public function definition(): array
+      {
+          return [
+              &#39;texte&#39;     =&gt; fake()-&gt;sentence(3),
+              &#39;termine&#39;   =&gt; false,
+              &#39;important&#39; =&gt; false,
+              &#39;date_fin&#39;  =&gt; null,
+              &#39;listes_id&#39; =&gt; Listes::factory(), // crée une Liste associée
+              &#39;user_id&#39;   =&gt; User::factory(),  // crée un User associé
+          ];
+      }
+  }
+
+  ```
+
+Avec cette factory, on peut déjà écrire :
+
+```php
+$todos = Todos::factory()-&gt;create();
+```
+Laravel créera un enregistrement dans la table `todos` avec :
+
+- un `texte` réaliste,  
+- `termine = false`,  
+- `important = false`,  
+- les FK `listes_id` et `user_id` à `null` (non associées pour l’instant).
+
+C’est suffisant pour des **premiers tests** sur les attributs du modèle `Todo`.
+</code></pre></div>
+<h3 id="33-todo-lie-a-une-liste-et-a-un-user">3.3. Todo lié à une Liste et à un User 🔗<a class="headerlink" href="#33-todo-lie-a-une-liste-et-a-un-user" title="Permanent link">⚓︎</a></h3>
+<p>Pour des tests plus complets (relations Eloquent), on peut demander à la factory Todo de <strong>créer automatiquement</strong> une Liste et un User associés.</p>
+<details class="tip">
+<summary>code TodoFactory</summary>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use App\Models\Todos;</span>
+<span class="x">use App\Models\Listes;</span>
+<span class="x">use App\Models\User;</span>
+<span class="x">use Illuminate\Database\Eloquent\Factories\Factory;</span>
+
+<span class="x">class TodosFactory extends Factory</span>
+<span class="x">{</span>
+<span class="x">    protected $model = Todos::class;</span>
+
+<span class="x">    public function definition(): array</span>
+<span class="x">    {</span>
+<span class="x">        return [</span>
+<span class="x">            &#39;texte&#39;     =&gt; fake()-&gt;sentence(3),</span>
+<span class="x">            &#39;termine&#39;   =&gt; false,</span>
+<span class="x">            &#39;important&#39; =&gt; false,</span>
+<span class="x">            &#39;date_fin&#39;  =&gt; null,</span>
+<span class="x">            &#39;listes_id&#39; =&gt; Listes::factory(), // crée une Liste associée</span>
+<span class="x">            &#39;user_id&#39;   =&gt; User::factory(),  // crée un User associé</span>
+<span class="x">        ];</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+</code></pre></div>
+</details>
+<p>En configurant <code>listes_id</code> et <code>user_id</code> avec <code>Liste::factory()</code> et <code>User::factory()</code>, on obtient un comportement très puissant :</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">$todo = Todos::factory()-&gt;create();</span>
+</code></pre></div>
+<p>réalise en réalité :</p>
+<ol>
+<li>création d’un <code>User</code> de test,  </li>
+<li>création d’une <code>Listes</code> de test,  </li>
+<li>création du <code>Todos</code> lié à ces deux enregistrements.</li>
+</ol>
+<p>Cela simplifie énormément les tests qui portent à la fois sur <code>Todos</code> et sur ses relations (ex. <code>todos-&gt;listes</code>, <code>todos-&gt;user</code>).</p>
+<p>✔️ Tester une factory
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&gt; App\Models\Listes::factory()-&gt;create();
+= App\Models\Listes {#6211
+    titre: &quot;eos ut&quot;,
+    updated_at: &quot;2025-12-06 13:09:32&quot;,
+    created_at: &quot;2025-12-06 13:09:32&quot;,
+    id: 4,
+  }
+</code></pre></div></p>
+<p>Résultat : un nouvel enregistrement todos est inséré dans la base de développement.
+✔️ Créer un utilisateur
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&gt; App\Models\User::factory()-&gt;create();
+= App\Models\User {#6632
+    name: &quot;Diane Lambert&quot;,
+    email: &quot;pauline27@example.net&quot;,
+    email_verified_at: &quot;2025-12-06 13:14:50&quot;,
+    #password: &quot;$2y$12$mynJ8kscphRfl1KCdRRVR.XS8hKU0dxzQvaBkTWWc8P9TkgonEgEq&quot;,
+    #remember_token: &quot;nNiqZwe2AN&quot;,
+    updated_at: &quot;2025-12-06 13:14:51&quot;,
+    created_at: &quot;2025-12-06 13:14:51&quot;,
+    id: 3,
+  }
+</code></pre></div></p>
+<p>✔️ Tester la factory Todos</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&gt; App\Models\Todos::factory()-&gt;create();
+= App\Models\Todos {#5520
+    texte: &quot;Ut rerum praesentium fugit.&quot;,
+    termine: false,
+    important: false,
+    date_fin: null,
+    listes_id: 5,
+    user_id: 4,
+    updated_at: &quot;2025-12-06 13:22:15&quot;,
+    created_at: &quot;2025-12-06 13:22:15&quot;,
+    id: 9,
+  }
+</code></pre></div>
+<p>✔️ Lister les enregistrements existants</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>App\Models\Todos::all();</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3 id="34-verifier-le-bon-fonctionnement-des-factories">3.4. Vérifier le bon fonctionnement des factories 🎢<a class="headerlink" href="#34-verifier-le-bon-fonctionnement-des-factories" title="Permanent link">⚓︎</a></h3>
+<p><strong>Tinker</strong> est une console interactive fournie par Laravel, basée sur <code>PsySH</code>, qui permet d’exécuter du code PHP en direct au sein de ton application.</p>
+<p>C’est un outil extrêmement pratique pour :</p>
+<ul>
+<li>tester rapidement des modèles Eloquent,</li>
+<li>manipuler la base de données depuis le shell,</li>
+<li>vérifier le fonctionnement d’une factory,</li>
+<li>expérimenter un morceau de logique métier,</li>
+<li>déboguer un comportement sans écrire de route ni de test.</li>
+</ul>
+<p>▶️ Ouvrir <strong>Tinker</strong></p>
+<p>Dans ton terminal (à la racine du projet) : <code>php artisan tinker</code></p>
+<p>Tu obtiens alors une console interactive :</p>
+<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Psy Shell v0.11.8 (PHP 8.2 …)
+&gt;&gt;&gt;
+</code></pre></div>
+Tout ce que tu écris ici est exécuté dans le contexte de ton application Laravel.</p>
+<details class="warning">
+<summary>Fix</summary>
+</details>
+<ul>
+<li>penser à ajouter <code>use HasFactory;</code> dans le model de Todos</li>
+<li>Vider le cache Laravel
+    <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>php artisan optimize:clear
+composer dump-autoload
+</code></pre></div></li>
+</ul>
+<h2 id="4-tests-unitaires-modele-eloquent">4. Tests Unitaires : modèle Eloquent 🧱<a class="headerlink" href="#4-tests-unitaires-modele-eloquent" title="Permanent link">⚓︎</a></h2>
+<p>Dans cette étape, nous allons vérifier le comportement du modèle <strong><code>Todos</code></strong> à l’aide de <strong>tests unitaires</strong> :</p>
+<ul>
+<li>relations <code>Todos → Listes</code> et <code>Todos → User</code>,  </li>
+<li>valeurs par défaut de certains attributs (<code>termine</code>, <code>important</code>, etc.).</li>
+</ul>
+<p>L’objectif est de valider le modèle <strong>sans passer par les routes ni les vues</strong>.</p>
+<h3 id="41-creation-du-test-de-modele">4.1 Création du test de modèle 🧪<a class="headerlink" href="#41-creation-du-test-de-modele" title="Permanent link">⚓︎</a></h3>
+<p>Génère un test unitaire dédié au modèle <code>Todos</code> :</p>
+<p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>make:test<span class="w"> </span>TodosModelTest<span class="w"> </span>--unit
+</code></pre></div>
+Cela crée le fichier <code>tests/Unit/TodosModelTest.php</code></p>
+<p>Modifier l’en-tête du fichier pour qu’il étende bien la classe de test Laravel (et pas le TestCase brut de PHPUnit), afin de pouvoir utiliser les factories et la base de données de test.</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">Tests\Unit</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Tests\TestCase</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Foundation\Testing\RefreshDatabase</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">App\Models\Todos</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">App\Models\Listes</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">App\Models\User</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">TodosModelTest</span> <span class="k">extends</span> <span class="nx">TestCase</span>
+<span class="p">{</span>
+    <span class="k">use</span> <span class="nx">RefreshDatabase</span><span class="p">;</span>
+
+    <span class="c1">// Les tests viendront ici</span>
+<span class="p">}</span>
 </code></pre></div>
 <details class="question">
-<summary>💡 Solution</summary>
+<summary>💡 Pourquoi utiliser Tests\TestCase et RefreshDatabase ?</summary>
 </details>
-<p>L’option <code>--min=80</code> force la commande à échouer si la couverture descend sous 80 %.
-Cela aide à maintenir un haut niveau de qualité dans le code.</p>
-<h2 id="etape-10-integration-dans-github-actions">⚙️ Étape 10 — Intégration dans GitHub Actions<a class="headerlink" href="#etape-10-integration-dans-github-actions" title="Permanent link">⚓︎</a></h2>
-<p>Crée un fichier <code>.github/workflows/tests.yml</code> :</p>
-<div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tests</span>
+<ul>
+<li><code>Tests\TestCase</code>charge le contexte Laravel complet (config, Eloquent, etc.) dans les tests, même dans tests/Unit.</li>
+<li><code>RefreshDatabase</code> relance les migrations pour chaque test afin de garantir une base de test propre (pas de pollution entre tests).</li>
+</ul>
+<h3 id="42-tester-la-relation-todos-listes">4.2 Tester la relation Todos → Listes 🔗<a class="headerlink" href="#42-tester-la-relation-todos-listes" title="Permanent link">⚓︎</a></h3>
+<p>Ton modèle Todos déclare une relation :</p>
+<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function listes(): BelongsTo</span>
+<span class="x">{</span>
+<span class="x">    return $this-&gt;belongsTo(Listes::class)-&gt;withDefault();</span>
+<span class="x">}</span>
+</code></pre></div>
+Nous allons vérifier que cette relation fonctionne bien.</p>
+<p>Dans <code>TodosModelTest</code> :</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function test_un_todos_appartient_a_une_liste()</span>
+<span class="x">{</span>
+<span class="x">    // Arrange : création d&#39;une liste</span>
+<span class="x">    $liste = Listes::factory()-&gt;create();</span>
+
+<span class="x">    // Act : création d&#39;un Todos lié à cette liste</span>
+<span class="x">    $todo = Todos::factory()-&gt;for($liste, &#39;listes&#39;)-&gt;create();</span>
+
+<span class="x">    // Assert : la relation renvoie bien la bonne liste</span>
+<span class="x">    $this-&gt;assertTrue($todo-&gt;listes-&gt;is($liste));</span>
+<span class="x">}</span>
+</code></pre></div>
+<details class="question">
+<summary>💡 Détail sur for($liste, 'listes')</summary>
+</details>
+<ul>
+<li><code>Listes::factory()-&gt;create()</code> crée une ligne dans la table listes.</li>
+<li><code>Todos::factory()-&gt;for($liste, 'listes')-&gt;create()</code> demande à Laravel de remplir la clé étrangère correspondant à la relation <strong>listes</strong> dans le modèle <strong>Todos</strong>.</li>
+<li>L’assertion <code>is()</code> vérifie que <code>$todo-&gt;listes</code> et <code>$liste</code> représentent le même enregistrement.</li>
+</ul>
+<p>🏃 Relancer les tests : <code>php artisan test</code></p>
+<div class="admonition question">
+<p class="admonition-title">A faire</p>
+</div>
+<p>=== "Enoncé"
+    Tester la relation Todos → User 👤
+  === "Solution"</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```php
+public function test_un_todos_appartient_a_un_utilisateur()
+{
+    // Arrange : création d&#39;un utilisateur
+    $user = User::factory()-&gt;create();
+
+    // Act : création d&#39;un Todos lié à cet utilisateur
+    $todo = Todos::factory()-&gt;for($user, &#39;user&#39;)-&gt;create();
+
+    // Assert : la relation renvoie bien le bon utilisateur
+    $this-&gt;assertTrue($todo-&gt;user-&gt;is($user));
+}
+```
+</code></pre></div>
+<details class="question">
+<summary>💡 Pourquoi tester les relations ?</summary>
+</details>
+<p>Ces tests garantissent que :</p>
+<ul>
+<li>les clés étrangères (listes_id, user_id) sont correctement utilisées,</li>
+<li>les méthodes listes() et user() renvoient bien les modèles attendus.</li>
+</ul>
+<p>En cas de renommage de colonne, de modèle ou de relation, ces tests serviront de garde-fous.</p>
+<div class="admonition question">
+<p class="admonition-title">A faire</p>
+</div>
+<p>=== "Enoncé"
+    Tester les valeurs par défaut (termine, important) ✅
+  === "Solution" </p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```php
+  public function test_un_todos_est_non_termine_et_non_important_par_defaut()
+  {
+      // Act : création d&#39;un Todos sans préciser termine/important
+      $todo = Todos::factory()-&gt;create();
+
+      // Assert : les valeurs par défaut sont respectées
+      $this-&gt;assertFalse($todo-&gt;termine);
+      $this-&gt;assertFalse($todo-&gt;important);
+  }   
+```
+</code></pre></div>
+<h2 id="5tests-de-validation">5.Tests de validation 🧮<a class="headerlink" href="#5tests-de-validation" title="Permanent link">⚓︎</a></h2>
+<p>Nous allons maintenant écrire des <strong>tests de validation</strong> pour le formulaire d’ajout d’un Todo.</p>
+<p>🎯 <strong>Objectifs</strong> :</p>
+<ul>
+<li>Vérifier que certains champs sont <strong>obligatoires</strong> (<code>texte</code> notamment).  </li>
+<li>Vérifier que certains champs respectent des <strong>contraintes</strong> (longueur minimale, format de date…).  </li>
+<li>Vérifier qu’un Todo <strong>valide</strong> est bien créé en base.</li>
+</ul>
+<h3 id="51-preparer-un-test-dedie">5.1 Préparer un test dédié 📄<a class="headerlink" href="#51-preparer-un-test-dedie" title="Permanent link">⚓︎</a></h3>
+<p>Crée un test de type <strong>Feature</strong> <code>php artisan make:test TodosValidationTest</code></p>
+<p>Cela créé un fichier dans <code>tests/Feature/TodosValidationTest.php</code>, modifier le code ainsi :</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">Tests\Feature</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">App\Models\User</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">App\Models\Listes</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">App\Models\Todos</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Foundation\Testing\RefreshDatabase</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Tests\TestCase</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">TodosValidationTest</span> <span class="k">extends</span> <span class="nx">TestCase</span>
+<span class="p">{</span>
+    <span class="k">use</span> <span class="nx">RefreshDatabase</span><span class="p">;</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Méthode utilitaire pour poster un Todo avec des données par défaut</span>
+<span class="sd">     */</span>
+    <span class="k">private</span> <span class="k">function</span> <span class="nf">postTodo</span><span class="p">(</span><span class="k">array</span> <span class="nv">$overrides</span> <span class="o">=</span> <span class="p">[])</span>
+    <span class="p">{</span>
+        <span class="nv">$user</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">factory</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">();</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">actingAs</span><span class="p">(</span><span class="nv">$user</span><span class="p">);</span>
+
+        <span class="nv">$liste</span> <span class="o">=</span> <span class="nx">Listes</span><span class="o">::</span><span class="na">factory</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">();</span>
+
+        <span class="nv">$data</span> <span class="o">=</span> <span class="nb">array_merge</span><span class="p">([</span>
+            <span class="s1">&#39;texte&#39;</span>      <span class="o">=&gt;</span> <span class="s1">&#39;Acheter du café&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;date_fin&#39;</span>   <span class="o">=&gt;</span> <span class="nx">now</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">addDay</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">format</span><span class="p">(</span><span class="s1">&#39;Y-m-d\TH:i&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;priority&#39;</span>   <span class="o">=&gt;</span> <span class="mi">0</span><span class="p">,</span>              <span class="c1">// bouton radio importance</span>
+            <span class="s1">&#39;categories&#39;</span> <span class="o">=&gt;</span> <span class="p">[],</span>             <span class="c1">// tableau de catégories (checkbox)</span>
+            <span class="s1">&#39;liste&#39;</span>      <span class="o">=&gt;</span> <span class="nv">$liste</span><span class="o">-&gt;</span><span class="na">id</span><span class="p">,</span>     <span class="c1">// correspond à $request-&gt;input(&#39;liste&#39;)</span>
+        <span class="p">],</span> <span class="nv">$overrides</span><span class="p">);</span>
+
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">(</span><span class="s1">&#39;/action/add&#39;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
+<details class="question">
+<summary>💡 Pourquoi une méthode postTodo() ?</summary>
+</details>
+<p>Cette méthode permet de : </p>
+<ul>
+<li>centralise la construction d’un <strong>jeu de données valide</strong>,  </li>
+<li>permet d’écrire des tests plus courts en ne modifiant que les champs à tester,  </li>
+<li>garantit que tous les autres champs restent cohérents (liste existante, user connecté, etc.).</li>
+</ul>
+<h3 id="52-texte-est-obligatoire">5.2 texte est obligatoire ✏️<a class="headerlink" href="#52-texte-est-obligatoire" title="Permanent link">⚓︎</a></h3>
+<p>Premier cas : le champ texte doit être obligatoire.</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function test_texte_est_obligatoire()</span>
+<span class="x">{</span>
+<span class="x">    $response = $this-&gt;postTodo([&#39;texte&#39; =&gt; &#39;&#39;]);</span>
+
+<span class="x">    $response-&gt;assertSessionHasErrors(&#39;texte&#39;);</span>
+<span class="x">    $this-&gt;assertDatabaseCount(&#39;todos&#39;, 0);</span>
+<span class="x">}</span>
+</code></pre></div>
+<details class="question">
+<summary>💡 Comportement attendu côté contrôleur</summary>
+</details>
+<p>Dans ton contrôleur qui traite <code>/action/add</code>, tu dois avoir quelque chose comme :</p>
+<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">$validated = $request-&gt;validate([</span>
+<span class="x">    &#39;texte&#39; =&gt; [&#39;required&#39;, &#39;string&#39;],</span>
+<span class="x">    // autres règles…</span>
+<span class="x">]);</span>
+</code></pre></div>
+  Le test vérifie que :</p>
+<ul>
+<li>si <code>texte</code> est vide, Laravel renvoie une <strong>erreur de validation</strong> sur ce champ,  </li>
+<li>aucun <code>Todos</code> n’est créé en base.</li>
+</ul>
+<p>mais </p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>     FAIL  Tests\Feature\TodosValidationTest
+  ⨯ texte est obligatoire                                                                                                       0.11s  
+  ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  
+   FAILED  Tests\Feature\TodosValidationTest &gt; texte est obligatoire
+  Session is missing expected key [errors].
+Failed asserting that false is true.
+
+  at tests\Feature\TodosValidationTest.php:40
+     36▕     public function test_texte_est_obligatoire()
+     37▕     {
+     38▕         $response = $this-&gt;postTodo([&#39;texte&#39; =&gt; &#39;&#39;]);
+     39▕
+  ➜  40▕         $response-&gt;assertSessionHasErrors(&#39;texte&#39;);
+     41▕         $this-&gt;assertDatabaseCount(&#39;todos&#39;, 0);
+     42▕     }
+     43▕ }
+     44▕
+</code></pre></div>
+<p>Il faut adapter le test au contrôleur actuel !
+Le contrôleur, en cas de texte vide, ne renvoie pas d’errors bag, mais :</p>
+<ul>
+<li>déclenche une ValidationException,</li>
+<li>la catch renvoie un redirect()-&gt;route('todo.liste')-&gt;with('message', "...").</li>
+</ul>
+<p>Donc le test doit vérifier :</p>
+<ul>
+<li>la redirection vers la route,</li>
+<li>la présence du message en session,</li>
+<li>l’absence de nouvelle ligne dans todos.</li>
+</ul>
+<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function test_texte_est_obligatoire()</span>
+<span class="x">{</span>
+<span class="x">    $response = $this-&gt;postTodo([&#39;texte&#39; =&gt; &#39;&#39;]);</span>
+
+<span class="x">    $response-&gt;assertRedirect(route(&#39;todo.liste&#39;));</span>
+
+<span class="x">    $response-&gt;assertSessionHas(&#39;message&#39;, &quot;Veuillez saisir un ToDo d&#39;une longueur max de 255 caractères&quot;);</span>
+
+<span class="x">    $this-&gt;assertDatabaseCount(&#39;todos&#39;, 0);</span>
+<span class="x">}</span>
+</code></pre></div>
+et ca passe beaucoup mieux ...</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>   PASS  Tests\Feature\TodosValidationTest
+  ✓ texte est obligatoire                                                                                                       0.11s  
+
+  Tests:    28 passed (69 assertions)
+  Duration: 6.48s
+</code></pre></div>
+<p>🚩 Mais quel est la bonne pratique ?</p>
+<div class="admonition question">
+<p class="admonition-title">A faire : longueur minimale</p>
+</div>
+<p>=== "Enoncé"
+    Actuellement, la règle est <code>'texte' =&gt; 'required|string|max:255',</code>
+    ▶️ La règle doit à présent être d'avoir une contrainte supplémentaire, une longueur minimale de 3 caractères</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>- Implémenter cette règle
+- Faites en sorte qu&#39;elle soit bien prise en compte dans votre interface
+- Tester cette règle dans les features de tests.
+</code></pre></div>
+<p>=== "Solution"
+    dans le controleur : </p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```php
+$request-&gt;validate([
+&#39;texte&#39; =&gt; &#39;required|string|min:3|max:255&#39;,
+]);
+```
+dans les tests :
+
+```php
+public function test_texte_doit_avoir_une_longueur_minimale()
+{
+    $response = $this-&gt;postTodo([&#39;texte&#39; =&gt; &#39;ab&#39;]); // 2 caractères
+
+    $response-&gt;assertSessionHasErrors(&#39;texte&#39;);
+    $this-&gt;assertDatabaseCount(&#39;todos&#39;, 0);
+}
+```
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Exécution ciblée des tests de validation ▶️</p>
+</div>
+<p>Pour exécuter uniquement cette classe de tests :</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--filter<span class="o">=</span>TodosValidationTest
+</code></pre></div>
+<h3 id="53-cas-nominal-donnees-valides">5.3 Cas nominal : données valides ➕✔️<a class="headerlink" href="#53-cas-nominal-donnees-valides" title="Permanent link">⚓︎</a></h3>
+<p>Il est important de tester aussi le scénario heureux :<br />
+quand toutes les données sont valides, le Todo doit être créé.</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function test_un_todos_valide_est_cree()</span>
+<span class="x">{</span>
+<span class="x">    $response = $this-&gt;postTodo(); // toutes les valeurs par défaut sont valides</span>
+
+<span class="x">    $response-&gt;assertSessionDoesntHaveErrors();</span>
+<span class="x">    $response-&gt;assertRedirect(); // ou -&gt;assertRedirect(&#39;/&#39;); selon ton contrôleur</span>
+
+<span class="x">    $this-&gt;assertDatabaseCount(&#39;todos&#39;, 1);</span>
+
+<span class="x">    $this-&gt;assertDatabaseHas(&#39;todos&#39;, [</span>
+<span class="x">        &#39;texte&#39;   =&gt; &#39;Acheter du café&#39;,</span>
+<span class="x">        &#39;termine&#39; =&gt; 0,</span>
+<span class="x">        &#39;important&#39; =&gt; 0,</span>
+<span class="x">    ]);</span>
+<span class="x">}</span>
+</code></pre></div>
+<details class="question">
+<summary>💡 Pourquoi ce test est essentiel ?</summary>
+</details>
+<ul>
+<li>Il vérifie que la création fonctionne en cas de données valides.</li>
+<li>Il sert de référence pour les autres tests de validation : ils ne doivent empêcher que les données invalides.</li>
+<li>En cas de modification ultérieure du contrôleur, ce test permet de détecter une régression sur le CAS NOMINAL.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Available assertions 📕</p>
+</div>
+<p>Il existe de nombreuses assertions différentes. Elles sont disponible dans la <a href="https://laravel.com/docs/12.x/database-testing#available-assertions">documentation</a> de Laravel.</p>
+<h2 id="6-gestion-de-la-base-de-donnees-pendant-les-tests">6. Gestion de la base de données pendant les tests 🧰<a class="headerlink" href="#6-gestion-de-la-base-de-donnees-pendant-les-tests" title="Permanent link">⚓︎</a></h2>
+<p>Jusqu’ici, nous avons écrit des tests qui créent des utilisateurs, des listes et des todos à l’aide des <strong>factories</strong>.<br />
+Il est maintenant important de bien comprendre comment Laravel gère la <strong>base de données</strong> pendant les tests.</p>
+<p>🎯 <strong>Objectifs</strong> :</p>
+<ul>
+<li>Comprendre comment <strong>isoler</strong> chaque test (pas de pollution entre tests).  </li>
+<li>Savoir sur <strong>quelle base</strong> s’exécutent les tests (<code>.env.testing</code>).  </li>
+<li>Utiliser les assertions <code>assertDatabaseHas</code>, <code>assertDatabaseMissing</code>, <code>assertDatabaseCount</code>.</li>
+</ul>
+<h3 id="61-le-trait-refreshdatabase">6.1 Le trait <code>RefreshDatabase</code> 🔄<a class="headerlink" href="#61-le-trait-refreshdatabase" title="Permanent link">⚓︎</a></h3>
+<p><a href="https://laravel.com/docs/12.x/database-testing">documentation</a></p>
+<p>Laravel fournit le trait <code>use Illuminate\Foundation\Testing\RefreshDatabase;</code></p>
+<p>Ce trait, utilisé dans une classe de test, garantit que :</p>
+<ul>
+<li>les migrations sont exécutées pour la base de test,</li>
+<li>la base est remise à zéro entre les tests (soit par migrate:fresh, soit par transactions selon le driver).</li>
+</ul>
+<p><strong>Exemple</strong> (déjà utilisé dans tes tests) :</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use Tests\TestCase;</span>
+<span class="x">use Illuminate\Foundation\Testing\RefreshDatabase;</span>
+
+<span class="x">class TodosValidationTest extends TestCase</span>
+<span class="x">{</span>
+<span class="x">    use RefreshDatabase;</span>
+
+<span class="x">    // ...</span>
+<span class="x">}</span>
+</code></pre></div>
+<details class="question">
+<summary>💡 Que fait RefreshDatabase exactement ?</summary>
+</details>
+<ul>
+<li>Avant le premier test, Laravel exécute php artisan migrate sur la connexion de test.</li>
+<li>Entre les tests, il remet la base dans un état propre (rollback ou migrate:fresh selon le driver).</li>
+<li>Cela permet de s’assurer que chaque test est indépendant des autres :
+  aucun enregistrement laissé par un test ne doit influencer un autre test.</li>
+</ul>
+<h3 id="62-quelle-base-est-utilisee-pour-les-tests">6.2 Quelle base est utilisée pour les tests ? 🗄️<a class="headerlink" href="#62-quelle-base-est-utilisee-pour-les-tests" title="Permanent link">⚓︎</a></h3>
+<p>Laravel choisit la base de données de test via Le fichier <code>.env.testing</code> ou éventuellement des variables dans <code>phpunit.xml</code></p>
+<p>Dans ton cas, tu as configuré une base MySQL dédiée, par exemple :</p>
+<p>dans <code>.env.testing</code></p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">APP_ENV=testing</span>
+<span class="x">APP_DEBUG=true</span>
+
+<span class="x">DB_CONNECTION=mysql</span>
+<span class="x">DB_HOST=127.0.0.1</span>
+<span class="x">DB_PORT=3306</span>
+<span class="x">DB_DATABASE=todo_test</span>
+<span class="x">DB_USERNAME=laravel_test</span>
+<span class="x">DB_PASSWORD=secret</span>
+</code></pre></div>
+<p>Pendant les tests, on ne touche jamais à la base de développement (<code>todo2025</code>) :
+tout se passe dans la base <code>todo_test</code>.</p>
+<details class="question">
+<summary>💡 Comment vérifier que Laravel utilise bien la bonne base ?</summary>
+</details>
+<ul>
+<li>Tu peux temporairement ajouter un test “de debug” :
+  <div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function test_voir_la_connexion_de_test() { </span>
+<span class="x">  $this-&gt;assertSame(&#39;mysql&#39;, config(&#39;database.default&#39;)); </span>
+<span class="x">  $this-&gt;assertSame(&#39;todo_test&#39;, config(&#39;database.connections.mysql.database&#39;));</span>
+<span class="x">}</span>
+</code></pre></div></li>
+<li>Puis le supprimer une fois que tu es sûre de ta configuration.</li>
+</ul>
+<h3 id="63-executer-les-tests">6.3 Exécuter les tests ▶️<a class="headerlink" href="#63-executer-les-tests" title="Permanent link">⚓︎</a></h3>
+<p>En général, tu n’as pas besoin de te soucier manuellement des migrations : <code>RefreshDatabase</code> s’en charge.</p>
+<p>Mais si tu modifies les migrations ou la structure de la base, tu peux forcer un reset complet :</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>migrate:fresh<span class="w"> </span>--env<span class="o">=</span>testing
+php<span class="w"> </span>artisan<span class="w"> </span><span class="nb">test</span>
+</code></pre></div>
+<details class="question">
+<summary>💡 Quand utiliser <code>migrate:fresh --env=testing</code> ?</summary>
+</details>
+<ul>
+<li>Quand tu as modifié une migration existante (ajout/suppression de colonnes).</li>
+<li>Quand tu veux repartir d’une base de test complètement propre.</li>
+<li>À éviter en production, bien sûr : cela supprime toutes les tables avant de les recréer.</li>
+</ul>
+<h2 id="7-tests-dauthentification">7. Tests d’authentification 🔐<a class="headerlink" href="#7-tests-dauthentification" title="Permanent link">⚓︎</a></h2>
+<p>Laravel génère automatiquement une série complète de <strong>tests d’authentification et de sécurité</strong>, via Breeze ou Jetstream.<br />
+Ces tests couvrent déjà toutes les fonctionnalités essentielles :</p>
+<ul>
+<li>affichage des formulaires de connexion / inscription,  </li>
+<li>validation des identifiants,  </li>
+<li>impossibilité de se connecter avec un mot de passe incorrect,  </li>
+<li>confirmation de mot de passe,  </li>
+<li>mise à jour du mot de passe,  </li>
+<li>réinitialisation de mot de passe,  </li>
+<li>vérification d’e-mail,  </li>
+<li>déconnexion de l’utilisateur.</li>
+</ul>
+<p>Ces tests se trouvent dans <code>tests/Feature/Auth/</code></p>
+<details class="question">
+<summary>Pourquoi conserver ces tests ? 🛡️</summary>
+</details>
+<p>Ces tests assurent automatiquement :</p>
+<ul>
+<li>que l’authentification reste fonctionnelle après une mise à jour,</li>
+<li>que les étudiants ne cassent pas la sécurité en modifiant une vue ou une route,</li>
+<li>que chaque changement sur les routes ou les middlewares continue de respecter les règles Laravel (auth, verified, etc.).</li>
+<li>Ils constituent une base solide pour éviter les régressions pendant le développement.</li>
+</ul>
+<h3 id="72-tests-dacces-aux-routes-protegees-middleware-auth">7.2 Tests d’accès aux routes protégées (middleware auth) 🔒<a class="headerlink" href="#72-tests-dacces-aux-routes-protegees-middleware-auth" title="Permanent link">⚓︎</a></h3>
+<p>Il peut être utile d’ajouter un seul test d'exemple dans ton TP pour illustrer comment vérifier qu’une route est bien protégée par auth.</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function test_invite_ne_peut_pas_acceder_aux_todos()</span>
+<span class="x">{</span>
+<span class="x">    $response = $this-&gt;get(&#39;/todos&#39;);</span>
+
+<span class="x">    $response-&gt;assertRedirect(route(&#39;login&#39;));</span>
+<span class="x">}</span>
+</code></pre></div>
+<h3 id="73-tests-lies-a-lautorisation-policies">7.3 Tests liés à l'autorisation (Policies) 🧭<a class="headerlink" href="#73-tests-lies-a-lautorisation-policies" title="Permanent link">⚓︎</a></h3>
+<p>Lorsque tu ajoutes une policy pour restreindre l’accès aux Todos :</p>
+<ul>
+<li>un utilisateur ne peut modifier que ses propres Todos,</li>
+<li>un utilisateur ne peut supprimer que ses Todos, etc.,</li>
+</ul>
+<p>tu peux tester ces règles simplement avec :</p>
+<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function test_un_utilisateur_ne_peut_pas_modifier_le_todo_d_un_autre()</span>
+<span class="x">{</span>
+<span class="x">    $a = User::factory()-&gt;create();</span>
+<span class="x">    $b = User::factory()-&gt;create();</span>
+<span class="x">    $todo = Todos::factory()-&gt;for($a, &#39;user&#39;)-&gt;create();</span>
+
+<span class="x">    $response = $this-&gt;actingAs($b)-&gt;post(&quot;/todos/{$todo-&gt;id}/edit&quot;, [</span>
+<span class="x">        &#39;texte&#39; =&gt; &#39;H4ck&#39;,</span>
+<span class="x">    ]);</span>
+
+<span class="x">    $response-&gt;assertForbidden();</span>
+<span class="x">}</span>
+</code></pre></div>
+<p>Laravel renverra automatiquement 403 Forbidden si la policy refuse l’accès.</p>
+<h2 id="8-integration-dans-github-actions">8. Intégration dans GitHub Actions ⚙️<a class="headerlink" href="#8-integration-dans-github-actions" title="Permanent link">⚓︎</a></h2>
+<p>🎯 Objectif : exécuter automatiquement les tests Laravel à chaque <strong>push</strong> ou <strong>pull request</strong> sur GitHub, avec un <strong>seuil de couverture</strong> minimal.</p>
+<p>🔑 <strong>Idée clé</strong> :</p>
+<ul>
+<li>En <strong>local</strong>, tu peux utiliser MySQL (<code>todo_test</code>).</li>
+<li>En <strong>CI GitHub Actions</strong>, on va utiliser <strong>SQLite en mémoire</strong> (plus simple, plus rapide), en écrivant un <code>.env.testing</code> spécifique dans le workflow.</li>
+<li>On active la <strong>couverture de tests</strong> pour mesurer la part du code réellement exécutée par les tests, et on impose un seuil minimal (<strong>80 %</strong>).</li>
+</ul>
+<h3 id="81-creer-le-workflow-testsyml">8.1. Créer le workflow <code>tests.yml</code> 🧾<a class="headerlink" href="#81-creer-le-workflow-testsyml" title="Permanent link">⚓︎</a></h3>
+<p>Dans ton projet, crée un fichier :  </p>
+<p><code>.github/workflows/tests.yml</code>  </p>
+<p>Avec le contenu suivant :</p>
+<p><div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tests</span>
 
 <span class="nt">on</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">push</span><span class="p">:</span>
@@ -4730,6 +5494,7 @@ Cela aide à maintenir un haut niveau de qualité dans le code.</p>
 
 <span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shivammathur/setup-php@v2</span>
 <span class="w">        </span><span class="nt">with</span><span class="p">:</span>
 <span class="w">          </span><span class="nt">php-version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;8.3&#39;</span>
@@ -4741,39 +5506,54 @@ Cela aide à maintenir un haut niveau de qualité dans le code.</p>
 
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Prepare env</span>
 <span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<span class="w">          </span><span class="no">cp .env .env.testing</span>
-<span class="w">          </span><span class="no">printf &quot;DB_CONNECTION=sqlite\nDB_DATABASE=:memory:\n&quot; &gt;&gt; .env.testing</span>
-<span class="w">          </span><span class="no">php artisan key:generate</span>
+<span class="w">          </span><span class="no">echo &quot;APP_ENV=testing&quot; &gt; .env.testing</span>
+<span class="w">          </span><span class="no">echo &quot;APP_KEY=&quot; &gt;&gt; .env.testing</span>
+<span class="w">          </span><span class="no">echo &quot;DB_CONNECTION=sqlite&quot; &gt;&gt; .env.testing</span>
+<span class="w">          </span><span class="no">echo &quot;DB_DATABASE=:memory:&quot; &gt;&gt; .env.testing</span>
+<span class="w">          </span><span class="no">php artisan key:generate --env=testing</span>
 
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run tests with coverage</span>
 <span class="w">        </span><span class="nt">env</span><span class="p">:</span>
 <span class="w">          </span><span class="nt">XDEBUG_MODE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">coverage</span>
 <span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">php artisan test --coverage --min=80</span>
 </code></pre></div>
-<details class="question">
-<summary>💡 Solution</summary>
-</details>
-<p>Ce workflow :
-- installe PHP et SQLite,
-- configure un <code>.env.testing</code>,
-- exécute tous les tests,
-- vérifie que la couverture dépasse <strong>80 %</strong>.</p>
-<h2 id="conclusion">✅ Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">⚓︎</a></h2>
-<p>Tu as maintenant :</p>
+🔍 <strong>Points importants</strong> :</p>
+<p>En CI, on écrase la config de test pour utiliser <code>DB_CONNECTION=sqlite</code> et <code>DB_DATABASE=:memory:</code>, même si en local tu es sur MySQL.</p>
+<p><code>coverage: xdebug et XDEBUG_MODE=coverage permettent d’utiliser --coverage --min=80</code>.</p>
+<h3 id="82-mesurer-la-couverture-en-local">8.2. Mesurer la couverture en local 📊<a class="headerlink" href="#82-mesurer-la-couverture-en-local" title="Permanent link">⚓︎</a></h3>
+<p>En local, tu peux également mesurer la couverture <code>XDEBUG_MODE=coverage php artisan test --coverage</code></p>
+<p>Pour imposer le même seuil qu’en CI : <code>XDEBUG_MODE=coverage php artisan test --coverage --min=80</code></p>
+<p>Si la couverture est inférieure à 80 %, la commande échoue (code de retour ≠ 0).</p>
+<div class="admonition question">
+<p class="admonition-title">💡 Notion de couverture</p>
+</div>
+<p>La <strong>couverture de tests</strong> mesure la part du code exécutée pendant les tests.</p>
+<p>Dans notre CI :</p>
+<ul>
+<li>le job GitHub Actions <strong>réussit</strong> si la couverture est ≥ 80 % </li>
+<li>il <strong>échoue</strong> si la couverture descend sous 80 %.</li>
+</ul>
+<p>Cela transforme la couverture en <strong>garde-fou qualité</strong> :  <br />
+si un développeur commente des tests ou ajoute beaucoup de code non testé, la CI refusera la PR ou signalera le problème sur le push.</p>
+<h3 id="83-lancer-la-ci-apres-les-modifications">8.3. Lancer la CI après les modifications ✅<a class="headerlink" href="#83-lancer-la-ci-apres-les-modifications" title="Permanent link">⚓︎</a></h3>
+<p>Une fois le workflow en place, tu peux tester le pipeline complet :</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>vendor/bin/pint
+php<span class="w"> </span>artisan<span class="w"> </span><span class="nb">test</span>
+
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Intégration de l&#39;environnement de tests et de la couverture&quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+<p>Sur <strong>GitHub</strong>, onglet Actions, tu dois voir le workflow tests s’exécuter automatiquement à chaque push / pull request.</p>
+<div class="admonition warning">
+<p class="admonition-title">Conclusion ✅</p>
+</div>
 <ul>
 <li>Un environnement de test Laravel fonctionnel.</li>
 <li>Des tests unitaires, fonctionnels et API.</li>
 <li>Une mesure automatique de couverture.</li>
 <li>Une exécution automatisée en CI GitHub Actions.</li>
 </ul>
-<h2 id="pour-aller-plus-loin">🧭 Pour aller plus loin<a class="headerlink" href="#pour-aller-plus-loin" title="Permanent link">⚓︎</a></h2>
-<ul>
-<li>Générer un rapport HTML :</li>
-</ul>
-<p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--coverage-html<span class="o">=</span>build/coverage
-</code></pre></div>
-* Ajouter <code>phpstan</code> et <code>laravel/pint</code> à la CI pour vérifier la qualité du code.
-* Fixer des seuils de qualité et des <em>badges</em> dans le README.</p>
 
 
 

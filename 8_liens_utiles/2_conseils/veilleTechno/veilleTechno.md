@@ -21,10 +21,10 @@ Les besoins de formation sont identifiés pour assurer le support ou mettre à d
 - utiliser de manière approfondie des moyens de recherche d'information 
 - renforcer ses compétences. L’identité professionnelle est pertinente et visible sur un réseau social professionnel.|
 
-Cette compétence est vérifié lors de l'oral professionnel [E5](./../1_epreuves/Ep_pro_E5.md)
+Cette compétence est vérifiée lors de l'oral professionnel [E5](./../1_epreuves/Ep_pro_E5.md)
 
 !!! info "Comment faire ?"
-    La veille informationnelle technologique vous est propre. Chacun a sa manière de procéder. Certains utilisent des agrégateurs de flux RSS (feedly), d'autres des IA de curation (scoop.it), ou encore des réseaux sociaux (X ou youtube). <br />
+    La veille informationnelle technologique vous est propre. Chacun a sa manière de procéder. Certains utilisent des agrégateurs de flux RSS (feedly), d'autres des IA de curation (scoop.it), ou encore des réseaux sociaux (X, bluesky ou youtube). <br />
     Vous devez trouver votre manière de procéder. Mais la veille informationnelle doit être **régulière**, dans vos moments perdus par par exemple (🚽 ou 🚋). 
 
 Vous trouverez ci dessous quelques idées d'abonnements pertinents pour votre formation ... au moins en SLAM.

@@ -10,7 +10,7 @@
 
     📌 Thème en cours B1 : Gestion de projet <br />
     📣 A rendre : Lundi 15 décembre : Gestion de projet : Projet Noël
-    ⌛️ A venir :  TP NOté Lundi 8 décembre <br />
+    ⌛️ A venir :  TP Noté Lundi 8 décembre <br />
     
     📅 Stage SIO1 : lundi 18 mai - vendredi 19 juin 2026, retour au lycée le lundi 22 juin de 8h30 à 12h30 <br />
 
