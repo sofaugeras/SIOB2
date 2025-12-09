@@ -3429,27 +3429,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_tpVulnerabilitesAuthentification.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7. TP Vulnérabilités liées à l’authentification et à la gestion des sessions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -4441,7 +4420,7 @@ npm run dev
 </code></pre></div>
 <p>▶️ Occupons nous de la partie <strong>base de données</strong>.</p>
 <p>création du <strong>seeder</strong> <code>Users</code></p>
-<p><div class="language-PHP highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">// Ajouter les namespaces nécessaires ! </span>
+<p><div class="language-PHP highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Ajouter les namespaces nécessaires ! </span>
 <span class="x">public function run()</span>
 <span class="x">    {</span>
 <span class="x">        // Exemple d&#39;insertion d&#39;un utilisateur</span>
@@ -4458,7 +4437,7 @@ npm run dev
 <span class="x">        // Ajoutez d&#39;autres utilisateurs au besoin</span>
 </code></pre></div>
 Ajouter le seeder <code>UserSeeder</code> dans le <code>DatabaseSeeder</code> </p>
-<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">        $this-&gt;call([</span>
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">        $this-&gt;call([</span>
 <span class="x">            UsersSeeder::class,</span>
 <span class="x">            TodosSeeder::class,</span>
 <span class="x">            CategoriesSeeder::class,</span>
@@ -4468,7 +4447,7 @@ Puis relancer la migration avec les tables concernant l'authentification (Users,
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>php artisan migrate:fresh --seed
 </code></pre></div>
 <p>▶️ Il faut à présent activer le middelware d'authentication sur nos routes todo. Reprendre le <code>web.php</code> et ajouter les lignes dans le nouveau web.php qui contient en plus des liens vers la gestion de l'autentification.</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">// Groupe de routes avec middleware d&#39;authentification</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Groupe de routes avec middleware d&#39;authentification</span>
 <span class="x">Route::get(&#39;/dashboard&#39;, function () {</span>
 <span class="x">    return view(&#39;dashboard&#39;);</span>
 <span class="x">})-&gt;middleware([&#39;auth&#39;, &#39;verified&#39;])-&gt;name(&#39;dashboard&#39;);</span>
@@ -4479,7 +4458,7 @@ Puis relancer la migration avec les tables concernant l'authentification (Users,
 <span class="x">    Route::delete(&#39;/profile&#39;, [ProfileController::class, &#39;destroy&#39;])-&gt;name(&#39;profile.destroy&#39;);</span>
 <span class="x">});</span>
 </code></pre></div>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">// Activation du middleware d&#39;authentification pour toutes les routes Todos. Création d&#39;un groupe de routes.</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Activation du middleware d&#39;authentification pour toutes les routes Todos. Création d&#39;un groupe de routes.</span>
 <span class="x">Route::middleware(&#39;auth&#39;)-&gt;group(function () {</span>
 <span class="x">    // Action correspondant au form de la vue (donc POST) et appel de la fonction saveTodo du controller</span>
 <span class="x">    // Route concernant les todos</span>
@@ -4495,7 +4474,7 @@ npm run dev
 php artisan view:clear
 </code></pre></div>
 <p>L'installation de breeze/blade a également casser le fichier <code>app.js</code>. Remettre les lignes suivantes :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">import &#39;bootstrap/dist/css/bootstrap.min.css&#39;;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">import &#39;bootstrap/dist/css/bootstrap.min.css&#39;;</span>
 <span class="x">import &#39;bootstrap-icons/font/bootstrap-icons.css&#39;;</span>
 <span class="x">import &#39;@popperjs/core&#39;;</span>
 </code></pre></div>

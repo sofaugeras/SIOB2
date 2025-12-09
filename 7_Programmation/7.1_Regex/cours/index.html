@@ -3368,27 +3368,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_tpVulnerabilitesAuthentification.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7. TP Vulnérabilités liées à l’authentification et à la gestion des sessions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -4582,7 +4561,7 @@ Il faut pour cela utiliser des fonctions spéciales : </p>
 <p>▶️ en PHP : <code>preg_filter()</code>, <code>preg_grep()</code>, <code>preg_match()</code>, etc. <br />
 ▶️ en Python : <code>re.match()</code>, <code>re.search()</code>, <code>re.findall()</code>, etc.</p>
 <p>Bien entendu, il existe des fonctions dans d'autres langages (Java ou JavaScript) et en C# :<br />
-<div class="language-javaScript highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">regex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Regex</span><span class="p">(</span><span class="nx">expression</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<div class="language-javaScript highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">regex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Regex</span><span class="p">(</span><span class="nx">expression</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 <span class="k">return</span><span class="w"> </span><span class="nx">regex</span><span class="p">.</span><span class="nx">Matches</span><span class="p">(</span><span class="nx">maChaine</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div></p>
 <p>Le symbole <code>\</code> a un rôle capital, car il permet d'échapper certains caractères (<code>*</code>, <code>.</code>, <code>+</code>, <code>{</code> etc) mais rend également d'autres caractères spéciaux (<code>\n</code>, <code>\r</code>, <code>\t</code>...)</p>
@@ -4824,7 +4803,7 @@ En réalité, les expressions régulières décrivent un motif présent dans une
 Voici la présentation du raisonnement en REGEX :</p>
 <p><img alt="raisonnement" class="center" src="../data/raisonnementRegex.png" width="70%" /></p>
 <p>et voici l'expression régulière :
-<div class="language-shell highlight"><span class="filename">Bash</span><pre><span></span><code><span class="o">([</span><span class="m">12</span><span class="o">]</span><span class="se">\d</span><span class="o">{</span><span class="m">3</span><span class="o">}</span>-<span class="o">(</span><span class="m">0</span><span class="o">[</span><span class="m">1</span>-9<span class="o">]</span><span class="p">|</span><span class="m">1</span><span class="o">[</span><span class="m">0</span>-2<span class="o">])</span>-<span class="o">(</span><span class="m">0</span><span class="o">[</span><span class="m">1</span>-9<span class="o">]</span><span class="p">|</span><span class="o">[</span><span class="m">12</span><span class="o">]</span><span class="se">\d</span><span class="p">|</span><span class="m">3</span><span class="o">[</span><span class="m">01</span><span class="o">]))</span>
+<div class="language-shell highlight"><span class="filename">💻 Console</span><pre><span></span><code><span class="o">([</span><span class="m">12</span><span class="o">]</span><span class="se">\d</span><span class="o">{</span><span class="m">3</span><span class="o">}</span>-<span class="o">(</span><span class="m">0</span><span class="o">[</span><span class="m">1</span>-9<span class="o">]</span><span class="p">|</span><span class="m">1</span><span class="o">[</span><span class="m">0</span>-2<span class="o">])</span>-<span class="o">(</span><span class="m">0</span><span class="o">[</span><span class="m">1</span>-9<span class="o">]</span><span class="p">|</span><span class="o">[</span><span class="m">12</span><span class="o">]</span><span class="se">\d</span><span class="p">|</span><span class="m">3</span><span class="o">[</span><span class="m">01</span><span class="o">]))</span>
 </code></pre></div>
  </p>
 <h3 id="34-expression-ccomplexes">3.4  Expression Ccomplexes<a class="headerlink" href="#34-expression-ccomplexes" title="Permanent link">⚓︎</a></h3>
@@ -4875,7 +4854,7 @@ Elle attend <strong>0</strong> ou <strong>+33</strong> en début puis un chiffre
 <p><img alt="cheat sheet" class="center" src="../data/cheatSheet.png" width="50%" /></p>
 <h3 id="42-regex-en-javascript">4.2  REGEX en javaScript<a class="headerlink" href="#42-regex-en-javascript" title="Permanent link">⚓︎</a></h3>
 <p>JavaScript propose une classe RegExp qui fonctionne comme suit :
-<div class="language-JavaScript highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">checkZorg</span><span class="p">(</span><span class="nx">chaine</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<div class="language-JavaScript highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">checkZorg</span><span class="p">(</span><span class="nx">chaine</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">motif</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sr">/[M-Z]or.$/g</span><span class="w"> </span><span class="p">;</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">motif</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">chaine</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 <span class="p">}</span>
@@ -4883,13 +4862,13 @@ Elle attend <strong>0</strong> ou <strong>+33</strong> en début puis un chiffre
 <h3 id="43-regex-en-shell-linux">4.3  Regex en shell linux<a class="headerlink" href="#43-regex-en-shell-linux" title="Permanent link">⚓︎</a></h3>
 <p>L'usage de commande ou de script en Shell permet d'utiliser les expressions régulières. Elles sont alors précédées du symbole ~ :
 nom="Zorg"</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w">  </span><span class="nv">$nom</span><span class="w"> </span><span class="o">=</span>~<span class="w"> </span><span class="o">[</span>M-Z<span class="o">]</span>or.$<span class="w"> </span><span class="o">]]</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w">  </span><span class="nv">$nom</span><span class="w"> </span><span class="o">=</span>~<span class="w"> </span><span class="o">[</span>M-Z<span class="o">]</span>or.$<span class="w"> </span><span class="o">]]</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
 <span class="w">  </span><span class="nb">echo</span><span class="w"> </span>vrai
 <span class="k">fi</span>
 </code></pre></div>
 <h3 id="44-regex-en-powershell">4.4  Regex en Powershell<a class="headerlink" href="#44-regex-en-powershell" title="Permanent link">⚓︎</a></h3>
 <p>La commande -match utilise les expressions régulières :</p>
-<p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span class="nv">$nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Zorg&quot;</span>
+<p><div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code><span class="nv">$nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Zorg&quot;</span>
 <span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="nv">$nom</span><span class="w"> </span>-match<span class="w"> </span><span class="s2">&quot;[M-Z]or.</span>$<span class="s2">&quot;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
 <span class="w">  </span>write-host<span class="w"> </span><span class="s2">&quot;il y a correspondance&quot;</span>
 <span class="o">}</span>
@@ -4897,7 +4876,7 @@ nom="Zorg"</p>
 A noter : en PowerShell, le caractère d'échappement est <mark>`</mark> : il s'obtient avec <span class="keys"><kbd class="key-alt-graph">AltGr</kbd><span>+</span><kbd class="key-7">7</kbd></span></p>
 <h3 id="45-regex-en-php">4.5  Regex en PHP<a class="headerlink" href="#45-regex-en-php" title="Permanent link">⚓︎</a></h3>
 <p>La commande -match utilise les expressions régulières :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">if</span> <span class="p">(</span><span class="nb">preg_match</span><span class="p">(</span><span class="s2">&quot;/[M-Z]or.$/g&quot;</span><span class="p">,</span> <span class="s2">&quot;Zorg&quot;</span><span class="p">))</span> <span class="p">{</span>
     <span class="k">echo</span> <span class="s2">&quot;A match was found.&quot;</span><span class="p">;</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>

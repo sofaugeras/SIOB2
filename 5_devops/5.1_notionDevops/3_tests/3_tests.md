@@ -10,11 +10,10 @@ L’exécution de tests unitaires et d’intégrations est au coeur de la démar
 ```
 
 !!! info  "🎯 Objectifs pédagogiques"
-
-  - Comprendre la structure des tests **Unit** et **Feature** dans Laravel.  
-  - Écrire, exécuter et interpréter des tests automatisés.  
-  - Intégrer les tests dans une **pipeline d’intégration continue (CI)**.  
-  - Mesurer la **couverture de code** et fixer un seuil minimal de qualité.
+    - Comprendre la structure des tests **Unit** et **Feature** dans Laravel.  
+    - Écrire, exécuter et interpréter des tests automatisés.  
+    - Intégrer les tests dans une **pipeline d’intégration continue (CI)**.  
+    - Mesurer la **couverture de code** et fixer un seuil minimal de qualité.
 
 ##  1. Initialisation de l’environnement de test 🏗️
 
@@ -29,7 +28,7 @@ php artisan key:generate
 
 D'abord la base de données de Test :
 
-```php
+```sql
 CREATE DATABASE todo_test;
 CREATE USER 'laravel_test'@'localhost' IDENTIFIED BY 'secret';
 GRANT ALL PRIVILEGES ON todo_test.* TO 'laravel_test'@'localhost';
@@ -37,7 +36,7 @@ FLUSH PRIVILEGES;
 ```
 puis la configuration
 
-```php
+```text
 DB_CONNECTION=mysql 
 DB_HOST=127.0.0.1 
 DB_PORT=3306 
@@ -46,18 +45,25 @@ DB_USERNAME=laravel_test
 DB_PASSWORD=secret
 ```
 
-??? warning "💡 fix probléme sqlite"
-  dans le fichier `phpunit.xml` à la racine du projet
-  ```
-    <!--
-    <server name="DB_CONNECTION" value="sqlite"/>
-    <server name="DB_DATABASE" value=":memory:"/>
-    -->
-    <server name="DB_CONNECTION" value="mysql"/>
-    <server name="DB_DATABASE" value="todo_test"/>
-    <server name="DB_USERNAME" value="laravel_test"/>
-    <server name="DB_PASSWORD" value="secret"/>
-  ```
+??? warning "Fix problèm 🪲 sqlite"
+
+    Par défaut, Laravel utilise SQLite pour l’exécution des tests. Cette base, entièrement en mémoire, est très performante et particulièrement adaptée aux tests unitaires. Cependant, SQLite gère mal certaines fonctionnalités avancées, notamment les clés primaires composites que nous avons mises en place dans nos migrations.
+
+    Pour garantir un comportement cohérent entre l'environnement de développement, l'environnement de test et l'environnement de production, nous faisons donc le choix d’utiliser MySQL également pour les tests.
+
+    Dans la continuité, nous provisionnerons un service MySQL via Docker au sein de GitHub Actions afin d’exécuter automatiquement la suite de tests dans un environnement reproductible et compatible avec nos contraintes de schéma.
+
+    dans le fichier `phpunit.xml` à la racine du projet
+    ```text
+      <!--
+      <server name="DB_CONNECTION" value="sqlite"/>
+      <server name="DB_DATABASE" value=":memory:"/>
+      -->
+      <server name="DB_CONNECTION" value="mysql"/>
+      <server name="DB_DATABASE" value="todo_test"/>
+      <server name="DB_USERNAME" value="laravel_test"/>
+      <server name="DB_PASSWORD" value="secret"/>
+    ```
 
 ##  2. Premier test “Smoke test” 🧩
 
@@ -71,6 +77,7 @@ Cela créé un nouveau répertoire `tests`, modifions à présent `tests/Feature
 
 
 ```php
+<?php
 public function test_invite_est_redirige_depuis_accueil_vers_login()
 {
     $response = $this->get('/');
@@ -101,13 +108,12 @@ public function test_utilisateur_auth_peut_acceder_a_l_accueil()
 php artisan test
 ```
 
-??? warning "💡 fix probléme"
+??? warning "Fix problém 🪲"
+    - Mettre en commentaire le contenu de exampleTest.php
+    - Réparer le test d'authentification
 
-  - Mettre en commentaire le contenu de exampleTest.php
-  - Réparer le test d'authentification
-
-    ```php
-     FAILED  Tests\Feature\Auth\AuthenticationTest > users can authenticate using the login screen
+    ```bash
+    FAILED  Tests\Feature\Auth\AuthenticationTest > users can authenticate using the login screen
     Failed asserting that two strings are equal.
     --- Expected
     +++ Actual
@@ -126,63 +132,64 @@ php artisan test
     +'http://localhost'
     ```
 
-???  success "résultats"
-  ```prompt
-  (base) PS C:\wamp64\www\todo2026> php artisan test
+??? success "résultats"
 
-   PASS  Tests\Unit\ExampleTest
-  ✓ that true is true                                                                                                           0.02s  
+    ```bash
+    (base) PS C:\wamp64\www\todo2026> php artisan test
 
-   PASS  Tests\Feature\AccueilTest
-  ✓ invite est redirige depuis accueil vers login                                                                               0.63s  
-  ✓ utilisateur auth peut acceder a l accueil                                                                                   0.58s  
+    PASS  Tests\Unit\ExampleTest
+    ✓ that true is true                                                                                                           0.02s  
 
-   PASS  Tests\Feature\Auth\AuthenticationTest
-  ✓ login screen can be rendered                                                                                                3.22s  
-  ✓ users can authenticate using the login screen                                                                               0.17s  
-  ✓ users can not authenticate with invalid password                                                                            0.29s  
-  ✓ users can logout                                                                                                            0.10s  
+    PASS  Tests\Feature\AccueilTest
+    ✓ invite est redirige depuis accueil vers login                                                                               0.63s  
+    ✓ utilisateur auth peut acceder a l accueil                                                                                   0.58s  
 
-   PASS  Tests\Feature\Auth\EmailVerificationTest
-  ✓ email verification screen can be rendered                                                                                   0.14s  
-  ✓ email can be verified                                                                                                       0.08s  
-  ✓ email is not verified with invalid hash                                                                                     0.10s  
+    PASS  Tests\Feature\Auth\AuthenticationTest
+    ✓ login screen can be rendered                                                                                                3.22s  
+    ✓ users can authenticate using the login screen                                                                               0.17s  
+    ✓ users can not authenticate with invalid password                                                                            0.29s  
+    ✓ users can logout                                                                                                            0.10s  
 
-   PASS  Tests\Feature\Auth\PasswordConfirmationTest
-  ✓ confirm password screen can be rendered                                                                                     0.12s  
-  ✓ password can be confirmed                                                                                                   0.07s  
-  ✓ password is not confirmed with invalid password                                                                             0.30s  
+    PASS  Tests\Feature\Auth\EmailVerificationTest
+    ✓ email verification screen can be rendered                                                                                   0.14s  
+    ✓ email can be verified                                                                                                       0.08s  
+    ✓ email is not verified with invalid hash                                                                                     0.10s  
 
-   PASS  Tests\Feature\Auth\PasswordResetTest
-  ✓ reset password link screen can be rendered                                                                                  0.07s  
-  ✓ reset password link can be requested                                                                                        0.27s  
-  ✓ reset password screen can be rendered                                                                                       0.38s  
-  ✓ password can be reset with valid token                                                                                      0.33s  
+    PASS  Tests\Feature\Auth\PasswordConfirmationTest
+    ✓ confirm password screen can be rendered                                                                                     0.12s  
+    ✓ password can be confirmed                                                                                                   0.07s  
+    ✓ password is not confirmed with invalid password                                                                             0.30s  
 
-   PASS  Tests\Feature\Auth\PasswordUpdateTest
-  ✓ password can be updated                                                                                                     0.08s  
-  ✓ correct password must be provided to update password                                                                        0.08s  
+    PASS  Tests\Feature\Auth\PasswordResetTest
+    ✓ reset password link screen can be rendered                                                                                  0.07s  
+    ✓ reset password link can be requested                                                                                        0.27s  
+    ✓ reset password screen can be rendered                                                                                       0.38s  
+    ✓ password can be reset with valid token                                                                                      0.33s  
 
-   PASS  Tests\Feature\Auth\RegistrationTest
-  ✓ registration screen can be rendered                                                                                         0.07s  
-  ✓ new users can register                                                                                                      0.07s  
+    PASS  Tests\Feature\Auth\PasswordUpdateTest
+    ✓ password can be updated                                                                                                     0.08s  
+    ✓ correct password must be provided to update password                                                                        0.08s  
 
-   PASS  Tests\Feature\ProfileTest
-  ✓ profile page is displayed                                                                                                   0.19s  
-  ✓ profile information can be updated                                                                                          0.07s  
-  ✓ email verification status is unchanged when the email address is unchanged                                                  0.08s  
-  ✓ user can delete their account                                                                                               0.08s  
-  ✓ correct password must be provided to delete account                                                                         0.10s  
+    PASS  Tests\Feature\Auth\RegistrationTest
+    ✓ registration screen can be rendered                                                                                         0.07s  
+    ✓ new users can register                                                                                                      0.07s  
 
-  Tests:    26 passed (64 assertions)
-  Duration: 8.40s
-  ```
+    PASS  Tests\Feature\ProfileTest
+    ✓ profile page is displayed                                                                                                   0.19s  
+    ✓ profile information can be updated                                                                                          0.07s  
+    ✓ email verification status is unchanged when the email address is unchanged                                                  0.08s  
+    ✓ user can delete their account                                                                                               0.08s  
+    ✓ correct password must be provided to delete account                                                                         0.10s  
+
+    Tests:    26 passed (64 assertions)
+    Duration: 8.40s
+    ```
 
 ## 3. Les factories Eloquent 🏭
 
-🧩 Qu’est-ce qu’une Factory Laravel ?
+🧩 Qu’est-ce qu’une **Factory** Laravel ?
 
-Une factory est un outil fourni par Laravel pour **générer automatiquement des données de test réalistes**. 
+Une **factory** est un outil fourni par Laravel pour **générer automatiquement des données de test réalistes**. 
 
 Elle permet de créer facilement :
 
@@ -198,13 +205,9 @@ Les factories sont essentielles pour les tests, car elles permettent :
 
 et d’obtenir des tests précis, reproductibles et rapides.
 
-Les fichiers de factories se trouvent dans le dossier :
+Les fichiers de factories se trouvent dans le dossier ``database/factories/``
 
-```text
-database/factories/
-```
-
-**note :**Laravel fournit déjà une factory pour User : ``UserFactory.php``.
+**note :** Laravel fournit déjà une factory pour User : ``UserFactory.php``.
 
 ### 3.1. Vérifier la factory User 🧑‍💻
 
@@ -213,6 +216,7 @@ Ouvre le fichier suivant : ``database/factories/UserFactory.php``
 Tu dois y trouver une méthode ``definition()`` qui ressemble à ceci :
 
 ```php
+<?php
 public function definition(): array
 {
     return [
@@ -238,6 +242,7 @@ Crée la factory : ``php artisan make:factory ListesFactory --model=Listes``
 Puis complète ``database/factories/ListesFactory.php`` :
 
 ```php
+<?php
 use App\Models\Listes;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -255,68 +260,104 @@ class ListesFactory extends Factory
 }
 ```
 
-??? question "💡 Explication ListeFactory"
-  Ici, on utilise ``fake()->words(2, true)`` pour générer un nom de liste avec 2 mots.<br />
-  À partir de là, un simple ``Listes::factory()->create()`` dans un test insérera une ligne dans la table ``listes`` avec un champ ``titre`` cohérent.
+!!! question "💡 Explication ListeFactory"
+    Ici, on utilise ``fake()->words(2, true)`` pour générer un nom de liste avec 2 mots.<br />
+    À partir de là, un simple ``Listes::factory()->create()`` dans un test insérera une ligne dans la table ``listes`` avec un champ ``titre`` cohérent.
 
 !!! question "A faire"
-  === "Enoncé"
-    ✅ Créer une factory pour Todo (sans relations)
-  === "Solution"
+    === "Enoncé"
+        ✅ Créer une factory pour Todos (sans relations)
 
-    ```php
-      <?php
+    === "Solution"
 
-      namespace Database\Factories;
+        ```php
+        <?php
 
-      use Illuminate\Database\Eloquent\Factories\Factory;
-      use App\Models\Todos;
-      use App\Models\Listes;
-      use App\Models\User;    
+        namespace Database\Factories;
 
-      /**
-       * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Todos>
-       */
-      class TodosFactory extends Factory
-      {
-          protected $model = Todos::class;
+        use Illuminate\Database\Eloquent\Factories\Factory;
+        use App\Models\Todos;
+        use App\Models\Listes;
+        use App\Models\User;    
 
-          public function definition(): array
-          {
-              return [
-                  'texte'     => fake()->sentence(3),
-                  'termine'   => false,
-                  'important' => false,
-                  'date_fin'  => null,
-                  'listes_id' => Listes::factory(), // crée une Liste associée
-                  'user_id'   => User::factory(),  // crée un User associé
-              ];
-          }
-      }
+        /**
+        * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Todos>
+        */
+        class TodosFactory extends Factory
+        {
+            protected $model = Todos::class;
 
-      ```
+            public function definition(): array
+            {
+                return [
+                    'texte'     => fake()->sentence(3),
+                    'termine'   => false,
+                    'important' => false,
+                    'date_fin'  => null,
+                    'listes_id' => Listes::factory(), // crée une Liste associée
+                    'user_id'   => User::factory(),  // crée un User associé
+                ];
+            }
+        }
+        ```
       
-    Avec cette factory, on peut déjà écrire :
+Avec cette factory, on peut déjà écrire :
 
-    ```php
-    $todos = Todos::factory()->create();
+```php
+<?php
+$todos = Todos::factory()->create();
+```
+Laravel créera un enregistrement dans la table `todos` avec :
+
+- un `texte` réaliste,  
+- `termine = false`,  
+- `important = false`,  
+- les FK `listes_id` et `user_id` à `null` (non associées pour l’instant).
+
+C’est suffisant pour des **premiers tests** sur les attributs du modèle `Todo`.
+
+### 3.3. Vérifier le bon fonctionnement des factories 🎢
+
+**Tinker** est une console interactive fournie par Laravel, basée sur ``PsySH``, qui permet d’exécuter du code PHP en direct au sein de ton application.
+
+C’est un outil extrêmement pratique pour :
+
+- tester rapidement des modèles Eloquent,
+- manipuler la base de données depuis le shell,
+- vérifier le fonctionnement d’une factory,
+- expérimenter un morceau de logique métier,
+- déboguer un comportement sans écrire de route ni de test.
+
+▶️ Ouvrir **Tinker**
+
+Dans ton terminal (à la racine du projet) : ``php artisan tinker``
+
+Tu obtiens alors une console interactive :
+
+```prompt
+Psy Shell v0.11.8 (PHP 8.2 …)
+>>>
+```
+Tout ce que tu écris ici est exécuté dans le contexte de ton application Laravel.
+
+??? warning "Fix problème 🪲"
+  
+    - penser à ajouter ``use HasFactory;`` dans le model de Todos
+    - Vider le cache Laravel
+
+    ```bash
+    php artisan optimize:clear
+    composer dump-autoload
     ```
-    Laravel créera un enregistrement dans la table `todos` avec :
 
-    - un `texte` réaliste,  
-    - `termine = false`,  
-    - `important = false`,  
-    - les FK `listes_id` et `user_id` à `null` (non associées pour l’instant).
-
-    C’est suffisant pour des **premiers tests** sur les attributs du modèle `Todo`.
-
-### 3.3. Todo lié à une Liste et à un User 🔗
+### 3.4. Todo lié à une Liste et à un User 🔗
 
 Pour des tests plus complets (relations Eloquent), on peut demander à la factory Todo de **créer automatiquement** une Liste et un User associés.
 
 ??? tip "code TodoFactory"
 
     ```php
+    <?php
     use App\Models\Todos;
     use App\Models\Listes;
     use App\Models\User;
@@ -344,6 +385,7 @@ Pour des tests plus complets (relations Eloquent), on peut demander à la factor
 En configurant ``listes_id`` et ``user_id`` avec ``Liste::factory()`` et ``User::factory()``, on obtient un comportement très puissant :
 
 ```php
+<?php
 $todo = Todos::factory()->create();
 ```
 
@@ -356,7 +398,7 @@ réalise en réalité :
 Cela simplifie énormément les tests qui portent à la fois sur `Todos` et sur ses relations (ex. `todos->listes`, `todos->user`).
 
 ✔️ Tester une factory
-```
+```bash
 > App\Models\Listes::factory()->create();
 = App\Models\Listes {#6211
     titre: "eos ut",
@@ -367,8 +409,9 @@ Cela simplifie énormément les tests qui portent à la fois sur `Todos` et sur 
 ```
 
 Résultat : un nouvel enregistrement todos est inséré dans la base de développement.
+
 ✔️ Créer un utilisateur
-```
+```bash
 > App\Models\User::factory()->create();
 = App\Models\User {#6632
     name: "Diane Lambert",
@@ -384,7 +427,7 @@ Résultat : un nouvel enregistrement todos est inséré dans la base de dévelop
 
 ✔️ Tester la factory Todos
 
-```prompt
+```bash
 > App\Models\Todos::factory()->create();
 = App\Models\Todos {#5520
     texte: "Ut rerum praesentium fugit.",
@@ -399,42 +442,7 @@ Résultat : un nouvel enregistrement todos est inséré dans la base de dévelop
   }
 ```
 
-✔️ Lister les enregistrements existants
->>> App\Models\Todos::all();
-
-### 3.4. Vérifier le bon fonctionnement des factories 🎢
-
-**Tinker** est une console interactive fournie par Laravel, basée sur ``PsySH``, qui permet d’exécuter du code PHP en direct au sein de ton application.
-
-C’est un outil extrêmement pratique pour :
-
-- tester rapidement des modèles Eloquent,
-- manipuler la base de données depuis le shell,
-- vérifier le fonctionnement d’une factory,
-- expérimenter un morceau de logique métier,
-- déboguer un comportement sans écrire de route ni de test.
-
-▶️ Ouvrir **Tinker**
-
-Dans ton terminal (à la racine du projet) : ``php artisan tinker``
-
-Tu obtiens alors une console interactive :
-
-```prompt
-Psy Shell v0.11.8 (PHP 8.2 …)
->>>
-```
-Tout ce que tu écris ici est exécuté dans le contexte de ton application Laravel.
-
-
-??? warning "Fix"
-  
-  - penser à ajouter ``use HasFactory;`` dans le model de Todos
-  - Vider le cache Laravel
-    ```
-    php artisan optimize:clear
-    composer dump-autoload
-    ```
+✔️ Lister les enregistrements existants : ``App\Models\Todos::all();``
 
 ## 4. Tests Unitaires : modèle Eloquent 🧱 
 
@@ -476,14 +484,15 @@ class TodosModelTest extends TestCase
 ```
 ??? question "💡 Pourquoi utiliser Tests\TestCase et RefreshDatabase ?"
 
-  - ``Tests\TestCase ``charge le contexte Laravel complet (config, Eloquent, etc.) dans les tests, même dans tests/Unit.
-  - ``RefreshDatabase`` relance les migrations pour chaque test afin de garantir une base de test propre (pas de pollution entre tests).
+    - ``Tests\TestCase ``charge le contexte Laravel complet (config, Eloquent, etc.) dans les tests, même dans tests/Unit.
+    - ``RefreshDatabase`` relance les migrations pour chaque test afin de garantir une base de test propre (pas de pollution entre tests).
 
 ### 4.2 Tester la relation Todos → Listes 🔗
 
 Ton modèle Todos déclare une relation :
 
 ```php
+<?php
 public function listes(): BelongsTo
 {
     return $this->belongsTo(Listes::class)->withDefault();
@@ -494,6 +503,7 @@ Nous allons vérifier que cette relation fonctionne bien.
 Dans ``TodosModelTest`` :
 
 ```php
+<?php
 public function test_un_todos_appartient_a_une_liste()
 {
     // Arrange : création d'une liste
@@ -509,65 +519,68 @@ public function test_un_todos_appartient_a_une_liste()
 
 ??? question "💡 Détail sur for($liste, 'listes')"
 
-  - ``Listes::factory()->create()`` crée une ligne dans la table listes.
-  - ``Todos::factory()->for($liste, 'listes')->create()`` demande à Laravel de remplir la clé étrangère correspondant à la relation **listes** dans le modèle **Todos**.
-  - L’assertion ``is()`` vérifie que ``$todo->listes`` et ``$liste`` représentent le même enregistrement.
+    - ``Listes::factory()->create()`` crée une ligne dans la table listes.
+    - ``Todos::factory()->for($liste, 'listes')->create()`` demande à Laravel de remplir la clé étrangère correspondant à la relation **listes** dans le modèle **Todos**.
+    - L’assertion ``is()`` vérifie que ``$todo->listes`` et ``$liste`` représentent le même enregistrement.
 
 🏃 Relancer les tests : ``php artisan test``
 
 !!! question "A faire"
-  === "Enoncé"
-    Tester la relation Todos → User 👤
-  === "Solution"
+    === "Enoncé"
+         Tester la relation Todos → User 👤
+    === "Solution"
 
-    ```php
-    public function test_un_todos_appartient_a_un_utilisateur()
-    {
-        // Arrange : création d'un utilisateur
-        $user = User::factory()->create();
+        ```php
+        <?php
+        public function test_un_todos_appartient_a_un_utilisateur()
+        {
+            // Arrange : création d'un utilisateur
+            $user = User::factory()->create();
 
-        // Act : création d'un Todos lié à cet utilisateur
-        $todo = Todos::factory()->for($user, 'user')->create();
+            // Act : création d'un Todos lié à cet utilisateur
+            $todo = Todos::factory()->for($user, 'user')->create();
 
-        // Assert : la relation renvoie bien le bon utilisateur
-        $this->assertTrue($todo->user->is($user));
-    }
-    ```
+            // Assert : la relation renvoie bien le bon utilisateur
+            $this->assertTrue($todo->user->is($user));
+        }
+        ```
 
 ??? question "💡 Pourquoi tester les relations ?"
-  Ces tests garantissent que :
+    Ces tests garantissent que :
 
-  - les clés étrangères (listes_id, user_id) sont correctement utilisées,
-  - les méthodes listes() et user() renvoient bien les modèles attendus.
+    - les clés étrangères (``listes_id, user_id)`` sont correctement utilisées,
+    - les méthodes ``listes()`` et ``user()`` renvoient bien les modèles attendus.
 
   En cas de renommage de colonne, de modèle ou de relation, ces tests serviront de garde-fous.
 
 !!! question "A faire"
-  === "Enoncé"
-    Tester les valeurs par défaut (termine, important) ✅
-  === "Solution" 
+    === "Enoncé"
+        Tester les valeurs par défaut (termine, important) ✅
 
-    ```php
-      public function test_un_todos_est_non_termine_et_non_important_par_defaut()
-      {
-          // Act : création d'un Todos sans préciser termine/important
-          $todo = Todos::factory()->create();
+    === "Solution" 
 
-          // Assert : les valeurs par défaut sont respectées
-          $this->assertFalse($todo->termine);
-          $this->assertFalse($todo->important);
-      }   
-    ```
+        ```php
+        <?php
+        public function test_un_todos_est_non_termine_et_non_important_par_defaut()
+        {
+            // Act : création d'un Todos sans préciser termine/important
+            $todo = Todos::factory()->create();
+
+            // Assert : les valeurs par défaut sont respectées
+            $this->assertFalse($todo->termine);
+            $this->assertFalse($todo->important);
+        }   
+        ```
 
 ##  5.Tests de validation 🧮
 
 Nous allons maintenant écrire des **tests de validation** pour le formulaire d’ajout d’un Todo.
 
-🎯 **Objectifs** :
+!!! info "🎯 **Objectifs**""
 
-- Vérifier que certains champs sont **obligatoires** (`texte` notamment).  
-- Vérifier que certains champs respectent des **contraintes** (longueur minimale, format de date…).  
-- Vérifier qu’un Todo **valide** est bien créé en base.
+    - Vérifier que certains champs sont **obligatoires** (`texte` notamment).  
+    - Vérifier que certains champs respectent des **contraintes** (longueur minimale, format de date…).  
+    - Vérifier qu’un Todo **valide** est bien créé en base.
 
 ### 5.1 Préparer un test dédié 📄
 
@@ -613,17 +626,18 @@ class TodosValidationTest extends TestCase
 ```
 
 ??? question "💡 Pourquoi une méthode postTodo() ?"
-  Cette méthode permet de : 
+    Cette méthode permet de : 
 
-  - centralise la construction d’un **jeu de données valide**,  
-  - permet d’écrire des tests plus courts en ne modifiant que les champs à tester,  
-  - garantit que tous les autres champs restent cohérents (liste existante, user connecté, etc.).
+    - centralise la construction d’un **jeu de données valide**,  
+    - permet d’écrire des tests plus courts en ne modifiant que les champs à tester,  
+    - garantit que tous les autres champs restent cohérents (liste existante, user connecté, etc.).
 
 ### 5.2 texte est obligatoire ✏️
 
 Premier cas : le champ texte doit être obligatoire.
 
 ```php
+<?php
 public function test_texte_est_obligatoire()
 {
     $response = $this->postTodo(['texte' => '']);
@@ -632,11 +646,13 @@ public function test_texte_est_obligatoire()
     $this->assertDatabaseCount('todos', 0);
 }
 ```
-??? question "💡 Comportement attendu côté contrôleur"
 
-  Dans ton contrôleur qui traite ``/action/add``, tu dois avoir quelque chose comme :
+**question** "💡 Comportement attendu côté contrôleur ?"
+
+Dans ton contrôleur qui traite ``/action/add``, tu dois avoir quelque chose comme :
 
   ```php
+  <?php
   $validated = $request->validate([
       'texte' => ['required', 'string'],
       // autres règles…
@@ -649,8 +665,8 @@ public function test_texte_est_obligatoire()
 
   mais 
 
-```
-     FAIL  Tests\Feature\TodosValidationTest
+```bash
+FAIL  Tests\Feature\TodosValidationTest
   ⨯ texte est obligatoire                                                                                                       0.11s  
   ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  
    FAILED  Tests\Feature\TodosValidationTest > texte est obligatoire
@@ -669,11 +685,11 @@ Failed asserting that false is true.
      44▕
 ```
 
-Il faut adapter le test au contrôleur actuel !
+Il faut **adapter** le test au contrôleur actuel !
 Le contrôleur, en cas de texte vide, ne renvoie pas d’errors bag, mais :
 
 + déclenche une ValidationException,
-+ la catch renvoie un redirect()->route('todo.liste')->with('message', "...").
++ la catch renvoie un ``redirect()->route('todo.liste')->with('message', "...")``.
 
 Donc le test doit vérifier :
 
@@ -682,20 +698,18 @@ Donc le test doit vérifier :
 - l’absence de nouvelle ligne dans todos.
 
 ```php
+<?php
 public function test_texte_est_obligatoire()
 {
     $response = $this->postTodo(['texte' => '']);
-
     $response->assertRedirect(route('todo.liste'));
-
     $response->assertSessionHas('message', "Veuillez saisir un ToDo d'une longueur max de 255 caractères");
-
     $this->assertDatabaseCount('todos', 0);
 }
 ```
 et ca passe beaucoup mieux ...
 
-```
+```bash
    PASS  Tests\Feature\TodosValidationTest
   ✓ texte est obligatoire                                                                                                       0.11s  
 
@@ -703,49 +717,53 @@ et ca passe beaucoup mieux ...
   Duration: 6.48s
 ```
 
-🚩 Mais quel est la bonne pratique ?
+🚩 Mais quelle est la bonne pratique ?
 
 !!! question "A faire : longueur minimale"
-  === "Enoncé"
-    Actuellement, la règle est ``'texte' => 'required|string|max:255',``
-    ▶️ La règle doit à présent être d'avoir une contrainte supplémentaire, une longueur minimale de 3 caractères
+    === "Enoncé"
+        Actuellement, la règle est ``'texte' => 'required|string|max:255',``
+        ▶️ La règle doit à présent être d'avoir une contrainte supplémentaire, une longueur minimale de 3 caractères
 
-    - Implémenter cette règle
-    - Faites en sorte qu'elle soit bien prise en compte dans votre interface
-    - Tester cette règle dans les features de tests.
+        - Implémenter cette règle
+        - Faites en sorte qu'elle soit bien prise en compte dans votre interface
+        - Tester cette règle dans les features de tests.
 
-  === "Solution"
-    dans le controleur : 
+    === "Solution"
+        dans le controleur : 
 
-    ```php
-    $request->validate([
-    'texte' => 'required|string|min:3|max:255',
-    ]);
-    ```
-    dans les tests : 
+        ```php
+        <?php
+        $request->validate([
+        'texte' => 'required|string|min:3|max:255',
+        ]);
+        ```
+        dans les tests : 
 
-    ```php
-    public function test_texte_doit_avoir_une_longueur_minimale()
-    {
-        $response = $this->postTodo(['texte' => 'ab']); // 2 caractères
+        ```php
+        <?php
+        public function test_texte_doit_avoir_une_longueur_minimale()
+        {
+            $response = $this->postTodo(['texte' => 'ab']); // 2 caractères
 
-        $response->assertSessionHasErrors('texte');
-        $this->assertDatabaseCount('todos', 0);
-    }
-    ```
+            $response->assertSessionHasErrors('texte');
+            $this->assertDatabaseCount('todos', 0);
+        }
+        ```
 
 !!! tip "Exécution ciblée des tests de validation ▶️"
-  Pour exécuter uniquement cette classe de tests :
+    Pour exécuter uniquement cette classe de tests :
 
-  ```bash
-  php artisan test --filter=TodosValidationTest
-  ```
-### 5.3 Cas nominal : données valides ➕✔️
+    ```bash
+    php artisan test --filter=TodosValidationTest
+    ```
 
-Il est important de tester aussi le scénario heureux :<br />
-quand toutes les données sont valides, le Todo doit être créé.
+### 5.3 Cas nominal ➕✔️
+
+Il est important de tester aussi le scénario heureux 😃 :<br />
+quand toutes les données sont **valides**, le Todo doit être créé.
 
 ```php
+<?php
 public function test_un_todos_valide_est_cree()
 {
     $response = $this->postTodo(); // toutes les valeurs par défaut sont valides
@@ -763,28 +781,29 @@ public function test_un_todos_valide_est_cree()
 }
 ```
 
-??? question "💡 Pourquoi ce test est essentiel ?"
-  - Il vérifie que la création fonctionne en cas de données valides.
-  - Il sert de référence pour les autres tests de validation : ils ne doivent empêcher que les données invalides.
-  - En cas de modification ultérieure du contrôleur, ce test permet de détecter une régression sur le CAS NOMINAL.
+!!! question "💡 Pourquoi ce test est essentiel ?"
+
+    - Il vérifie que la création fonctionne en cas de données valides.
+    - Il sert de référence pour les autres tests de validation : ils ne doivent empêcher que les données invalides.
+    - En cas de modification ultérieure du contrôleur, ce test permet de détecter une régression sur le CAS NOMINAL.
 
 !!! info "Available assertions 📕"
-  Il existe de nombreuses assertions différentes. Elles sont disponible dans la [documentation](https://laravel.com/docs/12.x/database-testing#available-assertions) de Laravel.
+    Il existe de nombreuses assertions différentes. Elles sont disponible dans la [documentation](https://laravel.com/docs/12.x/database-testing#available-assertions) de Laravel.
 
 ## 6. Gestion de la base de données pendant les tests 🧰
 
 Jusqu’ici, nous avons écrit des tests qui créent des utilisateurs, des listes et des todos à l’aide des **factories**.  
 Il est maintenant important de bien comprendre comment Laravel gère la **base de données** pendant les tests.
 
-🎯 **Objectifs** :
+!!! info "🎯 **Objectifs**"
 
-- Comprendre comment **isoler** chaque test (pas de pollution entre tests).  
-- Savoir sur **quelle base** s’exécutent les tests (`.env.testing`).  
-- Utiliser les assertions `assertDatabaseHas`, `assertDatabaseMissing`, `assertDatabaseCount`.
+    - Comprendre comment **isoler** chaque test (pas de pollution entre tests).  
+    - Savoir sur **quelle base** s’exécutent les tests (`.env.testing`).  
+    - Utiliser les assertions `assertDatabaseHas`, `assertDatabaseMissing`, `assertDatabaseCount`.
 
 ### 6.1 Le trait `RefreshDatabase` 🔄
 
-[documentation](https://laravel.com/docs/12.x/database-testing)
+[documentation Laravel sur database-testing](https://laravel.com/docs/12.x/database-testing){target="_blank"}
 
 Laravel fournit le trait ``use Illuminate\Foundation\Testing\RefreshDatabase;``
 
@@ -796,6 +815,7 @@ Ce trait, utilisé dans une classe de test, garantit que :
 **Exemple** (déjà utilisé dans tes tests) :
 
 ```php
+<?php
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -807,10 +827,9 @@ class TodosValidationTest extends TestCase
 }
 ```
 ??? question "💡 Que fait RefreshDatabase exactement ?"
-  - Avant le premier test, Laravel exécute php artisan migrate sur la connexion de test.
-  - Entre les tests, il remet la base dans un état propre (rollback ou migrate:fresh selon le driver).
-  - Cela permet de s’assurer que chaque test est indépendant des autres :
-  aucun enregistrement laissé par un test ne doit influencer un autre test.
+    - Avant le premier test, Laravel exécute ``php artisan migrate`` sur la connexion de test.
+    - Entre les tests, il remet la base dans un état propre (``rollback`` ou ``migrate:fresh`` selon le driver).
+    - Cela permet de s’assurer que chaque test est indépendant des autres : aucun enregistrement laissé par un test ne doit influencer un autre test.
 
 ### 6.2 Quelle base est utilisée pour les tests ? 🗄️
 
@@ -820,7 +839,7 @@ Dans ton cas, tu as configuré une base MySQL dédiée, par exemple :
 
 dans ``.env.testing``
 
-```php
+```bash
 APP_ENV=testing
 APP_DEBUG=true
 
@@ -836,14 +855,16 @@ Pendant les tests, on ne touche jamais à la base de développement (``todo2025`
 tout se passe dans la base ``todo_test``.
 
 ??? question "💡 Comment vérifier que Laravel utilise bien la bonne base ?"
-  - Tu peux temporairement ajouter un test “de debug” :
-  ```php
-  public function test_voir_la_connexion_de_test() { 
-    $this->assertSame('mysql', config('database.default')); 
-    $this->assertSame('todo_test', config('database.connections.mysql.database'));
-  }
-  ```
-  - Puis le supprimer une fois que tu es sûre de ta configuration.
+    - Tu peux temporairement ajouter un test “de debug” :
+    
+    ```php
+    <?php
+    public function test_voir_la_connexion_de_test() { 
+      $this->assertSame('mysql', config('database.default')); 
+      $this->assertSame('todo_test', config('database.connections.mysql.database'));
+    }
+    ```
+    - Puis le supprimer une fois que tu es sûre de ta configuration.
 
 
 ### 6.3 Exécuter les tests ▶️
@@ -859,9 +880,9 @@ php artisan test
 
 ??? question "💡 Quand utiliser ``migrate:fresh --env=testing`` ?"
 
-  - Quand tu as modifié une migration existante (ajout/suppression de colonnes).
-  - Quand tu veux repartir d’une base de test complètement propre.
-  - À éviter en production, bien sûr : cela supprime toutes les tables avant de les recréer.
+    - Quand tu as modifié une migration existante (ajout/suppression de colonnes).
+    - Quand tu veux repartir d’une base de test complètement propre.
+    - À éviter en production, bien sûr : cela supprime toutes les tables avant de les recréer.
 
 ## 7. Tests d’authentification 🔐
 
@@ -881,22 +902,22 @@ Ces tests se trouvent dans ``tests/Feature/Auth/``
 
 ??? question "Pourquoi conserver ces tests ? 🛡️"
 
-  Ces tests assurent automatiquement :
+    Ces tests assurent automatiquement :
 
-  - que l’authentification reste fonctionnelle après une mise à jour,
-  - que les étudiants ne cassent pas la sécurité en modifiant une vue ou une route,
-  - que chaque changement sur les routes ou les middlewares continue de respecter les règles Laravel (auth, verified, etc.).
-  - Ils constituent une base solide pour éviter les régressions pendant le développement.
+    - que l’authentification reste fonctionnelle après une mise à jour,
+    - que les étudiants ne cassent pas la sécurité en modifiant une vue ou une route,
+    - que chaque changement sur les routes ou les middlewares continue de respecter les règles Laravel (auth, verified, etc.).
+    - Ils constituent une base solide pour éviter les régressions pendant le développement.
 
 ### 7.2 Tests d’accès aux routes protégées (middleware auth) 🔒
 
 Il peut être utile d’ajouter un seul test d'exemple dans ton TP pour illustrer comment vérifier qu’une route est bien protégée par auth.
 
 ```php
+<?php
 public function test_invite_ne_peut_pas_acceder_aux_todos()
 {
     $response = $this->get('/todos');
-
     $response->assertRedirect(route('login'));
 }
 ```
@@ -910,6 +931,7 @@ Lorsque tu ajoutes une policy pour restreindre l’accès aux Todos :
 tu peux tester ces règles simplement avec :
 
 ```php
+<?php
 public function test_un_utilisateur_ne_peut_pas_modifier_le_todo_d_un_autre()
 {
     $a = User::factory()->create();
@@ -924,13 +946,11 @@ public function test_un_utilisateur_ne_peut_pas_modifier_le_todo_d_un_autre()
 }
 ```
 
-Laravel renverra automatiquement 403 Forbidden si la policy refuse l’accès.
-
-![en connstruction](../../images/enConstruction.png){: .center width=50%}
+Laravel renverra automatiquement **403** Forbidden si la policy refuse l’accès.
 
 ## 8. Intégration dans GitHub Actions ⚙️
 
-🎯 Objectif : exécuter automatiquement les tests Laravel à chaque **push** ou **pull request** sur GitHub, avec un **seuil de couverture** minimal.
+🎯 **Objectif** : exécuter automatiquement les tests Laravel à chaque **push** ou **pull request** sur GitHub, avec un **seuil de couverture** minimal.
 
 🔑 **Idée clé** :
 
@@ -957,55 +977,109 @@ jobs:
   laravel-tests:
     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v4
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: todo_test
+          MYSQL_USER: laravel_test
+          MYSQL_PASSWORD: secret
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -uroot -proot"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=10
 
-      - uses: shivammathur/setup-php@v2
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
         with:
           php-version: '8.3'
-          extensions: mbstring, dom, sqlite, pdo_sqlite
+          extensions: mbstring, dom, pdo_mysql
           coverage: xdebug
 
-      - name: Install dependencies
+      - name: Install PHP dependencies
         run: composer install --no-interaction --prefer-dist
 
-      - name: Prepare env
-        run: |
-          echo "APP_ENV=testing" > .env.testing
-          echo "APP_KEY=" >> .env.testing
-          echo "DB_CONNECTION=sqlite" >> .env.testing
-          echo "DB_DATABASE=:memory:" >> .env.testing
-          php artisan key:generate --env=testing
+      # ⬇️ Partie frontend / Vite : création du manifest.json
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install frontend dependencies
+        run: npm ci
+
+      - name: Build assets
+        run: npm run build
+
+      # ⬇️ On aligne l'environnement de la CI sur ton env de test local
+      - name: Prepare environment file
+        run: cp .env.testing .env
+
+      - name: Run migrations
+        run: php artisan migrate --force
 
       - name: Run tests with coverage
         env:
           XDEBUG_MODE: coverage
         run: php artisan test --coverage --min=80
 ```
-🔍 **Points importants** :
-
-En CI, on écrase la config de test pour utiliser ``DB_CONNECTION=sqlite`` et ``DB_DATABASE=:memory:``, même si en local tu es sur MySQL.
-
-``coverage: xdebug et XDEBUG_MODE=coverage permettent d’utiliser --coverage --min=80``.
 
 ### 8.2. Mesurer la couverture en local 📊
 
-En local, tu peux également mesurer la couverture ``XDEBUG_MODE=coverage php artisan test --coverage``
+!!! info "Définition 💡"
+    La couverture de code est une métrique qui peut vous permettre de comprendre la **part** testée de votre source. Cette métrique est très utile, car elle peut vous aider à évaluer la qualité de votre suite de tests. 
 
-Pour imposer le même seuil qu’en CI : ``XDEBUG_MODE=coverage php artisan test --coverage --min=80``
+    phpunit regarde quelles lignes ont été "utilisées" dans le code quand on a lancé les tests unitaires. Ensuite en fonction du nombre de lignes utilisées par rapport au nombre de lignes total du fichier, phpunit calcule un taux de couverture pour le fichier.
 
-Si la couverture est inférieure à 80 %, la commande échoue (code de retour ≠ 0).
+    Dans notre CI :
 
-!!! question "💡 Notion de couverture"
-  La **couverture de tests** mesure la part du code exécutée pendant les tests.
+    - le job GitHub Actions **réussit** si la couverture est ≥ 80 % 
+    - il **échoue** si la couverture descend sous 80 %.
 
-Dans notre CI :
+En local, tu peux également mesurer la couverture ``php artisan test --coverage --min=80 --coverage-html ./report``
 
-- le job GitHub Actions **réussit** si la couverture est ≥ 80 % 
-- il **échoue** si la couverture descend sous 80 %.
+L'option ``--coverage-html ./report`` permet de générer un rapport, mesurant la couverture de notre application.
+
+![couverture](./data/couverture.png){: .center}
+
+😥 Ici le taux est de $62.45%$ donc très largement en dessous du seuil de `--coverage --min=80`. Donc si on laisse ce taux dans la CI, l'échec est assuré !
+
+!!! question "Taux de couverture"
+    === "tests.yml"
+        ▶️ Modifier le fichier `tests.yml` pour vous assurer que le taux de couverture de 80% ne soit pas bloquant.
+
+    === "Solution"
+
+        ```bash
+        run: php artisan test --coverage --min=80 || true
+        ```
+
+??? warning "Fix problem Xdebug's coverage mode"
+
+    symptômes : 
+
+    ```bash
+    (base) PS C:\wamp64\www\todo2026> php artisan test --coverage --min=80
+    ERROR  Code coverage driver not available. Did you set Xdebug's coverage mode?
+    ```
+
+    Dans le "bon" `php.ini`, vérifier 
+
+    ```bash
+    xdebug.mode=develop,coverage
+    xdebug.start_with_request=no
+    ```
 
 Cela transforme la couverture en **garde-fou qualité** :  <br />
-si un développeur commente des tests ou ajoute beaucoup de code non testé, la CI refusera la PR ou signalera le problème sur le push.
+si un développeur commente des tests ou ajoute beaucoup de code non testé, la CI refusera la Pull Request ou signalera le problème sur le push.
 
 ### 8.3. Lancer la CI après les modifications ✅
 
@@ -1022,12 +1096,36 @@ git push -u origin main
 
 Sur **GitHub**, onglet Actions, tu dois voir le workflow tests s’exécuter automatiquement à chaque push / pull request.
 
+![tests](./data/tests.png){: .center}
+
+??? warning "Fix probleme Vite"
+
+    Verifier dans vos ``*.blade.php`` pour que le SASS soient utiliser (``app.blade.php``, ``guest.blade.php``)
+
+    ```php
+    <?php
+    <!-- Styles et Scripts : Utilisation SASS --> 
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    ```
+    dans `vite.config.php`
+    
+    ```php
+    <?php
+    laravel({
+            input: [
+                'resources/sass/app.scss',
+                'resources/js/app.js',
+            ],
+            refresh: true,
+        }),
+    ```
+
 !!! warning "Conclusion ✅"
 
-  * Un environnement de test Laravel fonctionnel.
-  * Des tests unitaires, fonctionnels et API.
-  * Une mesure automatique de couverture.
-  * Une exécution automatisée en CI GitHub Actions.
+    * Un environnement de test Laravel fonctionnel.
+    * Des tests unitaires, fonctionnels et API.
+    * Une mesure automatique de couverture.
+    * Une exécution automatisée en CI GitHub Actions.
 
  
 

@@ -3368,27 +3368,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_tpVulnerabilitesAuthentification.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7. TP Vulnérabilités liées à l’authentification et à la gestion des sessions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -4477,12 +4456,12 @@
 <li>📤 Transmet ces données à une Vue.</li>
 </ul>
 <h4 id="exemple-laravel">📌 Exemple Laravel<a class="headerlink" href="#exemple-laravel" title="Permanent link">⚓︎</a></h4>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">// routes/web.php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// routes/web.php</span>
 <span class="x">use App\Http\Controllers\AccountController;</span>
 
 <span class="x">Route::get(&#39;/accounts&#39;, [AccountController::class, &#39;index&#39;]);</span>
 </code></pre></div>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">// app/Http/Controllers/AccountController.php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// app/Http/Controllers/AccountController.php</span>
 <span class="x">namespace App\Http\Controllers;</span>
 <span class="x">use App\Models\Account;</span>
 
@@ -4513,7 +4492,7 @@
 <li>🔗 Connecté à la base via <strong>Eloquent ORM</strong> sous Laravel.</li>
 </ul>
 <h4 id="exemple-laravel_1">📌 Exemple Laravel<a class="headerlink" href="#exemple-laravel_1" title="Permanent link">⚓︎</a></h4>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">// app/Models/Account.php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// app/Models/Account.php</span>
 <span class="x">namespace App\Models;</span>
 <span class="x">use Illuminate\Database\Eloquent\Model;</span>
 
@@ -4529,7 +4508,7 @@
 <li>📍 Définies dans <code>routes/web.php</code>.</li>
 </ul>
 <h4 id="exemple-laravel_2">📌 Exemple Laravel<a class="headerlink" href="#exemple-laravel_2" title="Permanent link">⚓︎</a></h4>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">Route::get(&#39;/accounts&#39;, [AccountController::class, &#39;index&#39;]);</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">Route::get(&#39;/accounts&#39;, [AccountController::class, &#39;index&#39;]);</span>
 <span class="x">Route::post(&#39;/accounts/transfer&#39;, [AccountController::class, &#39;transfer&#39;]);</span>
 </code></pre></div>
 <hr />

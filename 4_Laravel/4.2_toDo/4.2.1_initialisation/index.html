@@ -3672,27 +3672,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_tpVulnerabilitesAuthentification.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7. TP Vulnérabilités liées à l’authentification et à la gestion des sessions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -4733,7 +4712,7 @@ La commande vient de créer un nouveau fichier dans le dossier database/migratio
 /todo2024/database/migrations/2023_11_21_084423_create_todo_table.php</p>
 <details class="note">
 <summary>contenu du fichier</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
     <span class="k">use</span> <span class="nx">Illuminate\Database\Migrations\Migration</span><span class="p">;</span>
     <span class="k">use</span> <span class="nx">Illuminate\Database\Schema\Blueprint</span><span class="p">;</span>
@@ -4789,7 +4768,7 @@ La commande vient de créer un nouveau fichier dans le dossier database/migratio
 </div>
 <div class="tabbed-block">
 <p><img alt="Id" src="https://laravel.com/docs/10.x/migrations#column-method-id" /> et <img alt="timestamp" src="https://laravel.com/docs/10.x/migrations#column-method-timestamps" /></p>
-<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">$table-&gt;integer(&#39;id&#39;);</span>
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$table-&gt;integer(&#39;id&#39;);</span>
 <span class="x">$table-&gt;timestamps();</span>
 </code></pre></div>
 les deux champs ont une syntaxe particulière. Ce sont des fonctions propres à Laravel. Il en existe beaucoup dans la <img alt="documentation" src="https://laravel.com/docs/10.x/migrations#column-method-timestamps" />.</p>
@@ -4798,7 +4777,7 @@ les deux champs ont une syntaxe particulière. Ce sont des fonctions propres à 
 </div>
 </div>
 <p>Nous allons définir notre schéma  pour y ajouter les 3 colonnes qui nous serons utiles <strong>texte, termine et important</strong>. L'ORM étant une librairie objet, la définition de nouveaux champs se fait via une méthode, dans notre cas :</p>
-<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">    $table-&gt;integer(&#39;id&#39;);</span>
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">    $table-&gt;integer(&#39;id&#39;);</span>
 <span class="x">    $table-&gt;string(&#39;texte&#39;);</span>
 <span class="x">    $table-&gt;boolean(&#39;termine&#39;)-&gt;default(0);</span>
 <span class="x">    $table-&gt;boolean(&#39;important&#39;)-&gt;default(0);</span>
@@ -4808,7 +4787,7 @@ les deux champs ont une syntaxe particulière. Ce sont des fonctions propres à 
 Ajouter les champs dans la méthode <code>up</code> du fichier.</p>
 <details class="note">
 <summary>fonction up</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
 <span class="x">{</span>
 <span class="x">    Schema::create(&#39;todos&#39;, function (Blueprint $table) {</span>
 <span class="x">        $table-&gt;integer(&#39;id&#39;)</span>
@@ -4827,13 +4806,13 @@ Ajouter les champs dans la méthode <code>up</code> du fichier.</p>
 <div class="admonition warning">
 <p class="admonition-title"><img alt="💥" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4a5.svg" title=":boom:" /></p>
 <p>Remplacer dans config/database.php</p>
-<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&#39;charset&#39; =&gt; &#39;utf8mb4&#39;,</span>
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&#39;charset&#39; =&gt; &#39;utf8mb4&#39;,</span>
 <span class="x">&#39;collation&#39; =&gt; &#39;utf8mb4_unicode_ci&#39;,</span>
 <span class="x">#Par </span>
 <span class="x">&#39;charset&#39; =&gt; &#39;utf8&#39;,</span>
 <span class="x">&#39;collation&#39; =&gt; &#39;utf8_unicode_ci&#39;,</span>
 </code></pre></div>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&#39;engine&#39; =&gt; null,</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&#39;engine&#39; =&gt; null,</span>
 <span class="x">#par</span>
 <span class="x">&#39;engine&#39; =&gt; &#39;InnoDB&#39;,</span>
 </code></pre></div></p>
@@ -4879,7 +4858,7 @@ CATEGORIES_TODOS (<u>id</u>,<u>idcat</u>)<br /></p>
 <div class="tabbed-block">
 <p>La difficulté ici est de créer la bonne relation entre clés primaires et clés étrangères.<br />
 Pour rappel, en Base de données, on ne peut référencer un champ en clé étrangère vers une clé primaire que si les deux champs sont exactement du MEME type. or ici, si on utilise <code>id()</code> pour catégorie, on aura du mal à construire la clé étrangère dans la table CATEGORISE</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
 <span class="x">{</span>
 <span class="x">    Schema::create(&#39;categories&#39;, function (Blueprint $table) {</span>
 <span class="x">        $table-&gt;integer(&#39;id&#39;);</span>
@@ -4914,7 +4893,7 @@ Pour rappel, en Base de données, on ne peut référencer un champ en clé étra
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
 <p>Exemple de commande pour manipuler facilement des retours de requêtes en base de données. Tout est Objet !</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">$user = User ::find(5) ;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$user = User ::find(5) ;</span>
 <span class="x">Echo $user-&gt;name ;</span>
 <span class="x">$user-&gt;age=32 ;</span>
 <span class="x">$user-&gt;save() ;</span>
@@ -4979,12 +4958,12 @@ php artisan make:controller CategoriesController
 <p>La méthode liste est certainement la plus simple, nous allons faire appel à la méthode <code>all()</code> de Eloquent. 
 ✋ Dans un premier temp nous n'allons pas integrer la base de données, mais uniquement définir notre méthode. Et tester 
 l'interface de notre projet.</p>
-<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function liste(){</span>
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">public function liste(){</span>
 <span class="x">    return &quot;Liste&quot;;</span>
 <span class="x">}</span>
 </code></pre></div>
 <img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Nous allons tester la route <code>/</code> (page d'acccueil du projet), pour ça nous allons remplacer le contenu du fichier routes/web.php par :
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use Illuminate\Support\Facades\Route;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">use Illuminate\Support\Facades\Route;</span>
 <span class="x">use App\Http\Controllers\TodosController;</span>
 
 <span class="x">Route::get(&#39;/&#39;, [TodosController::class, &#39;liste&#39;]);</span>
@@ -5021,7 +5000,7 @@ Notre vue va être découpée en 3 partie :</p>
 •   La structure commune </p>
 <details class="abstract">
 <summary>template.blade.php</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&lt;html&gt;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;html&gt;</span>
 <span class="x">    &lt;head&gt;</span>
 <span class="x">        &lt;meta charset=&quot;utf-8&quot;&gt;</span>
 <span class="x">        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</span>
@@ -5050,7 +5029,7 @@ Notre vue va être découpée en 3 partie :</p>
 <details class="question">
 <summary>À quoi correspond {{ asset('…') }} ?</summary>
 <p>The asset function generates a URL for an asset using the current scheme of the request (HTTP or HTTPS):</p>
-<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">    $url = asset(&#39;css/style.css &#39;);</span>
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">    $url = asset(&#39;css/style.css &#39;);</span>
 </code></pre></div>
 essaiera de charger <code>/mon-site/ma/route/web/web/css/style.css</code></p>
 </details>
@@ -5085,7 +5064,7 @@ npm install
 npm run build
 </code></pre></div>
 dans <code>app.js</code>, ajouter 
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">import &#39;./bootstrap&#39;;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">import &#39;./bootstrap&#39;;</span>
 <span class="x">import &#39;bootstrap/dist/css/bootstrap.min.css&#39;;</span>
 <span class="x">import &#39;bootstrap-icons/font/bootstrap-icons.css&#39;;</span>
 <span class="x">import &#39;@popperjs/core&#39;;</span>
@@ -5099,7 +5078,7 @@ dans <code>app.js</code>, ajouter
 <li class="task-list-item"><input type="checkbox"/> Créer une route vers la vue template <code>Route :: view ('/test', 'template');</code></li>
 <li class="task-list-item"><input type="checkbox"/> Dans le template, mettre le code ci dessous contenant du bootstrap</li>
 </ul>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&lt;nav class=&quot;navbar navbar-expand-md navbar-dark bg-dark&quot;&gt;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;nav class=&quot;navbar navbar-expand-md navbar-dark bg-dark&quot;&gt;</span>
 <span class="x">    &lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;Ma Todo List&lt;/a&gt;</span>
 <span class="x">    &lt;a class=&quot;navbar-brand btn btn-primary&quot; href=&quot;liste&quot;&gt;&lt;i class=&quot;bi bi-app&quot;&gt;&lt;/i&gt;Liste&lt;/a&gt;</span>
 
@@ -5120,7 +5099,7 @@ npm i -D sass
 </code></pre></div>
 <p><strong>2. Configurer Vite</strong></p>
 <p>👉 fichier : vite.config.js
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">defineConfig</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;vite&#39;</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">defineConfig</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;vite&#39;</span>
 <span class="k">import</span><span class="w"> </span><span class="nx">laravel</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;laravel-vite-plugin&#39;</span>
 <span class="k">import</span><span class="w"> </span><span class="nx">vue</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@vitejs/plugin-vue&#39;</span>
 <span class="k">import</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;path&#39;</span>
@@ -5164,7 +5143,7 @@ $enable-rounded: $enable-rounded
 </code></pre></div></p>
 <p><strong>4. Charger Bootstrap JS</strong></p>
 <p>👉 fichier : resources/js/app.js
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="s1">&#39;bootstrap&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// JS Bootstrap (dropdowns, modals…)</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="s1">&#39;bootstrap&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// JS Bootstrap (dropdowns, modals…)</span>
 </code></pre></div></p>
 <p><strong>5. Blade Layout</strong></p>
 <p>👉 fichier : resources/views/layouts/template.blade.php
@@ -5185,7 +5164,7 @@ $enable-rounded: $enable-rounded
 <p>Il est difficile de surcharger les thèmes Bootstrap avec une utilisation CDN ou avec <code>app.js</code>. Mais c'est possible à faire avec <code>sass</code>.<br />
 L'idée est de surcharger le CSS des class par défaut de bootstrap, par exemple <code>primary</code> ou <code>bg-dark</code> que l'on retrouve dans les balises des templates <code>&lt;nav class="navbar bg-dark"&gt;</code></p>
 <p>👉 contenu de app.scss</p>
-<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">    @use &quot;./variables&quot; as *;</span>
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">    @use &quot;./variables&quot; as *;</span>
 
 <span class="x">    @use &quot;bootstrap/scss/bootstrap&quot; with (</span>
 <span class="x">    $font-family-sans-serif: $font-family-sans-serif,</span>
@@ -5204,7 +5183,7 @@ L'idée est de surcharger le CSS des class par défaut de bootstrap, par exemple
 <span class="x">    );</span>
 </code></pre></div>
 👉 contenu de _variables.scss</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">    // ---- Variables perso (AUCUN @use ici) ----</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">    // ---- Variables perso (AUCUN @use ici) ----</span>
 
 <span class="x">    // Typographie</span>
 <span class="x">    $font-family-sans-serif: &#39;Nunito&#39;, sans-serif;</span>
@@ -5253,7 +5232,7 @@ L'idée est de surcharger le CSS des class par défaut de bootstrap, par exemple
 Créér un nouveau fichier resources/views/home.blade.php et y mettre le contenu suivant :</p>
 <details class="note">
 <summary>home.blade.php</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">@extends(&quot;template&quot;)</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">@extends(&quot;template&quot;)</span>
 
 <span class="x">@section(&quot;title&quot;, &quot;Ma Todo List&quot;)</span>
 
@@ -5325,11 +5304,11 @@ Créér un nouveau fichier resources/views/home.blade.php et y mettre le contenu
 <p class="admonition-title">tip</p>
 <p>Vous n'aurez pas besoin de tout le contenu du home.blade.php dans un premier temps. <br />
 Je vous conseille de mettre de côté ce code et de dans le home.blade.php de supprimer  de :
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&lt;!-- Action à ajouter pour Terminer et supprimer --&gt;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;!-- Action à ajouter pour Terminer et supprimer --&gt;</span>
 <span class="x">@if ($todo-&gt;termine === 0)</span>
 </code></pre></div>
 à 
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">    @elseif ($todo-&gt;important == 1)</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">    @elseif ($todo-&gt;important == 1)</span>
 <span class="x">    &lt;!-- Action à ajouter pour descendre la priorité --&gt;</span>
 <span class="x">    &lt;a href=&quot;{{ route(&#39;todo.lower&#39;, [&#39;id&#39; =&gt; $todo-&gt;id]) }}&quot;&gt;&lt;i class=&quot;bi bi-arrow-down-circle&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span>
 <span class="x">@endif</span>
@@ -5364,7 +5343,7 @@ Vous voyez « Liste » ? C'est <img alt="🆗" class="emojione" src="https://cdn
 <p>On va modifier la méthode <code>liste()</code> pour qu'elle appelle la bonne vue ici <code>home</code> et qu'elle aille chercher la collection des todos en base :</p>
 <details class="note">
 <summary>Code de la fonction liste</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use App\Models\Todos;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">use App\Models\Todos;</span>
 <span class="x">//Liste</span>
 <span class="x">public function liste()</span>
 <span class="x">{</span>
@@ -5384,7 +5363,7 @@ Vous voyez « Liste » ? C'est <img alt="🆗" class="emojione" src="https://cdn
 <p>Pour utiliser les fonctionnalités Eloqent, vous pouvez consulter la documentation <a href="https://laravel.com/docs/10.x/eloquent">ici</a>.</p>
 <details class="warning">
 <summary>fonction save</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x"> public function saveTodo(Request $request){</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x"> public function saveTodo(Request $request){</span>
 
 <span class="x">    $texte = $request-&gt;input(&#39;texte&#39;);</span>
 
@@ -5405,16 +5384,16 @@ Vous voyez « Liste » ? C'est <img alt="🆗" class="emojione" src="https://cdn
 <p>Vous prendrez le temps de <ins>remarquer</ins> que ce code gère les messages d'erreur avec Bootstrap.<br />
 On "attrape" l'erreur en testant le champ texte, qui doit ici être non vide et on ajoute un élément à la route.
 Element qui sera mappé avec la vue <em>home</em> et plus précisement avec le champ <em>message</em>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">@if (session(&#39;message&#39;))</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">@if (session(&#39;message&#39;))</span>
 <span class="x">    &lt;p class=&quot;alert alert-danger&quot;&gt;{{ session(&#39;message&#39;) }}&lt;/p&gt;</span>
 <span class="x">@endif</span>
 </code></pre></div>
 Il manque encore un élément pour finaliser ce besoin : La route.<br />
 Il faut ajouter le lien vers la fonction saveTodo du controleur.</p>
-<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">Route::post(&#39;/action/add&#39;, [TodosController::class, &#39;saveTodo&#39;])-&gt;name(&#39;todo.save&#39;);</span>
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">Route::post(&#39;/action/add&#39;, [TodosController::class, &#39;saveTodo&#39;])-&gt;name(&#39;todo.save&#39;);</span>
 </code></pre></div>
 et encore faut il appeler cette route lorsque l'on clique sur le bouton "Save" ! Vérifier dans la vue home que vous ayez bien l'appel à votre route.</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&lt;form action=&quot;{{ route(&#39;todo.save&#39;) }}&quot; method=&quot;POST&quot; class=&quot;add&quot;&gt;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;form action=&quot;{{ route(&#39;todo.save&#39;) }}&quot; method=&quot;POST&quot; class=&quot;add&quot;&gt;</span>
 </code></pre></div>
 <div class="admonition tips">
 <p class="admonition-title">Erreur à traiter</p>
@@ -5425,7 +5404,7 @@ et encore faut il appeler cette route lorsque l'on clique sur le bouton "Save" !
 </div>
 <div class="tabbed-block">
 <p>Il faut passer le champ id en autoIncrément et relancer le fresh de migration.</p>
-<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">$table-&gt;integer(&#39;id&#39;)-&gt;autoIncrement();</span>
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$table-&gt;integer(&#39;id&#39;)-&gt;autoIncrement();</span>
 <span class="x">#$table-&gt;primary(&#39;id&#39;);</span>
 </code></pre></div>
 Dans ce cas, laravel créé un index sur le champ id, il devient inutile de le déclarer en primary key. Mais dans la base de donnée, le champ est bien clé primaire.</p>
@@ -5439,7 +5418,7 @@ Dans ce cas, laravel créé un index sur le champ id, il devient inutile de le d
 <details class="warning">
 <summary>solution</summary>
 <p>Modifier la fonction "Save" du contrôleur</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x"> public function saveTodo(Request $request){</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x"> public function saveTodo(Request $request){</span>
 <span class="x">    $texte = $request-&gt;input(&#39;texte&#39;);</span>
 <span class="x">    $button = $request-&gt;input(&#39;priority&#39;);</span>
 

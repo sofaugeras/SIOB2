@@ -3516,27 +3516,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_tpVulnerabilitesAuthentification.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7. TP Vulnérabilités liées à l’authentification et à la gestion des sessions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -4503,18 +4482,18 @@ Une TODO List est un procédé qui se veut simple et efficace pour gérer les t�
 <h2 id="211-relation-many-to-many">2.1.1 Relation Many To Many<a class="headerlink" href="#211-relation-many-to-many" title="Permanent link">⚓︎</a></h2>
 <p>On va avoir besoin de déclarer qu'un todo peut appartenir à plusieurs catégories et une catégorie classifie plusieurs todos. La relation est symétrique.</p>
 <p>On ajoute l'espace de noms nécessaire à la gestion de cette relation dans les 2 models.</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use Illuminate\Database\Eloquent\Relations\BelongsToMany;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">use Illuminate\Database\Eloquent\Relations\BelongsToMany;</span>
 </code></pre></div>
 <p>Puis à l'intérieur de la classe, on ajoute les méthodes d'association.</p>
 <p>Dans Todos.php</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">    public function categories(): BelongsToMany</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">    public function categories(): BelongsToMany</span>
 <span class="x">        {</span>
 <span class="x">            return $this-&gt;belongsToMany(Categories::class);</span>
 <span class="x">        }</span>
 </code></pre></div>
 <details class="tips">
 <summary>code complet de Todos.php</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">namespace</span> <span class="nx">App\Models</span><span class="p">;</span>
 
 <span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Factories\HasFactory</span><span class="p">;</span>
@@ -4535,14 +4514,14 @@ Une TODO List est un procédé qui se veut simple et efficace pour gérer les t�
 </code></pre></div>
 </details>
 <p>Dans Categories.php</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">    public function todos(): BelongsToMany</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">    public function todos(): BelongsToMany</span>
 <span class="x">        {</span>
 <span class="x">            return $this-&gt;belongsToMany(Todos::class);</span>
 <span class="x">        }</span>
 </code></pre></div>
 <details class="tips">
 <summary>code complet de catégories.php</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
 <span class="k">namespace</span> <span class="nx">App\Models</span><span class="p">;</span>
 
@@ -4592,7 +4571,7 @@ Peux tu me donner le seeder correspondant ?</p>
 </code></pre></div>
 <details class="tips">
 <summary>Code de CategoriesSeeder</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">namespace</span> <span class="nx">Database\Seeders</span><span class="p">;</span>
 
 <span class="k">use</span> <span class="nx">Illuminate\Database\Seeder</span><span class="p">;</span>
@@ -4627,7 +4606,7 @@ Peux tu me donner le seeder correspondant ?</p>
 <p>On va également ajouter un seeder à la propriété $seeders du fichier DatabaseSeeder.php afin qu'il soit exécuté lors de la commande php artisan db:seed.</p>
 <details class="tips">
 <summary>Code de DatabaseSeeder</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">class DatabaseSeeder extends Seeder</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">class DatabaseSeeder extends Seeder</span>
 <span class="x">{</span>
 <span class="x">    /**</span>
 <span class="x">     * Seed the application&#39;s database.</span>
@@ -4652,13 +4631,13 @@ php artisan migrate:fresh --seed --seeder=CategoriesSeeder
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Générer le controller de Catégorie en ligne de commande.</p>
 <details class="tips">
 <summary>solution au cas où</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">php artisan make:controller CategoriesController</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">php artisan make:controller CategoriesController</span>
 </code></pre></div>
 </details>
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Ajouter le code pour récupérer la liste des catégorie</p>
 <details class="tips">
 <summary>code de categoriesController</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">/**</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">/**</span>
 <span class="x"> * Affiche la liste des catégories.</span>
 <span class="x"> *</span>
 <span class="x"> * @return \Illuminate\Http\Response</span>
@@ -4672,7 +4651,7 @@ php artisan migrate:fresh --seed --seeder=CategoriesSeeder
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Pour afficher la liste des Todos, on utilise le controller Todo. On va donc ajouter à l'appel de la liste des Todos, la liste des catégories. <img alt="‼️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/203c.svg" title=":bangbang:" /> Ne pas oublier de faire les import de librairies nécessaires.</p>
 <details class="tips">
 <summary>code liste() dans todocontroller</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">//Liste</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">//Liste</span>
 <span class="x">public function liste()</span>
 <span class="x">{</span>
 <span class="x">    return view(&quot;home&quot;, [&quot;todos&quot; =&gt; Todos::all(), &quot;categories&quot; =&gt; Categories::all()]);</span>
@@ -4686,7 +4665,7 @@ php artisan migrate:fresh --seed --seeder=CategoriesSeeder
 <p>Dans la liste des Todos</p>
 <details class="tips">
 <summary>Code dans home pour la liste des catégorie</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&lt;!-- Affichage du texte --&gt;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;!-- Affichage du texte --&gt;</span>
 <span class="x">&lt;span&gt;{{ $todo-&gt;texte }}&lt;/span&gt;</span>
 <span class="x">    &lt;!-- Affichage de la catégorie --&gt;</span>
 <span class="x">    &lt;p&gt;Catégories :&lt;/p&gt;</span>
@@ -4701,7 +4680,7 @@ php artisan migrate:fresh --seed --seeder=CategoriesSeeder
 <p>Puis dans le formulaire de saisie d'un Todo</p>
 <details class="tips">
 <summary>Code dans home pour les boites à cocher</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x"> &lt;!-- boites à cocher pour les catégories --&gt;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x"> &lt;!-- boites à cocher pour les catégories --&gt;</span>
 <span class="x">&lt;div class=&quot;form-group&quot;&gt;</span>
 <span class="x">&lt;label&gt;Catégories&lt;/label&gt;</span>
 <span class="x">    @foreach($categories as $categorie)</span>
@@ -4723,7 +4702,7 @@ php artisan migrate:fresh --seed --seeder=CategoriesSeeder
 <details class="tips">
 <summary>Solutions</summary>
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Créer la migration de la table d'association <code>create_categories_todos_table. et supprimer celle de</code>categorise`.</p>
-<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
 <span class="x">{</span>
 <span class="x">    Schema::create(&#39;categories_todos&#39;, function (Blueprint $table) {</span>
 <span class="x">        $table-&gt;integer(&#39;categories_id&#39;);</span>
@@ -4739,7 +4718,7 @@ php artisan migrate:fresh --seed --seeder=CategoriesSeeder
 <span class="x">}</span>
 </code></pre></div>
 <img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Reprendre la migration de la table   <code>catégories</code></p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x"> public function up(): void</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x"> public function up(): void</span>
 <span class="x">{</span>
 <span class="x">    Schema::create(&#39;categories&#39;, function (Blueprint $table) {</span>
 <span class="x">        $table-&gt;integer(&#39;id&#39;);</span>
@@ -4751,7 +4730,7 @@ php artisan migrate:fresh --seed --seeder=CategoriesSeeder
 <span class="x">}</span>
 </code></pre></div>
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Reprendre la migration de la table   <code>Todos</code></p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
 <span class="x">{</span>
 <span class="x">    Schema::create(&#39;todos&#39;, function (Blueprint $table) {</span>
 <span class="x">        $table-&gt;integer(&#39;id&#39;)-&gt;autoIncrement();</span>
@@ -4776,7 +4755,7 @@ On envoie par la vue <code>home</code> un tableau de catégories <code>name="cat
 Lisez un peu de documentation <a href="https://laravel.sillo.org/cours-laravel-10-les-donnees-la-relation-nn/">ici</a> et essayer de l'adapter à votre projet.</p>
 <details class="tips">
 <summary>Solution</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function saveTodo(Request $request){</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">public function saveTodo(Request $request){</span>
 <span class="x">    //....</span>
 <span class="x">        $todo-&gt;save();</span>
 <span class="x">        $todo-&gt;categories()-&gt;attach($cats); /*A ajouter */</span>
@@ -4794,7 +4773,7 @@ Lisez un peu de documentation <a href="https://laravel.sillo.org/cours-laravel-1
 <details class="tips">
 <summary>solution</summary>
 <p>Il faut modifier la migration de Todo pour ajouter la fonction SQL de deleteOnCascade.</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
 <span class="x">{</span>
 <span class="x">    Schema::create(&#39;categories_todos&#39;, function (Blueprint $table) {</span>
 <span class="x">        $table-&gt;integer(&#39;categories_id&#39;);</span>
@@ -4817,7 +4796,7 @@ Lisez un peu de documentation <a href="https://laravel.sillo.org/cours-laravel-1
 <p>Pour utiliser les soft deletes sur vos modèles, vous devez d'abord ajouter le trait softDeletes à votre classe Model Todos.php:</p>
 <details class="tips">
 <summary>code de Todos.php</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
 <span class="k">namespace</span> <span class="nx">App\Models</span><span class="p">;</span>
 
@@ -4846,7 +4825,7 @@ Lisez un peu de documentation <a href="https://laravel.sillo.org/cours-laravel-1
 <p>Ensuite, vous devez ajouter une colonne de type "deleted_at" à votre table. Vous pouvez le faire en ajoutant simplement la date colonne suivante à votre migration :</p>
 <details class="tips">
 <summary>migration Todo</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
 <span class="x">{</span>
 <span class="x">    Schema::create(&#39;todos&#39;, function (Blueprint $table) {</span>
 <span class="x">        $table-&gt;integer(&#39;id&#39;)-&gt;autoIncrement();</span>
@@ -4863,7 +4842,7 @@ Lisez un peu de documentation <a href="https://laravel.sillo.org/cours-laravel-1
 </code></pre></div>
 </details>
 <p>Une fois que vous avez ajouté la colonne, vous pouvez commencer à utiliser la fonctionnalité soft deletes. Pour "supprimer" un enregistrement, en appelant la méthode <code>delete()</code>, cela va mettre à jour la colonne <code>deleted_at</code> avec la date et l'heure actuelles, ce qui marquera l'enregistrement comme <strong>supprimé</strong>. <img alt="❗️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2757.svg" title=":exclamation:" /> Attention, dans notre cas, on ne peut supprimer un ToDo que si il est "terminé". Vous devez donc laisser la structure conditionnelle dans lequel est votre appel de <code>delete()</code>.</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">$todo = Todos::find($id);</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$todo = Todos::find($id);</span>
 <span class="x">        if($todo-&gt;termine == 1){</span>
 <span class="x">            $todo-&gt;delete();</span>
 <span class="x">        }</span>
@@ -4872,7 +4851,7 @@ Lisez un peu de documentation <a href="https://laravel.sillo.org/cours-laravel-1
 <p>Si plusieurs routes ont des informations communes il est possible de les grouper ensemble.</p>
 <details class="tips">
 <summary>Code de web.php</summary>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">    Route::controller(TodosController::class)-&gt;group(function () {</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">    Route::controller(TodosController::class)-&gt;group(function () {</span>
 
 <span class="x">    Route::post(&#39;/action/add&#39;, &#39;saveTodo&#39;)-&gt;name(&#39;todo.save&#39;);</span>
 <span class="x">    Route::get(&#39;/action/done/{id}&#39; , &#39;markAsDone&#39;)-&gt;name(&#39;todo.done&#39;);</span>

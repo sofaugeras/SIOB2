@@ -3531,27 +3531,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_tpVulnerabilitesAuthentification.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7. TP Vulnérabilités liées à l’authentification et à la gestion des sessions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -4671,17 +4650,17 @@
 <ol>
 <li>
 <p><strong>Changer de base de données</strong> (cela la crée si elle n’existe pas) :
-   <div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">use</span><span class="w"> </span><span class="nx">ecommerce</span>
+   <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">use</span><span class="w"> </span><span class="nx">ecommerce</span>
 </code></pre></div></p>
 </li>
 <li>
 <p><strong>Créer une collection et insérer un document</strong> :
-   <div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">insertOne</span><span class="p">({</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Laptop&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">price</span><span class="o">:</span><span class="w"> </span><span class="mf">1200</span><span class="p">,</span><span class="w"> </span><span class="nx">stock</span><span class="o">:</span><span class="w"> </span><span class="mf">50</span><span class="w"> </span><span class="p">})</span>
+   <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">insertOne</span><span class="p">({</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Laptop&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">price</span><span class="o">:</span><span class="w"> </span><span class="mf">1200</span><span class="p">,</span><span class="w"> </span><span class="nx">stock</span><span class="o">:</span><span class="w"> </span><span class="mf">50</span><span class="w"> </span><span class="p">})</span>
 </code></pre></div></p>
 </li>
 <li>
 <p><strong>Lister les collections de la base</strong> :
-   <div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">show</span><span class="w"> </span><span class="nx">collections</span>
+   <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">show</span><span class="w"> </span><span class="nx">collections</span>
 </code></pre></div></p>
 </li>
 </ol>
@@ -4761,7 +4740,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Ecrivez une requête MongoDB pour afficher tous les documents de la collection restaurants. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">()</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">()</span>
 </code></pre></div>
 </div>
 </div>
@@ -4775,7 +4754,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Ecrivez une requête MongoDB pour afficher les champs restaurant_id, name, borough et cuisine pour tous les documents de la collection restaurant. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">restaurant_id</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">borough</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">cuisine</span><span class="o">:</span><span class="mf">1</span><span class="w"> </span><span class="p">}</span>
 <span class="p">)</span>
@@ -4792,7 +4771,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Ecrivez une requête MongoDB pour afficher les champs restaurant_id, name, borough et cuisine, mais excluez le champ _id pour tous les documents de la collection restaurant. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">restaurant_id</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">borough</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">cuisine</span><span class="o">:</span><span class="mf">1</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="nx">_id</span><span class="o">:</span><span class="mf">0</span><span class="p">}</span>
 <span class="p">)</span>
@@ -4809,7 +4788,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Ecrivez une requête MongoDB pour afficher les champs restaurant_id, name, borough et zip code, mais excluez le champ _id pour tous les documents de la collection restaurant. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">restaurant_id</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">borough</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;address.zipcode&quot;</span><span class="o">:</span><span class="mf">1</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="nx">_id</span><span class="o">:</span><span class="mf">0</span><span class="p">}</span>
 <span class="p">)</span>
@@ -4828,7 +4807,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour afficher tous les restaurants du quartier Bronx. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">borough</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bronx&quot;</span><span class="w"> </span><span class="p">}</span>
 <span class="p">)</span>
 </code></pre></div>
@@ -4844,7 +4823,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour afficher les 5 premiers restaurants qui se trouvent dans l'arrondissement du Bronx. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">borough</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bronx&quot;</span><span class="w"> </span><span class="p">}</span>
 <span class="p">).</span><span class="nx">limit</span><span class="p">(</span><span class="mf">5</span><span class="p">)</span>
 </code></pre></div>
@@ -4860,7 +4839,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Ecrivez une requête MongoDB pour afficher les 5 prochains restaurants après avoir ignoré les 5 premiers qui se trouvent dans l'arrondissement du Bronx. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">borough</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bronx&quot;</span><span class="w"> </span><span class="p">}</span>
 <span class="p">).</span><span class="nx">limit</span><span class="p">(</span><span class="mf">5</span><span class="p">).</span><span class="nx">skip</span><span class="p">(</span><span class="mf">5</span><span class="p">)</span>
 </code></pre></div>
@@ -4876,7 +4855,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour trouver les restaurants qui ont obtenu un score supérieur à 90. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">grades</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$elemMatch</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;score&quot;</span><span class="o">:</span><span class="p">{</span><span class="nx">$gt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">90</span><span class="p">}}}});</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">grades</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$elemMatch</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;score&quot;</span><span class="o">:</span><span class="p">{</span><span class="nx">$gt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">90</span><span class="p">}}}});</span>
 </code></pre></div>
 </div>
 </div>
@@ -4890,7 +4869,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour trouver les restaurants qui ont obtenu un score supérieur à 80 mais inférieur à 100. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">grades</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$elemMatch</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;score&quot;</span><span class="o">:</span><span class="p">{</span><span class="nx">$gt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">80</span><span class="p">,</span><span class="w"> </span><span class="nx">$lte</span><span class="w"> </span><span class="o">:</span><span class="mf">100</span><span class="p">}}}});</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">grades</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$elemMatch</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;score&quot;</span><span class="o">:</span><span class="p">{</span><span class="nx">$gt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">80</span><span class="p">,</span><span class="w"> </span><span class="nx">$lte</span><span class="w"> </span><span class="o">:</span><span class="mf">100</span><span class="p">}}}});</span>
 </code></pre></div>
 </div>
 </div>
@@ -4904,7 +4883,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour trouver les restaurants dont la latitude est inférieure à -95.754168. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="s2">&quot;address.coord.0&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$lt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">95.754168</span><span class="p">}});</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="s2">&quot;address.coord.0&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$lt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">95.754168</span><span class="p">}});</span>
 </code></pre></div>
 </div>
 </div>
@@ -4918,7 +4897,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour trouver les restaurants qui ne préparent aucune cuisine « américaine » et leur note est supérieure à 70 et la latitude inférieure à -65.754168. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">       </span><span class="p">{</span><span class="nx">$and</span><span class="o">:</span>
 <span class="w">            </span><span class="p">[</span>
 <span class="w">               </span><span class="p">{</span><span class="s2">&quot;cuisine&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$ne</span><span class="w"> </span><span class="o">:</span><span class="s2">&quot;American &quot;</span><span class="p">}},</span>
@@ -4940,7 +4919,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour trouver les restaurants qui ne préparent aucune cuisine « américaine » et ont obtenu un score supérieur à 70 et situés à une longitude inférieure à -65.754168. Remarque : faites cette requête sans utiliser $ et l'opérateur. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">                   </span><span class="p">{</span>
 <span class="w">                     </span><span class="s2">&quot;cuisine&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$ne</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;American &quot;</span><span class="p">},</span>
 <span class="w">                     </span><span class="s2">&quot;grades.score&quot;</span><span class="w"> </span><span class="o">:</span><span class="p">{</span><span class="nx">$gt</span><span class="o">:</span><span class="w"> </span><span class="mf">70</span><span class="p">},</span>
@@ -4960,7 +4939,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour trouver les restaurants qui ne préparent aucune cuisine « américaine » et qui ont obtenu la note « A » n'appartenant pas à l'arrondissement de Brooklyn. Le document doit être affiché selon la cuisine par ordre décroissant. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="w"> </span><span class="p">{</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                     </span><span class="s2">&quot;cuisine&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$ne</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;American&quot;</span><span class="p">},</span>
 <span class="w">                     </span><span class="s2">&quot;grades.grade&quot;</span><span class="w"> </span><span class="o">:</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
 <span class="w">                     </span><span class="s2">&quot;borough&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$ne</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Brooklyn&quot;</span><span class="p">}</span>
@@ -4979,7 +4958,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour trouver l'identifiant, le nom, le quartier et la cuisine du restaurant pour les restaurants qui contiennent « Wil » comme trois premières lettres de son nom. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">                    </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="sr">/^Wil/</span><span class="p">},</span>
 <span class="w">                    </span><span class="p">{</span>
 <span class="w">                    </span><span class="s2">&quot;restaurant_id&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
@@ -5000,7 +4979,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour trouver l'identifiant, le nom, le quartier et la cuisine du restaurant pour les restaurants qui contiennent « ces » comme trois dernières lettres de son nom. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">                </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="sr">/ces$/</span><span class="p">},</span>
 <span class="w">                </span><span class="p">{</span>
 <span class="w">                </span><span class="s2">&quot;restaurant_id&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
@@ -5021,7 +5000,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour trouver l'identifiant, le nom, le quartier et la cuisine du restaurant pour les restaurants qui contiennent "Reg" sous forme de trois lettres quelque part dans son nom. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="sr">/.*Reg.*/</span><span class="p">},</span>
 <span class="p">{</span>
 <span class="s2">&quot;restaurant_id&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
@@ -5042,7 +5021,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour trouver les restaurants qui appartiennent à l'arrondissement du Bronx et qui ont préparé des plats américains ou chinois. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="p">{</span><span class="w"> </span>
 <span class="s2">&quot;borough&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bronx&quot;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span>
 <span class="nx">$or</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
@@ -5064,7 +5043,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour trouver l'identifiant, le nom, le quartier et la cuisine du restaurant pour les restaurants qui appartiennent au quartier Staten Island ou Queens ou Bronxor Brooklyn. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">            </span><span class="p">{</span><span class="s2">&quot;borough&quot;</span><span class="w"> </span><span class="o">:</span><span class="p">{</span><span class="nx">$in</span><span class="w"> </span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;Staten Island&quot;</span><span class="p">,</span><span class="s2">&quot;Queens&quot;</span><span class="p">,</span><span class="s2">&quot;Bronx&quot;</span><span class="p">,</span><span class="s2">&quot;Brooklyn&quot;</span><span class="p">]}},</span>
 <span class="w">            </span><span class="p">{</span>
 <span class="w">            </span><span class="s2">&quot;restaurant_id&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
@@ -5085,7 +5064,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour trouver l'identifiant, le nom, le quartier et la cuisine du restaurant pour les restaurants qui n'appartiennent pas au quartier Staten Island, Queens ou Bronxor Brooklyn. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">    </span><span class="p">{</span><span class="s2">&quot;borough&quot;</span><span class="w"> </span><span class="o">:</span><span class="p">{</span><span class="nx">$nin</span><span class="w"> </span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;Staten Island&quot;</span><span class="p">,</span><span class="s2">&quot;Queens&quot;</span><span class="p">,</span><span class="s2">&quot;Bronx&quot;</span><span class="p">,</span><span class="s2">&quot;Brooklyn&quot;</span><span class="p">]}},</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">    </span><span class="s2">&quot;restaurant_id&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
@@ -5106,7 +5085,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour trouver l'identifiant, le nom, le quartier et la cuisine du restaurant pour les restaurants qui ont obtenu un score ne dépassant pas 10. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">            </span><span class="p">{</span><span class="s2">&quot;grades.score&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span>
 <span class="w">            </span><span class="p">{</span><span class="w"> </span><span class="nx">$not</span><span class="o">:</span><span class="w"> </span>
 <span class="w">            </span><span class="p">{</span><span class="nx">$gt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">}</span>
@@ -5131,7 +5110,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour trouver l'identifiant, le nom, le quartier et la cuisine du restaurant pour les restaurants qui ont préparé des plats à l'exception de « Américain » et « Chinees » ou le nom du restaurant commence par la lettre « Wil ». </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">    </span><span class="p">{</span><span class="nx">$or</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="sr">/^Wil/</span><span class="p">},</span><span class="w"> </span>
 <span class="w">    </span><span class="p">{</span><span class="s2">&quot;$and&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
@@ -5154,7 +5133,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour trouver l'identifiant, le nom et les notes du restaurant pour les restaurants qui ont obtenu la note "A" et un score de 11 à une date ISO "2014-08-11T00:00:00Z" parmi de nombreuses dates d'enquête. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="w"> </span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="w"> </span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">         </span><span class="s2">&quot;grades.date&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">ISODate</span><span class="p">(</span><span class="s2">&quot;2014-08-11T00:00:00Z&quot;</span><span class="p">),</span><span class="w"> </span>
 <span class="w">         </span><span class="s2">&quot;grades.grade&quot;</span><span class="o">:</span><span class="s2">&quot;A&quot;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span>
@@ -5175,7 +5154,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour trouver l'identifiant, le nom et les notes du restaurant pour les restaurants où le 2e élément du tableau des notes contient une note de "A" et un score de 9 à une date ISO "2014-08-11T00:00:00Z". </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="w"> </span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="w"> </span>
 <span class="w">              </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;grades.1.date&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">ISODate</span><span class="p">(</span><span class="s2">&quot;2014-08-11T00:00:00Z&quot;</span><span class="p">),</span><span class="w"> </span>
 <span class="w">                </span><span class="s2">&quot;grades.1.grade&quot;</span><span class="o">:</span><span class="s2">&quot;A&quot;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span>
 <span class="w">                </span><span class="s2">&quot;grades.1.score&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">9</span>
@@ -5195,7 +5174,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour trouver l'identifiant, le nom, l'adresse et l'emplacement géographique du restaurant pour les restaurants où le 2ème élément du tableau de coordonnées contient une valeur supérieure à 42 et jusqu'à 52. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="w"> </span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="w"> </span>
 <span class="w">              </span><span class="p">{</span><span class="w"> </span>
 <span class="w">                </span><span class="s2">&quot;address.coord.1&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$gt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">42</span><span class="p">,</span><span class="w"> </span><span class="nx">$lte</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">52</span><span class="p">}</span>
 <span class="w">              </span><span class="p">},</span>
@@ -5214,7 +5193,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour organiser le nom des restaurants dans l'ordre croissant avec toutes les colonnes. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">sort</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">});</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">sort</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">});</span>
 </code></pre></div>
 </div>
 </div>
@@ -5228,7 +5207,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour organiser le nom des restaurants en ordre décroissant avec toutes les colonnes. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">sort</span><span class="p">(</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">sort</span><span class="p">(</span>
 <span class="w">                  </span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="o">:-</span><span class="mf">1</span><span class="p">}</span>
 <span class="w">                  </span><span class="p">);</span>
 </code></pre></div>
@@ -5244,7 +5223,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour organiser le nom de la cuisine dans l'ordre croissant et pour ce même arrondissement de cuisine devrait être dans l'ordre décroissant. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">sort</span><span class="p">(</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">sort</span><span class="p">(</span>
 <span class="w">                   </span><span class="p">{</span><span class="s2">&quot;cuisine&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;borough&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">,}</span>
 <span class="w">                  </span><span class="p">);</span>
 </code></pre></div>
@@ -5260,7 +5239,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour savoir si toutes les adresses contiennent la rue ou non. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">             </span><span class="p">{</span><span class="s2">&quot;address.street&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span>
 <span class="w">                 </span><span class="p">{</span><span class="w"> </span><span class="nx">$exists</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
 <span class="w">             </span><span class="p">}</span><span class="w"> </span>
@@ -5278,7 +5257,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB qui sélectionnera tous les documents de la collection de restaurants où la valeur du champ coord est Double. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">            </span><span class="p">{</span><span class="s2">&quot;address.coord&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span>
 <span class="w">               </span><span class="p">{</span><span class="nx">$type</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">}</span>
 <span class="w">            </span><span class="p">}</span>
@@ -5296,7 +5275,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB qui sélectionnera l'identifiant, le nom et les notes du restaurant pour ces restaurants qui renvoie 0 comme reste après avoir divisé le score par 7. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">              </span><span class="p">{</span><span class="s2">&quot;grades.score&quot;</span><span class="w"> </span><span class="o">:</span>
 <span class="w">                 </span><span class="p">{</span><span class="nx">$mod</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">7</span><span class="p">,</span><span class="mf">0</span><span class="p">]}</span>
 <span class="w">              </span><span class="p">},</span>
@@ -5315,7 +5294,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour trouver le nom du restaurant, l'arrondissement, la longitude, l'attitude et la cuisine des restaurants qui contiennent « mon » sous forme de trois lettres quelque part dans leur nom. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">           </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="o">:</span><span class="w"> </span>
 <span class="w">             </span><span class="p">{</span><span class="w"> </span><span class="nx">$regex</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;mon.*&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">$options</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;i&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
 <span class="w">           </span><span class="p">},</span>
@@ -5339,7 +5318,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour trouver le nom du restaurant, l'arrondissement, la longitude et la latitude et la cuisine des restaurants qui contiennent « Mad » comme les trois premières lettres de son nom. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">           </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="o">:</span><span class="w"> </span>
 <span class="w">             </span><span class="p">{</span><span class="w"> </span><span class="nx">$regex</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="sr">/^Mad/i</span><span class="p">,</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
 <span class="w">           </span><span class="p">},</span>

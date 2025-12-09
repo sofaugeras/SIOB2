@@ -3546,27 +3546,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_tpVulnerabilitesAuthentification.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7. TP Vulnérabilités liées à l’authentification et à la gestion des sessions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -4639,14 +4618,14 @@ Son objectif principal est :</p>
 <li>Dans le dossier DVWA/config/, copie le fichier : config.inc.php.dist  →  config.inc.php</li>
 <li>
 <p>Ouvre <code>config.inc.php</code> et ajuste la config :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">$_DVWA[ &#39;db_user&#39; ] = &#39;root&#39;;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$_DVWA[ &#39;db_user&#39; ] = &#39;root&#39;;</span>
 <span class="x">$_DVWA[ &#39;db_password&#39; ] = &#39;&#39;;   // par défaut root n’a PAS de mot de passe sous WAMP</span>
 <span class="x">$_DVWA[ &#39;db_database&#39; ] = &#39;dvwa&#39;;</span>
 </code></pre></div>
 </li>
 <li>
 <p>Activer <code>allow_url_include</code> et <code>gd</code> dans <code>php.ini</code> :   Active/supprime le <code>;</code> si présent</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">allow_url_include = On</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">allow_url_include = On</span>
 <span class="x">allow_url_fopen = On</span>
 <span class="x">extension=gd</span>
 </code></pre></div>
@@ -4692,12 +4671,12 @@ null,concat(first_name,0x0a,last_name,0x0a,user,0x0a,password) from users #</cod
 <h3 id="31-utiliser-des-requetes-preparees-pdo-mysqli-etc">3.1 Utiliser des requêtes préparées (PDO, mysqli, etc.) ✅<a class="headerlink" href="#31-utiliser-des-requetes-preparees-pdo-mysqli-etc" title="Permanent link">⚓︎</a></h3>
 <p><strong>Principe :</strong> au lieu de concaténer directement les entrées utilisateur dans une requête SQL, on prépare une requête avec des paramètres qui seront remplacés de manière sécurisée par la base de données.</p>
 <p>Exemple vulnérable (PHP + mysqli) :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">$sql = &quot;SELECT * FROM users WHERE email = &#39;&quot; . $_POST[&#39;email&#39;] . &quot;&#39; </span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$sql = &quot;SELECT * FROM users WHERE email = &#39;&quot; . $_POST[&#39;email&#39;] . &quot;&#39; </span>
 <span class="x">        AND password = &#39;&quot; . $_POST[&#39;password&#39;] . &quot;&#39;&quot;;</span>
 <span class="x">$result = $conn-&gt;query($sql);</span>
 </code></pre></div>
 <p>Exemple sécurisé (PHP + PDO) :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">$stmt = $pdo-&gt;prepare(&quot;SELECT * FROM users WHERE email = :email AND password = :password&quot;);</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$stmt = $pdo-&gt;prepare(&quot;SELECT * FROM users WHERE email = :email AND password = :password&quot;);</span>
 <span class="x">$stmt-&gt;execute([</span>
 <span class="x">    &#39;:email&#39; =&gt; $_POST[&#39;email&#39;],</span>
 <span class="x">    &#39;:password&#39; =&gt; $_POST[&#39;password&#39;]</span>
@@ -4708,7 +4687,7 @@ null,concat(first_name,0x0a,last_name,0x0a,user,0x0a,password) from users #</cod
 <h3 id="32-echapper-correctement-les-donnees">3.2 Échapper correctement les données ✅<a class="headerlink" href="#32-echapper-correctement-les-donnees" title="Permanent link">⚓︎</a></h3>
 <p>Lorsque les requêtes préparées ne sont pas possibles (ex. scripts rapides), il faut échapper les caractères spéciaux (', ", ;, etc.).</p>
 <p>Avec PHP/MySQLi :</p>
-<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">$email = mysqli_real_escape_string($conn, $_POST[&#39;email&#39;]);</span>
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$email = mysqli_real_escape_string($conn, $_POST[&#39;email&#39;]);</span>
 </code></pre></div>
 ⚠️ Limite : ce n’est pas une solution infaillible, car un oubli ou une mauvaise configuration peut réintroduire une faille. Les requêtes préparées restent la solution recommandée.</p>
 <h3 id="33-appliquer-le-principe-du-moindre-privilege">3.3 Appliquer le principe du moindre privilège ✅<a class="headerlink" href="#33-appliquer-le-principe-du-moindre-privilege" title="Permanent link">⚓︎</a></h3>
@@ -4727,7 +4706,7 @@ null,concat(first_name,0x0a,last_name,0x0a,user,0x0a,password) from users #</cod
 <li>Vérifier qu’un email a un format correct (REGEX, filtre PHP filter_var).</li>
 </ul>
 <p>Exemple en PHP :</p>
-<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">if (!filter_var($_POST[&#39;email&#39;], FILTER_VALIDATE_EMAIL)) {</span>
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">if (!filter_var($_POST[&#39;email&#39;], FILTER_VALIDATE_EMAIL)) {</span>
 <span class="x">    die(&quot;Adresse email invalide !&quot;);</span>
 <span class="x">}</span>
 </code></pre></div>
@@ -4759,27 +4738,27 @@ Que constatez-vous ? A qui appartient cette commande ?</p>
 <h3 id="51-laravel-et-la-protection-par-defaut">5.1 Laravel et la protection par défaut<a class="headerlink" href="#51-laravel-et-la-protection-par-defaut" title="Permanent link">⚓︎</a></h3>
 <p>Laravel utilise Eloquent ORM et le Query Builder, qui intègrent nativement les requêtes préparées.</p>
 <p>Exemple avec Eloquent :
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">User::where(&#39;email&#39;, $email)-&gt;first();</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">User::where(&#39;email&#39;, $email)-&gt;first();</span>
 </code></pre></div>
 👉 Ici, Laravel prépare la requête automatiquement → l’entrée <code>$email</code> est traitée comme une valeur et non comme du SQL.</p>
 <p>Même chose avec le Query Builder :</p>
-<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">DB::table(&#39;users&#39;)-&gt;where(&#39;id&#39;, $id)-&gt;get();</span>
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">DB::table(&#39;users&#39;)-&gt;where(&#39;id&#39;, $id)-&gt;get();</span>
 </code></pre></div>
 👉 Protégé contre l’injection SQL.</p>
 <h3 id="52-alors-injection-impossible">5.2 Alors, injection impossible ?<a class="headerlink" href="#52-alors-injection-impossible" title="Permanent link">⚓︎</a></h3>
 <p>👉 Pas totalement. Laravel protège bien si on utilise correctement Eloquent ou Query Builder.</p>
 <p>Mais on peut réintroduire une faille si :</p>
 <p>a) <strong>On Utilise des requêtes brutes</strong> (raw queries)
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">DB::select(&quot;SELECT * FROM users WHERE email = &#39;$email&#39;&quot;);</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">DB::select(&quot;SELECT * FROM users WHERE email = &#39;$email&#39;&quot;);</span>
 </code></pre></div>
 ➡️ Ici, on retombe exactement dans la vulnérabilité classique.</p>
 <p>Laravel propose une variante plus sûre :
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">DB::select(&quot;SELECT * FROM users WHERE email = ?&quot;, [$email]);</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">DB::select(&quot;SELECT * FROM users WHERE email = ?&quot;, [$email]);</span>
 </code></pre></div>
 👉 Ici, c’est une requête préparée. 👏👏👏</p>
 <p>b) <strong>Mauvaise utilisation de fonctions “raw”</strong></p>
 <p>Certaines méthodes permettent d’injecter du SQL “pur” :
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">DB::table(&#39;users&#39;)</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">DB::table(&#39;users&#39;)</span>
 <span class="x">  -&gt;whereRaw(&quot;email = &#39;$email&#39;&quot;)</span>
 <span class="x">  -&gt;get();</span>
 </code></pre></div>

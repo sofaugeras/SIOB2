@@ -3371,27 +3371,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_tpVulnerabilitesAuthentification.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7. TP Vulnérabilités liées à l’authentification et à la gestion des sessions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -4370,7 +4349,7 @@
 </code></pre></div>
 <p>Avez-vous identifié un problème de sécurité ? Si oui, lequel ?</p>
 <p>À partir de l'analyse des logs, vous devez maintenant trouver où se trouve la faille dans le code source de votre application. Pour cela, vous avez à votre disposition les éléments suivants (code source projet Laravel) :</p>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>ls<span class="w"> </span>-l
+<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>ls<span class="w"> </span>-l
 app/
 <span class="w">    </span>Console/
 <span class="w">    </span>Exceptions/
@@ -4397,7 +4376,7 @@ routes/
 storage/
 tests/
 </code></pre></div>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="c1">// Routeur de l&#39;application</span>
 
 <span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="s1">&#39;HomeController@index&#39;</span><span class="p">);</span>
@@ -4408,7 +4387,7 @@ tests/
 <span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/admin/users&#39;</span><span class="p">,</span> <span class="s1">&#39;UserController@index&#39;</span><span class="p">);</span>
 </code></pre></div>
 <p>Quels sont les fichiers à analyser pour trouver la faille de sécurité ?</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="c1">// FactureController.php</span>
 <span class="k">class</span> <span class="nc">FactureController</span> <span class="k">extends</span> <span class="nx">Controller</span>
 <span class="p">{</span>
@@ -4449,7 +4428,7 @@ tests/
 </code></pre></div>
 <p>Les logs vous semblent-ils suspects ? Si oui, pourquoi ?</p>
 <p>Corriger le code de la page <code>search.php</code> pour éviter cette faille.</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="nv">$query</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;query&#39;</span><span class="p">];</span>
 <span class="k">echo</span> <span class="s2">&quot;Résultat de la recherche pour </span><span class="si">$query</span><span class="s2">&quot;</span><span class="p">;</span>
 <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM articles WHERE title LIKE &#39;%?%&#39;&quot;</span><span class="p">);</span>
@@ -4465,7 +4444,7 @@ tests/
 <h2 id="faille-1">Faille 1<a class="headerlink" href="#faille-1" title="Permanent link">⚓︎</a></h2>
 <p>L'auditeur a trouvé une faille de type XSS (Cross Site Scripting). Il a réussi à afficher une boîte de dialogue sur le navigateur de l'utilisateur.</p>
 <p>Le code source ou la faille se trouve est le suivant :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]))</span> <span class="p">{</span>
     <span class="nv">$name</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">];</span>
     <span class="nv">$email</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">];</span>
@@ -4492,19 +4471,19 @@ tests/
 <p>::: tip Rappel</p>
 <p>Filtrer les entrées utilisateur avec la fonction <code>htmlspecialchars()</code>. Cette fonction permet de convertir les caractères spéciaux en entités HTML.</p>
 <p>Exemple :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">// Échappe les caractères spéciaux. C&#39;est à dire que les caractères spéciaux seront convertis en entités HTML.</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Échappe les caractères spéciaux. C&#39;est à dire que les caractères spéciaux seront convertis en entités HTML.</span>
 <span class="x">$name = htmlspecialchars($_POST[&#39;name&#39;]);</span>
 </code></pre></div>
 <p>Autre solution, utiliser la fonction <code>strip_tags()</code>. Cette fonction permet de supprimer les balises HTML.</p>
 <p>Exemple :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">// Supprime les balises HTML</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Supprime les balises HTML</span>
 <span class="x">$name = strip_tags($_POST[&#39;name&#39;]);</span>
 </code></pre></div>
 <p>:::</p>
 <p>Proposez une solution pour corriger cette faille.</p>
 <h2 id="faille-11-les-guards-middleware">Faille 1.1 : Les Guards / Middleware<a class="headerlink" href="#faille-11-les-guards-middleware" title="Permanent link">⚓︎</a></h2>
 <p>L'auditeur vous demande d'observer le code PHP suivant :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="c1">// Routeur de l&#39;application</span>
 
 <span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="s1">&#39;HomeController@index&#39;</span><span class="p">);</span>
@@ -4524,7 +4503,7 @@ tests/
 <h2 id="faille-2">Faille 2<a class="headerlink" href="#faille-2" title="Permanent link">⚓︎</a></h2>
 <p>L'auditeur a trouvé une faille de type Injection SQL. Il a réussi à afficher les données de la base de données.</p>
 <p>Le code source ou la faille se trouve est le suivant :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
 <span class="nv">$id</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">];</span>
 <span class="nv">$request</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM users WHERE id = </span><span class="si">$id</span><span class="s2">&quot;</span><span class="p">;</span>
@@ -4552,7 +4531,7 @@ tests/
 <p>Proposez une solution pour corriger cette faille.</p>
 <h2 id="faille-2-variante">Faille 2 variante<a class="headerlink" href="#faille-2-variante" title="Permanent link">⚓︎</a></h2>
 <p>L'auditeur a trouvé une faille de type Injection SQL. Observer le code source suivant :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
 <span class="nv">$id</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">];</span>
 <span class="nv">$request</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM users WHERE id = </span><span class="si">$id</span><span class="s2">&quot;</span><span class="p">;</span>
@@ -4576,7 +4555,7 @@ tests/
 <h2 id="faille-3">Faille 3<a class="headerlink" href="#faille-3" title="Permanent link">⚓︎</a></h2>
 <p>L'auditeur a trouvé une faille de type CSRF (Cross Site Request Forgery). Il a réussi via un email à faire supprimer des utilisateurs par l'administrateur de la plateforme.</p>
 <p>Le code source ou la faille se trouve est le suivant :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]))</span> <span class="p">{</span>
     <span class="nv">$request</span> <span class="o">=</span> <span class="s2">&quot;DELETE FROM user WHERE id = ?&quot;</span><span class="p">;</span>
     <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="nv">$request</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]]);</span>
@@ -4596,7 +4575,7 @@ tests/
 <p>::: tip Rappel</p>
 <p>Le principe de la faille CSRF est de faire une requête à l'insu de l'utilisateur. Pour cela, il faut que l'utilisateur soit connecté à votre application. Ensuite, vous devez faire une requête à l'insu de l'utilisateur.</p>
 <p>Pour corriger cette faille, vous devez ajouter un token dans le formulaire (ou en SESSION). Ce token doit être généré aléatoirement et doit être vérifié lors de l'accès à la page.</p>
-<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">// Génère un token aléatoire</span>
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Génère un token aléatoire</span>
 <span class="x">$_SESSION[&#39;token&#39;] = bin2hex(random_bytes(32));</span>
 
 <span class="x">// Vérifier le token</span>
@@ -4610,7 +4589,7 @@ tests/
 <h2 id="faille-4">Faille 4<a class="headerlink" href="#faille-4" title="Permanent link">⚓︎</a></h2>
 <p>L'auditeur a trouvé une faille de type Inclusion de fichier. Il a réussi à afficher le contenu du fichier <code>config.php</code>.</p>
 <p>Le code source ou la faille se trouve est le suivant :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">include</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;page&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s1">&#39;.php&#39;</span><span class="p">;</span>
 
 <span class="c1">// Exemple : index.php?page=config</span>
@@ -4623,7 +4602,7 @@ tests/
 <h2 id="faille-5">Faille 5<a class="headerlink" href="#faille-5" title="Permanent link">⚓︎</a></h2>
 <p>L'auditeur a trouvé une faille de type bruteforce.</p>
 <p>Le code source ou la faille se trouve est le suivant :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
 <span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]))</span> <span class="p">{</span>
     <span class="nv">$password</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">];</span>
@@ -4657,7 +4636,7 @@ tests/
 <h2 id="faille-6">Faille 6<a class="headerlink" href="#faille-6" title="Permanent link">⚓︎</a></h2>
 <p>L'attaquant a trouvé une faille de type manque de contrôle d'accès. Il a réussi à accéder à une page qui n'est pas accessible aux utilisateurs.</p>
 <p>Le code source ou la faille se trouve est le suivant :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">// Routeur de l&#39;application</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Routeur de l&#39;application</span>
 
 <span class="cp">&lt;?php</span>
 
@@ -4669,7 +4648,7 @@ tests/
 <p>Proposez une solution pour corriger cette faille.</p>
 <h2 id="faille-7">Faille 7<a class="headerlink" href="#faille-7" title="Permanent link">⚓︎</a></h2>
 <p>Identifiez les failles de sécurité dans le code source suivant :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
 <span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]))</span> <span class="p">{</span>
     <span class="nv">$name</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">];</span>
@@ -4682,7 +4661,7 @@ tests/
 <p>Proposez une solution pour corriger cette faille.</p>
 <h2 id="faille-8">Faille 8<a class="headerlink" href="#faille-8" title="Permanent link">⚓︎</a></h2>
 <p>Identifiez les failles de sécurité dans le code source suivant :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
 <span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]))</span> <span class="p">{</span>
     <span class="nv">$name</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">];</span>
@@ -4711,7 +4690,7 @@ tests/
 <p>:::</p>
 <h2 id="faille-9">Faille 9<a class="headerlink" href="#faille-9" title="Permanent link">⚓︎</a></h2>
 <p>Identifiez les failles de sécurité dans le code source suivant :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
 <span class="k">echo</span> <span class="s2">&quot;&lt;h2&gt;Bonjour </span><span class="si">$_GET[&#39;name&#39;]</span><span class="s2">&lt;/h2&gt;&quot;</span><span class="p">;</span>
 
@@ -4723,7 +4702,7 @@ tests/
 <p>L'auditeur a trouvé une faille de type XSS Stockée. Il a réussi à afficher une boîte de dialogue sur le navigateur des personnes visitant le site.</p>
 <p>Le code source ou la faille se trouve est le suivant :</p>
 <p>Page affichant les commentaires :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="c1">// Récupère les commentaires</span>
 <span class="nv">$request</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM comments&quot;</span><span class="p">;</span>
 <span class="nv">$comments</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="nv">$request</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">fetchAll</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_ASSOC</span><span class="p">);</span>
@@ -4767,7 +4746,7 @@ tests/
     <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Login&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
 <span class="nv">$username</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
 <span class="nv">$password</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
@@ -4785,7 +4764,7 @@ tests/
 <p>L'auditeur vous indique que vous devez mettre en place en place un token afin d'éviter le rejeu de requête.</p>
 <p>::: tip Protection CSRF / Token</p>
 <p>Pour protéger votre application contre les attaques CSRF, vous devez ajouter un token CSRF dans le formulaire. Ce token doit être généré aléatoirement et doit être vérifié lors de l'accès à la page.</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">// Vérifier le token</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Vérifier le token</span>
 <span class="x">if (isset($_POST[&#39;token&#39;]) &amp;&amp; $_POST[&#39;token&#39;] === $_SESSION[&#39;token&#39;]) {</span>
 <span class="x">    // Nous avons consommé le token, nous pouvons le supprimer</span>
 <span class="x">    unset($_SESSION[&#39;token&#39;]);</span>
@@ -4825,7 +4804,7 @@ tests/
 </code></pre></div>
 <p>Est-ce que vous voyez la potentielle faille de sécurité ?</p>
 <p>Le code de création d'un utilisateur est le suivant :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="c1">// Création d&#39;un utilisateur</span>
 <span class="nv">$username</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
 <span class="nv">$password</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
@@ -4835,7 +4814,7 @@ tests/
 
 <span class="cp">?&gt;</span>
 </code></pre></div>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="c1">// Vérification du mot de passe</span>
 <span class="nv">$username</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
 <span class="nv">$password</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
@@ -4854,10 +4833,10 @@ tests/
 <p>Proposez une solution pour corriger cette faille.</p>
 <p>::: details Documentation</p>
 <p>Pour stocker un mot de passe, vous devez utiliser la fonction <code>password_hash()</code>.</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">$password = password_hash($_POST[&#39;password&#39;], PASSWORD_DEFAULT);</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$password = password_hash($_POST[&#39;password&#39;], PASSWORD_DEFAULT);</span>
 </code></pre></div>
 <p>Pour vérifier un mot de passe, vous devez utiliser la fonction <code>password_verify()</code>.</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">if (password_verify($_POST[&#39;password&#39;], $user[&#39;password&#39;])) {</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">if (password_verify($_POST[&#39;password&#39;], $user[&#39;password&#39;])) {</span>
 <span class="x">    // Le mot de passe est valide</span>
 <span class="x">}</span>
 </code></pre></div>
@@ -4865,7 +4844,7 @@ tests/
 <h2 id="double-authentification">Double authentification<a class="headerlink" href="#double-authentification" title="Permanent link">⚓︎</a></h2>
 <p>L'auditeur a trouvé une faille de sécurité dans votre application. Il vous demande de mettre en place une double authentification pour renforcer la sécurité de votre application.</p>
 <p>Il vous encourage à mettre en place une authentification à deux facteurs (2FA) de type matériel (une application mobile), pour cela il vous indique que vous pouvez utiliser le code de la librairie 2FAAuth. Celle-ci s'utilise de la manière suivante :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">$doubleAuth = new 2FAAuth(&quot;Nom de l&#39;application&quot;);</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$doubleAuth = new 2FAAuth(&quot;Nom de l&#39;application&quot;);</span>
 <span class="x">$user = User::findByLogin($login, $password);</span>
 <span class="x">$doubleAuth-&gt;setUser($user);</span>
 <span class="x">$code = $_POST[&#39;code&#39;] ?? null;</span>
@@ -4885,7 +4864,7 @@ tests/
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div>
 <h3 id="page-de-gestion-de-lauthentification">Page de gestion de l'authentification<a class="headerlink" href="#page-de-gestion-de-lauthentification" title="Permanent link">⚓︎</a></h3>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
 <span class="c1">// Page de gestion de l&#39;authentification</span>
 
@@ -4909,7 +4888,7 @@ tests/
 </code></pre></div>
 <p>Il vous demande de l'aider à résoudre ce problème. Voici l'extrait du code source de l'appel à l'API :</p>
 <p>Client : </p>
-<div class="language-js highlight"><span class="filename">🍵 javaScript</span><pre><span></span><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.example.com/data&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.example.com/data&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="p">,</span>
 <span class="w">    </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;application</span>
@@ -4918,7 +4897,7 @@ tests/
 <span class="p">});</span>
 </code></pre></div>
 <p>Serveur :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="c1">// Extrait du code du routeur</span>
 <span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="s1">&#39;HomeController@index&#39;</span><span class="p">);</span>
 <span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/about&#39;</span><span class="p">,</span> <span class="s1">&#39;HomeController@about&#39;</span><span class="p">);</span>

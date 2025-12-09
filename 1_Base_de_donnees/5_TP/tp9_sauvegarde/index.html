@@ -3462,27 +3462,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_tpVulnerabilitesAuthentification.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7. TP Vulnérabilités liées à l’authentification et à la gestion des sessions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -4481,7 +4460,7 @@
 </details>
 <h4 id="21-sauvegarde-avec-mysqldump">2.1 Sauvegarde avec <code>mysqldump</code><a class="headerlink" href="#21-sauvegarde-avec-mysqldump" title="Permanent link">⚓︎</a></h4>
 <p>👉 Expliquer la commande de base pour sauvegarder une base de données </p>
-<p><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>mysqldump<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>tp_sauvegarde<span class="w"> </span>&gt;<span class="w"> </span>sauvegarde_tp.sql
+<p><div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>mysqldump<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>tp_sauvegarde<span class="w"> </span>&gt;<span class="w"> </span>sauvegarde_tp.sql
 </code></pre></div>
 <strong>note</strong> : le mot de passe demandé à l'execution de la commande est celui de la base de données (associé au <code>root</code>)</p>
 <p><strong>indication</strong> : lire la <a href="https://dev.mysql.com/doc/refman/8.4/en/mysqldump.html" target="blank">documentation</a></p>
@@ -4500,7 +4479,7 @@
 <details class="question">
 <summary>proposition</summary>
 <p>Réaliser une sauvegarde contenant uniquement la structure :
-  <div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>mysqldump<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>--no-data<span class="w"> </span>tp_sauvegarde<span class="w"> </span>&gt;<span class="w"> </span>structure_tp.sql
+  <div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>mysqldump<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>--no-data<span class="w"> </span>tp_sauvegarde<span class="w"> </span>&gt;<span class="w"> </span>structure_tp.sql
 </code></pre></div></p>
 </details>
 <h4 id="22-simuler-une-perte-de-donnees">2.2 Simuler une perte de données<a class="headerlink" href="#22-simuler-une-perte-de-donnees" title="Permanent link">⚓︎</a></h4>
@@ -4518,7 +4497,7 @@
 </details>
 <h4 id="23-restauration-des-donnees">2.3 Restauration des données<a class="headerlink" href="#23-restauration-des-donnees" title="Permanent link">⚓︎</a></h4>
 <p>👉 Restaurer la base à partir de la sauvegarde :
-   <div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>mysql<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>tp_sauvegarde<span class="w"> </span>&lt;<span class="w"> </span>sauvegarde_tp.sql
+   <div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>mysql<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>tp_sauvegarde<span class="w"> </span>&lt;<span class="w"> </span>sauvegarde_tp.sql
 </code></pre></div>
 👉 Vérifier que les données sont restaurées :
    <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">logs</span><span class="p">;</span>
@@ -4581,13 +4560,13 @@ mysqldump -u <span class="nv">%MYSQL_USER%</span> -p<span class="nv">%MYSQL_PASS
 <p>❓ Donner une commande sauvegarder 2 bases de données en même temps.</p>
 <details class="question">
 <summary>proposition</summary>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>mysqldump<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>--databases<span class="w"> </span>tp_sauvegarde<span class="w"> </span>autre_base<span class="w"> </span>&gt;<span class="w"> </span>multi_backup.sql
+<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>mysqldump<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>--databases<span class="w"> </span>tp_sauvegarde<span class="w"> </span>autre_base<span class="w"> </span>&gt;<span class="w"> </span>multi_backup.sql
 </code></pre></div>
 </details>
 <p>❓  Donner une commande pour sauvegarder et compresser la sauvegarde :</p>
 <details class="question">
 <summary>proposition</summary>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>mysqldump<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>tp_sauvegarde<span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>sauvegarde_tp.sql.gz
+<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>mysqldump<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>tp_sauvegarde<span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>sauvegarde_tp.sql.gz
 </code></pre></div>
 </details>
 <div class="admonition info">
@@ -4605,7 +4584,7 @@ mysqldump -u <span class="nv">%MYSQL_USER%</span> -p<span class="nv">%MYSQL_PASS
 <li><strong>Compression des sauvegardes :</strong><ul>
 <li>Ajoutez une étape de compression pour économiser de l'espace :</li>
 <li>Sous Linux :
-    <div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>mysqldump<span class="w"> </span>...<span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>sauvegarde.sql.gz
+    <div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>mysqldump<span class="w"> </span>...<span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>sauvegarde.sql.gz
 </code></pre></div></li>
 <li>Sous Windows, utilisez un outil comme 7-Zip dans le script.</li>
 </ul>

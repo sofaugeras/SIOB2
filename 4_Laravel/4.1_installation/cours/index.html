@@ -3381,27 +3381,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_tpVulnerabilitesAuthentification.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7. TP Vulnérabilités liées à l’authentification et à la gestion des sessions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -4403,7 +4382,7 @@ L’installateur vous demandera où se trouve php.exe (en général : <code>C:\w
 activer la ligne extension=php_openssl.dll  en visualisant les extensions PHP de votre WAMP.</p>
 </details>
 <p>Composer a besoin d'un fichier <code>composer.json</code> associé. Ce fichier contient les instructions pour Composer : les dépendances, les classes à charger automatiquement... Voici un extrait de ce fichier pour Laravel :</p>
-<p><div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">{</span>
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">{</span>
 <span class="x">    &quot;name&quot;: &quot;laravel/laravel&quot;,</span>
 <span class="x">    &quot;description&quot;: &quot;The Laravel Framework.&quot;,</span>
 <span class="x">    &quot;keywords&quot;: [&quot;framework&quot;, &quot;laravel&quot;],</span>
@@ -4556,14 +4535,14 @@ Vous avez défini votre première variable c'est bien. Mais pour l'instant rien 
 <br />
 Pour que quelque chose s’affiche :<br /></p>
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Éditer le fichier routes/web.php, la ligne Route en :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">Route::get(&#39;/welcome&#39;, function () {</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">Route::get(&#39;/welcome&#39;, function () {</span>
 <span class="x">    return view(&#39;welcome&#39;, [&#39;titre&#39; =&gt; &#39;mon premier exemple.&#39;]);</span>
 <span class="x">})-&gt; name(&#39;welcome&#39;);</span>
 <span class="x">ou</span>
 <span class="x">Route::view(&#39;/welcome&#39;, &#39;welcome&#39;, [&#39;titre&#39; =&gt; &#39;mon premier exemple.&#39;]);</span>
 </code></pre></div>
 <p>💡 Vous pouvez également appeler des fonctions dans les templates, exemple <code>{{ time() }}</code>. Tester cette fonction en ajoutant :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&lt;p&gt;Le Timestamp est {{ time() }}&lt;/p&gt;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;p&gt;Le Timestamp est {{ time() }}&lt;/p&gt;</span>
 </code></pre></div>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
@@ -4597,14 +4576,14 @@ La liste des routes se trouve dans le fichier <code>routes/web.php</code> d’un
 <p>Il existe plusieurs méthodes <a href="https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Méthodes">http</a> auxquelles le serveur peut répondre.<br /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">Route :: get($URI, function()) ;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">Route :: get($URI, function()) ;</span>
 <span class="x">Route :: post($URI, function()) ;</span>
 <span class="x">Route :: put($URI, function()) ;</span>
 <span class="x">Route :: delete($URI, function()) ;</span>
 </code></pre></div>
 </div>
 <p>Pour tester le fonctionnement nous allons ajouter une nouvelle Route dans le projet de démonstration. Nous allons donc ajouter dans le fichier <code>routes/web.php</code> :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">Route::get(&#39;/ping&#39;, function () {</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">Route::get(&#39;/ping&#39;, function () {</span>
 <span class="x">    return &quot;pong&quot;;</span>
 <span class="x">});</span>
 </code></pre></div>
@@ -4625,7 +4604,7 @@ La liste des routes se trouve dans le fichier <code>routes/web.php</code> d’un
 <p>On pourra vouloir regrouper toutes les routes ayant les mêmes fonctionnalités sous un même chemin. On utilisera alors la notion de <a href="https://laravel.com/docs/10.x/routing#route-groups">groupe de routes</a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">Route::middleware([&#39;first&#39;, &#39;second&#39;])-&gt;group(function () {</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">Route::middleware([&#39;first&#39;, &#39;second&#39;])-&gt;group(function () {</span>
 <span class="x">    Route::get(&#39;/&#39;, function () {</span>
 <span class="x">        // Uses first &amp; second middleware...</span>
 <span class="x">    });</span>
@@ -4639,7 +4618,7 @@ La liste des routes se trouve dans le fichier <code>routes/web.php</code> d’un
 <h2 id="parametres-des-routes">Paramètres des routes<a class="headerlink" href="#parametres-des-routes" title="Permanent link">⚓︎</a></h2>
 <p>Il est parfois intéressant de capturer certaines parties de l’URI d’une route pour la traiter ensuite. <br /></p>
 <p>Par exemple, dans le cas d’une boutique en ligne, on veut afficher la page de l’article 1, ou la page de l’article 2 …. Il peut être intéressant de capturer l’identifiant de l’article dans l’URI pour rechercher et afficher le descriptif correspondant.</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">Route::get(&#39;article/{n}&#39;, function($n) {</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">Route::get(&#39;article/{n}&#39;, function($n) {</span>
 <span class="x">    //$article= get_article($id)</span>
 <span class="x">    //return ‘descriptif de l article :’.$article-&gt;text</span>
 <span class="x">     return view(&#39;article&#39;)-&gt;with(&#39;numero&#39;, $n);</span>
@@ -4652,7 +4631,7 @@ La liste des routes se trouve dans le fichier <code>routes/web.php</code> d’un
 </div>
 <h2 id="ordre-des-routes">Ordre des routes :<a class="headerlink" href="#ordre-des-routes" title="Permanent link">⚓︎</a></h2>
 <p>Les routes sont analysée dans leur ordre dans le fichier des routes.<br />
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">Route::get(&#39;{n}&#39;, function($n) {</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">Route::get(&#39;{n}&#39;, function($n) {</span>
 <span class="x">return &#39;Je suis la page &#39; . $n . &#39; !&#39;;</span>
 <span class="x">});</span>
 
@@ -4777,7 +4756,7 @@ La liste des routes se trouve dans le fichier <code>routes/web.php</code> d’un
 <h3 id="utiliser-le-layout-dans-welcomebladephp">Utiliser le layout dans welcome.blade.php<a class="headerlink" href="#utiliser-le-layout-dans-welcomebladephp" title="Permanent link">⚓︎</a></h3>
 <p>Documentation sur les templates <a href="https://laravel.com/docs/10.x/blade">https://laravel.com/docs/10.x/blade</a></p>
 <p>Maintenant que nous avons notre template de base nous allons l’utiliser dans le template « Welcome ». Remplacer le contenu de <code>resources/views/welcome.blade.php</code> par :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">@extends(&#39;layouts.base&#39;)</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">@extends(&#39;layouts.base&#39;)</span>
 
 <span class="x">@section(&#39;title&#39;, &#39;Bienvenue&#39;)</span>
 
@@ -4813,7 +4792,7 @@ La liste des routes se trouve dans le fichier <code>routes/web.php</code> d’un
 <p>Dans un premier temps on dit qu'on veut utiliser le template avec @extends et le nom du template "template". Ensuite on remplit les zones prévues dans le template grâce à la syntaxe <code>@section</code> en précisant le nom de l'emplacement et en fermant avec <code>@endsection</code> . </p>
 </div>
 <div class="tabbed-block">
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">@extends(&#39;layouts/base&#39;)</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">@extends(&#39;layouts/base&#39;)</span>
 <span class="x">@section(&#39;title&#39;, &#39;Bienvenue&#39;)</span>
 
 <span class="x">@section(&#39;content&#39;)</span>

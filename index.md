@@ -25,20 +25,18 @@
 
 !!! warning "Actu SIO2 SLAM"
 
-    📌 Thème en cours B2 :  <br />
-    ⌛️ A venir B2 : <br />
+    📌 Thème en cours B2 : [CI - les tests](./5_devops/5.1_notionDevops/3_tests.md) <br />
+    ⌛️ A venir B2 : Après le stage ... <br />
 
-    📌 Thème en cours B3 :  <br />
-    ⌛️ A venir B3 :  <br />
-    📣 Exposé : Analyse de cas Cyber -> Prochaine date : Mardi 9 décembre
-    📣 Etude de cas de 4h : Mercredi 10 décembre 8h-12h
+    📌 Thème en cours B3 : [Manque de contrôle d'accès au niveaau fonctionnel](./6_Cybersécurité/6.2_TP/5_tpManqueControleAccesFonctionnel.md) <br />
+    ⌛️ A venir B3 : Après le stage ...<br />
 
     📅 Stage SIO2 : lundi 5 janvier - vendredi 13 février 2026<br />
 
     🌟 Ecrits BTS : du 18 au 21 mai 2026
 
 !!! question "Exposé SIO2"
-    📣 ^^liste des exposés^^ : prochaine date : Mardi 2 décembre
+    📣 ^^liste des exposés^^ : prochaine date : Après le stage ...
 
     :arrow_forward: Analyse de cas Cyber : <br />
     Analyser une attaque Cyber connue et documentée : point d'entrée, impacts de l'attaque, reprise de l'activité, actions à postériori
@@ -51,9 +49,9 @@
 
     |Date|Nom|Thème|
     |:--:|:--:|:--:|
-    | 2/12 |Elouan| Data i/o |
-    | 2/12 |Alexandre| MOVEit  |
-    | 2/12 |Maël| Ursaff |
+    |   |Elouan|   |
+    |   |Alexandre|    |
+    |   |Maël|   |
    
 ??? note "🚨 *Thèmes traités B2*"
     - [Rappel Base de données : Anabase](./1_Base_de_donnees/5_TP/tp7_anabase.md)<br />
@@ -63,6 +61,7 @@
     - [Laravel : Gestion des catégories](./4_Laravel/4.2_toDo/4.2.2_Ajout_catégorie.md)
     - [Laravel : Gestion des listes](./4_Laravel/4.2_toDo/4.2.4_GestionListes.md)
     - [Intégration continue : TP avec laravel](./5_devops/5.1_notionDevops/2_ci.md)
+    - [Intégration continue : les tests](./5_devops/5.1_notionDevops/3_tests.md)
 
 ??? note "🚨 *Thèmes traités B3*"
     - [Rappel MOOC ANSSI](./6_Cybersécurité/3_hygiene_Cyber/6.3.1_cours/1_recoANSII.md)<br />

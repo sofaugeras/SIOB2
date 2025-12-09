@@ -3462,27 +3462,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_tpVulnerabilitesAuthentification.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7. TP Vulnérabilités liées à l’authentification et à la gestion des sessions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -4456,14 +4435,14 @@ Son objectif principal est :</p>
 <li>Dans le dossier DVWA/config/, copie le fichier : config.inc.php.dist  →  config.inc.php</li>
 <li>
 <p>Ouvre <code>config.inc.php</code> et ajuste la config :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">$_DVWA[ &#39;db_user&#39; ] = &#39;root&#39;;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$_DVWA[ &#39;db_user&#39; ] = &#39;root&#39;;</span>
 <span class="x">$_DVWA[ &#39;db_password&#39; ] = &#39;&#39;;   // par défaut root n’a PAS de mot de passe sous WAMP</span>
 <span class="x">$_DVWA[ &#39;db_database&#39; ] = &#39;dvwa&#39;;</span>
 </code></pre></div>
 </li>
 <li>
 <p>Activer <code>allow_url_include</code> et <code>gd</code> dans <code>php.ini</code> :   Active/supprime le <code>;</code> si présent</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">allow_url_include = On</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">allow_url_include = On</span>
 <span class="x">allow_url_fopen = On</span>
 <span class="x">extension=gd</span>
 </code></pre></div>

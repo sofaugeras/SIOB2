@@ -3371,27 +3371,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_tpVulnerabilitesAuthentification.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7. TP Vulnérabilités liées à l’authentification et à la gestion des sessions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -4497,13 +4476,13 @@ Elles apparaissent dans l’onglet Réseau <strong>sans aucune protection</stron
 <li>Voir quel type de fichier est accepté</li>
 <li>Essayer d’envoyer un fichier contenant :</li>
 </ol>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="s2">&quot;Exploit OK&quot;</span><span class="p">;</span> <span class="cp">?&gt;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="s2">&quot;Exploit OK&quot;</span><span class="p">;</span> <span class="cp">?&gt;</span>
 </code></pre></div>
 <ol>
 <li>Tenter d’accéder au fichier via l’URL</li>
 <li>Modifier le fichier pour afficher l’arborescence :</li>
 </ol>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="nb">print_r</span><span class="p">(</span><span class="nb">scandir</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">));</span> <span class="cp">?&gt;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="nb">print_r</span><span class="p">(</span><span class="nb">scandir</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">));</span> <span class="cp">?&gt;</span>
 </code></pre></div>
 <ol>
 <li>Rechercher les fichiers sensibles (config, accès base, etc.)</li>
@@ -4580,7 +4559,7 @@ Un fichier .php appelé via l’URL est exécuté par Apache → Cela prouve une
 <p>Utiliser <code>highlight_file()</code> pour les afficher :</p>
 </li>
 </ol>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="nb">highlight_file</span><span class="p">(</span><span class="s1">&#39;config.php&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="nb">highlight_file</span><span class="p">(</span><span class="s1">&#39;config.php&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span>
 </code></pre></div>
 <ol>
 <li>Tenter d’afficher la BDD via un script PHP</li>
@@ -4644,7 +4623,7 @@ Nous allons profiter d'utiliser le protocole <code>https</code> en local pour po
 <li>Installer mkcert</li>
 <li>Exécuter :</li>
 </ol>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>mkcert<span class="w"> </span>-install
+<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>mkcert<span class="w"> </span>-install
 mkcert<span class="w"> </span>localhost
 </code></pre></div>
 <p>→ génère :</p>
@@ -4657,7 +4636,7 @@ mkcert<span class="w"> </span>localhost
 <p>Activer SSL dans Apache (port 443) :</p>
 </li>
 </ul>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>a2enmod<span class="w"> </span>ssl
+<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>a2enmod<span class="w"> </span>ssl
 </code></pre></div>
 <ol>
 <li>Modifier <code>default-ssl.conf</code> pour y placer les chemins des certificats</li>
@@ -4691,11 +4670,11 @@ Il protège uniquement le transit, pas le serveur.</p>
 <h4 id="622-hachage-robuste-des-mots-de-passe">6.2.2 Hachage robuste des mots de passe 🔑<a class="headerlink" href="#622-hachage-robuste-des-mots-de-passe" title="Permanent link">⚓︎</a></h4>
 <p>Les mots de passe <strong>ne doivent jamais</strong> être stockés en clair ou hachés via MD5/SHA1.</p>
 <p>🧪 <strong>Étape 1 : hachage sécurisé</strong></p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">$password = &quot;monMotDePasse&quot;;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$password = &quot;monMotDePasse&quot;;</span>
 <span class="x">$hash = password_hash($password, PASSWORD_DEFAULT);</span>
 </code></pre></div>
 <p>🧪 <strong>Étape 2 : vérification</strong></p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">password_verify($passwordSaisi, $hash);</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">password_verify($passwordSaisi, $hash);</span>
 </code></pre></div>
 <div class="admonition question">
 <p class="admonition-title">❓ Questions</p>
@@ -4734,12 +4713,12 @@ Il protège uniquement le transit, pas le serveur.</p>
 <ul>
 <li>Tester un fichier contenant des hachages MD5</li>
 </ul>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>john<span class="w"> </span>--show<span class="w"> </span>passwordfile
+<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>john<span class="w"> </span>--show<span class="w"> </span>passwordfile
 </code></pre></div>
 <ul>
 <li>Tester avec un dictionnaire (ex : rockyou)</li>
 </ul>
-<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>john<span class="w"> </span>--wordlist<span class="o">=</span>rockyou.txt<span class="w"> </span>passwordfile
+<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>john<span class="w"> </span>--wordlist<span class="o">=</span>rockyou.txt<span class="w"> </span>passwordfile
 </code></pre></div>
 <div class="admonition question">
 <p class="admonition-title">❓ Questions</p>

@@ -3480,27 +3480,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../6_tpVulnerabilitesAuthentification.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7. TP Vulnérabilités liées à l’authentification et à la gestion des sessions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -4465,7 +4444,7 @@
 </ul>
 <h2 id="1-validation-des-entrees">1. Validation des entrées<a class="headerlink" href="#1-validation-des-entrees" title="Permanent link">⚓︎</a></h2>
 <p>Toujours s’assurer que toutes les données saisies par l’utilisateur sont validées et assainies constitue la première ligne de défense contre de nombreuses attaques courantes, comme l’injection SQL ou le cross-site scripting (XSS). Laravel fournit de puissantes règles de validation que tu peux utiliser pour garantir l’intégrité des données.</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">$request-&gt;validate([</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$request-&gt;validate([</span>
 <span class="x">    &#39;username&#39; =&gt; &#39;required|string|max:255&#39;,</span>
 <span class="x">    &#39;email&#39; =&gt; &#39;required|email|unique:users,email&#39;,</span>
 <span class="x">    &#39;password&#39; =&gt; &#39;required|min:8|confirmed&#39;,</span>
@@ -4481,7 +4460,7 @@
 <li>confirmed → doit correspondre au champ password_confirmation</li>
 </ul>
 <p>Exemple déjà mis en place dans <code>NewPasswordController.php</code> : </p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function store(Request $request): RedirectResponse</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">public function store(Request $request): RedirectResponse</span>
 <span class="x">    {</span>
 <span class="x">        $request-&gt;validate([</span>
 <span class="x">            &#39;token&#39; =&gt; [&#39;required&#39;],</span>
@@ -4497,7 +4476,7 @@
 <p>Ajouter une règle pour vérifier que le todo est une chaine obligatoire de caractères de moins de 256 car.</p>
 </div>
 <div class="tabbed-block">
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">public function saveTodo(Request $request)</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">public function saveTodo(Request $request)</span>
 <span class="x">    {</span>
 <span class="x">        // Vérification des entrées du formulaire</span>
 <span class="x">        $request-&gt;validate([</span>
@@ -4512,12 +4491,12 @@
 </div>
 <h2 id="2-prevention-contre-sql-injection">2. Prevention contre SQL Injection<a class="headerlink" href="#2-prevention-contre-sql-injection" title="Permanent link">⚓︎</a></h2>
 <p>L'utilisation de l'ORM Eloquent aide à prévenir les attaques par injection SQL. Utilisez toujours des requêtes paramétrées et évitez de concaténer l'entrée de l'utilisateur dans les instructions SQL.</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">// Safe query using Eloquent</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Safe query using Eloquent</span>
 <span class="x">$user = User::where(&#39;email&#39;, $email)-&gt;first();</span>
 </code></pre></div>
 <h2 id="3-prevention-des-attaques-xss">3. Prévention des attaques XSS<a class="headerlink" href="#3-prevention-des-attaques-xss" title="Permanent link">⚓︎</a></h2>
 <p>Pour éviter les attaques XSS, toujours échapper à l'entrée de l'utilisateur avant de la rendre dans la vue. Le moteur de modèle Blade de Laravel échappe automatiquement à la sortie des données en utilisant le <code>{{ }}</code> syntaxe.</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&lt;!-- Rendu sûr dans Blade --&gt;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;!-- Rendu sûr dans Blade --&gt;</span>
 <span class="x">{{ $user-&gt;name }}</span>
 </code></pre></div>
 <h2 id="4-csrf-protection">4. CSRF Protection<a class="headerlink" href="#4-csrf-protection" title="Permanent link">⚓︎</a></h2>
@@ -4530,7 +4509,7 @@ et dans home.blade.php :
 <h2 id="5-limitation-de-debit-et-regulation-des-requetes">5. Limitation de débit et régulation des requêtes<a class="headerlink" href="#5-limitation-de-debit-et-regulation-des-requetes" title="Permanent link">⚓︎</a></h2>
 <p>Pour protéger l'application contre les attaques par force brute, on peut mettre en place une limitation du nombre de requêtes grâce au middleware <code>ThrottleRequests</code> de Laravel.</p>
 <p>dans <code>routes/auth.php</code>, repérer les routes <code>/login</code> et modifier les ainsi.
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">Route::get(&#39;login&#39;, [AuthenticatedSessionController::class, &#39;create&#39;])</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">Route::get(&#39;login&#39;, [AuthenticatedSessionController::class, &#39;create&#39;])</span>
 <span class="x">        -&gt;middleware(&#39;throttle:10,1&#39;)   // 10 requêtes / min sur l’affichage du formulaire</span>
 <span class="x">        -&gt;name(&#39;login&#39;);</span>
 
@@ -4590,7 +4569,7 @@ Requête 6: status = 429
 <p>🔧 Étape 1 : Modifier la gestion des exceptions dans <code>bootstrap/app.php</code></p>
 <p>Ouvre <code>bootstrap/app.php</code>.
 Tu dois avoir quelque chose de ce type (structure Laravel 11/12) :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use Illuminate\Foundation\Application;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">use Illuminate\Foundation\Application;</span>
 <span class="x">use Illuminate\Foundation\Configuration\Exceptions;</span>
 <span class="x">use Illuminate\Foundation\Configuration\Middleware;</span>
 
@@ -4608,12 +4587,12 @@ Tu dois avoir quelque chose de ce type (structure Laravel 11/12) :</p>
 </code></pre></div>
 <p>Nous allons compléter le bloc <code>withExceptions</code>.</p>
 <p>Ajoute les use nécessaires en haut du fichier :
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use Illuminate\Http\Exceptions\ThrottleRequestsException;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">use Illuminate\Http\Exceptions\ThrottleRequestsException;</span>
 <span class="x">use Illuminate\Support\Facades\Log;</span>
 <span class="x">use Illuminate\Http\Request;</span>
 </code></pre></div></p>
 <p>Puis remplace / complète le bloc <code>withExceptions</code> ainsi :
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">-&gt;withExceptions(function (Exceptions $exceptions): void {</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">-&gt;withExceptions(function (Exceptions $exceptions): void {</span>
 
 <span class="x">    // Logging sécurité pour les dépassements de limite (HTTP 429)</span>
 <span class="x">    $exceptions-&gt;render(function (ThrottleRequestsException $e, Request $request) {</span>
@@ -4645,7 +4624,7 @@ Tu dois avoir quelque chose de ce type (structure Laravel 11/12) :</p>
 <p>🔧 Étape 2 : Modifier <code>config/logging.php</code></p>
 <p>Création d’un canal de log dédié à la sécurité 📁🛡️. Pour isoler les traces d’attaque dans un fichier spécifique : <code>storage/logs/security.log</code></p>
 <p>Dans "<strong>channels</strong>", ajouter :
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">&#39;security&#39; =&gt; [</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&#39;security&#39; =&gt; [</span>
 <span class="x">    &#39;driver&#39; =&gt; &#39;single&#39;,</span>
 <span class="x">    &#39;path&#39;   =&gt; storage_path(&#39;logs/security.log&#39;),</span>
 <span class="x">    &#39;level&#39;  =&gt; &#39;warning&#39;,</span>
@@ -4686,11 +4665,11 @@ Login KO (mauvais mot de passe) → entrée “warning” dans security.log<br /
 <h4 id="journaliser-dans-authenticatedsessioncontroller">Journaliser dans AuthenticatedSessionController<a class="headerlink" href="#journaliser-dans-authenticatedsessioncontroller" title="Permanent link">⚓︎</a></h4>
 <p>Ouvre <code>app/Http/Controllers/Auth/AuthenticatedSessionController.php</code>.</p>
 <p>En haut du fichier, ajoute les use suivants :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use Illuminate\Support\Facades\Log;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">use Illuminate\Support\Facades\Log;</span>
 <span class="x">use Illuminate\Validation\ValidationException;</span>
 </code></pre></div>
 <p>Puis adapte la méthode <code>store</code> comme suit  :</p>
-<div class="language-php highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">use Illuminate\Support\Facades\Log;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">use Illuminate\Support\Facades\Log;</span>
 <span class="x">use App\Providers\RouteServiceProvider;</span>
 <span class="x">use Illuminate\Validation\ValidationException;  </span>
 

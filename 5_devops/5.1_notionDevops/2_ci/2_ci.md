@@ -319,10 +319,10 @@ lien vers la [Documentation](https://laravel.com/docs/12.x/pint)
 
 ??? tip "Synthèse Utilisation"
 
-  - Crée ``pint.json`` à la racine du projet.
-  - Corrige ton code avec : ``vendor/bin/pint``
-  - Vérifie ensuite avec : ``vendor/bin/pint --test``
-  - Commit & push.
+    - Crée ``pint.json`` à la racine du projet.
+    - Corrige ton code avec : ``vendor/bin/pint``
+    - Vérifie ensuite avec : ``vendor/bin/pint --test``
+    - Commit & push.
 
 
 et la CI passe 🎉🎉🎉
