@@ -1,0 +1,7 @@
+nav : 
+    - 1. TP Vulnérabilités OWASP : 0_tpOwasp.md
+    - 2. TP Mauvaise configuration de la sécurité : 1_tpMauvaiseConfiguration.md
+    - 3. TP Injection SQL:  2_tpInjectionSQL.md
+    - 4. TP Exposition de données sensibles: 3_tpExpositionDonneesSensibles.md
+    - 5. TP Violation de Gestion d'Authentification et de Session : 4_tpViolationGestionAuthentification.md
+    - 6. TP Manque de contrôle d'accès au niveau fonctionnel : 5_tpManqueControleAccesFonctionnel.md

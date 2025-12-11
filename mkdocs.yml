@@ -1,9 +1,9 @@
-site_name: Saint Sauveur TNSI
-site_url: https://github.com/sofaugeras/TNSI
-repo_url: https://github.com/sofaugeras/TNSI
-repo_name: 'Cours Terminale NSI Saint Sauveur'
+site_name: Saint Sauveur BTS SIO SLAM
+site_url: https://github.com/sofaugeras/SIOB2
+repo_url: https://github.com/sofaugeras/SIOB2
+repo_name: 'Cours BTS SIO Bloc SLAM Saint Sauveur'
 edit_uri: edit/main/docs/
-site_description: Site de cours Terminale NSI
+site_description: Site de Cours BTS SIO SLAM
 site_author: "Sophie FAUGERAS" 
 docs_dir: docs
 
@@ -36,6 +36,7 @@ theme:
     - toc.integrate
     - header.autohide
     - content.code.annotate 
+    - content.code.copy
 
   palette:
     # Light mode
@@ -69,47 +70,49 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.snippets
   - pymdownx.details
-  - pymdownx.highlight:
-      linenums: None
+  - pymdownx.highlight:           # Coloration syntaxique du code
+        linenums: None
+        auto_title: true
+        pygments_lang_class: true
+        auto_title_map:
+            "Text Only": "📋 Texte"
+            "Python": "🐍 Python"
+            "Python Console Session": "🐍 Python"
+            "JavaScript": "🍵 JavaScript"
+            "SQL": "🐬 SQL"
+            "PHP": "🐘 PHP"
+            "Prompt": "💻 Console"
+            "Bash": "💻 Console"
+            "E-mail": "📥 Entrée"
+            "Text Output": "📤 Sortie"
   - pymdownx.tasklist:
-      custom_checkbox: false
+        custom_checkbox: false
+        clickable_checkbox: true
   - pymdownx.inlinehilite
-  - pymdownx.superfences          # Imbrication de blocs
+  - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.keys
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - pymdownx.arithmatex:
       generic: true
-  - pymdownx.tasklist:
-      custom_checkbox:    false   #   avec cases d'origine
-      clickable_checkbox: true    #   et cliquables.
+
   - toc:
       permalink: ⚓︎
       toc_depth: 3
-  - mkdocs_graphviz:
-      light_theme: 000010      # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
-      dark_theme: FFFFFF       # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
-      color: 789ABC            # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
-      bgcolor: none            # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
-      graph_color: 789ABC      # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
-      graph_fontcolor: 789ABC  # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
-      node_color: 789ABC       # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
-      node_fontcolor: 789ABC   # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
-      edge_color: 789ABC       # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
-      edge_fontcolor: 789ABC
-
-
-
+  
 plugins:
   - search
-  - git-revision-date-localized:
-      enable_creation_date: false
-      locale: fr
+ # - git-revision-date-localized:
+ #     enable_creation_date: false
+ #     locale: fr
   - awesome-pages:
       collapse_single_pages: false
   #- macros
@@ -127,27 +130,36 @@ extra:
       link: mailto:sophie.faugeras@ac-rennes.fr
       name: Écrire à l'auteur
 
+    - icon : fontawesome/brands/linkedin
+      link : https://www.linkedin.com/in/sophie-faugeras-77b4b6124/
+      name : profil Linkedln
+
+    - icon : fontawesome/brands/twitter
+      link : https://twitter.com/sfaugeras_info
+      name : Mon twitter
+
     - icon: fontawesome/brands/github
-      link: https://github.com/sofaugeras/TNSI
+      link: https://github.com/sofaugeras/SIOB2
       name: Dépôt git
 
     - icon: fontawesome/solid/school
-      link: https://www.lycee-saint-sauveur-redon.eu/
-      name: Lycée Saint Sauveur - Redon
+      link: https://www.btssio-redon.fr/
+      name: BTS SIO - Lycée Saint Sauveur - Redon
 
 extra_javascript:
-  - xtra/javascripts/interpreter.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js
   - https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js
   - https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js
-  - xtra/javascripts/mermaid.js
+  - javascript/mermaid.js
+  - javascript/mathjax.js
+  - javascript/interpreter.js
+  - javascript/ide.js
 
 
 extra_css:
   - stylesheets/extra.css
-  - xtra/stylesheets/pyoditeur.css
 
 
 copyright:  CC BY-SA / S.Faugeras

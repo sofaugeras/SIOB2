@@ -1,61 +1,89 @@
+# Home 🏠
+![logo BTS](./images/logo-bts-sio-300x143.png){ .center width=20%}
 
-!!! abstract "Actualités"
+!!! tip "les essentiels"
+    - [Lien vers le BO](./8_liens_utiles/2_epreuves/data/BTS_ServicesInformatiquesOrganisations_BO2024.pdf){target="_blank"}
 
-    - 14 sujets posés en 2022 sont disponibles [ici](T6_Annales/liste_sujets/){. target="_blank"}
-    - Site d'entrainement épreuve pratique : [ici](https://ens-fr.gitlab.io/nsi-pratique/){. target="_blank"}
-    - Site recensant les sujets de BAC écrit : [ici](https://boiling-aletopelta-ff5.notion.site/be357c0d12cb430faa79dd890feb660b?v=56349470c9704fc2b93983c20d5b9a65){. target="_blank"}
+## Actus SIO1
 
+!!! warning "Actu SIO1"
 
-    Les modalités des épreuves écrites (du 20 au 22 mars 2023) ont été [annoncées](https://www.education.gouv.fr/bo/22/Hebdo36/MENE2226770N.htm){. target="_blank"} :
+    📌 Thème en cours B1 : Gestion de projet <br />
+    📣 A rendre : Lundi 15 décembre : Gestion de projet : Projet Noël
+    ⌛️ A venir :  TP Noté Lundi 8 décembre <br />
+    
+    📅 Stage SIO1 : lundi 18 mai - vendredi 19 juin 2026, retour au lycée le lundi 22 juin de 8h30 à 12h30 <br />
 
-    - le sujet comportera 3 exercices (il n'y a plus de choix comme auparavant)
-    - seuls les items marqués *BAC* dans les sommaires des différents thèmes sont au programme de l'épreuve. Voir la liste [ici](T6_Annales/epreuve_bac/#epreuve-ecrite){. target="_blank"}
+??? note "🚨 *Thèmes traités*"
 
+    - [Base de données : introduction](./1_Base_de_donnees/1_introduction/cours.md)<br />
+    - [Base de données : Langage de manipulation de données](./1_Base_de_donnees/2_LMD/cours.md)<br />
+    - [Base de données : LCD](./1_Base_de_donnees/3_LCD/cours.md) <br />
+    - [Base de données : langages de contrôle des données](./1_Base_de_donnees/3_LCD/utilisateur.md)
 
+## Actus SIO2
 
+!!! warning "Actu SIO2 SLAM"
 
-!!! note ":star: Thèmes en cours d'étude :star: "
-    - [Structure de données](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
+    📌 Thème en cours B2 : [CI - les tests](./5_devops/5.1_notionDevops/3_tests.md) <br />
+    ⌛️ A venir B2 : Après le stage ... <br />
 
+    📌 Thème en cours B3 : [Manque de contrôle d'accès au niveaau fonctionnel](./6_Cybersécurité/6.2_TP/5_tpManqueControleAccesFonctionnel.md) <br />
+    ⌛️ A venir B3 : Après le stage ...<br />
 
+    📅 Stage SIO2 : lundi 5 janvier - vendredi 13 février 2026<br />
 
+    🌟 Ecrits BTS : du 18 au 21 mai 2026
 
-### *Thèmes déjà traités*
-- [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
-- [Récursivité](T2_Programmation/2.2_Recursivite/cours/)  
-- [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/)   
+!!! question "Exposé SIO2"
+    📣 ^^liste des exposés^^ : prochaine date : Après le stage ...
 
+    :arrow_forward: Analyse de cas Cyber : <br />
+    Analyser une attaque Cyber connue et documentée : point d'entrée, impacts de l'attaque, reprise de l'activité, actions à postériori
+
+    - 🐖 [fleury Michon 2019](https://www.lemagit.fr/etude/Fleury-Michon-histoire-dune-crise-de-cybersecurite-qui-a-bien-tourne){target="_blank"}
+    - 🚑 [hopital de rennes 2023](https://www.radiofrance.fr/francebleu/podcasts/l-invite-d-ici/cyberattaque-d-une-clinique-a-rennes-les-rancons-ne-sont-jamais-payees-selon-un-specialiste-9882547){target="_blank"}
+    - 🔨 [Manutan](https://www.lemagit.fr/etude/Recit-comment-Manutan-sest-sorti-de-la-cyberattaque-du-21-fevrier){target="_blank"}
+
+    :calendar: date prévue des exposés :<br />
+
+    |Date|Nom|Thème|
+    |:--:|:--:|:--:|
+    |   |Elouan|   |
+    |   |Alexandre|    |
+    |   |Maël|   |
+   
+??? note "🚨 *Thèmes traités B2*"
+    - [Rappel Base de données : Anabase](./1_Base_de_donnees/5_TP/tp7_anabase.md)<br />
+    - [Modèle MVC : principes](./7_Programmation/7.3_MVC/cours.md)<br />
+    - [Laravel : installation Bac à sable](./4_Laravel/4.1_installation/cours.md)<br />
+    - [Laravel : Initilisation Projet ToDo](./4_Laravel/4.2_toDo/4.2.1_initialisation.md)<br />
+    - [Laravel : Gestion des catégories](./4_Laravel/4.2_toDo/4.2.2_Ajout_catégorie.md)
+    - [Laravel : Gestion des listes](./4_Laravel/4.2_toDo/4.2.4_GestionListes.md)
+    - [Intégration continue : TP avec laravel](./5_devops/5.1_notionDevops/2_ci.md)
+    - [Intégration continue : les tests](./5_devops/5.1_notionDevops/3_tests.md)
+
+??? note "🚨 *Thèmes traités B3*"
+    - [Rappel MOOC ANSSI](./6_Cybersécurité/3_hygiene_Cyber/6.3.1_cours/1_recoANSII.md)<br />
+    - [Méthodes EBIOS](./6_Cybersécurité/1_Ebios/cours.md)<br />
+    - [Mauvaise gestion de configuration](./6_Cybersécurité/2_OWASP/6.2.2_TPOwasp/1_tpMauvaiseConfiguration.md)<br />
+    - [Preuve numérique](./6_Cybersécurité/3_hygiene_Cyber/6.3.1_cours/2_preuveNumerique.md)<br />
+    - [Authentication](./6_Cybersécurité/3_hygiene_Cyber/6.3.1_cours/3_authentification.md)<br />
+    - [Archivage](./6_Cybersécurité/3_hygiene_Cyber/6.3.1_cours/4_archivage.md)
+    - [Laravel : Question Cyber](./4_Laravel/4.2_toDo/4.2.3_middleware_Auth.md)
+    - [TP Injection SQL](./6_Cybersécurité/6.2_OWASP/6.2.2_TPOwasp/2_tpInjectionSQL.md)
+    - [TP Exposition aux données sensibles](./6_Cybersécurité/6.2_OWASP/6.2.2_TPOwasp/3_tpExpositionDonneesSensibles.md)
+    - [TP Violation de gestion d'authentification et de session](./6_Cybersécurité/6.2_OWASP/6.2.2_TPOwasp/4_tpViolationGestionAuthentification.md)
 
 <!--
-!!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
-    Chers élèves de Première (Groupe 1 et Groupe 2), voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
-    - Les listes, les tuples et les dictionnaires. À retrouver [ici](https://glassus.github.io/premiere_nsi/T2_Representation_des_donnees/sommaire/){. target="_blank"}.
-    - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](https://glassus.github.io/premiere_nsi/T4_Algorithmique/sommaire/){. target="_blank"} :
-        - Complexité
-        - Tris par sélection et insertion
-        - Dichotomie
-        
-!!! abstract ":star: Actualités :star:"
-    - Organisez-vous avec (par exemple) [Trello](https://trello.com/fr){. target="_blank"}, [Notion](https://www.notion.so/fr-fr){. target="_blank"} ou [Zenkit](https://zenkit.com/){. target="_blank"}
-    - Épreuves Pratiques : [entraînez-vous sur nsi-pratique](https://ens-fr.gitlab.io/nsi-pratique/){. target="_blank"}
+!!! warning "Calendrier de l'avent"
 
-    - Les sujets de la BNS 2022 de l'Épreuve Pratique sont parus, vous pouvez les retrouver [ici](T6_6_Epreuve_pratique/BNS_2022/)
-    - **Infos orientation :**
-        - [Lien](https://www.geipi-polytech.org/){. target="_blank"} vers le site des 34 écoles d'ingénieurs **publiques** du groupe GEIPI
-        - [Lien](data/sujet0_geipi.pdf){. target="_blank"} vers le sujet 0 de leur épreuve NSI.
+    ![cal](./images/Free-Printable-Advent-Calendars-jpg.webp){: width=50% .center}
 
-!!! note "*Thèmes traités*"
-    - [Architecture Von Neumann (1ère)](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/)
-    - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
-    - [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/)  
-    - [Cryptographie](T5_Architecture_materielle/5.4_Cryptographie/cours/)
-    - [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
-    - [Arbres](T1_Structures_de_donnees/1.3_Arbres/cours/)
-    - [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
-    - [Dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/)  
-    - [Langage SQL](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
-    - [Modèle relationnel](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
-    - [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)  
-    - [Récursivité](T2_Programmation/2.2_Recursivite/cours/)  
-    - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/)  
+    Pour cette période de Noël, je vous propose un petit jeu.<br />
+    Chaque jour, je posterais une énigme en ligne. Le premier à y répondre par message Ecole Directe marquera 3️⃣ points, le second 2️⃣ points et le troisième 1️⃣ points.<br />
+    Le vendredi 20 décembre, lors du secret 🎅's, je remettrais un prix aux trois gagnants 🏆.
+
+    lien vers le calendrier : [ici !](./calendrier.md)
 -->
+

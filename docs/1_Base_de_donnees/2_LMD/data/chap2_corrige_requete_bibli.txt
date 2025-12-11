@@ -1,0 +1,105 @@
+R1 : Qui est le lecteur n°30 ? 
+SELECT*
+FROM LECTEUR
+WHERE NumLecteur = 30;
+R2 : Liste des lecteurs dont le nom de famille commence par la lettre « S » 
+SELECT*
+FROM LECTEUR
+WHERE NomLecteur LIKE "S*";
+R3 : Liste des ouvrages qui traitent de la méthode Merise. 
+SELECT*
+FROM OUVRAGE
+WHERE TitreOuvrage LIKE "*Merise*";
+R4 : Liste des ouvrages qui traitent du « registre » à partir de l’année 2000. 
+SELECT*
+FROM OUVRAGE
+WHERE TitreOuvrage LIKE "*Registre*"
+AND AnneeParution > 2000;
+R5 : Liste des lecteurs qui portent le nom (ou le prénom) « BERTRAND » 
+SELECT*
+FROM LECTEUR
+WHERE NomLecteur = "BERTRAND"
+OR PrenomLecteur = "Bertrand";
+R6 : Quels sont le titre et l’année de parution de l’ouvrage le plus ancien ?
+SELECT  TitreOuvrage, AnneeParution
+FROM OUVRAGE
+WHERE AnneeParution = (SELECT MAX(AnneeParution)
+FROM OUVRAGE)
+ORDER BY TitreOuvrage ASC;
+R7 : Titre des ouvrages actuellement empruntés ou ayant déjà été empruntés 
+SELECT DISTINCT TitreOuvrage
+FROM OUVRAGE
+INNER JOIN EMPRUNTER
+ON OUVRAGE.NumOuvrage = EMPRUNTER.NumOuvrage
+WHERE DateEmprunt IS NOT NULL;
+R8 : Nom des lecteurs ayant effectué au moins un emprunt depuis le début de l’année 2012. 
+SELECT DISTINCT NomLecteur
+FROM LECTEUR
+INNER JOIN EMPRUNTER
+ON LECTEUR.NumLecteur = EMPRUNTER.NumLecteur
+WHERE DateEmprunt LIKE  "*/*/2012";
+R9 : Liste des emprunts (titres et dates) réalisés par le lecteur nommé « HAMSI » 
+SELECT OUVRAGE.TitreOUvrage, OUVRAGE.AnneeParution
+FROM ((LECTEUR
+INNER JOIN EMPRUNTER
+ON LECTEUR.NumLecteur = EMPRUNTER.NumLecteur)
+INNER JOIN OUVRAGE
+ON OUVRAGE.NumOuvrage = EMPRUNTER.NumOuvrage)
+WHERE NomLecteur ="HAMSI";
+
+ 
+R10 : Liste des emprunts en cours. Pour chaque emprunt, nom du lecteur, titre de l’ouvrage et date d’emprunt. 
+SELECT LECTEUR.NomLecteur, OUVRAGE.TitreOUvrage, EMPRUNTER.DateEmprunt
+FROM ((LECTEUR
+INNER JOIN EMPRUNTER
+ON LECTEUR.NumLecteur = EMPRUNTER.NumLecteur)
+INNER JOIN OUVRAGE
+ON OUVRAGE.NumOuvrage = EMPRUNTER.NumOuvrage)
+WHERE DateRetour IS NULL;
+R11 : Nombre total d’emprunts enregistrés à ce jour. 
+SELECT COUNT(DateEmprunt) AS NbEmprunt
+FROM EMPRUNTER;
+R12 : Ajouter l’ouvrage suivant dans la base : N°40, Titre ouvrage : « Réseaux de neurones », Année de parution : 2004 
+INSERT INTO OUVRAGE (NumOuvrage, TitreOuvrage, AnneeParution )
+VALUES (40,"Réseaux de neurones",2004);
+R13 : Enregistrer le retour de l’ouvrage n°17 à la date du jour. La fonction date() retourne la date du système. 
+UPDATE EMPRUNTER 
+SET  DateRetour = Date ()
+WHERE NumOUvrage = 17
+AND DateRetour IS NULL ;
+R14 : Supprimer tous les emprunts régularisés (ouvrages restitués) de l’année 2010. 
+DELETE FROM EMPRUNTER
+WHERE DateEmprunt LIKE "*/*/2010"
+AND DateRetour IS NOT NULL;
+R15 : Combien reste t-il d’emprunts non régularisés pour l’année 2011 ? 
+SELECT COUNT (DateEmprunt) AS NbOK2011
+FROM EMPRUNTER
+WHERE DateEmprunt LIKE "*/*/2011"
+AND DateRetour IS NULL;
+R16 : Nombre total d’emprunts réalisés par lecteurs.
+SELECT COUNT(EMPRUNTER.DateEmprunt), LECTEUR.NomLecteur
+FROM EMPRUNTER
+INNER JOIN LECTEUR
+ON LECTEUR.NumLecteur = EMPRUNTER.NumLecteur
+GROUP BY LECTEUR.NomLecteur ;
+
+Un nouveau lecteur souhaite emprunter un livre sur l’intelligence artificielle. La bibilothèque n’est dispose. Elle le commande pour que ce lecteur puisse l’emprunter dès que possible.
+Comment cela se matérialise dans la base de donnée ?
+R1 : Insérer le nouveau lecteur
+INSERT INTO LECTEUR (`numlecteur`, `nomlecteur`, `prenomlecteur`) VALUES
+(13, 'ALAMARD', 'Frédéric') ;
+R2 : Insérer le livre 
+INSERT INTO OUVRAGE (`numouvrage`, `titreouvrage`, `anneeparution`) VALUES
+(1, 'Passeport pour l''algorithmique objet', 1998) ;
+R3 : Insérer l’emprunt
+INSERT INTO EMPRUNTER (`numlecteur`, `numouvrage`, `dateemprunt`, `dateretour`) VALUES (13, 17, '2012-01-18', NULL) ;
+R4 :Il y a une faute d’écriture sur le nom de ce client. Corrigez là.
+UPDATE LECTEUR 
+SET ‘nomlecteur’= ‘ALAMART’
+WHERE ‘nomlecteur’= ‘ALAMARD’ AND `prenomlecteur` = ‘'Frédéric' ;
+R5 : On introduit un nouvel attribut à la table lecteur, le nombre de livre autorisé en emprunt. Mettez cette valeur à jour à 4.
+UPDATE LECTEUR 
+SET nbLibreSorti = 4 ;
+R6 : Une mise à jour de la bibliothèque est nécessaire. Faites sortir du stock tous les livres antérieur à 2000.
+DELETE FROM OUVRAGE 
+WHERE anneeparution < 2000 ;
