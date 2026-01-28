@@ -3093,18 +3093,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#72-tests-dacces-aux-routes-protegees-middleware-auth" class="md-nav__link">
+  <a href="#71-tests-dacces-aux-routes-protegees-middleware-auth" class="md-nav__link">
     <span class="md-ellipsis">
-      7.2 Tests d’accès aux routes protégées (middleware auth) 🔒
+      7.1 Tests d’accès aux routes protégées (middleware auth) 🔒
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#73-tests-lies-a-lautorisation-policies" class="md-nav__link">
+  <a href="#72-tests-lies-a-lautorisation-policies" class="md-nav__link">
     <span class="md-ellipsis">
-      7.3 Tests liés à l'autorisation (Policies) 🧭
+      7.2 Tests liés à l'autorisation (Policies) 🧭
     </span>
   </a>
   
@@ -4811,15 +4811,15 @@ Duration:<span class="w"> </span><span class="m">8</span>.40s
 <p>Tu dois y trouver une méthode <code>definition()</code> qui ressemble à ceci :</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">public</span> <span class="k">function</span> <span class="nf">definition</span><span class="p">()</span><span class="o">:</span> <span class="k">array</span>
-<span class="p">{</span>
-    <span class="k">return</span> <span class="p">[</span>
-        <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="nx">fake</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">(),</span>
-        <span class="s1">&#39;email&#39;</span> <span class="o">=&gt;</span> <span class="nx">fake</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">unique</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">safeEmail</span><span class="p">(),</span>
-        <span class="s1">&#39;email_verified_at&#39;</span> <span class="o">=&gt;</span> <span class="nx">now</span><span class="p">(),</span>
-        <span class="s1">&#39;password&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;$2y$10$&#39;</span><span class="o">.</span><span class="nb">strtr</span><span class="p">(</span><span class="s1">&#39;password-hash&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;.&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;/&#39;</span><span class="p">]),</span> <span class="c1">// ou Hash::make(...)</span>
-        <span class="s1">&#39;remember_token&#39;</span> <span class="o">=&gt;</span> <span class="nx">Str</span><span class="o">::</span><span class="na">random</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
-    <span class="p">];</span>
-<span class="p">}</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="p">[</span>
+            <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="nx">fake</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">(),</span>
+            <span class="s1">&#39;email&#39;</span> <span class="o">=&gt;</span> <span class="nx">fake</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">unique</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">safeEmail</span><span class="p">(),</span>
+            <span class="s1">&#39;email_verified_at&#39;</span> <span class="o">=&gt;</span> <span class="nx">now</span><span class="p">(),</span>
+            <span class="s1">&#39;password&#39;</span> <span class="o">=&gt;</span> <span class="k">static</span><span class="o">::</span><span class="nv">$password</span> <span class="o">??=</span> <span class="nx">Hash</span><span class="o">::</span><span class="na">make</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;remember_token&#39;</span> <span class="o">=&gt;</span> <span class="nx">Str</span><span class="o">::</span><span class="na">random</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
+        <span class="p">];</span>
+    <span class="p">}</span>
 </code></pre></div>
 <p>L’important pour nous est :</p>
 <p>👉 <code>User::factory()-&gt;create()</code> permet de créer facilement un utilisateur de test valide.</p>
@@ -4919,6 +4919,16 @@ Laravel créera un enregistrement dans la table <code>todos</code> avec :</p>
 &gt;&gt;&gt;
 </code></pre></div>
 Tout ce que tu écris ici est exécuté dans le contexte de ton application Laravel.</p>
+<p>✔️ Tester une factory
+<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>&gt;<span class="w"> </span>App<span class="se">\M</span>odels<span class="se">\L</span>istes::factory<span class="o">()</span>-&gt;create<span class="o">()</span><span class="p">;</span>
+<span class="o">=</span><span class="w"> </span>App<span class="se">\M</span>odels<span class="se">\L</span>istes<span class="w"> </span><span class="o">{</span><span class="c1">#6211</span>
+<span class="w">    </span>titre:<span class="w"> </span><span class="s2">&quot;eos ut&quot;</span>,
+<span class="w">    </span>updated_at:<span class="w"> </span><span class="s2">&quot;2025-12-06 13:09:32&quot;</span>,
+<span class="w">    </span>created_at:<span class="w"> </span><span class="s2">&quot;2025-12-06 13:09:32&quot;</span>,
+<span class="w">    </span>id:<span class="w"> </span><span class="m">4</span>,
+<span class="w">  </span><span class="o">}</span>
+</code></pre></div></p>
+<p>Résultat : un nouvel enregistrement todos est inséré dans la base de développement.</p>
 <details class="warning">
 <summary>Fix problème 🪲</summary>
 <ul>
@@ -4968,16 +4978,6 @@ composer<span class="w"> </span>dump-autoload
 <li>création du <code>Todos</code> lié à ces deux enregistrements.</li>
 </ol>
 <p>Cela simplifie énormément les tests qui portent à la fois sur <code>Todos</code> et sur ses relations (ex. <code>todos-&gt;listes</code>, <code>todos-&gt;user</code>).</p>
-<p>✔️ Tester une factory
-<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>&gt;<span class="w"> </span>App<span class="se">\M</span>odels<span class="se">\L</span>istes::factory<span class="o">()</span>-&gt;create<span class="o">()</span><span class="p">;</span>
-<span class="o">=</span><span class="w"> </span>App<span class="se">\M</span>odels<span class="se">\L</span>istes<span class="w"> </span><span class="o">{</span><span class="c1">#6211</span>
-<span class="w">    </span>titre:<span class="w"> </span><span class="s2">&quot;eos ut&quot;</span>,
-<span class="w">    </span>updated_at:<span class="w"> </span><span class="s2">&quot;2025-12-06 13:09:32&quot;</span>,
-<span class="w">    </span>created_at:<span class="w"> </span><span class="s2">&quot;2025-12-06 13:09:32&quot;</span>,
-<span class="w">    </span>id:<span class="w"> </span><span class="m">4</span>,
-<span class="w">  </span><span class="o">}</span>
-</code></pre></div></p>
-<p>Résultat : un nouvel enregistrement todos est inséré dans la base de développement.</p>
 <p>✔️ Créer un utilisateur
 <div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>&gt;<span class="w"> </span>App<span class="se">\M</span>odels<span class="se">\U</span>ser::factory<span class="o">()</span>-&gt;create<span class="o">()</span><span class="p">;</span>
 <span class="o">=</span><span class="w"> </span>App<span class="se">\M</span>odels<span class="se">\U</span>ser<span class="w"> </span><span class="o">{</span><span class="c1">#6632</span>
@@ -5179,6 +5179,7 @@ Nous allons vérifier que cette relation fonctionne bien.</p>
 
         <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">(</span><span class="s1">&#39;/action/add&#39;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
     <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 <details class="question">
 <summary>💡 Pourquoi une méthode postTodo() ?</summary>
@@ -5236,7 +5237,7 @@ Failed<span class="w"> </span>asserting<span class="w"> </span>that<span class="
 Le contrôleur, en cas de texte vide, ne renvoie pas d’errors bag, mais :</p>
 <ul>
 <li>déclenche une ValidationException,</li>
-<li>la catch renvoie un <code>redirect()-&gt;route('todo.liste')-&gt;with('message', "...")</code>.</li>
+<li>la catch renvoie un <code>redirect()-&gt;route('todo.liste')-&gt;with('message', '...')</code>.</li>
 </ul>
 <p>Donc le test doit vérifier :</p>
 <ul>
@@ -5439,7 +5440,7 @@ Ces tests couvrent déjà toutes les fonctionnalités essentielles :</p>
 <li>Ils constituent une base solide pour éviter les régressions pendant le développement.</li>
 </ul>
 </details>
-<h3 id="72-tests-dacces-aux-routes-protegees-middleware-auth">7.2 Tests d’accès aux routes protégées (middleware auth) 🔒<a class="headerlink" href="#72-tests-dacces-aux-routes-protegees-middleware-auth" title="Permanent link">⚓︎</a></h3>
+<h3 id="71-tests-dacces-aux-routes-protegees-middleware-auth">7.1 Tests d’accès aux routes protégées (middleware auth) 🔒<a class="headerlink" href="#71-tests-dacces-aux-routes-protegees-middleware-auth" title="Permanent link">⚓︎</a></h3>
 <p>Il peut être utile d’ajouter un seul test d'exemple dans ton TP pour illustrer comment vérifier qu’une route est bien protégée par auth.</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">public</span> <span class="k">function</span> <span class="nf">test_invite_ne_peut_pas_acceder_aux_todos</span><span class="p">()</span>
@@ -5448,7 +5449,7 @@ Ces tests couvrent déjà toutes les fonctionnalités essentielles :</p>
     <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">assertRedirect</span><span class="p">(</span><span class="nx">route</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">));</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="73-tests-lies-a-lautorisation-policies">7.3 Tests liés à l'autorisation (Policies) 🧭<a class="headerlink" href="#73-tests-lies-a-lautorisation-policies" title="Permanent link">⚓︎</a></h3>
+<h3 id="72-tests-lies-a-lautorisation-policies">7.2 Tests liés à l'autorisation (Policies) 🧭<a class="headerlink" href="#72-tests-lies-a-lautorisation-policies" title="Permanent link">⚓︎</a></h3>
 <p>Lorsque tu ajoutes une policy pour restreindre l’accès aux Todos :</p>
 <ul>
 <li>un utilisateur ne peut modifier que ses propres Todos,</li>
@@ -5606,7 +5607,7 @@ git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span
 <span class="o">&lt;!--</span> <span class="nx">Styles</span> <span class="nx">et</span> <span class="nx">Scripts</span> <span class="o">:</span> <span class="nx">Utilisation</span> <span class="nx">SASS</span> <span class="o">--&gt;</span> 
 <span class="o">@</span><span class="nx">vite</span><span class="p">([</span><span class="s1">&#39;resources/sass/app.scss&#39;</span><span class="p">,</span> <span class="s1">&#39;resources/js/app.js&#39;</span><span class="p">])</span>
 </code></pre></div>
-dans <code>vite.config.php</code></p>
+dans <code>vite.config.js</code></p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="nx">laravel</span><span class="p">({</span>
         <span class="nx">input</span><span class="o">:</span> <span class="p">[</span>

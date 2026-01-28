@@ -218,15 +218,15 @@ Tu dois y trouver une méthode ``definition()`` qui ressemble à ceci :
 ```php
 <?php
 public function definition(): array
-{
-    return [
-        'name' => fake()->name(),
-        'email' => fake()->unique()->safeEmail(),
-        'email_verified_at' => now(),
-        'password' => '$2y$10$'.strtr('password-hash', ['.' => '/']), // ou Hash::make(...)
-        'remember_token' => Str::random(10),
-    ];
-}
+    {
+        return [
+            'name' => fake()->name(),
+            'email' => fake()->unique()->safeEmail(),
+            'email_verified_at' => now(),
+            'password' => static::$password ??= Hash::make('password'),
+            'remember_token' => Str::random(10),
+        ];
+    }
 ```
 
 L’important pour nous est :
@@ -340,6 +340,19 @@ Psy Shell v0.11.8 (PHP 8.2 …)
 ```
 Tout ce que tu écris ici est exécuté dans le contexte de ton application Laravel.
 
+✔️ Tester une factory
+```bash
+> App\Models\Listes::factory()->create();
+= App\Models\Listes {#6211
+    titre: "eos ut",
+    updated_at: "2025-12-06 13:09:32",
+    created_at: "2025-12-06 13:09:32",
+    id: 4,
+  }
+```
+
+Résultat : un nouvel enregistrement todos est inséré dans la base de développement.
+
 ??? warning "Fix problème 🪲"
   
     - penser à ajouter ``use HasFactory;`` dans le model de Todos
@@ -397,18 +410,6 @@ réalise en réalité :
 
 Cela simplifie énormément les tests qui portent à la fois sur `Todos` et sur ses relations (ex. `todos->listes`, `todos->user`).
 
-✔️ Tester une factory
-```bash
-> App\Models\Listes::factory()->create();
-= App\Models\Listes {#6211
-    titre: "eos ut",
-    updated_at: "2025-12-06 13:09:32",
-    created_at: "2025-12-06 13:09:32",
-    id: 4,
-  }
-```
-
-Résultat : un nouvel enregistrement todos est inséré dans la base de développement.
 
 ✔️ Créer un utilisateur
 ```bash
@@ -623,6 +624,7 @@ class TodosValidationTest extends TestCase
 
         return $this->post('/action/add', $data);
     }
+}
 ```
 
 ??? question "💡 Pourquoi une méthode postTodo() ?"
@@ -689,7 +691,7 @@ Il faut **adapter** le test au contrôleur actuel !
 Le contrôleur, en cas de texte vide, ne renvoie pas d’errors bag, mais :
 
 + déclenche une ValidationException,
-+ la catch renvoie un ``redirect()->route('todo.liste')->with('message', "...")``.
++ la catch renvoie un ``redirect()->route('todo.liste')->with('message', '...')``.
 
 Donc le test doit vérifier :
 
@@ -909,7 +911,7 @@ Ces tests se trouvent dans ``tests/Feature/Auth/``
     - que chaque changement sur les routes ou les middlewares continue de respecter les règles Laravel (auth, verified, etc.).
     - Ils constituent une base solide pour éviter les régressions pendant le développement.
 
-### 7.2 Tests d’accès aux routes protégées (middleware auth) 🔒
+### 7.1 Tests d’accès aux routes protégées (middleware auth) 🔒
 
 Il peut être utile d’ajouter un seul test d'exemple dans ton TP pour illustrer comment vérifier qu’une route est bien protégée par auth.
 
@@ -921,7 +923,7 @@ public function test_invite_ne_peut_pas_acceder_aux_todos()
     $response->assertRedirect(route('login'));
 }
 ```
-### 7.3 Tests liés à l'autorisation (Policies) 🧭
+### 7.2 Tests liés à l'autorisation (Policies) 🧭
 
 Lorsque tu ajoutes une policy pour restreindre l’accès aux Todos :
 
@@ -1107,7 +1109,7 @@ Sur **GitHub**, onglet Actions, tu dois voir le workflow tests s’exécuter aut
     <!-- Styles et Scripts : Utilisation SASS --> 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     ```
-    dans `vite.config.php`
+    dans `vite.config.js`
     
     ```php
     <?php

@@ -6,29 +6,33 @@
 
 ## Actus SIO1
 
-!!! warning "Actu SIO1"
+!!! warning "Actu SIO1 SLAM"
 
-    📌 Thème en cours B1 : Gestion de projet <br />
-    📣 A rendre : Lundi 15 décembre : Gestion de projet : Projet Noël
-    ⌛️ A venir :  TP Noté Lundi 8 décembre <br />
+    📌 Thème en cours B2 : [UML Diagramme de classe](./3_UML/3.1_diagrammeClasse/3.1.1_diagrammeDeClasse.md) <br />
+    ⌛️ A venir : [Calcul d'un MPD](./3_UML/3.1_diagrammeClasse/3.1.2_CalculMPD.md) <br />
     
     📅 Stage SIO1 : lundi 18 mai - vendredi 19 juin 2026, retour au lycée le lundi 22 juin de 8h30 à 12h30 <br />
 
-??? note "🚨 *Thèmes traités*"
+??? note "🚨 *Thèmes traités B2 SLAM Semestre 2*"
+    - [POO en Python](https://sofaugeras.github.io/TNSI/T2_Programmation/2.2_Programmation_Orientee_Objet/cours/)<br />
+    - [UML Introduction](./3_UML/3.1_diagrammeClasse/3.1.0_IntroUML.md) <br />
+
+??? note "🚨 *Thèmes traités B1 semestre 1*"
 
     - [Base de données : introduction](./1_Base_de_donnees/1_introduction/cours.md)<br />
     - [Base de données : Langage de manipulation de données](./1_Base_de_donnees/2_LMD/cours.md)<br />
     - [Base de données : LCD](./1_Base_de_donnees/3_LCD/cours.md) <br />
     - [Base de données : langages de contrôle des données](./1_Base_de_donnees/3_LCD/utilisateur.md)
+    - Gestion de projet partie 1
 
 ## Actus SIO2
 
 !!! warning "Actu SIO2 SLAM"
 
-    📌 Thème en cours B2 : [CI - les tests](./5_devops/5.1_notionDevops/3_tests.md) <br />
+    📌 Thème en cours B2 : Après le stage ... <br />
     ⌛️ A venir B2 : Après le stage ... <br />
 
-    📌 Thème en cours B3 : [Manque de contrôle d'accès au niveaau fonctionnel](./6_Cybersécurité/6.2_TP/5_tpManqueControleAccesFonctionnel.md) <br />
+    📌 Thème en cours B3 : Après le stage ... <br />
     ⌛️ A venir B3 : Après le stage ...<br />
 
     📅 Stage SIO2 : lundi 5 janvier - vendredi 13 février 2026<br />
