@@ -11,7 +11,7 @@
 2. [Langage de Manipulation de données](./2_LMD/cours.md)
 3. [Langage de Création de données](./3_LCD/cours.md)
 4. [SQL Complexe](./4_SQLComplexe/cours.md)
-5. [Travaux pratiques](./5_TP/)
+5. [Travaux pratiques](./5_TP/tp1_decouverte.md)
 6. [découverte du NoSQL](./6_NoSQL/cours.md)
 
 !!! note "Sources"

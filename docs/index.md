@@ -2,33 +2,38 @@
 ![logo BTS](./images/logo-bts-sio-300x143.png){ .center width=20%}
 
 !!! tip "les essentiels"
-    - [Lien vers le BO](./8_liens_utiles/2_epreuves/data/BTS_ServicesInformatiquesOrganisations_BO2024.pdf){target="_blank"}
+    - [Lien vers le BO](./8_liens_utiles/1_epreuves/data/BTS_ServicesInformatiquesOrganisations_BO2024.pdf){target="_blank"}
 
 ## Actus SIO1
 
-!!! warning "Actu SIO1"
+!!! warning "Actu SIO1 SLAM"
 
-    📌 Thème en cours B1 : Gestion de projet <br />
-    📣 A rendre : Lundi 15 décembre : Gestion de projet : Projet Noël
-    ⌛️ A venir :  TP Noté Lundi 8 décembre <br />
+    📌 Thème en cours B2 : [UML Diagramme de classe](./3_UML/3.1_diagrammeClasse/3.1.1_diagrammeDeClasse.md) <br />
+    ⌛️ A venir : [Calcul d'un MPD](./3_UML/3.1_diagrammeClasse/3.1.2_CalculMPD.md) <br />
     
     📅 Stage SIO1 : lundi 18 mai - vendredi 19 juin 2026, retour au lycée le lundi 22 juin de 8h30 à 12h30 <br />
 
-??? note "🚨 *Thèmes traités*"
+??? note "🚨 *Thèmes traités B2 SLAM Semestre 2*"
+
+    - [POO en Python](https://sofaugeras.github.io/TNSI/T2_Programmation/2.2_Programmation_Orientee_Objet/cours/)<br />
+    - [UML Introduction](./3_UML/3.1_diagrammeClasse/3.1.0_IntroUML.md) <br />
+
+??? note "🚨 *Thèmes traités B1 semestre 1*"
 
     - [Base de données : introduction](./1_Base_de_donnees/1_introduction/cours.md)<br />
     - [Base de données : Langage de manipulation de données](./1_Base_de_donnees/2_LMD/cours.md)<br />
     - [Base de données : LCD](./1_Base_de_donnees/3_LCD/cours.md) <br />
     - [Base de données : langages de contrôle des données](./1_Base_de_donnees/3_LCD/utilisateur.md)
+    - Gestion de projet partie 1
 
 ## Actus SIO2
 
 !!! warning "Actu SIO2 SLAM"
 
-    📌 Thème en cours B2 : [CI - les tests](./5_devops/5.1_notionDevops/3_tests.md) <br />
+    📌 Thème en cours B2 : Après le stage ... <br />
     ⌛️ A venir B2 : Après le stage ... <br />
 
-    📌 Thème en cours B3 : [Manque de contrôle d'accès au niveaau fonctionnel](./6_Cybersécurité/6.2_TP/5_tpManqueControleAccesFonctionnel.md) <br />
+    📌 Thème en cours B3 : Après le stage ... <br />
     ⌛️ A venir B3 : Après le stage ...<br />
 
     📅 Stage SIO2 : lundi 5 janvier - vendredi 13 février 2026<br />
@@ -54,7 +59,7 @@
     |   |Maël|   |
    
 ??? note "🚨 *Thèmes traités B2*"
-    - [Rappel Base de données : Anabase](./1_Base_de_donnees/5_TP/tp7_anabase.md)<br />
+    - [Rappel Base de données : Anabase](./1_Base_de_donnees/5_TP/tp8_anabase.md)<br />
     - [Modèle MVC : principes](./7_Programmation/7.3_MVC/cours.md)<br />
     - [Laravel : installation Bac à sable](./4_Laravel/4.1_installation/cours.md)<br />
     - [Laravel : Initilisation Projet ToDo](./4_Laravel/4.2_toDo/4.2.1_initialisation.md)<br />
@@ -64,16 +69,16 @@
     - [Intégration continue : les tests](./5_devops/5.1_notionDevops/3_tests.md)
 
 ??? note "🚨 *Thèmes traités B3*"
-    - [Rappel MOOC ANSSI](./6_Cybersécurité/3_hygiene_Cyber/6.3.1_cours/1_recoANSII.md)<br />
-    - [Méthodes EBIOS](./6_Cybersécurité/1_Ebios/cours.md)<br />
-    - [Mauvaise gestion de configuration](./6_Cybersécurité/2_OWASP/6.2.2_TPOwasp/1_tpMauvaiseConfiguration.md)<br />
-    - [Preuve numérique](./6_Cybersécurité/3_hygiene_Cyber/6.3.1_cours/2_preuveNumerique.md)<br />
-    - [Authentication](./6_Cybersécurité/3_hygiene_Cyber/6.3.1_cours/3_authentification.md)<br />
-    - [Archivage](./6_Cybersécurité/3_hygiene_Cyber/6.3.1_cours/4_archivage.md)
-    - [Laravel : Question Cyber](./4_Laravel/4.2_toDo/4.2.3_middleware_Auth.md)
-    - [TP Injection SQL](./6_Cybersécurité/6.2_OWASP/6.2.2_TPOwasp/2_tpInjectionSQL.md)
-    - [TP Exposition aux données sensibles](./6_Cybersécurité/6.2_OWASP/6.2.2_TPOwasp/3_tpExpositionDonneesSensibles.md)
-    - [TP Violation de gestion d'authentification et de session](./6_Cybersécurité/6.2_OWASP/6.2.2_TPOwasp/4_tpViolationGestionAuthentification.md)
+    - [Rappel MOOC ANSSI](./6_Cybersécurité/6.1_cours/6_recoANSII.md)<br />
+    - [Méthodes EBIOS](./6_Cybersécurité/6.1_cours/8_ebios.md)<br />
+    - [Mauvaise gestion de configuration](./6_Cybersécurité/6.2_TP/1_tpMauvaiseConfiguration.md)<br />
+    - [Preuve numérique](./6_Cybersécurité/6.1_cours/3_preuveNumerique.md)<br />
+    - [Authentication](./6_Cybersécurité/6.1_cours/4_authentification.md)<br />
+    - [Archivage](./6_Cybersécurité/6.1_cours/5_archivage.md)
+    - [Laravel : Question Cyber](./4_Laravel/4.2_toDo/4.2.5_Sécurité.md)
+    - [TP Injection SQL](./6_Cybersécurité/6.2_TP/2_tpInjectionSQL.md)
+    - [TP Exposition aux données sensibles](./6_Cybersécurité/6.2_TP/4_tpExpositionDonneesSensibles.md)
+    - [TP Violation de gestion d'authentification et de session](./6_Cybersécurité/6.2_TP/3_tpViolationGestionAuthentification.md)
 
 <!--
 !!! warning "Calendrier de l'avent"

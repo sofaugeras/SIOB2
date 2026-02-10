@@ -89,11 +89,6 @@ markdown_extensions:
         custom_checkbox: false
         clickable_checkbox: true
   - pymdownx.inlinehilite
-  - pymdownx.superfences:
-        custom_fences:
-          - name: mermaid
-            class: mermaid
-            format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.keys
   - pymdownx.tabbed:
       alternate_style: true
@@ -110,15 +105,9 @@ markdown_extensions:
   
 plugins:
   - search
- # - git-revision-date-localized:
- #     enable_creation_date: false
- #     locale: fr
   - awesome-pages:
       collapse_single_pages: false
-  #- macros
-  - mkdocs-jupyter:
-      include_source: True
-  #- page-to-pdf
+
 
 extra:
   analytics: 

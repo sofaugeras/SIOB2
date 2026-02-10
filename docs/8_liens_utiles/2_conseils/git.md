@@ -7,7 +7,7 @@ Voici les étapes pour sauvegarder le répertoire ``MesCours`` sur GitHub :
 ## Prérequis
 
 - Avoir un compte [GitHub](https://docs.github.com/fr/education/explore-the-benefits-of-teaching-and-learning-with-github-education/github-education-for-students/apply-to-github-education-as-a-student).
-- Installer Git sur votre PC. Si ce n'est pas encore fait, téléchargez et installez ==Git== depuis [git-scm.com](git-scm.com).
+- Installer Git sur votre PC. Si ce n'est pas encore fait, téléchargez et installez ==Git== depuis (git-scm.com).
 
 ## Étapes
 

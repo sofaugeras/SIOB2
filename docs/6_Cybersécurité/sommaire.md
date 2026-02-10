@@ -13,14 +13,14 @@
 
 ## Les TP 
 
-- [Authentification TOTP](./6.2.2_TP/TPAuthMA_partie1.md)
-- [Authentification Force brute](./6.2.2_TP/TPAuthMA_partie2.md)
-- [Insatllation des environnements : DVWA et bijoo](./6.2.2_TPOwasp/0_tpOwasp.md)
-- [TP Mauvaise gestion de configuration](./6.2.2_TPOwasp/1_tpMauvaiseConfiguration.md)
-- [TP Injection sql](./6.2.2_TPOwasp/2_tpInjectionSQL.md)
-- [TP Violation de Gestion d'Authentification et de Session](46.2.2_TPOwasp/3_tpViolationGestionAuthentification.md)
-- [TP Exposition aux données sensibles](./6.2.2_TPOwasp/_tpExpositionDonneesSensibles.md)
-- [TP Manque de contrôle d'accès au niveau fonctionnel](./6.2.2_TPOwasp/5_tpManqueControleAccesFonctionnel.md)
+- [Authentification TOTP](./6.2_TP/TPAuthMA_partie1.md)
+- [Authentification Force brute](./6.2_TP/TPAuthMA_partie2.md)
+- [Installation des environnements : DVWA et bijoo](./6.2_TP/0_tpOwasp.md)
+- [TP Mauvaise gestion de configuration](./6.2_TP/1_tpMauvaiseConfiguration.md)
+- [TP Injection sql](./6.2_TP/2_tpInjectionSQL.md)
+- [TP Violation de Gestion d'Authentification et de Session](./6.2_TP/3_tpViolationGestionAuthentification.md)
+- [TP Exposition aux données sensibles](./6.2_TP/4_tpExpositionDonneesSensibles.md)
+- [TP Manque de contrôle d'accès au niveau fonctionnel](./6.2_TP/5_tpManqueControleAccesFonctionnel.md)
 
 ## Pages de ressources en Cybersécurité SLAM
 

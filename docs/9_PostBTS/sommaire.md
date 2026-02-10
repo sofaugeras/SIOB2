@@ -4,10 +4,10 @@
 
 ## Les possibilités
 
-1. [Licence pro en initial](./possibilités/7.1_LP_initial.md)
-2. [Licence pro en alternance](./possibilités/7.2_LP_alt.md)
-3. [Fac](./possibilités/7.3_fac.md)
-4. [Ecoles d'ingénieur](./possibilités/7.4_Ecoles.md)
+1. [Licence pro en initial](./possibilités/9.1_LP_initial.md)
+2. [Licence pro en alternance](./possibilités/9.2_LP_alt.md)
+3. [Fac](./possibilités/9.3_fac.md)
+4. [Ecoles d'ingénieur](./possibilités/9.4_Ecoles.md)
 
 ## Panorama des métiers
 - [Panorama des métiers Cyber](https://www.demainspecialistecyber.fr/les-metiers)
