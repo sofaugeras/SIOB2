@@ -4047,14 +4047,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_cours.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -4075,14 +4075,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_exercices.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -4103,14 +4103,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -4131,14 +4131,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -4159,14 +4159,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_authentification.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4187,14 +4187,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_archivage.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5671,60 +5783,64 @@ Une TODO List est un procédé qui se veut simple et efficace pour gérer les t�
 <h2 id="211-relation-many-to-many">2.1.1 Relation Many To Many<a class="headerlink" href="#211-relation-many-to-many" title="Permanent link">⚓︎</a></h2>
 <p>On va avoir besoin de déclarer qu'un todo peut appartenir à plusieurs catégories et une catégorie classifie plusieurs todos. La relation est symétrique.</p>
 <p>On ajoute l'espace de noms nécessaire à la gestion de cette relation dans les 2 models.</p>
-<pre><code class="language-php">use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-</code></pre>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">use Illuminate\Database\Eloquent\Relations\BelongsToMany;</span>
+</code></pre></div>
 <p>Puis à l'intérieur de la classe, on ajoute les méthodes d'association.</p>
 <p>Dans Todos.php</p>
-<pre><code class="language-php">    public function categories(): BelongsToMany
-        {
-            return $this-&gt;belongsToMany(Categories::class);
-        }
-</code></pre>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">    public function categories(): BelongsToMany</span>
+<span class="x">        {</span>
+<span class="x">            return $this-&gt;belongsToMany(Categories::class);</span>
+<span class="x">        }</span>
+</code></pre></div>
 <details class="tips">
 <summary>code complet de Todos.php</summary>
-<p>```php
-&lt;?php
-namespace App\Models;</p>
-<p>use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;</p>
-<p>class Todos extends Model
-{
-    use HasFactory;</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>protected $fillable = [&#39;texte&#39;, &#39;termine&#39;, &#39;important&#39;];
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">namespace</span> <span class="nx">App\Models</span><span class="p">;</span>
 
-public function categories(): BelongsToMany
-{
-    return $this-&gt;belongsToMany(Categories::class);
-}
+<span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Factories\HasFactory</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Model</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Relations\BelongsToMany</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Todos</span> <span class="k">extends</span> <span class="nx">Model</span>
+<span class="p">{</span>
+    <span class="k">use</span> <span class="nx">HasFactory</span><span class="p">;</span>
+
+    <span class="k">protected</span> <span class="nv">$fillable</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;texte&#39;</span><span class="p">,</span> <span class="s1">&#39;termine&#39;</span><span class="p">,</span> <span class="s1">&#39;important&#39;</span><span class="p">];</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">categories</span><span class="p">()</span><span class="o">:</span> <span class="nx">BelongsToMany</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">belongsToMany</span><span class="p">(</span><span class="nx">Categories</span><span class="o">::</span><span class="na">class</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
-<p>}</p>
-<p>```</p>
 </details>
 <p>Dans Categories.php</p>
-<pre><code class="language-php">    public function todos(): BelongsToMany
-        {
-            return $this-&gt;belongsToMany(Todos::class);
-        }
-</code></pre>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">    public function todos(): BelongsToMany</span>
+<span class="x">        {</span>
+<span class="x">            return $this-&gt;belongsToMany(Todos::class);</span>
+<span class="x">        }</span>
+</code></pre></div>
 <details class="tips">
 <summary>code complet de catégories.php</summary>
-<p>```php
-&lt;?php</p>
-<p>namespace App\Models;</p>
-<p>use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;</p>
-<p>class Categories extends Model
-{
-    use HasFactory;</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>public function todos(): BelongsToMany
-{
-    return $this-&gt;belongsToMany(Todos::class);
-}
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">App\Models</span><span class="p">;</span>
+
+
+<span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Factories\HasFactory</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Model</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Relations\BelongsToMany</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Categories</span> <span class="k">extends</span> <span class="nx">Model</span>
+<span class="p">{</span>
+    <span class="k">use</span> <span class="nx">HasFactory</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">todos</span><span class="p">()</span><span class="o">:</span> <span class="nx">BelongsToMany</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">belongsToMany</span><span class="p">(</span><span class="nx">Todos</span><span class="o">::</span><span class="na">class</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
-<p>}
-```</p>
 </details>
 <p>On déclare ici avec la méthode todos (au pluriel) qu’une catégorie appartient à plusieurs (belongsToMany) todos (Todos). On aura ainsi une méthode pratique pour récupérer les todos d’une catégorie. Idem pour les catégories.</p>
 <h3 id="212-le-seeder">2.1.2 Le seeder<a class="headerlink" href="#212-le-seeder" title="Permanent link">⚓︎</a></h3>
@@ -5752,96 +5868,96 @@ Peux tu me donner le seeder correspondant ?</p>
 </details>
 <p>On va créer un nouveau fichier dans le répertoire <code>database\seeders</code>, qui contiendra les données à injecter en table.
  On pourra l'exécuter directement en utilisant la commande suivante :</p>
-<pre><code class="language-prompt">php artisan db:seed --class=CategoriesSeeder
-
-</code></pre>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>php artisan db:seed --class=CategoriesSeeder
+</code></pre></div>
 <details class="tips">
 <summary>Code de CategoriesSeeder</summary>
-<p>```php
-&lt;?php
-namespace Database\Seeders;</p>
-<p>use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;</p>
-<p>class CategoriesSeeder extends Seeder
-{
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
-    {
-        $categories = [
-            ['idcat' =&gt; 1, 'libelle' =&gt; 'Pro'],
-            ['idcat' =&gt; 2, 'libelle' =&gt; 'Famille'],
-            ['idcat' =&gt; 3, 'libelle' =&gt; 'Sport'],
-            ['idcat' =&gt; 4, 'libelle' =&gt; 'Associatif'],
-            // Ajoutez d'autres catégories au besoin
-        ];</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>    // Insertion des données dans la table &#39;categories&#39;
-    DB::table(&#39;categories&#39;)-&gt;insert($categories);
-}
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">namespace</span> <span class="nx">Database\Seeders</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Illuminate\Database\Seeder</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Support\Facades\DB</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Support\Facades\Hash</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Support\Str</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">CategoriesSeeder</span> <span class="k">extends</span> <span class="nx">Seeder</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * Run the database seeds.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @return void</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">run</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$categories</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">[</span><span class="s1">&#39;idcat&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;libelle&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Pro&#39;</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">&#39;idcat&#39;</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;libelle&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Famille&#39;</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">&#39;idcat&#39;</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;libelle&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Sport&#39;</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">&#39;idcat&#39;</span> <span class="o">=&gt;</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;libelle&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Associatif&#39;</span><span class="p">],</span>
+            <span class="c1">// Ajoutez d&#39;autres catégories au besoin</span>
+        <span class="p">];</span>
+
+        <span class="c1">// Insertion des données dans la table &#39;categories&#39;</span>
+        <span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">&#39;categories&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">insert</span><span class="p">(</span><span class="nv">$categories</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
 </code></pre></div>
-<p>}
-?&gt;
-```</p>
 </details>
 <p>On va également ajouter un seeder à la propriété $seeders du fichier DatabaseSeeder.php afin qu'il soit exécuté lors de la commande php artisan db:seed.</p>
 <details class="tips">
 <summary>Code de DatabaseSeeder</summary>
-<p><code>php
-class DatabaseSeeder extends Seeder
-{
-    /**
-     * Seed the application's database.
-     */
-    public function run(): void
-    {
-        //Ajout de la classe CategoriesSeeder
-        $this-&gt;call([
-            CategoriesSeeder::class,
-        ]);
-    }
-}</code></p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">class DatabaseSeeder extends Seeder</span>
+<span class="x">{</span>
+<span class="x">    /**</span>
+<span class="x">     * Seed the application&#39;s database.</span>
+<span class="x">     */</span>
+<span class="x">    public function run(): void</span>
+<span class="x">    {</span>
+<span class="x">        //Ajout de la classe CategoriesSeeder</span>
+<span class="x">        $this-&gt;call([</span>
+<span class="x">            CategoriesSeeder::class,</span>
+<span class="x">        ]);</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+</code></pre></div>
 </details>
 <p>Lorsque est lancé la commande de (re)création de la base, on peut ajouter l'option <code>--seed</code> pour alimenter les tables avec un jeu de test</p>
-<pre><code class="language-prompt">php artisan migrate:fresh --seed
+<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>php artisan migrate:fresh --seed
 
 php artisan migrate:fresh --seed --seeder=CategoriesSeeder
-</code></pre>
-<p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> <ins>A faire</ins> : Ajouter un seeder pour Todo</p>
+</code></pre></div>
+<img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> <ins>A faire</ins> : Ajouter un seeder pour Todo</p>
 <h3 id="213-le-controller-categorie">2.1.3 Le controller Catégorie<a class="headerlink" href="#213-le-controller-categorie" title="Permanent link">⚓︎</a></h3>
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Générer le controller de Catégorie en ligne de commande.</p>
 <details class="tips">
 <summary>solution au cas où</summary>
-<p><code>php
-php artisan make:controller CategoriesController</code></p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">php artisan make:controller CategoriesController</span>
+</code></pre></div>
 </details>
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Ajouter le code pour récupérer la liste des catégorie</p>
 <details class="tips">
 <summary>code de categoriesController</summary>
-<p><code>php
-/**
- * Affiche la liste des catégories.
- *
- * @return \Illuminate\Http\Response
- */
-public function listeCatégories()
-{
-    return view("home", ["categories" =&gt; Categories::all()]);
-}</code></p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">/**</span>
+<span class="x"> * Affiche la liste des catégories.</span>
+<span class="x"> *</span>
+<span class="x"> * @return \Illuminate\Http\Response</span>
+<span class="x"> */</span>
+<span class="x">public function listeCatégories()</span>
+<span class="x">{</span>
+<span class="x">    return view(&quot;home&quot;, [&quot;categories&quot; =&gt; Categories::all()]);</span>
+<span class="x">}</span>
+</code></pre></div>
 </details>
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Pour afficher la liste des Todos, on utilise le controller Todo. On va donc ajouter à l'appel de la liste des Todos, la liste des catégories. <img alt="‼️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/203c.svg" title=":bangbang:" /> Ne pas oublier de faire les import de librairies nécessaires.</p>
 <details class="tips">
 <summary>code liste() dans todocontroller</summary>
-<p><code>php
-//Liste
-public function liste()
-{
-    return view("home", ["todos" =&gt; Todos::all(), "categories" =&gt; Categories::all()]);
-}</code></p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">//Liste</span>
+<span class="x">public function liste()</span>
+<span class="x">{</span>
+<span class="x">    return view(&quot;home&quot;, [&quot;todos&quot; =&gt; Todos::all(), &quot;categories&quot; =&gt; Categories::all()]);</span>
+<span class="x">}</span>
+</code></pre></div>
 </details>
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Conclusion : ici on ne se sert pas du controller Categories.</p>
 <h3 id="214-la-vue-home-pour-ajouter-les-categories">2.1.4 La vue home pour ajouter les catégories<a class="headerlink" href="#214-la-vue-home-pour-ajouter-les-categories" title="Permanent link">⚓︎</a></h3>
@@ -5850,32 +5966,32 @@ public function liste()
 <p>Dans la liste des Todos</p>
 <details class="tips">
 <summary>Code dans home pour la liste des catégorie</summary>
-<p><code>php
-&lt;!-- Affichage du texte --&gt;
-&lt;span&gt;{{ $todo-&gt;texte }}&lt;/span&gt;
-    &lt;!-- Affichage de la catégorie --&gt;
-    &lt;p&gt;Catégories :&lt;/p&gt;
-        &lt;ul&gt;
-            @foreach($todo-&gt;categories as $category)
-                &lt;li&gt;{{ $category-&gt;libelle }}&lt;/li&gt;
-             @endforeach
-            &lt;/ul&gt;
-    &lt;/p&gt;</code></p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;!-- Affichage du texte --&gt;</span>
+<span class="x">&lt;span&gt;{{ $todo-&gt;texte }}&lt;/span&gt;</span>
+<span class="x">    &lt;!-- Affichage de la catégorie --&gt;</span>
+<span class="x">    &lt;p&gt;Catégories :&lt;/p&gt;</span>
+<span class="x">        &lt;ul&gt;</span>
+<span class="x">            @foreach($todo-&gt;categories as $category)</span>
+<span class="x">                &lt;li&gt;{{ $category-&gt;libelle }}&lt;/li&gt;</span>
+<span class="x">             @endforeach</span>
+<span class="x">            &lt;/ul&gt;</span>
+<span class="x">    &lt;/p&gt;</span>
+</code></pre></div>
 </details>
 <p>Puis dans le formulaire de saisie d'un Todo</p>
 <details class="tips">
 <summary>Code dans home pour les boites à cocher</summary>
-<p><code>php
- &lt;!-- boites à cocher pour les catégories --&gt;
-&lt;div class="form-group"&gt;
-&lt;label&gt;Catégories&lt;/label&gt;
-    @foreach($categories as $categorie)
-        &lt;div class="form-check"&gt;
-            &lt;input class="form-check-input" type="checkbox" name="categories[]" value="{{ $categorie-&gt;id }}"&gt;
-            &lt;label class="form-check-label"&gt;{{ $categorie-&gt;libelle }}&lt;/label&gt;
-        &lt;/div&gt;
-    @endforeach
-&lt;/div&gt;</code></p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x"> &lt;!-- boites à cocher pour les catégories --&gt;</span>
+<span class="x">&lt;div class=&quot;form-group&quot;&gt;</span>
+<span class="x">&lt;label&gt;Catégories&lt;/label&gt;</span>
+<span class="x">    @foreach($categories as $categorie)</span>
+<span class="x">        &lt;div class=&quot;form-check&quot;&gt;</span>
+<span class="x">            &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; name=&quot;categories[]&quot; value=&quot;{{ $categorie-&gt;id }}&quot;&gt;</span>
+<span class="x">            &lt;label class=&quot;form-check-label&quot;&gt;{{ $categorie-&gt;libelle }}&lt;/label&gt;</span>
+<span class="x">        &lt;/div&gt;</span>
+<span class="x">    @endforeach</span>
+<span class="x">&lt;/div&gt;</span>
+</code></pre></div>
 </details>
 <p>Remarquez que le nom du select est accompagné de crochets (<code>categories[]</code>) pour signifier qu’on va envoyer un tableau de valeurs dans la requête HTTP.</p>
 <p><img alt="👀" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f440.svg" title=":eyes:" /> Ne pas tester encore à cette étape, le travail n'est pas fini.</p>
@@ -5887,53 +6003,51 @@ public function liste()
 <details class="tips">
 <summary>Solutions</summary>
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Créer la migration de la table d'association <code>create_categories_todos_table. et supprimer celle de</code>categorise`.</p>
-<p>```php
-public function up(): void
-{
-    Schema::create('categories_todos', function (Blueprint $table) {
-        $table-&gt;integer('categories_id');
-        $table-&gt;integer('todos_id');
-        //Clé primaire composée
-        $table-&gt;primary(['categories_id', 'todos_id']);
-        //Clés étrangères
-        $table-&gt;foreign('categories_id')-&gt;references('id')-&gt;on('categories');
-        $table-&gt;foreign('todos_id')-&gt;references('id')-&gt;on('todos')-&gt;onDelete('cascade');</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>    $table-&gt;timestamps();
-});
-</code></pre></div>
-<p>}</p>
-<p><code>``
-:arrow_forward: Reprendre la migration de la table</code>catégories`</p>
-<p><code>php
- public function up(): void
-{
-    Schema::create('categories', function (Blueprint $table) {
-        $table-&gt;integer('id');
-        $table-&gt;string('libelle');
-        //Clé primaire
-        $table-&gt;primary('id');
-        $table-&gt;timestamps();
-    });
-}</code></p>
-<p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Reprendre la migration de la table   <code>Todos</code></p>
-<p>```php
-public function up(): void
-{
-    Schema::create('todos', function (Blueprint $table) {
-        $table-&gt;integer('id')-&gt;autoIncrement();
-        $table-&gt;string('texte');
-        $table-&gt;boolean('termine')-&gt;default(0);
-        $table-&gt;boolean('important')-&gt;default(0);</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>    #Déclaraction de la clé primaire
-    $table-&gt;primary(&#39;id&#39;);
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
+<span class="x">{</span>
+<span class="x">    Schema::create(&#39;categories_todos&#39;, function (Blueprint $table) {</span>
+<span class="x">        $table-&gt;integer(&#39;categories_id&#39;);</span>
+<span class="x">        $table-&gt;integer(&#39;todos_id&#39;);</span>
+<span class="x">        //Clé primaire composée</span>
+<span class="x">        $table-&gt;primary([&#39;categories_id&#39;, &#39;todos_id&#39;]);</span>
+<span class="x">        //Clés étrangères</span>
+<span class="x">        $table-&gt;foreign(&#39;categories_id&#39;)-&gt;references(&#39;id&#39;)-&gt;on(&#39;categories&#39;);</span>
+<span class="x">        $table-&gt;foreign(&#39;todos_id&#39;)-&gt;references(&#39;id&#39;)-&gt;on(&#39;todos&#39;)-&gt;onDelete(&#39;cascade&#39;);</span>
 
-    $table-&gt;timestamps();
-    /*Utilisation du softDelete*/
-    $table-&gt;softDeletes();
-});
+<span class="x">        $table-&gt;timestamps();</span>
+<span class="x">    });</span>
+<span class="x">}</span>
 </code></pre></div>
-<p>}
-```</p>
+<img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Reprendre la migration de la table   <code>catégories</code></p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x"> public function up(): void</span>
+<span class="x">{</span>
+<span class="x">    Schema::create(&#39;categories&#39;, function (Blueprint $table) {</span>
+<span class="x">        $table-&gt;integer(&#39;id&#39;);</span>
+<span class="x">        $table-&gt;string(&#39;libelle&#39;);</span>
+<span class="x">        //Clé primaire</span>
+<span class="x">        $table-&gt;primary(&#39;id&#39;);</span>
+<span class="x">        $table-&gt;timestamps();</span>
+<span class="x">    });</span>
+<span class="x">}</span>
+</code></pre></div>
+<p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Reprendre la migration de la table   <code>Todos</code></p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
+<span class="x">{</span>
+<span class="x">    Schema::create(&#39;todos&#39;, function (Blueprint $table) {</span>
+<span class="x">        $table-&gt;integer(&#39;id&#39;)-&gt;autoIncrement();</span>
+<span class="x">        $table-&gt;string(&#39;texte&#39;);</span>
+<span class="x">        $table-&gt;boolean(&#39;termine&#39;)-&gt;default(0);</span>
+<span class="x">        $table-&gt;boolean(&#39;important&#39;)-&gt;default(0);</span>
+
+<span class="x">        #Déclaraction de la clé primaire</span>
+<span class="x">        $table-&gt;primary(&#39;id&#39;);</span>
+
+<span class="x">        $table-&gt;timestamps();</span>
+<span class="x">        /*Utilisation du softDelete*/</span>
+<span class="x">        $table-&gt;softDeletes();</span>
+<span class="x">    });</span>
+<span class="x">}</span>
+</code></pre></div>
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Relancer la migration et les seeders <code>php artisan migrate:fresh --seed</code></p>
 </details>
 <h3 id="216-adapter-le-code-de-savetodo-pour-enregister-la-categorie-du-todo">2.1.6 Adapter le code de SaveTodo pour enregister la catégorie du Todo<a class="headerlink" href="#216-adapter-le-code-de-savetodo-pour-enregister-la-categorie-du-todo" title="Permanent link">⚓︎</a></h3>
@@ -5942,17 +6056,17 @@ On envoie par la vue <code>home</code> un tableau de catégories <code>name="cat
 Lisez un peu de documentation <a href="https://laravel.sillo.org/cours-laravel-10-les-donnees-la-relation-nn/">ici</a> et essayer de l'adapter à votre projet.</p>
 <details class="tips">
 <summary>Solution</summary>
-<p>```php
-public function saveTodo(Request $request){
-    //....
-        $todo-&gt;save();
-        <span class="arithmatex">\(todo-&gt;categories()-&gt;attach(\)</span>cats); /*A ajouter */
-        return redirect()-&gt;route('todo.liste');
-    } else{
-        return redirect()-&gt;route('todo.liste')-&gt;with('message', "Veuillez saisir une note à ajouter");
-    }</p>
-<p>}
-```</p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">public function saveTodo(Request $request){</span>
+<span class="x">    //....</span>
+<span class="x">        $todo-&gt;save();</span>
+<span class="x">        $todo-&gt;categories()-&gt;attach($cats); /*A ajouter */</span>
+<span class="x">        return redirect()-&gt;route(&#39;todo.liste&#39;);</span>
+<span class="x">    } else{</span>
+<span class="x">        return redirect()-&gt;route(&#39;todo.liste&#39;)-&gt;with(&#39;message&#39;, &quot;Veuillez saisir une note à ajouter&quot;);</span>
+<span class="x">    }</span>
+
+<span class="x">}</span>
+</code></pre></div>
 </details>
 <h3 id="217-delete-un-todo">2.1.7 Delete un ToDo<a class="headerlink" href="#217-delete-un-todo" title="Permanent link">⚓︎</a></h3>
 <p>Si vous essayer de supprimer un Todo, à cette étape, cela va provoquer une erreur d'intégrité référentielle. <br /></p>
@@ -5960,22 +6074,21 @@ public function saveTodo(Request $request){
 <details class="tips">
 <summary>solution</summary>
 <p>Il faut modifier la migration de Todo pour ajouter la fonction SQL de deleteOnCascade.</p>
-<p>```php
-public function up(): void
-{
-    Schema::create('categories_todos', function (Blueprint $table) {
-        $table-&gt;integer('categories_id');
-        $table-&gt;integer('todos_id');</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>    $table-&gt;foreign(&#39;categories_id&#39;)-&gt;references(&#39;id&#39;)-&gt;on(&#39;categories&#39;);
-    $table-&gt;foreign(&#39;todos_id&#39;)-&gt;references(&#39;id&#39;)-&gt;on(&#39;todos&#39;)
-        -&gt;onDelete(&#39;cascade&#39;);
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
+<span class="x">{</span>
+<span class="x">    Schema::create(&#39;categories_todos&#39;, function (Blueprint $table) {</span>
+<span class="x">        $table-&gt;integer(&#39;categories_id&#39;);</span>
+<span class="x">        $table-&gt;integer(&#39;todos_id&#39;);</span>
 
-    $table-&gt;primary([&#39;categories_id&#39;, &#39;todos_id&#39;]);
-    $table-&gt;timestamps();
-});
+<span class="x">        $table-&gt;foreign(&#39;categories_id&#39;)-&gt;references(&#39;id&#39;)-&gt;on(&#39;categories&#39;);</span>
+<span class="x">        $table-&gt;foreign(&#39;todos_id&#39;)-&gt;references(&#39;id&#39;)-&gt;on(&#39;todos&#39;)</span>
+<span class="x">            -&gt;onDelete(&#39;cascade&#39;);</span>
+
+<span class="x">        $table-&gt;primary([&#39;categories_id&#39;, &#39;todos_id&#39;]);</span>
+<span class="x">        $table-&gt;timestamps();</span>
+<span class="x">    });</span>
+<span class="x">}</span>
 </code></pre></div>
-<p>}
-```</p>
 <p><img alt="👀" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f440.svg" title=":eyes:" /> relancer la migration et Tester !</p>
 </details>
 <h2 id="22-la-notion-de-softdelete">2.2 La notion de softDelete<a class="headerlink" href="#22-la-notion-de-softdelete" title="Permanent link">⚓︎</a></h2>
@@ -5984,67 +6097,70 @@ public function up(): void
 <p>Pour utiliser les soft deletes sur vos modèles, vous devez d'abord ajouter le trait softDeletes à votre classe Model Todos.php:</p>
 <details class="tips">
 <summary>code de Todos.php</summary>
-<p>```php
-&lt;?php</p>
-<p>namespace App\Models;</p>
-<p>use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;</p>
-<p>use Illuminate\Database\Eloquent\SoftDeletes;</p>
-<p>class Todos extends Model
-{
-    use HasFactory;
-    use SoftDeletes;</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>protected $fillable = [&#39;texte&#39;, &#39;termine&#39;, &#39;important&#39;];
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
-public function categories(): BelongsToMany
-{
-    return $this-&gt;belongsToMany(Categories::class);
-}
+<span class="k">namespace</span> <span class="nx">App\Models</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Factories\HasFactory</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Model</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Relations\BelongsToMany</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\SoftDeletes</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Todos</span> <span class="k">extends</span> <span class="nx">Model</span>
+<span class="p">{</span>
+    <span class="k">use</span> <span class="nx">HasFactory</span><span class="p">;</span>
+    <span class="k">use</span> <span class="nx">SoftDeletes</span><span class="p">;</span>
+
+    <span class="k">protected</span> <span class="nv">$fillable</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;texte&#39;</span><span class="p">,</span> <span class="s1">&#39;termine&#39;</span><span class="p">,</span> <span class="s1">&#39;important&#39;</span><span class="p">];</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">categories</span><span class="p">()</span><span class="o">:</span> <span class="nx">BelongsToMany</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">belongsToMany</span><span class="p">(</span><span class="nx">Categories</span><span class="o">::</span><span class="na">class</span><span class="p">);</span>
+    <span class="p">}</span>
+
+
+<span class="p">}</span>
 </code></pre></div>
-<p>}</p>
-<p>```</p>
 </details>
 <p>Ensuite, vous devez ajouter une colonne de type "deleted_at" à votre table. Vous pouvez le faire en ajoutant simplement la date colonne suivante à votre migration :</p>
 <details class="tips">
 <summary>migration Todo</summary>
-<p>```php
-public function up(): void
-{
-    Schema::create('todos', function (Blueprint $table) {
-        <span class="arithmatex">\(table-&gt;integer('id')-&gt;autoIncrement();
-        #\)</span>table-&gt;primary('id');
-        $table-&gt;string('texte');
-        $table-&gt;boolean('termine')-&gt;default(0);
-        $table-&gt;boolean('important')-&gt;default(0);</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>    $table-&gt;timestamps();
-    /*Utilisation du softDelete*/
-    $table-&gt;softDeletes();
-});
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
+<span class="x">{</span>
+<span class="x">    Schema::create(&#39;todos&#39;, function (Blueprint $table) {</span>
+<span class="x">        $table-&gt;integer(&#39;id&#39;)-&gt;autoIncrement();</span>
+<span class="x">        #$table-&gt;primary(&#39;id&#39;);</span>
+<span class="x">        $table-&gt;string(&#39;texte&#39;);</span>
+<span class="x">        $table-&gt;boolean(&#39;termine&#39;)-&gt;default(0);</span>
+<span class="x">        $table-&gt;boolean(&#39;important&#39;)-&gt;default(0);</span>
+
+<span class="x">        $table-&gt;timestamps();</span>
+<span class="x">        /*Utilisation du softDelete*/</span>
+<span class="x">        $table-&gt;softDeletes();</span>
+<span class="x">    });</span>
+<span class="x">}</span>
 </code></pre></div>
-<p>}
-```</p>
 </details>
 <p>Une fois que vous avez ajouté la colonne, vous pouvez commencer à utiliser la fonctionnalité soft deletes. Pour "supprimer" un enregistrement, en appelant la méthode <code>delete()</code>, cela va mettre à jour la colonne <code>deleted_at</code> avec la date et l'heure actuelles, ce qui marquera l'enregistrement comme <strong>supprimé</strong>. <img alt="❗️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2757.svg" title=":exclamation:" /> Attention, dans notre cas, on ne peut supprimer un ToDo que si il est "terminé". Vous devez donc laisser la structure conditionnelle dans lequel est votre appel de <code>delete()</code>.</p>
-<pre><code class="language-php">$todo = Todos::find($id);
-        if($todo-&gt;termine == 1){
-            $todo-&gt;delete();
-        }
-</code></pre>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$todo = Todos::find($id);</span>
+<span class="x">        if($todo-&gt;termine == 1){</span>
+<span class="x">            $todo-&gt;delete();</span>
+<span class="x">        }</span>
+</code></pre></div>
 <h2 id="23-les-groupes-de-routes">2.3 Les groupes de routes<a class="headerlink" href="#23-les-groupes-de-routes" title="Permanent link">⚓︎</a></h2>
 <p>Si plusieurs routes ont des informations communes il est possible de les grouper ensemble.</p>
 <details class="tips">
 <summary>Code de web.php</summary>
-<p>```php
-    Route::controller(TodosController::class)-&gt;group(function () {</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Route::post(&#39;/action/add&#39;, &#39;saveTodo&#39;)-&gt;name(&#39;todo.save&#39;);
-Route::get(&#39;/action/done/{id}&#39; , &#39;markAsDone&#39;)-&gt;name(&#39;todo.done&#39;);
-Route::get(&#39;/action/delete/{id}&#39;, &#39;deleteTodo&#39;)-&gt;name(&#39;todo.delete&#39;);
-Route::get(&#39;/action/lower/{id}&#39;,  &#39;lowerPriority&#39;)-&gt;name(&#39;todo.lower&#39;);
-Route::get(&#39;/action/raise/{id}&#39;, &#39;raisePriority&#39;)-&gt;name(&#39;todo.raise&#39;);
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">    Route::controller(TodosController::class)-&gt;group(function () {</span>
+
+<span class="x">    Route::post(&#39;/action/add&#39;, &#39;saveTodo&#39;)-&gt;name(&#39;todo.save&#39;);</span>
+<span class="x">    Route::get(&#39;/action/done/{id}&#39; , &#39;markAsDone&#39;)-&gt;name(&#39;todo.done&#39;);</span>
+<span class="x">    Route::get(&#39;/action/delete/{id}&#39;, &#39;deleteTodo&#39;)-&gt;name(&#39;todo.delete&#39;);</span>
+<span class="x">    Route::get(&#39;/action/lower/{id}&#39;,  &#39;lowerPriority&#39;)-&gt;name(&#39;todo.lower&#39;);</span>
+<span class="x">    Route::get(&#39;/action/raise/{id}&#39;, &#39;raisePriority&#39;)-&gt;name(&#39;todo.raise&#39;);</span>
+<span class="x">});</span>
 </code></pre></div>
-<p>});
-```</p>
 </details>
 <h2 id="24-une-nouvelle-page-recherche">2.4 Une nouvelle page : Recherche<a class="headerlink" href="#24-une-nouvelle-page-recherche" title="Permanent link">⚓︎</a></h2>
 <p>User story : On souhaite créer une page de Recherche par mot clé. Cette page disposera d'un champ texte pour saisir un mot-clé. A la validation de ce formulaire, l'application retournera tous les Todos contenant ce mot-clé dans leur texte, y compris dans les ToDos déjà supprimés.</p>
@@ -6211,8 +6327,6 @@ Route::get(&#39;/action/raise/{id}&#39;, &#39;raisePriority&#39;)-&gt;name(&#39;
         <script src="../../../javascript/mathjax.js"></script>
       
         <script src="../../../javascript/interpreter.js"></script>
-      
-        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

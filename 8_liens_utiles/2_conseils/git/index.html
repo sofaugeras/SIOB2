@@ -3872,14 +3872,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_cours.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -3900,14 +3900,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_exercices.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -3928,14 +3928,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -3956,14 +3956,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -3984,14 +3984,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_authentification.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4012,14 +4012,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_archivage.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5622,30 +5734,22 @@
 <p>windows ouvre un terminal positionné directement sur le bon prompt.</p>
 </blockquote>
 </li>
-<li>Initialisez Git dans ce répertoire :</li>
+<li>Initialisez Git dans ce répertoire :
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>git init
+</code></pre></div></li>
+<li>Ajouter le dépôt GitHub en tant que remote (distant) :
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>    git remote add origin https://github.com/votre-utilisateur/MesCours.git
+</code></pre></div></li>
+<li>Ajouter les fichiers et effectuer le premier commit :
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>git add .
+</code></pre></div></li>
+<li>Effectuez le commit initial :
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>    git commit -m &quot;Premier commit&quot;
+</code></pre></div></li>
+<li>Pousser les modifications vers GitHub :
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>        git push -u origin master
+</code></pre></div></li>
 </ul>
-<pre><code class="language-prompt">git init
-</code></pre>
-<ul>
-<li>Ajouter le dépôt GitHub en tant que remote (distant) :</li>
-</ul>
-<pre><code class="language-prompt">    git remote add origin https://github.com/votre-utilisateur/MesCours.git
-</code></pre>
-<ul>
-<li>Ajouter les fichiers et effectuer le premier commit :</li>
-</ul>
-<pre><code class="language-prompt">git add .
-</code></pre>
-<ul>
-<li>Effectuez le commit initial :</li>
-</ul>
-<pre><code class="language-prompt">    git commit -m &quot;Premier commit&quot;
-</code></pre>
-<ul>
-<li>Pousser les modifications vers GitHub :</li>
-</ul>
-<pre><code class="language-prompt">        git push -u origin master
-</code></pre>
 <h2 id="verification">Vérification<a class="headerlink" href="#verification" title="Permanent link">⚓︎</a></h2>
 <p>Allez sur votre dépôt GitHub, vous devriez voir les fichiers du répertoire <code>MesCours</code>.</p>
 <div class="admonition note">
@@ -5815,8 +5919,6 @@
         <script src="../../../javascript/mathjax.js"></script>
       
         <script src="../../../javascript/interpreter.js"></script>
-      
-        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

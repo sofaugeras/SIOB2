@@ -3883,14 +3883,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_cours.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -3911,14 +3911,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_exercices.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -3939,14 +3939,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -3967,14 +3967,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -3995,14 +3995,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_authentification.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4023,14 +4023,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_archivage.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5513,100 +5625,100 @@
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 1. <strong>Décompter le nombre de chien par cage. Affichez aussi les numéros de cage vide.</strong></p>
 <details class="question">
 <summary>correction</summary>
-<p><code>SQL
-SELECT cage.NumCage, COUNT(Num_Ch)
-FROM Cage
-LEFT OUTER JOIN Chien
-ON Cage.NumCage = Chien.NumCage
-GROUP BY Cage.NumCage</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">cage</span><span class="p">.</span><span class="n">NumCage</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">Num_Ch</span><span class="p">)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Cage</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Chien</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">Cage</span><span class="p">.</span><span class="n">NumCage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Chien</span><span class="p">.</span><span class="n">NumCage</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Cage</span><span class="p">.</span><span class="n">NumCage</span>
+</code></pre></div>
 <p>Attention: <code>COUNT(*)</code> donnerai 1, même pour une cage vide, car il y a une ligne qui lui correspond.</p>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 2. <strong>Lister les chiens avec les détails de leurs propriétaires</strong></p>
 <details class="question">
 <summary>correction</summary>
-<p><code>sql
-SELECT ch.nom_ch, ch.race, ch.sexe, p.nom_pro, p.tel_pro
-FROM CHIEN ch
-INNER JOIN PROPRIETAIRE p ON ch.code_pro = p.code_pro;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">nom_ch</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">race</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">sexe</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom_pro</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">tel_pro</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CHIEN</span><span class="w"> </span><span class="n">ch</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">PROPRIETAIRE</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">code_pro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">code_pro</span><span class="p">;</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 3. <strong>Lister tous les chiens et leurs repas, même ceux qui n'ont pas encore mangé</strong></p>
 <details class="question">
 <summary>correction</summary>
-<p><code>sql
-SELECT ch.nom_ch, ch.race, m.quantite, m.date_repas
-FROM CHIEN ch
-LEFT JOIN MANGER m ON ch.num_ch = m.num_ch;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">nom_ch</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">race</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">quantite</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">date_repas</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CHIEN</span><span class="w"> </span><span class="n">ch</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">MANGER</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">num_ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">num_ch</span><span class="p">;</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 4. <strong>Lister tous les aliments et les chiens qui les ont mangés, même si certains aliments n'ont pas été consommés</strong></p>
 <details class="question">
 <summary>correction</summary>
-<p><code>sql
-SELECT a.nom_al, m.num_ch, m.quantite, m.date_repas
-FROM ALIMENT a
-RIGHT JOIN MANGER m ON a.code_al = m.code_al;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">nom_al</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">num_ch</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">quantite</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">date_repas</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ALIMENT</span><span class="w"> </span><span class="n">a</span>
+<span class="k">RIGHT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">MANGER</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">code_al</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">code_al</span><span class="p">;</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 5. <strong>Lister tous les chiens et les cages où ils sont logés, même si certaines cages sont vides</strong></p>
 <details class="question">
 <summary>correction</summary>
-<p><code>sql
-SELECT ch.nom_ch, ch.race, c.num_cage, c.nbmax, c.surface
-FROM CHIEN ch
-LEFT JOIN CAGE c ON ch.num_cage = c.num_cage;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">nom_ch</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">race</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_cage</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">nbmax</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">surface</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CHIEN</span><span class="w"> </span><span class="n">ch</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">CAGE</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">num_cage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_cage</span><span class="p">;</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 6. <strong>Lister toutes les cages et les chiens qui y sont logés, même si certaines cages sont vides (RIGHT JOIN) :</strong></p>
 <details class="question">
 <summary>correction</summary>
-<p><code>sql
-SELECT c.num_cage, c.nbmax, c.surface, ch.nom_ch, ch.race
-FROM CAGE c
-RIGHT JOIN CHIEN ch ON c.num_cage = ch.num_cage;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_cage</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">nbmax</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">surface</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">nom_ch</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">race</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CAGE</span><span class="w"> </span><span class="k">c</span>
+<span class="k">RIGHT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">CHIEN</span><span class="w"> </span><span class="n">ch</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_cage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">num_cage</span><span class="p">;</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 7. <strong>Quels chiens n'ont pas encore mangé ?</strong></p>
 <details class="question">
 <summary>correction</summary>
-<p><code>sql
-SELECT ch.nom_ch, ch.race
-FROM CHIEN ch
-LEFT JOIN MANGER m ON ch.num_ch = m.num_ch
-WHERE m.num_ch IS NULL;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">nom_ch</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">race</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CHIEN</span><span class="w"> </span><span class="n">ch</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">MANGER</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">num_ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">num_ch</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">num_ch</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 8. <strong>Quels aliments n'ont jamais été consommés ?</strong></p>
 <details class="question">
 <summary>correction</summary>
-<p><code>sql
-SELECT a.nom_al
-FROM ALIMENT a
-LEFT JOIN MANGER m ON a.code_al = m.code_al
-WHERE m.code_al IS NULL;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">nom_al</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ALIMENT</span><span class="w"> </span><span class="n">a</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">MANGER</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">code_al</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">code_al</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">code_al</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 9. <strong>Combien de repas chaque chien a-t-il pris ?</strong></p>
 <details class="question">
 <summary>correction</summary>
-<p><code>sql
-SELECT ch.nom_ch, ch.race, COUNT(m.num_ch) AS nombre_repas
-FROM CHIEN ch
-LEFT JOIN MANGER m ON ch.num_ch = m.num_ch
-GROUP BY ch.nom_ch, ch.race;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">nom_ch</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">race</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="n">num_ch</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nombre_repas</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CHIEN</span><span class="w"> </span><span class="n">ch</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">MANGER</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">num_ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">num_ch</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">nom_ch</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">race</span><span class="p">;</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 10. <strong>Quels propriétaires ont le plus de chiens ?</strong></p>
 <details class="question">
 <summary>correction</summary>
-<p><code>sql
-SELECT p.nom_pro, p.tel_pro, COUNT(ch.num_ch) AS nombre_chiens
-FROM PROPRIETAIRE p
-LEFT JOIN CHIEN ch ON p.code_pro = ch.code_pro
-GROUP BY p.nom_pro, p.tel_pro
-ORDER BY nombre_chiens DESC;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom_pro</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">tel_pro</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">ch</span><span class="p">.</span><span class="n">num_ch</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nombre_chiens</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PROPRIETAIRE</span><span class="w"> </span><span class="n">p</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">CHIEN</span><span class="w"> </span><span class="n">ch</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">code_pro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">code_pro</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom_pro</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">tel_pro</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">nombre_chiens</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 11. <strong>Quels chiens ont consommé plus de 5 kg de nourriture en une journée ?</strong></p>
 <details class="question">
 <summary>correction</summary>
-<p><code>sql
-SELECT ch.nom_ch, ch.race, SUM(m.quantite) AS total_quantite
-FROM CHIEN ch
-JOIN MANGER m ON ch.num_ch = m.num_ch
-GROUP BY ch.nom_ch, ch.race, m.date_repas
-HAVING SUM(m.quantite) &gt; 5;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">nom_ch</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">race</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="n">quantite</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_quantite</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CHIEN</span><span class="w"> </span><span class="n">ch</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">MANGER</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">num_ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">num_ch</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">nom_ch</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">.</span><span class="n">race</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">date_repas</span>
+<span class="k">HAVING</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="n">quantite</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</code></pre></div>
 </details>
 
 
@@ -5771,8 +5883,6 @@ HAVING SUM(m.quantite) &gt; 5;</code></p>
         <script src="../../../javascript/mathjax.js"></script>
       
         <script src="../../../javascript/interpreter.js"></script>
-      
-        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

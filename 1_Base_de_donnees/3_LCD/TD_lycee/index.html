@@ -3942,14 +3942,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_cours.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -3970,14 +3970,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_exercices.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -3998,14 +3998,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -4026,14 +4026,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -4054,14 +4054,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_authentification.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4082,14 +4082,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_archivage.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5667,24 +5779,25 @@
 <p>Donnez le script de création de la base, respectant ces contraintes.</p>
 </div>
 <div class="tabbed-block">
-<p>```SQL
-CREATE TABLE IF NOT EXISTS ETUDIANT(
-NumEtu CHAR(3),
-NomEtu CHAR(30) NOT NULL,
-PrénomEtu CHAR(30) NOT NULL,
-NumCla TINYINT
-);</p>
-<p>CREATE TABLE IF NOT EXISTS CLASSE (
-NumCla TINYINT,
-LibelléCla CHAR(30) DEFAULT NULL
-);</p>
-<p>CREATE TABLE IF NOT EXISTS PROFESSEUR(
-NumProf CHAR(2),
-NomProf CHAR(30) NOT NULL,
-PrénomProf CHAR(30) NOT NULL,
-Echelon TINYINT DEFAULT 1
-);
-```</p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">ETUDIANT</span><span class="p">(</span>
+<span class="n">NumEtu</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+<span class="n">NomEtu</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="n">PrénomEtu</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="n">NumCla</span><span class="w"> </span><span class="n">TINYINT</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">CLASSE</span><span class="w"> </span><span class="p">(</span>
+<span class="n">NumCla</span><span class="w"> </span><span class="n">TINYINT</span><span class="p">,</span>
+<span class="n">LibelléCla</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">NULL</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">PROFESSEUR</span><span class="p">(</span>
+<span class="n">NumProf</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+<span class="n">NomProf</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="n">PrénomProf</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="n">Echelon</span><span class="w"> </span><span class="n">TINYINT</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">1</span>
+<span class="p">);</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5698,9 +5811,9 @@ Echelon TINYINT DEFAULT 1
 <p>Ajoutez par script les dates de naissance pour les professeurs et les élèves. </p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-ALTER TABLE Etudiant ADD DateNaisEtu DATETIME;
-ALTER TABLE Professeur ADD DateNaisProf DATETIME;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Etudiant</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="n">DateNaisEtu</span><span class="w"> </span><span class="n">DATETIME</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Professeur</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="n">DateNaisProf</span><span class="w"> </span><span class="n">DATETIME</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5736,16 +5849,16 @@ ALTER TABLE Professeur ADD DateNaisProf DATETIME;</code></p>
 </table>
 </div>
 <div class="tabbed-block">
-<p>```SQL
-CREATE TABLE MATIERE (
-NumMat CHAR(3),
-Libellé CHAR(30)
-);</p>
-<p>INSERT INTO matiere (NumMat, Libellé) VALUES
-('M01', 'Francais'),
-('M02', 'Anglais'),
-('M03', 'Histoire-geographie');
-```</p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">MATIERE</span><span class="w"> </span><span class="p">(</span>
+<span class="n">NumMat</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+<span class="n">Libellé</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">matiere</span><span class="w"> </span><span class="p">(</span><span class="n">NumMat</span><span class="p">,</span><span class="w"> </span><span class="n">Libellé</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span>
+<span class="p">(</span><span class="s1">&#39;M01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Francais&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;M02&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Anglais&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;M03&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Histoire-geographie&#39;</span><span class="p">);</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5787,16 +5900,16 @@ Et insérez (par script) tous les élèves dont le NumCla est 1.</p>
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-CREATE TABLE IF NOT EXISTS ETUDIANT_stagiaire(
-NumEtu CHAR(3),
-NomEtu CHAR(30) NOT NULL,
-PrénomEtu CHAR(30) NOT NULL,
-NumCla TINYINT,
-Entreprise Varchar(35) DEFAULT NULL
-);
-INSERT INTO `etudiant_stagiaire`(`NumEtu`, `NomEtu`, `PrénomEtu`, `NumCla`)
-Select `NumEtu`, `NomEtu`, `PrénomEtu`, `NumCla` FROM etudiant WHERE etudiant.numCla = 1;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">ETUDIANT_stagiaire</span><span class="p">(</span>
+<span class="n">NumEtu</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+<span class="n">NomEtu</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="n">PrénomEtu</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="n">NumCla</span><span class="w"> </span><span class="n">TINYINT</span><span class="p">,</span>
+<span class="n">Entreprise</span><span class="w"> </span><span class="nb">Varchar</span><span class="p">(</span><span class="mi">35</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">NULL</span>
+<span class="p">);</span>
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="o">`</span><span class="n">etudiant_stagiaire</span><span class="o">`</span><span class="p">(</span><span class="o">`</span><span class="n">NumEtu</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">NomEtu</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">PrénomEtu</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">NumCla</span><span class="o">`</span><span class="p">)</span>
+<span class="k">Select</span><span class="w"> </span><span class="o">`</span><span class="n">NumEtu</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">NomEtu</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">PrénomEtu</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">NumCla</span><span class="o">`</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">etudiant</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">etudiant</span><span class="p">.</span><span class="n">numCla</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5809,8 +5922,8 @@ Select `NumEtu`, `NomEtu`, `PrénomEtu`, `NumCla` FROM etudiant WHERE etudiant.n
 <p>Supprimez l’échelon du professeur. Ecrivez le script correspondant.</p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-ALTER TABLE professeur DROP COLUMN Echelon;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">professeur</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">Echelon</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5824,35 +5937,35 @@ ALTER TABLE professeur DROP COLUMN Echelon;</code></p>
 Indiquez l’ordre de création des tables</p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-CLASSE (NumCla, LibelléCla)
-    Clé primaire : NumCla
-PROFESSEUR (NumProf, NomProf,PrénomProf, DateNaisProf)
-    Clé primaire : NumProf
-MATIERE (NumMat, Libellé )
-    Clé primaire : NumMat
-ETUDIANT (numEtu, NomEtu, PrénomEtu,NumCla, DateNaisEtu)
-    Clé primaire : NumEtu
-    Clé étrangère : NumMat en référence à NumCla de la table MATIERE
-ETUDIANT_STAGIAIRE (numEtu, NomEtu, PrénomEtu,NumCla, Entreprise)
-    Clé primaire : NumEtu
-    Clé étrangère : NumMat en référence à NumCla de la table MATIERE
-COURS (NumCla, NumMat, NumProf)
-    Clé primaire : NumCla, NumMat, NumProf
-    Clé étrangère : NumCla en référence à NumCla de la table CLASSE
-                    NumMat en référence à NumMat de la table MATIERE
-                    NumProf en référence à NumProf de la table PROFESSEUR       
-/* Ordre de création des tables 
-CLASSE, PROFESSEUR, MATIERE
-Puis ETUDIANT et ETUDIANT_STAGIAIRE
-Pour finir par COURS
-*/
--- On créé la table de relation Cours
-CREATE TABLE Cours (
-    NumCla TINYINT, 
-    NumMat CHAR(3),
-    NumProf CHAR(2)
-    );</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="n">CLASSE</span><span class="w"> </span><span class="p">(</span><span class="n">NumCla</span><span class="p">,</span><span class="w"> </span><span class="n">LibelléCla</span><span class="p">)</span>
+<span class="w">    </span><span class="n">Clé</span><span class="w"> </span><span class="n">primaire</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">NumCla</span>
+<span class="n">PROFESSEUR</span><span class="w"> </span><span class="p">(</span><span class="n">NumProf</span><span class="p">,</span><span class="w"> </span><span class="n">NomProf</span><span class="p">,</span><span class="n">PrénomProf</span><span class="p">,</span><span class="w"> </span><span class="n">DateNaisProf</span><span class="p">)</span>
+<span class="w">    </span><span class="n">Clé</span><span class="w"> </span><span class="n">primaire</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">NumProf</span>
+<span class="n">MATIERE</span><span class="w"> </span><span class="p">(</span><span class="n">NumMat</span><span class="p">,</span><span class="w"> </span><span class="n">Libellé</span><span class="w"> </span><span class="p">)</span>
+<span class="w">    </span><span class="n">Clé</span><span class="w"> </span><span class="n">primaire</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">NumMat</span>
+<span class="n">ETUDIANT</span><span class="w"> </span><span class="p">(</span><span class="n">numEtu</span><span class="p">,</span><span class="w"> </span><span class="n">NomEtu</span><span class="p">,</span><span class="w"> </span><span class="n">PrénomEtu</span><span class="p">,</span><span class="n">NumCla</span><span class="p">,</span><span class="w"> </span><span class="n">DateNaisEtu</span><span class="p">)</span>
+<span class="w">    </span><span class="n">Clé</span><span class="w"> </span><span class="n">primaire</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">NumEtu</span>
+<span class="w">    </span><span class="n">Clé</span><span class="w"> </span><span class="err">é</span><span class="n">trangère</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">NumMat</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="n">référence</span><span class="w"> </span><span class="err">à</span><span class="w"> </span><span class="n">NumCla</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">MATIERE</span>
+<span class="n">ETUDIANT_STAGIAIRE</span><span class="w"> </span><span class="p">(</span><span class="n">numEtu</span><span class="p">,</span><span class="w"> </span><span class="n">NomEtu</span><span class="p">,</span><span class="w"> </span><span class="n">PrénomEtu</span><span class="p">,</span><span class="n">NumCla</span><span class="p">,</span><span class="w"> </span><span class="n">Entreprise</span><span class="p">)</span>
+<span class="w">    </span><span class="n">Clé</span><span class="w"> </span><span class="n">primaire</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">NumEtu</span>
+<span class="w">    </span><span class="n">Clé</span><span class="w"> </span><span class="err">é</span><span class="n">trangère</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">NumMat</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="n">référence</span><span class="w"> </span><span class="err">à</span><span class="w"> </span><span class="n">NumCla</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">MATIERE</span>
+<span class="n">COURS</span><span class="w"> </span><span class="p">(</span><span class="n">NumCla</span><span class="p">,</span><span class="w"> </span><span class="n">NumMat</span><span class="p">,</span><span class="w"> </span><span class="n">NumProf</span><span class="p">)</span>
+<span class="w">    </span><span class="n">Clé</span><span class="w"> </span><span class="n">primaire</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">NumCla</span><span class="p">,</span><span class="w"> </span><span class="n">NumMat</span><span class="p">,</span><span class="w"> </span><span class="n">NumProf</span>
+<span class="w">    </span><span class="n">Clé</span><span class="w"> </span><span class="err">é</span><span class="n">trangère</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">NumCla</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="n">référence</span><span class="w"> </span><span class="err">à</span><span class="w"> </span><span class="n">NumCla</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">CLASSE</span>
+<span class="w">                    </span><span class="n">NumMat</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="n">référence</span><span class="w"> </span><span class="err">à</span><span class="w"> </span><span class="n">NumMat</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">MATIERE</span>
+<span class="w">                    </span><span class="n">NumProf</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="n">référence</span><span class="w"> </span><span class="err">à</span><span class="w"> </span><span class="n">NumProf</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">PROFESSEUR</span><span class="w">       </span>
+<span class="cm">/* Ordre de création des tables </span>
+<span class="cm">CLASSE, PROFESSEUR, MATIERE</span>
+<span class="cm">Puis ETUDIANT et ETUDIANT_STAGIAIRE</span>
+<span class="cm">Pour finir par COURS</span>
+<span class="cm">*/</span>
+<span class="c1">-- On créé la table de relation Cours</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Cours</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">NumCla</span><span class="w"> </span><span class="n">TINYINT</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="n">NumMat</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+<span class="w">    </span><span class="n">NumProf</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5865,31 +5978,31 @@ CREATE TABLE Cours (
 <p>Complétez votre script afin de rajouter les clés étrangères sous forme de contraintes.</p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
--- On ajoute toutes les contraintes de clés primaires
-ALTER TABLE Classe 
-    ADD CONSTRAINT pk_classe PRIMARY KEY (NumCla);
-ALTER TABLE professeur 
-    ADD CONSTRAINT pk_professeur PRIMARY KEY (NumProf);
-ALTER TABLE Matiere 
-    ADD CONSTRAINT pk_matiere PRIMARY KEY (NumMat);
-ALTER TABLE Etudiant 
-    ADD CONSTRAINT pk_etudiant PRIMARY KEY (NumEtu);
-ALTER TABLE Etudiant_stagiaire
-    ADD CONSTRAINT pk_etudiant_stagiaire PRIMARY KEY (NumEtu);
-ALTER TABLE cours 
-    ADD CONSTRAINT pk_cours PRIMARY KEY (NumCla,NumProf,NumMat);
---On ajoute les contraintes de clés étrangères
-ALTER TABLE ETUDIANT
-    ADD CONSTRAINT fk_etudiant_classe FOREIGN KEY (NumCla) REFERENCES  Classe(NumCla);
-ALTER TABLE ETUDIANT_STAGIAIRE
-    ADD CONSTRAINT fk_etudiant_stagiaire_classe FOREIGN KEY (NumCla) REFERENCES  Classe(NumCla);
-ALTER TABLE COURS
-    ADD CONSTRAINT fk_cours_classe FOREIGN KEY (NumCla) REFERENCES  Classe(NumCla);
-ALTER TABLE COURS
-    ADD CONSTRAINT fk_cours_mat FOREIGN KEY (NumMat) REFERENCES  Classe(NumMat);
-ALTER TABLE COURS
-    ADD CONSTRAINT fk_cours_professeur FOREIGN KEY (NumProf) REFERENCES  Classe(NumProf);</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="c1">-- On ajoute toutes les contraintes de clés primaires</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Classe</span><span class="w"> </span>
+<span class="w">    </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">pk_classe</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">NumCla</span><span class="p">);</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">professeur</span><span class="w"> </span>
+<span class="w">    </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">pk_professeur</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">NumProf</span><span class="p">);</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Matiere</span><span class="w"> </span>
+<span class="w">    </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">pk_matiere</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">NumMat</span><span class="p">);</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Etudiant</span><span class="w"> </span>
+<span class="w">    </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">pk_etudiant</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">NumEtu</span><span class="p">);</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Etudiant_stagiaire</span>
+<span class="w">    </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">pk_etudiant_stagiaire</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">NumEtu</span><span class="p">);</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">cours</span><span class="w"> </span>
+<span class="w">    </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">pk_cours</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">NumCla</span><span class="p">,</span><span class="n">NumProf</span><span class="p">,</span><span class="n">NumMat</span><span class="p">);</span>
+<span class="c1">--On ajoute les contraintes de clés étrangères</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ETUDIANT</span>
+<span class="w">    </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_etudiant_classe</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">NumCla</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w">  </span><span class="n">Classe</span><span class="p">(</span><span class="n">NumCla</span><span class="p">);</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ETUDIANT_STAGIAIRE</span>
+<span class="w">    </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_etudiant_stagiaire_classe</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">NumCla</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w">  </span><span class="n">Classe</span><span class="p">(</span><span class="n">NumCla</span><span class="p">);</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">COURS</span>
+<span class="w">    </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_cours_classe</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">NumCla</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w">  </span><span class="n">Classe</span><span class="p">(</span><span class="n">NumCla</span><span class="p">);</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">COURS</span>
+<span class="w">    </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_cours_mat</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">NumMat</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w">  </span><span class="n">Classe</span><span class="p">(</span><span class="n">NumMat</span><span class="p">);</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">COURS</span>
+<span class="w">    </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_cours_professeur</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">NumProf</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w">  </span><span class="n">Classe</span><span class="p">(</span><span class="n">NumProf</span><span class="p">);</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5902,10 +6015,10 @@ ALTER TABLE COURS
 <p>Supprimer la clé étrangère d'Eleve_stagiaire.</p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-ALTER TABLE Etudiant_stagiaire 
-DROP FOREIGN KEY fk_etudiant_stagiaire_classe;
--- Note : MySQL ne supporte pas le DROP CONSTRAINT qui serait plus logique</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Etudiant_stagiaire</span><span class="w"> </span>
+<span class="k">DROP</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="n">fk_etudiant_stagiaire_classe</span><span class="p">;</span>
+<span class="c1">-- Note : MySQL ne supporte pas le DROP CONSTRAINT qui serait plus logique</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5919,10 +6032,10 @@ DROP FOREIGN KEY fk_etudiant_stagiaire_classe;
 Ecrivez le script pour supprimer la base de données</p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-DROP TABLE Etudiant_stagiaire ;
-/* -- ETC ...*/
-DELETE DATABASE lycee ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Etudiant_stagiaire</span><span class="w"> </span><span class="p">;</span>
+<span class="cm">/* -- ETC ...*/</span>
+<span class="k">DELETE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">lycee</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6090,8 +6203,6 @@ DELETE DATABASE lycee ;</code></p>
         <script src="../../../javascript/mathjax.js"></script>
       
         <script src="../../../javascript/interpreter.js"></script>
-      
-        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

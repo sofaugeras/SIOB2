@@ -3964,14 +3964,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_cours.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -3992,14 +3992,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_exercices.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -4020,14 +4020,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -4048,14 +4048,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -4076,14 +4076,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_authentification.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4104,14 +4104,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_archivage.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5600,114 +5712,116 @@
 <strong>TRAITEMENT</strong>(<ins>traitement_id</ins>, #consultation_id, description, cout, date_traitement)</p>
 <details class="note">
 <summary>Script de création de base</summary>
-<p>```SQL
-CREATE DATABASE hopital;
-CREATE TABLE Patients (
-    patient_id INT PRIMARY KEY,
-    nom VARCHAR(255),
-    prenom VARCHAR(255),
-    date_naissance DATE,
-    adresse VARCHAR(255)
-);</p>
-<p>CREATE TABLE Medecins (
-    medecin_id INT PRIMARY KEY,
-    nom VARCHAR(255),
-    prenom VARCHAR(255),
-    specialite VARCHAR(100)
-);</p>
-<p>CREATE TABLE Consultations (
-    consultation_id INT PRIMARY KEY,
-    patient_id INT,
-    medecin_id INT,
-    date_consultation DATE,
-    diagnostic VARCHAR(255),
-    FOREIGN KEY (patient_id) REFERENCES Patients(patient_id),
-    FOREIGN KEY (medecin_id) REFERENCES Medecins(medecin_id)
-);</p>
-<p>CREATE TABLE Traitements (
-    traitement_id INT PRIMARY KEY,
-    consultation_id INT,
-    description VARCHAR(255),
-    cout DECIMAL(10, 2),
-    date_traitement DATE,
-    FOREIGN KEY (consultation_id) REFERENCES Consultations(consultation_id)
-);
-```</p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">hopital</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">patient_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">nom</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="w">    </span><span class="n">prenom</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="w">    </span><span class="n">date_naissance</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">adresse</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Medecins</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">medecin_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">nom</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="w">    </span><span class="n">prenom</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="w">    </span><span class="n">specialite</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">consultation_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">patient_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">medecin_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">date_consultation</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">diagnostic</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">patient_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">Patients</span><span class="p">(</span><span class="n">patient_id</span><span class="p">),</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">medecin_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">Medecins</span><span class="p">(</span><span class="n">medecin_id</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Traitements</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">traitement_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">consultation_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">description</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span>
+<span class="w">    </span><span class="n">date_traitement</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">consultation_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">Consultations</span><span class="p">(</span><span class="n">consultation_id</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
 </details>
 <details class="note">
 <summary>Script d'insertion dans la base</summary>
-<p><code>sql
-INSERT INTO Patients (patient_id, nom, prenom, date_naissance, adresse) VALUES
-(1, 'Martin', 'Alice', '1985-04-12', '12 rue de la Paix, Rennes'),
-(2, 'Dupont', 'Lucas', '1992-09-03', '4 avenue Victor Hugo, Redon'),
-(3, 'Bernard', 'Sophie', '1978-01-25', '8 place de la Liberté, Nantes'),
-(4, 'Leroy', 'Thomas', '2001-11-18', '5 rue des Écoles, Vannes'),
-(5, 'Roux', 'Camille', '1999-06-07', '27 boulevard Clémenceau, Brest');
-INSERT INTO Medecins (medecin_id, nom, prenom, specialite) VALUES
-(1, 'Legrand', 'Marc', 'Généraliste'),
-(2, 'Faure', 'Nina', 'Dermatologie'),
-(3, 'Petit', 'Hugo', 'Cardiologie');
-INSERT INTO Consultations (consultation_id, patient_id, medecin_id, date_consultation, diagnostic) VALUES
-(1, 1, 1, '2024-01-10', 'Grippe saisonnière'),
-(2, 2, 1, '2024-02-15', 'Gastro-entérite'),
-(3, 3, 3, '2024-03-05', 'Hypertension'),
-(4, 1, 2, '2024-03-18', 'Éruption cutanée'),
-(5, 4, 1, '2024-04-22', 'Migraine'),
-(6, 5, 3, '2024-05-30', 'Palpitations cardiaques');
-INSERT INTO Traitements (traitement_id, consultation_id, description, cout, date_traitement) VALUES
-(1, 1, 'Antiviral et repos', 35.50, '2024-01-10'),
-(2, 2, 'Réhydratation + antispasmodiques', 22.00, '2024-02-15'),
-(3, 3, 'Mise sous antihypertenseurs', 78.90, '2024-03-05'),
-(4, 4, 'Crème dermatologique', 18.20, '2024-03-18'),
-(5, 5, 'Antalgique léger', 12.50, '2024-04-22'),
-(6, 6, 'ECG + Bêtabloquants', 95.00, '2024-05-30');</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="p">(</span><span class="n">patient_id</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">date_naissance</span><span class="p">,</span><span class="w"> </span><span class="n">adresse</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Martin&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1985-04-12&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;12 rue de la Paix, Rennes&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Dupont&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Lucas&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1992-09-03&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;4 avenue Victor Hugo, Redon&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Bernard&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Sophie&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1978-01-25&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;8 place de la Liberté, Nantes&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Leroy&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Thomas&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2001-11-18&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;5 rue des Écoles, Vannes&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Roux&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Camille&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1999-06-07&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;27 boulevard Clémenceau, Brest&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Medecins</span><span class="w"> </span><span class="p">(</span><span class="n">medecin_id</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">specialite</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Legrand&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Marc&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Généraliste&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Faure&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Nina&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Dermatologie&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Petit&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Hugo&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Cardiologie&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="p">(</span><span class="n">consultation_id</span><span class="p">,</span><span class="w"> </span><span class="n">patient_id</span><span class="p">,</span><span class="w"> </span><span class="n">medecin_id</span><span class="p">,</span><span class="w"> </span><span class="n">date_consultation</span><span class="p">,</span><span class="w"> </span><span class="n">diagnostic</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-01-10&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Grippe saisonnière&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-02-15&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Gastro-entérite&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-03-05&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Hypertension&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-03-18&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Éruption cutanée&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-04-22&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Migraine&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-05-30&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Palpitations cardiaques&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Traitements</span><span class="w"> </span><span class="p">(</span><span class="n">traitement_id</span><span class="p">,</span><span class="w"> </span><span class="n">consultation_id</span><span class="p">,</span><span class="w"> </span><span class="n">description</span><span class="p">,</span><span class="w"> </span><span class="n">cout</span><span class="p">,</span><span class="w"> </span><span class="n">date_traitement</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Antiviral et repos&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">35</span><span class="p">.</span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-01-10&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Réhydratation + antispasmodiques&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-02-15&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Mise sous antihypertenseurs&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">78</span><span class="p">.</span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-03-05&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Crème dermatologique&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">.</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-03-18&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Antalgique léger&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">.</span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-04-22&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ECG + Bêtabloquants&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">95</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-05-30&#39;</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <h2 id="1-creation-des-vues">1. Création des vues<a class="headerlink" href="#1-creation-des-vues" title="Permanent link">⚓︎</a></h2>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 1. Créer une vue pour afficher les informations détaillées des consultations, y compris les informations sur les patients et les médecins.</p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>SQL
-CREATE VIEW ConsultationsDetaillees AS
-SELECT c.consultation_id, p.nom AS patient_nom, p.prenom AS patient_prenom, m.nom AS medecin_nom, m.prenom AS medecin_prenom, m.specialite, c.date_consultation, c.diagnostic
-FROM Consultations c
-JOIN Patients p ON c.patient_id = p.patient_id
-JOIN Medecins m ON c.medecin_id = m.medecin_id;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">ConsultationsDetaillees</span><span class="w"> </span><span class="k">AS</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">consultation_id</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">patient_nom</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">prenom</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">patient_prenom</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">nom</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">medecin_nom</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">prenom</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">medecin_prenom</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">specialite</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">diagnostic</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="k">c</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">patient_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">patient_id</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Medecins</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">medecin_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">medecin_id</span><span class="p">;</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 2. Créer une vue pour afficher les coûts totaux des traitements par patient.</p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>SQL
-CREATE VIEW CoutTotalParPatient AS
-SELECT p.nom, p.prenom, SUM(t.cout) AS total_cout
-FROM Patients p
-JOIN Consultations c ON p.patient_id = c.patient_id
-JOIN Traitements t ON c.consultation_id = t.consultation_id
-GROUP BY p.nom, p.prenom;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">CoutTotalParPatient</span><span class="w"> </span><span class="k">AS</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">cout</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_cout</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="n">p</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">patient_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">patient_id</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Traitements</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">consultation_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">consultation_id</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">prenom</span><span class="p">;</span>
+</code></pre></div>
 </details>
 <h2 id="2-utilisation-des-vues">2. Utilisation des vues<a class="headerlink" href="#2-utilisation-des-vues" title="Permanent link">⚓︎</a></h2>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 3. Quelles sont les consultations en cours (traitements non terminés) ?</p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>SQL
-SELECT * FROM ConsultationsDetaillees
-WHERE consultation_id IN (SELECT consultation_id FROM Traitements WHERE date_traitement IS NULL);</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">ConsultationsDetaillees</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">consultation_id</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">consultation_id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Traitements</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">date_traitement</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 4. Quels patients ont les coûts de traitement les plus élevés ?</p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>SQL
-SELECT * FROM CoutTotalParPatient
-ORDER BY total_cout DESC;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">CoutTotalParPatient</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">total_cout</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 5. Quels médecins ont le plus de consultations ?</p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>SQL
-SELECT m.nom, m.prenom, COUNT(c.consultation_id) AS nombre_consultations
-FROM Medecins m
-JOIN Consultations c ON m.medecin_id = c.medecin_id
-GROUP BY m.nom, m.prenom
-ORDER BY nombre_consultations DESC;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="k">c</span><span class="p">.</span><span class="n">consultation_id</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nombre_consultations</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Medecins</span><span class="w"> </span><span class="n">m</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">medecin_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">medecin_id</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">prenom</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">nombre_consultations</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
 </details>
 <h2 id="3-questions-de-reflexion">3. Questions de réflexion<a class="headerlink" href="#3-questions-de-reflexion" title="Permanent link">⚓︎</a></h2>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 6. Quels sont les avantages d’utiliser des vues pour ces types de requêtes ?</p>
@@ -5746,59 +5860,59 @@ ORDER BY nombre_consultations DESC;</code></p>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 9. Quels patients ont eu des consultations au cours des 30 derniers jours ?</p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>sql
-SELECT p.nom, p.prenom, c.date_consultation
-FROM Patients p
-JOIN Consultations c ON p.patient_id = c.patient_id
-WHERE c.date_consultation &gt;= DATEADD(DAY, -30, GETDATE());</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="n">p</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">patient_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">patient_id</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">DATEADD</span><span class="p">(</span><span class="k">DAY</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="n">GETDATE</span><span class="p">());</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 10. Quels médecins ont effectué des consultations au cours de la dernière semaine ?</p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>SQL
-SELECT m.nom, m.prenom, c.date_consultation
-FROM Medecins m
-JOIN Consultations c ON m.medecin_id = c.medecin_id
-WHERE c.date_consultation &gt;= DATEADD(DAY, -7, GETDATE());</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Medecins</span><span class="w"> </span><span class="n">m</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">medecin_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">medecin_id</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">DATEADD</span><span class="p">(</span><span class="k">DAY</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="n">GETDATE</span><span class="p">());</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 11. Quels traitements ont été administrés au cours du mois de septembre 2024 ?</p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>sql
-SELECT t.description, t.date_traitement
-FROM Traitements t
-WHERE t.date_traitement BETWEEN '2024-09-01' AND '2024-09-30';</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">description</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">date_traitement</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Traitements</span><span class="w"> </span><span class="n">t</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">date_traitement</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="s1">&#39;2024-09-01&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="s1">&#39;2024-09-30&#39;</span><span class="p">;</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 12. Quels patients n'ont pas eu de consultations depuis plus d'un an ?</p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>sql
-SELECT p.nom, p.prenom
-FROM Patients p
-WHERE p.patient_id NOT IN (
-    SELECT c.patient_id
-    FROM Consultations c
-    WHERE c.date_consultation &gt;= DATEADD(YEAR, -1, GETDATE())
-);</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">prenom</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="n">p</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">patient_id</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">patient_id</span>
+<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="k">c</span>
+<span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">DATEADD</span><span class="p">(</span><span class="k">YEAR</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">GETDATE</span><span class="p">())</span>
+<span class="p">);</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 13. Combien de consultations ont été effectuées chaque mois au cours de l'année 2024 ?</p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>sql
-SELECT YEAR(c.date_consultation) AS annee, MONTH(c.date_consultation) AS mois, COUNT(*) AS nombre_consultations
-FROM Consultations c
-WHERE YEAR(c.date_consultation) = 2024
-GROUP BY YEAR(c.date_consultation), MONTH(c.date_consultation)
-ORDER BY annee, mois;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">annee</span><span class="p">,</span><span class="w"> </span><span class="k">MONTH</span><span class="p">(</span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">mois</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nombre_consultations</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="k">c</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2024</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="p">),</span><span class="w"> </span><span class="k">MONTH</span><span class="p">(</span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="p">)</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">annee</span><span class="p">,</span><span class="w"> </span><span class="n">mois</span><span class="p">;</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 14. Quels traitements ont été administrés plus de 6 mois après la consultation correspondante ?</p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>sql
-SELECT t.description, t.date_traitement, c.date_consultation
-FROM Traitements t
-JOIN Consultations c ON t.consultation_id = c.consultation_id
-WHERE t.date_traitement &gt; DATEADD(MONTH, 6, c.date_consultation);</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">description</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">date_traitement</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Traitements</span><span class="w"> </span><span class="n">t</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">consultation_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">consultation_id</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">date_traitement</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">DATEADD</span><span class="p">(</span><span class="k">MONTH</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <p><img alt="date" class="center" src="../data/date.webp" width="30%" /></p>
 <div class="admonition tip">
@@ -5814,14 +5928,14 @@ WHERE t.date_traitement &gt; DATEADD(MONTH, 6, c.date_consultation);</code></p>
 <li>Normaliser les formats de date</li>
 </ol>
 <p><strong>Format ISO 8601</strong> : Utilisez le format ISO 8601 (YYYY-MM-DD) pour stocker les dates. Ce format est standardisé et évite les ambiguïtés liées aux formats régionaux.
-<code>sql
-'2024-10-15'  -- Format ISO 8601</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="s1">&#39;2024-10-15&#39;</span><span class="w">  </span><span class="c1">-- Format ISO 8601</span>
+</code></pre></div></p>
 <ol>
 <li>Indexer les colonnes de date</li>
 </ol>
 <p><strong>Indexation</strong> : Créez des index sur les colonnes de date pour améliorer les performances des requêtes qui filtrent ou trient par date.
-<code>sql
-CREATE INDEX idx_date_consultation ON Consultations(date_consultation);</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_date_consultation</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Consultations</span><span class="p">(</span><span class="n">date_consultation</span><span class="p">);</span>
+</code></pre></div></p>
 <ol>
 <li>Gérer les fuseaux horaires</li>
 </ol>
@@ -5836,8 +5950,8 @@ CREATE INDEX idx_date_consultation ON Consultations(date_consultation);</code></
 <li>Utiliser des fonctions de date</li>
 </ol>
 <p><strong>Fonctions intégrées</strong> : Utilisez les fonctions de date intégrées du SGBD pour manipuler et formater les dates (par exemple, <code>DATEADD</code>, <code>DATEDIFF</code>, <code>YEAR</code>, <code>MONTH</code>, <code>DAY</code>).
-<code>sql
-SELECT DATEADD(DAY, 30, GETDATE());  -- Ajoute 30 jours à la date actuelle</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">DATEADD</span><span class="p">(</span><span class="k">DAY</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="n">GETDATE</span><span class="p">());</span><span class="w">  </span><span class="c1">-- Ajoute 30 jours à la date actuelle</span>
+</code></pre></div></p>
 <ol>
 <li>Stocker les dates de manière cohérente</li>
 </ol>
@@ -6018,8 +6132,6 @@ SELECT DATEADD(DAY, 30, GETDATE());  -- Ajoute 30 jours à la date actuelle</cod
         <script src="../../../javascript/mathjax.js"></script>
       
         <script src="../../../javascript/interpreter.js"></script>
-      
-        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

@@ -4014,14 +4014,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_cours.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -4042,14 +4042,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_exercices.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -4070,14 +4070,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -4098,14 +4098,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -4126,14 +4126,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_authentification.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4154,14 +4154,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_archivage.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5639,51 +5751,51 @@ Les <strong>curseurs</strong> permettent de parcourir un jeu de résultats d'une
 <h2 id="syntaxe">Syntaxe<a class="headerlink" href="#syntaxe" title="Permanent link">⚓︎</a></h2>
 <h3 id="declaration-du-curseur">Déclaration du curseur<a class="headerlink" href="#declaration-du-curseur" title="Permanent link">⚓︎</a></h3>
 <p>Comme toutes les instructions <code>DECLARE</code>, la déclaration d'un curseur doit se faire au début du bloc d'instructions pour lequel celui-ci est défini. Plus précisément, on déclare les curseurs après les variables locales et les conditions, mais avant les gestionnaires d'erreurs.</p>
-<pre><code class="language-sql">DECLARE nom_curseur CURSOR FOR requete_select;
-Un curseur est donc composé d'un nom, et d'une requête SELECT.
-Exemple :
-DECLARE curseur_client CURSOR 
-    FOR SELECT * 
-    FROM Client;
-</code></pre>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DECLARE</span><span class="w"> </span><span class="n">nom_curseur</span><span class="w"> </span><span class="k">CURSOR</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="n">requete_select</span><span class="p">;</span>
+<span class="n">Un</span><span class="w"> </span><span class="n">curseur</span><span class="w"> </span><span class="n">est</span><span class="w"> </span><span class="n">donc</span><span class="w"> </span><span class="n">composé</span><span class="w"> </span><span class="n">d</span><span class="s1">&#39;un nom, et d&#39;</span><span class="n">une</span><span class="w"> </span><span class="n">requête</span><span class="w"> </span><span class="k">SELECT</span><span class="p">.</span>
+<span class="n">Exemple</span><span class="w"> </span><span class="p">:</span>
+<span class="k">DECLARE</span><span class="w"> </span><span class="n">curseur_client</span><span class="w"> </span><span class="k">CURSOR</span><span class="w"> </span>
+<span class="w">    </span><span class="k">FOR</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">Client</span><span class="p">;</span>
+</code></pre></div>
 <h3 id="ouverture-et-fermeture-du-curseur">Ouverture et fermeture du curseur<a class="headerlink" href="#ouverture-et-fermeture-du-curseur" title="Permanent link">⚓︎</a></h3>
 <p>En déclarant le curseur, on a donc associé un nom et une requête <code>SELECT</code>. L'ouverture du curseur va provoquer l'exécution de la requête <code>SELECT</code>, ce qui va produire un jeu de résultats. Une fois que l'on aura parcouru les résultats, il n'y aura plus qu'à fermer le curseur. Si l'on ne le fait pas explicitement, le curseur sera fermé à la fin du bloc d'un <code>OPEN nom_curseur</code>;</p>
-<pre><code class="language-sql">  -- Parcours du curseur et instructions diverses
-CLOSE nom_curseur;.
-</code></pre>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="w">  </span><span class="c1">-- Parcours du curseur et instructions diverses</span>
+<span class="k">CLOSE</span><span class="w"> </span><span class="n">nom_curseur</span><span class="p">;.</span>
+</code></pre></div>
 <h3 id="parcours-du-curseur">Parcours du curseur<a class="headerlink" href="#parcours-du-curseur" title="Permanent link">⚓︎</a></h3>
 <p>Une fois que le curseur a été ouvert et le jeu de résultats récupéré, le curseur place un <strong>pointeur</strong> sur la première ligne de résultats. Avec la commande <strong>FETCH</strong>, on récupère la ligne sur laquelle pointe le curseur, et on fait avancer le pointeur vers la ligne de résultats suivante. On peut comparer ce fonctionnement avec la lecture de requête en PHP.</p>
-<pre><code class="language-sql">FETCH nom_curseur INTO variable(s);
-</code></pre>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">FETCH</span><span class="w"> </span><span class="n">nom_curseur</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">variable</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+</code></pre></div>
 <p>Bien entendu, comme pour <code>SELECT ... INTO</code>, il faut donner autant de variables dans la clause <code>INTO</code>  que l'on a récupéré de colonnes dans la clause <code>SELECT</code>  du curseur.</p>
 <p><em>Exemple :</em> la procédure suivante parcourt les deux premières lignes d’une table Client avec un curseur.</p>
-<pre><code class="language-sql">DELIMITER |
-CREATE PROCEDURE parcours_deux_clients()
-BEGIN
-    DECLARE v_nom, v_prenom VARCHAR(100);
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="o">|</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">parcours_deux_clients</span><span class="p">()</span>
+<span class="k">BEGIN</span>
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">v_nom</span><span class="p">,</span><span class="w"> </span><span class="n">v_prenom</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
 
-    DECLARE curs_clients CURSOR
-        FOR SELECT nom, prenom  -- Le SELECT récupère deux colonnes
-        FROM Client
-        ORDER BY nom, prenom;   
-        -- On trie les clients par ordre alphabétique
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">curs_clients</span><span class="w"> </span><span class="k">CURSOR</span>
+<span class="w">        </span><span class="k">FOR</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="w">  </span><span class="c1">-- Le SELECT récupère deux colonnes</span>
+<span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">Client</span>
+<span class="w">        </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="p">;</span><span class="w">   </span>
+<span class="w">        </span><span class="c1">-- On trie les clients par ordre alphabétique</span>
 
-    OPEN curs_clients;  -- Ouverture du curseur
+<span class="w">    </span><span class="k">OPEN</span><span class="w"> </span><span class="n">curs_clients</span><span class="p">;</span><span class="w">  </span><span class="c1">-- Ouverture du curseur</span>
 
-    FETCH curs_clients INTO v_nom, v_prenom;    
-    -- On récupère la première ligne et on assigne les valeurs récupérées à nos variables locales
-    SELECT CONCAT(v_prenom, ' ', v_nom) AS 'Premier client';
+<span class="w">    </span><span class="k">FETCH</span><span class="w"> </span><span class="n">curs_clients</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">v_nom</span><span class="p">,</span><span class="w"> </span><span class="n">v_prenom</span><span class="p">;</span><span class="w">    </span>
+<span class="w">    </span><span class="c1">-- On récupère la première ligne et on assigne les valeurs récupérées à nos variables locales</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="n">v_prenom</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">v_nom</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s1">&#39;Premier client&#39;</span><span class="p">;</span>
 
-    FETCH curs_clients INTO v_nom, v_prenom;
-    -- On récupère la seconde ligne et on assigne les valeurs récupérées à nos variables locales
-    SELECT CONCAT(v_prenom, ' ', v_nom) AS 'Second client';
+<span class="w">    </span><span class="k">FETCH</span><span class="w"> </span><span class="n">curs_clients</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">v_nom</span><span class="p">,</span><span class="w"> </span><span class="n">v_prenom</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">-- On récupère la seconde ligne et on assigne les valeurs récupérées à nos variables locales</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="n">v_prenom</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">v_nom</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s1">&#39;Second client&#39;</span><span class="p">;</span>
 
-    CLOSE curs_clients;     -- Fermeture du curseur
-END|
-DELIMITER ;
+<span class="w">    </span><span class="k">CLOSE</span><span class="w"> </span><span class="n">curs_clients</span><span class="p">;</span><span class="w">     </span><span class="c1">-- Fermeture du curseur</span>
+<span class="k">END</span><span class="o">|</span>
+<span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
 
-CALL parcours_deux_clients();
-</code></pre>
+<span class="k">CALL</span><span class="w"> </span><span class="n">parcours_deux_clients</span><span class="p">();</span>
+</code></pre></div>
 <h3 id="restrictions">Restrictions<a class="headerlink" href="#restrictions" title="Permanent link">⚓︎</a></h3>
 <p><code>FETCH</code>  est la seule commande permettant de récupérer une partie d'un jeu de résultats d'un curseur, et elle ne permet qu'une chose : récupérer la ligne de résultats suivante.<br />
 Il n'est pas possible de sauter une ou plusieurs lignes ni d'aller rechercher une ligne précédente. On ne peut que parcourir les lignes une à une, de la première à la dernière. Ensuite, il n'est pas possible de modifier une ligne directement à partir d'un curseur. Il s'agit d'une restriction particulière à <strong>MySQL</strong>. D'autres SGBD vous permettent des requêtes d'<code>UPDATE</code> directement sur les curseurs.</p>
@@ -5693,44 +5805,44 @@ Il n'est pas possible de sauter une ou plusieurs lignes ni d'aller rechercher un
 <h3 id="condition-darret">Condition d'arrêt<a class="headerlink" href="#condition-darret" title="Permanent link">⚓︎</a></h3>
 <p>Voyons ce qui se passe lorsque l'on fait un <code>FETCH</code> alors qu'il n'y a plus, ou pas, de résultats.<br />
 Voici une procédure qui sélectionne les clients selon une ville donnée en paramètre. Les lignes sont récupérées et affichées grâce au <code>FETCH</code>, placé dans une boucle <code>LOOP</code>. Je rappelle que cette boucle ne définit pas de condition d'arrêt : il est nécessaire d'ajouter une instruction <code>LEAVE</code>  pour l'arrêter. Ici, pour tester, on ne mettra pas d'instruction <code>LEAVE</code>.</p>
-<pre><code class="language-sql">DELIMITER |
-CREATE PROCEDURE test_condition(IN p_ville VARCHAR(100))
-BEGIN
-    DECLARE v_nom, v_prenom VARCHAR(100);
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="o">|</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">test_condition</span><span class="p">(</span><span class="k">IN</span><span class="w"> </span><span class="n">p_ville</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+<span class="k">BEGIN</span>
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">v_nom</span><span class="p">,</span><span class="w"> </span><span class="n">v_prenom</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
 
-    DECLARE curs_clients CURSOR
-        FOR SELECT nom, prenom
-        FROM Client
-        WHERE ville = p_ville;
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">curs_clients</span><span class="w"> </span><span class="k">CURSOR</span>
+<span class="w">        </span><span class="k">FOR</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span>
+<span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">Client</span>
+<span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">ville</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_ville</span><span class="p">;</span>
 
-    OPEN curs_clients;                                    
+<span class="w">    </span><span class="k">OPEN</span><span class="w"> </span><span class="n">curs_clients</span><span class="p">;</span><span class="w">                                    </span>
 
-    LOOP                                                  
-        FETCH curs_clients INTO v_nom, v_prenom;                   
-        SELECT CONCAT(v_prenom, ' ', v_nom) AS 'Client';
-    END LOOP;
+<span class="w">    </span><span class="n">LOOP</span><span class="w">                                                  </span>
+<span class="w">        </span><span class="k">FETCH</span><span class="w"> </span><span class="n">curs_clients</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">v_nom</span><span class="p">,</span><span class="w"> </span><span class="n">v_prenom</span><span class="p">;</span><span class="w">                   </span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="n">v_prenom</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">v_nom</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s1">&#39;Client&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="n">LOOP</span><span class="p">;</span>
 
-    CLOSE curs_clients; 
-END|
-DELIMITER ;
-</code></pre>
+<span class="w">    </span><span class="k">CLOSE</span><span class="w"> </span><span class="n">curs_clients</span><span class="p">;</span><span class="w"> </span>
+<span class="k">END</span><span class="o">|</span>
+<span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 <p><em>Exemple :</em> Pour afficher la liste des articles sous la forme :
 <em>L'article Numéro ........  portant la désignation ………coûte …. …..</em>&gt;</p>
 <p>▶️ Ecrire le curseur correspondant </p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>sql
-Declare @a int, @b Varchar(10), @c real
-Declare Cur_ListeArt Cursor for Select NumArt, DesArt,puart from article
-Open Cur_ListeArt
-Fetch Next from Cur_ListeArt into @a,@b,@c
-While @@fetch_status=0
-Begin
-Print 'L''article numéro ' + convert(varchar,@a) + ' portant la désignation ' + @b+ ' coûte    ' +     convert(varchar,@c)
-Fetch Next from Cur_ListeArt into @a,@b,@c
-End
-Close Cur_ListeArt
-Deallocate Cur_ListeArt</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">Declare</span><span class="w"> </span><span class="o">@</span><span class="n">a</span><span class="w"> </span><span class="nb">int</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">b</span><span class="w"> </span><span class="nb">Varchar</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span><span class="w"> </span><span class="o">@</span><span class="k">c</span><span class="w"> </span><span class="nb">real</span>
+<span class="k">Declare</span><span class="w"> </span><span class="n">Cur_ListeArt</span><span class="w"> </span><span class="k">Cursor</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="k">Select</span><span class="w"> </span><span class="n">NumArt</span><span class="p">,</span><span class="w"> </span><span class="n">DesArt</span><span class="p">,</span><span class="n">puart</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">article</span>
+<span class="k">Open</span><span class="w"> </span><span class="n">Cur_ListeArt</span>
+<span class="k">Fetch</span><span class="w"> </span><span class="k">Next</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">Cur_ListeArt</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="o">@</span><span class="n">a</span><span class="p">,</span><span class="o">@</span><span class="n">b</span><span class="p">,</span><span class="o">@</span><span class="k">c</span>
+<span class="n">While</span><span class="w"> </span><span class="o">@@</span><span class="n">fetch_status</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">Begin</span>
+<span class="n">Print</span><span class="w"> </span><span class="s1">&#39;L&#39;&#39;article numéro &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">convert</span><span class="p">(</span><span class="nb">varchar</span><span class="p">,</span><span class="o">@</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; portant la désignation &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">@</span><span class="n">b</span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; coûte    &#39;</span><span class="w"> </span><span class="o">+</span><span class="w">     </span><span class="k">convert</span><span class="p">(</span><span class="nb">varchar</span><span class="p">,</span><span class="o">@</span><span class="k">c</span><span class="p">)</span>
+<span class="k">Fetch</span><span class="w"> </span><span class="k">Next</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">Cur_ListeArt</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="o">@</span><span class="n">a</span><span class="p">,</span><span class="o">@</span><span class="n">b</span><span class="p">,</span><span class="o">@</span><span class="k">c</span>
+<span class="k">End</span>
+<span class="k">Close</span><span class="w"> </span><span class="n">Cur_ListeArt</span>
+<span class="k">Deallocate</span><span class="w"> </span><span class="n">Cur_ListeArt</span>
+</code></pre></div>
 </details>
 
 
@@ -5895,8 +6007,6 @@ Deallocate Cur_ListeArt</code></p>
         <script src="../../../javascript/mathjax.js"></script>
       
         <script src="../../../javascript/interpreter.js"></script>
-      
-        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

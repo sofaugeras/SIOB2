@@ -3883,14 +3883,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_cours.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -3911,14 +3911,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_exercices.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -3939,14 +3939,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -3967,14 +3967,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -3995,14 +3995,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_authentification.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4023,14 +4023,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_archivage.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5510,12 +5622,12 @@ R29 : Liste des avions (NumAvion et NomAvion) pilotés par le pilote nommé Hoar
 <p>Quels sont les vols (NumVol) triés par ordre croissant, assurés par Toto ? </p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT NumVol 
-FROM VOL
-INNER JOIN PILOTE
-ON VOL.NumPilote = PILOTE.NumPilote
-Where NomPilote = "Toto";</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NumVol</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">PILOTE</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">NumPilote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">.</span><span class="n">NumPilote</span>
+<span class="k">Where</span><span class="w"> </span><span class="n">NomPilote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Toto&quot;</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5528,11 +5640,10 @@ Where NomPilote = "Toto";</code></p>
 <p>Combien de vols y a-t-il au départ de Gillot ? </p>
 </div>
 <div class="tabbed-block">
-<p>```SQL
-SELECT Count(NumVol) AS NbVolGillot
-FROM VOL
-WHERE VilleDepart = "Gillot" ;</p>
-<p>```</p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">Count</span><span class="p">(</span><span class="n">NumVol</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">NbVolGillot</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">VilleDepart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Gillot&quot;</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5545,10 +5656,10 @@ WHERE VilleDepart = "Gillot" ;</p>
 <p>Combien de vols sont assurés par des ATR ? </p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT Count(VOL.NumVol) AS NbATR
-FROM VOL INNER JOIN AVION ON AVION.NumAvion = VOL.NumAvion
-WHERE AVION.NomAvion Like "ATR*";</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">Count</span><span class="p">(</span><span class="n">VOL</span><span class="p">.</span><span class="n">NumVol</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">NbATR</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">AVION</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">AVION</span><span class="p">.</span><span class="n">NumAvion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">NumAvion</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">AVION</span><span class="p">.</span><span class="n">NomAvion</span><span class="w"> </span><span class="k">Like</span><span class="w"> </span><span class="ss">&quot;ATR*&quot;</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5561,12 +5672,12 @@ WHERE AVION.NomAvion Like "ATR*";</code></p>
 <p>Liste des vols (NumVol et NumAvion) au départ de Paris dont la capacité est supérieure à 400 places ? </p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT VOL.NumVol, AVION.NumAvion
-FROM VOL
-INNER JOIN AVION
-ON VOL.NumAvion = AVION.NumAvion
-WHERE AVION.Capacite &gt; 400;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">NumVol</span><span class="p">,</span><span class="w"> </span><span class="n">AVION</span><span class="p">.</span><span class="n">NumAvion</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">AVION</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">NumAvion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AVION</span><span class="p">.</span><span class="n">NumAvion</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">AVION</span><span class="p">.</span><span class="n">Capacite</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">400</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5579,14 +5690,14 @@ WHERE AVION.Capacite &gt; 400;</code></p>
 <p>Liste des avions (NumAvion et NomAvion) pilotés par le pilote nommé Hoareau au départ de Gillot ? </p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT AVION.NumAVion, AVION.NomAvion
-FROM ((AVION INNER JOIN VOL
-ON AVION.NumAvion = Vol.NumAvion)
-INNER JOIN PILOTE
-ON VOL.NumPilote = PILOTE.NumPilote)
-WHERE  PILOTE.NomPilote = "Hoareau"
-AND VOL.VilleDepart = "Gillot" ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">AVION</span><span class="p">.</span><span class="n">NumAVion</span><span class="p">,</span><span class="w"> </span><span class="n">AVION</span><span class="p">.</span><span class="n">NomAvion</span>
+<span class="k">FROM</span><span class="w"> </span><span class="p">((</span><span class="n">AVION</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">VOL</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">AVION</span><span class="p">.</span><span class="n">NumAvion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vol</span><span class="p">.</span><span class="n">NumAvion</span><span class="p">)</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">PILOTE</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">NumPilote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">.</span><span class="n">NumPilote</span><span class="p">)</span>
+<span class="k">WHERE</span><span class="w">  </span><span class="n">PILOTE</span><span class="p">.</span><span class="n">NomPilote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Hoareau&quot;</span>
+<span class="k">AND</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">VilleDepart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Gillot&quot;</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5755,8 +5866,6 @@ AND VOL.VilleDepart = "Gillot" ;</code></p>
         <script src="../../../javascript/mathjax.js"></script>
       
         <script src="../../../javascript/interpreter.js"></script>
-      
-        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

@@ -3873,14 +3873,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_cours.md" class="md-nav__link">
+      <a href="../../6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -3901,14 +3901,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_exercices.md" class="md-nav__link">
+      <a href="../../6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -3929,14 +3929,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -3957,14 +3957,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -3985,14 +3985,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_authentification.md" class="md-nav__link">
+      <a href="../../6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4013,14 +4013,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_archivage.md" class="md-nav__link">
+      <a href="../../6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5712,49 +5824,52 @@
 <p>On va commencer par regarder dans le SGBD comment se comportent les requêtes. <br /></p>
 <p>Dans MySQL, créez une base <code>demo</code> et créer la table ci dessous (tout ne sert pas pour ce TP mais nous l'utiliserons dans un TP sur l'authenification).</p>
 <p>Créez la table <code>users</code> :</p>
-<pre><code class="language-sql">CREATE TABLE IF NOT EXISTS users (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  email VARCHAR(255) NOT NULL UNIQUE,
-  password_hash VARCHAR(255) NOT NULL,
-  mfa_secret VARCHAR(64) DEFAULT NULL,
-  mfa_enabled TINYINT(1) NOT NULL DEFAULT 0,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-</code></pre>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">password_hash</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">mfa_secret</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">mfa_enabled</span><span class="w"> </span><span class="n">TINYINT</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="n">created_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span>
+<span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span><span class="p">;</span>
+</code></pre></div>
 <details class="note">
 <summary>Jeu de tests</summary>
-<p>```sql
-INSERT INTO users (email, password_hash, mfa_secret, mfa_enabled, created_at) VALUES
-('alice.dupont@example.com',
-'<span class="arithmatex">\(2y\)</span>10$A1bCd2Ef3Gh4Ij5Kl6MnOu7Pq9RsTu0VwXyZaBcDeFgHiJkLmNoPq', 
-NULL,
-0,
-'2025-01-12 10:15:30'),</p>
-<p>('bruno.martin@example.com',
-'<span class="arithmatex">\(2y\)</span>10$Z8yXw7Vu6Ts5Rq4Po3NmLk2Ji1HgFeDcBaZyXwVuT9Sr8Qp7On6Lm',
-'JBSWY3DPEHPK3PXP',
-1,
-'2025-01-12 10:16:10'),</p>
-<p>('carla.robert@example.com',
-'<span class="arithmatex">\(2y\)</span>10$AcBdEfGhIjKlMnOpQrStUvWxYz12Tu34VwXyZaBcDeFgHiJkLmNoP',
-NULL,
-0,
-'2025-01-12 10:17:45'),</p>
-<p>('david.lemoine@example.com',
-'<span class="arithmatex">\(2y\)</span>10$MnOpQrStUvWxYz12Tu34VwXyZaBcDeFgHiJkLmNoPAcBdEfGhIjKl',
-'KRSXG5DSNFXGOIDP',
-1,
-'2025-01-12 10:19:02'),</p>
-<p>('emma.leroy@example.com',
-'<span class="arithmatex">\(2y\)</span>10$Tu34VwXyZaBcDeFgHiJkLmNoPMnOpQrStUvWxYz12AcBdEfGhIjKl',
-NULL,
-0,
-'2025-01-12 10:20:18');</p>
-<p>```</p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span><span class="n">email</span><span class="p">,</span><span class="w"> </span><span class="n">password_hash</span><span class="p">,</span><span class="w"> </span><span class="n">mfa_secret</span><span class="p">,</span><span class="w"> </span><span class="n">mfa_enabled</span><span class="p">,</span><span class="w"> </span><span class="n">created_at</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span>
+<span class="p">(</span><span class="s1">&#39;alice.dupont@example.com&#39;</span><span class="p">,</span>
+<span class="s1">&#39;$2y$10$A1bCd2Ef3Gh4Ij5Kl6MnOu7Pq9RsTu0VwXyZaBcDeFgHiJkLmNoPq&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="k">NULL</span><span class="p">,</span>
+<span class="mi">0</span><span class="p">,</span>
+<span class="s1">&#39;2025-01-12 10:15:30&#39;</span><span class="p">),</span>
+
+<span class="p">(</span><span class="s1">&#39;bruno.martin@example.com&#39;</span><span class="p">,</span>
+<span class="s1">&#39;$2y$10$Z8yXw7Vu6Ts5Rq4Po3NmLk2Ji1HgFeDcBaZyXwVuT9Sr8Qp7On6Lm&#39;</span><span class="p">,</span>
+<span class="s1">&#39;JBSWY3DPEHPK3PXP&#39;</span><span class="p">,</span>
+<span class="mi">1</span><span class="p">,</span>
+<span class="s1">&#39;2025-01-12 10:16:10&#39;</span><span class="p">),</span>
+
+<span class="p">(</span><span class="s1">&#39;carla.robert@example.com&#39;</span><span class="p">,</span>
+<span class="s1">&#39;$2y$10$AcBdEfGhIjKlMnOpQrStUvWxYz12Tu34VwXyZaBcDeFgHiJkLmNoP&#39;</span><span class="p">,</span>
+<span class="k">NULL</span><span class="p">,</span>
+<span class="mi">0</span><span class="p">,</span>
+<span class="s1">&#39;2025-01-12 10:17:45&#39;</span><span class="p">),</span>
+
+<span class="p">(</span><span class="s1">&#39;david.lemoine@example.com&#39;</span><span class="p">,</span>
+<span class="s1">&#39;$2y$10$MnOpQrStUvWxYz12Tu34VwXyZaBcDeFgHiJkLmNoPAcBdEfGhIjKl&#39;</span><span class="p">,</span>
+<span class="s1">&#39;KRSXG5DSNFXGOIDP&#39;</span><span class="p">,</span>
+<span class="mi">1</span><span class="p">,</span>
+<span class="s1">&#39;2025-01-12 10:19:02&#39;</span><span class="p">),</span>
+
+<span class="p">(</span><span class="s1">&#39;emma.leroy@example.com&#39;</span><span class="p">,</span>
+<span class="s1">&#39;$2y$10$Tu34VwXyZaBcDeFgHiJkLmNoPMnOpQrStUvWxYz12AcBdEfGhIjKl&#39;</span><span class="p">,</span>
+<span class="k">NULL</span><span class="p">,</span>
+<span class="mi">0</span><span class="p">,</span>
+<span class="s1">&#39;2025-01-12 10:20:18&#39;</span><span class="p">);</span>
+</code></pre></div>
 </details>
-<p>Commmençons par une requête simple que pourrait envoyer une application vulnérable :</p>
-<pre><code class="language-sql">SELECT * FROM users WHERE id = '1';
-</code></pre>
+<p>Commmençons par une requête simple que pourrait envoyer une application vulnérable :
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;1&#39;</span><span class="p">;</span>
+</code></pre></div></p>
 <p>⚠️ Comme MySQL est strict, tu vas déclencher des erreurs de syntaxe ou retourner trop de résultats.</p>
 <p>exemple 1 : <code>SELECT * FROM users WHERE id = '1' OR '1'='1';</code><br />
 👉 Retourne toutes les lignes de la table users (bypass authentification).</p>
@@ -5765,17 +5880,17 @@ NULL,
 👉 MySQL interprète admin comme valeur, puis le <code>--</code> coupe la fin.<br />
 Peut générer une erreur si le champ id est numérique (conversion implicite).</p>
 <p>❌ On peut aussi provoquer des erreurs : </p>
-<pre><code class="language-sql">-- Oubli de fermeture de quote
-SELECT * FROM users WHERE id = '1;
-</code></pre>
-<p>ou</p>
-<pre><code class="language-sql">-- Injection avec mauvais commentaire
-SELECT * FROM users WHERE id = '1' OR '1'='1' --;
-</code></pre>
-<p>ou </p>
-<pre><code class="language-sql">-- Type incompatible
-SELECT * FROM users WHERE id = 'admin';
-</code></pre>
+<p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="c1">-- Oubli de fermeture de quote</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">&#39;</span><span class="mi">1</span><span class="p">;</span>
+</code></pre></div>
+ou
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="c1">-- Injection avec mauvais commentaire</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;1&#39;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="s1">&#39;1&#39;</span><span class="o">=</span><span class="s1">&#39;1&#39;</span><span class="w"> </span><span class="c1">--;</span>
+</code></pre></div>
+ou 
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="c1">-- Type incompatible</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;admin&#39;</span><span class="p">;</span>
+</code></pre></div></p>
 <p>👉 En résumé, </p>
 <ul>
 <li>Si l’injection est bien formée → ça contourne la logique (retourne plusieurs résultats).</li>
@@ -5808,17 +5923,17 @@ Son objectif principal est :</p>
 <li>Dans le dossier DVWA/config/, copie le fichier : config.inc.php.dist  →  config.inc.php</li>
 <li>
 <p>Ouvre <code>config.inc.php</code> et ajuste la config :</p>
-<p><code>php
-$_DVWA[ 'db_user' ] = 'root';
-$_DVWA[ 'db_password' ] = '';   // par défaut root n’a PAS de mot de passe sous WAMP
-$_DVWA[ 'db_database' ] = 'dvwa';</code></p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$_DVWA[ &#39;db_user&#39; ] = &#39;root&#39;;</span>
+<span class="x">$_DVWA[ &#39;db_password&#39; ] = &#39;&#39;;   // par défaut root n’a PAS de mot de passe sous WAMP</span>
+<span class="x">$_DVWA[ &#39;db_database&#39; ] = &#39;dvwa&#39;;</span>
+</code></pre></div>
 </li>
 <li>
 <p>Activer <code>allow_url_include</code> et <code>gd</code> dans <code>php.ini</code> :   Active/supprime le <code>;</code> si présent</p>
-<p><code>php
-allow_url_include = On
-allow_url_fopen = On
-extension=gd</code></p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">allow_url_include = On</span>
+<span class="x">allow_url_fopen = On</span>
+<span class="x">extension=gd</span>
+</code></pre></div>
 </li>
 <li>
 <p>Crée une nouvelle base appelée <strong>dvwa</strong></p>
@@ -5861,33 +5976,33 @@ null,concat(first_name,0x0a,last_name,0x0a,user,0x0a,password) from users #</cod
 <h3 id="31-utiliser-des-requetes-preparees-pdo-mysqli-etc">3.1 Utiliser des requêtes préparées (PDO, mysqli, etc.) ✅<a class="headerlink" href="#31-utiliser-des-requetes-preparees-pdo-mysqli-etc" title="Permanent link">⚓︎</a></h3>
 <p><strong>Principe :</strong> au lieu de concaténer directement les entrées utilisateur dans une requête SQL, on prépare une requête avec des paramètres qui seront remplacés de manière sécurisée par la base de données.</p>
 <p>Exemple vulnérable (PHP + mysqli) :</p>
-<pre><code class="language-php">$sql = &quot;SELECT * FROM users WHERE email = '&quot; . $_POST['email'] . &quot;' 
-        AND password = '&quot; . $_POST['password'] . &quot;'&quot;;
-$result = $conn-&gt;query($sql);
-</code></pre>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$sql = &quot;SELECT * FROM users WHERE email = &#39;&quot; . $_POST[&#39;email&#39;] . &quot;&#39; </span>
+<span class="x">        AND password = &#39;&quot; . $_POST[&#39;password&#39;] . &quot;&#39;&quot;;</span>
+<span class="x">$result = $conn-&gt;query($sql);</span>
+</code></pre></div>
 <p>Exemple sécurisé (PHP + PDO) :</p>
-<pre><code class="language-php">$stmt = $pdo-&gt;prepare(&quot;SELECT * FROM users WHERE email = :email AND password = :password&quot;);
-$stmt-&gt;execute([
-    ':email' =&gt; $_POST['email'],
-    ':password' =&gt; $_POST['password']
-]);
-$user = $stmt-&gt;fetch();
-</code></pre>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$stmt = $pdo-&gt;prepare(&quot;SELECT * FROM users WHERE email = :email AND password = :password&quot;);</span>
+<span class="x">$stmt-&gt;execute([</span>
+<span class="x">    &#39;:email&#39; =&gt; $_POST[&#39;email&#39;],</span>
+<span class="x">    &#39;:password&#39; =&gt; $_POST[&#39;password&#39;]</span>
+<span class="x">]);</span>
+<span class="x">$user = $stmt-&gt;fetch();</span>
+</code></pre></div>
 <p>👉 Ici, même si l’utilisateur saisit admin' OR '1'='1, la valeur est traitée comme une chaîne littérale et non comme du SQL.</p>
 <h3 id="32-echapper-correctement-les-donnees">3.2 Échapper correctement les données ✅<a class="headerlink" href="#32-echapper-correctement-les-donnees" title="Permanent link">⚓︎</a></h3>
 <p>Lorsque les requêtes préparées ne sont pas possibles (ex. scripts rapides), il faut échapper les caractères spéciaux (', ", ;, etc.).</p>
 <p>Avec PHP/MySQLi :</p>
-<pre><code class="language-php">$email = mysqli_real_escape_string($conn, $_POST['email']);
-</code></pre>
-<p>⚠️ Limite : ce n’est pas une solution infaillible, car un oubli ou une mauvaise configuration peut réintroduire une faille. Les requêtes préparées restent la solution recommandée.</p>
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$email = mysqli_real_escape_string($conn, $_POST[&#39;email&#39;]);</span>
+</code></pre></div>
+⚠️ Limite : ce n’est pas une solution infaillible, car un oubli ou une mauvaise configuration peut réintroduire une faille. Les requêtes préparées restent la solution recommandée.</p>
 <h3 id="33-appliquer-le-principe-du-moindre-privilege">3.3 Appliquer le principe du moindre privilège ✅<a class="headerlink" href="#33-appliquer-le-principe-du-moindre-privilege" title="Permanent link">⚓︎</a></h3>
 <p>Le compte SQL utilisé par l’application ne doit pas avoir plus de droits que nécessaire.</p>
-<p>Mauvaise pratique (dangereuse) :</p>
-<pre><code class="language-sql">GRANT ALL PRIVILEGES ON *.* TO 'appuser'@'localhost';
-</code></pre>
-<p>Bonne pratique :</p>
-<pre><code class="language-sql">GRANT SELECT, INSERT, UPDATE ON mydb.users TO 'appuser'@'localhost';
-</code></pre>
+<p>Mauvaise pratique (dangereuse) :
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">*</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;appuser&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="p">;</span>
+</code></pre></div></p>
+<p>Bonne pratique :
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">GRANT</span><span class="w"> </span><span class="k">SELECT</span><span class="p">,</span><span class="w"> </span><span class="k">INSERT</span><span class="p">,</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">mydb</span><span class="p">.</span><span class="n">users</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;appuser&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="p">;</span>
+</code></pre></div></p>
 <h3 id="34-controle-des-donnees-cote-serveur">3.4 Contrôle des données côté serveur ✅<a class="headerlink" href="#34-controle-des-donnees-cote-serveur" title="Permanent link">⚓︎</a></h3>
 <p>❗ Toujours valider les entrées utilisateurs, même si tu as une validation côté client (JavaScript).</p>
 <p>Exemple :</p>
@@ -5896,11 +6011,11 @@ $user = $stmt-&gt;fetch();
 <li>Vérifier qu’un email a un format correct (REGEX, filtre PHP filter_var).</li>
 </ul>
 <p>Exemple en PHP :</p>
-<pre><code class="language-php">if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-    die(&quot;Adresse email invalide !&quot;);
-}
-</code></pre>
-<p>👉 Cela réduit le risque d’injection et évite aussi des erreurs applicatives.</p>
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">if (!filter_var($_POST[&#39;email&#39;], FILTER_VALIDATE_EMAIL)) {</span>
+<span class="x">    die(&quot;Adresse email invalide !&quot;);</span>
+<span class="x">}</span>
+</code></pre></div>
+👉 Cela réduit le risque d’injection et évite aussi des erreurs applicatives.</p>
 <p>⁉️ Pourquoi ce type de faille est toujours fréquent ?</p>
 <ul>
 <li>Héritage d’applications anciennes</li>
@@ -5927,32 +6042,32 @@ Que constatez-vous ? A qui appartient cette commande ?</p>
 <h2 id="5-le-cas-de-laravel">5. Le cas de Laravel<a class="headerlink" href="#5-le-cas-de-laravel" title="Permanent link">⚓︎</a></h2>
 <h3 id="51-laravel-et-la-protection-par-defaut">5.1 Laravel et la protection par défaut<a class="headerlink" href="#51-laravel-et-la-protection-par-defaut" title="Permanent link">⚓︎</a></h3>
 <p>Laravel utilise Eloquent ORM et le Query Builder, qui intègrent nativement les requêtes préparées.</p>
-<p>Exemple avec Eloquent :</p>
-<pre><code class="language-php">User::where('email', $email)-&gt;first();
-</code></pre>
-<p>👉 Ici, Laravel prépare la requête automatiquement → l’entrée <code>$email</code> est traitée comme une valeur et non comme du SQL.</p>
+<p>Exemple avec Eloquent :
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">User::where(&#39;email&#39;, $email)-&gt;first();</span>
+</code></pre></div>
+👉 Ici, Laravel prépare la requête automatiquement → l’entrée <code>$email</code> est traitée comme une valeur et non comme du SQL.</p>
 <p>Même chose avec le Query Builder :</p>
-<pre><code class="language-php">DB::table('users')-&gt;where('id', $id)-&gt;get();
-</code></pre>
-<p>👉 Protégé contre l’injection SQL.</p>
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">DB::table(&#39;users&#39;)-&gt;where(&#39;id&#39;, $id)-&gt;get();</span>
+</code></pre></div>
+👉 Protégé contre l’injection SQL.</p>
 <h3 id="52-alors-injection-impossible">5.2 Alors, injection impossible ?<a class="headerlink" href="#52-alors-injection-impossible" title="Permanent link">⚓︎</a></h3>
 <p>👉 Pas totalement. Laravel protège bien si on utilise correctement Eloquent ou Query Builder.</p>
 <p>Mais on peut réintroduire une faille si :</p>
-<p>a) <strong>On Utilise des requêtes brutes</strong> (raw queries)</p>
-<pre><code class="language-php">DB::select(&quot;SELECT * FROM users WHERE email = '$email'&quot;);
-</code></pre>
-<p>➡️ Ici, on retombe exactement dans la vulnérabilité classique.</p>
-<p>Laravel propose une variante plus sûre :</p>
-<pre><code class="language-php">DB::select(&quot;SELECT * FROM users WHERE email = ?&quot;, [$email]);
-</code></pre>
-<p>👉 Ici, c’est une requête préparée. 👏👏👏</p>
+<p>a) <strong>On Utilise des requêtes brutes</strong> (raw queries)
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">DB::select(&quot;SELECT * FROM users WHERE email = &#39;$email&#39;&quot;);</span>
+</code></pre></div>
+➡️ Ici, on retombe exactement dans la vulnérabilité classique.</p>
+<p>Laravel propose une variante plus sûre :
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">DB::select(&quot;SELECT * FROM users WHERE email = ?&quot;, [$email]);</span>
+</code></pre></div>
+👉 Ici, c’est une requête préparée. 👏👏👏</p>
 <p>b) <strong>Mauvaise utilisation de fonctions “raw”</strong></p>
-<p>Certaines méthodes permettent d’injecter du SQL “pur” :</p>
-<pre><code class="language-php">DB::table('users')
-  -&gt;whereRaw(&quot;email = '$email'&quot;)
-  -&gt;get();
-</code></pre>
-<p>👉 Si <code>$email</code> vient d’un formulaire utilisateur non filtré, c’est vulnérable.</p>
+<p>Certaines méthodes permettent d’injecter du SQL “pur” :
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">DB::table(&#39;users&#39;)</span>
+<span class="x">  -&gt;whereRaw(&quot;email = &#39;$email&#39;&quot;)</span>
+<span class="x">  -&gt;get();</span>
+</code></pre></div>
+👉 Si <code>$email</code> vient d’un formulaire utilisateur non filtré, c’est vulnérable.</p>
 <div class="admonition warning">
 <p class="admonition-title">Et le developpeur ...</p>
 <p>Laravel protège par défaut contre l’injection SQL (via ORM et requêtes préparées).</p>
@@ -6122,8 +6237,6 @@ Que constatez-vous ? A qui appartient cette commande ?</p>
         <script src="../../../javascript/mathjax.js"></script>
       
         <script src="../../../javascript/interpreter.js"></script>
-      
-        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

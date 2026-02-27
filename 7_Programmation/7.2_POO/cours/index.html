@@ -3870,14 +3870,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_cours.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -3898,14 +3898,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_exercices.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -3926,14 +3926,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -3954,14 +3954,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -3982,14 +3982,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_authentification.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4010,14 +4010,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_archivage.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5760,51 +5872,51 @@
 <li>🔒 <strong>privé</strong> : le mot <code>class</code> est alors précédé de <code>private</code>, seules des classes définies dans le même fichier peuvent utiliser cette classe.</li>
 <li>📦 <strong>paquetage</strong> : le mot <code>class</code> n’est pas précédé de mot particulier, toutes les classes du paquetage peuvent utiliser la classe.</li>
 </ul>
-<pre><code class="language-java">public class Personnage {
+<p><div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Personnage</span><span class="w"> </span><span class="p">{</span>
 
-    &quot;&quot;&quot;
-    Personnage d'un jeu de type hack 'n slash
+<span class="w">    </span><span class="s">&quot;&quot;&quot;</span>
+<span class="s">    Personnage d&#39;un jeu de type hack &#39;n slash</span>
 
-    Attributs :
-        nom : chaine de caractères, nom du personnage
-        pv : entier positif ou nul, points de vie du personnage
-        degats : entier strictement positif, dégats maximum du personnage
-        position : couple d'entiers donnant l'abscisse et l'ordonnée
-                   du personnage sur la carte
-    Méthodes:
-        Init() constructeur de la classe Personnage
-        getAttribut() : accesseurs des attributs
-        setAttributs(nouvelle_valeur) : mutateurs des attributs.
-                Uniquement pour les attributs _pv et _position
-        deplacement(paramètres) : permet de changer la position
-                                  du personnage
-        attaque() : renvoie les dégâts faits à l'adversaire
-    &quot;&quot;&quot;
-</code></pre>
-<p>La première méthode dans la classe est le <strong>constructeur</strong>, appelé du même nom que la classe en JAVA. Dans le constructeur de <code>Personnage</code> est aussi passé en argument le paramètre <strong>nom</strong>. Le constructeur initialise les attributs de l’objet (points de vie, dégâts, position).</p>
+<span class="s">    Attributs :</span>
+<span class="s">        nom : chaine de caractères, nom du personnage</span>
+<span class="s">        pv : entier positif ou nul, points de vie du personnage</span>
+<span class="s">        degats : entier strictement positif, dégats maximum du personnage</span>
+<span class="s">        position : couple d&#39;entiers donnant l&#39;abscisse et l&#39;ordonnée</span>
+<span class="s">                   du personnage sur la carte</span>
+<span class="s">    Méthodes:</span>
+<span class="s">        Init() constructeur de la classe Personnage</span>
+<span class="s">        getAttribut() : accesseurs des attributs</span>
+<span class="s">        setAttributs(nouvelle_valeur) : mutateurs des attributs.</span>
+<span class="s">                Uniquement pour les attributs _pv et _position</span>
+<span class="s">        deplacement(paramètres) : permet de changer la position</span>
+<span class="s">                                  du personnage</span>
+<span class="s">        attaque() : renvoie les dégâts faits à l&#39;adversaire</span>
+<span class="s">    &quot;&quot;&quot;</span>
+</code></pre></div>
+La première méthode dans la classe est le <strong>constructeur</strong>, appelé du même nom que la classe en JAVA. Dans le constructeur de <code>Personnage</code> est aussi passé en argument le paramètre <strong>nom</strong>. Le constructeur initialise les attributs de l’objet (points de vie, dégâts, position).</p>
 <p>Tous les attributs sont précédés d’un tiret bas « <code>_</code> » pour signifier qu’ils sont <strong>privés</strong>.</p>
-<pre><code class="language-java">Personnage(String nom) {
-    &quot;&quot;&quot;
-    Constructeur de la classe Personnage
+<div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><span class="n">Personnage</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s">&quot;&quot;&quot;</span>
+<span class="s">    Constructeur de la classe Personnage</span>
 
-    Données:   
-        nom : chaine de caractères, nom du personnage
-        pv : entier positif ou nul, points de vie du personnage
-        degats : entier strictement positif, dégats maximum du personnage
-        position : couple d'entiers donnant l'abscisse et
-                   l'ordonnée du personnage sur la carte
-    Résultat : 
-        ne retourne rien, crée un nouveau Personnage
-    &quot;&quot;&quot;
-    nom = nom;
-    pv = 80;
-    degats = 8;
-    position = (0,0);
-}
-</code></pre>
+<span class="s">    Données:   </span>
+<span class="s">        nom : chaine de caractères, nom du personnage</span>
+<span class="s">        pv : entier positif ou nul, points de vie du personnage</span>
+<span class="s">        degats : entier strictement positif, dégats maximum du personnage</span>
+<span class="s">        position : couple d&#39;entiers donnant l&#39;abscisse et</span>
+<span class="s">                   l&#39;ordonnée du personnage sur la carte</span>
+<span class="s">    Résultat : </span>
+<span class="s">        ne retourne rien, crée un nouveau Personnage</span>
+<span class="s">    &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
+<span class="w">    </span><span class="n">pv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">80</span><span class="p">;</span>
+<span class="w">    </span><span class="n">degats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span>
+<span class="w">    </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>ou encore :</p>
-<pre><code class="language-java">this.nom = nom;
-</code></pre>
+<div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><span class="k">this</span><span class="p">.</span><span class="na">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
+</code></pre></div>
 <p>Le mot-clé <strong>this</strong> désigne en permanence l'objet dans lequel on se trouve. Il existe dès l'instant que l'on se trouve dans l'instance de quelque chose. En particulier, il n'est pas défini dans un élément statique.</p>
 <p>En général, ce mot-clé est utilisé pour lever l'ambigüité qui peut exister entre le champ d'une classe et un paramètre d'une méthode dans laquelle on se trouve, comme dans l'exemple qui suit.</p>
 <p>➡️ <strong>Exemple : Utilisation de <code>this</code> pour lever l'ambiguïté entre un champ et un paramètre</strong></p>
@@ -5815,38 +5927,38 @@ Il n’y a pas forcément de mutateurs (ni d’accesseurs) pour tous les attribu
 👉 par exemple, le nom du personnage n’est pas modifiable ici.</p>
 <p>On ne documente pas les accesseurs, on peut le faire pour les mutateurs.</p>
 <h4 id="accesseurs-des-attributs">📥 Accesseurs des attributs<a class="headerlink" href="#accesseurs-des-attributs" title="Permanent link">⚓︎</a></h4>
-<pre><code class="language-java">public String getNom() {
-    return this.nom;
-}
+<div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getNom</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">nom</span><span class="p">;</span>
+<span class="p">}</span>
 
-public int getPv() {
-    return this.pv;
-}
+<span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getPv</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">pv</span><span class="p">;</span>
+<span class="p">}</span>
 
-public int getDegats() {
-    return this.degats;
-}
+<span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getDegats</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">degats</span><span class="p">;</span>
+<span class="p">}</span>
 
-public [] getPosition() {
-    return this.position;
-}
-</code></pre>
+<span class="kd">public</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">getPosition</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">position</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
 <h4 id="mutateurs-des-attributs">📤 Mutateurs des attributs<a class="headerlink" href="#mutateurs-des-attributs" title="Permanent link">⚓︎</a></h4>
-<pre><code class="language-java">public void setPv(int nouveaux_pv) {
-    &quot;&quot;&quot;
-    Les points de vie d’un personnage sont positifs ou nuls.
-    &quot;&quot;&quot;
-    if (nouveaux_pv &lt; 0) {
-        pv = 0;
-    } else {
-        pv = nouveaux_pv;
-    }
-}
+<div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setPv</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">nouveaux_pv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s">&quot;&quot;&quot;</span>
+<span class="s">    Les points de vie d’un personnage sont positifs ou nuls.</span>
+<span class="s">    &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nouveaux_pv</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">pv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">pv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nouveaux_pv</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 
-public void setDegats(int nouveaux_degats) {
-    degats = nouveaux_degats;
-}
-</code></pre>
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setDegats</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">nouveaux_degats</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">degats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nouveaux_degats</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="23-definition-dune-methode">2.3 🛠️ Définition d’une méthode<a class="headerlink" href="#23-definition-dune-methode" title="Permanent link">⚓︎</a></h3>
 <p>Une méthode est définie par :</p>
 <ul>
@@ -5865,16 +5977,16 @@ public void setDegats(int nouveaux_degats) {
 </ul>
 <p>On peut avoir un <strong>paramètre ellipse</strong> (<code>...</code>) qui est en fait un tableau, et doit être le dernier paramètre.</p>
 <h3 id="exemple">Exemple<a class="headerlink" href="#exemple" title="Permanent link">⚓︎</a></h3>
-<pre><code class="language-java">void m(X ... e) {
-    // e est un tableau à une dimension d'éléments de type X
-}
-</code></pre>
-<p>Un appel de la méthode <code>m</code> se fait alors de la façon suivante :</p>
-<pre><code class="language-java">m(null);
-m();
-m(x1);
-m(x1, x2);
-</code></pre>
+<p><div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">m</span><span class="p">(</span><span class="n">X</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// e est un tableau à une dimension d&#39;éléments de type X</span>
+<span class="p">}</span>
+</code></pre></div>
+Un appel de la méthode <code>m</code> se fait alors de la façon suivante :</p>
+<div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><span class="n">m</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="n">m</span><span class="p">();</span>
+<span class="n">m</span><span class="p">(</span><span class="n">x1</span><span class="p">);</span>
+<span class="n">m</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">);</span>
+</code></pre></div>
 <h4 id="signature-dune-methode">✍️ Signature d’une méthode<a class="headerlink" href="#signature-dune-methode" title="Permanent link">⚓︎</a></h4>
 <p>Une méthode est caractérisée par sa <strong>signature</strong> :</p>
 <ul>
@@ -5904,22 +6016,22 @@ m(x1, x2);
 <p>📌 À l’extérieur de la définition de la classe, l’accès se fait en écrivant :
 👉 <strong>nom de l’instance . nom de l’attribut</strong> ou <strong>nom de l’instance . nom de la méthode</strong></p>
 <p><strong>Exemple</strong></p>
-<pre><code class="language-java">class Point {
-   private int x;                
-   public int y;
+<div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><span class="kd">class</span> <span class="nc">Point</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">                </span>
+<span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
 
-   void f() {
-      x = 0;
-      this.y = 1;
-   }     
-}
-</code></pre>
+<span class="w">   </span><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">   </span><span class="p">}</span><span class="w">     </span>
+<span class="p">}</span>
+</code></pre></div>
 <p>En dehors de la définition de la classe :</p>
-<pre><code class="language-java">Point p = new Point();
+<div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><span class="n">Point</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">();</span>
 
-p.x = 0; // ❌ Erreur de compilation : la visibilité de x est privée !
-p.y = 1; // ✅
-</code></pre>
+<span class="n">p</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// ❌ Erreur de compilation : la visibilité de x est privée !</span>
+<span class="n">p</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// ✅</span>
+</code></pre></div>
 <h4 id="attributs-publics-attributs-prives">🔒 Attributs publics, attributs privés<a class="headerlink" href="#attributs-publics-attributs-prives" title="Permanent link">⚓︎</a></h4>
 <p>En programmation objet, indépendamment du langage, on considère que les attributs doivent être <strong>privés</strong>, encapsulés à l’intérieur de la classe et accessibles uniquement par mutateurs.</p>
 <p>Vous trouverez sur le web de nombreux exemples de code rédigés de cette manière, sans forcément savoir si les propriétés avancées de Python ont été utilisées. Nous utiliserons également ce type de code plus tard dans l’année, pour simplifier l’écriture des programmes.</p>
@@ -5930,16 +6042,16 @@ p.y = 1; // ✅
 <li>✅ Plusieurs classes peuvent avoir les mêmes noms de méthodes sans problème.</li>
 </ul>
 <p>👉 En effet, l’appel d’une méthode passe par :</p>
-<p><code>java
-objet.méthode()</code>
+<p><div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><span class="n">objet</span><span class="p">.</span><span class="na">méthode</span><span class="p">()</span>
+</code></pre></div>
 Ce qui permet de savoir dans quelle classe chercher la méthode.</p>
 <p>➡️ La classe définit son <strong>espace de noms</strong>.</p>
 </div>
 <h2 id="3-creation-dinstances">3. 🆕 Création d’instances<a class="headerlink" href="#3-creation-dinstances" title="Permanent link">⚓︎</a></h2>
 <p>Pour créer une instance de la classe <code>A</code>, on écrira :</p>
-<pre><code class="language-java">A a;        // définition de la variable référence
-a = new A(); // création de l’instance
-</code></pre>
+<div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><span class="n">A</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">        </span><span class="c1">// définition de la variable référence</span>
+<span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">A</span><span class="p">();</span><span class="w"> </span><span class="c1">// création de l’instance</span>
+</code></pre></div>
 <h3 id="31-etapes-de-creation-avec-new">3.1 🔄 Étapes de création avec <code>new</code><a class="headerlink" href="#31-etapes-de-creation-avec-new" title="Permanent link">⚓︎</a></h3>
 <p>La création d’une instance par l’opérateur <code>new</code> se déroule en trois temps :</p>
 <ol>
@@ -5948,22 +6060,22 @@ a = new A(); // création de l’instance
 <li>🔗 Renvoi d’une référence sur l’objet nouvellement créé.</li>
 </ol>
 <p><strong>Exemple</strong></p>
-<pre><code class="language-java">class Point {
-   int x;
-   int y;
-   ...
-}
+<p><div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><span class="kd">class</span> <span class="nc">Point</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="w">   </span><span class="p">...</span>
+<span class="p">}</span>
 
-Point a, b;
-a = new Point(...);
-b = a;
-</code></pre>
-<p><img alt="illustration" class="center" src="../data/4.gif" /></p>
+<span class="n">Point</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(...);</span>
+<span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+</code></pre></div>
+<img alt="illustration" class="center" src="../data/4.gif" /></p>
 <h3 id="32-destruction-dinstances">3.2 🗑️ Destruction d’instances<a class="headerlink" href="#32-destruction-dinstances" title="Permanent link">⚓︎</a></h3>
 <p>La destruction des instances se fait automatiquement par un <strong>thread</strong>, le <strong>garbage collector</strong>, qui cherche tous les objets qui ne sont plus référencés et les supprime.</p>
 <p>👉 Le garbage collector peut être appelé directement par :</p>
-<pre><code class="language-java">System.gc();
-</code></pre>
+<div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">gc</span><span class="p">();</span>
+</code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">📊 résumé POO</p>
 <table>
@@ -6016,37 +6128,37 @@ La classe fille hérite :</p>
 </ul>
 <p>👉 Cela favorise la <strong>réutilisation du code</strong> et l’<strong>organisation hiérarchique</strong> des classes.</p>
 <h4 id="exemple-en-java">Exemple en Java<a class="headerlink" href="#exemple-en-java" title="Permanent link">⚓︎</a></h4>
-<pre><code class="language-java">// Classe mère
-class Personnage {
-    protected String nom;
-    protected int pv;
+<div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><span class="c1">// Classe mère</span>
+<span class="kd">class</span> <span class="nc">Personnage</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pv</span><span class="p">;</span>
 
-    public Personnage(String nom, int pv) {
-        this.nom = nom;
-        this.pv = pv;
-    }
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Personnage</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">pv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pv</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 
-    public void afficher() {
-        System.out.println(nom + &quot; possède &quot; + pv + &quot; points de vie.&quot;);
-    }
-}
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">afficher</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; possède &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pv</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; points de vie.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 
-// Classe fille
-class Guerrier extends Personnage {
-    private int force;
+<span class="c1">// Classe fille</span>
+<span class="kd">class</span> <span class="nc">Guerrier</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Personnage</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">force</span><span class="p">;</span>
 
-    public Guerrier(String nom, int pv, int force) {
-        super(nom, pv); // appel du constructeur de la classe mère
-        this.force = force;
-    }
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Guerrier</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pv</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">force</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">pv</span><span class="p">);</span><span class="w"> </span><span class="c1">// appel du constructeur de la classe mère</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">force</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">force</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 
-    @Override
-    public void afficher() {
-        System.out.println(nom + &quot; (Guerrier) possède &quot; + pv + 
-                           &quot; points de vie et &quot; + force + &quot; de force.&quot;);
-    }
-}
-</code></pre>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">afficher</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; (Guerrier) possède &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pv</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">                           </span><span class="s">&quot; points de vie et &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">force</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; de force.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h4 id="remarques">📝 Remarques<a class="headerlink" href="#remarques" title="Permanent link">⚓︎</a></h4>
 <ul>
 <li><code>super</code> appelle le constructeur ou une méthode de la classe mère.</li>
@@ -6062,37 +6174,37 @@ Dans le cadre de la POO :</p>
 </ul>
 <p>👉 Cela permet d’écrire du code plus <strong>générique</strong> et <strong>réutilisable</strong>.</p>
 <h4 id="exemple-en-java_1">Exemple en Java<a class="headerlink" href="#exemple-en-java_1" title="Permanent link">⚓︎</a></h4>
-<pre><code class="language-java">class Personnage {
-    protected String nom;
-    public Personnage(String nom) { this.nom = nom; }
-    public void attaquer() {
-        System.out.println(nom + &quot; attaque avec ses poings.&quot;);
-    }
-}
+<div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><span class="kd">class</span> <span class="nc">Personnage</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Personnage</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">attaquer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; attaque avec ses poings.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 
-class Guerrier extends Personnage {
-    public Guerrier(String nom) { super(nom); }
-    @Override
-    public void attaquer() {
-        System.out.println(nom + &quot; attaque avec une épée !&quot;);
-    }
-}
+<span class="kd">class</span> <span class="nc">Guerrier</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Personnage</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Guerrier</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kd">super</span><span class="p">(</span><span class="n">nom</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">attaquer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; attaque avec une épée !&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 
-class Mage extends Personnage {
-    public Mage(String nom) { super(nom); }
-    @Override
-    public void attaquer() {
-        System.out.println(nom + &quot; lance un sort de feu !&quot;);
-    }
-}
+<span class="kd">class</span> <span class="nc">Mage</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Personnage</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Mage</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kd">super</span><span class="p">(</span><span class="n">nom</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">attaquer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; lance un sort de feu !&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 
-// Exemple d'utilisation
-Personnage p1 = new Guerrier(&quot;Arthas&quot;);
-Personnage p2 = new Mage(&quot;Merlin&quot;);
+<span class="c1">// Exemple d&#39;utilisation</span>
+<span class="n">Personnage</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Guerrier</span><span class="p">(</span><span class="s">&quot;Arthas&quot;</span><span class="p">);</span>
+<span class="n">Personnage</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mage</span><span class="p">(</span><span class="s">&quot;Merlin&quot;</span><span class="p">);</span>
 
-p1.attaquer(); // Arthas attaque avec une épée !
-p2.attaquer(); // Merlin lance un sort de feu !
-</code></pre>
+<span class="n">p1</span><span class="p">.</span><span class="na">attaquer</span><span class="p">();</span><span class="w"> </span><span class="c1">// Arthas attaque avec une épée !</span>
+<span class="n">p2</span><span class="p">.</span><span class="na">attaquer</span><span class="p">();</span><span class="w"> </span><span class="c1">// Merlin lance un sort de feu !</span>
+</code></pre></div>
 <h4 id="remarques_1">📝 Remarques<a class="headerlink" href="#remarques_1" title="Permanent link">⚓︎</a></h4>
 <ul>
 <li>On peut manipuler une <strong>liste d’objets</strong> de type <code>Personnage</code> et exécuter <code>attaquer()</code> sans savoir si c’est un <code>Guerrier</code> ou un <code>Mage</code>.</li>
@@ -6268,8 +6380,6 @@ p2.attaquer(); // Merlin lance un sort de feu !
         <script src="../../../javascript/mathjax.js"></script>
       
         <script src="../../../javascript/interpreter.js"></script>
-      
-        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

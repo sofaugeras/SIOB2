@@ -3981,14 +3981,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_cours.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -4009,14 +4009,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_exercices.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -4037,14 +4037,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -4065,14 +4065,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -4093,14 +4093,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_authentification.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4121,14 +4121,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_archivage.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5613,18 +5725,18 @@ Dans ce paragraphe nous étudierons le langage de contrôle des données qui ass
 <p><code>CREATE USER user [IDENTIFIED BY [PASSWORD] 'password'] [, user [IDENTIFIED BY [PASSWORD] 'password']]</code> ...</p>
 <p>Pour pouvoir créer un utilisateur, il faut avoir les permissions pour le faire ou bien utiliser le compte administrateur (root)</p>
 <p>Exemple :</p>
-<pre><code class="language-SQL">CREATE USER bibliAdm IDENTIFIED BY 'adm974'
-</code></pre>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">bibliAdm</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;adm974&#39;</span>
+</code></pre></div>
 <p>L’utilisateur est créé, il peut se connecter au serveur MySQL mais il n’a aucun droit. Le privilège associé est nommé USAGE (seule la connexion au serveur est possible)
  </p>
 <h2 id="3-attribution-des-permissions">3. Attribution des permissions<a class="headerlink" href="#3-attribution-des-permissions" title="Permanent link">⚓︎</a></h2>
 <p>C’est la clause <code>GRANT</code> qui permet d'attribuer des permissions à un ou plusieurs utilisateurs sur un ou plusieurs éléments de la base de données.</p>
 <p>La syntaxe de cette clause est la suivante :</p>
-<pre><code class="language-SQL">GRANT Liste_de_permissions
-ON Liste_d_objets
-TO Liste_d_utilisateurs
-[WITH GRANT OPTION];
-</code></pre>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">GRANT</span><span class="w"> </span><span class="n">Liste_de_permissions</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">Liste_d_objets</span>
+<span class="k">TO</span><span class="w"> </span><span class="n">Liste_d_utilisateurs</span>
+<span class="p">[</span><span class="k">WITH</span><span class="w"> </span><span class="k">GRANT</span><span class="w"> </span><span class="k">OPTION</span><span class="p">];</span>
+</code></pre></div>
 <h3 id="21-les-principales-permissions">2.1 Les principales permissions :<a class="headerlink" href="#21-les-principales-permissions" title="Permanent link">⚓︎</a></h3>
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> (Liste_de_permissions) :</p>
 <ul>
@@ -5650,21 +5762,21 @@ La permission peut également porter sur certains champs d’une table. Ceux-ci 
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> L'option <code>WITH GRANT OPTION</code> permet de définir si l'utilisateur peut lui-même accorder à un autre utilisateur les permissions qu'on lui a accordées.</p>
 <h2 id="4-suppression-des-permissions">4. Suppression des permissions<a class="headerlink" href="#4-suppression-des-permissions" title="Permanent link">⚓︎</a></h2>
 <p>C’est la clause <code>REVOKE</code> qui permet de retirer des permissions à un ou plusieurs utilisateurs sur un ou plusieurs éléments de la base de données. On parle également de révocation de permission.</p>
-<p>La syntaxe de cette clause est la suivante :</p>
-<pre><code class="language-SQL">REVOKE
-[GRANT OPTION] Liste_de_permissions
-ON Liste_d_objets
-FROM Liste_d_utilisateurs;
-</code></pre>
-<p><code>Liste_de_permissions</code>, <code>Liste_d_objets</code> et <code>Liste_d_utilisateurs</code> correspondent aux mêmes paramètres que pour la clause <code>GRANT</code>.</p>
+<p>La syntaxe de cette clause est la suivante :
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">REVOKE</span>
+<span class="p">[</span><span class="k">GRANT</span><span class="w"> </span><span class="k">OPTION</span><span class="p">]</span><span class="w"> </span><span class="n">Liste_de_permissions</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">Liste_d_objets</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Liste_d_utilisateurs</span><span class="p">;</span>
+</code></pre></div>
+<code>Liste_de_permissions</code>, <code>Liste_d_objets</code> et <code>Liste_d_utilisateurs</code> correspondent aux mêmes paramètres que pour la clause <code>GRANT</code>.</p>
 <p>L'option <code>GRANT OPTION</code> permet de supprimer le droit d'un utilisateur à accorder des permissions à un autre utilisateur.</p>
 <div class="admonition warning">
 <p class="admonition-title">A retenir  <img alt="⚓️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2693.svg" title=":anchor:" /></p>
 <p>En cybersécurité, il est recommandé d'appliquer le <strong>principe du moindre privilège</strong>. Cela signifie qu'un utilisateur ne doit avoir que les droits strictement nécessaires pour accomplir ses tâches, et rien de plus. Créer un utilisateur distinct pour chaque base de données et lui accorder des droits limités est une pratique ABSOLUMENT nécessaire pour limiter les risques en cas de compromission.</p>
-<p><code>SQL
-CREATE USER 'utilisateur_mabase'@'localhost' IDENTIFIED BY 'mot_de_passe';
-GRANT SELECT, INSERT, UPDATE, DELETE ON mabase.* TO 'utilisateur_mabase'@'localhost';
-FLUSH PRIVILEGES;</code>
+<p><div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">&#39;utilisateur_mabase&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;mot_de_passe&#39;</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="k">SELECT</span><span class="p">,</span><span class="w"> </span><span class="k">INSERT</span><span class="p">,</span><span class="w"> </span><span class="k">UPDATE</span><span class="p">,</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">mabase</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;utilisateur_mabase&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="p">;</span>
+<span class="n">FLUSH</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="p">;</span>
+</code></pre></div>
 Cela crée l'utilisateur <code>utilisateur_mabase</code>, lui donne tous les droits sur la base <code>mabase</code>, et actualise les privilèges pour que les changements soient pris en compte immédiatement.</p>
 <p>Cela garantit que cet utilisateur ne peut que manipuler les données sans affecter la structure de la base de données.</p>
 <p>En suivant ces principes, on minimise les risques et réduit l'impact potentiel d'une violation de sécurité.</p>
@@ -5848,8 +5960,6 @@ Cela crée l'utilisateur <code>utilisateur_mabase</code>, lui donne tous les dro
         <script src="../../../javascript/mathjax.js"></script>
       
         <script src="../../../javascript/interpreter.js"></script>
-      
-        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

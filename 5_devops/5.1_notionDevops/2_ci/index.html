@@ -4075,14 +4075,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_cours.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -4103,14 +4103,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_exercices.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -4131,14 +4131,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -4159,14 +4159,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -4187,14 +4187,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_authentification.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4215,14 +4215,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_archivage.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5724,7 +5836,7 @@ L’intégration continue, c’est un garde-fou automatique qui assure la qualit
 <p>Première étape : initialiser un dépôt git en local et le lier  à un repositorie sur Github.</p>
 <h3 id="21-en-local">2.1 En local<a class="headerlink" href="#21-en-local" title="Permanent link">⚓︎</a></h3>
 <p>Se postionner dans le bon répertoire local <code>C:\wamp64\www&gt; cd todo2026</code></p>
-<pre><code class="language-prompt">git init
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>git init
 git branch -M main
 
 echo &quot;/vendor
@@ -5740,24 +5852,24 @@ database/*.sqlite
 
 git add .
 git commit -m &quot;Initial commit: Laravel ToDo&quot;
-</code></pre>
+</code></pre></div>
 <h3 id="22-sur-github">2.2 Sur Github<a class="headerlink" href="#22-sur-github" title="Permanent link">⚓︎</a></h3>
 <p>Sur GitHub, créer un <code>New repository</code> avec pour nom <code>laravel-todo</code>.</p>
 <p>Récupère l’URL HTTPS du dépôt, puis:</p>
-<pre><code>git remote add origin https://github.com/&lt;ton-compte&gt;/laravel-todo.git
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>git remote add origin https://github.com/&lt;ton-compte&gt;/laravel-todo.git
 git push -u origin main
-</code></pre>
+</code></pre></div>
 <h3 id="23-gerer-lenvironnement">2.3 Gérer l’environnement<a class="headerlink" href="#23-gerer-lenvironnement" title="Permanent link">⚓︎</a></h3>
 <p>Met à jour .env.example pour refléter ta config locale minimale.
 💡 enlever le APP_KEY et les infos DB</p>
-<p>Génére ta clé et vérifie en local:</p>
-<pre><code>cp .env.example .env
+<p>Génére ta clé et vérifie en local:
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>cp .env.example .env
 php artisan key:generate
 php artisan serve
-</code></pre>
+</code></pre></div></p>
 <h3 id="24-fichier-denvironnement-ci-mysql">2.4 Fichier d’environnement CI MySQL<a class="headerlink" href="#24-fichier-denvironnement-ci-mysql" title="Permanent link">⚓︎</a></h3>
-<p>Ajoute .env.ci (spécifique aux jobs GitHub Actions) :</p>
-<pre><code>APP_ENV=testing
+<p>Ajoute .env.ci (spécifique aux jobs GitHub Actions) :
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>APP_ENV=testing
 APP_DEBUG=false
 # clef générée en CI, pas besoin ici
 CACHE_DRIVER=array
@@ -5771,15 +5883,15 @@ DB_PORT=3306
 DB_DATABASE=app_test
 DB_USERNAME=laravel
 DB_PASSWORD=laravel
-</code></pre>
-<p>Puis pousser le fichier sur github</p>
-<pre><code>git add .env.ci
+</code></pre></div>
+Puis pousser le fichier sur github</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>git add .env.ci
 git commit -m &quot;Add CI env for MySQL&quot;
 git push origin main
-</code></pre>
+</code></pre></div>
 <h3 id="25-workflow-github-actions-ci">2.5 Workflow GitHub Actions (CI)<a class="headerlink" href="#25-workflow-github-actions-ci" title="Permanent link">⚓︎</a></h3>
 <p>Créer un nouveau fichier <code>.github/workflows/ci.yml</code> :</p>
-<pre><code>name: CI
+<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>name: CI
 
 on:
   push:
@@ -5812,7 +5924,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.3'
+          php-version: &#39;8.3&#39;
           extensions: mbstring, xml, ctype, curl, dom, fileinfo, gd, pdo_mysql
           coverage: xdebug
 
@@ -5820,7 +5932,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.composer/cache/files
-          key: composer-${{ hashFiles('**/composer.lock') }}
+          key: composer-${{ hashFiles(&#39;**/composer.lock&#39;) }}
 
       - name: Install Composer deps
         run: composer install --no-interaction --no-progress --prefer-dist
@@ -5828,8 +5940,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: &#39;20&#39;
+          cache: &#39;npm&#39;
 
       - name: Install Node deps
         run: npm ci
@@ -5875,13 +5987,12 @@ jobs:
           name: build-${{ github.sha }}
           path: public/build
           if-no-files-found: ignore
-
-</code></pre>
-<p>Pousser vos modifications.</p>
-<pre><code>git add .github/workflows/ci.yml
+</code></pre></div>
+Pousser vos modifications.
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>git add .github/workflows/ci.yml
 git commit -m &quot;CI MySQL: build + migrate + lint + analyse + tests&quot;
 git push origin main
-</code></pre>
+</code></pre></div></p>
 <h2 id="3-verifier-la-ci">3. Vérifier la CI<a class="headerlink" href="#3-verifier-la-ci" title="Permanent link">⚓︎</a></h2>
 <h3 id="31-github-actions">3.1 Github actions<a class="headerlink" href="#31-github-actions" title="Permanent link">⚓︎</a></h3>
 <p>GitHub → Actions → “CI”. Ouvrer les logs en cas d'échec. </p>
@@ -5893,11 +6004,11 @@ git push origin main
 <li>Erreurs de schéma → vérifie tes dernières migrations.</li>
 </ul>
 <p>La CI ne passe pas car ...</p>
-<pre><code>- name: Lint PHP (Pint)
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>- name: Lint PHP (Pint)
         run: |
             if [ ! -f vendor/bin/pint ]; then composer require --dev laravel/pint; fi
             vendor/bin/pint --test
-</code></pre>
+</code></pre></div>
 <h3 id="32-installer-pint">3.2 Installer pint<a class="headerlink" href="#32-installer-pint" title="Permanent link">⚓︎</a></h3>
 <p>📌 But de pint :</p>
 <ul>
@@ -5918,17 +6029,17 @@ git push origin main
 → ça reformate tout ton projet selon les règles par défaut (style Laravel, basé sur PSR-12).</p>
 </li>
 <li>
-<p>Termine la mise en place de pint en poussant les modifications vers github :</p>
-</li>
-</ul>
-<pre><code>git add .
+<p>Termine la mise en place de pint en poussant les modifications vers github :
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>git add .
 git commit -m &quot;Fix code style with Pint&quot;
 git push origin main
-</code></pre>
+</code></pre></div></p>
+</li>
+</ul>
 <p>🔓 Vérifier sur GitHub Actions : la CI devrait passer le job <strong>Lint PHP</strong> (Pint).</p>
 <h3 id="33-regles-minimales-pour-le-style-de-code">3.3 Règles minimales pour le style de code<a class="headerlink" href="#33-regles-minimales-pour-le-style-de-code" title="Permanent link">⚓︎</a></h3>
 <p>On va figer les règles de bases dans le projet dans un fichier <code>pint.json</code> minimal que tu peux placer à la racine du projet.</p>
-<pre><code>{
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>{
     &quot;preset&quot;: &quot;laravel&quot;,
     &quot;rules&quot;: {
         &quot;binary_operator_spaces&quot;: {
@@ -5944,7 +6055,7 @@ git push origin main
         &quot;no_unused_imports&quot;: true
     }
 }
-</code></pre>
+</code></pre></div>
 <p>🎓 Explications :</p>
 <ul>
 <li>"preset": "laravel" → applique le style officiel Laravel (basé sur PSR-12).</li>
@@ -5969,12 +6080,12 @@ git push origin main
 <h2 id="4-standardiser-les-commandes-avec-les-scripts-composer">4. Standardiser les commandes avec les scripts Composer 🧩<a class="headerlink" href="#4-standardiser-les-commandes-avec-les-scripts-composer" title="Permanent link">⚓︎</a></h2>
 <p>Pour faciliter l’exécution des vérifications de qualité, on centralise les commandes clés dans le fichier <strong><code>composer.json</code></strong>, section <strong><code>scripts</code></strong>.<br />
 Cela permet à chaque développeur (ou à la CI) d’utiliser des commandes uniformes.</p>
-<pre><code class="language-json">&quot;scripts&quot;: {
-  &quot;lint&quot;: &quot;vendor/bin/pint --test&quot;,
-  &quot;analyse&quot;: &quot;vendor/bin/phpstan analyse&quot;,
-  &quot;test&quot;: &quot;php artisan test --coverage --min=80&quot;
-}
-</code></pre>
+<div class="language-json highlight"><span class="filename">JSON</span><pre><span></span><code><span class="nt">&quot;scripts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;lint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vendor/bin/pint --test&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;analyse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vendor/bin/phpstan analyse&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;test&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;php artisan test --coverage --min=80&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>🔍 <strong>Explications</strong></p>
 <ul>
 <li><strong><code>composer lint</code></strong> → vérifie le format du code selon les règles de <em>Laravel Pint</em>.</li>
@@ -6162,8 +6273,6 @@ Cela permet à chaque développeur (ou à la CI) d’utiliser des commandes unif
         <script src="../../../javascript/mathjax.js"></script>
       
         <script src="../../../javascript/interpreter.js"></script>
-      
-        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

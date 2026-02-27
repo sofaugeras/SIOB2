@@ -3986,14 +3986,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_cours.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -4014,14 +4014,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_exercices.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -4042,14 +4042,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -4070,14 +4070,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -4098,14 +4098,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_authentification.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4126,14 +4126,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_archivage.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5636,9 +5748,9 @@ Les congressistes et les accompagnateurs peuvent s’inscrire jusqu'à la veille
 <p>Afficher le nom, la date et l’heure de chaque activité.</p>
 </div>
 <div class="tabbed-block">
-<p><code>sql
-SELECT NOM_ACTIVITE, DATE_ACTIVITE, HEURE_ACTIVITE 
-FROM ACTIVITE;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_ACTIVITE</span><span class="p">,</span><span class="w"> </span><span class="n">DATE_ACTIVITE</span><span class="p">,</span><span class="w"> </span><span class="n">HEURE_ACTIVITE</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ACTIVITE</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5651,9 +5763,9 @@ FROM ACTIVITE;</code></p>
 <p>Afficher les villes dont sont originaires les congressistes </p>
 </div>
 <div class="tabbed-block">
-<p><code>sql
-SELECT distinct ADRESSE_CONGRESSISTE  
-FROM  CONGRESSISTE;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">distinct</span><span class="w"> </span><span class="n">ADRESSE_CONGRESSISTE</span><span class="w">  </span>
+<span class="k">FROM</span><span class="w">  </span><span class="n">CONGRESSISTE</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5667,10 +5779,10 @@ FROM  CONGRESSISTE;</code></p>
 <p>Donner la liste des organismes limougeauds.</p>
 </div>
 <div class="tabbed-block">
-<p><code>sql
-SELECT * 
-FROM ORGANISME_PAYEUR 
-WHERE ADRESSE_ORGANISME = 'Limoges';</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ORGANISME_PAYEUR</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">ADRESSE_ORGANISME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Limoges&#39;</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5683,10 +5795,10 @@ WHERE ADRESSE_ORGANISME = 'Limoges';</code></p>
 <p>Donner les noms et prénoms de congressistes ne dépendant pas d’un organisme.</p>
 </div>
 <div class="tabbed-block">
-<p><code>sql
-SELECT NOM_CONGRESSISTE, PRENOM_CONGRESSISTE 
-FROM CONGRESSISTE 
-WHERE N_ORGANISME IS NULL;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">PRENOM_CONGRESSISTE</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">N_ORGANISME</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5699,8 +5811,8 @@ WHERE N_ORGANISME IS NULL;</code></p>
 <p>Donner la liste des congressistes situés dans les hôtels de 2 à 4.</p>
 </div>
 <div class="tabbed-block">
-<p><code>sql
-SELECT * FROM CONGRESSISTE WHERE N_HOTEL in (2,3,4);</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">N_HOTEL</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5713,11 +5825,11 @@ SELECT * FROM CONGRESSISTE WHERE N_HOTEL in (2,3,4);</code></p>
 <p>Donner la liste des activités ayant lieu le 5 ou le 7 juin 2008.</p>
 </div>
 <div class="tabbed-block">
-<p><code>sql
-SELECT * 
-FROM ACTIVITE 
-WHERE DATE_ACTIVITE = {D '2008-06-05' } 
-    OR DATE_ACTIVITE = {D '2008-06-07' };</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ACTIVITE</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">DATE_ACTIVITE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="n">D</span><span class="w"> </span><span class="s1">&#39;2008-06-05&#39;</span><span class="w"> </span><span class="err">}</span><span class="w"> </span>
+<span class="w">    </span><span class="k">OR</span><span class="w"> </span><span class="n">DATE_ACTIVITE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="n">D</span><span class="w"> </span><span class="s1">&#39;2008-06-07&#39;</span><span class="w"> </span><span class="err">}</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5730,10 +5842,10 @@ WHERE DATE_ACTIVITE = {D '2008-06-05' }
 <p>Donner la liste des congressistes (nom et prénom) par ordre alphabétique.</p>
 </div>
 <div class="tabbed-block">
-<p><code>sql
-SELECT NOM_CONGRESSISTE, PRENOM_CONGRESSISTE 
-FROM CONGRESSISTE 
-ORDER BY NOM_CONGRESSISTE, PRENOM_CONGRESSISTE;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">PRENOM_CONGRESSISTE</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">PRENOM_CONGRESSISTE</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5746,10 +5858,10 @@ ORDER BY NOM_CONGRESSISTE, PRENOM_CONGRESSISTE;</code></p>
 <p>Donner la liste des hôtels dont le prix participant est compris entre 35 et 52 €.</p>
 </div>
 <div class="tabbed-block">
-<p><code>sql
-SELECT NOM_HOTEL, PRIX_PARTICIPANT 
-FROM HOTEL 
-WHERE  PRIX_PARTICIPANT between 35 and 52;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_HOTEL</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX_PARTICIPANT</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">HOTEL</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w">  </span><span class="n">PRIX_PARTICIPANT</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="mi">35</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="mi">52</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5762,10 +5874,10 @@ WHERE  PRIX_PARTICIPANT between 35 and 52;</code></p>
 <p>Donner la liste des congressistes (nom, prénom) dont le nom commence par un « M ».</p>
 </div>
 <div class="tabbed-block">
-<p><code>sql
-SELECT NOM_CONGRESSISTE, PRENOM_CONGRESSISTE 
-FROM CONGRESSISTE 
-WHERE  NOM_CONGRESSISTE like 'M%';</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">PRENOM_CONGRESSISTE</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w">  </span><span class="n">NOM_CONGRESSISTE</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="s1">&#39;M%&#39;</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5778,10 +5890,10 @@ WHERE  NOM_CONGRESSISTE like 'M%';</code></p>
 <p>Donner la liste des congressistes (nom, prénom) dont le nom contient un « A ».</p>
 </div>
 <div class="tabbed-block">
-<p><code>sql
-SELECT NOM_CONGRESSISTE, PRENOM_CONGRESSISTE 
-FROM CONGRESSISTE 
-WHERE NOM_CONGRESSISTE LIKE '%A%';</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">PRENOM_CONGRESSISTE</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%A%&#39;</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5794,10 +5906,10 @@ WHERE NOM_CONGRESSISTE LIKE '%A%';</code></p>
 <p>Donner la liste des congressistes (nom, prénom) dont le nom finit par un « T ».</p>
 </div>
 <div class="tabbed-block">
-<p><code>sql
-SELECT NOM_CONGRESSISTE, PRENOM_CONGRESSISTE 
-FROM CONGRESSISTE 
-WHERE NOM_CONGRESSISTE LIKE '%T';</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">PRENOM_CONGRESSISTE</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%T&#39;</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5810,11 +5922,11 @@ WHERE NOM_CONGRESSISTE LIKE '%T';</code></p>
 <p>Donner la liste des hôtels dont le prix participant varie entre 35 et 55 € et dont le prix supplément varie entre 20 et 30 €.</p>
 </div>
 <div class="tabbed-block">
-<p><code>sql
-SELECT NOM_HOTEL, PRIX_PARTICIPANT, PRIX_SUPPL 
-FROM  HOTEL 
-WHERE  PRIX_PARTICIPANT between 35 and 55 
-    AND PRIX_SUPPL between 20 and 30;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_HOTEL</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX_PARTICIPANT</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX_SUPPL</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w">  </span><span class="n">HOTEL</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w">  </span><span class="n">PRIX_PARTICIPANT</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="mi">35</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="mi">55</span><span class="w"> </span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">PRIX_SUPPL</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5827,9 +5939,9 @@ WHERE  PRIX_PARTICIPANT between 35 and 55
 <p>Donner pour chaque hôtel  la somme des deux prix (prix participant + prix supplément).</p>
 </div>
 <div class="tabbed-block">
-<p><code>sql
-SELECT NOM_HOTEL, PRIX_PARTICIPANT, PRIX_SUPPL, PRIX_PARTICIPANT + PRIX_SUPPL as PRIX_TOTAL 
-FROM HOTEL;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_HOTEL</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX_PARTICIPANT</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX_SUPPL</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX_PARTICIPANT</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">PRIX_SUPPL</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">PRIX_TOTAL</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">HOTEL</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5843,9 +5955,9 @@ FROM HOTEL;</code></p>
 <p>Afficher le nombre total de congressistes.</p>
 </div>
 <div class="tabbed-block">
-<p><code>sql
-SELECT count(*) as nombre 
-FROM CONGRESSISTE;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5858,10 +5970,10 @@ FROM CONGRESSISTE;</code></p>
 <p>Afficher le prix moyen d’une chambre à Biarritz et la même chose pour les suppléments.</p>
 </div>
 <div class="tabbed-block">
-<p><code>sql
-SELECT AVG(PRIX_PARTICIPANT) as MOY_PARTICIPANT, AVG( PRIX_SUPPL ) as MOY_ SUPPL 
-FROM HOTEL 
-WHERE ADRESSE_HOTEL = 'Biarritz';</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">PRIX_PARTICIPANT</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">MOY_PARTICIPANT</span><span class="p">,</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="w"> </span><span class="n">PRIX_SUPPL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">MOY_</span><span class="w"> </span><span class="n">SUPPL</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">HOTEL</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">ADRESSE_HOTEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Biarritz&#39;</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5874,10 +5986,10 @@ WHERE ADRESSE_HOTEL = 'Biarritz';</code></p>
 <p>Afficher pour chaque activité le nombre de personnes l’ayant choisie.</p>
 </div>
 <div class="tabbed-block">
-<p><code>sql
-SELECT N_ACTIVITE, COUNT(*) as NB_FOIS  
-FROM PARTICIPATION 
-GROUP BY N_ACTIVITE;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">N_ACTIVITE</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">NB_FOIS</span><span class="w">  </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PARTICIPATION</span><span class="w"> </span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">N_ACTIVITE</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5890,11 +6002,11 @@ GROUP BY N_ACTIVITE;</code></p>
 <p>Pour chaque congressiste participant à plus de 2 activités, afficher la moyenne du nombre de personnes</p>
 </div>
 <div class="tabbed-block">
-<p><code>sql
-SELECT N_CONGRESSISTE,AVG(NBRE_PERSONNES) as moyenne 
-FROM PARTICIPATION 
-GROUP BY N_CONGRESSISTE
-HAVING COUNT(*) &gt; 2;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">N_CONGRESSISTE</span><span class="p">,</span><span class="k">AVG</span><span class="p">(</span><span class="n">NBRE_PERSONNES</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">moyenne</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PARTICIPATION</span><span class="w"> </span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">N_CONGRESSISTE</span>
+<span class="k">HAVING</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5908,10 +6020,10 @@ HAVING COUNT(*) &gt; 2;</code></p>
 <p>Afficher pour chaque congressiste son numéro, son nom et le nom de l’hôtel où il loge.</p>
 </div>
 <div class="tabbed-block">
-<p><code>sql
-SELECT N_CONGRESSISTE, NOM_CONGRESSISTE, NOM_HOTEL 
-FROM CONGRESSISTE INNER JOIN HOTEL
-ON CONGRESSISTE.N_HOTEL = HOTEL.N_HOTEL ;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">N_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">NOM_HOTEL</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">HOTEL</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HOTEL</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5924,14 +6036,14 @@ ON CONGRESSISTE.N_HOTEL = HOTEL.N_HOTEL ;</code></p>
 <p>Même résultat que dans R18, mais afficher en plus le nom de l’organisme dont il dépend. Que remarquez-vous ?</p>
 </div>
 <div class="tabbed-block">
-<p>```sql
-SELECT N_CONGRESSISTE, NOM_CONGRESSISTE, NOM_HOTEL, NOM_ORGANISME 
-FROM CONGRESSISTE INNER JOIN HOTEL
-ON CONGRESSISTE.N_HOTEL = HOTEL.N_HOTEL 
-INNER JOIN  ORGANISME_PAYEUR O 
-ONCONGRESSISTE.N_ORGANISME = O.N_ORGANISME ;</p>
-<p>Il faut remarquer que les congressistes ne dépendant d’aucun organisme ne figure pas comme résultat de cette requête basée sur l’égalité des numéros d’organisme.
-```</p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">N_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">NOM_HOTEL</span><span class="p">,</span><span class="w"> </span><span class="n">NOM_ORGANISME</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">HOTEL</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HOTEL</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w">  </span><span class="n">ORGANISME_PAYEUR</span><span class="w"> </span><span class="n">O</span><span class="w"> </span>
+<span class="n">ONCONGRESSISTE</span><span class="p">.</span><span class="n">N_ORGANISME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">O</span><span class="p">.</span><span class="n">N_ORGANISME</span><span class="w"> </span><span class="p">;</span>
+
+<span class="n">Il</span><span class="w"> </span><span class="n">faut</span><span class="w"> </span><span class="n">remarquer</span><span class="w"> </span><span class="n">que</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">congressistes</span><span class="w"> </span><span class="n">ne</span><span class="w"> </span><span class="n">dépendant</span><span class="w"> </span><span class="n">d</span><span class="err">’</span><span class="n">aucun</span><span class="w"> </span><span class="n">organisme</span><span class="w"> </span><span class="n">ne</span><span class="w"> </span><span class="n">figure</span><span class="w"> </span><span class="n">pas</span><span class="w"> </span><span class="n">comme</span><span class="w"> </span><span class="n">résultat</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">cette</span><span class="w"> </span><span class="n">requête</span><span class="w"> </span><span class="n">basée</span><span class="w"> </span><span class="n">sur</span><span class="w"> </span><span class="n">l</span><span class="err">’é</span><span class="n">galité</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">numéros</span><span class="w"> </span><span class="n">d</span><span class="err">’</span><span class="n">organisme</span><span class="p">.</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5944,11 +6056,11 @@ ONCONGRESSISTE.N_ORGANISME = O.N_ORGANISME ;</p>
 <p>Afficher pour chaque congressiste son numéro, son nom et le nom de l’hôtel. Restituer cette liste par hôtel et par ordre alphabétique des congressistes.</p>
 </div>
 <div class="tabbed-block">
-<p><code>sql
-SELECT NOM_HOTEL, N_CONGRESSISTE, NOM_CONGRESSISTE  
-FROM CONGRESSISTE INNER JOIN HOTEL 
-ON CONGRESSISTE.N_HOTEL = HOTEL.N_HOTEL 
-ORDER BY  CONGRESSISTE.N_HOTEL ,  NOM_CONGRESSISTE;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_HOTEL</span><span class="p">,</span><span class="w"> </span><span class="n">N_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="w">  </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">HOTEL</span><span class="w"> </span>
+<span class="k">ON</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HOTEL</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w">  </span><span class="n">CONGRESSISTE</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span><span class="p">,</span><span class="w">  </span><span class="n">NOM_CONGRESSISTE</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5961,12 +6073,12 @@ ORDER BY  CONGRESSISTE.N_HOTEL ,  NOM_CONGRESSISTE;</code></p>
 <p>Même chose que pour R20, mais uniquement pour les congressistes des hôtels de Biarritz.</p>
 </div>
 <div class="tabbed-block">
-<p><code>sql
-SELECT NOM_HOTEL, N_CONGRESSISTE, NOM_CONGRESSISTE  
-FROM CONGRESSISTE INNER JOIN HOTEL 
-ON CONGRESSISTE.N_HOTEL = HOTEL.N_HOTEL 
-AND ADRESSE_HOTEL ='Biarritz'
-ORDER BY  CONGRESSISTE.N_HOTEL ,  NOM_CONGRESSISTE</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_HOTEL</span><span class="p">,</span><span class="w"> </span><span class="n">N_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="w">  </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">HOTEL</span><span class="w"> </span>
+<span class="k">ON</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HOTEL</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span>
+<span class="k">AND</span><span class="w"> </span><span class="n">ADRESSE_HOTEL</span><span class="w"> </span><span class="o">=</span><span class="s1">&#39;Biarritz&#39;</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w">  </span><span class="n">CONGRESSISTE</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span><span class="p">,</span><span class="w">  </span><span class="n">NOM_CONGRESSISTE</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5980,16 +6092,16 @@ ORDER BY  CONGRESSISTE.N_HOTEL ,  NOM_CONGRESSISTE</code></p>
 <p>Afficher le nom et le prénom des congressistes allant au concert de Jazz.</p>
 </div>
 <div class="tabbed-block">
-<p><code>sql
-SELECT Nom_congressiste, prénom_congressiste 
-FROM CONGRESSISTE 
-WHERE N_congressiste 
-    IN ( SELECT N_congressiste 
-        FROM PARTICIPATION 
-        WHERE N_activité 
-        IN ( SELECT N_ACTIVITE 
-            FROM ACTIVITE 
-            WHERE NOM_ACTIVITE = 'Concert Jazz' ) );</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_congressiste</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_congressiste</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">N_congressiste</span><span class="w"> </span>
+<span class="w">    </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">N_congressiste</span><span class="w"> </span>
+<span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">PARTICIPATION</span><span class="w"> </span>
+<span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">N_activité</span><span class="w"> </span>
+<span class="w">        </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">N_ACTIVITE</span><span class="w"> </span>
+<span class="w">            </span><span class="k">FROM</span><span class="w"> </span><span class="n">ACTIVITE</span><span class="w"> </span>
+<span class="w">            </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NOM_ACTIVITE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Concert Jazz&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6002,14 +6114,14 @@ WHERE N_congressiste
 <p>Afficher le nom et le prénom des congressistes n’allant pas au tournoi de pelote basque.</p>
 </div>
 <div class="tabbed-block">
-<p><code>sql
-SELECT Nom_congressiste, prénom_congressiste 
-FROM CONGRESSISTE 
-WHERE N_congressiste NOT  IN ( SELECT N_congressiste 
-                            FROM PARTICIPATION 
-                            WHERE N_activité IN ( SELECT N_ACTIVITE 
-                                                FROM ACTIVITE 
-                                                WHERE NOM_ACTIVITE = 'Tournoi Pelote basque' ) );</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_congressiste</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_congressiste</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">N_congressiste</span><span class="w"> </span><span class="k">NOT</span><span class="w">  </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">N_congressiste</span><span class="w"> </span>
+<span class="w">                            </span><span class="k">FROM</span><span class="w"> </span><span class="n">PARTICIPATION</span><span class="w"> </span>
+<span class="w">                            </span><span class="k">WHERE</span><span class="w"> </span><span class="n">N_activité</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">N_ACTIVITE</span><span class="w"> </span>
+<span class="w">                                                </span><span class="k">FROM</span><span class="w"> </span><span class="n">ACTIVITE</span><span class="w"> </span>
+<span class="w">                                                </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NOM_ACTIVITE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Tournoi Pelote basque&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6022,12 +6134,12 @@ WHERE N_congressiste NOT  IN ( SELECT N_congressiste
 <p>Afficher le nom et le prénom des congressistes ayant choisi une chambre d’hôtel dont le montant par jour est supérieur à 70 euros (prix chambre + prix supplémentaire).</p>
 </div>
 <div class="tabbed-block">
-<p><code>sql
-SELECT Nom_congressiste, prénom_congressiste 
-FROM CONGRESSISTE 
-WHERE N_hôtel IN ( SELECT N_hôtel 
-                    FROM HOTEL 
-                    WHERE Prix_Participant + Prix_Suppl &gt; 70 );</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_congressiste</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_congressiste</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">N_hôtel</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">N_hôtel</span><span class="w"> </span>
+<span class="w">                    </span><span class="k">FROM</span><span class="w"> </span><span class="n">HOTEL</span><span class="w"> </span>
+<span class="w">                    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Prix_Participant</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Prix_Suppl</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">70</span><span class="w"> </span><span class="p">);</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6040,14 +6152,14 @@ WHERE N_hôtel IN ( SELECT N_hôtel
 <p>Afficher le nom et le prénom des congressistes ayant choisi l’activité la moins chère.</p>
 </div>
 <div class="tabbed-block">
-<p><code>sql
-SELECT Nom_congressiste, prénom_congressiste 
-FROM CONGRESSISTE 
-WHERE N_congressiste IN ( SELECT N_congressiste 
-                        FROM PARTICIPATION WHERE N_activité IN ( SELECT N_ACTIVITE 1                
-                                                                FROM ACTIVITE 
-                                                                WHERE PRIX_ACTIVITE = (SELECT MIN(PRIX_ACTIVITE) 
-                                                                                        FROM ACTIVITE)) );</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_congressiste</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_congressiste</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">N_congressiste</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">N_congressiste</span><span class="w"> </span>
+<span class="w">                        </span><span class="k">FROM</span><span class="w"> </span><span class="n">PARTICIPATION</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">N_activité</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">N_ACTIVITE</span><span class="w"> </span><span class="mi">1</span><span class="w">                </span>
+<span class="w">                                                                </span><span class="k">FROM</span><span class="w"> </span><span class="n">ACTIVITE</span><span class="w"> </span>
+<span class="w">                                                                </span><span class="k">WHERE</span><span class="w"> </span><span class="n">PRIX_ACTIVITE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">MIN</span><span class="p">(</span><span class="n">PRIX_ACTIVITE</span><span class="p">)</span><span class="w"> </span>
+<span class="w">                                                                                        </span><span class="k">FROM</span><span class="w"> </span><span class="n">ACTIVITE</span><span class="p">))</span><span class="w"> </span><span class="p">);</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6215,8 +6327,6 @@ WHERE N_congressiste IN ( SELECT N_congressiste
         <script src="../../../javascript/mathjax.js"></script>
       
         <script src="../../../javascript/interpreter.js"></script>
-      
-        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

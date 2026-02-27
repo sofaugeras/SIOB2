@@ -3873,14 +3873,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_cours.md" class="md-nav__link">
+      <a href="../../6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -3901,14 +3901,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_exercices.md" class="md-nav__link">
+      <a href="../../6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -3929,14 +3929,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -3957,14 +3957,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -3985,14 +3985,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_authentification.md" class="md-nav__link">
+      <a href="../../6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4013,14 +4013,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_archivage.md" class="md-nav__link">
+      <a href="../../6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5636,14 +5748,14 @@ Elles apparaissent dans l’onglet Réseau <strong>sans aucune protection</stron
 <li>Voir quel type de fichier est accepté</li>
 <li>Essayer d’envoyer un fichier contenant :</li>
 </ol>
-<pre><code class="language-php">&lt;?php echo &quot;Exploit OK&quot;; ?&gt;
-</code></pre>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="s2">&quot;Exploit OK&quot;</span><span class="p">;</span> <span class="cp">?&gt;</span>
+</code></pre></div>
 <ol>
 <li>Tenter d’accéder au fichier via l’URL</li>
 <li>Modifier le fichier pour afficher l’arborescence :</li>
 </ol>
-<pre><code class="language-php">&lt;?php print_r(scandir(&quot;.&quot;)); ?&gt;
-</code></pre>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="nb">print_r</span><span class="p">(</span><span class="nb">scandir</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">));</span> <span class="cp">?&gt;</span>
+</code></pre></div>
 <ol>
 <li>Rechercher les fichiers sensibles (config, accès base, etc.)</li>
 </ol>
@@ -5719,8 +5831,8 @@ Un fichier .php appelé via l’URL est exécuté par Apache → Cela prouve une
 <p>Utiliser <code>highlight_file()</code> pour les afficher :</p>
 </li>
 </ol>
-<pre><code class="language-php">&lt;?php highlight_file('config.php'); ?&gt;
-</code></pre>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="nb">highlight_file</span><span class="p">(</span><span class="s1">&#39;config.php&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span>
+</code></pre></div>
 <ol>
 <li>Tenter d’afficher la BDD via un script PHP</li>
 <li>Noter les informations obtenues</li>
@@ -5783,9 +5895,9 @@ Nous allons profiter d'utiliser le protocole <code>https</code> en local pour po
 <li>Installer mkcert</li>
 <li>Exécuter :</li>
 </ol>
-<pre><code class="language-bash">mkcert -install
-mkcert localhost
-</code></pre>
+<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>mkcert<span class="w"> </span>-install
+mkcert<span class="w"> </span>localhost
+</code></pre></div>
 <p>→ génère :</p>
 <ul>
 <li><code>localhost.pem</code></li>
@@ -5796,8 +5908,8 @@ mkcert localhost
 <p>Activer SSL dans Apache (port 443) :</p>
 </li>
 </ul>
-<pre><code class="language-bash">a2enmod ssl
-</code></pre>
+<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>a2enmod<span class="w"> </span>ssl
+</code></pre></div>
 <ol>
 <li>Modifier <code>default-ssl.conf</code> pour y placer les chemins des certificats</li>
 <li>Redémarrer Apache</li>
@@ -5830,12 +5942,12 @@ Il protège uniquement le transit, pas le serveur.</p>
 <h4 id="622-hachage-robuste-des-mots-de-passe">6.2.2 Hachage robuste des mots de passe 🔑<a class="headerlink" href="#622-hachage-robuste-des-mots-de-passe" title="Permanent link">⚓︎</a></h4>
 <p>Les mots de passe <strong>ne doivent jamais</strong> être stockés en clair ou hachés via MD5/SHA1.</p>
 <p>🧪 <strong>Étape 1 : hachage sécurisé</strong></p>
-<pre><code class="language-php">$password = &quot;monMotDePasse&quot;;
-$hash = password_hash($password, PASSWORD_DEFAULT);
-</code></pre>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$password = &quot;monMotDePasse&quot;;</span>
+<span class="x">$hash = password_hash($password, PASSWORD_DEFAULT);</span>
+</code></pre></div>
 <p>🧪 <strong>Étape 2 : vérification</strong></p>
-<pre><code class="language-php">password_verify($passwordSaisi, $hash);
-</code></pre>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">password_verify($passwordSaisi, $hash);</span>
+</code></pre></div>
 <div class="admonition question">
 <p class="admonition-title">❓ Questions</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Enoncé</label><label for="__tabbed_6_2">Q10</label><label for="__tabbed_6_3">Q11</label></div>
@@ -5873,13 +5985,13 @@ $hash = password_hash($password, PASSWORD_DEFAULT);
 <ul>
 <li>Tester un fichier contenant des hachages MD5</li>
 </ul>
-<pre><code class="language-bash">john --show passwordfile
-</code></pre>
+<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>john<span class="w"> </span>--show<span class="w"> </span>passwordfile
+</code></pre></div>
 <ul>
 <li>Tester avec un dictionnaire (ex : rockyou)</li>
 </ul>
-<pre><code class="language-bash">john --wordlist=rockyou.txt passwordfile
-</code></pre>
+<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>john<span class="w"> </span>--wordlist<span class="o">=</span>rockyou.txt<span class="w"> </span>passwordfile
+</code></pre></div>
 <div class="admonition question">
 <p class="admonition-title">❓ Questions</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><input id="__tabbed_7_3" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Enoncé</label><label for="__tabbed_7_2">Q12</label><label for="__tabbed_7_3">Q13</label></div>
@@ -5937,11 +6049,11 @@ Les fonctions modernes (bcrypt, Argon2) sont lentes volontairement.</p>
 </div>
 <h4 id="625-renforcement-des-en-tetes-http">6.2.5 Renforcement des en-têtes HTTP 🛡️<a class="headerlink" href="#625-renforcement-des-en-tetes-http" title="Permanent link">⚓︎</a></h4>
 <p>À ajouter dans <code>Apache</code> :</p>
-<pre><code>X-Frame-Options: DENY
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>X-Frame-Options: DENY
 X-Content-Type-Options: nosniff
-Content-Security-Policy: default-src 'self';
+Content-Security-Policy: default-src &#39;self&#39;;
 Referrer-Policy: strict-origin
-</code></pre>
+</code></pre></div>
 <div class="admonition question">
 <p class="admonition-title">❓ Questions</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Enoncé</label><label for="__tabbed_9_2">Q15</label></div>
@@ -6121,8 +6233,6 @@ Il empêche le site d’être chargé dans un <iframe>, ce qui bloque les attaqu
         <script src="../../../javascript/mathjax.js"></script>
       
         <script src="../../../javascript/interpreter.js"></script>
-      
-        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

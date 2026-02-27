@@ -3942,14 +3942,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_cours.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -3970,14 +3970,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_exercices.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -3998,14 +3998,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -4026,14 +4026,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -4054,14 +4054,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_authentification.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4082,14 +4082,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_archivage.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5586,69 +5698,69 @@
 <p><img alt="illustration" class="center" src="../data/breezeAuth.png" width="80%" /></p>
 <p>😰 Si une erreur &gt; Créer un fichier <code>welcome.blade.php</code> dans les vues</p>
 <p>Puis compléter l'installation par :</p>
-<pre><code class="language-prompt">npm install
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>npm install
 npm run dev
-</code></pre>
+</code></pre></div>
 <p>▶️ Occupons nous de la partie <strong>base de données</strong>.</p>
 <p>création du <strong>seeder</strong> <code>Users</code></p>
-<pre><code class="language-PHP">// Ajouter les namespaces nécessaires ! 
-public function run()
-    {
-        // Exemple d'insertion d'un utilisateur
-        DB::table('users')-&gt;insert([
-            'name' =&gt; 'John Doe',
-            'email' =&gt; 'john.doe@example.com',
-            'email_verified_at' =&gt; now(),
-            'password' =&gt; Hash::make('mdp'), // Assurez-vous de hasher le mot de passe
-            'remember_token' =&gt; Str::random(10),
-            'created_at' =&gt; now(),
-            'updated_at' =&gt; now(),
-        ]);
+<p><div class="language-PHP highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Ajouter les namespaces nécessaires ! </span>
+<span class="x">public function run()</span>
+<span class="x">    {</span>
+<span class="x">        // Exemple d&#39;insertion d&#39;un utilisateur</span>
+<span class="x">        DB::table(&#39;users&#39;)-&gt;insert([</span>
+<span class="x">            &#39;name&#39; =&gt; &#39;John Doe&#39;,</span>
+<span class="x">            &#39;email&#39; =&gt; &#39;john.doe@example.com&#39;,</span>
+<span class="x">            &#39;email_verified_at&#39; =&gt; now(),</span>
+<span class="x">            &#39;password&#39; =&gt; Hash::make(&#39;mdp&#39;), // Assurez-vous de hasher le mot de passe</span>
+<span class="x">            &#39;remember_token&#39; =&gt; Str::random(10),</span>
+<span class="x">            &#39;created_at&#39; =&gt; now(),</span>
+<span class="x">            &#39;updated_at&#39; =&gt; now(),</span>
+<span class="x">        ]);</span>
 
-        // Ajoutez d'autres utilisateurs au besoin
-</code></pre>
-<p>Ajouter le seeder <code>UserSeeder</code> dans le <code>DatabaseSeeder</code> </p>
-<pre><code class="language-php">        $this-&gt;call([
-            UsersSeeder::class,
-            TodosSeeder::class,
-            CategoriesSeeder::class,
-        ]);
-</code></pre>
-<p>Puis relancer la migration avec les tables concernant l'authentification (Users, password_reset_tokens, sessions).</p>
-<pre><code class="language-prompt">php artisan migrate:fresh --seed
-</code></pre>
+<span class="x">        // Ajoutez d&#39;autres utilisateurs au besoin</span>
+</code></pre></div>
+Ajouter le seeder <code>UserSeeder</code> dans le <code>DatabaseSeeder</code> </p>
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">        $this-&gt;call([</span>
+<span class="x">            UsersSeeder::class,</span>
+<span class="x">            TodosSeeder::class,</span>
+<span class="x">            CategoriesSeeder::class,</span>
+<span class="x">        ]);</span>
+</code></pre></div>
+Puis relancer la migration avec les tables concernant l'authentification (Users, password_reset_tokens, sessions).</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>php artisan migrate:fresh --seed
+</code></pre></div>
 <p>▶️ Il faut à présent activer le middelware d'authentication sur nos routes todo. Reprendre le <code>web.php</code> et ajouter les lignes dans le nouveau web.php qui contient en plus des liens vers la gestion de l'autentification.</p>
-<pre><code class="language-php">// Groupe de routes avec middleware d'authentification
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})-&gt;middleware(['auth', 'verified'])-&gt;name('dashboard');
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Groupe de routes avec middleware d&#39;authentification</span>
+<span class="x">Route::get(&#39;/dashboard&#39;, function () {</span>
+<span class="x">    return view(&#39;dashboard&#39;);</span>
+<span class="x">})-&gt;middleware([&#39;auth&#39;, &#39;verified&#39;])-&gt;name(&#39;dashboard&#39;);</span>
 
-Route::middleware('auth')-&gt;group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])-&gt;name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])-&gt;name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])-&gt;name('profile.destroy');
-});
-</code></pre>
-<pre><code class="language-php">// Activation du middleware d'authentification pour toutes les routes Todos. Création d'un groupe de routes.
-Route::middleware('auth')-&gt;group(function () {
-    // Action correspondant au form de la vue (donc POST) et appel de la fonction saveTodo du controller
-    // Route concernant les todos
-    Route::get('/', [TodosController::class, 'liste'])-&gt;name('todo.liste');
-    [...]
-});
-</code></pre>
+<span class="x">Route::middleware(&#39;auth&#39;)-&gt;group(function () {</span>
+<span class="x">    Route::get(&#39;/profile&#39;, [ProfileController::class, &#39;edit&#39;])-&gt;name(&#39;profile.edit&#39;);</span>
+<span class="x">    Route::patch(&#39;/profile&#39;, [ProfileController::class, &#39;update&#39;])-&gt;name(&#39;profile.update&#39;);</span>
+<span class="x">    Route::delete(&#39;/profile&#39;, [ProfileController::class, &#39;destroy&#39;])-&gt;name(&#39;profile.destroy&#39;);</span>
+<span class="x">});</span>
+</code></pre></div>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Activation du middleware d&#39;authentification pour toutes les routes Todos. Création d&#39;un groupe de routes.</span>
+<span class="x">Route::middleware(&#39;auth&#39;)-&gt;group(function () {</span>
+<span class="x">    // Action correspondant au form de la vue (donc POST) et appel de la fonction saveTodo du controller</span>
+<span class="x">    // Route concernant les todos</span>
+<span class="x">    Route::get(&#39;/&#39;, [TodosController::class, &#39;liste&#39;])-&gt;name(&#39;todo.liste&#39;);</span>
+<span class="x">    [...]</span>
+<span class="x">});</span>
+</code></pre></div>
 <details class="tip">
 <summary>Fixer l'erreur sur @Vite</summary>
-<p><code>prompt
-rm -rf public/build // Supprimer le contenu du répertoire public/build
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>rm -rf public/build // Supprimer le contenu du répertoire public/build
 npm install
 npm run dev
-php artisan view:clear</code></p>
+php artisan view:clear
+</code></pre></div>
 <p>L'installation de breeze/blade a également casser le fichier <code>app.js</code>. Remettre les lignes suivantes :</p>
-<p><code>php
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import '@popperjs/core';</code></p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">import &#39;bootstrap/dist/css/bootstrap.min.css&#39;;</span>
+<span class="x">import &#39;bootstrap-icons/font/bootstrap-icons.css&#39;;</span>
+<span class="x">import &#39;@popperjs/core&#39;;</span>
+</code></pre></div>
 </details>
 <p>▶️ Observer dans l'arborescence ce que vous a apporté l'installation de Breeze (dans <code>views</code>, dans <code>js/Pages/auth</code>)</p>
 <p><img alt="Illustration" class="center" src="../data/vueAuthentification.png" width="50%" /></p>
@@ -5665,26 +5777,26 @@ import '@popperjs/core';</code></p>
 <p>Pour éviter un vrai envoi d’email, mais conserver la fonctionnalité d'envoi de mail.</p>
 <p>▶️ On commence par créer un fichier de log dédié. Dans <code>config\logging.php</code> ajouter l'entrée suivante :</p>
 <p>Dans "<strong>channels</strong>", ajouter : </p>
-<pre><code>// canal dédié aux mails
-        'mail' =&gt; [
-            'driver' =&gt; 'single',
-            'path' =&gt; storage_path('logs/mails.log'),
-            'level' =&gt; 'debug',
+<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>// canal dédié aux mails
+        &#39;mail&#39; =&gt; [
+            &#39;driver&#39; =&gt; &#39;single&#39;,
+            &#39;path&#39; =&gt; storage_path(&#39;logs/mails.log&#39;),
+            &#39;level&#39; =&gt; &#39;debug&#39;,
         ],
-</code></pre>
-<p>▶️ puis dans le <code>.env</code></p>
-<pre><code>MAIL_MAILER=custom_log
+</code></pre></div>
+▶️ puis dans le <code>.env</code>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>MAIL_MAILER=custom_log
 MAIL_FROM_ADDRESS=&quot;noreply@exemple.local&quot;
 MAIL_FROM_NAME=&quot;Laravel Todo 2026&quot;
-</code></pre>
-<p>▶️ puis dans le mailer <code>config\mail.php</code>, ajouter l'entrée suivante :</p>
-<pre><code>// mailer personnalisé pointant vers notre canal
-    'custom_log' =&gt; [
-        'transport' =&gt; 'log',
-        'channel' =&gt; 'mail', // nom du canal défini plus haut
+</code></pre></div>
+▶️ puis dans le mailer <code>config\mail.php</code>, ajouter l'entrée suivante :
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>// mailer personnalisé pointant vers notre canal
+    &#39;custom_log&#39; =&gt; [
+        &#39;transport&#39; =&gt; &#39;log&#39;,
+        &#39;channel&#39; =&gt; &#39;mail&#39;, // nom du canal défini plus haut
     ],
-</code></pre>
-<p>→ Les mails seront écrits dans storage/logs/mails.log.</p>
+</code></pre></div>
+→ Les mails seront écrits dans storage/logs/mails.log.</p>
 <details class="tip">
 <summary>tester 👀</summary>
 <ul>
@@ -5860,8 +5972,6 @@ MAIL_FROM_NAME=&quot;Laravel Todo 2026&quot;
         <script src="../../../javascript/mathjax.js"></script>
       
         <script src="../../../javascript/interpreter.js"></script>
-      
-        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

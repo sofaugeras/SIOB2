@@ -4153,14 +4153,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_cours.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -4181,14 +4181,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_exercices.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -4209,14 +4209,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -4237,14 +4237,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -4265,14 +4265,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_authentification.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4293,14 +4293,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_archivage.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5796,65 +5908,65 @@
 <p>On souhaite comparer une colonne à une valeur variable, contenue dans une table. <br /></p>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> : Liste des articles dont le poids est supérieur au poids de l’article 2</p>
 <p>On utilise les opérateurs de comparaison (&gt; &lt; = &lt;&gt;) à une seule valeur donc la requête imbriquée ne doit ramener <strong>qu’une</strong> seule valeur. </p>
-<pre><code class="language-SQL">SELECT num_art, poids_art
-FROM ARTICLE
-WHERE poids_art &lt; poids_article_2;
-/* or on sait calculer le poids de l'article 2 */
-SELECT poids_art
-FROM ARTICLE
-WHERE num_art=2;
-</code></pre>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">num_art</span><span class="p">,</span><span class="w"> </span><span class="n">poids_art</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ARTICLE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">poids_art</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">poids_article_2</span><span class="p">;</span>
+<span class="cm">/* or on sait calculer le poids de l&#39;article 2 */</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">poids_art</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ARTICLE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">num_art</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+</code></pre></div>
 <p>Ordre SQL pour notre exemple :</p>
-<pre><code class="language-SQL">SELECT num_art, poids_art
-FROM ARTICLE
-WHERE poids_art &lt; (SELECT poids_art
-                    FROM ARTICLE
-                    WHERE num_art=2);
-</code></pre>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">num_art</span><span class="p">,</span><span class="w"> </span><span class="n">poids_art</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ARTICLE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">poids_art</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">poids_art</span>
+<span class="w">                    </span><span class="k">FROM</span><span class="w"> </span><span class="n">ARTICLE</span>
+<span class="w">                    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">num_art</span><span class="o">=</span><span class="mi">2</span><span class="p">);</span>
+</code></pre></div>
 <h4 id="121-comparaison-a-une-liste-de-valeurs">1.2.1 Comparaison à une liste de valeurs<a class="headerlink" href="#121-comparaison-a-une-liste-de-valeurs" title="Permanent link">⚓︎</a></h4>
 <p>Si la requête SQL peut ramener une liste de valeurs, on utilise l’opérateur IN ou NOT IN.<br /></p>
 <p>Les requêtes imbriquées sont basées sur le mot-clé <strong>IN</strong> qui permet de sélectionner des enregistrements parmi une liste.<br />
 Le principe consiste à construire une sous-requête qui donne un résultat équivalent à une liste. Ensuite la requête principale permet de sélectionner des lignes dans la liste précédemment construite.</p>
 <p><img alt="requete imbriquée" class="center" src="../data/imbricataionIN.png" width="50%" /></p>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> : Liste des vendeurs qui ont traité avec le client 'C01'</p>
-<pre><code class="language-SQL">SELECT Nom_Ven, Prénom_Ven
-FROM VENDEUR
-WHERE Num_Ven IN (SELECT DISTINCT Num_Ven
-                    FROM COMMANDE
-                    WHERE Num_Cli = 'C01');
-</code></pre>
-<p>Ce qui est l'équuivalent de ...</p>
-<pre><code class="language-SQL">SELECT Nom_Ven, Prénom_Ven
-FROM VENDEUR, COMMANDE
-WHERE VENDEUR.Num_Ven = COMMANDE.Num_Ven
-    AND Num_Cli='CO1';
-</code></pre>
+<p><div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_Ven</span><span class="p">,</span><span class="w"> </span><span class="n">Prénom_Ven</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">Num_Ven</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">Num_Ven</span>
+<span class="w">                    </span><span class="k">FROM</span><span class="w"> </span><span class="n">COMMANDE</span>
+<span class="w">                    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Num_Cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;C01&#39;</span><span class="p">);</span>
+</code></pre></div>
+Ce qui est l'équuivalent de ...</p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_Ven</span><span class="p">,</span><span class="w"> </span><span class="n">Prénom_Ven</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">,</span><span class="w"> </span><span class="n">COMMANDE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">Num_Ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">Num_Ven</span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">Num_Cli</span><span class="o">=</span><span class="s1">&#39;CO1&#39;</span><span class="p">;</span>
+</code></pre></div>
 <p><img alt="⁉️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2049.svg" title=":interrobang:" /> Il n'y a pas d'équivalent pour les besoins exprimé à la forme négative.</p>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> : Liste des vendeurs qui n'ont pas traité avec le client 'C01'</p>
-<pre><code class="language-SQL">SELECT Nom_Ven, Prénom_Ven
-FROM VENDEUR
-WHERE Num_Ven NOT IN (SELECT DISTINCT Num_Ven
-                        FROM COMMANDE
-                        WHERE Num_Cli = 'C01');
-</code></pre>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_Ven</span><span class="p">,</span><span class="w"> </span><span class="n">Prénom_Ven</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">Num_Ven</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">Num_Ven</span>
+<span class="w">                        </span><span class="k">FROM</span><span class="w"> </span><span class="n">COMMANDE</span>
+<span class="w">                        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Num_Cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;C01&#39;</span><span class="p">);</span>
+</code></pre></div>
 <h4 id="123-syntaxe">1.2.3 Syntaxe<a class="headerlink" href="#123-syntaxe" title="Permanent link">⚓︎</a></h4>
 <p>On ramène la valeur de la variable par un ordre SQL. Le résultat de cet ordre SQL est utilisé dans la condition comme si c’était une variable. L’ordre SQL est le suivant :</p>
-<pre><code class="language-SQL">SELECT Liste attributs
-FROM Liste des tables 
-WHERE testée opérateur (ordre SELECT) 
-GROUP BY liste de colonnes de regroupement 
-HAVING colonne testée (ordre SELECT) ;
-</code></pre>
-<p><img alt="⚠️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/26a0.svg" title=":warning:" /> <code>GROUP BY</code> et <code>HAVING</code> sont possibles dans une requête imbriquée mais <code>ORDER BY</code> est impossible.</p>
+<p><div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Liste</span><span class="w"> </span><span class="n">attributs</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Liste</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">tables</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">testée</span><span class="w"> </span><span class="n">opérateur</span><span class="w"> </span><span class="p">(</span><span class="n">ordre</span><span class="w"> </span><span class="k">SELECT</span><span class="p">)</span><span class="w"> </span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">liste</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">colonnes</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">regroupement</span><span class="w"> </span>
+<span class="k">HAVING</span><span class="w"> </span><span class="n">colonne</span><span class="w"> </span><span class="n">testée</span><span class="w"> </span><span class="p">(</span><span class="n">ordre</span><span class="w"> </span><span class="k">SELECT</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
+<img alt="⚠️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/26a0.svg" title=":warning:" /> <code>GROUP BY</code> et <code>HAVING</code> sont possibles dans une requête imbriquée mais <code>ORDER BY</code> est impossible.</p>
 <h3 id="13-operateurs-de-comparaison-modifies-par-any-ou-all">1.3 Opérateurs de comparaison modifiés par ANY ou ALL<a class="headerlink" href="#13-operateurs-de-comparaison-modifies-par-any-ou-all" title="Permanent link">⚓︎</a></h3>
 <p>Les opérateurs de comparaison peuvent voir leur comportement modifié par les mots-clés <code>ANY</code> ou <code>ALL</code>. Ceux-ci s’utilisent généralement avec une liste de valeurs ou une liste résultat d’une sous-requête.</p>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> : Liste des articles dont le prix est supérieur au prix de tous les produits rouges<br /></p>
-<pre><code class="language-SQL">SELECT art_num 
-FROM ARTICLE 
-WHERE art_prix &gt; ALL (SELECT art_prix 
-                    FROM ARTICLE 
-                    WHERE art_coul = ‘ROUGE’);
-</code></pre>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">art_num</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ARTICLE</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">art_prix</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">art_prix</span><span class="w"> </span>
+<span class="w">                    </span><span class="k">FROM</span><span class="w"> </span><span class="n">ARTICLE</span><span class="w"> </span>
+<span class="w">                    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">art_coul</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">‘</span><span class="n">ROUGE</span><span class="err">’</span><span class="p">);</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -5926,101 +6038,101 @@ WHERE art_prix &gt; ALL (SELECT art_prix
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 1. Nom et prénom des clients qui habitent la même ville que le client 'C15'</p>
 <details class="question">
 <summary>correction</summary>
-<p><code>SQL
-SELECT nom_cli, prénom_cli
-FROM CLIENT
-WHERE vil_cli = (SELECT vil_cli
-FROM CLIENT
-WHERE num_cli = 'C15')</code>
+<p><div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_cli</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CLIENT</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">vil_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">vil_cli</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CLIENT</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;C15&#39;</span><span class="p">)</span>
+</code></pre></div>
 Rq: ici C15 est aussi affiché dans le résultat</p>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 2. Liste des clients qui n'ont rien commandé </p>
 <details class="question">
 <summary>correction</summary>
-<p><code>SQL
-SELECT nom_cli, prénom_cli
-FROM CLIENT
-WHERE num_cli NOT IN (SELECT num_cli
-FROM COMMANDE);</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_cli</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CLIENT</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">num_cli</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 3. Liste des commandes qui n’ont pas d’articles jaunes</p>
 <details class="question">
 <summary>correction</summary>
-<p><code>SQL
-SELECT *
-FROM COMMANDE
-WHERE num_com NOT IN (SELECT num_com
-FROM COMMANDE
-INNER JOIN DETAIL
-ON COMMANDE.Num_Com = DETAIL.Num_Com
-INNER JOIN ARTICLE
-ON DETAIL.num_art = ARTICLE.Num_Art
-WHERE coul_art = ‘jaune’);</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">COMMANDE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">num_com</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">num_com</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">COMMANDE</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">DETAIL</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">Num_Com</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DETAIL</span><span class="p">.</span><span class="n">Num_Com</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">ARTICLE</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">DETAIL</span><span class="p">.</span><span class="n">num_art</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ARTICLE</span><span class="p">.</span><span class="n">Num_Art</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">coul_art</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">‘</span><span class="n">jaune</span><span class="err">’</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> REQUETE IMBRIQUEES FONCTION</p>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 4. Désignation de l'article le plus cher. Comment réagit votre requête si deux articles ont tous les deux le prix le plus élevé ?</p>
 <details class="question">
 <summary>correction</summary>
-<p><code>SQL
-SELECT des_art
-FROM ARTICLE
-WHERE Prx_Art = (SELECT MAX(Prx_Art)
-FROM Article);</code>
+<p><div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">des_art</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ARTICLE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">Prx_Art</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">Prx_Art</span><span class="p">)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Article</span><span class="p">);</span>
+</code></pre></div>
 Comment réagit votre requête si deux articles ont tous les deux le prix le plus élevé ? elle affiche les deux articles.</p>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 5. Nom et prénom du client qui a passé la dernière commande</p>
 <details class="question">
 <summary>correction</summary>
-<p><code>SQL
-SELECT nom_cli, prénom_cli
-FROM CLIENT
-INNER JOIN COMMANDE
-ON COMMANDE.num_cli = CLIENT.num_cli
-WHERE dat_com = (SELECT MAX(dat_com)
-FROM COMMANDE);</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_cli</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CLIENT</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CLIENT</span><span class="p">.</span><span class="n">num_cli</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">dat_com</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">dat_com</span><span class="p">)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 6. Liste des articles dont le prix est supérieur à la moyenne des prix des articles rouges</p>
 <details class="question">
 <summary>correction</summary>
-<p><code>SQL
-SELECT des_art
-FROM ARTICLE
-WHERE Prx_Art &gt; (SELECT AVG(Prx_Art)
-FROM Article
-WHERE coul_art = ‘rouge ‘) ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">des_art</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ARTICLE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">Prx_Art</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">Prx_Art</span><span class="p">)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Article</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">coul_art</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">‘</span><span class="n">rouge</span><span class="w"> </span><span class="err">‘</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 7. Liste des vendeurs dont le salaire est supérieur à ceux des vendeurs de Paris.</p>
 <details class="question">
 <summary>correction</summary>
-<p><code>SQL
-SELECT nom_ven, prénom_ven
-FROM VENDEUR
-WHERE sal_ven &gt; (SELECT MAX(sal_ven)
-FROM VENDEUR
-WHERE vil_ven ='Paris');</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_ven</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_ven</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">sal_ven</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">sal_ven</span><span class="p">)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">vil_ven</span><span class="w"> </span><span class="o">=</span><span class="s1">&#39;Paris&#39;</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> REQUETE IMBRIQUEES HAVING</p>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 8. Nom des villes dont la moyenne des salaires pour leurs vendeurs est supérieure à la moyenne des salaires de tous les vendeurs</p>
 <details class="question">
 <summary>correction</summary>
-<p><code>SQL
-SELECT vil_ven
-FROM VENDEUR
-GROUP BY vil_ven
-HAVING AVG(sal_ven) &gt; (SELECT AVG (sal_ven)
-FROM VENDEUR);</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">vil_ven</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">vil_ven</span>
+<span class="k">HAVING</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">sal_ven</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="w"> </span><span class="p">(</span><span class="n">sal_ven</span><span class="p">)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 9. Liste des articles de même couleur que celle du no 10 et dont le poids est supérieur ou égal au poids moyen de tous les articles</p>
 <details class="question">
 <summary>correction</summary>
-<p><code>SQL
-SELECT des_art
-FROM ARTICLE
-WHERE coul_art IN (SELECT coul_art
-FROM ARTICLE
-WHERE Num_Art = 10
-AND poids_art &gt; (SELECT AVG(poids_art
-FROM ARTICLE);</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">des_art</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ARTICLE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">coul_art</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">coul_art</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ARTICLE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">Num_Art</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span>
+<span class="k">AND</span><span class="w"> </span><span class="n">poids_art</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">poids_art</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ARTICLE</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <h2 id="2-operateurs-ensemblistes">2. Opérateurs ensemblistes<a class="headerlink" href="#2-operateurs-ensemblistes" title="Permanent link">⚓︎</a></h2>
 <p>Ils sont au nombre de 3 :</p>
@@ -6047,50 +6159,50 @@ FROM ARTICLE);</code></p>
 <p><img alt="♥️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2665.svg" title=":hearts:" /> Identifie les enregistrements communs entre deux ensembles de données</p>
 <p><img alt="intersection" class="center" src="../data/sql-ensemble-intersect-300.png" width="30%" /></p>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> Liste des vendeurs qui ont travaillé avec les clients C01 et C02</p>
-<pre><code class="language-SQL">SELECT nom_ven, prénom_ven
-FROM VENDEUR 
-INNER JOIN COMMANDE
-ON VENDEUR.num_ven = COMMANDE.num_ven
-WHERE  num_cli = 'CO1'
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_ven</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_ven</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_ven</span>
+<span class="k">WHERE</span><span class="w">  </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO1&#39;</span>
 
-INTERSECT
+<span class="k">INTERSECT</span>
 
-SELECT nom_ven, prénom_ven
-FROM VENDEUR 
-INNER JOIN COMMANDE
-ON VENDEUR.num_ven = COMMANDE.num_ven
-WHERE  num_cli = 'CO2' ;
-</code></pre>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">nom_ven</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_ven</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_ven</span>
+<span class="k">WHERE</span><span class="w">  </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO2&#39;</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 <p>MySQL ne propose malheureusement pas cette commande SQL, heureusement le fonctionnement de cette requête peut-être simulé grâce à une petite astuce. L'emploi d'une requête imbriquée avec <code>IN</code> comme ci-dessous est l’alternative à <code>INTERSECT</code> :</p>
-<pre><code class="language-SQL">SELECT nom_ven, prénom_ven
-FROM VENDEUR 
-INNER JOIN COMMANDE
-ON VENDEUR.num_ven = COMMANDE.num_ven
-WHERE num_cli = 'CO1'
-AND VENDEUR.num_ven IN (SELECT VENDEUR.num_ven
-                        FROM VENDEUR 
-                        INNER JOIN COMMANDE
-                        ON VENDEUR.num_ven = COMMANDE.num_ven
-                        WHERE num_cli = 'CO2') ;
-</code></pre>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_ven</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_ven</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_ven</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO1&#39;</span>
+<span class="k">AND</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span>
+<span class="w">                        </span><span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span>
+<span class="w">                        </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
+<span class="w">                        </span><span class="k">ON</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_ven</span>
+<span class="w">                        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO2&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 <h3 id="22-union">2.2 UNION<a class="headerlink" href="#22-union" title="Permanent link">⚓︎</a></h3>
 <p><img alt="♥️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2665.svg" title=":hearts:" /> combine les résultats de plusieurs requêtes <code>SELECT</code> en éliminant les doublons</p>
 <p><img alt="union" class="center" src="../data/sql-ensemble-union-300.png" width="30%" /></p>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" />  Liste des vendeurs qui ont travaillé avec les clients C01 ou C02</p>
-<pre><code class="language-SQL">SELECT nom_ven, prénom_ven
-FROM VENDEUR 
-INNER JOIN COMMANDE
-ON VENDEUR.num_ven = COMMANDE.num_ven
-WHERE num_cli = 'CO1'
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_ven</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_ven</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_ven</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO1&#39;</span>
 
-UNION
+<span class="k">UNION</span>
 
-SELECT nom_ven, prénom_ven
-FROM VENDEUR 
-INNER JOIN COMMANDE
-ON VENDEUR.num_ven = COMMANDE.num_ven
-WHERE num_cli = 'CO2' ;
-</code></pre>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">nom_ven</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_ven</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_ven</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO2&#39;</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Attention</p>
 <p>doivent correspondre dans les 2 ordres <code>SELECT</code>:</p>
@@ -6100,43 +6212,43 @@ WHERE num_cli = 'CO2' ;
 </ul>
 </div>
 <p>Une équivalence :</p>
-<pre><code class="language-SQL">SELECT nom_ven, prénom_ven 
-FROM VENDEUR 
-INNER JOIN COMMANDE
-ON VENDEUR.num_ven = COMMANDE.num_ven 
-WHERE (num_cli = 'CO1' 
-OR num_cli = 'C02'); 
-</code></pre>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_ven</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_ven</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO1&#39;</span><span class="w"> </span>
+<span class="k">OR</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;C02&#39;</span><span class="p">);</span><span class="w"> </span>
+</code></pre></div>
 <h3 id="23-difference">2.3 Différence<a class="headerlink" href="#23-difference" title="Permanent link">⚓︎</a></h3>
 <p>L’opérateur <code>EXCEPT</code> (ou MINUS dans certains systèmes de gestion de bases de données) est utilisé pour retourner les lignes présentes dans le résultat de la première requête <code>SELECT</code> mais pas dans le résultat de la seconde. C’est un moyen efficace de trouver des différences entre deux ensembles de données.</p>
 <p><img alt="except" class="center" src="../data/sql-ensemble-minus-300.png" width="30%" /></p>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> Liste des vendeurs qui ont travaillé avec le client C01 mais pas avec C02</p>
-<pre><code class="language-SQL">SELECT nom_ven, prénom_ven
-FROM VENDEUR 
-INNER JOIN COMMANDE
-ON VENDEUR.num_ven = COMMANDE.num_ven
-WHERE num_cli = 'CO1'
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_ven</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_ven</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_ven</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO1&#39;</span>
 
-EXCEPT
+<span class="k">EXCEPT</span>
 
-SELECT nom_ven, prénom_ven
-FROM VENDEUR 
-INNER JOIN COMMANDE
-ON VENDEUR.num_ven = COMMANDE.num_ven
-WHERE num_cli = 'CO2' ;
-</code></pre>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">nom_ven</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_ven</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_ven</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO2&#39;</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 <p>Une équivalence :</p>
-<pre><code class="language-SQL">SELECT nom_ven, prénom_ven
-FROM VENDEUR 
-INNER JOIN COMMANDE
-ON VENDEUR.num_ven = COMMANDE.num_ven
-WHERE num_cli = 'CO1' 
-    AND VENDEUR.num_ven NOT IN (SELECT VENDEUR.num_ven
-                                FROM VENDEUR 
-                                INNER JOIN COMMANDE
-                                ON VENDEUR.num_ven = COMMANDE.num_ven
-                                WHERE num_cli = 'CO2') ;
-</code></pre>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_ven</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_ven</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_ven</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO1&#39;</span><span class="w"> </span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span>
+<span class="w">                                </span><span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span>
+<span class="w">                                </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
+<span class="w">                                </span><span class="k">ON</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_ven</span>
+<span class="w">                                </span><span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO2&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 <h3 id="24-application">2.4 Application<a class="headerlink" href="#24-application" title="Permanent link">⚓︎</a></h3>
 <p>Pour rappel, on travaille sur le schéma relationnel suivant :</p>
 <p><strong>CLIENT</strong> (<ins>num_cli</ins> nom_cli, prénom_cli, adr_cli, cdp_cli, vil_cli, tel_cli) <br />
@@ -6147,37 +6259,37 @@ WHERE num_cli = 'CO1'
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 10. Liste des clients qui ont acheté quelque chose et qui habitent Redon.</p>
 <details class="question">
 <summary>correction</summary>
-<p>```SQL
-SELECT CLIENT.num_cli, CLIENT.nom_cli, CLIENT.prénom_cli
-FROM CLIENT INNER JOIN COMMANDE
-ON CLIENT.num_cli = COMMANDE.num_cli
-INTERSECT
-(SELECT CLIENT.num_cli, CLIENT.nom_cli, CLIENT.prénom_cli
-FROM CLIENT
-WHERE Vil_Cli = "Redon");</p>
-<p>/* Autre solution */
-SELECT num_cli, nom_cli, prénom_cli
-FROM CLIENT INNER JOIN COMMANDE
-ON CLIENT.num_cli = COMMANDE.num_cli
-AND num_cli IN (SELECT num_cli,
-                FROM CLIENT
-                WHERE Vil_Cli = "Redon");
-```</p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">CLIENT</span><span class="p">.</span><span class="n">num_cli</span><span class="p">,</span><span class="w"> </span><span class="n">CLIENT</span><span class="p">.</span><span class="n">nom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">CLIENT</span><span class="p">.</span><span class="n">prénom_cli</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CLIENT</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">CLIENT</span><span class="p">.</span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_cli</span>
+<span class="k">INTERSECT</span>
+<span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">CLIENT</span><span class="p">.</span><span class="n">num_cli</span><span class="p">,</span><span class="w"> </span><span class="n">CLIENT</span><span class="p">.</span><span class="n">nom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">CLIENT</span><span class="p">.</span><span class="n">prénom_cli</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CLIENT</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">Vil_Cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Redon&quot;</span><span class="p">);</span>
+
+<span class="cm">/* Autre solution */</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">num_cli</span><span class="p">,</span><span class="w"> </span><span class="n">nom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_cli</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CLIENT</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">CLIENT</span><span class="p">.</span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_cli</span>
+<span class="k">AND</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">num_cli</span><span class="p">,</span>
+<span class="w">                </span><span class="k">FROM</span><span class="w"> </span><span class="n">CLIENT</span>
+<span class="w">                </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Vil_Cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Redon&quot;</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 11. Liste des articles de couleur verte ou figurant sur la commande numéro 28.</p>
 <details class="question">
 <summary>correction</summary>
-<p><code>SQL
-SELECT num_art, des_art
-FROM ARTICLE
-WHERE coul_art = "Verte"
-UNION
-SELECT ARTICLE.num_art, des_art
-FROM ARTICLE INNER JOIN DETAIL
-    ON ARTICLE.Num_Art = DETAIL.Num_Art
-    INNER JOIN COMMANDE
-    ON DETAIL.Num_Com = COMMANDE.Num_Com
-WHERE COMMANDE.Num_Com = '28';</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">num_art</span><span class="p">,</span><span class="w"> </span><span class="n">des_art</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ARTICLE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">coul_art</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Verte&quot;</span>
+<span class="k">UNION</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">ARTICLE</span><span class="p">.</span><span class="n">num_art</span><span class="p">,</span><span class="w"> </span><span class="n">des_art</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ARTICLE</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">DETAIL</span>
+<span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">ARTICLE</span><span class="p">.</span><span class="n">Num_Art</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DETAIL</span><span class="p">.</span><span class="n">Num_Art</span>
+<span class="w">    </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
+<span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">DETAIL</span><span class="p">.</span><span class="n">Num_Com</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">Num_Com</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">Num_Com</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;28&#39;</span><span class="p">;</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 12. Liste des articles vendus au moins une fois sauf ceux de couleur rouge.</p>
 <details class="question">
@@ -6223,75 +6335,75 @@ Dans le cas des emprunts de la bibliothèque, l’application cliente aura certa
 <li>Emprunts du mois courant - Etc…</li>
 </ul>
 <p>Pour un résultat plus lisible, on imagine sans mal que le titre de l’ouvrage ainsi que le nom du lecteur devront être affichés.
-Pour éviter de répéter les jointures à chaque requête, on définira la vue suivante:</p>
-<pre><code class="language-SQL">CREATE VIEW v_emprunt_detail AS
-SELECT L.NumLecteur, NomLecteur, O.NumOuvrage, TitreOuvrage,
-DateEmprunt, DateRetour
-FROM Lecteur L INNER JOIN Emprunter E ON L.NumLecteur = E.NumLecteur
-INNER JOIN Ouvrage O ON E.NumOuvrage = O.NumOuvrage
-</code></pre>
+Pour éviter de répéter les jointures à chaque requête, on définira la vue suivante:
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">v_emprunt_detail</span><span class="w"> </span><span class="k">AS</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">L</span><span class="p">.</span><span class="n">NumLecteur</span><span class="p">,</span><span class="w"> </span><span class="n">NomLecteur</span><span class="p">,</span><span class="w"> </span><span class="n">O</span><span class="p">.</span><span class="n">NumOuvrage</span><span class="p">,</span><span class="w"> </span><span class="n">TitreOuvrage</span><span class="p">,</span>
+<span class="n">DateEmprunt</span><span class="p">,</span><span class="w"> </span><span class="n">DateRetour</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Lecteur</span><span class="w"> </span><span class="n">L</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Emprunter</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">L</span><span class="p">.</span><span class="n">NumLecteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">E</span><span class="p">.</span><span class="n">NumLecteur</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Ouvrage</span><span class="w"> </span><span class="n">O</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">E</span><span class="p">.</span><span class="n">NumOuvrage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">O</span><span class="p">.</span><span class="n">NumOuvrage</span>
+</code></pre></div></p>
 <p>note : Par convention le nom des vues est généralement préfixé par <code>v_</code></p>
 <p>Sous phpMyAdmin, la vue apparaît dans la liste des tables avec une icône différente :
 <img alt="vue" src="../data/vue.jpg" width="0%" /></p>
 <p>Les requêtes seront ainsi simplifiées :</p>
-<p>Emprunts non régularisés :</p>
-<pre><code class="language-SQL">Select NumLecteur, NumOuvrage
-From v_emprunt_detail
-Where DateRetour Is Null;
-</code></pre>
-<p>Emprunts réalisés par un lecteur :</p>
-<pre><code class="language-SQL">Select DateEmprunt, DateRetour, TitreOuvrage
-From v_emprunt_detail
-Order By DateEmprunt Desc;
-</code></pre>
+<p>Emprunts non régularisés :
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">Select</span><span class="w"> </span><span class="n">NumLecteur</span><span class="p">,</span><span class="w"> </span><span class="n">NumOuvrage</span>
+<span class="k">From</span><span class="w"> </span><span class="n">v_emprunt_detail</span>
+<span class="k">Where</span><span class="w"> </span><span class="n">DateRetour</span><span class="w"> </span><span class="k">Is</span><span class="w"> </span><span class="k">Null</span><span class="p">;</span>
+</code></pre></div>
+Emprunts réalisés par un lecteur :
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">Select</span><span class="w"> </span><span class="n">DateEmprunt</span><span class="p">,</span><span class="w"> </span><span class="n">DateRetour</span><span class="p">,</span><span class="w"> </span><span class="n">TitreOuvrage</span>
+<span class="k">From</span><span class="w"> </span><span class="n">v_emprunt_detail</span>
+<span class="k">Order</span><span class="w"> </span><span class="k">By</span><span class="w"> </span><span class="n">DateEmprunt</span><span class="w"> </span><span class="k">Desc</span><span class="p">;</span>
+</code></pre></div></p>
 <h3 id="32-mise-a-jour-dune-vue">3.2 Mise à jour d’une vue<a class="headerlink" href="#32-mise-a-jour-dune-vue" title="Permanent link">⚓︎</a></h3>
 <p>Si une vue ne retourne pas de champs provenant de plusieurs tables (jointure), elle peut être modifiée.</p>
-<p>Exemple : Création d’une vue qui contient les ouvrages répertoriés dans le genre n°5 intitulé « Réseau »</p>
-<pre><code class="language-SQL">CREATE VIEW v_ouvrage_reseau AS
-Select TitreOuvrage, AnneeParution, O.NumGenre
-From Ouvrage O Inner Join Genre G On O.NumGenre = G.NumGenre
-Where O.NumGenre = 5;
-</code></pre>
-<p>Il sera possible ici de rajouter un ouvrage :</p>
-<pre><code class="language-SQL">Insert v_ouvrage_reseau (TitreOuvrage, AnneeParution, NumGenre)
-Values (&quot;TCP/IP pour les nuls&quot;, 2001, 5);
-</code></pre>
-<p>L’insertion est bien entendu réalisée dans la table Ouvrage.
+<p>Exemple : Création d’une vue qui contient les ouvrages répertoriés dans le genre n°5 intitulé « Réseau »
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">v_ouvrage_reseau</span><span class="w"> </span><span class="k">AS</span>
+<span class="k">Select</span><span class="w"> </span><span class="n">TitreOuvrage</span><span class="p">,</span><span class="w"> </span><span class="n">AnneeParution</span><span class="p">,</span><span class="w"> </span><span class="n">O</span><span class="p">.</span><span class="n">NumGenre</span>
+<span class="k">From</span><span class="w"> </span><span class="n">Ouvrage</span><span class="w"> </span><span class="n">O</span><span class="w"> </span><span class="k">Inner</span><span class="w"> </span><span class="k">Join</span><span class="w"> </span><span class="n">Genre</span><span class="w"> </span><span class="k">G</span><span class="w"> </span><span class="k">On</span><span class="w"> </span><span class="n">O</span><span class="p">.</span><span class="n">NumGenre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">G</span><span class="p">.</span><span class="n">NumGenre</span>
+<span class="k">Where</span><span class="w"> </span><span class="n">O</span><span class="p">.</span><span class="n">NumGenre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</code></pre></div>
+Il sera possible ici de rajouter un ouvrage :
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">Insert</span><span class="w"> </span><span class="n">v_ouvrage_reseau</span><span class="w"> </span><span class="p">(</span><span class="n">TitreOuvrage</span><span class="p">,</span><span class="w"> </span><span class="n">AnneeParution</span><span class="p">,</span><span class="w"> </span><span class="n">NumGenre</span><span class="p">)</span>
+<span class="k">Values</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;TCP/IP pour les nuls&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2001</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+</code></pre></div>
+L’insertion est bien entendu réalisée dans la table Ouvrage.
 Cela est possible car tous les champs nécessaires de la table Ouvrage sont renseignés, que l’identifiant est un numéro automatique et que la projection porte sur <code>O.NumGenre</code>.</p>
 <h3 id="33-les-alternatives-aux-vues">3.3 Les alternatives aux vues<a class="headerlink" href="#33-les-alternatives-aux-vues" title="Permanent link">⚓︎</a></h3>
 <p>Il existe plusieurs alternatives aux vues en SQL pour gérer et manipuler les données de manière efficace. Voici quelques-unes des principales alternatives :</p>
 <p><strong>Tables temporaires</strong></p>
 <p>Les tables temporaires sont des tables créées pour stocker des données temporairement pendant la durée d'une session ou d'une transaction. Elles sont utiles pour stocker des résultats intermédiaires sans affecter les tables permanentes.</p>
-<pre><code class="language-sql">CREATE TEMPORARY TABLE TempTable AS
-SELECT * FROM SomeTable WHERE condition;
-</code></pre>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TEMPORARY</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">TempTable</span><span class="w"> </span><span class="k">AS</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">SomeTable</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span><span class="p">;</span>
+</code></pre></div>
 <p><strong>Common Table Expressions (CTE)</strong></p>
 <p>Les CTE sont des expressions de table communes qui permettent de définir des tables temporaires dans le cadre d'une requête. Elles sont particulièrement utiles pour les requêtes récursives et les requêtes complexes.</p>
-<pre><code class="language-sql">WITH CTE AS (
-    SELECT colonne1, colonne2 FROM Table1 WHERE condition
-)
-SELECT * FROM CTE;
-</code></pre>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">WITH</span><span class="w"> </span><span class="n">CTE</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">colonne1</span><span class="p">,</span><span class="w"> </span><span class="n">colonne2</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Table1</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span>
+<span class="p">)</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">CTE</span><span class="p">;</span>
+</code></pre></div>
 <p><strong>Procédures stockées</strong></p>
 <p>Les procédures stockées sont des ensembles de requêtes SQL précompilées qui peuvent être exécutées comme une seule unité. Elles permettent de réutiliser des blocs de code SQL et d'améliorer la performance en réduisant le trafic réseau.</p>
-<pre><code class="language-sql">CREATE PROCEDURE ExampleProcedure AS
-BEGIN
-    SELECT * FROM Table1 WHERE condition;
-END;
-</code></pre>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">ExampleProcedure</span><span class="w"> </span><span class="k">AS</span>
+<span class="k">BEGIN</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Table1</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span><span class="p">;</span>
+<span class="k">END</span><span class="p">;</span>
+</code></pre></div>
 <p><strong>Fonctions définies par l'utilisateur (UDF)</strong></p>
 <p>Les UDF sont des fonctions personnalisées créées par l'utilisateur pour encapsuler des logiques SQL complexes. Elles peuvent être utilisées dans des requêtes pour effectuer des calculs ou des transformations spécifiques.</p>
-<pre><code class="language-sql">CREATE FUNCTION ExampleFunction (@param INT)
-RETURNS INT
-AS
-BEGIN
-    RETURN (SELECT colonne FROM Table WHERE condition = @param);
-END;
-</code></pre>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">ExampleFunction</span><span class="w"> </span><span class="p">(</span><span class="o">@</span><span class="n">param</span><span class="w"> </span><span class="nb">INT</span><span class="p">)</span>
+<span class="k">RETURNS</span><span class="w"> </span><span class="nb">INT</span>
+<span class="k">AS</span>
+<span class="k">BEGIN</span>
+<span class="w">    </span><span class="k">RETURN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">colonne</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">Table</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">@</span><span class="n">param</span><span class="p">);</span>
+<span class="k">END</span><span class="p">;</span>
+</code></pre></div>
 <p><strong>Indexation</strong></p>
 <p>L'utilisation d'index appropriés sur les tables peut améliorer les performances des requêtes sans avoir besoin de vues. Les index permettent un accès plus rapide aux données en créant des structures de données supplémentaires.</p>
-<pre><code class="language-sql">CREATE INDEX idx_colonne1 ON Table1 (colonne1);
-</code></pre>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_colonne1</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Table1</span><span class="w"> </span><span class="p">(</span><span class="n">colonne1</span><span class="p">);</span>
+</code></pre></div>
 <p><strong>Conclusion</strong></p>
 <p>Chaque alternative a ses propres avantages et inconvénients en fonction du contexte et des besoins spécifiques. Il est important de choisir la solution la plus adaptée en fonction des performances, de la complexité et des exigences de sécurité.</p>
 <h2 id="4-histoire-de-jointures">4. Histoire de jointures<a class="headerlink" href="#4-histoire-de-jointures" title="Permanent link">⚓︎</a></h2>
@@ -6326,60 +6438,60 @@ END;
 <h4 id="431-inner-join">4.3.1 INNER JOIN<a class="headerlink" href="#431-inner-join" title="Permanent link">⚓︎</a></h4>
 <p>INNER JOIN retourne uniquement les lignes où il y a une correspondance dans les deux tables. Si une ligne de la table de gauche (première table) n’a pas de correspondance dans la table de droite (deuxième table), elle ne sera pas incluse dans le résultat. C'est l'intersection de 2 ensembles.</p>
 <p><img alt="inner" class="center" src="../data/innerjoin.png" width="20%" /></p>
-<pre><code class="language-SQL">SELECT *
-FROM A
-INNER JOIN B ON A.key = B.key
-</code></pre>
-<p><ins>exemple :</ins> Lister les commandes avec les détails des clients et des vendeurs</p>
-<pre><code class="language-SQL">SELECT c.num_com, c.dat_com, cl.nom_cli, cl.prénom_cli, v.nom_ven, v.prénom_ven
-FROM COMMANDE c
-INNER JOIN CLIENT cl ON c.num_cli = cl.num_cli
-INNER JOIN VENDEUR v ON c.num_ven = v.num_ven;
-</code></pre>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">A</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">A</span><span class="p">.</span><span class="k">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B</span><span class="p">.</span><span class="k">key</span>
+</code></pre></div>
+<p><ins>exemple :</ins> Lister les commandes avec les détails des clients et des vendeurs
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_com</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">dat_com</span><span class="p">,</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">nom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">prénom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">nom_ven</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">prénom_ven</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">COMMANDE</span><span class="w"> </span><span class="k">c</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">CLIENT</span><span class="w"> </span><span class="n">cl</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">num_cli</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">num_ven</span><span class="p">;</span>
+</code></pre></div></p>
 <h4 id="432-jointure-gauche-left-joint">4.3.2 Jointure gauche (LEFT JOINT)<a class="headerlink" href="#432-jointure-gauche-left-joint" title="Permanent link">⚓︎</a></h4>
 <p>LEFT JOIN (ou LEFT OUTER JOIN) retourne toutes les lignes de la table de gauche, et les lignes correspondantes de la table de droite. Si une ligne de la table de gauche n’a pas de correspondance dans la table de droite, les colonnes de la table de droite seront remplies avec des valeurs NULL.</p>
-<p><img alt="Jointure gauche" class="center" src="../data/leftjoin.png" width="20%" /></p>
-<pre><code class="language-SQL">SELECT *
-FROM A
-LEFT JOIN B ON A.key = B.key
-LEFT JOIN (sans l’intersection de B)
-</code></pre>
-<p><ins>exemple :</ins> Lister tous les clients et leurs commandes, même ceux qui n’ont pas passé de commande</p>
-<pre><code class="language-SQL">SELECT cl.nom_cli, cl.prénom_cli, c.num_com, c.dat_com
-FROM CLIENT cl
-LEFT JOIN COMMANDE c ON cl.num_cli = c.num_cli;
-</code></pre>
-<p><ins>Remarque :</ins>
+<p><img alt="Jointure gauche" class="center" src="../data/leftjoin.png" width="20%" />
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">A</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">A</span><span class="p">.</span><span class="k">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B</span><span class="p">.</span><span class="k">key</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="p">(</span><span class="n">sans</span><span class="w"> </span><span class="n">l</span><span class="err">’</span><span class="n">intersection</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">B</span><span class="p">)</span>
+</code></pre></div>
+<ins>exemple :</ins> Lister tous les clients et leurs commandes, même ceux qui n’ont pas passé de commande
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">nom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">prénom_cli</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_com</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">dat_com</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CLIENT</span><span class="w"> </span><span class="n">cl</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_cli</span><span class="p">;</span>
+</code></pre></div>
+<ins>Remarque :</ins>
 <img alt="Jointure gauche" class="center" src="../data/leftjoin2.png" width="20%" />
-Jointure gauche (LEFT JOINT sans l’intersection B)</p>
-<pre><code class="language-SQL">SELECT *
-FROM A
-LEFT JOIN B ON A.key = B.key
-WHERE B.key IS NULL
-RIGHT JOIN
-</code></pre>
+Jointure gauche (LEFT JOINT sans l’intersection B)
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">A</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">A</span><span class="p">.</span><span class="k">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B</span><span class="p">.</span><span class="k">key</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">B</span><span class="p">.</span><span class="k">key</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span>
+<span class="k">RIGHT</span><span class="w"> </span><span class="k">JOIN</span>
+</code></pre></div></p>
 <h4 id="33-jointure-droite-right-joint">3.3 Jointure droite (RIGHT JOINT)<a class="headerlink" href="#33-jointure-droite-right-joint" title="Permanent link">⚓︎</a></h4>
 <p>La jointure droite (ou RIGHT JOIN en anglais) est un type de jointure en SQL qui retourne toutes les lignes de la table de droite, ainsi que les lignes correspondantes de la table de gauche. Si une ligne de la table de droite n’a pas de correspondance dans la table de gauche, les colonnes de la table de gauche seront remplies avec des valeurs NULL.</p>
 <p><img alt="jointure droite" class="center" src="../data/rightjoin.png" width="20%" />
-Jointure droite (RIGHT JOINT)</p>
-<pre><code class="language-SQL">SELECT *
-FROM A
-RIGHT JOIN B ON A.key = B.key
-RIGHT JOIN (sans l’intersection de A)
-</code></pre>
-<p><ins>exemple :</ins> Lister tous les vendeurs et les commandes qu’ils ont traitées, même ceux qui n’ont pas traité de commande</p>
-<pre><code class="language-SQL">SELECT v.nom_ven, v.prénom_ven, c.num_com, c.dat_com
-FROM VENDEUR v
-RIGHT JOIN COMMANDE c ON v.num_ven = c.num_ven;
-</code></pre>
+Jointure droite (RIGHT JOINT)
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">A</span>
+<span class="k">RIGHT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">A</span><span class="p">.</span><span class="k">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B</span><span class="p">.</span><span class="k">key</span>
+<span class="k">RIGHT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="p">(</span><span class="n">sans</span><span class="w"> </span><span class="n">l</span><span class="err">’</span><span class="n">intersection</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">A</span><span class="p">)</span>
+</code></pre></div>
+<ins>exemple :</ins> Lister tous les vendeurs et les commandes qu’ils ont traitées, même ceux qui n’ont pas traité de commande
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">nom_ven</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">prénom_ven</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_com</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">dat_com</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span><span class="n">v</span>
+<span class="k">RIGHT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_ven</span><span class="p">;</span>
+</code></pre></div></p>
 <p><ins>Remarque :</ins>
 <img alt="jointure droite" class="center" src="../data/rightjoin2.png" width="20%" />
-Jointure droite (RIGHT JOINT sans l’intersection A)</p>
-<pre><code class="language-SQL">SELECT *
-FROM A
-RIGHT JOIN B ON A.key = B.key
-WHERE B.key IS NULL
-</code></pre>
+Jointure droite (RIGHT JOINT sans l’intersection A)
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">A</span>
+<span class="k">RIGHT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">A</span><span class="p">.</span><span class="k">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B</span><span class="p">.</span><span class="k">key</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">B</span><span class="p">.</span><span class="k">key</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span>
+</code></pre></div></p>
 <p><strong>Exemple Pratique</strong></p>
 <p>Supposons que nous ayons deux tables : <code>CLIENT</code> et <code>COMMANDE</code>.</p>
 <p><strong>CLIENT</strong></p>
@@ -6437,10 +6549,10 @@ WHERE B.key IS NULL
 </tbody>
 </table>
 <p>Pour lister toutes les commandes et les informations des clients, y compris les commandes sans client correspondant, nous utiliserons une jointure droite :</p>
-<pre><code class="language-sql">SELECT c.num_com, c.dat_com, cl.nom_cli, cl.prénom_cli
-FROM CLIENT cl
-RIGHT JOIN COMMANDE c ON cl.num_cli = c.num_cli;
-</code></pre>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_com</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">dat_com</span><span class="p">,</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">nom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">prénom_cli</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CLIENT</span><span class="w"> </span><span class="n">cl</span>
+<span class="k">RIGHT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_cli</span><span class="p">;</span>
+</code></pre></div>
 <p><strong>Résultat</strong> :</p>
 <table>
 <thead>
@@ -6484,37 +6596,37 @@ RIGHT JOIN COMMANDE c ON cl.num_cli = c.num_cli;
 <p>Oui, il est tout à fait possible de transformer une jointure gauche (LEFT JOIN) en jointure droite (RIGHT JOIN) et vice versa. En fait, une jointure gauche et une jointure droite sont essentiellement la même opération, mais appliquées dans des directions opposées. Voici comment vous pouvez les transformer :</p>
 <p><strong>Transformation d'une Jointure Gauche en Jointure Droite</strong></p>
 <p>Supposons que nous ayons la jointure gauche suivante :</p>
-<p><code>sql
-SELECT cl.nom_cli, cl.prénom_cli, c.num_com, c.dat_com
-FROM CLIENT cl
-LEFT JOIN COMMANDE c ON cl.num_cli = c.num_cli;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">nom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">prénom_cli</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_com</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">dat_com</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CLIENT</span><span class="w"> </span><span class="n">cl</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_cli</span><span class="p">;</span>
+</code></pre></div>
 <p>Pour transformer cette jointure gauche en jointure droite, il suffit d'inverser l'ordre des tables et de changer le type de jointure :</p>
-<p><code>sql
-SELECT cl.nom_cli, cl.prénom_cli, c.num_com, c.dat_com
-FROM COMMANDE c
-RIGHT JOIN CLIENT cl ON cl.num_cli = c.num_cli;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">nom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">prénom_cli</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_com</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">dat_com</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">COMMANDE</span><span class="w"> </span><span class="k">c</span>
+<span class="k">RIGHT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">CLIENT</span><span class="w"> </span><span class="n">cl</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_cli</span><span class="p">;</span>
+</code></pre></div>
 <p><strong>Transformation d'une Jointure Droite en Jointure Gauche</strong></p>
 <p>De la même manière, si nous avons une jointure droite :</p>
-<p><code>sql
-SELECT cl.nom_cli, cl.prénom_cli, c.num_com, c.dat_com
-FROM COMMANDE c
-RIGHT JOIN CLIENT cl ON cl.num_cli = c.num_cli;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">nom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">prénom_cli</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_com</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">dat_com</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">COMMANDE</span><span class="w"> </span><span class="k">c</span>
+<span class="k">RIGHT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">CLIENT</span><span class="w"> </span><span class="n">cl</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_cli</span><span class="p">;</span>
+</code></pre></div>
 <p>Nous pouvons la transformer en jointure gauche en inversant l'ordre des tables et en changeant le type de jointure :</p>
-<p><code>sql
-SELECT cl.nom_cli, cl.prénom_cli, c.num_com, c.dat_com
-FROM CLIENT cl
-LEFT JOIN COMMANDE c ON cl.num_cli = c.num_cli;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">nom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">prénom_cli</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_com</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">dat_com</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CLIENT</span><span class="w"> </span><span class="n">cl</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_cli</span><span class="p">;</span>
+</code></pre></div>
 <p><strong><ins>Exemple Pratique</ins></strong></p>
 <p><strong>Jointure Gauche (LEFT JOIN)</strong></p>
-<p><code>sql
-SELECT cl.nom_cli, cl.prénom_cli, c.num_com, c.dat_com
-FROM CLIENT cl
-LEFT JOIN COMMANDE c ON cl.num_cli = c.num_cli;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">nom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">prénom_cli</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_com</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">dat_com</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CLIENT</span><span class="w"> </span><span class="n">cl</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_cli</span><span class="p">;</span>
+</code></pre></div>
 <p><strong>Jointure Droite (RIGHT JOIN)</strong></p>
-<p><code>sql
-SELECT cl.nom_cli, cl.prénom_cli, c.num_com, c.dat_com
-FROM COMMANDE c
-RIGHT JOIN CLIENT cl ON cl.num_cli = c.num_cli;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">nom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">prénom_cli</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_com</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">dat_com</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">COMMANDE</span><span class="w"> </span><span class="k">c</span>
+<span class="k">RIGHT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">CLIENT</span><span class="w"> </span><span class="n">cl</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_cli</span><span class="p">;</span>
+</code></pre></div>
 <p><strong>Points Clés</strong></p>
 <ul>
 <li><strong>Ordre des Tables</strong> : L'ordre des tables est inversé lorsque vous transformez une jointure gauche en jointure droite et vice versa.</li>
@@ -6526,49 +6638,49 @@ RIGHT JOIN CLIENT cl ON cl.num_cli = c.num_cli;</code></p>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 1. <strong>Quels clients n'ont pas passé de commande ?</strong></p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>sql
-SELECT cl.nom_cli, cl.prénom_cli
-FROM CLIENT cl
-LEFT JOIN COMMANDE c ON cl.num_cli = c.num_cli
-WHERE c.num_com IS NULL;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">nom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">prénom_cli</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CLIENT</span><span class="w"> </span><span class="n">cl</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_cli</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_com</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 2. <strong>Quels articles n'ont jamais été commandés ?</strong></p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>sql
-SELECT a.des_art
-FROM ARTICLE a
-LEFT JOIN DETAIL d ON a.num_art = d.num_art
-WHERE d.num_com IS NULL;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">des_art</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ARTICLE</span><span class="w"> </span><span class="n">a</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">DETAIL</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">num_art</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">num_art</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">num_com</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 3. <strong>Combien de commandes chaque client a-t-il passées ?</strong></p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>sql
-SELECT cl.nom_cli, cl.prénom_cli, COUNT(c.num_com) AS nombre_commandes
-FROM CLIENT cl
-LEFT JOIN COMMANDE c ON cl.num_cli = c.num_cli
-GROUP BY cl.nom_cli, cl.prénom_cli;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">nom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">prénom_cli</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="k">c</span><span class="p">.</span><span class="n">num_com</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nombre_commandes</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">CLIENT</span><span class="w"> </span><span class="n">cl</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_cli</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">nom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">cl</span><span class="p">.</span><span class="n">prénom_cli</span><span class="p">;</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 4. <strong>Quels vendeurs ont généré le plus de ventes (en termes de nombre de commandes) ?</strong></p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>sql
-SELECT v.nom_ven, v.prénom_ven, COUNT(c.num_com) AS nombre_ventes
-FROM VENDEUR v
-LEFT JOIN COMMANDE c ON v.num_ven = c.num_ven
-GROUP BY v.nom_ven, v.prénom_ven
-ORDER BY nombre_ventes DESC;</code>  </p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">nom_ven</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">prénom_ven</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="k">c</span><span class="p">.</span><span class="n">num_com</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nombre_ventes</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span><span class="n">v</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">num_ven</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">nom_ven</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">prénom_ven</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">nombre_ventes</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 5. <strong>Quels articles ont été commandés en grande quantité (plus de 100 unités) ?</strong></p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>sql
-SELECT a.des_art, SUM(d.qte_com) AS total_quantite
-FROM ARTICLE a INNER JOIN DETAIL d 
-ON a.num_art = d.num_art
-GROUP BY a.des_art
-HAVING SUM(d.qte_com) &gt; 100;</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">des_art</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">qte_com</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_quantite</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ARTICLE</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">DETAIL</span><span class="w"> </span><span class="n">d</span><span class="w"> </span>
+<span class="k">ON</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">num_art</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">num_art</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">des_art</span>
+<span class="k">HAVING</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">qte_com</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+</code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> Questions de Réflexion</p>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 6. <strong>Quels sont les avantages et les inconvénients de chaque type de jointure dans ce contexte ?</strong></p>
@@ -6806,8 +6918,6 @@ HAVING SUM(d.qte_com) &gt; 100;</code></p>
         <script src="../../../javascript/mathjax.js"></script>
       
         <script src="../../../javascript/interpreter.js"></script>
-      
-        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

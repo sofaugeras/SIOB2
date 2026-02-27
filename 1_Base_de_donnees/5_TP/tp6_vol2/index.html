@@ -3964,14 +3964,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_cours.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -3992,14 +3992,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_exercices.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -4020,14 +4020,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -4048,14 +4048,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -4076,14 +4076,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_authentification.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4104,14 +4104,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_archivage.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5583,23 +5695,23 @@
 </div>
 <p>On va travailler sur le modèle suivant : </p>
 <p><a class="md-button md-button--primary" href="../data/tp4/vol2.sql">Télécharger fichier Création de la base <img alt="⬇️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2b07.svg" title=":arrow_down:" /></a></p>
-<pre><code class="language-SQL">PILOTE (pil_no, pil_nom, pil_prenom, pil_datnais, pil_ville)
-        Clé primaire : pil_no
-AVION (av_no, av_type, av_capacité, av_ville)
-        Clé primaire : av_no
-VOL (vol_no, #vol_pilote, #vol_avion, vol_nbpassagerA, vol_nbpassagerB, vol_prixClasseA, vol_prixClasseB)
-        Clé primaire : vol_no
-        Clé étrangère : vol_pilote références à PILOTE(pil_no)
-                        Vol_avion références à AVION(vol_avion)
-</code></pre>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="n">PILOTE</span><span class="w"> </span><span class="p">(</span><span class="n">pil_no</span><span class="p">,</span><span class="w"> </span><span class="n">pil_nom</span><span class="p">,</span><span class="w"> </span><span class="n">pil_prenom</span><span class="p">,</span><span class="w"> </span><span class="n">pil_datnais</span><span class="p">,</span><span class="w"> </span><span class="n">pil_ville</span><span class="p">)</span>
+<span class="w">        </span><span class="n">Clé</span><span class="w"> </span><span class="n">primaire</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">pil_no</span>
+<span class="n">AVION</span><span class="w"> </span><span class="p">(</span><span class="n">av_no</span><span class="p">,</span><span class="w"> </span><span class="n">av_type</span><span class="p">,</span><span class="w"> </span><span class="n">av_capacité</span><span class="p">,</span><span class="w"> </span><span class="n">av_ville</span><span class="p">)</span>
+<span class="w">        </span><span class="n">Clé</span><span class="w"> </span><span class="n">primaire</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">av_no</span>
+<span class="n">VOL</span><span class="w"> </span><span class="p">(</span><span class="n">vol_no</span><span class="p">,</span><span class="w"> </span><span class="o">#</span><span class="n">vol_pilote</span><span class="p">,</span><span class="w"> </span><span class="o">#</span><span class="n">vol_avion</span><span class="p">,</span><span class="w"> </span><span class="n">vol_nbpassagerA</span><span class="p">,</span><span class="w"> </span><span class="n">vol_nbpassagerB</span><span class="p">,</span><span class="w"> </span><span class="n">vol_prixClasseA</span><span class="p">,</span><span class="w"> </span><span class="n">vol_prixClasseB</span><span class="p">)</span>
+<span class="w">        </span><span class="n">Clé</span><span class="w"> </span><span class="n">primaire</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">vol_no</span>
+<span class="w">        </span><span class="n">Clé</span><span class="w"> </span><span class="err">é</span><span class="n">trangère</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">vol_pilote</span><span class="w"> </span><span class="n">références</span><span class="w"> </span><span class="err">à</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">(</span><span class="n">pil_no</span><span class="p">)</span>
+<span class="w">                        </span><span class="n">Vol_avion</span><span class="w"> </span><span class="n">références</span><span class="w"> </span><span class="err">à</span><span class="w"> </span><span class="n">AVION</span><span class="p">(</span><span class="n">vol_avion</span><span class="p">)</span>
+</code></pre></div>
 <p><img alt="base vol MPD" class="center" src="../data/tp4/vol2.png" witdh="50%" /></p>
 <h2 id="1-interrogation-de-la-base-sans-jointure">1. Interrogation de la base SANS jointure<a class="headerlink" href="#1-interrogation-de-la-base-sans-jointure" title="Permanent link">⚓︎</a></h2>
 <p>Que fait la requête suivante :</p>
-<pre><code class="language-SQL">SELECT *
-FROM AVION
-WHERE av_capacite = (SELECT MAX(av_capacite)
-                    FROM AVION)
-</code></pre>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">AVION</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">av_capacite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">av_capacite</span><span class="p">)</span>
+<span class="w">                    </span><span class="k">FROM</span><span class="w"> </span><span class="n">AVION</span><span class="p">)</span>
+</code></pre></div>
 <details class="question">
 <summary>Correction</summary>
 <p>Elle affiche les infos de l'avion à la plus grande capacité.</p>
@@ -5608,248 +5720,252 @@ WHERE av_capacite = (SELECT MAX(av_capacite)
 <p><strong>R1 :</strong> Numéro du vol qui propose le plus de places en tarifs réduits (Classe B).</p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>SQL
-SELECT vol_no
-FROM vol
-WHERE vol_NbPassagerB = (SELECT MAX(vol_NbPassagerB)
-                    FROM vol);</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">vol_no</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">vol</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">vol_NbPassagerB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">vol_NbPassagerB</span><span class="p">)</span>
+<span class="w">                    </span><span class="k">FROM</span><span class="w"> </span><span class="n">vol</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <p><strong>R2 :</strong> Liste des avions dont la capacité est supérieure à celle de l'avion n°2.</p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>SQL
-SELECT *
-FROM avion
-WHERE av_capacite &gt; (SELECT av_capacite
-                FROM AVION
-                WHERE av_no = 2);</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">avion</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">av_capacite</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">av_capacite</span>
+<span class="w">                </span><span class="k">FROM</span><span class="w"> </span><span class="n">AVION</span>
+<span class="w">                </span><span class="k">WHERE</span><span class="w"> </span><span class="n">av_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <p><strong>R3 :</strong> Liste des avions (numéro) qui ont au moins 3 vols.</p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>SQL
-SELECT vol_avion
-FROM VOL
-GROUP BY vol_avion
-HAVING COUNT(*)&gt;=3;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">vol_avion</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">vol_avion</span>
+<span class="k">HAVING</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="o">&gt;=</span><span class="mi">3</span><span class="p">;</span>
+</code></pre></div>
 </details>
 <p><strong>R4 :</strong> Numéro de l'avion le plus utilisé. </p>
 <details class="question">
 <summary>Correction</summary>
-<p>```SQL
-/* On veut l'avion qui a réalisé le plus de vol.
-On détermine d'abord le nombre de vol par avion <em>/
-(SELECT COUNT(</em>)
-FROM vol
-GROUP BY vol_avion)</p>
-<p>/*L'avion qui a le plus volé sera celui dont son nombre de vol est égale au maximun des nombres de vols de tous les avions.
-On ne peut pas faire MAX(COUNT()) donc on écrit &gt;= ALL COUNT</p>
-<p>Donc, le nombre de vols pour un avion doit être  &gt;= à tous les nombres de vols par avion: <em>/
-SELECT vol_avion
-FROM vol
-GROUP BY vol_avion
-HAVING COUNT(</em>) &gt;= ALL (SELECT COUNT(*)
-                    FROM vol
-                    GROUP BY vol_avion);
-```</p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="cm">/* On veut l&#39;avion qui a réalisé le plus de vol.</span>
+<span class="cm">On détermine d&#39;abord le nombre de vol par avion */</span>
+<span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">vol</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">vol_avion</span><span class="p">)</span>
+
+<span class="cm">/*L&#39;avion qui a le plus volé sera celui dont son nombre de vol est égale au maximun des nombres de vols de tous les avions.</span>
+<span class="cm">On ne peut pas faire MAX(COUNT()) donc on écrit &gt;= ALL COUNT</span>
+
+<span class="cm">Donc, le nombre de vols pour un avion doit être  &gt;= à tous les nombres de vols par avion: */</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">vol_avion</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">vol</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">vol_avion</span>
+<span class="k">HAVING</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<span class="w">                    </span><span class="k">FROM</span><span class="w"> </span><span class="n">vol</span>
+<span class="w">                    </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">vol_avion</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <p><strong>R5 :</strong> Le nom de la ville où sont stockés le plus d'avions.</p>
 <details class="question">
 <summary>Correction</summary>
-<p>```SQL
-On décompte le nombre d'avion par ville
-SELECT COUNT(*)
-FROM avion
-GROUP BY av_ville</p>
-<p>On veut le maximun de ces décomptes &gt;= ALL</p>
-<p>Puis, on affiche la ville dont le décompte d'avion est égal à ce maximun
-SELECT av_ville
-FROM avion
-GROUP BY av_ville
-HAVING COUNT(<em>) &gt;= ALL(SELECT COUNT(</em>)
-                FROM avion
-                GROUP BY av_ville);
-```</p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">On</span><span class="w"> </span><span class="n">décompte</span><span class="w"> </span><span class="n">le</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="n">d</span><span class="s1">&#39;avion par ville</span>
+<span class="s1">SELECT COUNT(*)</span>
+<span class="s1">FROM avion</span>
+<span class="s1">GROUP BY av_ville</span>
+
+<span class="s1">On veut le maximun de ces décomptes &gt;= ALL</span>
+
+<span class="s1">Puis, on affiche la ville dont le décompte d&#39;</span><span class="n">avion</span><span class="w"> </span><span class="n">est</span><span class="w"> </span><span class="err">é</span><span class="n">gal</span><span class="w"> </span><span class="err">à</span><span class="w"> </span><span class="n">ce</span><span class="w"> </span><span class="n">maximun</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">av_ville</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">avion</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">av_ville</span>
+<span class="k">HAVING</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="k">ALL</span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<span class="w">                </span><span class="k">FROM</span><span class="w"> </span><span class="n">avion</span>
+<span class="w">                </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">av_ville</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <p><strong>R6 :</strong>    Liste des avions (Numéro et capacité) qui ne sont pas encore utilisés pour un vol. </p>
 <details class="question">
 <summary>Correction</summary>
-<p>```SQL
-On sélectionne les avions qui ont volé une fois donc dans la table VOL
-(SELECT vol_avion
-FROM vol)</p>
-<p>Puis ceux qui ne sont pas dans VOL:
-SELECT av_no, av_capacite
-FROM avion
-WHERE av_no NOT IN (SELECT vol_avion
-                    FROM vol); 
-```
+<p><div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">On</span><span class="w"> </span><span class="n">sélectionne</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">avions</span><span class="w"> </span><span class="n">qui</span><span class="w"> </span><span class="n">ont</span><span class="w"> </span><span class="n">volé</span><span class="w"> </span><span class="n">une</span><span class="w"> </span><span class="n">fois</span><span class="w"> </span><span class="n">donc</span><span class="w"> </span><span class="n">dans</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">VOL</span>
+<span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">vol_avion</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">vol</span><span class="p">)</span>
+
+<span class="n">Puis</span><span class="w"> </span><span class="n">ceux</span><span class="w"> </span><span class="n">qui</span><span class="w"> </span><span class="n">ne</span><span class="w"> </span><span class="n">sont</span><span class="w"> </span><span class="n">pas</span><span class="w"> </span><span class="n">dans</span><span class="w"> </span><span class="n">VOL</span><span class="p">:</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">av_no</span><span class="p">,</span><span class="w"> </span><span class="n">av_capacite</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">avion</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">av_no</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">vol_avion</span>
+<span class="w">                    </span><span class="k">FROM</span><span class="w"> </span><span class="n">vol</span><span class="p">);</span><span class="w"> </span>
+</code></pre></div>
 </p>
 </details>
 <p><strong>R7 :</strong> Liste des pilotes (Numéro, nom et prénom) qui n'ont jamais volé.</p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>SQL
-SELECT pil_no, pil_nom, pil_prénom
-FROM pilote p
-WHERE pil_no NOT IN (SELECT vol_pilote
-                FROM vol);</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">pil_no</span><span class="p">,</span><span class="w"> </span><span class="n">pil_nom</span><span class="p">,</span><span class="w"> </span><span class="n">pil_prénom</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">pilote</span><span class="w"> </span><span class="n">p</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">pil_no</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">vol_pilote</span>
+<span class="w">                </span><span class="k">FROM</span><span class="w"> </span><span class="n">vol</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <h2 id="2-avec-jointures">2. Avec jointures<a class="headerlink" href="#2-avec-jointures" title="Permanent link">⚓︎</a></h2>
 <p>Il est toujours possible d'utiliser des jointures dans la requête principale et la requête imbriquées.</p>
 <p><strong>R8 :</strong> Numéro et type de l'avion le plus utilisé (variante de la question D). </p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>SQL
-SELECT av_no, av_type
-FROM avion, vol
-WHERE av_no = vol_avion
-GROUP BY av_no, av_type
-HAVING COUNT(*) &gt;= ALL (SELECT COUNT(*)
-                FROM vol
-                GROUP BY vol_avion);</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">av_no</span><span class="p">,</span><span class="w"> </span><span class="n">av_type</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">avion</span><span class="p">,</span><span class="w"> </span><span class="n">vol</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">av_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vol_avion</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">av_no</span><span class="p">,</span><span class="w"> </span><span class="n">av_type</span>
+<span class="k">HAVING</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<span class="w">                </span><span class="k">FROM</span><span class="w"> </span><span class="n">vol</span>
+<span class="w">                </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">vol_avion</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <p><strong>R9 :</strong> Numéro, type et capacité des avions qui ont participé au vol proposant le plus de place en tarif plein (Classe A).</p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>SQL
-SELECT av_no, av_type, av_capacite
-FROM AVION INNER JOIN VOL
-    ON av_no = vol_avion
-WHERE vol_NbPassagerA= (SELECT MAX(vol_NbPassagerA)
-                FROM vol);</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">av_no</span><span class="p">,</span><span class="w"> </span><span class="n">av_type</span><span class="p">,</span><span class="w"> </span><span class="n">av_capacite</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">AVION</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">VOL</span>
+<span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">av_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vol_avion</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">vol_NbPassagerA</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">vol_NbPassagerA</span><span class="p">)</span>
+<span class="w">                </span><span class="k">FROM</span><span class="w"> </span><span class="n">vol</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <p><strong>R10 :</strong> Indiquez le nom et prénom des pilotes ayant volé avec l'avion de la plus grande capacité</p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>SQL
-SELECT pil_nom, pil_prénom
-FROM PILOTE, VOL, AVION
-WHERE pil_no = vol_pilote
-AND vol_avion = av_no
-AND av_capacite = (SELECT MAX(av_capacite)
-            FROM AVION);</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">pil_nom</span><span class="p">,</span><span class="w"> </span><span class="n">pil_prénom</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">,</span><span class="w"> </span><span class="n">VOL</span><span class="p">,</span><span class="w"> </span><span class="n">AVION</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">pil_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vol_pilote</span>
+<span class="k">AND</span><span class="w"> </span><span class="n">vol_avion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">av_no</span>
+<span class="k">AND</span><span class="w"> </span><span class="n">av_capacite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">av_capacite</span><span class="p">)</span>
+<span class="w">            </span><span class="k">FROM</span><span class="w"> </span><span class="n">AVION</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <p><strong>R11 :</strong> Nom et prénom du pilote de Brest qui a le plus volé.</p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>SQL
-SELECT pil_nom, pil_prénom, COUNT(*)
-FROM pilote, Vol
-WHERE pil_no = vol_pilote
-AND pil_ville = 'Brest'
-GROUP BY Pil_no, pil_nom, pil_prénom
-HAVING COUNT(*) &gt;= ALL (SELECT COUNT(*)
-            FROM pilote, Vol
-            WHERE pil_no = vol_pilote
-            AND pil_ville = 'Brest'
-            GROUP BY Pil_no)</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">pil_nom</span><span class="p">,</span><span class="w"> </span><span class="n">pil_prénom</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">pilote</span><span class="p">,</span><span class="w"> </span><span class="n">Vol</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">pil_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vol_pilote</span>
+<span class="k">AND</span><span class="w"> </span><span class="n">pil_ville</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Brest&#39;</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Pil_no</span><span class="p">,</span><span class="w"> </span><span class="n">pil_nom</span><span class="p">,</span><span class="w"> </span><span class="n">pil_prénom</span>
+<span class="k">HAVING</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<span class="w">            </span><span class="k">FROM</span><span class="w"> </span><span class="n">pilote</span><span class="p">,</span><span class="w"> </span><span class="n">Vol</span>
+<span class="w">            </span><span class="k">WHERE</span><span class="w"> </span><span class="n">pil_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vol_pilote</span>
+<span class="w">            </span><span class="k">AND</span><span class="w"> </span><span class="n">pil_ville</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Brest&#39;</span>
+<span class="w">            </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Pil_no</span><span class="p">)</span>
+</code></pre></div>
 </details>
 <h2 id="3-pour-aller-plus-loin-les-operateurs-ensemblistes">3. Pour aller plus loin: les opérateurs ensemblistes<a class="headerlink" href="#3-pour-aller-plus-loin-les-operateurs-ensemblistes" title="Permanent link">⚓︎</a></h2>
 <p><img alt="🔍" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f50d.svg" title=":mag:" /> Les opérateurs ensemblistes, qui ne sont pas supportés par tous les SGBD, peuvent être réécrits avec des requêtes imbriquées.</p>
 <p><strong>R12 :</strong> Numéro des pilotes qui sont de Brest ou qui ont volé avec l'avion n°1</p>
 <details class="question">
 <summary>Correction</summary>
-<p>```SQL
---Solution avec Union
-SELECT pil_no
-FROM PILOTE
-WHERE pil_ville = 'BREST'</p>
-<p>UNION</p>
-<p>SELECT vol_pilote
-FROM VOL
-WHERE vol_avion = 1;</p>
-<p>--Solution sans UNION
-SELECT pil_no, pil_nom, pil_prénom
-FROM PILOTE
-WHERE pil_ville = 'BREST'
-    OR pil_no IN (SELECT vol_pilote
-                    FROM VOL
-                    WHERE vol_avion = 1);
-```</p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="c1">--Solution avec Union</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">pil_no</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">pil_ville</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;BREST&#39;</span>
+
+<span class="k">UNION</span>
+
+<span class="k">SELECT</span><span class="w"> </span><span class="n">vol_pilote</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">vol_avion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+
+<span class="c1">--Solution sans UNION</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">pil_no</span><span class="p">,</span><span class="w"> </span><span class="n">pil_nom</span><span class="p">,</span><span class="w"> </span><span class="n">pil_prénom</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">pil_ville</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;BREST&#39;</span>
+<span class="w">    </span><span class="k">OR</span><span class="w"> </span><span class="n">pil_no</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">vol_pilote</span>
+<span class="w">                    </span><span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span>
+<span class="w">                    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">vol_avion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <p><strong>R13 :</strong> Liste des villes où sont entreposés des avions et hébergeant un pilote</p>
 <details class="question">
 <summary>Correction</summary>
-<p>```SQL
---Solution avec INTERSECT
-SELECT av_ville
-FROM AVION
-INTERSECT
-SELECT pil_ville
-FROM PILOTE;</p>
-<p>--Solution sans INTERSECT
-SELECT DISTINCT av_ville
-FROM AVION
-WHERE av_ville IN
-(SELECT pil_ville
-FROM PILOTE);
-```</p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="c1">--Solution avec INTERSECT</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">av_ville</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">AVION</span>
+<span class="k">INTERSECT</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">pil_ville</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">;</span>
+
+<span class="c1">--Solution sans INTERSECT</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">av_ville</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">AVION</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">av_ville</span><span class="w"> </span><span class="k">IN</span>
+<span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">pil_ville</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <p><strong>R14 :</strong> Nom et prénom des pilotes qui ont conduit les avions n°1 et n°2:</p>
 <details class="question">
 <summary>Correction</summary>
-<p>```SQL
---Solution avec Union
-SELECT vol_pilote
-FROM VOL
-WHERE vol_avion = 1;
-UNION
-SELECT vol_pilote
-FROM VOL
-WHERE vol_avion = 2;</p>
-<p>--Solution sans UNION
-SELECT pil_no, pil_nom, pil_prénom
-FROM PILOTE
-WHERE vol_avion = 2
-OR pil_no IN (SELECT vol_pilote
-FROM VOL
-WHERE vol_avion = 1);
-```</p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="c1">--Solution avec Union</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">vol_pilote</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">vol_avion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="k">UNION</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">vol_pilote</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">vol_avion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+
+<span class="c1">--Solution sans UNION</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">pil_no</span><span class="p">,</span><span class="w"> </span><span class="n">pil_nom</span><span class="p">,</span><span class="w"> </span><span class="n">pil_prénom</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">vol_avion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="k">OR</span><span class="w"> </span><span class="n">pil_no</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">vol_pilote</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">vol_avion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <h2 id="4-toujours-plus-fort">4. Toujours plus fort !<a class="headerlink" href="#4-toujours-plus-fort" title="Permanent link">⚓︎</a></h2>
 <p><strong>R15 :</strong> Quel est avion à la capacité maximale (qui embarque le plus de passagers)</p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>SQL
-SELECT av_no
-FROM AVION
-WHERE av_capacite = (SELECT MAX(av_capacite) 
-                    FROM AVION);</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">av_no</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">AVION</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">av_capacite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">av_capacite</span><span class="p">)</span><span class="w"> </span>
+<span class="w">                    </span><span class="k">FROM</span><span class="w"> </span><span class="n">AVION</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <p><strong>R16 :</strong> <img alt="💥" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4a5.svg" title=":boom:" /> <img alt="💥" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4a5.svg" title=":boom:" /> Quel est le pilote qui a transporté le plus de passagers ?</p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>SQL
-SELECT *
-    FROM VOL INNER JOIN PILOTE
-    ON VOL.vol_pilote = PILOTE.pil_no
-    WHERE vol_no IN (SELECT vol_no
-                        FROM VOL
-                        GROUP BY vol_no
-                        HAVING (SUM(vol_NbPassagerA) + SUM (vol_NbPassagerB)) &gt;= ALL (SELECT  (SUM(vol_NbPassagerA) 
-                                                                                                + SUM vol_NbPassagerB)) 
-                                                                                        FROM VOL GROUP BY vol_no));</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">PILOTE</span>
+<span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">vol_pilote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">.</span><span class="n">pil_no</span>
+<span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">vol_no</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">vol_no</span>
+<span class="w">                        </span><span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span>
+<span class="w">                        </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">vol_no</span>
+<span class="w">                        </span><span class="k">HAVING</span><span class="w"> </span><span class="p">(</span><span class="k">SUM</span><span class="p">(</span><span class="n">vol_NbPassagerA</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">SUM</span><span class="w"> </span><span class="p">(</span><span class="n">vol_NbPassagerB</span><span class="p">))</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w">  </span><span class="p">(</span><span class="k">SUM</span><span class="p">(</span><span class="n">vol_NbPassagerA</span><span class="p">)</span><span class="w"> </span>
+<span class="w">                                                                                                </span><span class="o">+</span><span class="w"> </span><span class="k">SUM</span><span class="w"> </span><span class="n">vol_NbPassagerB</span><span class="p">))</span><span class="w"> </span>
+<span class="w">                                                                                        </span><span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">vol_no</span><span class="p">));</span>
+</code></pre></div>
 </details>
 <p><strong>R17 :</strong> Combien de pilote n’ont jamais volé pour la compagnie ?</p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>SQL
-SELECT COUNT(*)
-FROM PILOTE
-LEFT JOIN VOL
-ON PILOTE.pil_no = VOL.vol_pilote 
-WHERE vol_pilote IS NULL ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">VOL</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">.</span><span class="n">pil_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">vol_pilote</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">vol_pilote</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </details>
 <p><strong>R18 :</strong> La compagnie possède t’elle des avions inutilisés ?</p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>SQL
-SELECT *
-FROM VOL
-RIGHT JOIN AVION
-ON AVION.av_no = VOL.vol_avion
-WHERE vol_avion IS NULL;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span>
+<span class="k">RIGHT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">AVION</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">AVION</span><span class="p">.</span><span class="n">av_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">vol_avion</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">vol_avion</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</code></pre></div>
 </details>
 
 
@@ -6014,8 +6130,6 @@ WHERE vol_avion IS NULL;</code></p>
         <script src="../../../javascript/mathjax.js"></script>
       
         <script src="../../../javascript/interpreter.js"></script>
-      
-        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

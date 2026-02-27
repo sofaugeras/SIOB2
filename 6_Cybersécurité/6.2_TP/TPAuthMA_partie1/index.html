@@ -3873,14 +3873,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_cours.md" class="md-nav__link">
+      <a href="../../6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -3901,14 +3901,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_exercices.md" class="md-nav__link">
+      <a href="../../6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -3929,14 +3929,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -3957,14 +3957,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -3985,14 +3985,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_authentification.md" class="md-nav__link">
+      <a href="../../6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4013,14 +4013,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_archivage.md" class="md-nav__link">
+      <a href="../../6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5500,17 +5612,18 @@
 <ol>
 <li>Créez un dossier <code>mfa-php/</code> avec la structure :</li>
 </ol>
-<p><code>mfa-php/
-   ├─ config.php
-   ├─ schema.sql
-   ├─ register.php
-   ├─ login.php
-   ├─ mfa_setup.php
-   ├─ mfa_verify.php
-   ├─ dashboard.php
-   ├─ logout.php
-   └─ helpers/
-      └─ totp.php</code>
+<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>mfa-php/
+├─ config.php
+├─ schema.sql
+├─ register.php
+├─ login.php
+├─ mfa_setup.php
+├─ mfa_verify.php
+├─ dashboard.php
+├─ logout.php
+└─ helpers/
+   └─ totp.php
+</code></pre></div>
 2. Installez la librairie OTPHP avec Composer </p>
 <p>👉 Placez vous dans <code>mfa-php/</code> et exécutez la commande suivante : <br />
 <code>composer require spomky-labs/otphp</code></p>
@@ -5519,15 +5632,15 @@
 </ol>
 <h3 id="12-modele-de-donnees">1.2 Modèle de données<a class="headerlink" href="#12-modele-de-donnees" title="Permanent link">⚓︎</a></h3>
 <p>Créez la table <code>users</code> :</p>
-<pre><code class="language-sql">CREATE TABLE IF NOT EXISTS users (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  email VARCHAR(255) NOT NULL UNIQUE,
-  password_hash VARCHAR(255) NOT NULL,
-  mfa_secret VARCHAR(64) DEFAULT NULL,
-  mfa_enabled TINYINT(1) NOT NULL DEFAULT 0,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-</code></pre>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">password_hash</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">mfa_secret</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">mfa_enabled</span><span class="w"> </span><span class="n">TINYINT</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="n">created_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span>
+<span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span><span class="p">;</span>
+</code></pre></div>
 <h3 id="13-securite-minimale-attendue">1.3 Sécurité minimale attendue<a class="headerlink" href="#13-securite-minimale-attendue" title="Permanent link">⚓︎</a></h3>
 <ul>
 <li><strong>Hash</strong> des mots de passe avec <code>password_hash()</code> + vérif via <code>password_verify()</code>.</li>
@@ -5593,141 +5706,162 @@
 <h2 id="3-correction">3. Correction<a class="headerlink" href="#3-correction" title="Permanent link">⚓︎</a></h2>
 <details class="question">
 <summary>Corrigé &amp; Code de référence</summary>
-<p>```php
-&lt;?php
-// ===== config.php =====
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-session_start();</p>
-<p>$DB_HOST = '127.0.0.1';
-$DB_NAME = 'mfa_demo';
-$DB_USER = 'root';
-$DB_PASS = '';</p>
-<p>try {
-    <span class="arithmatex">\(pdo = new PDO("mysql:host=\)</span>DB_HOST;dbname=$DB_NAME;charset=utf8mb4", $DB_USER, $DB_PASS, [
-        PDO::ATTR_ERRMODE =&gt; PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_DEFAULT_FETCH_MODE =&gt; PDO::FETCH_ASSOC,
-    ]);
-} catch (PDOException $e) {
-    die("Erreur de connexion DB : " . $e-&gt;getMessage());
-}</p>
-<p>function require_login() {
-    if (!isset($_SESSION['user_id'])) {
-        header("Location: login.php");
-        exit;
-    }
-}</p>
-<p>function is_fully_authenticated() {
-    return isset(<span class="arithmatex">\(_SESSION['user_id']) &amp;&amp; (!(\)</span>_SESSION['mfa_required'] ?? false));
-}</p>
-<p>// ===== mfa_setup.php =====
-require <strong>DIR</strong> . '/config.php';
-require <strong>DIR</strong> . '/vendor/autoload.php';</p>
-<p>use OTPHP\TOTP;</p>
-<p>require_login();</p>
-<p>$stmt = $pdo-&gt;prepare("SELECT * FROM users WHERE id=?");
-<span class="arithmatex">\(stmt-&gt;execute([\)</span>_SESSION['user_id']]);
-$user = $stmt-&gt;fetch();</p>
-<p>if (!$user) { header("Location: login.php"); exit; }</p>
-<p>if ($user['mfa_enabled']) {
-    header("Location: dashboard.php");
-    exit;
-}</p>
-<p>if (empty($user['mfa_secret'])) {
-    $totp = TOTP::create();
-    $secret = $totp-&gt;getSecret();
-    <span class="arithmatex">\(pdo-&gt;prepare("UPDATE users SET mfa_secret=? WHERE id=?")-&gt;execute([\)</span>secret, $user['id']]);
-    $user['mfa_secret'] = $secret;
-}</p>
-<p><span class="arithmatex">\(totp = TOTP::create(\)</span>user['mfa_secret']);
-<span class="arithmatex">\(totp-&gt;setLabel(\)</span>user['email']);
-$totp-&gt;setIssuer("DemoMFA");
-$uri = $totp-&gt;getProvisioningUri();
-<span class="arithmatex">\(qr = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&amp;data=".urlencode(\)</span>uri);</p>
-<p>if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    <span class="arithmatex">\(code = trim(\)</span>_POST['code'] ?? '');
-    if (<span class="arithmatex">\(totp-&gt;verify(\)</span>code)) {
-        <span class="arithmatex">\(pdo-&gt;prepare("UPDATE users SET mfa_enabled=1 WHERE id=?")-&gt;execute([\)</span>user['id']]);
-        $_SESSION['mfa_required'] = false;
-        header("Location: dashboard.php");
-        exit;
-    } else {
-        $error = "Code invalide.";
-    }
-}
-?&gt;
-&lt;!DOCTYPE html&gt;
-<html lang="fr">
-<head><meta charset="UTF-8"><title>Setup MFA</title></head>
-<body>
-<h1>Activer MFA</h1>
-<p>Scannez ce QR Code avec Google Authenticator :</p>
-&lt;img src="<?= <span class="arithmatex">\(qr ?&gt;" alt="QR Code"&gt;&lt;br&gt;
-&lt;form method="post"&gt;
-&lt;label&gt;Entrez le code: &lt;input type="text" name="code" required&gt;&lt;/label&gt;
-&lt;button type="submit"&gt;Activer&lt;/button&gt;
-&lt;/form&gt;
-&lt;?php if (!empty(\)</span>error)) echo "<p style='color:red'>$error</p>"; ?>
-</body>
-</html></p>
-<p>// ===== mfa_verify.php =====
-require <strong>DIR</strong> . '/config.php';
-require <strong>DIR</strong> . '/vendor/autoload.php';</p>
-<p>use OTPHP\TOTP;</p>
-<p>require_login();</p>
-<p>if (!($_SESSION['mfa_required'] ?? false)) {
-    header("Location: dashboard.php");
-    exit;
-}</p>
-<p>$stmt = $pdo-&gt;prepare("SELECT * FROM users WHERE id=?");
-<span class="arithmatex">\(stmt-&gt;execute([\)</span>_SESSION['user_id']]);
-$user = $stmt-&gt;fetch();</p>
-<p>if (!<span class="arithmatex">\(user || !\)</span>user['mfa_enabled']) {
-    header("Location: login.php");
-    exit;
-}</p>
-<p><span class="arithmatex">\(totp = TOTP::create(\)</span>user['mfa_secret']);</p>
-<p>if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    <span class="arithmatex">\(code = trim(\)</span>_POST['code'] ?? '');
-    if (<span class="arithmatex">\(totp-&gt;verify(\)</span>code)) {
-        $_SESSION['mfa_required'] = false;
-        header("Location: dashboard.php");
-        exit;
-    } else {
-        <span class="arithmatex">\(error = "Code invalide.";
-    }
-}
-?&gt;
-&lt;!DOCTYPE html&gt;
-&lt;html lang="fr"&gt;
-&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;title&gt;Vérification MFA&lt;/title&gt;&lt;/head&gt;
-&lt;body&gt;
-&lt;h1&gt;Vérification du code MFA&lt;/h1&gt;
-&lt;form method="post"&gt;
-&lt;input type="text" name="code" required&gt;
-&lt;button type="submit"&gt;Vérifier&lt;/button&gt;
-&lt;/form&gt;
-&lt;?php if (!empty(\)</span>error)) echo "<p style='color:red'>$error</p>"; ?&gt;
-</body>
-</html></p>
-<p>// ===== dashboard.php =====
-require <strong>DIR</strong> . '/config.php';
-require_login();
-if (!is_fully_authenticated()) {
-    header('Location: mfa_verify.php');
-    exit;
-}
-?&gt;
-&lt;!DOCTYPE html&gt;
-<html lang="fr">
-<head><meta charset="UTF-8"><title>Dashboard</title></head>
-<body>
-<h1>Bienvenue, <?= htmlspecialchars($_SESSION['user_email'] ?? '') ?></h1>
-<p>Votre compte est protégé par la MFA TOTP ✅</p>
-<p><a href="logout.php">Se déconnecter</a></p>
-</body>
-</html>
-```</p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="c1">// ===== config.php =====</span>
+<span class="nb">ini_set</span><span class="p">(</span><span class="s1">&#39;display_errors&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="nb">error_reporting</span><span class="p">(</span><span class="k">E_ALL</span><span class="p">);</span>
+<span class="nb">session_start</span><span class="p">();</span>
+
+<span class="nv">$DB_HOST</span> <span class="o">=</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">;</span>
+<span class="nv">$DB_NAME</span> <span class="o">=</span> <span class="s1">&#39;mfa_demo&#39;</span><span class="p">;</span>
+<span class="nv">$DB_USER</span> <span class="o">=</span> <span class="s1">&#39;root&#39;</span><span class="p">;</span>
+<span class="nv">$DB_PASS</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+
+<span class="k">try</span> <span class="p">{</span>
+    <span class="nv">$pdo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s2">&quot;mysql:host=</span><span class="si">$DB_HOST</span><span class="s2">;dbname=</span><span class="si">$DB_NAME</span><span class="s2">;charset=utf8mb4&quot;</span><span class="p">,</span> <span class="nv">$DB_USER</span><span class="p">,</span> <span class="nv">$DB_PASS</span><span class="p">,</span> <span class="p">[</span>
+        <span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span> <span class="o">=&gt;</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_EXCEPTION</span><span class="p">,</span>
+        <span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_DEFAULT_FETCH_MODE</span> <span class="o">=&gt;</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_ASSOC</span><span class="p">,</span>
+    <span class="p">]);</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">PDOException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">die</span><span class="p">(</span><span class="s2">&quot;Erreur de connexion DB : &quot;</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="k">function</span> <span class="nf">require_login</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">]))</span> <span class="p">{</span>
+        <span class="nb">header</span><span class="p">(</span><span class="s2">&quot;Location: login.php&quot;</span><span class="p">);</span>
+        <span class="k">exit</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">function</span> <span class="nf">is_fully_authenticated</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;mfa_required&#39;</span><span class="p">]</span> <span class="o">??</span> <span class="k">false</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="c1">// ===== mfa_setup.php =====</span>
+<span class="k">require</span> <span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/config.php&#39;</span><span class="p">;</span>
+<span class="k">require</span> <span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/vendor/autoload.php&#39;</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">OTPHP\TOTP</span><span class="p">;</span>
+
+<span class="nx">require_login</span><span class="p">();</span>
+
+<span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM users WHERE id=?&quot;</span><span class="p">);</span>
+<span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">]]);</span>
+<span class="nv">$user</span> <span class="o">=</span> <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">();</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$user</span><span class="p">)</span> <span class="p">{</span> <span class="nb">header</span><span class="p">(</span><span class="s2">&quot;Location: login.php&quot;</span><span class="p">);</span> <span class="k">exit</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;mfa_enabled&#39;</span><span class="p">])</span> <span class="p">{</span>
+    <span class="nb">header</span><span class="p">(</span><span class="s2">&quot;Location: dashboard.php&quot;</span><span class="p">);</span>
+    <span class="k">exit</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;mfa_secret&#39;</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="nv">$totp</span> <span class="o">=</span> <span class="nx">TOTP</span><span class="o">::</span><span class="na">create</span><span class="p">();</span>
+    <span class="nv">$secret</span> <span class="o">=</span> <span class="nv">$totp</span><span class="o">-&gt;</span><span class="na">getSecret</span><span class="p">();</span>
+    <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;UPDATE users SET mfa_secret=? WHERE id=?&quot;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$secret</span><span class="p">,</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]]);</span>
+    <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;mfa_secret&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$secret</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nv">$totp</span> <span class="o">=</span> <span class="nx">TOTP</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;mfa_secret&#39;</span><span class="p">]);</span>
+<span class="nv">$totp</span><span class="o">-&gt;</span><span class="na">setLabel</span><span class="p">(</span><span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]);</span>
+<span class="nv">$totp</span><span class="o">-&gt;</span><span class="na">setIssuer</span><span class="p">(</span><span class="s2">&quot;DemoMFA&quot;</span><span class="p">);</span>
+<span class="nv">$uri</span> <span class="o">=</span> <span class="nv">$totp</span><span class="o">-&gt;</span><span class="na">getProvisioningUri</span><span class="p">();</span>
+<span class="nv">$qr</span> <span class="o">=</span> <span class="s2">&quot;https://api.qrserver.com/v1/create-qr-code/?size=200x200&amp;data=&quot;</span><span class="o">.</span><span class="nb">urlencode</span><span class="p">(</span><span class="nv">$uri</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;REQUEST_METHOD&#39;</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;POST&#39;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$code</span> <span class="o">=</span> <span class="nb">trim</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;code&#39;</span><span class="p">]</span> <span class="o">??</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$totp</span><span class="o">-&gt;</span><span class="na">verify</span><span class="p">(</span><span class="nv">$code</span><span class="p">))</span> <span class="p">{</span>
+        <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;UPDATE users SET mfa_enabled=1 WHERE id=?&quot;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]]);</span>
+        <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;mfa_required&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+        <span class="nb">header</span><span class="p">(</span><span class="s2">&quot;Location: dashboard.php&quot;</span><span class="p">);</span>
+        <span class="k">exit</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nv">$error</span> <span class="o">=</span> <span class="s2">&quot;Code invalide.&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+<span class="x">&lt;!DOCTYPE html&gt;</span>
+<span class="x">&lt;html lang=&quot;fr&quot;&gt;</span>
+<span class="x">&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Setup MFA&lt;/title&gt;&lt;/head&gt;</span>
+<span class="x">&lt;body&gt;</span>
+<span class="x">&lt;h1&gt;Activer MFA&lt;/h1&gt;</span>
+<span class="x">&lt;p&gt;Scannez ce QR Code avec Google Authenticator :&lt;/p&gt;</span>
+<span class="x">&lt;img src=&quot;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$qr</span> <span class="cp">?&gt;</span><span class="x">&quot; alt=&quot;QR Code&quot;&gt;&lt;br&gt;</span>
+<span class="x">&lt;form method=&quot;post&quot;&gt;</span>
+<span class="x">&lt;label&gt;Entrez le code: &lt;input type=&quot;text&quot; name=&quot;code&quot; required&gt;&lt;/label&gt;</span>
+<span class="x">&lt;button type=&quot;submit&quot;&gt;Activer&lt;/button&gt;</span>
+<span class="x">&lt;/form&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$error</span><span class="p">))</span> <span class="k">echo</span> <span class="s2">&quot;&lt;p style=&#39;color:red&#39;&gt;</span><span class="si">$error</span><span class="s2">&lt;/p&gt;&quot;</span><span class="p">;</span> <span class="cp">?&gt;</span>
+<span class="x">&lt;/body&gt;</span>
+<span class="x">&lt;/html&gt;</span>
+
+<span class="x">// ===== mfa_verify.php =====</span>
+<span class="x">require __DIR__ . &#39;/config.php&#39;;</span>
+<span class="x">require __DIR__ . &#39;/vendor/autoload.php&#39;;</span>
+
+<span class="x">use OTPHP\TOTP;</span>
+
+<span class="x">require_login();</span>
+
+<span class="x">if (!($_SESSION[&#39;mfa_required&#39;] ?? false)) {</span>
+<span class="x">    header(&quot;Location: dashboard.php&quot;);</span>
+<span class="x">    exit;</span>
+<span class="x">}</span>
+
+<span class="x">$stmt = $pdo-&gt;prepare(&quot;SELECT * FROM users WHERE id=?&quot;);</span>
+<span class="x">$stmt-&gt;execute([$_SESSION[&#39;user_id&#39;]]);</span>
+<span class="x">$user = $stmt-&gt;fetch();</span>
+
+<span class="x">if (!$user || !$user[&#39;mfa_enabled&#39;]) {</span>
+<span class="x">    header(&quot;Location: login.php&quot;);</span>
+<span class="x">    exit;</span>
+<span class="x">}</span>
+
+<span class="x">$totp = TOTP::create($user[&#39;mfa_secret&#39;]);</span>
+
+<span class="x">if ($_SERVER[&#39;REQUEST_METHOD&#39;] === &#39;POST&#39;) {</span>
+<span class="x">    $code = trim($_POST[&#39;code&#39;] ?? &#39;&#39;);</span>
+<span class="x">    if ($totp-&gt;verify($code)) {</span>
+<span class="x">        $_SESSION[&#39;mfa_required&#39;] = false;</span>
+<span class="x">        header(&quot;Location: dashboard.php&quot;);</span>
+<span class="x">        exit;</span>
+<span class="x">    } else {</span>
+<span class="x">        $error = &quot;Code invalide.&quot;;</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+<span class="x">?&gt;</span>
+<span class="x">&lt;!DOCTYPE html&gt;</span>
+<span class="x">&lt;html lang=&quot;fr&quot;&gt;</span>
+<span class="x">&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Vérification MFA&lt;/title&gt;&lt;/head&gt;</span>
+<span class="x">&lt;body&gt;</span>
+<span class="x">&lt;h1&gt;Vérification du code MFA&lt;/h1&gt;</span>
+<span class="x">&lt;form method=&quot;post&quot;&gt;</span>
+<span class="x">&lt;input type=&quot;text&quot; name=&quot;code&quot; required&gt;</span>
+<span class="x">&lt;button type=&quot;submit&quot;&gt;Vérifier&lt;/button&gt;</span>
+<span class="x">&lt;/form&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$error</span><span class="p">))</span> <span class="k">echo</span> <span class="s2">&quot;&lt;p style=&#39;color:red&#39;&gt;</span><span class="si">$error</span><span class="s2">&lt;/p&gt;&quot;</span><span class="p">;</span> <span class="cp">?&gt;</span>
+<span class="x">&lt;/body&gt;</span>
+<span class="x">&lt;/html&gt;</span>
+
+<span class="x">// ===== dashboard.php =====</span>
+<span class="x">require __DIR__ . &#39;/config.php&#39;;</span>
+<span class="x">require_login();</span>
+<span class="x">if (!is_fully_authenticated()) {</span>
+<span class="x">    header(&#39;Location: mfa_verify.php&#39;);</span>
+<span class="x">    exit;</span>
+<span class="x">}</span>
+<span class="x">?&gt;</span>
+<span class="x">&lt;!DOCTYPE html&gt;</span>
+<span class="x">&lt;html lang=&quot;fr&quot;&gt;</span>
+<span class="x">&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Dashboard&lt;/title&gt;&lt;/head&gt;</span>
+<span class="x">&lt;body&gt;</span>
+<span class="x">&lt;h1&gt;Bienvenue, </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;user_email&#39;</span><span class="p">]</span> <span class="o">??</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="cp">?&gt;</span><span class="x">&lt;/h1&gt;</span>
+<span class="x">&lt;p&gt;Votre compte est protégé par la MFA TOTP ✅&lt;/p&gt;</span>
+<span class="x">&lt;p&gt;&lt;a href=&quot;logout.php&quot;&gt;Se déconnecter&lt;/a&gt;&lt;/p&gt;</span>
+<span class="x">&lt;/body&gt;</span>
+<span class="x">&lt;/html&gt;</span>
+</code></pre></div>
 </details>
 
 
@@ -5892,8 +6026,6 @@ if (!is_fully_authenticated()) {
         <script src="../../../javascript/mathjax.js"></script>
       
         <script src="../../../javascript/interpreter.js"></script>
-      
-        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

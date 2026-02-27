@@ -4138,14 +4138,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_cours.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -4166,14 +4166,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_exercices.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -4194,14 +4194,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -4222,14 +4222,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -4250,14 +4250,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_authentification.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4278,14 +4278,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_archivage.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5783,7 +5895,7 @@ SQL n'est pas un langage de programmation au sens classique du terme, c'est un l
 AVION(<ins>NumAvion</ins>, NomAvion, Capacite) <br />
 VOL(<ins>NumVol</ins>, VilleDepart, VilleArrivee, HeureDepart, HeureArrivee, #NumAvion, #NumPilote) <br /></p>
 <h4 id="representation-detaillee">Représentation détaillée :<a class="headerlink" href="#representation-detaillee" title="Permanent link">⚓︎</a></h4>
-<pre><code class="language-text">PILOTE(NumPilote, NomPilote, Adresse, Salaire, Bonus) 
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>PILOTE(NumPilote, NomPilote, Adresse, Salaire, Bonus) 
     NumPilote : Clé primaire 
 AVION(NumAvion, NomAvion, Capacite) 
     NumAvion : Clé primaire
@@ -5791,7 +5903,7 @@ AVION(NumAvion, NomAvion, Capacite)
     NumVol : Clé primaire 
     NumAvion : Clé étrangère en référence à NumAvion de AVION 
     NumPilote : Clé étrangère en référence à NumPilote de PILOTE
-</code></pre>
+</code></pre></div>
 <h3 id="22-modele-physique-des-donnees">2.2 Modèle physique des Données<a class="headerlink" href="#22-modele-physique-des-donnees" title="Permanent link">⚓︎</a></h3>
 <p><img alt="MPD Base VOL" class="center" src="../data/VOL_MPD.png" width="70%" /></p>
 <h3 id="23-contenu-de-la-base-de-donnees">2.3 Contenu de la base de données<a class="headerlink" href="#23-contenu-de-la-base-de-donnees" title="Permanent link">⚓︎</a></h3>
@@ -5810,11 +5922,11 @@ indication : <br />
 <h2 id="3-la-consultation-des-donnees">3. La Consultation des données<a class="headerlink" href="#3-la-consultation-des-donnees" title="Permanent link">⚓︎</a></h2>
 <p>La <strong>consultation</strong> (ou l’interrogation) des données constitue l’opération la plus fréquemment utilisée en langage <code>SQL</code>. Elle est réalisée en utilisant la commande <code>SELECT</code>. </p>
 <p>Sa syntaxe générale est la suivante :</p>
-<pre><code class="language-SQL">SELECT [ALL] | [DISTINCT] &lt;liste des noms de colonnes&gt; | *
- FROM &lt;Liste des tables&gt;
- [WHERE &lt;condition logique&gt;] 
-</code></pre>
-<p>Note : Les instructions entre crochets [  ] sont facultatives.</p>
+<p><div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="p">[</span><span class="k">ALL</span><span class="p">]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">[</span><span class="k">DISTINCT</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="n">liste</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">noms</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">colonnes</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">*</span>
+<span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Liste</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">tables</span><span class="o">&gt;</span>
+<span class="w"> </span><span class="p">[</span><span class="k">WHERE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">condition</span><span class="w"> </span><span class="n">logique</span><span class="o">&gt;</span><span class="p">]</span><span class="w"> </span>
+</code></pre></div>
+Note : Les instructions entre crochets [  ] sont facultatives.</p>
 <h3 id="31-la-projection">3.1 La projection<a class="headerlink" href="#31-la-projection" title="Permanent link">⚓︎</a></h3>
 <p>Cette opération permet de sélectionner une <strong>partie</strong> des attributs d'une ou plusieurs tables. </p>
 <div class="admonition question">
@@ -5866,9 +5978,9 @@ indication : <br />
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT * 
-FROM AVION ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">AVION</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5917,9 +6029,9 @@ FROM AVION ;</code></p>
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT nomAvion, capacite
-FROM AVION ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomAvion</span><span class="p">,</span><span class="w"> </span><span class="n">capacite</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">AVION</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5964,9 +6076,9 @@ Ainsi, si dans le résultat plusieurs tuples sont identiques, un seul sera conse
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT DISTINCT nomAvion, capacité
-FROM AVION ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">nomAvion</span><span class="p">,</span><span class="w"> </span><span class="n">capacité</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">AVION</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6057,10 +6169,10 @@ Ces caractères peuvent être différents suivant le SGBDR utilisé. Il faut se 
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT nomAvion, capacite
-FROM AVION
-WHERE capacite &gt;= 100 ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomAvion</span><span class="p">,</span><span class="w"> </span><span class="n">capacite</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">AVION</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">capacite</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6089,10 +6201,10 @@ WHERE capacite &gt;= 100 ;</code></p>
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT nomPilote, bonus, Salaire
-FROM PILOTE
-WHERE bonus &gt; salaire ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span><span class="p">,</span><span class="w"> </span><span class="n">bonus</span><span class="p">,</span><span class="w"> </span><span class="n">Salaire</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">bonus</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">salaire</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6131,10 +6243,10 @@ WHERE bonus &gt; salaire ;</code></p>
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT nomPilote, bonus
-FROM PILOTE
-WHERE bonus BETWEEN 800 AND 1000 ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span><span class="p">,</span><span class="w"> </span><span class="n">bonus</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">bonus</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="mi">800</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6162,10 +6274,10 @@ WHERE bonus BETWEEN 800 AND 1000 ;</code></p>
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT nomPilote
-FROM PILOTE
-WHERE nomPilote LIKE "DUP%" ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">nomPilote</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;DUP%&quot;</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6199,11 +6311,10 @@ WHERE nomPilote LIKE "DUP%" ;</code></p>
 </table>
 </div>
 <div class="tabbed-block">
-<p>```SQL
-SELECT numVol
-FROM VOL
-WHERE villeArrivee IN ('GILLOT','MAURICE') ;</p>
-<p>```</p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">numVol</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">villeArrivee</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;GILLOT&#39;</span><span class="p">,</span><span class="s1">&#39;MAURICE&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6245,10 +6356,10 @@ Ainsi, les requêtes R6 et R8 peuvent être écrites d'une autre façon :</p>
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT nomPilote, bonus
-FROM PILOTE
-WHERE bonus &gt;= 800 AND bonus &lt;= 1000 ;</code>
+<p><div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span><span class="p">,</span><span class="w"> </span><span class="n">bonus</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">bonus</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">800</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">bonus</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 note : le champ de restriction doit absolument être répété.</p>
 </div>
 </div>
@@ -6283,10 +6394,10 @@ note : le champ de restriction doit absolument être répété.</p>
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT numVol
-FROM VOL
-WHERE villeArrivee = 'GILLOT' OR villeArrivee ='MAURICE';</code>
+<p><div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">numVol</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">villeArrivee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;GILLOT&#39;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">villeArrivee</span><span class="w"> </span><span class="o">=</span><span class="s1">&#39;MAURICE&#39;</span><span class="p">;</span>
+</code></pre></div>
 note : le champ de restriction doit absolument être répété.
 note 2 : On ne peut pas mettre l'opérateur <code>AND</code> ici car une ville ne peut pas en même temps être GILLOT <strong>et</strong> Maurice.</p>
 </div>
@@ -6325,18 +6436,18 @@ note 2 : On ne peut pas mettre l'opérateur <code>AND</code> ici car une ville n
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT nomPilote, bonus, salaire, adresse
-FROM PILOTE
-WHERE (bonus &lt;800) OR
-      (salaire &lt; 3500 AND adresse LIKE "%Paris");</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span><span class="p">,</span><span class="w"> </span><span class="n">bonus</span><span class="p">,</span><span class="w"> </span><span class="n">salaire</span><span class="p">,</span><span class="w"> </span><span class="n">adresse</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">bonus</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">800</span><span class="p">)</span><span class="w"> </span><span class="k">OR</span>
+<span class="w">      </span><span class="p">(</span><span class="n">salaire</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3500</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">adresse</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%Paris&quot;</span><span class="p">);</span>
+</code></pre></div>
 <p>Remarques : 
 - L’opérateur <code>AND</code> est prioritaire par rapport à l’opérateur <code>OR</code>. </p>
-<p><code>SQL
-SELECT nomPilote, bonus, salaire, adresse
-FROM PILOTE
-WHERE bonus &lt;800 OR
-      salaire &lt; 3500 AND adresse LIKE "%Paris";</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span><span class="p">,</span><span class="w"> </span><span class="n">bonus</span><span class="p">,</span><span class="w"> </span><span class="n">salaire</span><span class="p">,</span><span class="w"> </span><span class="n">adresse</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">bonus</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">800</span><span class="w"> </span><span class="k">OR</span>
+<span class="w">      </span><span class="n">salaire</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3500</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">adresse</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%Paris&quot;</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6363,10 +6474,10 @@ WHERE bonus &lt;800 OR
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT nomPilote, bonus
-FROM PILOTE
-WHERE (adresse LIKE "%STE MARIE" OR adresse LIKE "%ST DENIS") AND bonus &gt; 1000 ;</code>
+<p><div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span><span class="p">,</span><span class="w"> </span><span class="n">bonus</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">adresse</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%STE MARIE&quot;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">adresse</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%ST DENIS&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">bonus</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 note : le parenthésage est ici obligatoire.</p>
 </div>
 </div>
@@ -6399,10 +6510,10 @@ note : le parenthésage est ici obligatoire.</p>
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT NumPilote, NomPilote, bonus
-FROM PILOTE
-WHERE bonus IS NULL ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NumPilote</span><span class="p">,</span><span class="w"> </span><span class="n">NomPilote</span><span class="p">,</span><span class="w"> </span><span class="n">bonus</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">bonus</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6465,10 +6576,10 @@ La clause <code>WHERE</code> contiendra les éventuelles restrictions. <br />
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT NumVol, NomAvion
-FROM VOL INNER JOIN AVION
-ON VOL.numAvion = AVION.numAvion ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NumVol</span><span class="p">,</span><span class="w"> </span><span class="n">NomAvion</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">AVION</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">numAvion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AVION</span><span class="p">.</span><span class="n">numAvion</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 <p><ins>note :</ins> dans notre requête, <code>numAvion</code> désigne deux champs différents dans la base <code>VOL</code>. Il est nécessaire de préciser celui dont on parle, en préfixant le champ avec le nom de sa table.</p>
 <p>Si ce n'est pas fait, le moteur SQL provoquera une erreur <code>#1052 - Champ: 'numAvion' dans on clause est ambigu</code></p>
 </div>
@@ -6495,11 +6606,11 @@ ON VOL.numAvion = AVION.numAvion ;</code></p>
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT nomPilote
-FROM PILOTE INNER JOIN VOL
-ON PILOTE.numPilote = VOL.numPilote
-WHERE numVol = 'AF7684' ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">VOL</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">.</span><span class="n">numPilote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">numPilote</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">numVol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;AF7684&#39;</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6527,13 +6638,13 @@ WHERE numVol = 'AF7684' ;</code></p>
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT nomPilote
-FROM PILOTE INNER JOIN VOL
-ON PILOTE.numPilote = VOL.numPilote
-INNER JOIN AVION
-ON AVION.numAvion = VOL.numAvion
-WHERE nomAvion LIKE "%747-400%" ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">VOL</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">.</span><span class="n">numPilote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">numPilote</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">AVION</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">AVION</span><span class="p">.</span><span class="n">numAvion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">numAvion</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">nomAvion</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%747-400%&quot;</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6586,10 +6697,10 @@ WHERE nomAvion LIKE "%747-400%" ;</code></p>
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT NumVol, NomAvion
-FROM VOL, AVION
-WHERE VOL.numAvion = AVION.numAvion ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NumVol</span><span class="p">,</span><span class="w"> </span><span class="n">NomAvion</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span><span class="p">,</span><span class="w"> </span><span class="n">AVION</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">numAvion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AVION</span><span class="p">.</span><span class="n">numAvion</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6614,11 +6725,11 @@ WHERE VOL.numAvion = AVION.numAvion ;</code></p>
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT nomPilote
-FROM PILOTE,VOL
-WHERE PILOTE.numPilote = VOL.numPilote 
-    AND numVol = 'AF7684';</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">,</span><span class="n">VOL</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">.</span><span class="n">numPilote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">numPilote</span><span class="w"> </span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">numVol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;AF7684&#39;</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6646,11 +6757,11 @@ WHERE PILOTE.numPilote = VOL.numPilote
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT nomPilote
-FROM PILOTE , VOL
-WHERE PILOTE.numPilote = VOL.numPilote
-    AND nomAvion LIKE "%747-400%" ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">VOL</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">.</span><span class="n">numPilote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">numPilote</span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">nomAvion</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%747-400%&quot;</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6658,9 +6769,9 @@ WHERE PILOTE.numPilote = VOL.numPilote
 <h3 id="34-tri-des-resultats">3.4 Tri des résultats<a class="headerlink" href="#34-tri-des-resultats" title="Permanent link">⚓︎</a></h3>
 <p><img alt="order by" class="center" src="../data/orderBy.jpg" width="50%" /></p>
 <p>Les tuples constituant le résultat d’une requête sont obtenus dans un ordre indéterminé dépendant des mécanismes internes du SGBDR utilisé. On peut demander en fin d’instruction SELECT que le résultat soit ordonné de manière <strong>ascendante</strong> ou <strong>descendante</strong> suivant un ou plusieurs attributs.<br />
-Les critères de <strong>tri</strong> sont indiqués dans la clause ORDER BY dont la syntaxe est la suivante :</p>
-<pre><code class="language-SQL">ORDER BY &lt;Attribut 1&gt; [ASC/DESC], &lt;Attribut 2&gt; [ASC/DESC], … 
-</code></pre>
+Les critères de <strong>tri</strong> sont indiqués dans la clause ORDER BY dont la syntaxe est la suivante :
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Attribut</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="w"> </span><span class="p">[</span><span class="k">ASC</span><span class="o">/</span><span class="k">DESC</span><span class="p">],</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Attribut</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="p">[</span><span class="k">ASC</span><span class="o">/</span><span class="k">DESC</span><span class="p">],</span><span class="w"> </span><span class="err">…</span><span class="w"> </span>
+</code></pre></div></p>
 <p>Le tri se fait tout d’abord selon le premier attribut, puis les tuples ayant une même valeur pour ce premier attribut sont classées selon le deuxième attribut, etc… Par attribut, le tri peut être ascendant (ASC par défaut) ou descendant (DESC). </p>
 <div class="admonition question">
 <p class="admonition-title">R14</p>
@@ -6711,10 +6822,10 @@ Les critères de <strong>tri</strong> sont indiqués dans la clause ORDER BY don
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT numAvion, NomAvion, capacite
-FROM AVION
-ORDER BY nomAvion ASC; /*ASC est facultatif, car c est la valeur par defaut*/</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">numAvion</span><span class="p">,</span><span class="w"> </span><span class="n">NomAvion</span><span class="p">,</span><span class="w"> </span><span class="n">capacite</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">AVION</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">nomAvion</span><span class="w"> </span><span class="k">ASC</span><span class="p">;</span><span class="w"> </span><span class="cm">/*ASC est facultatif, car c est la valeur par defaut*/</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6761,11 +6872,11 @@ ORDER BY nomAvion ASC; /*ASC est facultatif, car c est la valeur par defaut*/</c
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT NomPilote, bonus
-FROM PILOTE
-WHERE bonus IS NOT NULL
-ORDER BY bonus DESC ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NomPilote</span><span class="p">,</span><span class="w"> </span><span class="n">bonus</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">bonus</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">bonus</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6797,23 +6908,23 @@ ORDER BY bonus DESC ;</code></p>
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT nomPilote
-FROM PILOTE
-WHERE (salaire + bonus) &gt; 4200 OR salaire &gt; 4200 ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">salaire</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">bonus</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">4200</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">salaire</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">4200</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
 </div>
 <h4 id="352-les-fonctions-integrees">3.5.2 Les fonctions intégrées<a class="headerlink" href="#352-les-fonctions-integrees" title="Permanent link">⚓︎</a></h4>
-<p>Les fonctions suivantes du langage SQL effectuent un calcul sur des ensembles de valeurs. <br /></p>
-<pre><code class="language-SQL">AVG(&lt;Attribut&gt;) : Moyenne arithmétique 
-SUM(&lt;Attribut&gt;) : Somme arithmétique 
-MAX(&lt;Attribut&gt;) : Valeur maximum 
-MIN(&lt;Attribut&gt;) : Valeur minimum 
-COUNT(*), COUNT(&lt;Attribut&gt;), COUNT(DISTINCT &lt;Attribut&gt;) : Nombre de tuples
-</code></pre>
-<p>Ils s'utilisent <mark>EXCLUSIVEMENT</mark> dans la clause <code>SELECT</code> (ou dans la clause <code>HAVING</code> que l'on verra un peu plus tard)</p>
+<p>Les fonctions suivantes du langage SQL effectuent un calcul sur des ensembles de valeurs. <br />
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">AVG</span><span class="p">(</span><span class="o">&lt;</span><span class="n">Attribut</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Moyenne</span><span class="w"> </span><span class="n">arithmétique</span><span class="w"> </span>
+<span class="k">SUM</span><span class="p">(</span><span class="o">&lt;</span><span class="n">Attribut</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Somme</span><span class="w"> </span><span class="n">arithmétique</span><span class="w"> </span>
+<span class="k">MAX</span><span class="p">(</span><span class="o">&lt;</span><span class="n">Attribut</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Valeur</span><span class="w"> </span><span class="n">maximum</span><span class="w"> </span>
+<span class="k">MIN</span><span class="p">(</span><span class="o">&lt;</span><span class="n">Attribut</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Valeur</span><span class="w"> </span><span class="n">minimum</span><span class="w"> </span>
+<span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">&lt;</span><span class="n">Attribut</span><span class="o">&gt;</span><span class="p">),</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Attribut</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Nombre</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">tuples</span>
+</code></pre></div>
+Ils s'utilisent <mark>EXCLUSIVEMENT</mark> dans la clause <code>SELECT</code> (ou dans la clause <code>HAVING</code> que l'on verra un peu plus tard)</p>
 <div class="admonition question">
 <p class="admonition-title">R17</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="23:2"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><input id="__tabbed_23_2" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="__tabbed_23_1">Enoncé</label><label for="__tabbed_23_2">Requête</label></div>
@@ -6834,9 +6945,9 @@ COUNT(*), COUNT(&lt;Attribut&gt;), COUNT(DISTINCT &lt;Attribut&gt;) : Nombre de 
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT AVG(salaire)
-FROM PILOTE ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">salaire</span><span class="p">)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6862,9 +6973,9 @@ FROM PILOTE ;</code></p>
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT MAX(salaire) AS plusGrosSalaire
-FROM PILOTE ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">salaire</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">plusGrosSalaire</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6889,10 +7000,10 @@ FROM PILOTE ;</code></p>
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT COUNT(*)
-FROM AVION
-WHERE capacite &gt; 100 ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">AVION</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">capacite</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6917,9 +7028,9 @@ WHERE capacite &gt; 100 ;</code></p>
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT COUNT(*)
-FROM AVION ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">AVION</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6945,9 +7056,9 @@ FROM AVION ;</code></p>
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT  COUNT(DISTINCT nomAvion)
-FROM AVION ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">nomAvion</span><span class="p">)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">AVION</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6972,9 +7083,9 @@ FROM AVION ;</code></p>
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT COUNT(bonus)/COUNT(*)x100
-FROM PILOTE ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">bonus</span><span class="p">)</span><span class="o">/</span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="n">x100</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -7015,10 +7126,10 @@ FROM PILOTE ;</code></p>
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT VilleDepart, COUNT(*) AS nbVols
-FROM VOL 
-GROUP BY VilleDepart ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">VilleDepart</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nbVols</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span><span class="w"> </span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">VilleDepart</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -7057,11 +7168,11 @@ GROUP BY VilleDepart ;</code></p>
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT VilleDepart, SUM(capacite) AS NbPlaces
-FROM VOL INNER JOIN AVION
-ON VOL.numAvion = AVION.numAvion
-GROUP BY VilleDepart ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">VilleDepart</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">capacite</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">NbPlaces</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">AVION</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">numAvion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AVION</span><span class="p">.</span><span class="n">numAvion</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">VilleDepart</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -7098,11 +7209,11 @@ GROUP BY VilleDepart ;</code></p>
 </table>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT VilleDepart, COUNT(*) AS nbVols
-FROM VOL 
-GROUP BY VilleDepart 
-HAVING COUNT(*) &gt;= 2 ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">VilleDepart</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nbVols</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span><span class="w"> </span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">VilleDepart</span><span class="w"> </span>
+<span class="k">HAVING</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -7110,11 +7221,11 @@ HAVING COUNT(*) &gt;= 2 ;</code></p>
 <h2 id="4-mise-a-jour-des-donnees">4. Mise à jour des données<a class="headerlink" href="#4-mise-a-jour-des-donnees" title="Permanent link">⚓︎</a></h2>
 <h3 id="41-ajout-de-donnees">4.1 Ajout de données<a class="headerlink" href="#41-ajout-de-donnees" title="Permanent link">⚓︎</a></h3>
 <p>L'<strong>insertion</strong> de nouvelles données dans une table se fait grâce à la commande 'INSERT'. <br />
-Sa syntaxe générale est la suivante : </p>
-<pre><code class="language-SQL">INSERT INTO Nom_de_la_table ([Attr1],[Attr2], …)
-VALUES (Valeur1,Valeur2,Valeur3,...) 
-</code></pre>
-<p><ins>Notes :</ins><br /> 
+Sa syntaxe générale est la suivante : 
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Nom_de_la_table</span><span class="w"> </span><span class="p">([</span><span class="n">Attr1</span><span class="p">],[</span><span class="n">Attr2</span><span class="p">],</span><span class="w"> </span><span class="err">…</span><span class="p">)</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="n">Valeur1</span><span class="p">,</span><span class="n">Valeur2</span><span class="p">,</span><span class="n">Valeur3</span><span class="p">,...)</span><span class="w"> </span>
+</code></pre></div>
+<ins>Notes :</ins><br /> 
 - Les données sont affectées aux colonnes dans l'ordre dans lequel elles ont été créées. <br />
 - Lorsque les valeurs sont des chaînes de caractères, il faut les délimiter par des guillemets. <br /></p>
 <div class="admonition question">
@@ -7125,19 +7236,19 @@ VALUES (Valeur1,Valeur2,Valeur3,...)
 <p>Ajouter l’avion suivant dans la base : N°7 ; Modèle A319 ; capacité 100</p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-INSERT INTO AVION(numAvion, NomAvion, capacite)
-VALUES (7 , "A319", 100) ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">AVION</span><span class="p">(</span><span class="n">numAvion</span><span class="p">,</span><span class="w"> </span><span class="n">NomAvion</span><span class="p">,</span><span class="w"> </span><span class="n">capacite</span><span class="p">)</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">7</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;A319&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
 </div>
 <h3 id="42-modification-de-donnees">4.2 Modification de données<a class="headerlink" href="#42-modification-de-donnees" title="Permanent link">⚓︎</a></h3>
 <p>La <strong>modification</strong> de données consiste à modifier des occurrences dans une table à l’aide de la commande <code>UPDATE</code>. La modification à effectuer est précisée après la clause <code>SET</code>.<br />
-Sa syntaxe générale est la suivante : <br /></p>
-<pre><code class="language-SQL">UPDATE Nom_de_la_table 
-SET Attribut1 = Valeur_Ou_Expression1 [, Attribut2 = Val_Ou_Expr2]... [WHERE Conditions] 
-</code></pre>
+Sa syntaxe générale est la suivante : <br />
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">Nom_de_la_table</span><span class="w"> </span>
+<span class="k">SET</span><span class="w"> </span><span class="n">Attribut1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Valeur_Ou_Expression1</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="n">Attribut2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Val_Ou_Expr2</span><span class="p">]...</span><span class="w"> </span><span class="p">[</span><span class="k">WHERE</span><span class="w"> </span><span class="n">Conditions</span><span class="p">]</span><span class="w"> </span>
+</code></pre></div></p>
 <p><ins>Note :</ins><br /> 
 - Valeur_Ou_Expression peut être une expression algébrique, une constante ou un résultat provenant d'une clause <code>SELECT</code>. <br /> 
 - La clause facultative <code>WHERE</code> permet de préciser les tuples sur lesquels la mise à jour aura lieu. L'oublier, sera alors dommageable. Toutes les valeurs de cet attribut serait mis à jour ! Et je vous rappelle qu'il n'existe pas de <code>CTRL+Z</code> en base de données !<br /> </p>
@@ -7149,9 +7260,9 @@ SET Attribut1 = Valeur_Ou_Expression1 [, Attribut2 = Val_Ou_Expr2]... [WHERE Con
 <p>Appliquer une augmentation de 5% sur le salaire de tous les pilotes </p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-UPDATE PILOTE
-SET salaire = salaire * 1.05 ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">PILOTE</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">salaire</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">salaire</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1</span><span class="p">.</span><span class="mi">05</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -7164,15 +7275,14 @@ SET salaire = salaire * 1.05 ;</code></p>
 <p>Pour tous les pilotes (y compris sans bonus), majorer de 25€ les bonus inférieurs à 1000€</p>
 </div>
 <div class="tabbed-block">
-<p>```SQL
-UPDATE PILOTE
-SET bonus = bonus + 25
-WHERE bonus &lt; 1000 ;
-/*ET */
-UPDATE PILOTE
-SET bonus = 25
-WHERE bonus IS NULL ;</p>
-<p>```
+<p><div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">PILOTE</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">bonus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bonus</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">25</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">bonus</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="p">;</span>
+<span class="cm">/*ET */</span>
+<span class="k">UPDATE</span><span class="w"> </span><span class="n">PILOTE</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">bonus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">bonus</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 Cette mise à jour nécessite deux requêtes pour pouvoir prendre en compte les bonus ayant pour valeur « Null »<br />
 <ins>Remarque :</ins> Dans le cas présent, il était plus judicieux d’affecter au bonus une valeur nulle (zéro) par défaut.</p>
 </div>
@@ -7183,10 +7293,10 @@ Cette mise à jour nécessite deux requêtes pour pouvoir prendre en compte les 
 <p>La <strong>suppression</strong> de données dans une table se fait grâce à la commande DELETE. <br />
 - La clause FROM précise la table sur laquelle la suppression s'effectue. <br />
 - La clause WHERE précise l'ensemble des lignes qui seront supprimées. <br />
-Sa syntaxe générale est la suivante : <br /></p>
-<pre><code class="language-SQL">DELETE FROM Nom_de_la_table 
-[WHERE Condition] 
-</code></pre>
+Sa syntaxe générale est la suivante : <br />
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Nom_de_la_table</span><span class="w"> </span>
+<span class="p">[</span><span class="k">WHERE</span><span class="w"> </span><span class="n">Condition</span><span class="p">]</span><span class="w"> </span>
+</code></pre></div></p>
 <p><ins>Note :</ins> <br />
 - La commande <code>DELETE</code> est à utiliser avec précaution car l'opération de suppression est irréversible.<br />
  - Il préférable et surtout plus prudent de s'assurer dans un premier temps que les lignes sélectionnées sont bien les lignes que l'on désire supprimer ! <br />
@@ -7200,9 +7310,9 @@ Rd : « »</p>
 <p>Supprimer l’avion ajouté par la requête Ra</p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-DELETE FROM AVION
-WHERE numAvion = 7 ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">AVION</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">numAvion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -7371,8 +7481,6 @@ WHERE numAvion = 7 ;</code></p>
         <script src="../../../javascript/mathjax.js"></script>
       
         <script src="../../../javascript/interpreter.js"></script>
-      
-        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

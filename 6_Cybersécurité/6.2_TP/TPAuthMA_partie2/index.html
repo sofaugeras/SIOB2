@@ -3873,14 +3873,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_cours.md" class="md-nav__link">
+      <a href="../../6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -3901,14 +3901,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_exercices.md" class="md-nav__link">
+      <a href="../../6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -3929,14 +3929,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -3957,14 +3957,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -3985,14 +3985,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_authentification.md" class="md-nav__link">
+      <a href="../../6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4013,14 +4013,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_archivage.md" class="md-nav__link">
+      <a href="../../6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5504,11 +5616,11 @@
 👉 Vous devez <strong>protéger la page de login</strong> contre les attaques par force brute.</p>
 <h2 id="2-travail-guide">2. Travail guidé<a class="headerlink" href="#2-travail-guide" title="Permanent link">⚓︎</a></h2>
 <p>1.<strong>Modifier la base de données <code>users</code></strong> pour ajouter des colonnes de sécurité :</p>
-<pre><code class="language-sql">   ALTER TABLE users
-   ADD failed_attempts INT NOT NULL DEFAULT 0,
-   ADD last_failed_at TIMESTAMP NULL DEFAULT NULL,
-   ADD lock_until TIMESTAMP NULL DEFAULT NULL;
-</code></pre>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="w">   </span><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span>
+<span class="w">   </span><span class="k">ADD</span><span class="w"> </span><span class="n">failed_attempts</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">   </span><span class="k">ADD</span><span class="w"> </span><span class="n">last_failed_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">   </span><span class="k">ADD</span><span class="w"> </span><span class="n">lock_until</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</code></pre></div>
 <p>2.<strong>Mettre à jour <code>login.php</code></strong> pour :</p>
 <ul>
 <li>Vérifier si le compte est verrouillé (<code>lock_until &gt; NOW()</code>) → refuser la connexion.</li>
@@ -5658,72 +5770,71 @@
 <details class="question">
 <summary>Corrigé</summary>
 <p><strong>Exemple <code>login.php</code> (simplifié avec anti-bruteforce)</strong></p>
-<p>```php
-<?php require __DIR__ . '/config.php'; ?>
-&lt;!DOCTYPE html&gt;
-<html lang="fr">
-<head><meta charset="UTF-8"><title>Connexion sécurisée</title></head>
-<body>
-<h1>Connexion</h1>
-&lt;?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-    $password = <span class="arithmatex">\(_POST['password'] ?? '';
-    if (\)</span>email &amp;&amp; $password) {
-        $stmt = $pdo-&gt;prepare('SELECT * FROM users WHERE email = ?');
-        <span class="arithmatex">\(stmt-&gt;execute([\)</span>email]);
-        $user = $stmt-&gt;fetch();</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>    if ($user) {
-        // Vérifier si verrouillé
-        if ($user[&#39;lock_until&#39;] &amp;&amp; strtotime($user[&#39;lock_until&#39;]) &gt; time()) {
-            echo &#39;&lt;p style=&quot;color:red&quot;&gt;Compte temporairement verrouillé. Réessayez plus tard.&lt;/p&gt;&#39;;
-        } elseif (password_verify($password, $user[&#39;password_hash&#39;])) {
-            // Succès → reset compteur
-            $pdo-&gt;prepare(&#39;UPDATE users SET failed_attempts=0, lock_until=NULL WHERE id=?&#39;)
-                -&gt;execute([$user[&#39;id&#39;]]);
-            $_SESSION[&#39;user_id&#39;] = $user[&#39;id&#39;];
-            $_SESSION[&#39;user_email&#39;] = $user[&#39;email&#39;];
-            if ($user[&#39;mfa_enabled&#39;]) {
-                $_SESSION[&#39;mfa_required&#39;] = true;
-                header(&#39;Location: mfa_verify.php&#39;);
-            } else {
-                header(&#39;Location: mfa_setup.php&#39;);
-            }
-            exit;
-        } else {
-            // Échec → incrémenter
-            $failed = $user[&#39;failed_attempts&#39;] + 1;
-            $pdo-&gt;prepare(&#39;UPDATE users SET failed_attempts=?, last_failed_at=NOW() WHERE id=?&#39;)
-                -&gt;execute([$failed, $user[&#39;id&#39;]]);
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="k">require</span> <span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/config.php&#39;</span><span class="p">;</span> <span class="cp">?&gt;</span>
+<span class="x">&lt;!DOCTYPE html&gt;</span>
+<span class="x">&lt;html lang=&quot;fr&quot;&gt;</span>
+<span class="x">&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Connexion sécurisée&lt;/title&gt;&lt;/head&gt;</span>
+<span class="x">&lt;body&gt;</span>
+<span class="x">&lt;h1&gt;Connexion&lt;/h1&gt;</span>
+<span class="cp">&lt;?php</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;REQUEST_METHOD&#39;</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;POST&#39;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$email</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="nx">FILTER_VALIDATE_EMAIL</span><span class="p">);</span>
+    <span class="nv">$password</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]</span> <span class="o">??</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$email</span> <span class="o">&amp;&amp;</span> <span class="nv">$password</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM users WHERE email = ?&#39;</span><span class="p">);</span>
+        <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$email</span><span class="p">]);</span>
+        <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">();</span>
 
-            if ($failed &gt;= 10) {
-                // Verrouillage 15 minutes
-                $pdo-&gt;prepare(&#39;UPDATE users SET lock_until=? WHERE id=?&#39;)
-                    -&gt;execute([date(&#39;Y-m-d H:i:s&#39;, time() + 15*60), $user[&#39;id&#39;]]);
-                echo &#39;&lt;p style=&quot;color:red&quot;&gt;Compte verrouillé 15 minutes.&lt;/p&gt;&#39;;
-            } else {
-                // Délai progressif (anti-bruteforce)
-                $delay = max(0, $failed - 4); // à partir du 5e échec
-                if ($delay &gt; 0) sleep($delay);
-                echo &#39;&lt;p style=&quot;color:red&quot;&gt;Identifiants incorrects.&lt;/p&gt;&#39;;
-            }
-        }
-    } else {
-        // Compte inexistant → message neutre
-        echo &#39;&lt;p style=&quot;color:red&quot;&gt;Identifiants incorrects.&lt;/p&gt;&#39;;
-    }
-}
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$user</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// Vérifier si verrouillé</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;lock_until&#39;</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nb">strtotime</span><span class="p">(</span><span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;lock_until&#39;</span><span class="p">])</span> <span class="o">&gt;</span> <span class="nb">time</span><span class="p">())</span> <span class="p">{</span>
+                <span class="k">echo</span> <span class="s1">&#39;&lt;p style=&quot;color:red&quot;&gt;Compte temporairement verrouillé. Réessayez plus tard.&lt;/p&gt;&#39;</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nb">password_verify</span><span class="p">(</span><span class="nv">$password</span><span class="p">,</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;password_hash&#39;</span><span class="p">]))</span> <span class="p">{</span>
+                <span class="c1">// Succès → reset compteur</span>
+                <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s1">&#39;UPDATE users SET failed_attempts=0, lock_until=NULL WHERE id=?&#39;</span><span class="p">)</span>
+                    <span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]]);</span>
+                <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">];</span>
+                <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;user_email&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">];</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;mfa_enabled&#39;</span><span class="p">])</span> <span class="p">{</span>
+                    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;mfa_required&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+                    <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Location: mfa_verify.php&#39;</span><span class="p">);</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Location: mfa_setup.php&#39;</span><span class="p">);</span>
+                <span class="p">}</span>
+                <span class="k">exit</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="c1">// Échec → incrémenter</span>
+                <span class="nv">$failed</span> <span class="o">=</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;failed_attempts&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+                <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s1">&#39;UPDATE users SET failed_attempts=?, last_failed_at=NOW() WHERE id=?&#39;</span><span class="p">)</span>
+                    <span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$failed</span><span class="p">,</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]]);</span>
+
+                <span class="k">if</span> <span class="p">(</span><span class="nv">$failed</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="c1">// Verrouillage 15 minutes</span>
+                    <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s1">&#39;UPDATE users SET lock_until=? WHERE id=?&#39;</span><span class="p">)</span>
+                        <span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nb">date</span><span class="p">(</span><span class="s1">&#39;Y-m-d H:i:s&#39;</span><span class="p">,</span> <span class="nb">time</span><span class="p">()</span> <span class="o">+</span> <span class="mi">15</span><span class="o">*</span><span class="mi">60</span><span class="p">),</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]]);</span>
+                    <span class="k">echo</span> <span class="s1">&#39;&lt;p style=&quot;color:red&quot;&gt;Compte verrouillé 15 minutes.&lt;/p&gt;&#39;</span><span class="p">;</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="c1">// Délai progressif (anti-bruteforce)</span>
+                    <span class="nv">$delay</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nv">$failed</span> <span class="o">-</span> <span class="mi">4</span><span class="p">);</span> <span class="c1">// à partir du 5e échec</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="nv">$delay</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="nb">sleep</span><span class="p">(</span><span class="nv">$delay</span><span class="p">);</span>
+                    <span class="k">echo</span> <span class="s1">&#39;&lt;p style=&quot;color:red&quot;&gt;Identifiants incorrects.&lt;/p&gt;&#39;</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="c1">// Compte inexistant → message neutre</span>
+            <span class="k">echo</span> <span class="s1">&#39;&lt;p style=&quot;color:red&quot;&gt;Identifiants incorrects.&lt;/p&gt;&#39;</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+<span class="x">&lt;form method=&quot;post&quot;&gt;</span>
+<span class="x">    &lt;label&gt;Email &lt;input type=&quot;email&quot; name=&quot;email&quot; required&gt;&lt;/label&gt;&lt;br&gt;</span>
+<span class="x">    &lt;label&gt;Mot de passe &lt;input type=&quot;password&quot; name=&quot;password&quot; required&gt;&lt;/label&gt;&lt;br&gt;</span>
+<span class="x">    &lt;button type=&quot;submit&quot;&gt;Se connecter&lt;/button&gt;</span>
+<span class="x">&lt;/form&gt;</span>
+<span class="x">&lt;p&gt;&lt;a href=&quot;register.php&quot;&gt;Créer un compte&lt;/a&gt;&lt;/p&gt;</span>
+<span class="x">&lt;/body&gt;&lt;/html&gt;</span>
 </code></pre></div>
-<p>}
-?&gt;
-<form method="post">
-    <label>Email <input type="email" name="email" required></label><br>
-    <label>Mot de passe <input type="password" name="password" required></label><br>
-    <button type="submit">Se connecter</button>
-</form>
-<p><a href="register.php">Créer un compte</a></p>
-</body></html>
-```</p>
 </details>
 
 
@@ -5888,8 +5999,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <script src="../../../javascript/mathjax.js"></script>
       
         <script src="../../../javascript/interpreter.js"></script>
-      
-        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

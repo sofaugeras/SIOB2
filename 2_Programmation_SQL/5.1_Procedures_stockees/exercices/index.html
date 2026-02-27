@@ -3997,14 +3997,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_cours.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -4025,14 +4025,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_exercices.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -4053,14 +4053,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -4081,14 +4081,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -4109,14 +4109,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_authentification.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4137,14 +4137,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_archivage.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5614,104 +5726,106 @@
 <p>Créer une procédure stockée nommée <code>SP_ListeArticles</code> qui affiche la liste des articles d'une commande dont le numéro est donné en paramètre </p>
 <details class="question">
 <summary>Correction</summary>
-<p>```sql
-Create Procedure SP_ListeArticles @NumCom int as Select A.NumArt, NomArt, PUArt, QteCommandee From Article A, LigneCommande LC
-Where LC.NumArt=A.NumArt and LC.NumCom=@NumCom</p>
-<p>--Exécuter cette procédure pour afficher la liste des articles de la commande numéro 1 :
-Exec SP_ListeArticles 1
---Ou
-Declare @nc int
-Set @nc=1
-Exec SP_ListeArticles @nc
-```</p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">Create</span><span class="w"> </span><span class="k">Procedure</span><span class="w"> </span><span class="n">SP_ListeArticles</span><span class="w"> </span><span class="o">@</span><span class="n">NumCom</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">Select</span><span class="w"> </span><span class="n">A</span><span class="p">.</span><span class="n">NumArt</span><span class="p">,</span><span class="w"> </span><span class="n">NomArt</span><span class="p">,</span><span class="w"> </span><span class="n">PUArt</span><span class="p">,</span><span class="w"> </span><span class="n">QteCommandee</span><span class="w"> </span><span class="k">From</span><span class="w"> </span><span class="n">Article</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">LigneCommande</span><span class="w"> </span><span class="n">LC</span>
+<span class="k">Where</span><span class="w"> </span><span class="n">LC</span><span class="p">.</span><span class="n">NumArt</span><span class="o">=</span><span class="n">A</span><span class="p">.</span><span class="n">NumArt</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">LC</span><span class="p">.</span><span class="n">NumCom</span><span class="o">=@</span><span class="n">NumCom</span>
+
+<span class="c1">--Exécuter cette procédure pour afficher la liste des articles de la commande numéro 1 :</span>
+<span class="k">Exec</span><span class="w"> </span><span class="n">SP_ListeArticles</span><span class="w"> </span><span class="mi">1</span>
+<span class="c1">--Ou</span>
+<span class="k">Declare</span><span class="w"> </span><span class="o">@</span><span class="n">nc</span><span class="w"> </span><span class="nb">int</span>
+<span class="k">Set</span><span class="w"> </span><span class="o">@</span><span class="n">nc</span><span class="o">=</span><span class="mi">1</span>
+<span class="k">Exec</span><span class="w"> </span><span class="n">SP_ListeArticles</span><span class="w"> </span><span class="o">@</span><span class="n">nc</span>
+</code></pre></div>
 </details>
 <h2 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">⚓︎</a></h2>
 <p>Créer une procédure stockée nommée <code>SP_NbrCommandes</code> qui retourne le nombre de commandes </p>
 <details class="question">
 <summary>Correction</summary>
-<p>```sql
-Create Procedure SP_NbrCommandes @Nbr int output as
-Set @Nbr = (Select count(NumCom) from Commande)</p>
-<p>--Exécuter cette procédures pour afficher le nombre des commandes
-Declare @n int
-Exec SP_NbrCommandes @n Output
-Print 'Le nombre de commandes : ' + convert(varchar,@n)
-```</p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">Create</span><span class="w"> </span><span class="k">Procedure</span><span class="w"> </span><span class="n">SP_NbrCommandes</span><span class="w"> </span><span class="o">@</span><span class="n">Nbr</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="k">output</span><span class="w"> </span><span class="k">as</span>
+<span class="k">Set</span><span class="w"> </span><span class="o">@</span><span class="n">Nbr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">Select</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="n">NumCom</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">Commande</span><span class="p">)</span>
+
+<span class="c1">--Exécuter cette procédures pour afficher le nombre des commandes</span>
+<span class="k">Declare</span><span class="w"> </span><span class="o">@</span><span class="n">n</span><span class="w"> </span><span class="nb">int</span>
+<span class="k">Exec</span><span class="w"> </span><span class="n">SP_NbrCommandes</span><span class="w"> </span><span class="o">@</span><span class="n">n</span><span class="w"> </span><span class="k">Output</span>
+<span class="n">Print</span><span class="w"> </span><span class="s1">&#39;Le nombre de commandes : &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">convert</span><span class="p">(</span><span class="nb">varchar</span><span class="p">,</span><span class="o">@</span><span class="n">n</span><span class="p">)</span>
+</code></pre></div>
 </details>
 <h2 id="exercice-3">Exercice 3<a class="headerlink" href="#exercice-3" title="Permanent link">⚓︎</a></h2>
 <p>Créer une procédure stockée nommée <code>SP_NbrArtCom</code> qui retourne le nombre d'articles d'une commande dont le numéro est donné en paramètre </p>
 <details class="question">
 <summary>Correction</summary>
-<p>```sql
-DELIMITER $
-Create Procedure SP_NbrArtCom2 (IN Num int, OUT Nbr int)
-begin
-    Select count(NumArt) INTO Nbr
-    from LigneCommande 
-    where NumCom=Num ;
-end$
---Exécuter cette procédure pour afficher le nombre d'articles de la commande numéro 1 :
-Declare @n int
-Exec SP_NbrArtCom 1, @n Output
-Print 'Le nombre d articles de la commande numéro 1 est : ' + convert(varchar,@n) </p>
-<p>-- Ou
-Declare @nc int, @n int
-Set @nc=1
-Exec SP_NbrArtCom @nc, @n Output
-Print 'Le nombre d articles de la commande numéro ' + convert(varchar,@nc) + ' est : ' +
-convert(varchar,@n)
-```</p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="err">$</span>
+<span class="k">Create</span><span class="w"> </span><span class="k">Procedure</span><span class="w"> </span><span class="n">SP_NbrArtCom2</span><span class="w"> </span><span class="p">(</span><span class="k">IN</span><span class="w"> </span><span class="n">Num</span><span class="w"> </span><span class="nb">int</span><span class="p">,</span><span class="w"> </span><span class="k">OUT</span><span class="w"> </span><span class="n">Nbr</span><span class="w"> </span><span class="nb">int</span><span class="p">)</span>
+<span class="k">begin</span>
+<span class="w">    </span><span class="k">Select</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="n">NumArt</span><span class="p">)</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Nbr</span>
+<span class="w">    </span><span class="k">from</span><span class="w"> </span><span class="n">LigneCommande</span><span class="w"> </span>
+<span class="w">    </span><span class="k">where</span><span class="w"> </span><span class="n">NumCom</span><span class="o">=</span><span class="n">Num</span><span class="w"> </span><span class="p">;</span>
+<span class="k">end</span><span class="err">$</span>
+<span class="c1">--Exécuter cette procédure pour afficher le nombre d&#39;articles de la commande numéro 1 :</span>
+<span class="k">Declare</span><span class="w"> </span><span class="o">@</span><span class="n">n</span><span class="w"> </span><span class="nb">int</span>
+<span class="k">Exec</span><span class="w"> </span><span class="n">SP_NbrArtCom</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">n</span><span class="w"> </span><span class="k">Output</span>
+<span class="n">Print</span><span class="w"> </span><span class="s1">&#39;Le nombre d articles de la commande numéro 1 est : &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">convert</span><span class="p">(</span><span class="nb">varchar</span><span class="p">,</span><span class="o">@</span><span class="n">n</span><span class="p">)</span><span class="w"> </span>
+
+<span class="c1">-- Ou</span>
+<span class="k">Declare</span><span class="w"> </span><span class="o">@</span><span class="n">nc</span><span class="w"> </span><span class="nb">int</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">n</span><span class="w"> </span><span class="nb">int</span>
+<span class="k">Set</span><span class="w"> </span><span class="o">@</span><span class="n">nc</span><span class="o">=</span><span class="mi">1</span>
+<span class="k">Exec</span><span class="w"> </span><span class="n">SP_NbrArtCom</span><span class="w"> </span><span class="o">@</span><span class="n">nc</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">n</span><span class="w"> </span><span class="k">Output</span>
+<span class="n">Print</span><span class="w"> </span><span class="s1">&#39;Le nombre d articles de la commande numéro &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">convert</span><span class="p">(</span><span class="nb">varchar</span><span class="p">,</span><span class="o">@</span><span class="n">nc</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; est : &#39;</span><span class="w"> </span><span class="o">+</span>
+<span class="k">convert</span><span class="p">(</span><span class="nb">varchar</span><span class="p">,</span><span class="o">@</span><span class="n">n</span><span class="p">)</span>
+</code></pre></div>
 </details>
 <h2 id="exercice-4">Exercice 4<a class="headerlink" href="#exercice-4" title="Permanent link">⚓︎</a></h2>
 <p>Créer une procédure stockée <code>SP_NbrArticlesParCommande</code> qui calcule le nombre d'articles par commande</p>
 <details class="question">
 <summary>Correction</summary>
-<p>```sql
-Create Procedure SP_NbrArticlesParCommande as
-Select Commande.NumCom, DatCom, Count(NumArt)
-From Commande, LigneCommande
-Where Commande.NumCom=LigneCommande.NumCom
-Group by Commande.NumCom, DatCom</p>
-<p>--Exécuter cette procédure :
-Exec SP_NbrArticlesParCommande
-```</p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">Create</span><span class="w"> </span><span class="k">Procedure</span><span class="w"> </span><span class="n">SP_NbrArticlesParCommande</span><span class="w"> </span><span class="k">as</span>
+<span class="k">Select</span><span class="w"> </span><span class="n">Commande</span><span class="p">.</span><span class="n">NumCom</span><span class="p">,</span><span class="w"> </span><span class="n">DatCom</span><span class="p">,</span><span class="w"> </span><span class="k">Count</span><span class="p">(</span><span class="n">NumArt</span><span class="p">)</span>
+<span class="k">From</span><span class="w"> </span><span class="n">Commande</span><span class="p">,</span><span class="w"> </span><span class="n">LigneCommande</span>
+<span class="k">Where</span><span class="w"> </span><span class="n">Commande</span><span class="p">.</span><span class="n">NumCom</span><span class="o">=</span><span class="n">LigneCommande</span><span class="p">.</span><span class="n">NumCom</span>
+<span class="k">Group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">Commande</span><span class="p">.</span><span class="n">NumCom</span><span class="p">,</span><span class="w"> </span><span class="n">DatCom</span>
+
+<span class="c1">--Exécuter cette procédure :</span>
+<span class="k">Exec</span><span class="w"> </span><span class="n">SP_NbrArticlesParCommande</span>
+</code></pre></div>
 </details>
 <h2 id="exercice-5">Exercice 5<a class="headerlink" href="#exercice-5" title="Permanent link">⚓︎</a></h2>
 <p>Créer une procédure stockée nommée <code>SP_ComPeriode</code> qui affiche la liste des commandes effectuées entre deux dates données en paramètre </p>
 <details class="question">
 <summary>Correction</summary>
-<p>```sql
-Create Procedure SP_ComPeriode @DateD DateTime, @DateF DateTime as
-Select * from Commande Where datcom between @dateD and @DateF</p>
-<p>--Exécuter cette procédure pour afficher la liste des commandes effectuées entre le
---10/10/2006 et le 14/12/2006 :</p>
-<p>Exec SP_ComPeriode '10/10/2006', '14/12/2006'</p>
-<p>--Ou
-Declare @dd DateTime, @df DateTime
-Set @dd='10/10/2006'
-Set @df='14/12/2006'
-Exec SP_ComPeriode @dd, @df
-```</p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">Create</span><span class="w"> </span><span class="k">Procedure</span><span class="w"> </span><span class="n">SP_ComPeriode</span><span class="w"> </span><span class="o">@</span><span class="n">DateD</span><span class="w"> </span><span class="n">DateTime</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">DateF</span><span class="w"> </span><span class="n">DateTime</span><span class="w"> </span><span class="k">as</span>
+<span class="k">Select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">Commande</span><span class="w"> </span><span class="k">Where</span><span class="w"> </span><span class="n">datcom</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="o">@</span><span class="n">dateD</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="o">@</span><span class="n">DateF</span>
+
+<span class="c1">--Exécuter cette procédure pour afficher la liste des commandes effectuées entre le</span>
+<span class="c1">--10/10/2006 et le 14/12/2006 :</span>
+
+<span class="k">Exec</span><span class="w"> </span><span class="n">SP_ComPeriode</span><span class="w"> </span><span class="s1">&#39;10/10/2006&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;14/12/2006&#39;</span>
+
+<span class="c1">--Ou</span>
+<span class="k">Declare</span><span class="w"> </span><span class="o">@</span><span class="n">dd</span><span class="w"> </span><span class="n">DateTime</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">df</span><span class="w"> </span><span class="n">DateTime</span>
+<span class="k">Set</span><span class="w"> </span><span class="o">@</span><span class="n">dd</span><span class="o">=</span><span class="s1">&#39;10/10/2006&#39;</span>
+<span class="k">Set</span><span class="w"> </span><span class="o">@</span><span class="n">df</span><span class="o">=</span><span class="s1">&#39;14/12/2006&#39;</span>
+<span class="k">Exec</span><span class="w"> </span><span class="n">SP_ComPeriode</span><span class="w"> </span><span class="o">@</span><span class="n">dd</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">df</span>
+</code></pre></div>
 </details>
 <h2 id="exercice-6">Exercice 6<a class="headerlink" href="#exercice-6" title="Permanent link">⚓︎</a></h2>
 <p>Créer une procédure stockée nommée <code>SP_TypeComPeriode</code> qui affiche la liste des commandes effectuées entre deux dates passées en paramètres. En plus si le nombre de ces commandes est supérieur à 100, afficher <em>Période rouge</em>. Si le nombre de ces commandes est entre 50 et 100 afficher <em>Période jaune</em> sinon afficher <em>Période blanche</em> (exploiter la procédure précédente)</p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>sql
-Create Procedure SP_TypeComPeriode @DateD DateTime, @DateF DateTime as
-Exec SP_ComPeriode @DateD, @DateF
-Declare @nbr int
-Set @nbr=(Select count(NumCom) from Commande Where datcom between @dateD and
-@DateF)
-If @nbr &gt;100
-Print 'Période Rouge'
-Else
-Begin
-If @nbr&lt;50
-Print 'Période blanche'
-Else
-Print 'Période Jaune'
-End</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">Create</span><span class="w"> </span><span class="k">Procedure</span><span class="w"> </span><span class="n">SP_TypeComPeriode</span><span class="w"> </span><span class="o">@</span><span class="n">DateD</span><span class="w"> </span><span class="n">DateTime</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">DateF</span><span class="w"> </span><span class="n">DateTime</span><span class="w"> </span><span class="k">as</span>
+<span class="k">Exec</span><span class="w"> </span><span class="n">SP_ComPeriode</span><span class="w"> </span><span class="o">@</span><span class="n">DateD</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">DateF</span>
+<span class="k">Declare</span><span class="w"> </span><span class="o">@</span><span class="n">nbr</span><span class="w"> </span><span class="nb">int</span>
+<span class="k">Set</span><span class="w"> </span><span class="o">@</span><span class="n">nbr</span><span class="o">=</span><span class="p">(</span><span class="k">Select</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="n">NumCom</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">Commande</span><span class="w"> </span><span class="k">Where</span><span class="w"> </span><span class="n">datcom</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="o">@</span><span class="n">dateD</span><span class="w"> </span><span class="k">and</span>
+<span class="o">@</span><span class="n">DateF</span><span class="p">)</span>
+<span class="k">If</span><span class="w"> </span><span class="o">@</span><span class="n">nbr</span><span class="w"> </span><span class="o">&gt;</span><span class="mi">100</span>
+<span class="n">Print</span><span class="w"> </span><span class="s1">&#39;Période Rouge&#39;</span>
+<span class="k">Else</span>
+<span class="k">Begin</span>
+<span class="k">If</span><span class="w"> </span><span class="o">@</span><span class="n">nbr</span><span class="o">&lt;</span><span class="mi">50</span>
+<span class="n">Print</span><span class="w"> </span><span class="s1">&#39;Période blanche&#39;</span>
+<span class="k">Else</span>
+<span class="n">Print</span><span class="w"> </span><span class="s1">&#39;Période Jaune&#39;</span>
+<span class="k">End</span>
+</code></pre></div>
 </details>
 <h2 id="exercice-7">Exercice 7<a class="headerlink" href="#exercice-7" title="Permanent link">⚓︎</a></h2>
 <p>Créer une procédure stockée nommée <code>SP_EnregistrerLigneCom</code> qui reçoit un numéro de commande, un numéro d'article et la quantité commandée :<br />
@@ -5720,20 +5834,20 @@ End</code></p>
 - Ajoute ensuite la ligne de commande et met le stock à jour</p>
 <details class="question">
 <summary>Correction</summary>
-<p><code>sql
-Create Procedure SP_EnregistrerLigneCom @numCom int, @numart int, @qte decimal AS
-if not exists(select numart from article where numart=@numart)
-or (select Qteenstock from article where numart=@numart) &lt; @qte
-Begin
-Print 'Cet article n''existe pas ou stock est insuffisant'
-Return
-End
-Begin transaction
-if not exists(select numcom from Commande where numCom=@numcom)
-insert into commande values(@NumCom,getdate())
-insert into ligneCommande values(@NumCom, @Numart,@Qte)
-update article set QteEnStock=QteEnStock- @Qte where NumArt=@NumArt
-Commit Transaction</code></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">Create</span><span class="w"> </span><span class="k">Procedure</span><span class="w"> </span><span class="n">SP_EnregistrerLigneCom</span><span class="w"> </span><span class="o">@</span><span class="n">numCom</span><span class="w"> </span><span class="nb">int</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">numart</span><span class="w"> </span><span class="nb">int</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">qte</span><span class="w"> </span><span class="nb">decimal</span><span class="w"> </span><span class="k">AS</span>
+<span class="k">if</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">exists</span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">numart</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">numart</span><span class="o">=@</span><span class="n">numart</span><span class="p">)</span>
+<span class="k">or</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">Qteenstock</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">numart</span><span class="o">=@</span><span class="n">numart</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="o">@</span><span class="n">qte</span>
+<span class="k">Begin</span>
+<span class="n">Print</span><span class="w"> </span><span class="s1">&#39;Cet article n&#39;&#39;existe pas ou stock est insuffisant&#39;</span>
+<span class="k">Return</span>
+<span class="k">End</span>
+<span class="k">Begin</span><span class="w"> </span><span class="k">transaction</span>
+<span class="k">if</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">exists</span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">numcom</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">Commande</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">numCom</span><span class="o">=@</span><span class="n">numcom</span><span class="p">)</span>
+<span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">commande</span><span class="w"> </span><span class="k">values</span><span class="p">(</span><span class="o">@</span><span class="n">NumCom</span><span class="p">,</span><span class="n">getdate</span><span class="p">())</span>
+<span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">ligneCommande</span><span class="w"> </span><span class="k">values</span><span class="p">(</span><span class="o">@</span><span class="n">NumCom</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">Numart</span><span class="p">,</span><span class="o">@</span><span class="n">Qte</span><span class="p">)</span>
+<span class="k">update</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="n">QteEnStock</span><span class="o">=</span><span class="n">QteEnStock</span><span class="o">-</span><span class="w"> </span><span class="o">@</span><span class="n">Qte</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">NumArt</span><span class="o">=@</span><span class="n">NumArt</span>
+<span class="k">Commit</span><span class="w"> </span><span class="k">Transaction</span>
+</code></pre></div>
 </details>
 
 
@@ -5898,8 +6012,6 @@ Commit Transaction</code></p>
         <script src="../../../javascript/mathjax.js"></script>
       
         <script src="../../../javascript/interpreter.js"></script>
-      
-        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

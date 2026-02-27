@@ -3953,14 +3953,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_cours.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -3981,14 +3981,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_exercices.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -4009,14 +4009,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -4037,14 +4037,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -4065,14 +4065,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_authentification.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4093,14 +4093,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_archivage.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5591,10 +5703,10 @@ ROLE (<ins>#idFilm, #idActeur</ins>, nomRole)<br /></p>
 <p>Sélectionner tous les films dont les recettes sont supérieures à 1000</p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT titre,recettes
-FROM Film
-WHERE recettes &gt; 1000 ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="n">recettes</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">recettes</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5607,10 +5719,10 @@ WHERE recettes &gt; 1000 ;</code></p>
 <p>Sélectionner tous les films de George Lucas</p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT titre
-FROM Film
-WHERE nom_realisateur = 'Lucas' AND prenom_realisateur='Georges';</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">nom_realisateur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Lucas&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">prenom_realisateur</span><span class="o">=</span><span class="s1">&#39;Georges&#39;</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5623,14 +5735,14 @@ WHERE nom_realisateur = 'Lucas' AND prenom_realisateur='Georges';</code></p>
 <p>Sélectionner tous les films dont les recettes sont supérieures à 1000 et inférieures ou égale à 1500. (Ecrire la requête de deux manières différentes)</p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT titre,recettes
-FROM Film
-WHERE recettes BETWEEN 1000 AND 1500;
-/*ou*/
-SELECT titre,recettes
-FROM Film
-WHERE recettes &gt; 1000 AND recettes &lt;= 1500;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="n">recettes</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">recettes</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="mi">1500</span><span class="p">;</span>
+<span class="cm">/*ou*/</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="n">recettes</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">recettes</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">recettes</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1500</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5644,10 +5756,10 @@ WHERE recettes &gt; 1000 AND recettes &lt;= 1500;</code></p>
 <p>Est-ce que les bornes du BETWEEN sont inclusives ou exclusives ?</p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT titre,annee
-FROM Film
-WHERE annee BETWEEN 2000 AND 2005;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="n">annee</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="mi">2000</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="mi">2005</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5660,10 +5772,10 @@ WHERE annee BETWEEN 2000 AND 2005;</code></p>
 <p>Sélectionner tous les films de Harry Potter</p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT titre
-FROM Film
-WHERE titre LIKE 'Harry Potter%';</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;Harry Potter%&#39;</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5676,10 +5788,10 @@ WHERE titre LIKE 'Harry Potter%';</code></p>
 <p>Afficher le titre des films par ordre décroissant des recettes</p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT titre,recettes
-FROM Film
-ORDER BY recettes DESC;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="n">recettes</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">recettes</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5692,10 +5804,10 @@ ORDER BY recettes DESC;</code></p>
 <p>Quels sont les films fantastiques réalisés par Steven Spielberg ?</p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT titre
-FROM Film 
-WHERE nom_realisateur = "Spielberg";</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">nom_realisateur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Spielberg&quot;</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5708,11 +5820,11 @@ WHERE nom_realisateur = "Spielberg";</code></p>
 <p>Afficher le titre des films d'animation par ordre décroissant des recettes.</p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT titre, recettes
-FROM Film 
-WHERE genre = 3
-ORDER BY recettes DESC</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="w"> </span><span class="n">recettes</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">genre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">recettes</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5729,11 +5841,11 @@ ORDER BY recettes DESC</code></p>
 <li><code>DAY(attribut)</code>: la parte jour de la date<br />
 etc.....</li>
 </ul>
-<p>Combien de film ont été réalisés en 2005 ?</p>
-<pre><code class="language-SQL">SELECT titre
-FROM Film
-WHERE YEAR(sortie)='2005';
-</code></pre>
+<p>Combien de film ont été réalisés en 2005 ?
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="n">sortie</span><span class="p">)</span><span class="o">=</span><span class="s1">&#39;2005&#39;</span><span class="p">;</span>
+</code></pre></div></p>
 <div class="admonition question">
 <p class="admonition-title">Q9</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Enoncé</label><label for="__tabbed_9_2">Correction</label></div>
@@ -5742,11 +5854,11 @@ WHERE YEAR(sortie)='2005';
 <p>Afficher tous les films fantastiques réalisés entre 2000 et 2010 .</p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT * 
-FROM Film 
-WHERE genre = 4
-AND YEAR( sortie ) BETWEEN 2000 AND 2010</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">genre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<span class="k">AND</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="w"> </span><span class="n">sortie</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="mi">2000</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="mi">2010</span><span class="w"> </span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5759,10 +5871,10 @@ AND YEAR( sortie ) BETWEEN 2000 AND 2010</code></p>
 <p>Afficher tous les films dont le titre commence par « T ».</p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT * 
-FROM Film 
-WHERE titre LIKE "T%"</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;T%&quot;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5775,10 +5887,10 @@ WHERE titre LIKE "T%"</code></p>
 <p>Afficher tous les films dont le titre comporte le mot « Monde ».</p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT * 
-FROM Film 
-WHERE titre LIKE "%Monde%"</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Film</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%Monde%&quot;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5791,10 +5903,10 @@ WHERE titre LIKE "%Monde%"</code></p>
 <p>Affichez pour chaque acteur le nombre de ses films présents dans la base</p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT COUNT(*), idacteur
-FROM role 
-GROUP BY idActeur;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="w"> </span><span class="n">idacteur</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">role</span><span class="w"> </span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">idActeur</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5807,10 +5919,10 @@ GROUP BY idActeur;</code></p>
 <p>Affichez le nombre de film pour chaque catégorie</p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT COUNT(*), genre
-FROM film 
-GROUP BY genre;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="w"> </span><span class="n">genre</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">film</span><span class="w"> </span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">genre</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5823,10 +5935,10 @@ GROUP BY genre;</code></p>
 <p>Affichez pour chaque année le film qui a réalisé le plus de recettes</p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT MAX(recettes),titre 
-FROM film
-GROUP BY annee ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">recettes</span><span class="p">),</span><span class="n">titre</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">film</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5839,10 +5951,10 @@ GROUP BY annee ;</code></p>
 <p>afficher le nom et la date de naissance des acteurs qui ont moins de 45 ans. (essayer dans un premier temps de trouver comment afficher l'année en cours)</p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT nom, anneeNaiss
-FROM artiste
-WHere (YEAR(CURRENT_DATE)- anneeNaiss ) &lt;= 45</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">anneeNaiss</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">artiste</span>
+<span class="k">WHere</span><span class="w"> </span><span class="p">(</span><span class="k">YEAR</span><span class="p">(</span><span class="k">CURRENT_DATE</span><span class="p">)</span><span class="o">-</span><span class="w"> </span><span class="n">anneeNaiss</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">45</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5855,10 +5967,10 @@ WHere (YEAR(CURRENT_DATE)- anneeNaiss ) &lt;= 45</code></p>
 <p>Combien de films sont sortie au mois de septembre ?</p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT * 
-FROM FILM
-WHERE MONTH(sortie) = 9;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">FILM</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">MONTH</span><span class="p">(</span><span class="n">sortie</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5871,11 +5983,11 @@ WHERE MONTH(sortie) = 9;</code></p>
 <p>afficher les réalisateurs et la somme des recettes générées par leurs films classés par ordre décroissant des recettes ?</p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-SELECT nom_realisateur, SUM(recettes)
-FROM FILM
-GROUP BY nom_realisateur
-ORDER BY SUM(recettes) DESC ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_realisateur</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">recettes</span><span class="p">)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">FILM</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">nom_realisateur</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">recettes</span><span class="p">)</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -6043,8 +6155,6 @@ ORDER BY SUM(recettes) DESC ;</code></p>
         <script src="../../../javascript/mathjax.js"></script>
       
         <script src="../../../javascript/interpreter.js"></script>
-      
-        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

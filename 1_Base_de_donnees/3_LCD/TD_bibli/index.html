@@ -3883,14 +3883,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_cours.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -3911,14 +3911,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_exercices.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -3939,14 +3939,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -3967,14 +3967,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -3995,14 +3995,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_authentification.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4023,14 +4023,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_archivage.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5515,9 +5627,9 @@
 <p>Renommer la table « emprunter » en « emprunt ». </p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-ALTER TABLE EMPRUNTER
-RENAME TO EMPRUNT;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">EMPRUNTER</span>
+<span class="k">RENAME</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">EMPRUNT</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5530,12 +5642,12 @@ RENAME TO EMPRUNT;</code></p>
 <p>Ajouter un champ TelLecteur (type entier) à la table des lecteurs. </p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-ALTER TABLE LECTEUR
-ADD TelLecteur INT;
-/*ou*/
-ALTER TABLE LECTEUR
-ADD TelLecteur INT;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">LECTEUR</span>
+<span class="k">ADD</span><span class="w"> </span><span class="n">TelLecteur</span><span class="w"> </span><span class="nb">INT</span><span class="p">;</span>
+<span class="cm">/*ou*/</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">LECTEUR</span>
+<span class="k">ADD</span><span class="w"> </span><span class="n">TelLecteur</span><span class="w"> </span><span class="nb">INT</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5548,9 +5660,9 @@ ADD TelLecteur INT;</code></p>
 <p>Ajouter un champ RefLecteur (taille fixe de 8 caractères) juste avant NumLecteur (ce champ deviendra clé primaire par la suite) </p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-ALTER TABLE LECTEUR
-ADD RefLecteur CHAR(8) FIRST ;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">LECTEUR</span>
+<span class="k">ADD</span><span class="w"> </span><span class="n">RefLecteur</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="k">FIRST</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5563,9 +5675,9 @@ ADD RefLecteur CHAR(8) FIRST ;</code></p>
 <p>Modifier la taille de la colonne NomLecteur pour la passer à 40 caractères. </p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-ALTER TABLE LECTEUR
-MODIFY NomLecteur VARCHAR(40);</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">LECTEUR</span>
+<span class="k">MODIFY</span><span class="w"> </span><span class="n">NomLecteur</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">40</span><span class="p">);</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5578,9 +5690,9 @@ MODIFY NomLecteur VARCHAR(40);</code></p>
 <p>Supprimer le champ TelLecteur </p>
 </div>
 <div class="tabbed-block">
-<p><code>SQL
-ALTER TABLE LECTEUR
-DROP TelLecteur;</code></p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">LECTEUR</span>
+<span class="k">DROP</span><span class="w"> </span><span class="n">TelLecteur</span><span class="p">;</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5593,22 +5705,24 @@ DROP TelLecteur;</code></p>
 <p>Indiquer les opérations nécessaires pour supprimer la clé primaire sur NumLecteur et définir RefLecteur comme nouvelle clé primaire. Le champ NumLecteur de la table « emprunt » conservera son nom mais sera lié à RefLecteur de Lecteur. </p>
 </div>
 <div class="tabbed-block">
-<p>```SQL
-/* Etape 1 : Supprimmer le lien/clé étrangère */
-ALTER TABLE EMPRUNT 
-DROP FOREIGN KEY FK_emprunter_numlecteur;</p>
-<p>/* Etape 2 : supprimmer la clé primaire */
-ALTER TABLE LECTEUR
-DROP PRIMARY KEY;</p>
-<p>/* Etape 3 : créer la nouvelle clé primaire de lecteur */
-ALTER TABLE LECTEUR DROP RefLecteur;
-ALTER TABLE LECTEUR ADD RefLecteur INT(11) NOT NULL FIRST;
-UPDATE LECTEUR SET RefLecteur = numLecteur ;
-ALTER TABLE LECTEUR ADD CONSTRAINT pk_lecteur PRIMARY KEY (<code>RefLecteur</code>) ;</p>
-<p>/* Etape 4 : Recréer le lien clé étangère*/
-ALTER TABLE EMPRUNT
-ADD CONSTRAINT <code>FK_emprunter_Reflecteur</code> FOREIGN KEY (<code>numlecteur</code>) REFERENCES <code>lecteur</code> (<code>RefLecteur</code>);
-```</p>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="cm">/* Etape 1 : Supprimmer le lien/clé étrangère */</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">EMPRUNT</span><span class="w"> </span>
+<span class="k">DROP</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="n">FK_emprunter_numlecteur</span><span class="p">;</span>
+
+<span class="cm">/* Etape 2 : supprimmer la clé primaire */</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">LECTEUR</span>
+<span class="k">DROP</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">;</span>
+
+<span class="cm">/* Etape 3 : créer la nouvelle clé primaire de lecteur */</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">LECTEUR</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="n">RefLecteur</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">LECTEUR</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="n">RefLecteur</span><span class="w"> </span><span class="nb">INT</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">FIRST</span><span class="p">;</span>
+<span class="k">UPDATE</span><span class="w"> </span><span class="n">LECTEUR</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">RefLecteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numLecteur</span><span class="w"> </span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">LECTEUR</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">pk_lecteur</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">RefLecteur</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+
+<span class="cm">/* Etape 4 : Recréer le lien clé étangère*/</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">EMPRUNT</span>
+<span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="o">`</span><span class="n">FK_emprunter_Reflecteur</span><span class="o">`</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">numlecteur</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="o">`</span><span class="n">lecteur</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">RefLecteur</span><span class="o">`</span><span class="p">);</span>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -5776,8 +5890,6 @@ ADD CONSTRAINT <code>FK_emprunter_Reflecteur</code> FOREIGN KEY (<code>numlecteu
         <script src="../../../javascript/mathjax.js"></script>
       
         <script src="../../../javascript/interpreter.js"></script>
-      
-        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

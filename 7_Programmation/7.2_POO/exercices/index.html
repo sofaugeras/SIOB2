@@ -3870,14 +3870,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_cours.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -3898,14 +3898,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_exercices.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -3926,14 +3926,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -3954,14 +3954,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -3982,14 +3982,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_authentification.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4010,14 +4010,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_archivage.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5598,78 +5710,79 @@
 <li>Affichage clair du titulaire et du solde</li>
 </ul>
 <h4 id="squelette-de-code-a-completer">💻 Squelette de code à compléter<a class="headerlink" href="#squelette-de-code-a-completer" title="Permanent link">⚓︎</a></h4>
-<pre><code class="language-php">&lt;?php
-declare(strict_types=1);
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
 
-class CompteBancaire {
-    // 1. Définir les attributs privés
+<span class="k">class</span> <span class="nc">CompteBancaire</span> <span class="p">{</span>
+    <span class="c1">// 1. Définir les attributs privés</span>
 
-    // 2. Constructeur
+    <span class="c1">// 2. Constructeur</span>
 
-    // 3. getSolde()
+    <span class="c1">// 3. getSolde()</span>
 
-    // 4. deposer()
+    <span class="c1">// 4. deposer()</span>
 
-    // 5. retirer()
+    <span class="c1">// 5. retirer()</span>
 
-    // 6. afficher()
-}
+    <span class="c1">// 6. afficher()</span>
+<span class="p">}</span>
 
-// --- Tests ---
-$c1 = new CompteBancaire(&quot;Alice&quot;, 200);
-$c1-&gt;deposer(50);
-$c1-&gt;retirer(100);
-$c1-&gt;afficher(); // Devrait afficher : Alice - Solde : 150 €
-</code></pre>
+<span class="c1">// --- Tests ---</span>
+<span class="nv">$c1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CompteBancaire</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
+<span class="nv">$c1</span><span class="o">-&gt;</span><span class="na">deposer</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="nv">$c1</span><span class="o">-&gt;</span><span class="na">retirer</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="nv">$c1</span><span class="o">-&gt;</span><span class="na">afficher</span><span class="p">();</span> <span class="c1">// Devrait afficher : Alice - Solde : 150 €</span>
+</code></pre></div>
 <details class="tip">
 <summary>Correction</summary>
-<p>```php
-&lt;?php
-declare(strict_types=1);</p>
-<p>class CompteBancaire {
-    // 🔒 Attributs privés
-    private string $titulaire;
-    private float $solde;</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>// ⚙️ Constructeur
-public function __construct(string $titulaire, float $soldeInitial = 0) {
-    $this-&gt;titulaire = $titulaire;
-    // On s&#39;assure que le solde n&#39;est pas négatif
-    $this-&gt;solde = max(0, $soldeInitial);
-}
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
 
-// 👀 Getter
-public function getSolde(): float {
-    return $this-&gt;solde;
-}
+<span class="k">class</span> <span class="nc">CompteBancaire</span> <span class="p">{</span>
+    <span class="c1">// 🔒 Attributs privés</span>
+    <span class="k">private</span> <span class="nx">string</span> <span class="nv">$titulaire</span><span class="p">;</span>
+    <span class="k">private</span> <span class="nx">float</span> <span class="nv">$solde</span><span class="p">;</span>
 
-// 💰 Dépôt
-public function deposer(float $montant): void {
-    if ($montant &gt; 0) {
-        $this-&gt;solde += $montant;
-    }
-}
+    <span class="c1">// ⚙️ Constructeur</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$titulaire</span><span class="p">,</span> <span class="nx">float</span> <span class="nv">$soldeInitial</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">titulaire</span> <span class="o">=</span> <span class="nv">$titulaire</span><span class="p">;</span>
+        <span class="c1">// On s&#39;assure que le solde n&#39;est pas négatif</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nv">$soldeInitial</span><span class="p">);</span>
+    <span class="p">}</span>
 
-// 💸 Retrait
-public function retirer(float $montant): void {
-    if ($montant &gt; 0 &amp;&amp; $montant &lt;= $this-&gt;solde) {
-        $this-&gt;solde -= $montant;
-    } else {
-        echo &quot;Retrait impossible !\n&quot;;
-    }
-}
+    <span class="c1">// 👀 Getter</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getSolde</span><span class="p">()</span><span class="o">:</span> <span class="nx">float</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span><span class="p">;</span>
+    <span class="p">}</span>
 
-// 📢 Affichage
-public function afficher(): void {
-    echo &quot;{$this-&gt;titulaire} - Solde : {$this-&gt;solde} €\n&quot;;
-}
+    <span class="c1">// 💰 Dépôt</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">deposer</span><span class="p">(</span><span class="nx">float</span> <span class="nv">$montant</span><span class="p">)</span><span class="o">:</span> <span class="nx">void</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$montant</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span> <span class="o">+=</span> <span class="nv">$montant</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// 💸 Retrait</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">retirer</span><span class="p">(</span><span class="nx">float</span> <span class="nv">$montant</span><span class="p">)</span><span class="o">:</span> <span class="nx">void</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$montant</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nv">$montant</span> <span class="o">&lt;=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span> <span class="o">-=</span> <span class="nv">$montant</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">echo</span> <span class="s2">&quot;Retrait impossible !</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// 📢 Affichage</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">afficher</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span> <span class="p">{</span>
+        <span class="k">echo</span> <span class="s2">&quot;</span><span class="si">{</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">titulaire</span><span class="si">}</span><span class="s2"> - Solde : </span><span class="si">{</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span><span class="si">}</span><span class="s2"> €</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// --- 🔎 Tests ---</span>
+<span class="nv">$c1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CompteBancaire</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
+<span class="nv">$c1</span><span class="o">-&gt;</span><span class="na">deposer</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>     <span class="c1">// solde = 250</span>
+<span class="nv">$c1</span><span class="o">-&gt;</span><span class="na">retirer</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>    <span class="c1">// solde = 150</span>
+<span class="nv">$c1</span><span class="o">-&gt;</span><span class="na">afficher</span><span class="p">();</span>      <span class="c1">// Alice - Solde : 150 €</span>
 </code></pre></div>
-<p>}</p>
-<p>// --- 🔎 Tests ---
-$c1 = new CompteBancaire("Alice", 200);
-$c1-&gt;deposer(50);     // solde = 250
-$c1-&gt;retirer(100);    // solde = 150
-$c1-&gt;afficher();      // Alice - Solde : 150 €</p>
-<p>```</p>
 <p>📝 Commentaires :</p>
 <ul>
 <li>Les attributs sont privés → on applique l’encapsulation.</li>
@@ -5734,108 +5847,111 @@ $c1-&gt;afficher();      // Alice - Solde : 150 €</p>
 </ul>
 <details class="question">
 <summary>💻 Squelette de code à compléter</summary>
-<p>```php
-&lt;?php
-declare(strict_types=1);</p>
-<p>class CompteBancaire {
-    // Reprends la version validée de l’Exercice 1
-    protected string $titulaire;
-    protected float $solde;</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>public function __construct(string $titulaire, float $soldeInitial = 0) {
-    $this-&gt;titulaire = $titulaire;
-    $this-&gt;solde = max(0, $soldeInitial);
-}
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
 
-public function getSolde(): float { return $this-&gt;solde; }
+<span class="k">class</span> <span class="nc">CompteBancaire</span> <span class="p">{</span>
+    <span class="c1">// Reprends la version validée de l’Exercice 1</span>
+    <span class="k">protected</span> <span class="nx">string</span> <span class="nv">$titulaire</span><span class="p">;</span>
+    <span class="k">protected</span> <span class="nx">float</span> <span class="nv">$solde</span><span class="p">;</span>
 
-public function deposer(float $montant): void {
-    if ($montant &gt; 0) $this-&gt;solde += $montant;
-}
+    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$titulaire</span><span class="p">,</span> <span class="nx">float</span> <span class="nv">$soldeInitial</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">titulaire</span> <span class="o">=</span> <span class="nv">$titulaire</span><span class="p">;</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nv">$soldeInitial</span><span class="p">);</span>
+    <span class="p">}</span>
 
-public function retirer(float $montant): void {
-    if ($montant &gt; 0 &amp;&amp; $montant &lt;= $this-&gt;solde) {
-        $this-&gt;solde -= $montant;
-    } else {
-        echo &quot;Retrait impossible !\n&quot;;
-    }
-}
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getSolde</span><span class="p">()</span><span class="o">:</span> <span class="nx">float</span> <span class="p">{</span> <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span><span class="p">;</span> <span class="p">}</span>
 
-public function afficher(): void {
-    echo &quot;{$this-&gt;titulaire} - Solde : {$this-&gt;solde} €\n&quot;;
-}
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">deposer</span><span class="p">(</span><span class="nx">float</span> <span class="nv">$montant</span><span class="p">)</span><span class="o">:</span> <span class="nx">void</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$montant</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span> <span class="o">+=</span> <span class="nv">$montant</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">retirer</span><span class="p">(</span><span class="nx">float</span> <span class="nv">$montant</span><span class="p">)</span><span class="o">:</span> <span class="nx">void</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$montant</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nv">$montant</span> <span class="o">&lt;=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span> <span class="o">-=</span> <span class="nv">$montant</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">echo</span> <span class="s2">&quot;Retrait impossible !</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">afficher</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span> <span class="p">{</span>
+        <span class="k">echo</span> <span class="s2">&quot;</span><span class="si">{</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">titulaire</span><span class="si">}</span><span class="s2"> - Solde : </span><span class="si">{</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span><span class="si">}</span><span class="s2"> €</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// --- À compléter ---</span>
+
+<span class="k">class</span> <span class="nc">CompteEpargne</span> <span class="k">extends</span> <span class="nx">CompteBancaire</span> <span class="p">{</span>
+    <span class="c1">// TODO: attribut privé $tauxInteret</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$titulaire</span><span class="p">,</span> <span class="nx">float</span> <span class="nv">$soldeInitial</span><span class="p">,</span> <span class="nx">float</span> <span class="nv">$tauxInteret</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// TODO: valider $tauxInteret &gt;= 0</span>
+        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">(</span><span class="nv">$titulaire</span><span class="p">,</span> <span class="nv">$soldeInitial</span><span class="p">);</span>
+        <span class="c1">// TODO: affecter $tauxInteret</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">appliquerInteret</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span> <span class="p">{</span>
+        <span class="c1">// TODO: augmenter $this-&gt;solde de $this-&gt;solde * $this-&gt;tauxInteret</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">afficher</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span> <span class="p">{</span>
+        <span class="c1">// TODO: afficher avec indication du taux</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nc">CompteCourant</span> <span class="k">extends</span> <span class="nx">CompteBancaire</span> <span class="p">{</span>
+    <span class="c1">// TODO: attributs privés $decouvertAutorise, $fraisDecouvert</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span>
+        <span class="nx">string</span> <span class="nv">$titulaire</span><span class="p">,</span>
+        <span class="nx">float</span> <span class="nv">$soldeInitial</span><span class="p">,</span>
+        <span class="nx">float</span> <span class="nv">$decouvertAutorise</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nx">float</span> <span class="nv">$fraisDecouvert</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// TODO: valider &gt;= 0</span>
+        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">(</span><span class="nv">$titulaire</span><span class="p">,</span> <span class="nv">$soldeInitial</span><span class="p">);</span>
+        <span class="c1">// TODO: affecter les attributs</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">retirer</span><span class="p">(</span><span class="nx">float</span> <span class="nv">$montant</span><span class="p">)</span><span class="o">:</span> <span class="nx">void</span> <span class="p">{</span>
+        <span class="c1">// TODO:</span>
+        <span class="c1">// - autoriser dépassement jusque -$decouvertAutorise</span>
+        <span class="c1">// - si solde devient &lt; 0 après retrait, appliquer fraisDecouvert (et</span>
+        <span class="c1">//   vérifier qu&#39;on reste &gt;= -$decouvertAutorise après frais)</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">afficher</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span> <span class="p">{</span>
+        <span class="c1">// TODO: afficher avec découvert autorisé et frais</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
-<p>}</p>
-<p>// --- À compléter ---</p>
-<p>class CompteEpargne extends CompteBancaire {
-    // TODO: attribut privé $tauxInteret</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>public function __construct(string $titulaire, float $soldeInitial, float $tauxInteret) {
-    // TODO: valider $tauxInteret &gt;= 0
-    parent::__construct($titulaire, $soldeInitial);
-    // TODO: affecter $tauxInteret
-}
-
-public function appliquerInteret(): void {
-    // TODO: augmenter $this-&gt;solde de $this-&gt;solde * $this-&gt;tauxInteret
-}
-
-public function afficher(): void {
-    // TODO: afficher avec indication du taux
-}
-</code></pre></div>
-<p>}</p>
-<p>class CompteCourant extends CompteBancaire {
-    // TODO: attributs privés $decouvertAutorise, $fraisDecouvert</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>public function __construct(
-    string $titulaire,
-    float $soldeInitial,
-    float $decouvertAutorise = 0,
-    float $fraisDecouvert = 0
-) {
-    // TODO: valider &gt;= 0
-    parent::__construct($titulaire, $soldeInitial);
-    // TODO: affecter les attributs
-}
-
-public function retirer(float $montant): void {
-    // TODO:
-    // - autoriser dépassement jusque -$decouvertAutorise
-    // - si solde devient &lt; 0 après retrait, appliquer fraisDecouvert (et
-    //   vérifier qu&#39;on reste &gt;= -$decouvertAutorise après frais)
-}
-
-public function afficher(): void {
-    // TODO: afficher avec découvert autorisé et frais
-}
-</code></pre></div>
-<p>}
-```</p>
 <hr />
 </details>
 <h4 id="scenarios-de-test-scripts-rapides">🔎 Scénarios de test (scripts rapides)<a class="headerlink" href="#scenarios-de-test-scripts-rapides" title="Permanent link">⚓︎</a></h4>
-<pre><code class="language-php">// 1) Épargne
-$e = new CompteEpargne(&quot;Alice&quot;, 1000, 0.05);
-$e-&gt;appliquerInteret();           // solde attendu: 1050
-$e-&gt;afficher();                   // doit indiquer le taux
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// 1) Épargne</span>
+<span class="x">$e = new CompteEpargne(&quot;Alice&quot;, 1000, 0.05);</span>
+<span class="x">$e-&gt;appliquerInteret();           // solde attendu: 1050</span>
+<span class="x">$e-&gt;afficher();                   // doit indiquer le taux</span>
 
-// 2) Courant sans découvert
-$c1 = new CompteCourant(&quot;Bob&quot;, 200, 0, 0);
-$c1-&gt;retirer(250);                // devrait refuser (pas de découvert)
-$c1-&gt;afficher();
+<span class="x">// 2) Courant sans découvert</span>
+<span class="x">$c1 = new CompteCourant(&quot;Bob&quot;, 200, 0, 0);</span>
+<span class="x">$c1-&gt;retirer(250);                // devrait refuser (pas de découvert)</span>
+<span class="x">$c1-&gt;afficher();</span>
 
-// 3) Courant avec découvert autorisé
-$c2 = new CompteCourant(&quot;Chloe&quot;, 100, 200, 8);
-$c2-&gt;retirer(250);                // passe à -150 =&gt; appliquer 8€ de frais =&gt; -158
-$c2-&gt;afficher();                  // solde attendu: -158
+<span class="x">// 3) Courant avec découvert autorisé</span>
+<span class="x">$c2 = new CompteCourant(&quot;Chloe&quot;, 100, 200, 8);</span>
+<span class="x">$c2-&gt;retirer(250);                // passe à -150 =&gt; appliquer 8€ de frais =&gt; -158</span>
+<span class="x">$c2-&gt;afficher();                  // solde attendu: -158</span>
 
-// 4) Dépassement du découvert autorisé
-$c2-&gt;retirer(60);                 // -158 - 60 = -218 -&gt; refuser si dépasse -200 (ou tenir compte de nouveaux frais)
-$c2-&gt;afficher();
+<span class="x">// 4) Dépassement du découvert autorisé</span>
+<span class="x">$c2-&gt;retirer(60);                 // -158 - 60 = -218 -&gt; refuser si dépasse -200 (ou tenir compte de nouveaux frais)</span>
+<span class="x">$c2-&gt;afficher();</span>
 
-// 5) Cas invalides (doivent lever exception)
-try { new CompteEpargne(&quot;Dan&quot;, 500, -0.01); } catch (InvalidArgumentException $e) { echo &quot;OK\n&quot;; }
-try { new CompteCourant(&quot;Eve&quot;, 500, -100, 5); } catch (InvalidArgumentException $e) { echo &quot;OK\n&quot;; }
-try { new CompteCourant(&quot;Fay&quot;, 500, 100, -2); } catch (InvalidArgumentException $e) { echo &quot;OK\n&quot;; }
-</code></pre>
+<span class="x">// 5) Cas invalides (doivent lever exception)</span>
+<span class="x">try { new CompteEpargne(&quot;Dan&quot;, 500, -0.01); } catch (InvalidArgumentException $e) { echo &quot;OK\n&quot;; }</span>
+<span class="x">try { new CompteCourant(&quot;Eve&quot;, 500, -100, 5); } catch (InvalidArgumentException $e) { echo &quot;OK\n&quot;; }</span>
+<span class="x">try { new CompteCourant(&quot;Fay&quot;, 500, 100, -2); } catch (InvalidArgumentException $e) { echo &quot;OK\n&quot;; }</span>
+</code></pre></div>
 <h4 id="points-dattention-erreurs-frequentes-conseils">🧠 Points d’attention / erreurs fréquentes : Conseils<a class="headerlink" href="#points-dattention-erreurs-frequentes-conseils" title="Permanent link">⚓︎</a></h4>
 <ul>
 <li>Oublier d’appeler <code>parent::__construct(...)</code> dans les classes filles</li>
@@ -5851,149 +5967,157 @@ try { new CompteCourant(&quot;Fay&quot;, 500, 100, -2); } catch (InvalidArgument
 </ul>
 <details class="tip">
 <summary>Correction</summary>
-<p>```php
-&lt;?php
-declare(strict_types=1);</p>
-<p>/**
-* Base : CompteBancaire (version adaptée pour l'héritage)
-*/
-class CompteBancaire {
-    // Protégés pour un accès direct (contrôlé) dans les classes filles
-    protected string $titulaire;
-    protected float $solde;</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>public function __construct(string $titulaire, float $soldeInitial = 0) {
-    $this-&gt;titulaire = $titulaire;
-    $this-&gt;solde = max(0, $soldeInitial); // pas de solde initial négatif
-}
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
 
-public function getSolde(): float { return $this-&gt;solde; }
+<span class="sd">/**</span>
+<span class="sd">* Base : CompteBancaire (version adaptée pour l&#39;héritage)</span>
+<span class="sd">*/</span>
+<span class="k">class</span> <span class="nc">CompteBancaire</span> <span class="p">{</span>
+    <span class="c1">// Protégés pour un accès direct (contrôlé) dans les classes filles</span>
+    <span class="k">protected</span> <span class="nx">string</span> <span class="nv">$titulaire</span><span class="p">;</span>
+    <span class="k">protected</span> <span class="nx">float</span> <span class="nv">$solde</span><span class="p">;</span>
 
-public function deposer(float $montant): void {
-    if ($montant &gt; 0) {
-        $this-&gt;solde += $montant;
-    }
-}
+    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$titulaire</span><span class="p">,</span> <span class="nx">float</span> <span class="nv">$soldeInitial</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">titulaire</span> <span class="o">=</span> <span class="nv">$titulaire</span><span class="p">;</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nv">$soldeInitial</span><span class="p">);</span> <span class="c1">// pas de solde initial négatif</span>
+    <span class="p">}</span>
 
-public function retirer(float $montant): void {
-    if ($montant &gt; 0 &amp;&amp; $montant &lt;= $this-&gt;solde) {
-        $this-&gt;solde -= $montant;
-    } else {
-        echo &quot;Retrait impossible !\n&quot;;
-    }
-}
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getSolde</span><span class="p">()</span><span class="o">:</span> <span class="nx">float</span> <span class="p">{</span> <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span><span class="p">;</span> <span class="p">}</span>
 
-public function afficher(): void {
-    echo &quot;{$this-&gt;titulaire} - Solde : {$this-&gt;solde} €\n&quot;;
-}
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">deposer</span><span class="p">(</span><span class="nx">float</span> <span class="nv">$montant</span><span class="p">)</span><span class="o">:</span> <span class="nx">void</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$montant</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span> <span class="o">+=</span> <span class="nv">$montant</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">retirer</span><span class="p">(</span><span class="nx">float</span> <span class="nv">$montant</span><span class="p">)</span><span class="o">:</span> <span class="nx">void</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$montant</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nv">$montant</span> <span class="o">&lt;=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span> <span class="o">-=</span> <span class="nv">$montant</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">echo</span> <span class="s2">&quot;Retrait impossible !</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">afficher</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span> <span class="p">{</span>
+        <span class="k">echo</span> <span class="s2">&quot;</span><span class="si">{</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">titulaire</span><span class="si">}</span><span class="s2"> - Solde : </span><span class="si">{</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span><span class="si">}</span><span class="s2"> €</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="sd">/**</span>
+<span class="sd">* CompteEpargne : ajoute un taux d&#39;intérêt et appliqueInteret()</span>
+<span class="sd">*/</span>
+<span class="k">class</span> <span class="nc">CompteEpargne</span> <span class="k">extends</span> <span class="nx">CompteBancaire</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="nx">float</span> <span class="nv">$tauxInteret</span><span class="p">;</span> <span class="c1">// ex: 0.05 pour 5%</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$titulaire</span><span class="p">,</span> <span class="nx">float</span> <span class="nv">$soldeInitial</span><span class="p">,</span> <span class="nx">float</span> <span class="nv">$tauxInteret</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$tauxInteret</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nx">InvalidArgumentException</span><span class="p">(</span><span class="s2">&quot;Le taux d&#39;intérêt doit être &gt;= 0&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">(</span><span class="nv">$titulaire</span><span class="p">,</span> <span class="nv">$soldeInitial</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">tauxInteret</span> <span class="o">=</span> <span class="nv">$tauxInteret</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">appliquerInteret</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span> <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span> <span class="o">+=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span> <span class="o">*</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">tauxInteret</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">afficher</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span> <span class="p">{</span>
+        <span class="nv">$pct</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">tauxInteret</span> <span class="o">*</span> <span class="mi">100</span><span class="p">;</span>
+        <span class="k">echo</span> <span class="s2">&quot;</span><span class="si">{</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">titulaire</span><span class="si">}</span><span class="s2"> - Solde (épargne) : </span><span class="si">{</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span><span class="si">}</span><span class="s2"> € — Taux : </span><span class="si">{</span><span class="nv">$pct</span><span class="si">}</span><span class="s2">%</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="sd">/**</span>
+<span class="sd">* CompteCourant : découvert autorisé + frais si solde devient négatif</span>
+<span class="sd">*/</span>
+<span class="k">class</span> <span class="nc">CompteCourant</span> <span class="k">extends</span> <span class="nx">CompteBancaire</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="nx">float</span> <span class="nv">$decouvertAutorise</span><span class="p">;</span> <span class="c1">// ex: 200.0</span>
+    <span class="k">private</span> <span class="nx">float</span> <span class="nv">$fraisDecouvert</span><span class="p">;</span>    <span class="c1">// ex: 8.0</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span>
+        <span class="nx">string</span> <span class="nv">$titulaire</span><span class="p">,</span>
+        <span class="nx">float</span> <span class="nv">$soldeInitial</span><span class="p">,</span>
+        <span class="nx">float</span> <span class="nv">$decouvertAutorise</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nx">float</span> <span class="nv">$fraisDecouvert</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$decouvertAutorise</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nx">InvalidArgumentException</span><span class="p">(</span><span class="s2">&quot;Le découvert autorisé doit être &gt;= 0&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$fraisDecouvert</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nx">InvalidArgumentException</span><span class="p">(</span><span class="s2">&quot;Les frais de découvert doivent être &gt;= 0&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">(</span><span class="nv">$titulaire</span><span class="p">,</span> <span class="nv">$soldeInitial</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">decouvertAutorise</span> <span class="o">=</span> <span class="nv">$decouvertAutorise</span><span class="p">;</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">fraisDecouvert</span> <span class="o">=</span> <span class="nv">$fraisDecouvert</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**</span>
+<span class="sd">    * Retrait :</span>
+<span class="sd">    * - autorisé si le solde après retrait ET frais éventuels reste &gt;= -decouvertAutorise</span>
+<span class="sd">    * - si le solde devient négatif suite au retrait, on applique immédiatement les frais</span>
+<span class="sd">    * - sinon, on refuse l&#39;opération (aucune modification)</span>
+<span class="sd">    */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">retirer</span><span class="p">(</span><span class="nx">float</span> <span class="nv">$montant</span><span class="p">)</span><span class="o">:</span> <span class="nx">void</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$montant</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">echo</span> <span class="s2">&quot;Retrait impossible !</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Simulation pour vérifier les limites AVANT d&#39;appliquer réellement</span>
+        <span class="nv">$soldeApresRetrait</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span> <span class="o">-</span> <span class="nv">$montant</span><span class="p">;</span>
+        <span class="nv">$soldeFinal</span> <span class="o">=</span> <span class="nv">$soldeApresRetrait</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$soldeApresRetrait</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$soldeFinal</span> <span class="o">-=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">fraisDecouvert</span><span class="p">;</span> <span class="c1">// application des frais</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$soldeFinal</span> <span class="o">&lt;</span> <span class="o">-</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">decouvertAutorise</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">echo</span> <span class="s2">&quot;Retrait refusé : dépassement du découvert autorisé.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Appliquer réellement</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span> <span class="o">=</span> <span class="nv">$soldeApresRetrait</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span> <span class="o">-=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">fraisDecouvert</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">afficher</span><span class="p">()</span><span class="o">:</span> <span class="nx">void</span> <span class="p">{</span>
+        <span class="nv">$infoDecouvert</span> <span class="o">=</span> <span class="s2">&quot;Découvert autorisé : </span><span class="si">{</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">decouvertAutorise</span><span class="si">}</span><span class="s2"> €&quot;</span><span class="p">;</span>
+        <span class="nv">$infoFrais</span>     <span class="o">=</span> <span class="s2">&quot;Frais de découvert : </span><span class="si">{</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">fraisDecouvert</span><span class="si">}</span><span class="s2"> €&quot;</span><span class="p">;</span>
+        <span class="k">echo</span> <span class="s2">&quot;</span><span class="si">{</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">titulaire</span><span class="si">}</span><span class="s2"> - Solde (courant) : </span><span class="si">{</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">solde</span><span class="si">}</span><span class="s2"> € — </span><span class="si">{</span><span class="nv">$infoDecouvert</span><span class="si">}</span><span class="s2"> — </span><span class="si">{</span><span class="nv">$infoFrais</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cm">/* ---------------------------</span>
+<span class="cm">*             TESTS</span>
+<span class="cm">* --------------------------- */</span>
+
+<span class="c1">// Épargne</span>
+<span class="nv">$e</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CompteEpargne</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">);</span>
+<span class="nv">$e</span><span class="o">-&gt;</span><span class="na">appliquerInteret</span><span class="p">();</span>           <span class="c1">// 1000 -&gt; 1050</span>
+<span class="nv">$e</span><span class="o">-&gt;</span><span class="na">afficher</span><span class="p">();</span>                   <span class="c1">// doit indiquer le taux</span>
+
+<span class="c1">// Courant sans découvert</span>
+<span class="nv">$c1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CompteCourant</span><span class="p">(</span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="nv">$c1</span><span class="o">-&gt;</span><span class="na">retirer</span><span class="p">(</span><span class="mi">250</span><span class="p">);</span>                <span class="c1">// doit refuser (pas de découvert)</span>
+<span class="nv">$c1</span><span class="o">-&gt;</span><span class="na">afficher</span><span class="p">();</span>
+
+<span class="c1">// Courant avec découvert</span>
+<span class="nv">$c2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CompteCourant</span><span class="p">(</span><span class="s2">&quot;Chloe&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>
+<span class="nv">$c2</span><span class="o">-&gt;</span><span class="na">retirer</span><span class="p">(</span><span class="mi">250</span><span class="p">);</span>                <span class="c1">// 100 - 250 = -150 -&gt; frais 8 =&gt; -158 (OK, &gt;= -200)</span>
+<span class="nv">$c2</span><span class="o">-&gt;</span><span class="na">afficher</span><span class="p">();</span>
+
+<span class="nv">$c2</span><span class="o">-&gt;</span><span class="na">retirer</span><span class="p">(</span><span class="mi">60</span><span class="p">);</span>                 <span class="c1">// tester dépassement: -158 - 60 = -218 -&gt; frais potentiels rendraient &lt; -200 =&gt; refus</span>
+<span class="nv">$c2</span><span class="o">-&gt;</span><span class="na">afficher</span><span class="p">();</span>
+
+<span class="c1">// Cas invalides</span>
+<span class="k">try</span> <span class="p">{</span> <span class="k">new</span> <span class="nx">CompteEpargne</span><span class="p">(</span><span class="s2">&quot;Dan&quot;</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">);</span> <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">InvalidArgumentException</span> <span class="nv">$ex</span><span class="p">)</span> <span class="p">{</span> <span class="k">echo</span> <span class="s2">&quot;OK (taux invalide)</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">try</span> <span class="p">{</span> <span class="k">new</span> <span class="nx">CompteCourant</span><span class="p">(</span><span class="s2">&quot;Eve&quot;</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span> <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">InvalidArgumentException</span> <span class="nv">$ex</span><span class="p">)</span> <span class="p">{</span> <span class="k">echo</span> <span class="s2">&quot;OK (découvert invalide)</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">try</span> <span class="p">{</span> <span class="k">new</span> <span class="nx">CompteCourant</span><span class="p">(</span><span class="s2">&quot;Fay&quot;</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">);</span> <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">InvalidArgumentException</span> <span class="nv">$ex</span><span class="p">)</span> <span class="p">{</span> <span class="k">echo</span> <span class="s2">&quot;OK (frais invalides)</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span> <span class="p">}</span>
 </code></pre></div>
-<p>}</p>
-<p>/**
-* CompteEpargne : ajoute un taux d'intérêt et appliqueInteret()
-*/
-class CompteEpargne extends CompteBancaire {
-    private float $tauxInteret; // ex: 0.05 pour 5%</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>public function __construct(string $titulaire, float $soldeInitial, float $tauxInteret) {
-    if ($tauxInteret &lt; 0) {
-        throw new InvalidArgumentException(&quot;Le taux d&#39;intérêt doit être &gt;= 0&quot;);
-    }
-    parent::__construct($titulaire, $soldeInitial);
-    $this-&gt;tauxInteret = $tauxInteret;
-}
-
-public function appliquerInteret(): void {
-    $this-&gt;solde += $this-&gt;solde * $this-&gt;tauxInteret;
-}
-
-public function afficher(): void {
-    $pct = $this-&gt;tauxInteret * 100;
-    echo &quot;{$this-&gt;titulaire} - Solde (épargne) : {$this-&gt;solde} € — Taux : {$pct}%\n&quot;;
-}
-</code></pre></div>
-<p>}</p>
-<p>/**
-* CompteCourant : découvert autorisé + frais si solde devient négatif
-*/
-class CompteCourant extends CompteBancaire {
-    private float $decouvertAutorise; // ex: 200.0
-    private float $fraisDecouvert;    // ex: 8.0</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>public function __construct(
-    string $titulaire,
-    float $soldeInitial,
-    float $decouvertAutorise = 0,
-    float $fraisDecouvert = 0
-) {
-    if ($decouvertAutorise &lt; 0) {
-        throw new InvalidArgumentException(&quot;Le découvert autorisé doit être &gt;= 0&quot;);
-    }
-    if ($fraisDecouvert &lt; 0) {
-        throw new InvalidArgumentException(&quot;Les frais de découvert doivent être &gt;= 0&quot;);
-    }
-    parent::__construct($titulaire, $soldeInitial);
-    $this-&gt;decouvertAutorise = $decouvertAutorise;
-    $this-&gt;fraisDecouvert = $fraisDecouvert;
-}
-
-/**
-* Retrait :
-* - autorisé si le solde après retrait ET frais éventuels reste &gt;= -decouvertAutorise
-* - si le solde devient négatif suite au retrait, on applique immédiatement les frais
-* - sinon, on refuse l&#39;opération (aucune modification)
-*/
-public function retirer(float $montant): void {
-    if ($montant &lt;= 0) {
-        echo &quot;Retrait impossible !\n&quot;;
-        return;
-    }
-
-    // Simulation pour vérifier les limites AVANT d&#39;appliquer réellement
-    $soldeApresRetrait = $this-&gt;solde - $montant;
-    $soldeFinal = $soldeApresRetrait;
-
-    if ($soldeApresRetrait &lt; 0) {
-        $soldeFinal -= $this-&gt;fraisDecouvert; // application des frais
-    }
-
-    if ($soldeFinal &lt; -$this-&gt;decouvertAutorise) {
-        echo &quot;Retrait refusé : dépassement du découvert autorisé.\n&quot;;
-        return;
-    }
-
-    // Appliquer réellement
-    $this-&gt;solde = $soldeApresRetrait;
-    if ($this-&gt;solde &lt; 0) {
-        $this-&gt;solde -= $this-&gt;fraisDecouvert;
-    }
-}
-
-public function afficher(): void {
-    $infoDecouvert = &quot;Découvert autorisé : {$this-&gt;decouvertAutorise} €&quot;;
-    $infoFrais     = &quot;Frais de découvert : {$this-&gt;fraisDecouvert} €&quot;;
-    echo &quot;{$this-&gt;titulaire} - Solde (courant) : {$this-&gt;solde} € — {$infoDecouvert} — {$infoFrais}\n&quot;;
-}
-</code></pre></div>
-<p>}</p>
-<p>/* ---------------------------
-*             TESTS
-* --------------------------- */</p>
-<p>// Épargne
-$e = new CompteEpargne("Alice", 1000, 0.05);
-$e-&gt;appliquerInteret();           // 1000 -&gt; 1050
-$e-&gt;afficher();                   // doit indiquer le taux</p>
-<p>// Courant sans découvert
-$c1 = new CompteCourant("Bob", 200, 0, 0);
-$c1-&gt;retirer(250);                // doit refuser (pas de découvert)
-$c1-&gt;afficher();</p>
-<p>// Courant avec découvert
-$c2 = new CompteCourant("Chloe", 100, 200, 8);
-$c2-&gt;retirer(250);                // 100 - 250 = -150 -&gt; frais 8 =&gt; -158 (OK, &gt;= -200)
-$c2-&gt;afficher();</p>
-<p>$c2-&gt;retirer(60);                 // tester dépassement: -158 - 60 = -218 -&gt; frais potentiels rendraient &lt; -200 =&gt; refus
-$c2-&gt;afficher();</p>
-<p>// Cas invalides
-try { new CompteEpargne("Dan", 500, -0.01); } catch (InvalidArgumentException $ex) { echo "OK (taux invalide)\n"; }
-try { new CompteCourant("Eve", 500, -100, 5); } catch (InvalidArgumentException $ex) { echo "OK (découvert invalide)\n"; }
-try { new CompteCourant("Fay", 500, 100, -2); } catch (InvalidArgumentException $ex) { echo "OK (frais invalides)\n"; }</p>
-<p>```</p>
 </details>
 
 
@@ -6158,8 +6282,6 @@ try { new CompteCourant("Fay", 500, 100, -2); } catch (InvalidArgumentException 
         <script src="../../../javascript/mathjax.js"></script>
       
         <script src="../../../javascript/interpreter.js"></script>
-      
-        <script src="../../../javascript/ide.js"></script>
       
     
   </body>

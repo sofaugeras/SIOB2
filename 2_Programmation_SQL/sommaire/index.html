@@ -3927,14 +3927,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1_cours.md" class="md-nav__link">
+      <a href="../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -3955,14 +3955,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2_exercices.md" class="md-nav__link">
+      <a href="../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -3983,14 +3983,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -4011,14 +4011,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -4039,14 +4039,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3_authentification.md" class="md-nav__link">
+      <a href="../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4067,14 +4067,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4_archivage.md" class="md-nav__link">
+      <a href="../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5575,27 +5687,28 @@ MyISAM ne supportant pas les contraintes de clés étrangères, les tables doive
 -   📌les tables InnoDB sont transactionnelles, donc supportent les transactions.<br /></p>
 </div>
 <div class="tabbed-block">
-<p>```sql
-USE gescom;
-CREATE TABLE COMMANDE (
-Numcom int PRIMARY KEY,
-Datcom DATETIME)ENGINE=InnoDB;</p>
-<p>CREATE TABLE ARTICLE (
-Numart int PRIMARY KEY,
-Desart varchar(50),
-PUart decimal(10,2),
-QteEnStock int,
-SeuilMin int,
-SeuilMax int)ENGINE=InnoDB;</p>
-<p>CREATE TABLE LIGNECOMMANDE (
-Numcom int,
-Numart int,
-QteCommandee int,
-CONSTRAINT pk_lc PRIMARY KEY (numcom, numart),
-CONSTRAINT fk_lc_com FOREIGN KEY (Numcom) REFERENCES COMMANDE(Numcom),
-CONSTRAINT fk_lc_art FOREIGN KEY (Numart) REFERENCES ARTICLE(Numart)
-)ENGINE=InnoDB;
-```</p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="n">USE</span><span class="w"> </span><span class="n">gescom</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">COMMANDE</span><span class="w"> </span><span class="p">(</span>
+<span class="n">Numcom</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="n">Datcom</span><span class="w"> </span><span class="n">DATETIME</span><span class="p">)</span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="p">;</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ARTICLE</span><span class="w"> </span><span class="p">(</span>
+<span class="n">Numart</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="n">Desart</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<span class="n">PUart</span><span class="w"> </span><span class="nb">decimal</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="n">QteEnStock</span><span class="w"> </span><span class="nb">int</span><span class="p">,</span>
+<span class="n">SeuilMin</span><span class="w"> </span><span class="nb">int</span><span class="p">,</span>
+<span class="n">SeuilMax</span><span class="w"> </span><span class="nb">int</span><span class="p">)</span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="p">;</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">LIGNECOMMANDE</span><span class="w"> </span><span class="p">(</span>
+<span class="n">Numcom</span><span class="w"> </span><span class="nb">int</span><span class="p">,</span>
+<span class="n">Numart</span><span class="w"> </span><span class="nb">int</span><span class="p">,</span>
+<span class="n">QteCommandee</span><span class="w"> </span><span class="nb">int</span><span class="p">,</span>
+<span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">pk_lc</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">numcom</span><span class="p">,</span><span class="w"> </span><span class="n">numart</span><span class="p">),</span>
+<span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_lc_com</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">Numcom</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">(</span><span class="n">Numcom</span><span class="p">),</span>
+<span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_lc_art</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">Numart</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">ARTICLE</span><span class="p">(</span><span class="n">Numart</span><span class="p">)</span>
+<span class="p">)</span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="p">;</span>
+</code></pre></div>
 <p>N'oubliez pas de créer votre jeu de données au fur et à mesure pour tester les applications de cours</p>
 </div>
 </div>
@@ -5770,8 +5883,6 @@ CONSTRAINT fk_lc_art FOREIGN KEY (Numart) REFERENCES ARTICLE(Numart)
         <script src="../../javascript/mathjax.js"></script>
       
         <script src="../../javascript/interpreter.js"></script>
-      
-        <script src="../../javascript/ide.js"></script>
       
     
   </body>

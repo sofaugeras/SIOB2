@@ -3870,14 +3870,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_cours.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/10_exercices/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.1 Cours
+    10. Exercices OWASP
   
 
     
@@ -3898,14 +3898,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_exercices.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6.2.2 Exercices
+    1. Securité des applications (OWASP)
   
 
     
@@ -3926,14 +3926,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_recoANSII.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/2_principes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Selon l'ANSII
+    2. Les principes de la sécurité
   
 
     
@@ -3954,14 +3954,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2_preuveNumerique.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La preuve numérique
+    3. La preuve numérique 🔎
   
 
     
@@ -3982,14 +3982,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_authentification.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Notion d'authentification
+    4. Authentification 🔑
   
 
     
@@ -4010,14 +4010,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_archivage.md" class="md-nav__link">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. La protection et l'archivage des données
+    5. Protection et archivage des données 🗄️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/6_recoANSII/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Recommandations de l'ANSII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/7_pentest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Notion de Pentest 🎩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/8_ebios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. La méthode EBIOS 📈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/9_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code 👮‍♀️
   
 
     
@@ -5635,51 +5747,51 @@
 <li>📤 Transmet ces données à une Vue.</li>
 </ul>
 <h4 id="exemple-laravel">📌 Exemple Laravel<a class="headerlink" href="#exemple-laravel" title="Permanent link">⚓︎</a></h4>
-<pre><code class="language-php">// routes/web.php
-use App\Http\Controllers\AccountController;
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// routes/web.php</span>
+<span class="x">use App\Http\Controllers\AccountController;</span>
 
-Route::get('/accounts', [AccountController::class, 'index']);
-</code></pre>
-<pre><code class="language-php">// app/Http/Controllers/AccountController.php
-namespace App\Http\Controllers;
-use App\Models\Account;
+<span class="x">Route::get(&#39;/accounts&#39;, [AccountController::class, &#39;index&#39;]);</span>
+</code></pre></div>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// app/Http/Controllers/AccountController.php</span>
+<span class="x">namespace App\Http\Controllers;</span>
+<span class="x">use App\Models\Account;</span>
 
-class AccountController extends Controller {
-    public function index() {
-        $accounts = Account::all();
-        return view('accounts.index', compact('accounts'));
-    }
-}
-</code></pre>
+<span class="x">class AccountController extends Controller {</span>
+<span class="x">    public function index() {</span>
+<span class="x">        $accounts = Account::all();</span>
+<span class="x">        return view(&#39;accounts.index&#39;, compact(&#39;accounts&#39;));</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+</code></pre></div>
 <h2 id="3-la-vue-v">3. La Vue (V)<a class="headerlink" href="#3-la-vue-v" title="Permanent link">⚓︎</a></h2>
 <ul>
 <li>🎨 Rôle : afficher les données passées par le contrôleur.</li>
 <li>❌ Pas de logique métier → uniquement présentation.</li>
 </ul>
 <h4 id="exemple-laravel-blade">📌 Exemple Laravel (Blade)<a class="headerlink" href="#exemple-laravel-blade" title="Permanent link">⚓︎</a></h4>
-<pre><code class="language-blade">{{-- resources/views/accounts/index.blade.php --}}
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>{{-- resources/views/accounts/index.blade.php --}}
 &lt;h1&gt;💳 Liste des comptes&lt;/h1&gt;
 &lt;ul&gt;
 @foreach ($accounts as $a)
-  &lt;li&gt;{{ $a-&gt;owner }} : {{ number_format($a-&gt;balance, 2, ',', ' ') }} €&lt;/li&gt;
+  &lt;li&gt;{{ $a-&gt;owner }} : {{ number_format($a-&gt;balance, 2, &#39;,&#39;, &#39; &#39;) }} €&lt;/li&gt;
 @endforeach
 &lt;/ul&gt;
-</code></pre>
+</code></pre></div>
 <h2 id="4-le-modele-m">4. Le Modèle (M)<a class="headerlink" href="#4-le-modele-m" title="Permanent link">⚓︎</a></h2>
 <ul>
 <li>🗂️ Rôle : gérer les données et la logique métier.</li>
 <li>🔗 Connecté à la base via <strong>Eloquent ORM</strong> sous Laravel.</li>
 </ul>
 <h4 id="exemple-laravel_1">📌 Exemple Laravel<a class="headerlink" href="#exemple-laravel_1" title="Permanent link">⚓︎</a></h4>
-<pre><code class="language-php">// app/Models/Account.php
-namespace App\Models;
-use Illuminate\Database\Eloquent\Model;
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// app/Models/Account.php</span>
+<span class="x">namespace App\Models;</span>
+<span class="x">use Illuminate\Database\Eloquent\Model;</span>
 
-class Account extends Model {
-    protected $fillable = ['owner', 'balance'];
-    public $timestamps = false;
-}
-</code></pre>
+<span class="x">class Account extends Model {</span>
+<span class="x">    protected $fillable = [&#39;owner&#39;, &#39;balance&#39;];</span>
+<span class="x">    public $timestamps = false;</span>
+<span class="x">}</span>
+</code></pre></div>
 <hr />
 <h2 id="5-les-routes">5. Les Routes<a class="headerlink" href="#5-les-routes" title="Permanent link">⚓︎</a></h2>
 <ul>
@@ -5687,15 +5799,15 @@ class Account extends Model {
 <li>📍 Définies dans <code>routes/web.php</code>.</li>
 </ul>
 <h4 id="exemple-laravel_2">📌 Exemple Laravel<a class="headerlink" href="#exemple-laravel_2" title="Permanent link">⚓︎</a></h4>
-<pre><code class="language-php">Route::get('/accounts', [AccountController::class, 'index']);
-Route::post('/accounts/transfer', [AccountController::class, 'transfer']);
-</code></pre>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">Route::get(&#39;/accounts&#39;, [AccountController::class, &#39;index&#39;]);</span>
+<span class="x">Route::post(&#39;/accounts/transfer&#39;, [AccountController::class, &#39;transfer&#39;]);</span>
+</code></pre></div>
 <hr />
 <h2 id="6-schema-de-synthese">6. Schéma de synthèse<a class="headerlink" href="#6-schema-de-synthese" title="Permanent link">⚓︎</a></h2>
-<pre><code>🌍 Navigateur → 🧭 Route → 🧑‍💻 Contrôleur → 🗂️ Modèle → 🗄️ Base de données
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>🌍 Navigateur → 🧭 Route → 🧑‍💻 Contrôleur → 🗂️ Modèle → 🗄️ Base de données
          ↑                                        ↓
          └────────────── 🎨 Vue (HTML/Blade) ←─────┘
-</code></pre>
+</code></pre></div>
 <p>✅ <strong>Récap rapide</strong></p>
 <ol>
 <li><strong>Route</strong> → indique quel contrôleur appeler</li>
@@ -5868,8 +5980,6 @@ Route::post('/accounts/transfer', [AccountController::class, 'transfer']);
         <script src="../../../javascript/mathjax.js"></script>
       
         <script src="../../../javascript/interpreter.js"></script>
-      
-        <script src="../../../javascript/ide.js"></script>
       
     
   </body>
