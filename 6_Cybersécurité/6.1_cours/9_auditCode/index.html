@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/6_Cybers%C3%A9curit%C3%A9/6.1_cours/9_auditCode/">
       
       
-        <link rel="prev" href="../8_ebios/">
+        <link rel="prev" href="../8_pentest/">
       
       
         <link rel="next" href="../../6.2_TP/0_tpOwasp/">
@@ -29,7 +29,7 @@
     
     
       
-        <title>9. Audit de code 👮‍♀️ - Saint Sauveur BTS SIO SLAM</title>
+        <title>9. Audit de code et analyse de qualité logicielle 👮‍♀️ - Saint Sauveur BTS SIO SLAM</title>
       
     
     
@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#9-audit-de-code" class="md-skip">
+        <a href="#9-audit-de-code-et-analyse-de-qualite-logicielle" class="md-skip">
           Aller au contenu
         </a>
       
@@ -142,7 +142,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              9. Audit de code 👮‍♀️
+              9. Audit de code et analyse de qualité logicielle 👮‍♀️
             
           </span>
         </div>
@@ -4069,14 +4069,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../7_pentest/" class="md-nav__link">
+      <a href="../7_ebios/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Notion de Pentest 🎩
+    7. La méthode EBIOS 📈
   
 
     
@@ -4097,14 +4097,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../8_ebios/" class="md-nav__link">
+      <a href="../8_pentest/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. La méthode EBIOS 📈
+    8. Notion de Pentest 🎩
   
 
     
@@ -4134,6 +4134,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code et analyse de qualité logicielle 👮‍♀️
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -4141,7 +4159,7 @@
   <span class="md-ellipsis">
     
   
-    9. Audit de code 👮‍♀️
+    9. Audit de code et analyse de qualité logicielle 👮‍♀️
   
 
     
@@ -4150,6 +4168,219 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-quest-ce-quun-audit-de-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Qu’est-ce qu’un audit de code ?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Qu’est-ce qu’un audit de code ?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Définition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audit-manuel-vs-audit-automatise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Audit manuel vs audit automatisé
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-les-criteres-de-qualite-logicielle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Les critères de qualité logicielle
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Les critères de qualité logicielle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lisibilite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Lisibilité
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenabilite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗 Maintenabilité
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testabilite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Testabilité
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#securite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔐 Sécurité
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-la-dette-technique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. La dette technique
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-outils-danalyse-couramment-utilises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Outils d’analyse couramment utilisés
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Outils d’analyse couramment utilisés">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analyse-statique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 Analyse statique
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outils-de-linting-et-de-formatage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✏️ Outils de linting et de formatage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tests-automatises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Tests automatisés
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-indicateurs-de-qualite-kpis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Indicateurs de qualité (KPIs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-audit-de-code-et-pratique-professionnelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Audit de code et pratique professionnelle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏁 Conclusion
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -5607,10 +5838,209 @@
   
 
 
-<h1 id="9-audit-de-code">9. Audit de code 👮‍♀️<a class="headerlink" href="#9-audit-de-code" title="Permanent link">⚓︎</a></h1>
-<p><img alt="en construction" src="../../../images/enConstruction.png" /></p>
-<p>Objectif</p>
-<p>Analyser et corriger les vulnérabilités détectées à l’issue d’un audit de sécurité d’une application web</p>
+<h1 id="9-audit-de-code-et-analyse-de-qualite-logicielle">9. Audit de code et analyse de qualité logicielle 👮‍♀️<a class="headerlink" href="#9-audit-de-code-et-analyse-de-qualite-logicielle" title="Permanent link">⚓︎</a></h1>
+<p><img alt="en construction" class="center" src="../../../images/enConstruction.png" width="50%" /></p>
+<div class="admonition info">
+<p class="admonition-title">Compétences Cyber SLAM</p>
+<p><strong>Activité B3.5</strong>. Cybersécurisation d’une solution applicative et de son développement</p>
+<div class="admonition warning">
+<p class="admonition-title">Compétences visées</p>
+<ul>
+<li>Analyser et corriger les vulnérabilités détectées à l’issue d’un audit de sécurité d’une application web</li>
+<li>Participer à la vérification des éléments contribuant à la sûreté d’un développement informatique</li>
+<li>Prendre en compte la sécurité dans un projet de développement d’une solution applicative</li>
+<li>Mettre en œuvre et vérifier la conformité d’une solution applicative et de son développement à un référentiel, une - norme ou un standard de sécurité</li>
+</ul>
+</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">🎯 Objectifs du chapitre</p>
+<ul>
+<li>Comprendre ce qu’est un audit de code.</li>
+<li>Expliquer la différence entre audit manuel et analyse automatisée.</li>
+<li>Identifier les critères de qualité d’un logiciel.</li>
+<li>Utiliser des outils courants d’analyse statique et dynamique.</li>
+<li>Interpréter les résultats d’un outil d’audit.</li>
+</ul>
+</div>
+<h2 id="1-quest-ce-quun-audit-de-code">1. Qu’est-ce qu’un audit de code ?<a class="headerlink" href="#1-quest-ce-quun-audit-de-code" title="Permanent link">⚓︎</a></h2>
+<h3 id="definition">📖 Définition<a class="headerlink" href="#definition" title="Permanent link">⚓︎</a></h3>
+<p>L’<strong>audit de code</strong> est une démarche structurée consistant à examiner un code source afin d’en évaluer :</p>
+<ul>
+<li>la qualité technique,</li>
+<li>la maintenabilité,</li>
+<li>la robustesse,</li>
+<li>la sécurité,</li>
+<li>la conformité aux bonnes pratiques.</li>
+</ul>
+<p>Contrairement au débogage, l’audit ne vise pas uniquement à corriger une erreur existante.<br />
+Il cherche à <strong>prévenir les défauts futurs</strong> et à améliorer la qualité globale du projet.</p>
+<p>Dans un contexte professionnel, l’audit peut être réalisé :</p>
+<ul>
+<li>avant une mise en production,</li>
+<li>avant une reprise de projet,</li>
+<li>lors d’une revue de sécurité,</li>
+<li>dans le cadre d’un contrôle qualité interne.</li>
+</ul>
+<h3 id="audit-manuel-vs-audit-automatise">🧠 Audit manuel vs audit automatisé<a class="headerlink" href="#audit-manuel-vs-audit-automatise" title="Permanent link">⚓︎</a></h3>
+<p>L’audit de code repose sur deux approches complémentaires.</p>
+<h4 id="audit-manuel">🔎 Audit manuel<a class="headerlink" href="#audit-manuel" title="Permanent link">⚓︎</a></h4>
+<p>Il s’agit d’une lecture humaine du code.<br />
+Le développeur ou l’auditeur vérifie :</p>
+<ul>
+<li>la compréhension globale du projet,</li>
+<li>la cohérence architecturale,</li>
+<li>la séparation des responsabilités,</li>
+<li>la clarté des noms de variables et de méthodes,</li>
+<li>la présence de duplication de code,</li>
+<li>la gestion des erreurs.</li>
+</ul>
+<p>Cette approche permet de détecter des problèmes que les outils automatiques ne voient pas, notamment les défauts de conception.</p>
+<h4 id="analyse-automatisee">🤖 Analyse automatisée<a class="headerlink" href="#analyse-automatisee" title="Permanent link">⚓︎</a></h4>
+<p>Les outils d’analyse examinent le code sans l’exécuter (analyse statique) ou pendant son exécution (analyse dynamique).</p>
+<p>Ils permettent notamment de détecter :</p>
+<ul>
+<li>des erreurs potentielles,</li>
+<li>des incohérences de typage,</li>
+<li>des vulnérabilités connues,</li>
+<li>du code dupliqué,</li>
+<li>des écarts aux standards de codage.</li>
+</ul>
+<p>L’analyse automatisée est rapide, reproductible et intégrable dans une chaîne d’intégration continue.</p>
+<div class="admonition info">
+<p class="admonition-title">📝 Synthèse</p>
+<p>L’audit manuel apporte une vision architecturale et métier.  <br />
+L’analyse automatisée apporte une vision technique et mesurable.  <br />
+Les deux sont nécessaires pour garantir une qualité logicielle professionnelle.<br /></p>
+</div>
+<h2 id="2-les-criteres-de-qualite-logicielle">2. Les critères de qualité logicielle<a class="headerlink" href="#2-les-criteres-de-qualite-logicielle" title="Permanent link">⚓︎</a></h2>
+<p>La qualité d’un logiciel ne se limite pas à son bon fonctionnement.</p>
+<p>Un programme peut fonctionner correctement tout en étant difficile à maintenir, peu sécurisé ou mal structuré.</p>
+<p>On peut distinguer plusieurs critères fondamentaux.</p>
+<h3 id="lisibilite">📚 Lisibilité<a class="headerlink" href="#lisibilite" title="Permanent link">⚓︎</a></h3>
+<p>Un code lisible est un code compréhensible par un autre développeur.</p>
+<p>La lisibilité repose sur :</p>
+<ul>
+<li>un nommage explicite,</li>
+<li>des méthodes courtes,</li>
+<li>une indentation cohérente,</li>
+<li>des commentaires utiles et non redondants.</li>
+</ul>
+<p>Un code illisible augmente le risque d’erreur et la difficulté de maintenance.</p>
+<h3 id="maintenabilite">🏗 Maintenabilité<a class="headerlink" href="#maintenabilite" title="Permanent link">⚓︎</a></h3>
+<p>La maintenabilité mesure la capacité à faire évoluer un logiciel.</p>
+<p>Elle dépend :</p>
+<ul>
+<li>du respect de l’architecture (ex : MVC),</li>
+<li>de la séparation des responsabilités,</li>
+<li>d’un faible couplage entre les composants,</li>
+<li>de l’absence de duplication.</li>
+</ul>
+<p>Un projet mal structuré génère rapidement de la dette technique.</p>
+<h3 id="testabilite">🧪 Testabilité<a class="headerlink" href="#testabilite" title="Permanent link">⚓︎</a></h3>
+<p>Un code testable est un code dont les composants peuvent être isolés et vérifiés indépendamment.</p>
+<p>La présence de tests unitaires permet :</p>
+<ul>
+<li>de détecter des régressions,</li>
+<li>de documenter le comportement attendu,</li>
+<li>de sécuriser les évolutions.</li>
+</ul>
+<h3 id="securite">🔐 Sécurité<a class="headerlink" href="#securite" title="Permanent link">⚓︎</a></h3>
+<p>Un audit de code doit également vérifier :</p>
+<ul>
+<li>la validation des entrées utilisateur,</li>
+<li>la protection contre les injections,</li>
+<li>la gestion des droits d’accès,</li>
+<li>la gestion correcte des erreurs.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">📊 Synthèse</p>
+<p>Un logiciel de qualité doit être :</p>
+<ul>
+<li>lisible,</li>
+<li>maintenable,</li>
+<li>testable,</li>
+<li>sécurisé.</li>
+</ul>
+<p><strong>La qualité est un ensemble cohérent, pas un critère isolé.</strong></p>
+</div>
+<h2 id="3-la-dette-technique">3. La dette technique<a class="headerlink" href="#3-la-dette-technique" title="Permanent link">⚓︎</a></h2>
+<p>La <strong>dette technique</strong> correspond aux compromis pris dans le développement qui devront être corrigés ultérieurement.</p>
+<p>Elle apparaît lorsque :</p>
+<ul>
+<li>le code est dupliqué,</li>
+<li>les tests sont absents,</li>
+<li>les méthodes deviennent trop longues,</li>
+<li>l’architecture n’est pas respectée.</li>
+</ul>
+<p>La dette technique ralentit progressivement le projet et augmente les risques d’erreur.</p>
+<p>Un audit permet de l’identifier et de la quantifier.</p>
+<h2 id="4-outils-danalyse-couramment-utilises">4. Outils d’analyse couramment utilisés<a class="headerlink" href="#4-outils-danalyse-couramment-utilises" title="Permanent link">⚓︎</a></h2>
+<p>Les entreprises s’appuient sur des outils spécialisés pour automatiser une partie de l’audit.</p>
+<h3 id="analyse-statique">🔍 Analyse statique<a class="headerlink" href="#analyse-statique" title="Permanent link">⚓︎</a></h3>
+<h4 id="sonarqube">SonarQube<a class="headerlink" href="#sonarqube" title="Permanent link">⚓︎</a></h4>
+<p>SonarQube est une plateforme d’analyse continue qui fournit :</p>
+<ul>
+<li>un tableau de bord qualité,</li>
+<li>la détection de bugs,</li>
+<li>l’identification de vulnérabilités,</li>
+<li>l’évaluation de la dette technique,</li>
+<li>la mesure de la duplication de code.</li>
+</ul>
+<p>Il est souvent intégré dans une chaîne CI/CD.</p>
+<h4 id="phpstan">PHPStan<a class="headerlink" href="#phpstan" title="Permanent link">⚓︎</a></h4>
+<p>PHPStan est un outil d’analyse statique pour PHP.</p>
+<p>Il vérifie notamment :</p>
+<ul>
+<li>les incohérences de types,</li>
+<li>les appels à des méthodes inexistantes,</li>
+<li>les erreurs potentielles avant exécution.</li>
+</ul>
+<p>Il est particulièrement utile dans les projets Laravel.</p>
+<h3 id="outils-de-linting-et-de-formatage">✏️ Outils de linting et de formatage<a class="headerlink" href="#outils-de-linting-et-de-formatage" title="Permanent link">⚓︎</a></h3>
+<h4 id="laravel-pint">Laravel Pint<a class="headerlink" href="#laravel-pint" title="Permanent link">⚓︎</a></h4>
+<p>Laravel Pint impose un style de code uniforme.</p>
+<p>Il n’améliore pas la logique du programme, mais garantit une cohérence visuelle et structurelle du projet.</p>
+<h3 id="tests-automatises">🧪 Tests automatisés<a class="headerlink" href="#tests-automatises" title="Permanent link">⚓︎</a></h3>
+<h4 id="phpunit">PHPUnit<a class="headerlink" href="#phpunit" title="Permanent link">⚓︎</a></h4>
+<p>PHPUnit permet d’écrire des tests unitaires afin de vérifier le comportement du code.</p>
+<p>Couplé à un outil de couverture (comme Xdebug), il permet de mesurer le pourcentage de code testé.</p>
+<div class="admonition info">
+<p class="admonition-title">📝 Synthèse</p>
+<p>Les outils ne remplacent pas le développeur.  <br />
+Ils assistent l’audit en détectant automatiquement des anomalies techniques mesurables.</p>
+</div>
+<h2 id="5-indicateurs-de-qualite-kpis">5. Indicateurs de qualité (KPIs)<a class="headerlink" href="#5-indicateurs-de-qualite-kpis" title="Permanent link">⚓︎</a></h2>
+<p>Lors d’un audit, certains indicateurs permettent d’objectiver la qualité :</p>
+<ul>
+<li>taux de couverture des tests,</li>
+<li>nombre de bugs détectés,</li>
+<li>nombre de vulnérabilités,</li>
+<li>complexité cyclomatique,</li>
+<li>taux de duplication,</li>
+<li>estimation de la dette technique.</li>
+</ul>
+<p>Ces indicateurs facilitent la prise de décision technique.</p>
+<h2 id="6-audit-de-code-et-pratique-professionnelle">6. Audit de code et pratique professionnelle<a class="headerlink" href="#6-audit-de-code-et-pratique-professionnelle" title="Permanent link">⚓︎</a></h2>
+<p>En entreprise, l’audit de code s’intègre dans :</p>
+<ul>
+<li>les revues de code (pull requests),</li>
+<li>l’intégration continue,</li>
+<li>les audits de sécurité,</li>
+<li>les processus qualité.</li>
+</ul>
+<p>Il s’agit d’une pratique normale et attendue dans les équipes de développement modernes.</p>
+<h2 id="conclusion">🏁 Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">⚓︎</a></h2>
+<p>L’audit de code est une démarche essentielle pour garantir la qualité logicielle.</p>
+<p>Il repose sur :</p>
+<ul>
+<li>une lecture humaine structurée,</li>
+<li>des outils d’analyse automatisée,</li>
+<li>des indicateurs mesurables,</li>
+<li>une démarche d’amélioration continue.</li>
+</ul>
+<p>Dans vos projets (comme bijoo ou todo), cette méthodologie vous permettra d’identifier les points d’amélioration et d’adopter des pratiques professionnelles alignées avec les attentes du secteur.</p>
+<p>A suivre Activité sur bijoo et Todo</p>
 
 
 
