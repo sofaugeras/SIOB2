@@ -1,0 +1,31 @@
+﻿PRA_NUM;PRA_NOM;PRA_PRENOM;PRA_ADRESSE;PRA_CP;PRA_VILLE;PRA_COEFNOTORIETE;TYP_CODE
+2001;Morel;Catherine;21 r Chateaubriand;75000;PARIS;381.2;PS
+2002;Gaffé;Dominique;9 av 1ère Armée Française;35000;RENNES;214.1;PS
+2003;Leroux;André;47 av Robert Schuman;60000;BEAUVAIS;173.5;PH
+2004;Laurent;Younès;34 r Demolombe;53000;MAYENNE;497.8;MH
+2005;Martin;Claire;14 rue des Acacias;44000;NANTES;312.45;MV
+2006;Benali;Nadia;7 boulevard Voltaire;59000;LILLE;288.3;MH
+2007;Nguyen;Thomas;52 avenue Jean Jaurès;69000;LYON;421.6;PS
+2008;Diallo;Aïssatou;4 rue du Stade;35000;RENNES;267.9;PO
+2009;Schmitt;Julien;33 rue des Tilleuls;67000;STRASBOURG;355.25;MV
+2010;Ramos;Elena;18 place Carnot;13000;MARSEILLE;304.75;PS
+2011;Le Goff;Maël;9 rue de Brest;29200;BREST;276.1;MH
+2012;Petit;Inès;61 avenue Victor Hugo;33000;BORDEAUX;390.8;PH
+2013;Traoré;Moussa;28 rue Nationale;37000;TOURS;245.55;PO
+2014;Robin;Sophie;5 allée des Peupliers;14000;CAEN;198.4;MV
+2015;Garcia;Lucie;73 chemin des Vignes;34000;MONTPELLIER;433.95;MH
+2016;Bernard;Noémie;11 rue Pasteur;80000;AMIENS;229.7;PS
+2017;Adam;Rachid;2 impasse des Lilas;54000;NANCY;317.65;PH
+2018;Lemoine;Camille;48 rue Gambetta;21000;DIJON;286.15;MV
+2019;Bensaïd;Karim;16 avenue Foch;06000;NICE;407.5;MH
+2020;Chevalier;Amandine;24 quai de la Loire;45000;ORLEANS;174.35;PO
+2021;Moreau;Jules;13 rue Saint-Michel;49100;ANGERS;368.9;MV
+2022;Fischer;Emma;30 avenue d'Alsace;68000;COLMAR;251.05;PS
+2023;Lopez;Nora;12 place de l'Europe;64000;PAU;299.6;PH
+2024;Perrin;Bastien;45 rue de la République;72000;LE MANS;321.25;MH
+2025;Meyer;Lina;6 rue des Alpes;74000;ANNECY;411.3;MV
+2026;Marchand;Théo;17 rue du Port;56100;LORIENT;205.8;PS
+2027;Khelifi;Samira;22 avenue des Roses;25000;BESANCON;343.2;PO
+2028;Royer;Léo;39 rue Colbert;37000;TOURS;264.55;PH
+2029;Bourdon;Jeanne;8 rue des Fleurs;86000;POITIERS;382.7;MV
+2030;Sow;Ibrahima;27 boulevard Gambetta;63100;CLERMONT-FERRAND;292.95;MH
