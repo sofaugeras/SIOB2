@@ -1868,7 +1868,7 @@
   <a href="#creation-dune-procedure-stockee" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Création d’une procédure stockée
+        Création d'une procédure stockée
       
     </span>
   </a>
@@ -1879,7 +1879,7 @@
   <a href="#bloc-dinstructions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bloc D’instructions
+        Bloc D'instructions
       
     </span>
   </a>
@@ -1951,7 +1951,7 @@
   <a href="#la-declaration-dune-variable" class="md-nav__link">
     <span class="md-ellipsis">
       
-        La déclaration d’une variable
+        La déclaration d'une variable
       
     </span>
   </a>
@@ -1962,7 +1962,7 @@
   <a href="#affichage-dinformations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Affichage d’informations
+        Affichage d'informations
       
     </span>
   </a>
@@ -2012,7 +2012,7 @@
   <a href="#suppression-dune-procedure-stockee" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Suppression d’une procédure stockée
+        Suppression d'une procédure stockée
       
     </span>
   </a>
@@ -2023,7 +2023,7 @@
   <a href="#modification-dune-procedure-stockee" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modification d’une procédure stockée
+        Modification d'une procédure stockée
       
     </span>
   </a>
@@ -2062,7 +2062,7 @@
   <a href="#linstruction-case" class="md-nav__link">
     <span class="md-ellipsis">
       
-        L’instruction case
+        L'instruction case
       
     </span>
   </a>
@@ -2247,6 +2247,34 @@
     
   
     Le transactionnel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.2_Transactions/exercices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercice
   
 
     
@@ -2479,6 +2507,94 @@
     
   
     Exercices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP complet 🚠
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    TP complet 🚠
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.5_TP/tp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP Gestion de Paie 💶
   
 
     
@@ -6195,7 +6311,7 @@ MySQL n'a aucun aspect normatif contrairement à SQL. C'est bien un "produit" au
 ⏩ Elles permettent d'automatiser des actions qui peuvent être très complexes.<br />
 Une procédure stockée est en fait une série d'instructions SQL désignée par un nom. Lorsque l'on crée une procédure stockée, on l'<em>enregistre</em> dans la base de données que l'on utilise, au même titre qu'une table, par exemple. Une fois la procédure créée, il est possible d'appeler celle-ci par son nom. Les instructions de la procédure sont alors exécutées.<br />
 Contrairement aux requêtes préparées, qui ne sont gardées en mémoire que pour la session courante, les procédures stockées sont, comme leur nom l'indique, stockées de manière durable, et font bien partie intégrante de la base de données dans laquelle elles sont enregistrées.</p>
-<h3 id="creation-dune-procedure-stockee">Création d’une procédure stockée<a class="headerlink" href="#creation-dune-procedure-stockee" title="Permanent link">⚓︎</a></h3>
+<h3 id="creation-dune-procedure-stockee">Création d'une procédure stockée<a class="headerlink" href="#creation-dune-procedure-stockee" title="Permanent link">⚓︎</a></h3>
 <p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">nom_procedure</span><span class="w"> </span><span class="p">([</span><span class="n">parametre1</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="n">parametre2</span><span class="p">,</span><span class="w"> </span><span class="p">...]])</span>
 <span class="n">corps</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">procédure</span><span class="p">;</span>
 </code></pre></div>
@@ -6205,10 +6321,10 @@ exemple sur la base gesCom, pour afficher les articles en console :
 <span class="k">SELECT</span><span class="w"> </span><span class="n">Desart</span><span class="p">,</span><span class="w"> </span><span class="n">PUart</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="p">;</span>
 </code></pre></div>
 La procédure stockée est stockée dans la base de données.
-Pour exécuter la procédure, il suffit de l’appeler ..
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CALL</span><span class="w"> </span><span class="n">afficher_liste_articles</span><span class="w"> </span><span class="p">;</span>
+Pour exécuter la procédure, il suffit de l'appeler ..
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CALL</span><span class="w"> </span><span class="n">afficher_liste_articles</span><span class="p">();</span>
 </code></pre></div></p>
-<h3 id="bloc-dinstructions">Bloc D’instructions<a class="headerlink" href="#bloc-dinstructions" title="Permanent link">⚓︎</a></h3>
+<h3 id="bloc-dinstructions">Bloc D'instructions<a class="headerlink" href="#bloc-dinstructions" title="Permanent link">⚓︎</a></h3>
 <p>Pour délimiter un bloc d'instructions (qui peut donc contenir plus d'une instruction), on utilise les mots <strong>BEGIN</strong>  et <strong>END</strong>.</p>
 <p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">afficher_liste_articles</span><span class="p">()</span><span class="w"> </span>
 <span class="w">    </span><span class="c1">-- pas de paramètres dans les parenthèses</span>
@@ -6233,6 +6349,7 @@ Ce qui donne : </p>
 <span class="k">BEGIN</span>
 <span class="k">SELECT</span><span class="w"> </span><span class="n">Desart</span><span class="p">,</span><span class="w"> </span><span class="n">PUart</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="p">;</span>
 <span class="k">END</span><span class="w"> </span><span class="o">|</span>
+<span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 <strong>Note :</strong> Il est possible d'imbriquer plusieurs blocs d'instructions. De même, à l'intérieur d'un bloc d'instructions, plusieurs blocs d'instructions peuvent se suivre. Ceux-ci permettent donc de structurer les instructions en plusieurs parties distinctes et sur plusieurs niveaux d'imbrication différents.</p>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">BEGIN</span>
@@ -6256,7 +6373,7 @@ Ce qui donne : </p>
 <h3 id="sens-des-parametres">Sens des paramètres<a class="headerlink" href="#sens-des-parametres" title="Permanent link">⚓︎</a></h3>
 <p>Un paramètre peut être de trois sens différents : <strong>entrant</strong> (IN),<strong>sortant</strong> (OUT), ou <strong>les deux</strong> (INOUT).<br />
 ▶️ IN  : c'est un paramètre "entrant". C'est-à-dire qu'il s'agit d'un paramètre dont la valeur est fournie à la procédure stockée. Cette valeur sera utilisée pendant la procédure (pour un calcul ou une sélection, par exemple).<br />
-▶️ OUT  : il s'agit d'un paramètre "sortant", dont la valeur sera établie au cours de la procédure et qui pourra ensuite être utilisé en dehors de cette procédure.<br :>
+▶️ OUT  : il s'agit d'un paramètre "sortant", dont la valeur sera établie au cours de la procédure et qui pourra ensuite être utilisé en dehors de cette procédure.<br />
 ▶️ INOUT  : un tel paramètre sera utilisé pendant la procédure, verra éventuellement sa valeur modifiée par celle-ci, et sera ensuite utilisable en dehors.<br /></p>
 <h3 id="syntaxe">Syntaxe<a class="headerlink" href="#syntaxe" title="Permanent link">⚓︎</a></h3>
 <p>Lorsque l'on crée une procédure avec un ou plusieurs paramètres, chaque paramètre est défini par trois éléments.<br />
@@ -6264,10 +6381,10 @@ Ce qui donne : </p>
 ▶️ Son <strong>nom</strong> : indispensable pour le désigner à l'intérieur de la procédure.<br />
 ▶️ Son <strong>type</strong> : INT, VARCHAR(10)…<br /></p>
 <h3 id="procedure-avec-un-seul-parametre-entrant">Procédure avec un seul paramètre entrant<a class="headerlink" href="#procedure-avec-un-seul-parametre-entrant" title="Permanent link">⚓︎</a></h3>
-<p>Voici une procédure qui renvoie l’article selon son id passé en paramètre : <br /></p>
+<p>Voici une procédure qui renvoie l'article selon son id passé en paramètre : <br /></p>
 <p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="c1">-- Facultatif si votre délimiteur est toujours |</span>
 <span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">afficher_article_par_id</span><span class="w"> </span><span class="p">(</span><span class="k">IN</span><span class="w"> </span><span class="n">p_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">)</span><span class="w">  </span>
-<span class="w">    </span><span class="c1">-- Définition du paramètre p_espece_id</span>
+<span class="w">    </span><span class="c1">-- Définition du paramètre p_id</span>
 <span class="k">BEGIN</span>
 <span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">desart</span><span class="p">,</span><span class="w"> </span><span class="n">PUart</span>
 <span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span>
@@ -6280,38 +6397,38 @@ Pour utiliser la procédure </p>
 <span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">var</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 <span class="k">CALL</span><span class="w"> </span><span class="n">afficher_article_par_id</span><span class="p">(</span><span class="o">@</span><span class="n">var</span><span class="p">);</span>
 </code></pre></div>
-<h3 id="la-declaration-dune-variable">La déclaration d’une variable<a class="headerlink" href="#la-declaration-dune-variable" title="Permanent link">⚓︎</a></h3>
-<p><strong>MySQL</strong> reconnaît différents types de variables. Le premier type est celui des variables définies par l’utilisateur, identifiées par un symbole <code>@</code> utilisé comme préfixe. Dans <strong>MySQL</strong>, vous pouvez accéder aux variables définies par l’utilisateur sans les déclarer ou les initialiser au préalable. Si vous le faites, une valeur <code>NULL</code> est attribuée à la variable lors de son initialisation. Par exemple, si vous utilisez <code>SELECT</code> avec une variable sans lui donner de valeur, comme dans ce cas :</p>
+<h3 id="la-declaration-dune-variable">La déclaration d'une variable<a class="headerlink" href="#la-declaration-dune-variable" title="Permanent link">⚓︎</a></h3>
+<p><strong>MySQL</strong> reconnaît différents types de variables. Le premier type est celui des variables définies par l'utilisateur, identifiées par un symbole <code>@</code> utilisé comme préfixe. Dans <strong>MySQL</strong>, vous pouvez accéder aux variables définies par l'utilisateur sans les déclarer ou les initialiser au préalable. Si vous le faites, une valeur <code>NULL</code> est attribuée à la variable lors de son initialisation. Par exemple, si vous utilisez <code>SELECT</code> avec une variable sans lui donner de valeur, comme dans ce cas :</p>
 <p>Exemples :</p>
 <ul>
 <li><code>SELECT @var1;</code>  /* MySQL retourne une valeur NULL. */<br /></li>
-<li><code>SELECT @FirstVar=1, @SecondVar=2;</code><br /></li>
+<li><code>SELECT @FirstVar := 1, @SecondVar := 2;</code><br /></li>
 </ul>
 <p>Une fois que vous avez assigné une valeur à une variable, elle aura un <em>type</em> en fonction de la valeur donnée. Dans les exemples précédents, <code>@FirstVar</code> et <code>@SecondVar</code> sont de type <code>int</code>.<br /></p>
-<p>Les variables peuvent faire partie des listes de champs d’une déclaration <code>SELECT</code>. Vous pouvez mélanger les variables et les noms de champs lorsque vous spécifiez des champs dans une sélection, comme dans cet exemple :<br /></p>
+<p>Les variables peuvent faire partie des listes de champs d'une déclaration <code>SELECT</code>. Vous pouvez mélanger les variables et les noms de champs lorsque vous spécifiez des champs dans une sélection, comme dans cet exemple :<br /></p>
 <p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">IndexVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="k">SELECT</span><span class="w"> </span><span class="n">Desart</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">numart</span><span class="o">=</span><span class="w"> </span><span class="o">@</span><span class="n">IndexVar</span><span class="p">;</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">Desart</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">numart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">@</span><span class="n">IndexVar</span><span class="p">;</span>
 </code></pre></div>
-//Ou pour un autre usage
+-- Ou pour un autre usage
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">IndexVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">PUart</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">numart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
-<span class="k">SELECT</span><span class="w"> </span><span class="n">Desart</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">PUart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">@</span><span class="n">IndexVar</span><span class="w"> </span><span class="p">;</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">Desart</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">PUart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">@</span><span class="n">IndexVar</span><span class="p">;</span>
 </code></pre></div></p>
 <p><u>Remarque :</u> Par convention les noms des variables doivent toujours être précédés du symbole <code>@</code></p>
-<h3 id="affichage-dinformations">Affichage d’informations<a class="headerlink" href="#affichage-dinformations" title="Permanent link">⚓︎</a></h3>
+<h3 id="affichage-dinformations">Affichage d'informations<a class="headerlink" href="#affichage-dinformations" title="Permanent link">⚓︎</a></h3>
 <p>Syntaxe :
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Elément_A_Afficher</span>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Elément_A_Afficher</span><span class="p">;</span>
 </code></pre></div>
 exemple : </p>
-<p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">IndexVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">PUart</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="p">);</span>
+<p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">IndexVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">PUart</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">numart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 <span class="k">SELECT</span><span class="w"> </span><span class="o">@</span><span class="n">IndexVar</span><span class="p">,</span><span class="w"> </span><span class="n">Desart</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="p">;</span>
-<span class="k">SELECT</span><span class="w"> </span><span class="n">concat</span><span class="p">(</span><span class="ss">&quot;La variable est &quot;</span><span class="p">,</span><span class="w"> </span><span class="k">convert</span><span class="p">(</span><span class="o">@</span><span class="n">IndexVar</span><span class="p">,</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">));</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="s1">&#39;La variable est &#39;</span><span class="p">,</span><span class="w"> </span><span class="k">CONVERT</span><span class="p">(</span><span class="o">@</span><span class="n">IndexVar</span><span class="p">,</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">));</span>
 </code></pre></div>
-<em>Explication :</em> Affiche la valeur de <code>@c</code> concaténé avec la valeur de <code>@b</code> mais puisque <code>@c</code> est de type numérique et qu'on ne peut jamais concaténer une valeur numérique avec une valeur chaîne de caractères, il faut passer par une fonction de conversion dont la syntaxe est la suivante : <code>Convert (Type de conversion, Valeur à convertir)</code> <a href="https://sql.sh/fonctions/convert">Doc ici</a></p>
+<em>Explication :</em> Affiche la valeur de <code>@IndexVar</code> concaténée avec une chaîne de caractères. Puisque <code>@IndexVar</code> est de type numérique et qu'on ne peut jamais concaténer une valeur numérique avec une valeur chaîne de caractères, il faut passer par une fonction de conversion dont la syntaxe est la suivante : <code>CONVERT(Valeur à convertir, Type de conversion)</code> <a href="https://sql.sh/fonctions/convert">Doc ici</a></p>
 <h3 id="procedure-avec-deux-parametres-un-entrant-et-un-sortant">Procédure avec deux paramètres, un entrant et un sortant<a class="headerlink" href="#procedure-avec-deux-parametres-un-entrant-et-un-sortant" title="Permanent link">⚓︎</a></h3>
-<p>Voici une procédure assez similaire à la précédente, si ce n'est qu'elle n'affiche pas l’article passé en paramètres, mais compte combien il y a d’articles avec un stock &gt;= à 5 et dont le prix passé en paramètre est inférieur, puis stocke cette valeur dans un paramètre sortant.</p>
+<p>Voici une procédure assez similaire à la précédente, si ce n'est qu'elle n'affiche pas l'article passé en paramètres, mais compte combien il y a d'articles avec un stock &gt;= à 5 et dont le prix passé en paramètre est inférieur, puis stocke cette valeur dans un paramètre sortant.</p>
 <p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="o">|</span><span class="w">                                                      </span>
-<span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">nb_art_petit_prix</span><span class="w"> </span><span class="p">(</span><span class="n">prix</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="k">OUT</span><span class="w"> </span><span class="n">stock</span><span class="w"> </span><span class="nb">INT</span><span class="p">)</span><span class="w">  </span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">nb_art_petit_prix</span><span class="w"> </span><span class="p">(</span><span class="k">IN</span><span class="w"> </span><span class="n">prix</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="k">OUT</span><span class="w"> </span><span class="n">stock</span><span class="w"> </span><span class="nb">INT</span><span class="p">)</span><span class="w">  </span>
 <span class="k">BEGIN</span>
 <span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">stock</span>
 <span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span>
@@ -6336,7 +6453,7 @@ Il existe aussi des Procédure avec deux paramètres, un entrant et un entrant-s
 <p>Nous connaissons déjà les variables utilisateur, qui sont des variables désignées par <code>@</code>. Il existe aussi des variables système, qui sont des variables prédéfinies par <strong>MySQL</strong>.<br />
 Voyons maintenant les variables locales, qui peuvent être définies dans un bloc d'instructions.</p>
 <p><strong>Déclaration d'une variable locale</strong> <br />
-La déclaration d'une variable locale se fait avec l'instruction <code>DECLARE</code> juste apres le début du bloc d’instruction :<br />
+La déclaration d'une variable locale se fait avec l'instruction <code>DECLARE</code> juste apres le début du bloc d'instruction :<br />
 <code>DECLARE nom_variable type_variable [DEFAULT valeur_defaut];</code></p>
 <p>▶️ Pour changer la valeur d'une variable locale, on peut utiliser <code>SET</code>  ou <code>SELECT ... INTO</code>.</p>
 <p><em>Exemple :</em> voici une procédure stockée qui donne la date d'aujourd'hui et de demain.<br />
@@ -6351,7 +6468,7 @@ La déclaration d'une variable locale se fait avec l'instruction <code>DECLARE</
 <span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="n">v_date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v_date</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">DAY</span><span class="p">;</span><span class="w">                     </span>
 <span class="w">    </span><span class="c1">-- On change la valeur de la variable locale</span>
 <span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">DATE_FORMAT</span><span class="p">(</span><span class="n">v_date</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;%W %e %M %Y&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Demain</span><span class="p">;</span>
-<span class="k">END</span><span class="o">|</span>
+<span class="k">END</span><span class="w"> </span><span class="o">|</span>
 <span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 ▶️ Appel : 
@@ -6359,12 +6476,16 @@ La déclaration d'une variable locale se fait avec l'instruction <code>DECLARE</
 <span class="k">CALL</span><span class="w"> </span><span class="n">aujourdhui_demain</span><span class="p">();</span>
 </code></pre></div></p>
 <h2 id="3-modification-dune-ps">3. Modification d'une PS<a class="headerlink" href="#3-modification-dune-ps" title="Permanent link">⚓︎</a></h2>
-<h3 id="suppression-dune-procedure-stockee">Suppression d’une procédure stockée<a class="headerlink" href="#suppression-dune-procedure-stockee" title="Permanent link">⚓︎</a></h3>
-<p>Syntaxe : <code>Drop Procedure Nom_Procédure</code> ;</p>
-<h3 id="modification-dune-procedure-stockee">Modification d’une procédure stockée<a class="headerlink" href="#modification-dune-procedure-stockee" title="Permanent link">⚓︎</a></h3>
+<h3 id="suppression-dune-procedure-stockee">Suppression d'une procédure stockée<a class="headerlink" href="#suppression-dune-procedure-stockee" title="Permanent link">⚓︎</a></h3>
 <p>Syntaxe :
-ALTER Procedure Nom_Procédure as
-Nouvelles instructions</p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DROP</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">nom_procedure</span><span class="p">;</span>
+</code></pre></div></p>
+<h3 id="modification-dune-procedure-stockee">Modification d'une procédure stockée<a class="headerlink" href="#modification-dune-procedure-stockee" title="Permanent link">⚓︎</a></h3>
+<p>En MySQL, il n'est <strong>pas possible de modifier directement le corps</strong> d'une procédure stockée. Il faut la supprimer puis la recréer :</p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DROP</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">nom_procedure</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">nom_procedure</span><span class="w"> </span><span class="p">...</span>
+<span class="c1">-- Nouvelles instructions</span>
+</code></pre></div>
 <h2 id="4-les-structures-de-mysql">4. Les structures de MySQL<a class="headerlink" href="#4-les-structures-de-mysql" title="Permanent link">⚓︎</a></h2>
 <h3 id="les-structures-alternatives">les structures alternatives<a class="headerlink" href="#les-structures-alternatives" title="Permanent link">⚓︎</a></h3>
 <p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">IF</span><span class="w"> </span><span class="n">condition</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="n">instructions</span>
@@ -6409,25 +6530,25 @@ Sinon afficher 'Stock disponible'
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="cm">/* On souhaite vérifier si le stock de l&#39;article passé en paramètre a atteint son seuil minimum.</span>
 <span class="cm">Si c&#39;est le cas afficher le message &#39;Rupture de stock&#39; : */</span>
 <span class="k">DELIMITER</span><span class="w"> </span><span class="o">|</span>
-<span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">affichage_rupture</span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="nb">INT</span><span class="p">)</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">affichage_rupture</span><span class="p">(</span><span class="k">IN</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="nb">INT</span><span class="p">)</span>
 <span class="k">BEGIN</span>
-<span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">QS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">Select</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="k">Where</span><span class="w"> </span><span class="n">NumArt</span><span class="w"> </span><span class="o">=</span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
-<span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">SM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">Select</span><span class="w"> </span><span class="n">SeuilMin</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="k">Where</span><span class="w"> </span><span class="n">NumArt</span><span class="w"> </span><span class="o">=</span><span class="n">num</span><span class="p">);</span><span class="w"> </span>
-<span class="w">    </span><span class="k">If</span><span class="w"> </span><span class="o">@</span><span class="n">QS</span><span class="o">&lt;=@</span><span class="n">SM</span><span class="w"> </span><span class="k">THEN</span>
-<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;Rupture de stock&#39;</span><span class="w"> </span><span class="p">;</span>
-<span class="w">    </span><span class="k">Else</span><span class="w"> </span>
-<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;Stock disponible&#39;</span><span class="w"> </span><span class="p">;</span>
+<span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">QS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NumArt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num</span><span class="p">);</span>
+<span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">SM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">SeuilMin</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NumArt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num</span><span class="p">);</span><span class="w"> </span>
+<span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="o">@</span><span class="n">QS</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="o">@</span><span class="n">SM</span><span class="w"> </span><span class="k">THEN</span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;Rupture de stock&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">ELSE</span><span class="w"> </span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;Stock disponible&#39;</span><span class="p">;</span>
 <span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
 <span class="k">END</span><span class="w"> </span><span class="o">|</span>
 <span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
 
-<span class="k">CALL</span><span class="w"> </span><span class="n">affichage_rupture2</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">CALL</span><span class="w"> </span><span class="n">affichage_rupture</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 </code></pre></div>
 </div>
 </div>
 </div>
 </div>
-<h3 id="linstruction-case">L’instruction case<a class="headerlink" href="#linstruction-case" title="Permanent link">⚓︎</a></h3>
+<h3 id="linstruction-case">L'instruction case<a class="headerlink" href="#linstruction-case" title="Permanent link">⚓︎</a></h3>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CASE</span><span class="w"> </span><span class="n">valeur_a_comparer</span>
 <span class="w">    </span><span class="k">WHEN</span><span class="w"> </span><span class="n">possibilite1</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="n">instructions</span>
 <span class="w">    </span><span class="p">[</span><span class="k">WHEN</span><span class="w"> </span><span class="n">possibilite2</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="n">instructions</span><span class="p">]</span><span class="w"> </span><span class="p">...</span>
@@ -6480,20 +6601,20 @@ Sinon afficher 'Stock disponible'
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Afficher la liste des articles (Numéro, Désignation et prix) avec en plus une colonne
-Observation qui affiche 'Non Disponible' si la quantité en stock est égale à 0, 'Disponible' si la quantité en stock est supérieure au stock Minimum et 'à Commander' sinon.
-▶️ Ecrire la PS correspondante </p>
+Observation qui affiche 'Non Disponible' si la quantité en stock est égale à 0, 'Disponible' si la quantité en stock est supérieure au stock Minimum et 'à Commander' sinon. <br />
+▶️ Ecrire la PS correspondante</p>
 </div>
 <div class="tabbed-block">
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="o">|</span>
 <span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">affichage_rupture4</span><span class="p">()</span>
 <span class="k">BEGIN</span>
-<span class="w">    </span><span class="k">Select</span><span class="w"> </span><span class="n">NumArt</span><span class="p">,</span><span class="w"> </span><span class="n">DesArt</span><span class="p">,</span><span class="w"> </span><span class="n">PUArt</span><span class="p">,</span>
-<span class="w">        </span><span class="k">Case</span>
-<span class="w">            </span><span class="k">When</span><span class="w"> </span><span class="n">QteEnStock</span><span class="o">=</span><span class="mi">0</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="s1">&#39;Non Disponible&#39;</span>
-<span class="w">            </span><span class="k">When</span><span class="w"> </span><span class="n">QteEnStock</span><span class="o">&gt;</span><span class="n">SeuilMinimum</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="s1">&#39;Disponible&#39;</span>
-<span class="w">            </span><span class="k">Else</span><span class="w"> </span><span class="s1">&#39;à Commander&#39;</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">NumArt</span><span class="p">,</span><span class="w"> </span><span class="n">DesArt</span><span class="p">,</span><span class="w"> </span><span class="n">PUArt</span><span class="p">,</span>
+<span class="w">        </span><span class="k">CASE</span>
+<span class="w">            </span><span class="k">WHEN</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;Non Disponible&#39;</span>
+<span class="w">            </span><span class="k">WHEN</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">SeuilMinimum</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;Disponible&#39;</span>
+<span class="w">            </span><span class="k">ELSE</span><span class="w"> </span><span class="s1">&#39;à Commander&#39;</span>
 <span class="w">        </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">observation</span>
-<span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="p">;</span>
+<span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="p">;</span>
 <span class="k">END</span><span class="w"> </span><span class="o">|</span>
 <span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
 <span class="k">CALL</span><span class="w"> </span><span class="n">affichage_rupture4</span><span class="p">();</span>
@@ -6539,13 +6660,15 @@ Observation qui affiche 'Non Disponible' si la quantité en stock est égale à 
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="o">|</span>
 <span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">application_while</span><span class="p">()</span>
 <span class="k">BEGIN</span>
-<span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">moyPUart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">Select</span><span class="w"> </span><span class="k">avg</span><span class="p">(</span><span class="n">PUart</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">article</span><span class="p">);</span>
-<span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">maxPUart</span><span class="w"> </span><span class="o">=</span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="k">max</span><span class="p">(</span><span class="n">PUart</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">article</span><span class="p">);</span>
-<span class="w">    </span><span class="n">WHILE</span><span class="w"> </span><span class="p">(</span><span class="o">@</span><span class="n">moyPUart</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">20</span><span class="w">  </span><span class="k">and</span><span class="w"> </span><span class="o">@</span><span class="n">maxPUart</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="k">DO</span>
-<span class="w">        </span><span class="k">Update</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="k">Set</span><span class="w"> </span><span class="n">puart</span><span class="o">=</span><span class="n">puart</span><span class="o">+</span><span class="p">(</span><span class="n">puart</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span><span class="o">/</span><span class="mi">100</span><span class="p">;</span>
-<span class="w">        </span><span class="cm">/* Select * from article ; */</span>
-<span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="n">WHILE</span><span class="w"> </span><span class="p">;</span>
-<span class="w">    </span><span class="k">Select</span><span class="w"> </span><span class="k">avg</span><span class="p">(</span><span class="n">PUart</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">moyenne</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="k">max</span><span class="p">(</span><span class="n">PUart</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Prix_élevé</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="p">;</span>
+<span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">moyPUart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">PUart</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="p">);</span>
+<span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">maxPUart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">PUart</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="p">);</span>
+<span class="w">    </span><span class="n">WHILE</span><span class="w"> </span><span class="p">(</span><span class="o">@</span><span class="n">moyPUart</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="o">@</span><span class="n">maxPUart</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="k">DO</span>
+<span class="w">        </span><span class="k">UPDATE</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">puart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">puart</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">puart</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">-- Recalcul des variables à chaque itération pour mettre à jour la condition</span>
+<span class="w">        </span><span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">moyPUart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">PUart</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="p">);</span>
+<span class="w">        </span><span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">maxPUart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">PUart</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="p">);</span>
+<span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="n">WHILE</span><span class="p">;</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">PUart</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">moyenne</span><span class="p">,</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">PUart</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Prix_élevé</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="p">;</span>
 <span class="k">END</span><span class="w"> </span><span class="o">|</span>
 <span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
@@ -6582,7 +6705,7 @@ Observation qui affiche 'Non Disponible' si la quantité en stock est égale à 
 <p>On a gardé la boucle LOOP  pour la fin, parce qu'elle est un peu particulière. En effet, voici sa syntaxe :<br />
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="p">[</span><span class="n">label</span><span class="p">:]</span><span class="w"> </span><span class="n">LOOP</span>
 <span class="w">    </span><span class="n">instructions</span>
-<span class="k">END</span><span class="w"> </span><span class="n">LOOP</span><span class="w"> </span><span class="p">[</span><span class="n">label</span><span class="p">]</span>
+<span class="k">END</span><span class="w"> </span><span class="n">LOOP</span><span class="w"> </span><span class="p">[</span><span class="n">label</span><span class="p">];</span>
 </code></pre></div>
 Il n'est question de condition nulle part. En fait, une boucle LOOP doit intégrer dans ses instructions un élément qui va la faire s'arrêter : typiquement, une instruction LEAVE. Sinon, c'est une boucle infinie.<br /></p>
 <p><em>Exemple :</em> à nouveau une procédure qui affiche les nombres entiers de <code>1 à p_nombre</code>.

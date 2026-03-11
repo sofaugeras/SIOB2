@@ -1930,6 +1930,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.2_Transactions/exercices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercice
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2290,17 +2318,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fonctionnement-des-tables-inserted-et-deleted" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fonctionnement des tables inserted et deleted
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#exemple-de-triggers" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2340,6 +2357,94 @@
     
   
     Exercices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP complet 🚠
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    TP complet 🚠
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.5_TP/tp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP Gestion de Paie 💶
   
 
     
@@ -6065,7 +6170,7 @@
 <p>Un trigger exécute un traitement pour chaque ligne insérée, modifiée ou supprimée par l'événement déclencheur. Donc si l'on insère cinq lignes, les instructions du trigger seront exécutées cinq fois, chaque itération permettant de traiter les données d'une des lignes insérées.<br /></p>
 <p>Les instructions d'un trigger suivent les mêmes principes que les instructions d'une procédure stockée. S'il y a plus d'une instruction, il faut les mettre à l'intérieur d'un bloc d'instructions. Les structures que nous avons vues dans les deux chapitres précédents sont bien sûr utilisables (structures conditionnelles, boucles, gestionnaires d'erreurs, etc.), avec toutefois quelques restrictions que nous verrons en fin de chapitre.
 <br />
-Un trigger peut <strong>modifier et/ou insérer</strong> des données dans n'importe quelle table sauf les tables utilisées dans la requête qui l'a déclenché. En ce qui concerne la table à laquelle le trigger est attaché (qui est forcément utilisée par l'événement déclencheur), le trigger peut lire et modifier uniquement la ligne insérée, modifiée ou supprimée qu'il est en train de traiter.</p>
+Un trigger peut <strong>modifier et/ou insérer</strong> des données dans n'importe quelle table, à l'exception de la table à laquelle il est attaché via une requête DML explicite (<code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>). En revanche, dans un trigger <code>BEFORE</code>, il est possible de modifier directement les valeurs de la ligne en cours de traitement via le mot-clé <code>NEW</code> (voir section <a href="#old-et-new">OLD et NEW</a>).</p>
 <h3 id="a-quoi-sert-un-trigger">À quoi sert un trigger ?<a class="headerlink" href="#a-quoi-sert-un-trigger" title="Permanent link">⚓︎</a></h3>
 <p>On peut faire de nombreuses choses avec un trigger. Voici quelques exemples d'usage fréquent de ces objets. </p>
 <h4 id="contraintes-et-verifications-de-donnees">Contraintes et vérifications de données<a class="headerlink" href="#contraintes-et-verifications-de-donnees" title="Permanent link">⚓︎</a></h4>
@@ -6074,9 +6179,11 @@ Avec des triggers se déclenchant avant l'INSERT  et avant l'UPDATE, on peut vé
 <h4 id="integrite-des-donnees">Intégrité des données<a class="headerlink" href="#integrite-des-donnees" title="Permanent link">⚓︎</a></h4>
 <p>Les triggers sont parfois utilisés pour remplacer les options des clés étrangères <code>ON UPDATE RESTRICT|CASCADE|SET NULL</code>  et <code>ON DELETE RESTRICT|CASCADE|SET NULL</code>, notamment pour des tables <strong>MyISAM</strong> qui sont non transactionnelles et ne supportent pas les clés étrangères.<br />
 Cela peut aussi être utilisé avec des tables transactionnelles, dans les cas où le traitement à appliquer pour garder des données cohérentes est plus complexe que ce qui est permis par les options de clés étrangères.<br /></p>
-<p>Par exemple, dans certains systèmes, on veut pouvoir appliquer deux systèmes de suppression :<br />
-- une vraie suppression pure et dure, avec effacement des données, donc une requête DELETE  <br />
-- un archivage, qui masquera les données dans l'application, mais les conservera dans la base de données.<br /></p>
+<p>Par exemple, dans certains systèmes, on veut pouvoir appliquer deux systèmes de suppression :<br /></p>
+<ul>
+<li>une vraie suppression pure et dure, avec effacement des données, donc une requête DELETE  </li>
+<li>un archivage, qui masquera les données dans l'application, mais les conservera dans la base de données</li>
+</ul>
 <p>Dans ce cas, une solution possible est d'ajouter aux tables contenant des données archivables une colonne archive, pouvant contenir 0 (la ligne n'est pas archivée) ou 1 (la ligne est archivée). Pour une vraie suppression, on peut utiliser simplement un <code>ON DELETE RESTRICT|CASCADE|SET NULL</code> qui se répercutera sur les tables référençant les données supprimées. Par contre, dans le cas d'un archivage, on utilisera plutôt un trigger pour traiter les lignes qui référencent les données archivées, par exemple en les archivant également.</p>
 <h4 id="historisation-des-actions">Historisation des actions<a class="headerlink" href="#historisation-des-actions" title="Permanent link">⚓︎</a></h4>
 <p>On veut parfois garder une trace des actions effectuées sur la base de données, c'est-à-dire, par exemple, savoir qui a modifié telle ligne, et quand. Avec les triggers, rien de plus simple, il suffit de mettre à jour des données d'historisation à chaque insertion, modification ou suppression, soit directement dans la table concernée, soit dans une table utilisée spécialement et exclusivement pour garder un historique des actions.</p>
@@ -6087,13 +6194,13 @@ Par ailleurs, lorsque certaines informations dépendent de la valeur de certaine
 <strong>Cependant</strong>, utiliser les triggers pour stocker ces informations peut faciliter la vie de l'utilisateur et peut aussi faire gagner en performance, par exemple, si l'on a très souvent besoin de cette information, ou si la requête à faire pour trouver cette information est longue à exécuter. C'est typiquement cet usage qui est fait des triggers dans ce que l'on appelle les "vues matérialisées".</p>
 <h2 id="creation-des-triggers">Création des triggers<a class="headerlink" href="#creation-des-triggers" title="Permanent link">⚓︎</a></h2>
 <h3 id="syntaxe">Syntaxe<a class="headerlink" href="#syntaxe" title="Permanent link">⚓︎</a></h3>
-<p>Pour créer un trigger, on utilise la commande suivante :
+<p>Pour créer un trigger, on utilise la commande suivante :</p>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">nom_trigger</span><span class="w"> </span><span class="n">moment_trigger</span><span class="w"> </span><span class="n">evenement_trigger</span>
 <span class="k">ON</span><span class="w"> </span><span class="n">nom_table</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
 <span class="n">corps_trigger</span><span class="p">;</span>
 </code></pre></div>
-➡️ <code>CREATE TRIGGER nom_trigger</code>  : les triggers ont donc un nom.<br />
-➡️ <code>moment_trigger`` evenement_trigger</code>  : servent à définir quand et comment le trigger est déclenché.<br />
+<p>➡️ <code>CREATE TRIGGER nom_trigger</code>  : les triggers ont donc un nom.<br />
+➡️ <code>moment_trigger evenement_trigger</code>  : servent à définir quand et comment le trigger est déclenché.<br />
 ➡️ <code>ON nom_table</code>  : c'est là que l'on définit à quelle table le trigger est attaché.<br />
 ➡️ <code>FOR EACH ROW</code>  : signifie littéralement "pour chaque ligne", sous-entendu "pour chaque ligne insérée/supprimée/modifiée" selon ce qui a déclenché le trigger.<br />
 ➡️ <code>corps_trigger</code>  : c'est le contenu du trigger. Comme pour les procédures stockées, il peut s'agir soit d'une seule instruction, soit d'un bloc d'instructions.<br /></p>
@@ -6106,40 +6213,60 @@ Un trigger est déclenché soit par INSERT, soit par UPDATE, soit par DELETE. Il
 <p>▶️ Avant ou après<br />
 Lorsqu'un trigger est déclenché, ses instructions peuvent être exécutées à deux moments différents : soit juste avant que l'événement déclencheur n'ait lieu (<code>BEFORE</code>), soit juste après (<code>AFTER</code>).<br /></p>
 <p>Donc, si vous avez un trigger <code>BEFORE UPDATE</code> sur la table <code>A</code>, l'exécution d'une requête <code>UPDATE</code> sur cette table va d'abord déclencher l'exécution des instructions du trigger, ensuite seulement les lignes de la table seront modifiées.<br /></p>
-<p><em>Exemple :</em> Pour créer un trigger sur la table <code>Article</code>, déclenché par une insertion et s'exécutant après ladite insertion, on utilisera la syntaxe suivante :
+<p><em>Exemple :</em> Pour créer un trigger sur la table <code>Article</code>, déclenché par une insertion et s'exécutant après ladite insertion, on utilisera la syntaxe suivante :</p>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">after_insert_article</span><span class="w"> </span><span class="k">AFTER</span><span class="w"> </span><span class="k">INSERT</span>
 <span class="k">ON</span><span class="w"> </span><span class="n">Article</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
 <span class="n">corps_trigger</span><span class="p">;</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="regle-et-convention">Règle et convention<a class="headerlink" href="#regle-et-convention" title="Permanent link">⚓︎</a></h3>
 <p>Il ne peut exister qu'un seul trigger par combinaison <code>moment_trigger/evenement_trigger</code> par table. Donc un seul trigger <code>BEFORE UPDATE</code> par table, un seul <code>AFTER DELETE</code>, etc...<br /></p>
 <p>Étant donné qu'il existe deux possibilités pour le moment d'exécution, et trois pour l'événement déclencheur, on a donc un maximum de <strong>six</strong> triggers par table. Cette règle étant établie, il existe une convention quant à la manière de nommer ses triggers, que je vous encourage à suivre : <code>nom_trigger = moment_evenement_table</code>. Donc le trigger <code>BEFORE UPDATE ON Animal</code>  aura pour nom : <code>before_update_animal</code>.</p>
 <h3 id="old-et-new">OLD et NEW<a class="headerlink" href="#old-et-new" title="Permanent link">⚓︎</a></h3>
-<p>Dans le corps du trigger, <strong>MySQL</strong> met à disposition deux mots-clés : OLD  et NEW.<br />
-▶️ OLD  représente les valeurs des colonnes de la ligne traitée avant qu'elle ne soit modifiée par l'événement déclencheur. Ces valeurs peuvent être lues, mais pas modifiées.<br />
-▶️ NEW  représente les valeurs des colonnes de la ligne traitée après qu'elle a été modifiée par l'événement déclencheur. Ces valeurs peuvent être lues et modifiées.<br />
-Il n'y a que dans le cas d'un trigger <code>UPDATE</code> que <code>OLD</code> et <code>NEW</code>  coexistent. Lors d'une insertion, <code>OLD</code> n'existe pas, puisque la ligne n'existe pas avant l'événement déclencheur. Dans le cas d'une suppression, c'est <code>NEW</code>  qui n'existe pas, puisque la ligne n'existera plus après l'événement déclencheur.</p>
+<p>Dans le corps du trigger, <strong>MySQL</strong> met à disposition deux mots-clés : <code>OLD</code> et <code>NEW</code>.<br />
+▶️ <code>OLD</code> représente les valeurs des colonnes de la ligne traitée avant qu'elle ne soit modifiée par l'événement déclencheur. Ces valeurs peuvent être lues, mais pas modifiées.<br />
+▶️ <code>NEW</code> représente les valeurs des colonnes de la ligne traitée après qu'elle a été modifiée par l'événement déclencheur. Ces valeurs peuvent être lues et modifiées.<br /></p>
+<p>Il n'y a que dans le cas d'un trigger <code>UPDATE</code> que <code>OLD</code> et <code>NEW</code> coexistent :</p>
+<table>
+<thead>
+<tr>
+<th>Événement</th>
+<th><code>OLD</code></th>
+<th><code>NEW</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>INSERT</code></td>
+<td>✗ non disponible</td>
+<td>✔ disponible</td>
+</tr>
+<tr>
+<td><code>UPDATE</code></td>
+<td>✔ disponible</td>
+<td>✔ disponible</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td>✔ disponible</td>
+<td>✗ non disponible</td>
+</tr>
+</tbody>
+</table>
+<p>Lors d'une insertion, <code>OLD</code> n'existe pas, puisque la ligne n'existe pas avant l'événement déclencheur. Dans le cas d'une suppression, c'est <code>NEW</code> qui n'existe pas, puisque la ligne n'existera plus après l'événement déclencheur.</p>
 <h3 id="suppression-des-triggers">Suppression des triggers<a class="headerlink" href="#suppression-des-triggers" title="Permanent link">⚓︎</a></h3>
-<p>Encore une fois, la commande <code>DROP</code> permet de supprimer un trigger.
+<p>Encore une fois, la commande <code>DROP</code> permet de supprimer un trigger.</p>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DROP</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">nom_trigger</span><span class="p">;</span>
 </code></pre></div>
-Tout comme pour les procédures stockées, il n'est pas possible de modifier un trigger. Il faut le supprimer puis le recréer différemment. Par ailleurs, si l'on supprime une table, on supprime également tous les triggers qui y sont attachés.</p>
-<h3 id="fonctionnement-des-tables-inserted-et-deleted">Fonctionnement des tables inserted et deleted<a class="headerlink" href="#fonctionnement-des-tables-inserted-et-deleted" title="Permanent link">⚓︎</a></h3>
-<p>Au cours des opérations d'ajout, de suppression et de modification, le système utilise les <strong>tables temporaires</strong> <code>inserted</code> et <code>deleted</code>. Ces tables ne sont accessibles qu'au niveau des triggers et leur contenu est perdu dès que les triggers sont validés.
-<br />
-<strong>Action d'ajout :</strong> Les enregistrements ajoutés sont placés dans une table temporaire nommée <code>inserted</code><br />
-▶️ Action de suppression : Les enregistrements supprimés sont placés dans une table temporaire nommée deleted.<br />
-▶️ Action de modification :  L'opération de modification est interprétée comme une opération de suppression des anciennes informations et d'ajout des nouvelles informations. </p>
-<p>C'est pourquoi le système utilise dans ce cas les deux tables temporaires <code>deleted</code> et <code>inserted</code>. En fait quand un utilisateur demande à modifier des enregistrements, ceux ci sont d'abord sauvegardés dans la table temporaire <code>deleted</code> et la copie modifiée est enregistrée dans la table <code>inserted</code>.</p>
+<p>Tout comme pour les procédures stockées, il n'est pas possible de modifier un trigger. Il faut le supprimer puis le recréer différemment. Par ailleurs, si l'on supprime une table, on supprime également tous les triggers qui y sont attachés.</p>
 <h3 id="exemple-de-triggers">Exemple de triggers<a class="headerlink" href="#exemple-de-triggers" title="Permanent link">⚓︎</a></h3>
 <p>Le trigger suivant à la suppression d'une ligne de commande, remet à jour le stock et vérifie s'il s'agit de la dernière ligne pour cette commande. Si c'est le cas la commande est supprimée :</p>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="o">|</span>
-<span class="k">Create</span><span class="w"> </span><span class="k">Trigger</span><span class="w"> </span><span class="n">Tr_Supprimer_Ligne</span><span class="w"> </span><span class="k">AFTER</span><span class="w"> </span><span class="k">DELETE</span>
-<span class="k">On</span><span class="w"> </span><span class="n">LigneCommande</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">after_delete_lignecommande</span><span class="w"> </span><span class="k">AFTER</span><span class="w"> </span><span class="k">DELETE</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">LigneCommande</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
 <span class="k">BEGIN</span>
-<span class="w">    </span><span class="k">Update</span><span class="w"> </span><span class="n">article</span><span class="w"> </span>
-<span class="w">    </span><span class="k">set</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">OLD</span><span class="p">.</span><span class="n">QteCommandee</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="k">OLD</span><span class="p">.</span><span class="n">numart</span><span class="o">=</span><span class="n">article</span><span class="p">.</span><span class="n">numart</span><span class="p">;</span>
-<span class="w">    </span><span class="k">Delete</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">commande</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">numcom</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">numcom</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">lignecommande</span><span class="p">);</span>
+<span class="w">    </span><span class="k">UPDATE</span><span class="w"> </span><span class="n">article</span><span class="w"> </span>
+<span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">OLD</span><span class="p">.</span><span class="n">QteCommandee</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="k">OLD</span><span class="p">.</span><span class="n">numart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">article</span><span class="p">.</span><span class="n">numart</span><span class="p">;</span>
+<span class="w">    </span><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">commande</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">numcom</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">numcom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">lignecommande</span><span class="p">);</span>
 <span class="k">END</span><span class="w"> </span><span class="o">|</span>
 <span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>

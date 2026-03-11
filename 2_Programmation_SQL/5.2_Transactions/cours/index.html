@@ -18,7 +18,7 @@
         <link rel="prev" href="../../5.1_Procedures_stockees/exercices/">
       
       
-        <link rel="next" href="../../5.3_curseurs/cours/">
+        <link rel="next" href="../exercices/">
       
       
         
@@ -2010,6 +2010,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exercices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercice
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2229,6 +2257,94 @@
     
   
     Exercices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP complet 🚠
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    TP complet 🚠
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.5_TP/tp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP Gestion de Paie 💶
   
 
     
@@ -5943,7 +6059,7 @@
 Une transaction permet d'exécuter un groupe d'instructions. Si pour une raison ou une autre l'une de ces instructions n'a pas pu être exécutée, tous le groupe d'instructions est annulé (le tout ou rien) :<br />
 ▶️  Pour démarrer une transaction on utilise l'instruction <code>START TRANSACTION</code>
 ▶️  Pour valider la transaction et rendre les traitements qui lui sont associés effectifs, on utilise l'instruction <code>COMMIT</code>
-▶️  interrompre une transaction en cours qui n'a pas encore été validée, on utilise l'instruction <code>ROLLBACK</code>
+▶️  Pour interrompre une transaction en cours qui n'a pas encore été validée, on utilise l'instruction <code>ROLLBACK</code>
 ▶️  Si plusieurs transactions peuvent être en cours, on peut leur attribuer des noms pour les distinguer</p>
 <h2 id="syntaxe">Syntaxe<a class="headerlink" href="#syntaxe" title="Permanent link">⚓︎</a></h2>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">START</span><span class="w"> </span><span class="k">TRANSACTION</span>
@@ -5962,25 +6078,23 @@ Une transaction permet d'exécuter un groupe d'instructions. Si pour une raison 
 </code></pre></div>
 <h2 id="exemple">Exemple<a class="headerlink" href="#exemple" title="Permanent link">⚓︎</a></h2>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">START</span><span class="w"> </span><span class="k">TRANSACTION</span><span class="p">;</span>
-<span class="k">SELECT</span><span class="w"> </span><span class="o">@</span><span class="n">A</span><span class="p">:</span><span class="o">=</span><span class="k">SUM</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">table1</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="k">type</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
-<span class="k">UPDATE</span><span class="w"> </span><span class="n">table2</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">summary</span><span class="o">=@</span><span class="n">A</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="k">type</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">@</span><span class="n">A</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">table1</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="k">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="k">UPDATE</span><span class="w"> </span><span class="n">table2</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">summary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">@</span><span class="n">A</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="k">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="k">COMMIT</span><span class="p">;</span>
 </code></pre></div>
 <h2 id="application">Application<a class="headerlink" href="#application" title="Permanent link">⚓︎</a></h2>
 <p>Supposons qu'il n'existe pas de contrainte clé étrangère entre le champ <code>NumCom</code> de la table <code>LigneCommande</code> et le champ <code>NumCom</code> de la <code>Commande</code>. On souhaite supprimer la commande numéro 5 ainsi que la liste de ces articles. <br />
 Le programme serait :</p>
-<p>```sql
-Delete from Commande where NumCom=5
-Delete from LigneCommande where NumCom=5
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Mais si, juste après l&#39;exécution de la première instruction et alors que la deuxième n&#39;a pas encore eu lieu, un problème survient (une coupure de courant par exemple) la base de données deviendra incohérente car on aura des lignes de commande pour une commande qui n&#39;existe pas.&lt;br /&gt;
-En présence d&#39;une transaction, le programme n&#39;ayant pas atteint l&#39;instruction Commit Tran, aurait annulé toutes les instructions depuis Begin Tran. Le programme devra être alors :
-
- ```sql
-START TRANSACTION;
-Delete from Commande where NumCom=5
-Delete from LigneCommande where NumCom=5
-COMMIT;
-</code></pre></div></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Commande</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NumCom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">LigneCommande</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NumCom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</code></pre></div>
+<p>Mais si, juste après l'exécution de la première instruction et alors que la deuxième n'a pas encore eu lieu, un problème survient (une coupure de courant par exemple) la base de données deviendra incohérente car on aura des lignes de commande pour une commande qui n'existe pas.<br />
+En présence d'une transaction, le programme n'ayant pas atteint l'instruction <code>COMMIT</code>, aurait annulé toutes les instructions depuis <code>START TRANSACTION</code>. Le programme devra être alors :</p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">START</span><span class="w"> </span><span class="k">TRANSACTION</span><span class="p">;</span>
+<span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Commande</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NumCom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">LigneCommande</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NumCom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="k">COMMIT</span><span class="p">;</span>
+</code></pre></div>
 
 
 

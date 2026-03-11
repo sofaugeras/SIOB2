@@ -18,7 +18,7 @@
         <link rel="prev" href="../cours/">
       
       
-        <link rel="next" href="../../../3_UML/sommaire/">
+        <link rel="next" href="../../5.5_TP/tp/">
       
       
         
@@ -1930,6 +1930,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.2_Transactions/exercices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercice
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2259,6 +2287,94 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP complet 🚠
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    TP complet 🚠
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.5_TP/tp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP Gestion de Paie 💶
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -5964,35 +6080,39 @@
 <p>Le trigger suivant interdit la modification des commandes</p>
 <details class="question">
 <summary>Correction</summary>
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">Create</span><span class="w"> </span><span class="k">Trigger</span><span class="w"> </span><span class="n">Tr_Empêcher_Modif</span>
-<span class="k">On</span><span class="w"> </span><span class="n">Commande</span>
-<span class="k">For</span><span class="w"> </span><span class="k">Update</span>
-<span class="k">As</span>
-<span class="k">Rollback</span>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="o">//</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">Tr_Empecher_Modif</span>
+<span class="k">BEFORE</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Commande</span>
+<span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
+<span class="k">BEGIN</span>
+<span class="w">    </span><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">&#39;45000&#39;</span>
+<span class="w">        </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;La modification des commandes est interdite&#39;</span><span class="p">;</span>
+<span class="k">END</span><span class="w"> </span><span class="o">//</span>
+<span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 </details>
 <h2 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">⚓︎</a></h2>
 <p>Le trigger suivant interdit la modification du numéro de commande et vérifie si la date saisie pour la date de commande est supérieure ou égale à la date du jour</p>
 <details class="question">
 <summary>Correction</summary>
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">Create</span><span class="w"> </span><span class="k">Trigger</span><span class="w"> </span><span class="n">Tr_Empêcher_Modif_Numcom</span>
-<span class="k">On</span><span class="w"> </span><span class="n">Commande</span>
-<span class="k">For</span><span class="w"> </span><span class="k">Update</span>
-<span class="k">As</span>
-<span class="k">if</span><span class="w"> </span><span class="k">update</span><span class="p">(</span><span class="n">NumCom</span><span class="p">)</span>
-<span class="w">    </span><span class="k">Begin</span>
-<span class="w">    </span><span class="n">Raiserror</span><span class="p">(</span><span class="s1">&#39;le numéro de commande ne peut être modifié&#39;</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">120</span><span class="p">)</span>
-<span class="w">    </span><span class="k">Rollback</span>
-<span class="k">End</span>
-<span class="k">if</span><span class="w"> </span><span class="k">update</span><span class="p">(</span><span class="n">DatCom</span><span class="p">)</span>
-<span class="w">    </span><span class="k">Begin</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="k">select</span><span class="w"> </span><span class="k">count</span><span class="w"> </span><span class="p">(</span><span class="n">DatCom</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">inserted</span>
-<span class="w">        </span><span class="k">Where</span><span class="w"> </span><span class="n">datediff</span><span class="p">(</span><span class="k">day</span><span class="p">,</span><span class="n">datcom</span><span class="p">,</span><span class="n">getdate</span><span class="p">()</span><span class="w"> </span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-<span class="w">        </span><span class="k">Begin</span>
-<span class="w">        </span><span class="n">Raiserror</span><span class="p">(</span><span class="s1">&#39;La date de commande ne peut pas être inférieur à la date en cours&#39;</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">120</span><span class="p">)</span>
-<span class="w">        </span><span class="k">Rollback</span>
-<span class="w">    </span><span class="k">End</span>
-<span class="k">End</span>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="o">//</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">Tr_Empecher_Modif_Numcom</span>
+<span class="k">BEFORE</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Commande</span>
+<span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
+<span class="k">BEGIN</span>
+<span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">NumCom</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="k">OLD</span><span class="p">.</span><span class="n">NumCom</span><span class="w"> </span><span class="k">THEN</span>
+<span class="w">        </span><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">&#39;45000&#39;</span>
+<span class="w">            </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Le numéro de commande ne peut être modifié&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">DatCom</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="k">OLD</span><span class="p">.</span><span class="n">DatCom</span><span class="w"> </span><span class="k">THEN</span>
+<span class="w">        </span><span class="k">IF</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">DatCom</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">CURDATE</span><span class="p">()</span><span class="w"> </span><span class="k">THEN</span>
+<span class="w">            </span><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">&#39;45000&#39;</span>
+<span class="w">                </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;La date de commande ne peut pas être inférieure à la date en cours&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
+<span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
+<span class="k">END</span><span class="w"> </span><span class="o">//</span>
+<span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 </details>
 <h2 id="exercice-3">Exercice 3<a class="headerlink" href="#exercice-3" title="Permanent link">⚓︎</a></h2>
@@ -6000,69 +6120,74 @@
 Remarque : Ce trigger ne se déclenchera pas s'il existe une contrainte clé étrangère entre le champ NumCom de la table ligneCommande et le champ NumCom de la table commande.</p>
 <details class="question">
 <summary>Correction</summary>
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">Create</span><span class="w"> </span><span class="k">Trigger</span><span class="w"> </span><span class="n">Tr_Empêcher_Suppr</span>
-<span class="k">On</span><span class="w"> </span><span class="n">Commande</span>
-<span class="k">For</span><span class="w"> </span><span class="k">Delete</span>
-<span class="k">As</span>
-<span class="k">Declare</span><span class="w"> </span><span class="o">@</span><span class="n">a</span><span class="w"> </span><span class="nb">int</span>
-<span class="k">set</span><span class="w"> </span><span class="o">@</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="p">(</span><span class="k">Select</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="n">numart</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">lignecommande</span><span class="p">,</span><span class="w"> </span><span class="n">deleted</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">lignecommande</span><span class="p">.</span><span class="n">numcom</span><span class="w"> </span><span class="o">=</span><span class="n">deleted</span><span class="p">.</span><span class="n">numcom</span><span class="p">)</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">@</span><span class="n">a</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
-<span class="k">Begin</span>
-<span class="n">Raiserror</span><span class="p">(</span><span class="s1">&#39;Opération annulée. Une ou plusieurs commandes ont des articles enregistrés&#39;</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">120</span><span class="p">)</span>
-<span class="k">Rollback</span>
-<span class="k">End</span>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="o">//</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">Tr_Empecher_Suppr</span>
+<span class="k">BEFORE</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Commande</span>
+<span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
+<span class="k">BEGIN</span>
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">nb</span><span class="w"> </span><span class="nb">INT</span><span class="p">;</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">numart</span><span class="p">)</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">nb</span>
+<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">lignecommande</span>
+<span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">lignecommande</span><span class="p">.</span><span class="n">numcom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">OLD</span><span class="p">.</span><span class="n">numcom</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="n">nb</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span>
+<span class="w">        </span><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">&#39;45000&#39;</span>
+<span class="w">            </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Opération annulée. Une ou plusieurs commandes ont des articles enregistrés&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
+<span class="k">END</span><span class="w"> </span><span class="o">//</span>
+<span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 </details>
 <h2 id="exercice-4">Exercice 4<a class="headerlink" href="#exercice-4" title="Permanent link">⚓︎</a></h2>
 <p>Le trigger suivant à l'ajout d'une ligne de commande vérifie si les quantités sont disponibles et met le stock à jour</p>
 <details class="question">
 <summary>Correction</summary>
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">Create</span><span class="w"> </span><span class="k">Trigger</span><span class="w"> </span><span class="n">Tr_Ajouter_Ligne</span>
-<span class="k">On</span><span class="w"> </span><span class="n">LigneCommande</span>
-<span class="k">For</span><span class="w"> </span><span class="k">Insert</span>
-<span class="k">As</span>
-<span class="k">Declare</span><span class="w"> </span><span class="o">@</span><span class="n">a</span><span class="w"> </span><span class="nb">int</span>
-<span class="k">set</span><span class="w"> </span><span class="o">@</span><span class="n">a</span><span class="o">=</span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="n">numart</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">inserted</span><span class="p">,</span><span class="w"> </span><span class="n">article</span>
-<span class="k">where</span><span class="w"> </span><span class="n">article</span><span class="p">.</span><span class="n">numart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inserted</span><span class="p">.</span><span class="n">numart</span>
-<span class="k">and</span><span class="w"> </span><span class="n">QteCommandee</span><span class="w"> </span><span class="o">&gt;</span><span class="n">QteEnStock</span><span class="p">)</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">@</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
-<span class="k">Begin</span>
-<span class="n">Raiserror</span><span class="p">(</span><span class="s1">&#39;Ajout refusé. Quantités demandées non disponibles en stock&#39;</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">120</span><span class="p">)</span>
-<span class="k">Rollback</span>
-<span class="k">End</span>
-<span class="k">Else</span>
-<span class="k">Update</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="err">–</span>
-<span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="k">Sum</span><span class="p">(</span><span class="n">QteCommandee</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">inserted</span><span class="w"> </span><span class="k">where</span>
-<span class="n">article</span><span class="p">.</span><span class="n">NumArt</span><span class="o">=</span><span class="n">inserted</span><span class="p">.</span><span class="n">NumArt</span><span class="p">)</span>
-<span class="k">From</span><span class="w"> </span><span class="n">article</span><span class="p">,</span><span class="w"> </span><span class="n">inserted</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">inserted</span><span class="p">.</span><span class="n">numart</span><span class="o">=</span><span class="n">article</span><span class="p">.</span><span class="n">numart</span>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="o">//</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">Tr_Ajouter_Ligne</span>
+<span class="k">BEFORE</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">LigneCommande</span>
+<span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
+<span class="k">BEGIN</span>
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">stock</span><span class="w"> </span><span class="nb">INT</span><span class="p">;</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">stock</span>
+<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span>
+<span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">article</span><span class="p">.</span><span class="n">numart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">numart</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">QteCommandee</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">stock</span><span class="w"> </span><span class="k">THEN</span>
+<span class="w">        </span><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">&#39;45000&#39;</span>
+<span class="w">            </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Ajout refusé. Quantités demandées non disponibles en stock&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">ELSE</span>
+<span class="w">        </span><span class="k">UPDATE</span><span class="w"> </span><span class="n">article</span>
+<span class="w">        </span><span class="k">SET</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">QteCommandee</span>
+<span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NumArt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">NumArt</span><span class="p">;</span>
+<span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
+<span class="k">END</span><span class="w"> </span><span class="o">//</span>
+<span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 </details>
 <h2 id="exercice-5">Exercice 5<a class="headerlink" href="#exercice-5" title="Permanent link">⚓︎</a></h2>
 <p>Le trigger suivant à la modification d'une ligne de commande vérifie si les quantités sont disponibles et met le stock à jour</p>
 <details class="question">
 <summary>Correction</summary>
-<p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">Create</span><span class="w"> </span><span class="k">Trigger</span><span class="w"> </span><span class="n">Tr_Modifier_Ligne</span>
-<span class="k">On</span><span class="w"> </span><span class="n">LigneCommande</span>
-<span class="k">For</span><span class="w"> </span><span class="k">Update</span>
-<span class="k">As</span>
-<span class="k">Declare</span><span class="w"> </span><span class="o">@</span><span class="n">a</span><span class="w"> </span><span class="nb">int</span>
-<span class="k">set</span><span class="w"> </span><span class="o">@</span><span class="n">a</span><span class="o">=</span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="n">numart</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">inserted</span><span class="p">,</span><span class="w"> </span><span class="n">deleted</span><span class="p">,</span><span class="w"> </span><span class="n">article</span>
-<span class="k">where</span><span class="w"> </span><span class="n">article</span><span class="p">.</span><span class="n">numart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inserted</span><span class="p">.</span><span class="n">numart</span>
-<span class="k">and</span><span class="w"> </span><span class="n">article</span><span class="p">.</span><span class="n">numart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">deleted</span><span class="p">.</span><span class="n">numart</span>
-<span class="k">and</span><span class="w"> </span><span class="n">inserted</span><span class="p">.</span><span class="n">QteCommandee</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">QteEnStock</span><span class="o">+</span><span class="n">deleted</span><span class="p">.</span><span class="n">QteCommandee</span><span class="p">)</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">@</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
-<span class="k">Begin</span>
-<span class="n">Raiserror</span><span class="p">(</span><span class="s1">&#39;Modification refusée. Quantités demandées non disponibles en stock&#39;</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">120</span><span class="p">)</span>
-<span class="k">Rollback</span>
-<span class="k">End</span>
-<span class="k">Else</span>
-<span class="k">update</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QteEnStock</span>
-<span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="k">Sum</span><span class="p">(</span><span class="n">QteCommandee</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">deleted</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">deleted</span><span class="p">.</span><span class="n">NumArt</span><span class="o">=</span><span class="n">Article</span><span class="p">.</span><span class="n">NumArt</span><span class="p">)</span>
-<span class="err">–</span><span class="w">  </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="k">Sum</span><span class="p">(</span><span class="n">QteCommandee</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">inserted</span><span class="w"> </span><span class="k">where</span>
-<span class="n">inserted</span><span class="p">.</span><span class="n">NumArt</span><span class="o">=</span><span class="n">Article</span><span class="p">.</span><span class="n">NumArt</span><span class="p">)</span>
-<span class="k">From</span><span class="w"> </span><span class="n">article</span><span class="p">,</span><span class="w"> </span><span class="n">inserted</span><span class="p">,</span><span class="w"> </span><span class="n">deleted</span>
-<span class="k">where</span><span class="w"> </span><span class="n">inserted</span><span class="p">.</span><span class="n">numart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">article</span><span class="p">.</span><span class="n">numart</span>
-<span class="k">and</span><span class="w"> </span><span class="n">article</span><span class="p">.</span><span class="n">numart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">deleted</span><span class="p">.</span><span class="n">numart</span>
+<p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="o">//</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">Tr_Modifier_Ligne</span>
+<span class="k">BEFORE</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">LigneCommande</span>
+<span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
+<span class="k">BEGIN</span>
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">stock</span><span class="w"> </span><span class="nb">INT</span><span class="p">;</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">stock</span>
+<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span>
+<span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">article</span><span class="p">.</span><span class="n">numart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">numart</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">QteCommandee</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">stock</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">OLD</span><span class="p">.</span><span class="n">QteCommandee</span><span class="w"> </span><span class="k">THEN</span>
+<span class="w">        </span><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">&#39;45000&#39;</span>
+<span class="w">            </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Modification refusée. Quantités demandées non disponibles en stock&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">ELSE</span>
+<span class="w">        </span><span class="k">UPDATE</span><span class="w"> </span><span class="n">article</span>
+<span class="w">        </span><span class="k">SET</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">OLD</span><span class="p">.</span><span class="n">QteCommandee</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">QteCommandee</span>
+<span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NumArt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">NumArt</span><span class="p">;</span>
+<span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
+<span class="k">END</span><span class="w"> </span><span class="o">//</span>
+<span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 <em>Remarque :</em> Si le trigger déclenché effectue une opération sur une autre table, les triggers associés à cette
 table sont alors déclenchés (principe de cascade)</p>

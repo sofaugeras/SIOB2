@@ -1930,6 +1930,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.2_Transactions/exercices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercice
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2218,6 +2246,94 @@
     
   
     Exercices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP complet 🚠
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    TP complet 🚠
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.5_TP/tp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP Gestion de Paie 💶
   
 
     
@@ -5928,16 +6044,102 @@
 
 <h1 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">⚓︎</a></h1>
 <h2 id="exercice-1">Exercice 1<a class="headerlink" href="#exercice-1" title="Permanent link">⚓︎</a></h2>
-<p>Ecrire un programme qui pour chaque commande Affiche le numéro et la date de commande sous la forme : <br />
+<p>Ecrire un programme qui pour chaque commande affiche le numéro et la date de commande sous la forme : <br />
 <em>Commande N° : …… Effectuée le : …Pour un montant de …</em></p>
 <details class="question">
 <summary>Correction</summary>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="o">|</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">afficher_commandes</span><span class="p">()</span>
+<span class="k">BEGIN</span>
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">v_numCom</span><span class="w"> </span><span class="nb">INT</span><span class="p">;</span>
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">v_datCom</span><span class="w"> </span><span class="nb">DATE</span><span class="p">;</span>
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">v_montant</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">fin</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">cur_commandes</span><span class="w"> </span><span class="k">CURSOR</span><span class="w"> </span><span class="k">FOR</span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="k">C</span><span class="p">.</span><span class="n">NumCom</span><span class="p">,</span><span class="w"> </span><span class="n">DatCom</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">QteCommandee</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">PUArt</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">montant</span>
+<span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">Commande</span><span class="w"> </span><span class="k">C</span><span class="p">,</span><span class="w"> </span><span class="n">LigneCommande</span><span class="w"> </span><span class="n">LC</span><span class="p">,</span><span class="w"> </span><span class="n">Article</span><span class="w"> </span><span class="n">A</span>
+<span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="k">C</span><span class="p">.</span><span class="n">NumCom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LC</span><span class="p">.</span><span class="n">NumCom</span>
+<span class="w">        </span><span class="k">AND</span><span class="w"> </span><span class="n">LC</span><span class="p">.</span><span class="n">NumArt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A</span><span class="p">.</span><span class="n">NumArt</span>
+<span class="w">        </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">C</span><span class="p">.</span><span class="n">NumCom</span><span class="p">,</span><span class="w"> </span><span class="n">DatCom</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="k">CONTINUE</span><span class="w"> </span><span class="k">HANDLER</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">FOUND</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">fin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">OPEN</span><span class="w"> </span><span class="n">cur_commandes</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">boucle</span><span class="p">:</span><span class="w"> </span><span class="n">LOOP</span>
+<span class="w">        </span><span class="k">FETCH</span><span class="w"> </span><span class="n">cur_commandes</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">v_numCom</span><span class="p">,</span><span class="w"> </span><span class="n">v_datCom</span><span class="p">,</span><span class="w"> </span><span class="n">v_montant</span><span class="p">;</span>
+<span class="w">        </span><span class="k">IF</span><span class="w"> </span><span class="n">fin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">THEN</span>
+<span class="w">            </span><span class="n">LEAVE</span><span class="w"> </span><span class="n">boucle</span><span class="p">;</span>
+<span class="w">        </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span>
+<span class="w">            </span><span class="s1">&#39;Commande N° : &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">v_numCom</span><span class="p">,</span>
+<span class="w">            </span><span class="s1">&#39; Effectuée le : &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">DATE_FORMAT</span><span class="p">(</span><span class="n">v_datCom</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;%d/%m/%Y&#39;</span><span class="p">),</span>
+<span class="w">            </span><span class="s1">&#39; Pour un montant de : &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">v_montant</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; €&#39;</span>
+<span class="w">        </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">resultat</span><span class="p">;</span>
+<span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="n">LOOP</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">CLOSE</span><span class="w"> </span><span class="n">cur_commandes</span><span class="p">;</span>
+<span class="k">END</span><span class="w"> </span><span class="o">|</span>
+<span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
+
+<span class="k">CALL</span><span class="w"> </span><span class="n">afficher_commandes</span><span class="p">();</span>
+</code></pre></div>
 </details>
 <h2 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">⚓︎</a></h2>
 <p>Ecrire un programme qui pour chaque commande vérifie si cette commande a au moins un article. Si c'est le cas affiche son numéro et la liste de ses articles sinon affiche un message d'erreur (Attention ce cours ne contient pas la gestion des erreurs) :<br />
 <em>Aucun article pour la commande …. Elle sera supprimée et supprime cette commande</em></p>
 <details class="question">
 <summary>Correction</summary>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="o">|</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">verifier_commandes</span><span class="p">()</span>
+<span class="k">BEGIN</span>
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">v_numCom</span><span class="w"> </span><span class="nb">INT</span><span class="p">;</span>
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">v_nbArt</span><span class="w"> </span><span class="nb">INT</span><span class="p">;</span>
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">fin</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">cur_commandes</span><span class="w"> </span><span class="k">CURSOR</span><span class="w"> </span><span class="k">FOR</span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="n">NumCom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Commande</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="k">CONTINUE</span><span class="w"> </span><span class="k">HANDLER</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">FOUND</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">fin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">OPEN</span><span class="w"> </span><span class="n">cur_commandes</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">boucle</span><span class="p">:</span><span class="w"> </span><span class="n">LOOP</span>
+<span class="w">        </span><span class="k">FETCH</span><span class="w"> </span><span class="n">cur_commandes</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">v_numCom</span><span class="p">;</span>
+<span class="w">        </span><span class="k">IF</span><span class="w"> </span><span class="n">fin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">THEN</span>
+<span class="w">            </span><span class="n">LEAVE</span><span class="w"> </span><span class="n">boucle</span><span class="p">;</span>
+<span class="w">        </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">-- Compter le nombre d&#39;articles pour cette commande</span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">NumArt</span><span class="p">)</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">v_nbArt</span>
+<span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">LigneCommande</span>
+<span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NumCom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v_numCom</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">IF</span><span class="w"> </span><span class="n">v_nbArt</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span>
+<span class="w">            </span><span class="c1">-- Afficher le numéro de commande et la liste de ses articles</span>
+<span class="w">            </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="s1">&#39;Commande N° : &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">v_numCom</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">commande</span><span class="p">;</span>
+<span class="w">            </span><span class="k">SELECT</span><span class="w"> </span><span class="n">LC</span><span class="p">.</span><span class="n">NumArt</span><span class="p">,</span><span class="w"> </span><span class="n">DesArt</span><span class="p">,</span><span class="w"> </span><span class="n">PUArt</span><span class="p">,</span><span class="w"> </span><span class="n">QteCommandee</span>
+<span class="w">            </span><span class="k">FROM</span><span class="w"> </span><span class="n">LigneCommande</span><span class="w"> </span><span class="n">LC</span><span class="p">,</span><span class="w"> </span><span class="n">Article</span><span class="w"> </span><span class="n">A</span>
+<span class="w">            </span><span class="k">WHERE</span><span class="w"> </span><span class="n">LC</span><span class="p">.</span><span class="n">NumArt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A</span><span class="p">.</span><span class="n">NumArt</span>
+<span class="w">            </span><span class="k">AND</span><span class="w"> </span><span class="n">LC</span><span class="p">.</span><span class="n">NumCom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v_numCom</span><span class="p">;</span>
+<span class="w">        </span><span class="k">ELSE</span>
+<span class="w">            </span><span class="c1">-- Afficher le message d&#39;erreur et supprimer la commande</span>
+<span class="w">            </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span>
+<span class="w">                </span><span class="s1">&#39;Aucun article pour la commande &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">v_numCom</span><span class="p">,</span>
+<span class="w">                </span><span class="s1">&#39;. Elle sera supprimée.&#39;</span>
+<span class="w">            </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">message</span><span class="p">;</span>
+<span class="w">            </span><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Commande</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NumCom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v_numCom</span><span class="p">;</span>
+<span class="w">        </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="n">LOOP</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">CLOSE</span><span class="w"> </span><span class="n">cur_commandes</span><span class="p">;</span>
+<span class="k">END</span><span class="w"> </span><span class="o">|</span>
+<span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
+
+<span class="k">CALL</span><span class="w"> </span><span class="n">verifier_commandes</span><span class="p">();</span>
+</code></pre></div>
 </details>
 
 
