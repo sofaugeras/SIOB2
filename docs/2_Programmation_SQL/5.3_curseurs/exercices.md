@@ -1,7 +1,8 @@
 # Exercices
 
 ## Exercice 1
-Ecrire un programme qui pour chaque commande affiche le numéro et la date de commande sous la forme : <br />
+
+Ecrire un programme qui pour chaque commande affiche le numéro et la date de commande sous la forme :
 *Commande N° : …… Effectuée le : …Pour un montant de …*
 
 ??? question "Correction"
@@ -46,8 +47,8 @@ Ecrire un programme qui pour chaque commande affiche le numéro et la date de co
     ```
 
 ## Exercice 2
-Ecrire un programme qui pour chaque commande vérifie si cette commande a au moins un article. Si c'est le cas affiche son numéro et la liste de ses articles sinon affiche un message d'erreur (Attention ce cours ne contient pas la gestion des erreurs) :<br />
-*Aucun article pour la commande …. Elle sera supprimée et supprime cette commande*
+
+Ecrire un programme qui pour chaque commande vérifie si cette commande a au moins un article. Si c'est le cas affiche son numéro et la liste de ses articles sinon affiche un message d'erreur (Attention ce cours ne contient pas la gestion des erreurs) : *Aucun article pour la commande …. Elle sera supprimée et supprime cette commande*
 
 ??? question "Correction"
 

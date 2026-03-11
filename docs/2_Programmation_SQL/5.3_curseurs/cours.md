@@ -2,19 +2,22 @@
 
 ## Définition
 
-Nous avons vu qu'il était possible d'exploiter le résultat d'un `SELECT` dans un bloc d'instructions en utilisant la commande `SELECT colonne(s) INTO variable(s)`, qui assigne les valeurs sélectionnées à des variables.<br />
-Cependant, `SELECT ... INTO`  ne peut être utilisé que pour des requêtes qui ne ramènent qu'une seule ligne de résultats.<br />
-Les **curseurs** permettent de parcourir un jeu de résultats d'une requête `SELECT`, quel que soit le nombre de lignes récupérées, et d'en exploiter les valeurs.<br />
+Nous avons vu qu'il était possible d'exploiter le résultat d'un `SELECT` dans un bloc d'instructions en utilisant la commande `SELECT colonne(s) INTO variable(s)`, qui assigne les valeurs sélectionnées à des variables.
 
-Quatre étapes sont nécessaires pour utiliser un curseur.<br />
-- Déclaration du curseur : avec une instruction `DECLARE`.<br />
-- Ouverture du curseur : on exécute la requête `SELECT` du curseur et on stocke le résultat dans celui-ci.<br />
-- Parcours du curseur : on parcourt une à une les lignes.<br />
+Cependant, `SELECT ... INTO`  ne peut être utilisé que pour des requêtes qui ne ramènent qu'une seule ligne de résultats.
+
+Les **curseurs** permettent de parcourir un jeu de résultats d'une requête `SELECT`, quel que soit le nombre de lignes récupérées, et d'en exploiter les valeurs.
+
+Quatre étapes sont nécessaires pour utiliser un curseur.
+
+- Déclaration du curseur : avec une instruction `DECLARE`.
+- Ouverture du curseur : on exécute la requête `SELECT` du curseur et on stocke le résultat dans celui-ci.
+- Parcours du curseur : on parcourt une à une les lignes.
 - Fermeture du curseur.
 
 ## Syntaxe
 
-###  Déclaration du curseur
+### Déclaration du curseur
 
 Comme toutes les instructions `DECLARE`, la déclaration d'un curseur doit se faire au début du bloc d'instructions pour lequel celui-ci est défini. Plus précisément, on déclare les curseurs après les variables locales et les conditions, mais avant les gestionnaires d'erreurs.
 
@@ -86,18 +89,20 @@ CALL parcours_deux_clients();
 
 ### Restrictions
 
-`FETCH`  est la seule commande permettant de récupérer une partie d'un jeu de résultats d'un curseur, et elle ne permet qu'une chose : récupérer la ligne de résultats suivante.<br />
+`FETCH`  est la seule commande permettant de récupérer une partie d'un jeu de résultats d'un curseur, et elle ne permet qu'une chose : récupérer la ligne de résultats suivante.
+
 Il n'est pas possible de sauter une ou plusieurs lignes ni d'aller rechercher une ligne précédente. On ne peut que parcourir les lignes une à une, de la première à la dernière. Ensuite, il n'est pas possible de modifier une ligne directement à partir d'un curseur. Il s'agit d'une restriction particulière à **MySQL**. D'autres SGBD vous permettent des requêtes d'`UPDATE` directement sur les curseurs.
 
 ### Parcourir intelligemment tous les résultats d'un curseur
 
-Pour récupérer une ligne de résultats, on utilise donc `FETCH`. Dans la procédure `parcours_deux_clients()`, on voulait récupérer les deux premières lignes, on a donc utilisé deux `FETCH`. Cependant, la plupart du temps, on ne veut pas seulement utiliser les deux premières lignes, mais toutes ! Or, sauf exception, on ne sait pas combien de lignes seront sélectionnées.<br />
+Pour récupérer une ligne de résultats, on utilise donc `FETCH`. Dans la procédure `parcours_deux_clients()`, on voulait récupérer les deux premières lignes, on a donc utilisé deux `FETCH`. Cependant, la plupart du temps, on ne veut pas seulement utiliser les deux premières lignes, mais toutes ! Or, sauf exception, on ne sait pas combien de lignes seront sélectionnées.
 
 On veut donc parcourir une à une les lignes de résultats et leur appliquer un traitement, sans savoir à l'avance combien de fois ce traitement devra être répété. Pour cela, on utilise une boucle ! `WHILE`, `REPEAT` ou `LOOP`. Il n'y a plus qu'à trouver une condition pour arrêter la boucle une fois tous les résultats parcourus.
 
 ### Condition d'arrêt
 
-Voyons ce qui se passe lorsque l'on fait un `FETCH` alors qu'il n'y a plus, ou pas, de résultats.<br />
+Voyons ce qui se passe lorsque l'on fait un `FETCH` alors qu'il n'y a plus, ou pas, de résultats.
+
 Voici une procédure qui sélectionne les clients selon une ville donnée en paramètre. Les lignes sont récupérées et affichées grâce au `FETCH`, placé dans une boucle `LOOP`. Je rappelle que cette boucle ne définit pas de condition d'arrêt : il est nécessaire d'ajouter une instruction `LEAVE`  pour l'arrêter. Ici, pour tester, on ne mettra pas d'instruction `LEAVE`.
 
 ```sql
@@ -125,13 +130,14 @@ DELIMITER ;
 ```
 
 *Exemple :* Pour afficher la liste des articles sous la forme :
-<em>L'article Numéro ........  portant la désignation ………coûte …. …..</em>
+L'article Numéro ........  portant la désignation ........ coûte .........
 
-▶️ Ecrire le curseur correspondant 
+▶️ Ecrire le curseur correspondant
 
 ??? question "Correction"
 
-    ```sql
+```sql
+
     DELIMITER |
     CREATE PROCEDURE afficher_liste_articles()
     BEGIN
@@ -163,4 +169,4 @@ DELIMITER ;
     DELIMITER ;
 
     CALL afficher_liste_articles();
-    ```
+```

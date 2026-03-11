@@ -198,7 +198,6 @@ Laravel Pint impose un style de code uniforme.
 
 Il n’améliore pas la logique du programme, mais garantit une cohérence visuelle et structurelle du projet.
 
- 
 ### 🧪 Tests automatisés
 
 #### PHPUnit
