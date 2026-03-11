@@ -6,15 +6,22 @@ Créer une procédure stockée nommée `SP_ListeArticles` qui affiche la liste d
 ??? question "Correction"
 
     ```sql
-    Create Procedure SP_ListeArticles @NumCom int as Select A.NumArt, NomArt, PUArt, QteCommandee From Article A, LigneCommande LC
-    Where LC.NumArt=A.NumArt and LC.NumCom=@NumCom
+    DELIMITER |
+    CREATE PROCEDURE SP_ListeArticles (IN NumCom INT)
+    BEGIN
+        SELECT A.NumArt, NomArt, PUArt, QteCommandee
+        FROM Article A, LigneCommande LC
+        WHERE LC.NumArt = A.NumArt
+        AND LC.NumCom = NumCom;
+    END |
+    DELIMITER ;
 
-    --Exécuter cette procédure pour afficher la liste des articles de la commande numéro 1 :
-    Exec SP_ListeArticles 1
-    --Ou
-    Declare @nc int
-    Set @nc=1
-    Exec SP_ListeArticles @nc
+    -- Exécuter cette procédure pour afficher la liste des articles de la commande numéro 1 :
+    CALL SP_ListeArticles(1);
+
+    -- Ou avec une variable :
+    SET @nc = 1;
+    CALL SP_ListeArticles(@nc);
     ```
 
 ## Exercice 2 
@@ -24,13 +31,16 @@ Créer une procédure stockée nommée `SP_NbrCommandes` qui retourne le nombre 
 ??? question "Correction"
 
     ```sql
-    Create Procedure SP_NbrCommandes @Nbr int output as
-    Set @Nbr = (Select count(NumCom) from Commande)
+    DELIMITER |
+    CREATE PROCEDURE SP_NbrCommandes (OUT Nbr INT)
+    BEGIN
+        SET Nbr = (SELECT COUNT(NumCom) FROM Commande);
+    END |
+    DELIMITER ;
 
-    --Exécuter cette procédures pour afficher le nombre des commandes
-    Declare @n int
-    Exec SP_NbrCommandes @n Output
-    Print 'Le nombre de commandes : ' + convert(varchar,@n)
+    -- Exécuter cette procédure pour afficher le nombre des commandes :
+    CALL SP_NbrCommandes(@n);
+    SELECT CONCAT('Le nombre de commandes : ', @n);
     ```
 
 ## Exercice 3
@@ -40,24 +50,23 @@ Créer une procédure stockée nommée `SP_NbrArtCom` qui retourne le nombre d'a
 ??? question "Correction"
 
     ```sql
-    DELIMITER $
-    Create Procedure SP_NbrArtCom2 (IN Num int, OUT Nbr int)
-    begin
-        Select count(NumArt) INTO Nbr
-        from LigneCommande 
-        where NumCom=Num ;
-    end$
-    --Exécuter cette procédure pour afficher le nombre d'articles de la commande numéro 1 :
-    Declare @n int
-    Exec SP_NbrArtCom 1, @n Output
-    Print 'Le nombre d articles de la commande numéro 1 est : ' + convert(varchar,@n) 
-    
-    -- Ou
-    Declare @nc int, @n int
-    Set @nc=1
-    Exec SP_NbrArtCom @nc, @n Output
-    Print 'Le nombre d articles de la commande numéro ' + convert(varchar,@nc) + ' est : ' +
-    convert(varchar,@n)
+    DELIMITER |
+    CREATE PROCEDURE SP_NbrArtCom (IN Num INT, OUT Nbr INT)
+    BEGIN
+        SELECT COUNT(NumArt) INTO Nbr
+        FROM LigneCommande
+        WHERE NumCom = Num;
+    END |
+    DELIMITER ;
+
+    -- Exécuter cette procédure pour afficher le nombre d'articles de la commande numéro 1 :
+    CALL SP_NbrArtCom(1, @n);
+    SELECT CONCAT('Le nombre d\'articles de la commande numéro 1 est : ', @n);
+
+    -- Ou avec une variable :
+    SET @nc = 1;
+    CALL SP_NbrArtCom(@nc, @n);
+    SELECT CONCAT('Le nombre d\'articles de la commande numéro ', @nc, ' est : ', @n);
     ```
 
 ## Exercice 4
@@ -66,14 +75,18 @@ Créer une procédure stockée `SP_NbrArticlesParCommande` qui calcule le nombre
 ??? question "Correction"
 
     ```sql
-    Create Procedure SP_NbrArticlesParCommande as
-    Select Commande.NumCom, DatCom, Count(NumArt)
-    From Commande, LigneCommande
-    Where Commande.NumCom=LigneCommande.NumCom
-    Group by Commande.NumCom, DatCom
+    DELIMITER |
+    CREATE PROCEDURE SP_NbrArticlesParCommande ()
+    BEGIN
+        SELECT Commande.NumCom, DatCom, COUNT(NumArt)
+        FROM Commande, LigneCommande
+        WHERE Commande.NumCom = LigneCommande.NumCom
+        GROUP BY Commande.NumCom, DatCom;
+    END |
+    DELIMITER ;
 
-    --Exécuter cette procédure :
-    Exec SP_NbrArticlesParCommande
+    -- Exécuter cette procédure :
+    CALL SP_NbrArticlesParCommande();
     ```
 
 ## Exercice 5
@@ -83,19 +96,22 @@ Créer une procédure stockée nommée `SP_ComPeriode` qui affiche la liste des 
 ??? question "Correction"
 
     ```sql
-    Create Procedure SP_ComPeriode @DateD DateTime, @DateF DateTime as
-    Select * from Commande Where datcom between @dateD and @DateF
+    DELIMITER |
+    CREATE PROCEDURE SP_ComPeriode (IN dateD DATE, IN dateF DATE)
+    BEGIN
+        SELECT * FROM Commande
+        WHERE datcom BETWEEN dateD AND dateF;
+    END |
+    DELIMITER ;
 
-    --Exécuter cette procédure pour afficher la liste des commandes effectuées entre le
-    --10/10/2006 et le 14/12/2006 :
+    -- Exécuter cette procédure pour afficher la liste des commandes effectuées entre le
+    -- 10/10/2006 et le 14/12/2006 :
+    CALL SP_ComPeriode('2006-10-10', '2006-12-14');
 
-    Exec SP_ComPeriode '10/10/2006', '14/12/2006'
-
-    --Ou
-    Declare @dd DateTime, @df DateTime
-    Set @dd='10/10/2006'
-    Set @df='14/12/2006'
-    Exec SP_ComPeriode @dd, @df
+    -- Ou avec des variables :
+    SET @dd = '2006-10-10';
+    SET @df = '2006-12-14';
+    CALL SP_ComPeriode(@dd, @df);
     ```
 
 ## Exercice 6
@@ -105,20 +121,25 @@ Créer une procédure stockée nommée `SP_TypeComPeriode` qui affiche la liste 
 ??? question "Correction"
 
     ```sql
-    Create Procedure SP_TypeComPeriode @DateD DateTime, @DateF DateTime as
-    Exec SP_ComPeriode @DateD, @DateF
-    Declare @nbr int
-    Set @nbr=(Select count(NumCom) from Commande Where datcom between @dateD and
-    @DateF)
-    If @nbr >100
-    Print 'Période Rouge'
-    Else
-    Begin
-    If @nbr<50
-    Print 'Période blanche'
-    Else
-    Print 'Période Jaune'
-    End
+    DELIMITER |
+    CREATE PROCEDURE SP_TypeComPeriode (IN dateD DATE, IN dateF DATE)
+    BEGIN
+        CALL SP_ComPeriode(dateD, dateF);
+
+        SET @nbr = (SELECT COUNT(NumCom) FROM Commande
+                    WHERE datcom BETWEEN dateD AND dateF);
+
+        IF @nbr > 100 THEN
+            SELECT 'Période Rouge' AS periode;
+        ELSE
+            IF @nbr < 50 THEN
+                SELECT 'Période Blanche' AS periode;
+            ELSE
+                SELECT 'Période Jaune' AS periode;
+            END IF;
+        END IF;
+    END |
+    DELIMITER ;
     ```
 
 ## Exercice 7
@@ -131,17 +152,27 @@ Créer une procédure stockée nommée `SP_EnregistrerLigneCom` qui reçoit un n
 ??? question "Correction"
 
     ```sql
-    Create Procedure SP_EnregistrerLigneCom @numCom int, @numart int, @qte decimal AS
-    if not exists(select numart from article where numart=@numart)
-    or (select Qteenstock from article where numart=@numart) < @qte
-    Begin
-    Print 'Cet article n''existe pas ou stock est insuffisant'
-    Return
-    End
-    Begin transaction
-    if not exists(select numcom from Commande where numCom=@numcom)
-    insert into commande values(@NumCom,getdate())
-    insert into ligneCommande values(@NumCom, @Numart,@Qte)
-    update article set QteEnStock=QteEnStock- @Qte where NumArt=@NumArt
-    Commit Transaction
+    DELIMITER |
+    CREATE PROCEDURE SP_EnregistrerLigneCom (IN numCom INT, IN numart INT, IN qte DECIMAL)
+    BEGIN
+        -- Vérification de l'existence de l'article et de la disponibilité du stock
+        IF NOT EXISTS (SELECT numart FROM article WHERE numart = numart)
+            OR (SELECT QteEnStock FROM article WHERE numart = numart) < qte THEN
+            SELECT 'Cet article n\'existe pas ou le stock est insuffisant' AS message;
+        ELSE
+            START TRANSACTION;
+
+            -- Création de la commande si elle n'existe pas
+            IF NOT EXISTS (SELECT numcom FROM Commande WHERE numCom = numCom) THEN
+                INSERT INTO commande VALUES (numCom, NOW());
+            END IF;
+
+            -- Ajout de la ligne de commande et mise à jour du stock
+            INSERT INTO ligneCommande VALUES (numCom, numart, qte);
+            UPDATE article SET QteEnStock = QteEnStock - qte WHERE NumArt = numart;
+
+            COMMIT;
+        END IF;
+    END |
+    DELIMITER ;
     ```

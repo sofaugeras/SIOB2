@@ -1,4 +1,4 @@
-# Recommandations de l'ANSII 
+# 6. Recommandations de l'ANSII 
 
 !!! info "Compétences"
 

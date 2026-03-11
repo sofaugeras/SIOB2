@@ -5,13 +5,12 @@
 **MySQL** est un langage procédural (par opposition à **SQL** qui est un langage déclaratif). Il permet de programmer des algorithmes de traitement des données au sein des SGBDR (ici **MySQL**, on aura **PL/SQL** pour oracle, **TRANSACT/SQL** pour SQL Server).<br />
 MySQL n'a aucun aspect normatif contrairement à SQL. C'est bien un "produit" au sein commercial du terme. En revanche depuis SQL2 et plus fortement maintenant, avec SQL3, la norme SQL a prévu les éléments de langage procédural normatif propre au langage SQL. Mais il y a une très grande différence entre la norme du SQL procédural et la programmation BD.<br />
 
-
 Les procédures stockées sont disponibles depuis la version 5 de MySQL. <br />
 ⏩ Elles permettent d'automatiser des actions qui peuvent être très complexes.<br />
 Une procédure stockée est en fait une série d'instructions SQL désignée par un nom. Lorsque l'on crée une procédure stockée, on l'_enregistre_ dans la base de données que l'on utilise, au même titre qu'une table, par exemple. Une fois la procédure créée, il est possible d'appeler celle-ci par son nom. Les instructions de la procédure sont alors exécutées.<br />
 Contrairement aux requêtes préparées, qui ne sont gardées en mémoire que pour la session courante, les procédures stockées sont, comme leur nom l'indique, stockées de manière durable, et font bien partie intégrante de la base de données dans laquelle elles sont enregistrées.
 
-### Création d’une procédure stockée
+### Création d'une procédure stockée
 
 ```sql
 CREATE PROCEDURE nom_procedure ([parametre1 [, parametre2, ...]])
@@ -24,12 +23,12 @@ CREATE PROCEDURE afficher_liste_articles()
 SELECT Desart, PUart FROM article;
 ```
 La procédure stockée est stockée dans la base de données.
-Pour exécuter la procédure, il suffit de l’appeler ..
+Pour exécuter la procédure, il suffit de l'appeler ..
 ```sql
-CALL afficher_liste_articles ;
+CALL afficher_liste_articles();
 ```
 
-### Bloc D’instructions
+### Bloc D'instructions
 
 Pour délimiter un bloc d'instructions (qui peut donc contenir plus d'une instruction), on utilise les mots **BEGIN**  et **END**.
 
@@ -65,21 +64,22 @@ CREATE PROCEDURE afficher_liste_articles()
 BEGIN
 SELECT Desart, PUart FROM article;
 END |
+DELIMITER ;
 ```
 __Note :__ Il est possible d'imbriquer plusieurs blocs d'instructions. De même, à l'intérieur d'un bloc d'instructions, plusieurs blocs d'instructions peuvent se suivre. Ceux-ci permettent donc de structurer les instructions en plusieurs parties distinctes et sur plusieurs niveaux d'imbrication différents.
 
 ```sql
 BEGIN
     SELECT 'Bloc d''instructions principal';
-	
+
     BEGIN
         SELECT 'Bloc d''instructions 2, imbriqué dans le bloc principal';
-		
+
         BEGIN
             SELECT 'Bloc d''instructions 3, imbriqué dans le bloc d''instructions 2';
         END;
     END;
-	
+
     BEGIN
         SELECT 'Bloc d''instructions 4, imbriqué dans le bloc principal';
     END;
@@ -93,10 +93,11 @@ END;
 
 Un paramètre peut être de trois sens différents : **entrant** (IN),**sortant** (OUT), ou **les deux** (INOUT).<br />
 ▶️ IN  : c'est un paramètre "entrant". C'est-à-dire qu'il s'agit d'un paramètre dont la valeur est fournie à la procédure stockée. Cette valeur sera utilisée pendant la procédure (pour un calcul ou une sélection, par exemple).<br />
-▶️ OUT  : il s'agit d'un paramètre "sortant", dont la valeur sera établie au cours de la procédure et qui pourra ensuite être utilisé en dehors de cette procédure.<br :>
+▶️ OUT  : il s'agit d'un paramètre "sortant", dont la valeur sera établie au cours de la procédure et qui pourra ensuite être utilisé en dehors de cette procédure.<br />
 ▶️ INOUT  : un tel paramètre sera utilisé pendant la procédure, verra éventuellement sa valeur modifiée par celle-ci, et sera ensuite utilisable en dehors.<br />
 
 ### Syntaxe
+
 Lorsque l'on crée une procédure avec un ou plusieurs paramètres, chaque paramètre est défini par trois éléments.<br />
 ▶️ Son **sens** : entrant, sortant, ou les deux. Si aucun sens n'est donné, il s'agira d'un paramètre IN  par défaut.<br />
 ▶️ Son **nom** : indispensable pour le désigner à l'intérieur de la procédure.<br />
@@ -104,12 +105,12 @@ Lorsque l'on crée une procédure avec un ou plusieurs paramètres, chaque param
 
 ### Procédure avec un seul paramètre entrant
 
-Voici une procédure qui renvoie l’article selon son id passé en paramètre : <br />
+Voici une procédure qui renvoie l'article selon son id passé en paramètre : <br />
 
 ```sql
 DELIMITER | -- Facultatif si votre délimiteur est toujours |
 CREATE PROCEDURE afficher_article_par_id (IN p_id INT)  
-    -- Définition du paramètre p_espece_id
+    -- Définition du paramètre p_id
 BEGIN
     SELECT desart, PUart
     FROM article
@@ -125,55 +126,55 @@ SET @var := 2;
 CALL afficher_article_par_id(@var);
 ```
 
-### La déclaration d’une variable
+### La déclaration d'une variable
 
-**MySQL** reconnaît différents types de variables. Le premier type est celui des variables définies par l’utilisateur, identifiées par un symbole `@` utilisé comme préfixe. Dans **MySQL**, vous pouvez accéder aux variables définies par l’utilisateur sans les déclarer ou les initialiser au préalable. Si vous le faites, une valeur `NULL` est attribuée à la variable lors de son initialisation. Par exemple, si vous utilisez `SELECT` avec une variable sans lui donner de valeur, comme dans ce cas :
+**MySQL** reconnaît différents types de variables. Le premier type est celui des variables définies par l'utilisateur, identifiées par un symbole `@` utilisé comme préfixe. Dans **MySQL**, vous pouvez accéder aux variables définies par l'utilisateur sans les déclarer ou les initialiser au préalable. Si vous le faites, une valeur `NULL` est attribuée à la variable lors de son initialisation. Par exemple, si vous utilisez `SELECT` avec une variable sans lui donner de valeur, comme dans ce cas :
 
 Exemples :
 
 -	`SELECT @var1;`	 /* MySQL retourne une valeur NULL. */<br />
--	`SELECT @FirstVar=1, @SecondVar=2;`<br />
+-	`SELECT @FirstVar := 1, @SecondVar := 2;`<br />
 
 Une fois que vous avez assigné une valeur à une variable, elle aura un *type* en fonction de la valeur donnée. Dans les exemples précédents, `@FirstVar` et `@SecondVar` sont de type `int`.<br />
 
-Les variables peuvent faire partie des listes de champs d’une déclaration `SELECT`. Vous pouvez mélanger les variables et les noms de champs lorsque vous spécifiez des champs dans une sélection, comme dans cet exemple :<br />
+Les variables peuvent faire partie des listes de champs d'une déclaration `SELECT`. Vous pouvez mélanger les variables et les noms de champs lorsque vous spécifiez des champs dans une sélection, comme dans cet exemple :<br />
 
 ```sql
 SET @IndexVar = 1;
-SELECT Desart FROM article WHERE numart= @IndexVar;
+SELECT Desart FROM article WHERE numart = @IndexVar;
 ```
-//Ou pour un autre usage
+-- Ou pour un autre usage
 ```sql
 SET @IndexVar = (SELECT PUart FROM article WHERE numart = 1);
-SELECT Desart FROM article WHERE PUart = @IndexVar ;
+SELECT Desart FROM article WHERE PUart = @IndexVar;
 ```
 
 <u>Remarque :</u> Par convention les noms des variables doivent toujours être précédés du symbole `@`
 
-### Affichage d’informations
+### Affichage d'informations
 
 Syntaxe :
 ```sql
-SELECT Elément_A_Afficher
+SELECT Elément_A_Afficher;
 ```
 exemple : 
 
 ```sql
-SET @IndexVar = (SELECT PUart FROM article);
+SET @IndexVar = (SELECT PUart FROM article WHERE numart = 1);
 SELECT @IndexVar, Desart
 FROM article;
-SELECT concat("La variable est ", convert(@IndexVar, CHAR));
+SELECT CONCAT('La variable est ', CONVERT(@IndexVar, CHAR));
 ```
-*Explication :* Affiche la valeur de `@c` concaténé avec la valeur de `@b` mais puisque `@c` est de type numérique et qu'on ne peut jamais concaténer une valeur numérique avec une valeur chaîne de caractères, il faut passer par une fonction de conversion dont la syntaxe est la suivante : `Convert (Type de conversion, Valeur à convertir) ` [Doc ici](https://sql.sh/fonctions/convert)
+*Explication :* Affiche la valeur de `@IndexVar` concaténée avec une chaîne de caractères. Puisque `@IndexVar` est de type numérique et qu'on ne peut jamais concaténer une valeur numérique avec une valeur chaîne de caractères, il faut passer par une fonction de conversion dont la syntaxe est la suivante : `CONVERT(Valeur à convertir, Type de conversion)` [Doc ici](https://sql.sh/fonctions/convert)
 
 
 ### Procédure avec deux paramètres, un entrant et un sortant
 
-Voici une procédure assez similaire à la précédente, si ce n'est qu'elle n'affiche pas l’article passé en paramètres, mais compte combien il y a d’articles avec un stock >= à 5 et dont le prix passé en paramètre est inférieur, puis stocke cette valeur dans un paramètre sortant.
+Voici une procédure assez similaire à la précédente, si ce n'est qu'elle n'affiche pas l'article passé en paramètres, mais compte combien il y a d'articles avec un stock >= à 5 et dont le prix passé en paramètre est inférieur, puis stocke cette valeur dans un paramètre sortant.
 
 ```sql
 DELIMITER |                                                      
-CREATE PROCEDURE nb_art_petit_prix (prix INT, OUT stock INT)  
+CREATE PROCEDURE nb_art_petit_prix (IN prix INT, OUT stock INT)  
 BEGIN
     SELECT COUNT(*) INTO stock
     FROM article
@@ -204,7 +205,7 @@ Nous connaissons déjà les variables utilisateur, qui sont des variables désig
 Voyons maintenant les variables locales, qui peuvent être définies dans un bloc d'instructions.
 
 **Déclaration d'une variable locale** <br />
-La déclaration d'une variable locale se fait avec l'instruction `DECLARE` juste apres le début du bloc d’instruction :<br />
+La déclaration d'une variable locale se fait avec l'instruction `DECLARE` juste apres le début du bloc d'instruction :<br />
 `DECLARE nom_variable type_variable [DEFAULT valeur_defaut];`
 
 ▶️ Pour changer la valeur d'une variable locale, on peut utiliser `SET`  ou `SELECT ... INTO`.
@@ -222,7 +223,7 @@ BEGIN
     SET v_date = v_date + INTERVAL 1 DAY;                     
     -- On change la valeur de la variable locale
     SELECT DATE_FORMAT(v_date, '%W %e %M %Y') AS Demain;
-END|
+END |
 DELIMITER ;
 ```
 ▶️ Appel : 
@@ -230,17 +231,25 @@ DELIMITER ;
 SET lc_time_names = 'fr_FR';
 CALL aujourdhui_demain();
 ```
+
 ## 3. Modification d'une PS
 
-### Suppression d’une procédure stockée
-
-Syntaxe : `Drop Procedure Nom_Procédure` ;
-
-### Modification d’une procédure stockée
+### Suppression d'une procédure stockée
 
 Syntaxe :
-ALTER Procedure Nom_Procédure as
-Nouvelles instructions
+```sql
+DROP PROCEDURE nom_procedure;
+```
+
+### Modification d'une procédure stockée
+
+En MySQL, il n'est **pas possible de modifier directement le corps** d'une procédure stockée. Il faut la supprimer puis la recréer :
+
+```sql
+DROP PROCEDURE nom_procedure;
+CREATE PROCEDURE nom_procedure ...
+-- Nouvelles instructions
+```
 
 ## 4. Les structures de MySQL
 
@@ -289,23 +298,23 @@ CALL avant_apres_2010(69);   -- Né le 13/02/2012
         /* On souhaite vérifier si le stock de l'article passé en paramètre a atteint son seuil minimum.
         Si c'est le cas afficher le message 'Rupture de stock' : */
         DELIMITER |
-        CREATE PROCEDURE affichage_rupture(num INT)
+        CREATE PROCEDURE affichage_rupture(IN num INT)
         BEGIN
-            SET @QS = (Select QteEnStock from article Where NumArt =num) ;
-            SET @SM = (Select SeuilMin from article Where NumArt =num); 
-            If @QS<=@SM THEN
-                SELECT 'Rupture de stock' ;
-            Else 
-                SELECT 'Stock disponible' ;
+            SET @QS = (SELECT QteEnStock FROM article WHERE NumArt = num);
+            SET @SM = (SELECT SeuilMin FROM article WHERE NumArt = num); 
+            IF @QS <= @SM THEN
+                SELECT 'Rupture de stock';
+            ELSE 
+                SELECT 'Stock disponible';
             END IF;
         END |
         DELIMITER ;
 
-        CALL affichage_rupture2(1)
+        CALL affichage_rupture(1);
         ```
 
 
-### L’instruction case
+### L'instruction case
 
 ```sql
 CASE valeur_a_comparer
@@ -356,21 +365,21 @@ END CASE;
 !!! question "Application"
     === "Enoncé"
         Afficher la liste des articles (Numéro, Désignation et prix) avec en plus une colonne
-        Observation qui affiche 'Non Disponible' si la quantité en stock est égale à 0, 'Disponible' si la quantité en stock est supérieure au stock Minimum et 'à Commander' sinon.
-        ▶️ Ecrire la PS correspondante 
+        Observation qui affiche 'Non Disponible' si la quantité en stock est égale à 0, 'Disponible' si la quantité en stock est supérieure au stock Minimum et 'à Commander' sinon. <br />
+        ▶️ Ecrire la PS correspondante
     === "Correction"
 
         ```sql
         DELIMITER |
         CREATE PROCEDURE affichage_rupture4()
         BEGIN
-            Select NumArt, DesArt, PUArt,
-                Case
-                    When QteEnStock=0 then 'Non Disponible'
-                    When QteEnStock>SeuilMinimum then 'Disponible'
-                    Else 'à Commander'
+            SELECT NumArt, DesArt, PUArt,
+                CASE
+                    WHEN QteEnStock = 0 THEN 'Non Disponible'
+                    WHEN QteEnStock > SeuilMinimum THEN 'Disponible'
+                    ELSE 'à Commander'
                 END AS observation
-                FROM article ;
+                FROM article;
         END |
         DELIMITER ;
         CALL affichage_rupture4();
@@ -420,13 +429,15 @@ CALL compter_jusque_while(3);
         DELIMITER |
         CREATE PROCEDURE application_while()
         BEGIN
-            SET @moyPUart = (Select avg(PUart) from article);
-            SET @maxPUart =(select max(PUart) from article);
-            WHILE (@moyPUart <20  and @maxPUart <30) DO
-                Update article Set puart=puart+(puart*10)/100;
-                /* Select * from article ; */
-            END WHILE ;
-            Select avg(PUart) as moyenne , max(PUart) as Prix_élevé from article ;
+            SET @moyPUart = (SELECT AVG(PUart) FROM article);
+            SET @maxPUart = (SELECT MAX(PUart) FROM article);
+            WHILE (@moyPUart < 20 AND @maxPUart < 30) DO
+                UPDATE article SET puart = puart + (puart * 10) / 100;
+                -- Recalcul des variables à chaque itération pour mettre à jour la condition
+                SET @moyPUart = (SELECT AVG(PUart) FROM article);
+                SET @maxPUart = (SELECT MAX(PUart) FROM article);
+            END WHILE;
+            SELECT AVG(PUart) AS moyenne, MAX(PUart) AS Prix_élevé FROM article;
         END |
         DELIMITER ;
         ```
@@ -468,7 +479,7 @@ On a gardé la boucle LOOP  pour la fin, parce qu'elle est un peu particulière.
 ```sql
 [label:] LOOP
     instructions
-END LOOP [label]
+END LOOP [label];
 ```
 Il n'est question de condition nulle part. En fait, une boucle LOOP doit intégrer dans ses instructions un élément qui va la faire s'arrêter : typiquement, une instruction LEAVE. Sinon, c'est une boucle infinie.<br />
 

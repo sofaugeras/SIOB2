@@ -46,7 +46,7 @@
     **EXISTER** ( ^^#CodeCouleur, #CodeProduit^^) <br />
     **PRODUIT** ( ^^CodeProduit^^, Désignation, #CodeCatégorie  ) <br />
     **CATEGORIE** ( ^^CodeCatégorie^^, LibelléCatégorie ) <br />
-    **PROPOSER** ( ^^CodeProduit , #CodeFournisseur^^, Prix )
+    **PROPOSER** ( ^^#CodeProduit , #CodeFournisseur^^, Prix )
 
 
 ## 4 Course

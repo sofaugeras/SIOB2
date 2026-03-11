@@ -43,7 +43,7 @@ On veut ajouter aux fonctionnements de netAtlas le fait que les amis d’un memb
     Le schéma relationnel :
 
     **Membre** (^^email^^ , nom , prenom ) <br />
-    **Publication** (^^idPublication^^, datePublication, #email , #idRessource) <br />
+    **Publication** (^^idPublication^^, datePublication, #email , #idRessource,#idType) <br />
     **Ressource** (^^idRessource^^ , nomRessource, #idType) <br />
     **ListeAmis**(email , emailAmis , DateAmitie)<br />
     **Type**(^^idType^^, nomType)

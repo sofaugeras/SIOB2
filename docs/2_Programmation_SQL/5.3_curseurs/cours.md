@@ -1,6 +1,6 @@
 # Les curseurs
 
-## définition
+## Définition
 
 Nous avons vu qu'il était possible d'exploiter le résultat d'un `SELECT` dans un bloc d'instructions en utilisant la commande `SELECT colonne(s) INTO variable(s)`, qui assigne les valeurs sélectionnées à des variables.<br />
 Cependant, `SELECT ... INTO`  ne peut être utilisé que pour des requêtes qui ne ramènent qu'une seule ligne de résultats.<br />
@@ -18,10 +18,15 @@ Quatre étapes sont nécessaires pour utiliser un curseur.<br />
 
 Comme toutes les instructions `DECLARE`, la déclaration d'un curseur doit se faire au début du bloc d'instructions pour lequel celui-ci est défini. Plus précisément, on déclare les curseurs après les variables locales et les conditions, mais avant les gestionnaires d'erreurs.
 
+Un curseur est donc composé d'un nom, et d'une requête `SELECT` :
+
 ```sql
 DECLARE nom_curseur CURSOR FOR requete_select;
-Un curseur est donc composé d'un nom, et d'une requête SELECT.
+```
+
 Exemple :
+
+```sql
 DECLARE curseur_client CURSOR 
     FOR SELECT * 
     FROM Client;
@@ -29,11 +34,12 @@ DECLARE curseur_client CURSOR
 
 ### Ouverture et fermeture du curseur
 
-En déclarant le curseur, on a donc associé un nom et une requête `SELECT`. L'ouverture du curseur va provoquer l'exécution de la requête `SELECT`, ce qui va produire un jeu de résultats. Une fois que l'on aura parcouru les résultats, il n'y aura plus qu'à fermer le curseur. Si l'on ne le fait pas explicitement, le curseur sera fermé à la fin du bloc d'un `OPEN nom_curseur`;
+En déclarant le curseur, on a donc associé un nom et une requête `SELECT`. L'ouverture du curseur va provoquer l'exécution de la requête `SELECT`, ce qui va produire un jeu de résultats. Une fois que l'on aura parcouru les résultats, il n'y aura plus qu'à fermer le curseur. Si l'on ne le fait pas explicitement, le curseur sera fermé automatiquement à la fin du bloc d'instructions qui le contient.
 
 ```sql
-  -- Parcours du curseur et instructions diverses
-CLOSE nom_curseur;.
+OPEN nom_curseur;
+    -- Parcours du curseur et instructions diverses
+CLOSE nom_curseur;
 ```
 
 ### Parcours du curseur
@@ -46,13 +52,14 @@ FETCH nom_curseur INTO variable(s);
 
 Bien entendu, comme pour `SELECT ... INTO`, il faut donner autant de variables dans la clause `INTO`  que l'on a récupéré de colonnes dans la clause `SELECT`  du curseur.
 
-*Exemple :* la procédure suivante parcourt les deux premières lignes d’une table Client avec un curseur.
+*Exemple :* la procédure suivante parcourt les deux premières lignes d'une table Client avec un curseur.
 
 ```sql
 DELIMITER |
 CREATE PROCEDURE parcours_deux_clients()
 BEGIN
-    DECLARE v_nom, v_prenom VARCHAR(100);
+    DECLARE v_nom VARCHAR(100);
+    DECLARE v_prenom VARCHAR(100);
 
     DECLARE curs_clients CURSOR
         FOR SELECT nom, prenom  -- Le SELECT récupère deux colonnes
@@ -71,7 +78,7 @@ BEGIN
     SELECT CONCAT(v_prenom, ' ', v_nom) AS 'Second client';
 
     CLOSE curs_clients;     -- Fermeture du curseur
-END|
+END |
 DELIMITER ;
 
 CALL parcours_deux_clients();
@@ -97,7 +104,8 @@ Voici une procédure qui sélectionne les clients selon une ville donnée en par
 DELIMITER |
 CREATE PROCEDURE test_condition(IN p_ville VARCHAR(100))
 BEGIN
-    DECLARE v_nom, v_prenom VARCHAR(100);
+    DECLARE v_nom VARCHAR(100);
+    DECLARE v_prenom VARCHAR(100);
 
     DECLARE curs_clients CURSOR
         FOR SELECT nom, prenom
@@ -112,27 +120,47 @@ BEGIN
     END LOOP;
 
     CLOSE curs_clients; 
-END|
+END |
 DELIMITER ;
 ```
 
 *Exemple :* Pour afficher la liste des articles sous la forme :
-<em>L'article Numéro ........  portant la désignation ………coûte …. …..</em>>
+<em>L'article Numéro ........  portant la désignation ………coûte …. …..</em>
 
 ▶️ Ecrire le curseur correspondant 
 
 ??? question "Correction"
 
     ```sql
-    Declare @a int, @b Varchar(10), @c real
-    Declare Cur_ListeArt Cursor for Select NumArt, DesArt,puart from article
-    Open Cur_ListeArt
-    Fetch Next from Cur_ListeArt into @a,@b,@c
-    While @@fetch_status=0
-    Begin
-    Print 'L''article numéro ' + convert(varchar,@a) + ' portant la désignation ' + @b+ ' coûte    ' +     convert(varchar,@c)
-    Fetch Next from Cur_ListeArt into @a,@b,@c
-    End
-    Close Cur_ListeArt
-    Deallocate Cur_ListeArt
+    DELIMITER |
+    CREATE PROCEDURE afficher_liste_articles()
+    BEGIN
+        DECLARE v_a INT;
+        DECLARE v_b VARCHAR(100);
+        DECLARE v_c DECIMAL(10,2);
+        DECLARE fin INT DEFAULT 0;
+
+        DECLARE Cur_ListeArt CURSOR FOR
+            SELECT NumArt, DesArt, PUArt FROM article;
+
+        -- Gestionnaire : fin de curseur détecté par NOT FOUND
+        DECLARE CONTINUE HANDLER FOR NOT FOUND SET fin = 1;
+
+        OPEN Cur_ListeArt;
+
+        boucle: LOOP
+            FETCH Cur_ListeArt INTO v_a, v_b, v_c;
+            IF fin = 1 THEN
+                LEAVE boucle;
+            END IF;
+            SELECT CONCAT('L\'article numéro ', v_a,
+                          ' portant la désignation ', v_b,
+                          ' coûte ', v_c) AS resultat;
+        END LOOP;
+
+        CLOSE Cur_ListeArt;
+    END |
+    DELIMITER ;
+
+    CALL afficher_liste_articles();
     ```

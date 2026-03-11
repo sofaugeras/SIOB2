@@ -1,4 +1,4 @@
-# Les principes de la sécurité
+# 2. Les principes de la sécurité
 
 La sécurité des Systèmes d’information et des applications repose sur quatre principes fondamentaux (DICP) :
 

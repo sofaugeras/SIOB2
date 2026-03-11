@@ -6,14 +6,6 @@ edit_uri: edit/main/docs/
 site_description: Site de Cours BTS SIO SLAM
 site_author: "Sophie FAUGERAS" 
 docs_dir: docs
-
-### Structure de navigation 
-#nav:
-#    - Accueil: index.md
-#    - ressources: aide-mémoire.md
-#    - T1 Structure de données: Consignes.md
-#    - Prérequis: prérequis.md
-
    
 theme:
   name: material
@@ -89,6 +81,7 @@ markdown_extensions:
         custom_checkbox: false
         clickable_checkbox: true
   - pymdownx.inlinehilite
+  - pymdownx.superfences          # Imbrication de blocs
   - pymdownx.keys
   - pymdownx.tabbed:
       alternate_style: true
@@ -98,7 +91,6 @@ markdown_extensions:
       emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - pymdownx.arithmatex:
       generic: true
-
   - toc:
       permalink: ⚓︎
       toc_depth: 3
@@ -107,8 +99,6 @@ plugins:
   - search
   - awesome-pages:
       collapse_single_pages: false
-
-
 extra:
   analytics: 
     provider: google
@@ -144,11 +134,8 @@ extra_javascript:
   - javascript/mermaid.js
   - javascript/mathjax.js
   - javascript/interpreter.js
-  - javascript/ide.js
-
 
 extra_css:
   - stylesheets/extra.css
-
 
 copyright:  CC BY-SA / S.Faugeras
