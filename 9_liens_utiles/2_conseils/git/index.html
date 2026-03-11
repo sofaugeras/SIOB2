@@ -5671,49 +5671,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#etapes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Étapes
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Étapes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#1-creer-un-depot-sur-github" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Créer un dépôt sur GitHub :
+        1. Créer un dépôt sur GitHub
       
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-initialiser-git-dans-le-repertoire-mescours-sur-votre-pc" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Initialiser Git dans le répertoire MesCours sur votre PC :
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#verification" class="md-nav__link">
+  <a href="#2-initialiser-le-depot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Vérification
+        2. Initialiser le dépôt
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Vérification
       
     </span>
   </a>
@@ -6094,8 +6077,7 @@
 <li>Avoir un compte <a href="https://docs.github.com/fr/education/explore-the-benefits-of-teaching-and-learning-with-github-education/github-education-for-students/apply-to-github-education-as-a-student">GitHub</a>.</li>
 <li>Installer Git sur votre PC. Si ce n'est pas encore fait, téléchargez et installez <mark>Git</mark> depuis (git-scm.com).</li>
 </ul>
-<h2 id="etapes">Étapes<a class="headerlink" href="#etapes" title="Permanent link">⚓︎</a></h2>
-<h3 id="1-creer-un-depot-sur-github">1. Créer un dépôt sur GitHub :<a class="headerlink" href="#1-creer-un-depot-sur-github" title="Permanent link">⚓︎</a></h3>
+<h2 id="1-creer-un-depot-sur-github">1. Créer un dépôt sur GitHub<a class="headerlink" href="#1-creer-un-depot-sur-github" title="Permanent link">⚓︎</a></h2>
 <ul>
 <li>Connectez-vous à GitHub.</li>
 <li>Cliquez sur le bouton New dans la section des dépôts (repositories).</li>
@@ -6104,29 +6086,39 @@
 <li>Ne cochez pas l'option d'ajouter un README.md (sinon, il y aura un conflit avec le répertoire local).</li>
 <li>Cliquez sur Create repository.</li>
 </ul>
-<h3 id="2-initialiser-git-dans-le-repertoire-mescours-sur-votre-pc">2. Initialiser Git dans le répertoire MesCours sur votre PC :<a class="headerlink" href="#2-initialiser-git-dans-le-repertoire-mescours-sur-votre-pc" title="Permanent link">⚓︎</a></h3>
+<h2 id="2-initialiser-le-depot">2. Initialiser le dépôt<a class="headerlink" href="#2-initialiser-le-depot" title="Permanent link">⚓︎</a></h2>
 <ul>
-<li>Ouvrez l'explorateur de fichier sur votre répertoire à sauvegarder, puis tapez cmd dans la barre d'adresse.<blockquote>
+<li>Ouvrez l'explorateur de fichier sur votre répertoire à sauvegarder, puis tapez cmd dans la barre d'adresse.</li>
+</ul>
+<blockquote>
 <p>windows ouvre un terminal positionné directement sur le bon prompt.</p>
 </blockquote>
-</li>
-<li>Initialisez Git dans ce répertoire :
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>git init
-</code></pre></div></li>
-<li>Ajouter le dépôt GitHub en tant que remote (distant) :
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>    git remote add origin https://github.com/votre-utilisateur/MesCours.git
-</code></pre></div></li>
-<li>Ajouter les fichiers et effectuer le premier commit :
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>git add .
-</code></pre></div></li>
-<li>Effectuez le commit initial :
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>    git commit -m &quot;Premier commit&quot;
-</code></pre></div></li>
-<li>Pousser les modifications vers GitHub :
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>        git push -u origin master
-</code></pre></div></li>
+<ul>
+<li>Initialisez Git dans ce répertoire :</li>
 </ul>
-<h2 id="verification">Vérification<a class="headerlink" href="#verification" title="Permanent link">⚓︎</a></h2>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>git init
+</code></pre></div>
+<ul>
+<li>Ajouter le dépôt GitHub en tant que remote (distant) :</li>
+</ul>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>    git remote add origin https://github.com/votre-utilisateur/MesCours.git
+</code></pre></div>
+<ul>
+<li>Ajouter les fichiers et effectuer le premier commit :</li>
+</ul>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>git add .
+</code></pre></div>
+<ul>
+<li>Effectuez le commit initial :</li>
+</ul>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>    git commit -m &quot;Premier commit&quot;
+</code></pre></div>
+<ul>
+<li>Pousser les modifications vers GitHub :</li>
+</ul>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>        git push -u origin master
+</code></pre></div>
+<h2 id="3-verification">3. Vérification<a class="headerlink" href="#3-verification" title="Permanent link">⚓︎</a></h2>
 <p>Allez sur votre dépôt GitHub, vous devriez voir les fichiers du répertoire <code>MesCours</code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Desktop</p>
