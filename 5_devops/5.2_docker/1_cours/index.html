@@ -12,13 +12,13 @@
         <meta name="author" content="Sophie FAUGERAS">
       
       
-        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/5_devops/5.1_notionDevops/4_deploiement/">
+        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/5_devops/5.2_docker/1_cours/">
       
       
-        <link rel="prev" href="../3_tests/">
+        <link rel="prev" href="../../5.1_notionDevops/5_deploiement/">
       
       
-        <link rel="next" href="../../5.2_docker/cours/">
+        <link rel="next" href="../2_premierTP/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>CI - Déploiement - Saint Sauveur BTS SIO SLAM</title>
+        <title>1. Docker – Introduction à la conteneurisation 🐳 - Saint Sauveur BTS SIO SLAM</title>
       
     
     
@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ci-deploiement" class="md-skip">
+        <a href="#1-docker-introduction-a-la-conteneurisation" class="md-skip">
           Aller au contenu
         </a>
       
@@ -142,7 +142,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CI - Déploiement
+              1. Docker – Introduction à la conteneurisation 🐳
             
           </span>
         </div>
@@ -3587,8 +3587,6 @@
                 
   
   
-    
-  
   
   
     
@@ -3599,11 +3597,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
         
           
           <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
@@ -3624,7 +3624,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -3642,7 +3642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1_cours/" class="md-nav__link">
+      <a href="../../5.1_notionDevops/1_cours/" class="md-nav__link">
         
   
   
@@ -3670,7 +3670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2_ci/" class="md-nav__link">
+      <a href="../../5.1_notionDevops/2_ci/" class="md-nav__link">
         
   
   
@@ -3698,7 +3698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3_tests/" class="md-nav__link">
+      <a href="../../5.1_notionDevops/3_tests/" class="md-nav__link">
         
   
   
@@ -3723,19 +3723,38 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.1_notionDevops/4_issues_PR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
     
   
+    CI - Issues &amp; Pull Requests GitHub
+  
+
+    
+  </span>
   
   
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.1_notionDevops/5_deploiement/" class="md-nav__link">
         
   
   
@@ -3751,7 +3770,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -3769,8 +3787,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -3779,13 +3799,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
         
           
           <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
@@ -3806,7 +3824,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -3821,17 +3839,319 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../5.2_docker/cours/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Docker – Introduction à la conteneurisation 🐳
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    Docker
+    1. Docker – Introduction à la conteneurisation 🐳
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-problematique-ca-marche-sur-ma-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Problématique : “ça marche sur ma machine” 📌
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-principe-de-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Principe de Docker 💡
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-definitions-essentielles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Définitions essentielles 📖
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-docker-vs-machine-virtuelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Docker vs Machine virtuelle ⚖️
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-image-vs-conteneur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Image VS conteneur
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Dockerfile
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-persistance-des-donnees-volumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Persistance des données : volumes 🗄️
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-reseaux-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Réseaux Docker 🌐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Docker Compose ⚙️
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-cas-dusage-concrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Cas d’usage concrets 🧠
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-bonnes-pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11 Bonnes pratiques ⚠️
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-limites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Limites 🚨
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-synthese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧾 13. Synthèse
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_premierTP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. TP Docker Windows 🔧
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3_TP_wordpress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. TP Docker — WordPress 🐳
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_TP_python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. TP Docker — Écrire son premier Dockerfile 🐍
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5_memoire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Aide mémoire Docker
   
 
     
@@ -5983,9 +6303,315 @@
   
 
 
-<h1 id="ci-deploiement">CI - Déploiement<a class="headerlink" href="#ci-deploiement" title="Permanent link">⚓︎</a></h1>
-<p><img alt="en connstruction" src="../../../images/enConstruction.png" /></p>
-<p>Enfin une des tâches qui peut faire partie d’un pipeline est celle du déploiement d’une application sur un environnement de test, de développement ou de production. Cela permet de disposer en continue d’une plateforme à jour, disposant des dernières modifications si celles-ci ont passé toutes les étapes d’un pipeline sans renvoyer d’erreur.</p>
+<h1 id="1-docker-introduction-a-la-conteneurisation">1. Docker – Introduction à la conteneurisation 🐳<a class="headerlink" href="#1-docker-introduction-a-la-conteneurisation" title="Permanent link">⚓︎</a></h1>
+<div class="admonition info">
+<p class="admonition-title">source du cours</p>
+<ul>
+<li>cours créé par valentin Brosseau sous MIT License, Lycée Chevrollier Angers</li>
+<li>Formation devops 2021 par Arthur POIGNONNEC</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">🎯 Objectifs pédagogiques</p>
+<ul>
+<li>Comprendre le principe de <strong>conteneurisation</strong></li>
+<li>Distinguer <strong>image</strong>, <strong>conteneur</strong> et <strong>Dockerfile</strong></li>
+<li>Manipuler les <strong>commandes Docker de base</strong></li>
+<li>Déployer une application simple avec <strong>Docker Compose</strong></li>
+<li>Identifier les usages concrets en environnement professionnel</li>
+</ul>
+</div>
+<h2 id="1-problematique-ca-marche-sur-ma-machine">1. Problématique : “ça marche sur ma machine” 📌<a class="headerlink" href="#1-problematique-ca-marche-sur-ma-machine" title="Permanent link">⚓︎</a></h2>
+<p>Dans un projet classique, une application dépend de :</p>
+<ul>
+<li>versions de langages (PHP, Python…)</li>
+<li>bibliothèques</li>
+<li>serveur web</li>
+<li>base de données</li>
+<li>configuration système</li>
+</ul>
+<p>👉 Cela entraîne des écarts entre :</p>
+<ul>
+<li>poste développeur</li>
+<li>environnement de test</li>
+<li>production</li>
+</ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mspEJzb8LC4?si=1bOfGHGU45GiQgo7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h2 id="2-principe-de-docker">2. Principe de Docker 💡<a class="headerlink" href="#2-principe-de-docker" title="Permanent link">⚓︎</a></h2>
+<p>Docker permet d’exécuter une application dans un environnement <strong>isolé et reproductible</strong>.</p>
+<h4 id="illustration-du-concept">🧱 Illustration du concept<a class="headerlink" href="#illustration-du-concept" title="Permanent link">⚓︎</a></h4>
+<p><img alt="illustration" class="center" src="../data/container.png" width="50%" />
+👉 Chaque conteneur est indépendant, mais partage le noyau du système.</p>
+<h2 id="3-definitions-essentielles">3. Définitions essentielles 📖<a class="headerlink" href="#3-definitions-essentielles" title="Permanent link">⚓︎</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Vocabulaire</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Docker</strong> 🧾</td>
+<td style="text-align: left;">Plateforme permettant de créer et exécuter des conteneurs</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Image</strong> 📦</td>
+<td style="text-align: left;">Modèle en lecture seule contenant : le code, les dépendances, la configuration</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Conteneur</strong> ▶️</td>
+<td style="text-align: left;">Instance d’une image en cours d’exécution</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Dockerfile</strong> 🧪</td>
+<td style="text-align: left;">Fichier décrivant les étapes de construction d’une image</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Engine</strong></td>
+<td style="text-align: left;">Ce qui fait fonctionner votre « container ». Les volumes et le réseau font partie de « l’engine »</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Registry</strong></td>
+<td style="text-align: left;">Entrepôt d’image à télécharger (fourni par d’autres, ou construite par vous). https://hub.docker.com</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Volume</strong></td>
+<td style="text-align: left;">les « montages » / ressources, emplacement (réseau ou non) disponible dans votre Container</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-docker-vs-machine-virtuelle">4. Docker vs Machine virtuelle ⚖️<a class="headerlink" href="#4-docker-vs-machine-virtuelle" title="Permanent link">⚓︎</a></h2>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th>Machine virtuelle</th>
+<th>Conteneur Docker</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OS complet</td>
+<td>Oui</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>Démarrage</td>
+<td>Lent</td>
+<td>Rapide</td>
+</tr>
+<tr>
+<td>Consommation</td>
+<td>Élevée</td>
+<td>Faible</td>
+</tr>
+<tr>
+<td>Isolation</td>
+<td>Forte</td>
+<td>Processus</td>
+</tr>
+</tbody>
+</table>
+<p>Les limitations des machines virtuelles :</p>
+<ul>
+<li>Des ressources allouées pour chaque machine (CPU, Disque, Ram)</li>
+<li>Un OS complet sur chaque machine (virtuelle)</li>
+<li>Plus il y a de machines plus il faut de puissance (ressources perdues)</li>
+<li>Ressources perdues par… des parties de l’OS virtualisées pour rien</li>
+</ul>
+<p>Un conteneur c’est…</p>
+<ul>
+<li>Un moyen standardiser de packager l’application</li>
+<li>Un moyen d’isoler les applications entres elles</li>
+<li>Un partage du noyau avec la machine physique</li>
+</ul>
+<p><img alt="illustration" class="center" src="../data/02_vm_vs_docker.png" width="80%" /></p>
+<div class="admonition info">
+<p class="admonition-title">Docker c’est </p>
+<p>Pour résumer Docker c’est :</p>
+<ul>
+<li>Un projet open source qui a pour but d’automatiser le déploiement d’applications dans un « container »</li>
+<li>Le container une sorte « d’archive » qui contient tout ce qu’il faut pour faire fonctionner un logiciel : Code, Librairies pour l’exécution, outils système, et librairies système. (autonome)</li>
+<li>Ça garantit que le code fonctionnera toujours de la même façon, quel que soit l’environnement.</li>
+</ul>
+</div>
+<h2 id="5-image-vs-conteneur">5. Image VS conteneur<a class="headerlink" href="#5-image-vs-conteneur" title="Permanent link">⚓︎</a></h2>
+<p><img alt="illustration" class="center" src="../data/01_image_vs_conteneur.png" width="80%" /></p>
+<p>Il est très important de bien saisir la nuance entre une image et un conteneur, car ce sont les deux notions clés dans l’utilisation de Docker. On dit qu’un conteneur est lancé en exécutant une image. Mais alors qu’est-ce qu’une <strong>image</strong> ?</p>
+<p>Une image est un package qui contient toutes les définitions nécessaires à l’exécution d’une application, à savoir :</p>
+<ul>
+<li>Le code</li>
+<li>L’exécution</li>
+<li>Les variables d’environnements</li>
+<li>Les bibliothèques</li>
+<li>Les fichiers de configuration</li>
+</ul>
+<p>Une image est un <strong>modèle</strong> composé de plusieurs couches, contenant notamment notre application ainsi que les fichiers binaires et les bibliothèques requises. Une fois qu’elle est instanciée, une image devient un conteneur.</p>
+<h2 id="6-dockerfile">6. Dockerfile<a class="headerlink" href="#6-dockerfile" title="Permanent link">⚓︎</a></h2>
+<p><img alt="illustration process" class="center" src="../data/dockerfile-697x270.webp" width="80%" /></p>
+<p>La création d’image avec Docker est réalisée par le biais de la rédaction d’un fichier nommé DockerFile qui a pour objet de définir les propriétés des conteneurs qui seront créés grâce à lui. Ces propriétés sont définies par le biais d’instructions dans le fichier qui vont définir les propriétés du futur conteneur.</p>
+<details class="info">
+<summary>les plus utilisées</summary>
+<ul>
+<li>FROM : Définit l’image de base du conteneur. Cela permet par exemple d’hériter de configuration déjà réalisées dans une image. Souvent on part d’une simple image basée sur un système d’exploitation.</li>
+<li>LABEL : Permet d’associer des métadonnées à l’image, fonctionnant avec un système de clés-valeurs</li>
+<li>ARG : Définition de variables temporaires qui seront utilisées au sein du DockerFile</li>
+<li>ENV : Variables d’environnement utilisées dans le DockerFile et dans le conteneur.</li>
+<li>RUN : Permet d’exécuter des commandes Linux ou Windows lors de la création de l’image.</li>
+<li>COPY : Permet de copier des fichiers depuis la machine hôte vers le conteneur docker</li>
+<li>ENTRYPOINT : Permet de définir la ou les commandes qui serviront de point d’entrée au conteneur, autrement dit qui seront exécuté à son démarrage.</li>
+<li>EXPOSE : Permet d’exposer un port du conteneur</li>
+<li>VOLUMES : Permet de créer un point de montage qui donnera la possibilité de persister les données hors du conteneur (Notion détaillée en partie 8)</li>
+</ul>
+</details>
+<p>Une fois toutes les instructions consignées au sein du fichier <strong>DockerFile</strong>, il ne reste plus qu’à construite l’image puis à l’exécuter pour ainsi créer un nouveau conteneur. </p>
+<p>Exemple de Dockerfile :</p>
+<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>FROM<span class="w"> </span>python:3.13
+WORKDIR<span class="w"> </span>/app
+COPY<span class="w"> </span>requirements.txt<span class="w"> </span>.
+RUN<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+COPY<span class="w"> </span>.<span class="w"> </span>.
+CMD<span class="w"> </span><span class="o">[</span><span class="s2">&quot;python&quot;</span>,<span class="w"> </span><span class="s2">&quot;app.py&quot;</span><span class="o">]</span>
+</code></pre></div>
+<p>🔍 Explication</p>
+<ul>
+<li><code>FROM</code> : image de base</li>
+<li><code>WORKDIR</code> : dossier de travail</li>
+<li><code>COPY</code> : copie des fichiers</li>
+<li><code>RUN</code> : exécution à la construction</li>
+<li><code>CMD</code> : commande au démarrage</li>
+</ul>
+<h2 id="7-persistance-des-donnees-volumes">7. Persistance des données : volumes 🗄️<a class="headerlink" href="#7-persistance-des-donnees-volumes" title="Permanent link">⚓︎</a></h2>
+<p>L’une des choses à retenir est que les données d’un conteneur sont éphémères et sans action de votre part elle n’existe que tant que le conteneur n’est pas supprimé. Or il est très souvent nécessaire de sauvegarder nos données, pour cela on utilise les volumes.</p>
+<p>Sans volume :</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>[ Conteneur supprimé ] → ❌ Données perdues
+</code></pre></div>
+<p>Avec volume :</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>[ Conteneur ] → [ Volume Docker ] → 💾 Données conservées
+</code></pre></div>
+<h2 id="8-reseaux-docker">8. Réseaux Docker 🌐<a class="headerlink" href="#8-reseaux-docker" title="Permanent link">⚓︎</a></h2>
+<p>Pour que les conteneurs Docker puissent communiquer entre eux mais également avec l’extérieur via la machine hôte, il est nécessaire d’utiliser une couche réseau. Cela a pour objectif de permettre l’isolation des conteneurs entre eux, et ce dans l’optique d’accroitre la sécurité des applications hébergées par Docker.</p>
+<p>Les conteneurs peuvent communiquer entre eux :</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>[ web ]  ←→  [ db ]
+</code></pre></div>
+<p>👉 Utilisation fréquente dans les architectures web.</p>
+<hr />
+<h2 id="9-docker-compose">9. Docker Compose ⚙️<a class="headerlink" href="#9-docker-compose" title="Permanent link">⚓︎</a></h2>
+<p>Docker Compose est un outil qui permet de définir le paramétrage d’un ensemble de conteneurs, pour par exemple exécuter des applications à conteneurs multiples. C’est grâce à un fichier au format YAML et à une seule commande que l’on va pouvoir figer une configuration et l’exécuter.</p>
+<p>Ce fichier va nous permettre de définir un ensemble de conteneurs, nommés services par Docker Compose, ainsi que tout le nécessaire pour leur fonctionnement à savoir les volumes et les réseaux. Voici un exemple de fichier Docker Compose permettant de gérer plusieurs conteneurs avec un seul fichier. :</p>
+<h4 id="exemple">📄 Exemple<a class="headerlink" href="#exemple" title="Permanent link">⚓︎</a></h4>
+<div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">web</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;8000:8000&quot;</span>
+
+<span class="w">  </span><span class="nt">db</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql:8</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db_data:/var/lib/mysql</span>
+
+<span class="nt">volumes</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">db_data</span><span class="p">:</span>
+</code></pre></div>
+<h4 id="commandes-associees">▶️ Commandes associées<a class="headerlink" href="#commandes-associees" title="Permanent link">⚓︎</a></h4>
+<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up
+docker<span class="w"> </span>compose<span class="w"> </span>down
+docker<span class="w"> </span>compose<span class="w"> </span>ps
+</code></pre></div>
+<h2 id="10-cas-dusage-concrets">10. Cas d’usage concrets 🧠<a class="headerlink" href="#10-cas-dusage-concrets" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>Application <strong>Laravel + MySQL</strong></li>
+<li>API <strong>Python + PostgreSQL</strong></li>
+<li>Environnement de test reproductible</li>
+<li>CI/CD</li>
+</ul>
+<h2 id="11-bonnes-pratiques">11 Bonnes pratiques ⚠️<a class="headerlink" href="#11-bonnes-pratiques" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>Utiliser des images officielles (docker Hub)</li>
+<li>Limiter la taille des images</li>
+<li>Ne pas stocker de données en dur dans le conteneur</li>
+<li>Utiliser des volumes</li>
+<li>Séparer les services (web / db)</li>
+</ul>
+<h2 id="12-limites">12. Limites 🚨<a class="headerlink" href="#12-limites" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>Pas une solution de sécurité en soi</li>
+<li>Complexité croissante avec le nombre de conteneurs</li>
+<li>Nécessite une bonne organisation</li>
+</ul>
+<h2 id="13-synthese">🧾 13. Synthèse<a class="headerlink" href="#13-synthese" title="Permanent link">⚓︎</a></h2>
+<table>
+<thead>
+<tr>
+<th>Élément</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Docker</td>
+<td>Plateforme</td>
+</tr>
+<tr>
+<td>Image</td>
+<td>Modèle</td>
+</tr>
+<tr>
+<td>Conteneur</td>
+<td>Exécution</td>
+</tr>
+<tr>
+<td>Dockerfile</td>
+<td>Recette</td>
+</tr>
+<tr>
+<td>Volume</td>
+<td>Persistance</td>
+</tr>
+<tr>
+<td>Compose</td>
+<td>Orchestration</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition question">
+<p class="admonition-title">📝 QCM rapide</p>
+<p>🔎 <strong>Question 1</strong> : Le pentest vise principalement à :</p>
+<ul>
+<li>A. un conteneur en cours d’exécution</li>
+<li>B. un modèle</li>
+<li>C. une machine virtuelle</li>
+</ul>
+<details class="question">
+<summary>Solution Question n°1</summary>
+<p>B. un modèle</p>
+</details>
+<p>🔎 <strong>Question 2</strong> : Un conteneur permet :</p>
+<ul>
+<li>A. d’isoler une application</li>
+<li>B. de virtualiser un OS complet</li>
+<li>C. de remplacer Linux</li>
+</ul>
+<details class="question">
+<summary>Solution Question n°1</summary>
+<p>A. d’isoler une application</p>
+</details>
+<p>🔎 <strong>Question 3</strong> : Docker Compose sert à :</p>
+<ul>
+<li>A. créer une image</li>
+<li>B. gérer plusieurs conteneurs</li>
+<li>C. compiler du code</li>
+</ul>
+<details class="question">
+<summary>Solution Question n°1</summary>
+<p>B. gérer plusieurs conteneurs</p>
+</details>
+</div>
 
 
 
