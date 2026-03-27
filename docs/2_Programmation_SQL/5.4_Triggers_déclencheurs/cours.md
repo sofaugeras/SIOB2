@@ -23,7 +23,7 @@ Un trigger exécute un traitement pour chaque ligne insérée, modifiée ou supp
 
 Les instructions d'un trigger suivent les mêmes principes que les instructions d'une procédure stockée. S'il y a plus d'une instruction, il faut les mettre à l'intérieur d'un bloc d'instructions. Les structures que nous avons vues dans les deux chapitres précédents sont bien sûr utilisables (structures conditionnelles, boucles, gestionnaires d'erreurs, etc.), avec toutefois quelques restrictions que nous verrons en fin de chapitre.
 <br />
-Un trigger peut **modifier et/ou insérer** des données dans n'importe quelle table, à l'exception de la table à laquelle il est attaché via une requête DML explicite (`INSERT`, `UPDATE`, `DELETE`). En revanche, dans un trigger `BEFORE`, il est possible de modifier directement les valeurs de la ligne en cours de traitement via le mot-clé `NEW` (voir section [OLD et NEW](#old-et-new)).
+Un trigger peut **modifier et/ou insérer** des données dans n'importe quelle table, à l'exception de la table à laquelle il est attaché via une requête DML explicite (`INSERT`, `UPDATE`, `DELETE`). En revanche, dans un trigger `BEFORE`, il est possible de modifier directement les valeurs de la ligne en cours de traitement via le mot-clé `NEW` (voir section [OLD et NEW]).
 
 ### 1.3 À quoi sert un trigger ?
 

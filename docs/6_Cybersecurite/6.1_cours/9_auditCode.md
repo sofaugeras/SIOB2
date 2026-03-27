@@ -1,7 +1,5 @@
 # 9. Audit de code et analyse de qualité logicielle 👮‍♀️
 
-![en construction](../../images/enConstruction.png){: .center width=50%}
-
 !!! info "Compétences Cyber SLAM"
 
     **Activité B3.5**. Cybersécurisation d’une solution applicative et de son développement
@@ -248,4 +246,4 @@ Il repose sur :
 
 Dans vos projets (comme bijoo ou todo), cette méthodologie vous permettra d’identifier les points d’amélioration et d’adopter des pratiques professionnelles alignées avec les attentes du secteur.
 
-A suivre Activité sur bijoo et Todo
+🔗 A suivre [TP Audit de code avec SonaQube sur Todo et bijoo](../6.2_TP/7_TP_auditCode.md)

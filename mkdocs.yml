@@ -17,6 +17,7 @@ theme:
   icon:
     logo: material/code-greater-than
     repo : fontawesome/brands/github
+    annotation: material/arrow-right-circle
     admonition:
       note: fontawesome/solid/pen-to-square
 
@@ -29,6 +30,7 @@ theme:
     - header.autohide
     - content.code.annotate 
     - content.code.copy
+    - content.tooltips
 
   palette:
     # Light mode

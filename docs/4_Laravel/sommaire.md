@@ -16,7 +16,8 @@
 5. [Intégration continue Compilation](../5_devops/5.1_notionDevops/2_ci.md)
 6. [Sécurité](./4.2_toDo/4.2.5_Sécurité.md)
 7. [Intégration Continue Tests](../5_devops/5.1_notionDevops/3_tests.md)
-8. [Déploiement continue Déploiement](../5_devops/5.1_notionDevops/4_deploiement.md)
+8. [Github Issues et Pull Request](../5_devops/5.1_notionDevops/4_issues_PR.md)
+9. [Déploiement continue Déploiement](../5_devops/5.1_notionDevops/5_deploiement.md)
 
 :bookmark_tabs: ^^Plan de travail^^ :
 

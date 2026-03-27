@@ -13,14 +13,15 @@
 
 ## Les TP 
 
-- [Authentification TOTP](./6.2_TP/TPAuthMA_partie1.md)
-- [Authentification Force brute](./6.2_TP/TPAuthMA_partie2.md)
+- [Authentification TOTP](./6.2_TP/6_1_TPAuthMA_partie1.md)
+- [Authentification Force brute](./6.2_TP/6_2_TPAuthMA_partie2.md)
 - [Installation des environnements : DVWA et bijoo](./6.2_TP/0_tpOwasp.md)
 - [TP Mauvaise gestion de configuration](./6.2_TP/1_tpMauvaiseConfiguration.md)
 - [TP Injection sql](./6.2_TP/2_tpInjectionSQL.md)
 - [TP Violation de Gestion d'Authentification et de Session](./6.2_TP/3_tpViolationGestionAuthentification.md)
 - [TP Exposition aux données sensibles](./6.2_TP/4_tpExpositionDonneesSensibles.md)
 - [TP Manque de contrôle d'accès au niveau fonctionnel](./6.2_TP/5_tpManqueControleAccesFonctionnel.md)
+- [TP audit de code avec SonaQube](./6.2_TP/7_TP_auditCode.md)
 
 ## Pages de ressources en Cybersécurité SLAM
 
