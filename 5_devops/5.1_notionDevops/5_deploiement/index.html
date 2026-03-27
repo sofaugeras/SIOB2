@@ -29,7 +29,7 @@
     
     
       
-        <title>CI - Déploiement - Saint Sauveur BTS SIO SLAM</title>
+        <title>CI - Déploiement avec 🐳 Docker - Saint Sauveur BTS SIO SLAM</title>
       
     
     
@@ -49,6 +49,12 @@
   
   <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M471.6%2021.7c-21.9-21.9-57.3-21.9-79.2%200L368%2046.1l97.9%2097.9%2024.4-24.4c21.9-21.9%2021.9-57.3%200-79.2zm-299.2%20220c-6.1%206.1-10.8%2013.6-13.5%2021.9l-29.6%2088.8c-2.9%208.6-.6%2018.1%205.8%2024.6s15.9%208.7%2024.6%205.8l88.8-29.6c8.2-2.7%2015.7-7.4%2021.9-13.5L432%20177.9%20334.1%2080zM96%2064c-53%200-96%2043-96%2096v256c0%2053%2043%2096%2096%2096h256c53%200%2096-43%2096-96v-96c0-17.7-14.3-32-32-32s-32%2014.3-32%2032v96c0%2017.7-14.3%2032-32%2032H96c-17.7%200-32-14.3-32-32V160c0-17.7%2014.3-32%2032-32h96c17.7%200%2032-14.3%2032-32s-14.3-32-32-32z%22/%3E%3C/svg%3E');}</style>
 
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010M6%2013h8l-3.5%203.5%201.42%201.42L17.84%2012l-5.92-5.92L10.5%207.5%2014%2011H6z%22/%3E%3C/svg%3E');}</style>
 
 
     
@@ -108,7 +114,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ci-deploiement" class="md-skip">
+        <a href="#ci-deploiement-avec-docker" class="md-skip">
           Aller au contenu
         </a>
       
@@ -142,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CI - Déploiement
+              CI - Déploiement avec 🐳 Docker
             
           </span>
         </div>
@@ -376,7 +382,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../6_Cybers%C3%A9curit%C3%A9/sommaire/" class="md-tabs__link">
+        <a href="../../../6_Cybersecurite/sommaire/" class="md-tabs__link">
           
   
   
@@ -3763,6 +3769,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CI - Déploiement avec 🐳 Docker
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -3770,7 +3794,7 @@
   <span class="md-ellipsis">
     
   
-    CI - Déploiement
+    CI - Déploiement avec 🐳 Docker
   
 
     
@@ -3779,6 +3803,475 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-pourquoi-docker-le-probleme-du-ca-marche-chez-moi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 🤔 Pourquoi Docker ? Le problème du "ça marche chez moi"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 🤔 Pourquoi Docker ? Le problème du &#34;ça marche chez moi&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-le-probleme-classique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Le problème classique
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-la-metaphore-du-conteneur-maritime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 🚢 La métaphore du conteneur maritime
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-les-concepts-fondamentaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 🧱 Les concepts fondamentaux
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 🧱 Les concepts fondamentaux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-image-vs-conteneur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 📦 Image vs Conteneur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-docker-vs-machine-virtuelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 🖥️ Docker vs Machine Virtuelle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-le-dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 📝 Le Dockerfile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-docker-compose-orchestrer-plusieurs-conteneurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 🎼 Docker Compose — Orchestrer plusieurs conteneurs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-architecture-de-notre-deploiement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 🏗️ Architecture de notre déploiement
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 🏗️ Architecture de notre déploiement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-vue-densemble" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Vue d'ensemble
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-role-de-chaque-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 🗂️ Rôle de chaque service
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-construction-de-lenvironnement-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 🔨 Construction de l'environnement Docker
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 🔨 Construction de l&#39;environnement Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-structure-des-fichiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 📁 Structure des fichiers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-le-dockerfile-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 🐘 Le Dockerfile PHP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-configuration-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 🌐 Configuration Nginx
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-le-fichier-docker-composeyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 🎼 Le fichier docker-compose.yml
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-le-dockerignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 🚫 Le .dockerignore
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-variables-denvironnement-et-securite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 🔐 Variables d'environnement et sécurité
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 🔐 Variables d&#39;environnement et sécurité">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-le-fichier-env-pour-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Le fichier .env pour Docker
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-jamais-de-secrets-dans-le-dockerfile-ou-docker-composeyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 ❌ Jamais de secrets dans le Dockerfile ou docker-compose.yml
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-commandes-docker-essentielles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. ⌨️ Commandes Docker essentielles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. ⌨️ Commandes Docker essentielles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-cycle-de-vie-des-conteneurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 🔄 Cycle de vie des conteneurs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-executer-des-commandes-dans-un-conteneur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 💻 Exécuter des commandes dans un conteneur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-gestion-des-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 🗃️ Gestion des images
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-deploiement-sur-le-serveur-debian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 🚀 Déploiement sur le serveur Debian
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 🚀 Déploiement sur le serveur Debian">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-prerequis-sur-le-serveur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 ✅ Prérequis sur le serveur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-procedure-de-deploiement-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 📋 Procédure de déploiement complète
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-mise-a-jour-de-lapplication-workflow-cicd-simplifie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 🔁 Mise à jour de l'application (workflow CI/CD simplifié)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-concepts-avances-pour-aller-plus-loin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 🧠 Concepts avancés — Pour aller plus loin
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. 🧠 Concepts avancés — Pour aller plus loin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-les-layers-et-le-cache-de-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 🧅 Les layers et le cache de build
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-multi-stage-build-image-de-production-allegee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 🏗️ Multi-stage build (image de production allégée)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-healthchecks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 💓 Healthchecks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-resume-ce-que-vous-devez-retenir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 📋 Résumé — Ce que vous devez retenir
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. 📋 Résumé — Ce que vous devez retenir">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vocabulaire-a-maitriser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Vocabulaire à maîtriser
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commandes-cles-a-retenir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⌨️ Commandes clés à retenir
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ressources-complementaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Ressources complémentaires
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4059,7 +4552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/sommaire/" class="md-nav__link">
+      <a href="../../../6_Cybersecurite/sommaire/" class="md-nav__link">
         
   
   
@@ -4139,7 +4632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/1_owasp/" class="md-nav__link">
+      <a href="../../../6_Cybersecurite/6.1_cours/1_owasp/" class="md-nav__link">
         
   
   
@@ -4167,7 +4660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/2_principes/" class="md-nav__link">
+      <a href="../../../6_Cybersecurite/6.1_cours/2_principes/" class="md-nav__link">
         
   
   
@@ -4195,7 +4688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/3_preuveNumerique/" class="md-nav__link">
+      <a href="../../../6_Cybersecurite/6.1_cours/3_preuveNumerique/" class="md-nav__link">
         
   
   
@@ -4223,7 +4716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/4_authentification/" class="md-nav__link">
+      <a href="../../../6_Cybersecurite/6.1_cours/4_authentification/" class="md-nav__link">
         
   
   
@@ -4251,7 +4744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/5_archivage/" class="md-nav__link">
+      <a href="../../../6_Cybersecurite/6.1_cours/5_archivage/" class="md-nav__link">
         
   
   
@@ -4279,7 +4772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/6_recoANSII/" class="md-nav__link">
+      <a href="../../../6_Cybersecurite/6.1_cours/6_recoANSII/" class="md-nav__link">
         
   
   
@@ -4307,7 +4800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/7_ebios/" class="md-nav__link">
+      <a href="../../../6_Cybersecurite/6.1_cours/7_ebios/" class="md-nav__link">
         
   
   
@@ -4335,7 +4828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/8_pentest/" class="md-nav__link">
+      <a href="../../../6_Cybersecurite/6.1_cours/8_pentest/" class="md-nav__link">
         
   
   
@@ -4363,7 +4856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/9_auditCode/" class="md-nav__link">
+      <a href="../../../6_Cybersecurite/6.1_cours/9_auditCode/" class="md-nav__link">
         
   
   
@@ -4391,7 +4884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.1_cours/9_exercices/" class="md-nav__link">
+      <a href="../../../6_Cybersecurite/6.1_cours/9_exercices/" class="md-nav__link">
         
   
   
@@ -4479,7 +4972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_TP/0_tpOwasp/" class="md-nav__link">
+      <a href="../../../6_Cybersecurite/6.2_TP/0_tpOwasp/" class="md-nav__link">
         
   
   
@@ -4507,7 +5000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_TP/1_tpMauvaiseConfiguration/" class="md-nav__link">
+      <a href="../../../6_Cybersecurite/6.2_TP/1_tpMauvaiseConfiguration/" class="md-nav__link">
         
   
   
@@ -4535,7 +5028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_TP/2_tpInjectionSQL/" class="md-nav__link">
+      <a href="../../../6_Cybersecurite/6.2_TP/2_tpInjectionSQL/" class="md-nav__link">
         
   
   
@@ -4619,7 +5112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybers%C3%A9curit%C3%A9/6.2_TP/5_tpManqueControleAccesFonctionnel/" class="md-nav__link">
+      <a href="../../../6_Cybersecurite/6.2_TP/5_tpManqueControleAccesFonctionnel/" class="md-nav__link">
         
   
   
@@ -4627,6 +5120,90 @@
     
   
     6. TP Manque de contrôle d'accès au niveau fonctionnel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybersecurite/6.2_TP/6_1_TPAuthMA_partie1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. TP Authentification MFA TOTP Partie 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybersecurite/6.2_TP/6_2_TPAuthMA_partie2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. TP Protection contre la force brute
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybersecurite/6.2_TP/7_TP_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. TP Audit de code SonarQube
   
 
     
@@ -6123,11 +6700,11 @@
   
 
 
-<h1 id="ci-deploiement">CI - Déploiement<a class="headerlink" href="#ci-deploiement" title="Permanent link">⚓︎</a></h1>
+<h1 id="ci-deploiement-avec-docker">CI - Déploiement avec 🐳 Docker<a class="headerlink" href="#ci-deploiement-avec-docker" title="Permanent link">⚓︎</a></h1>
 <p><img alt="en connstruction" src="../../../images/enConstruction.png" /></p>
-<h1 id="docker-deployer-une-application-laravel-en-production">🐳 Docker — Déployer une application Laravel en production<a class="headerlink" href="#docker-deployer-une-application-laravel-en-production" title="Permanent link">⚓︎</a></h1>
-<h2 id="objectifs-pedagogiques">🎯 Objectifs pédagogiques<a class="headerlink" href="#objectifs-pedagogiques" title="Permanent link">⚓︎</a></h2>
-<p>À l'issue de ce cours, vous serez capables de :</p>
+<div class="admonition success">
+<p class="admonition-title">🎯 Objectifs du TP</p>
+<p>Déployer une application Laravel en production</p>
 <ul>
 <li>🗣️ Expliquer ce qu'est Docker et pourquoi on l'utilise</li>
 <li>🔍 Comprendre l'architecture conteneur vs machine virtuelle</li>
@@ -6135,7 +6712,7 @@
 <li>🎼 Orchestrer plusieurs services avec <code>docker-compose</code></li>
 <li>🚀 Déployer l'application <code>laravel-todo</code> sur un serveur Debian</li>
 </ul>
-<hr />
+</div>
 <h2 id="1-pourquoi-docker-le-probleme-du-ca-marche-chez-moi">1. 🤔 Pourquoi Docker ? Le problème du "ça marche chez moi"<a class="headerlink" href="#1-pourquoi-docker-le-probleme-du-ca-marche-chez-moi" title="Permanent link">⚓︎</a></h2>
 <h3 id="11-le-probleme-classique">1.1 Le problème classique<a class="headerlink" href="#11-le-probleme-classique" title="Permanent link">⚓︎</a></h3>
 <p>Vous avez développé votre application Laravel sur votre PC Windows. Tout fonctionne. Vous la transmettez à votre collègue sous Ubuntu : <strong>❌ erreur</strong>. Vous la déployez sur le serveur de production : <strong>❌ encore une erreur</strong>.</p>
@@ -6924,7 +7501,7 @@ docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">ex
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
