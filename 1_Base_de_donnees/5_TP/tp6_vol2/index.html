@@ -18,7 +18,7 @@
         <link rel="prev" href="../tp5_sncf/">
       
       
-        <link rel="next" href="../tp8_anabase/">
+        <link rel="next" href="../tp7_univ/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>TP6 VOL Complexe [SQL complexe] - Saint Sauveur BTS SIO SLAM</title>
+        <title>TP6 VOL Complexe [imbriquée + ensembliste] - Saint Sauveur BTS SIO SLAM</title>
       
     
     
@@ -148,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TP6 VOL Complexe [SQL complexe]
+              TP6 VOL Complexe [imbriquée + ensembliste]
             
           </span>
         </div>
@@ -1468,7 +1468,7 @@
   <span class="md-ellipsis">
     
   
-    TP6 VOL Complexe [SQL complexe]
+    TP6 VOL Complexe [imbriquée + ensembliste]
   
 
     
@@ -1486,7 +1486,7 @@
   <span class="md-ellipsis">
     
   
-    TP6 VOL Complexe [SQL complexe]
+    TP6 VOL Complexe [imbriquée + ensembliste]
   
 
     
@@ -1571,14 +1571,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tp7_univ.md" class="md-nav__link">
+      <a href="../tp7_univ/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    TP7 Université [SQL complexe]
+    TP7 Université [Vues]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tp8_global/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP8 GSB [récap SIO1]
   
 
     
@@ -1606,7 +1634,7 @@
   <span class="md-ellipsis">
     
   
-    Cas Anabase [Revision SIO2]
+    TP9 Cas Anabase [Revision SIO2]
   
 
     
@@ -1634,7 +1662,7 @@
   <span class="md-ellipsis">
     
   
-    TP9 Sauvegarde de base de données
+    TP10 Sauvegarde de base de données
   
 
     
@@ -4002,7 +4030,7 @@
   <span class="md-ellipsis">
     
   
-    3. TP Docker — WordPress 🐳
+    3. TP Docker WordPress 🐳
   
 
     
@@ -6477,9 +6505,9 @@
 
 <span class="k">UNION</span>
 
-<span class="k">SELECT</span><span class="w"> </span><span class="n">vol_pilote</span>
+<span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">vol_pilote</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">vol_avion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">vol_avion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 
 <span class="c1">--Solution sans UNION</span>
 <span class="k">SELECT</span><span class="w"> </span><span class="n">pil_no</span><span class="p">,</span><span class="w"> </span><span class="n">pil_nom</span><span class="p">,</span><span class="w"> </span><span class="n">pil_prénom</span>
@@ -6497,8 +6525,8 @@
 <span class="k">SELECT</span><span class="w"> </span><span class="n">av_ville</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">AVION</span>
 <span class="k">INTERSECT</span>
-<span class="k">SELECT</span><span class="w"> </span><span class="n">pil_ville</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">;</span>
+<span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">pil_ville</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">);</span>
 
 <span class="c1">--Solution sans INTERSECT</span>
 <span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">av_ville</span>
@@ -6515,10 +6543,10 @@
 <span class="k">SELECT</span><span class="w"> </span><span class="n">vol_pilote</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">vol_avion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="k">UNION</span>
-<span class="k">SELECT</span><span class="w"> </span><span class="n">vol_pilote</span>
+<span class="k">INTERSECT</span>
+<span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">vol_pilote</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">vol_avion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">vol_avion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
 
 <span class="c1">--Solution sans UNION</span>
 <span class="k">SELECT</span><span class="w"> </span><span class="n">pil_no</span><span class="p">,</span><span class="w"> </span><span class="n">pil_nom</span><span class="p">,</span><span class="w"> </span><span class="n">pil_prénom</span>
