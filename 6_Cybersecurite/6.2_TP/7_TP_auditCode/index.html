@@ -1186,62 +1186,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/4_SQLComplexe/TD_hopital/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TD Vues
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/4_SQLComplexe/TD_chenil/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TD jointures
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1505,14 +1449,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/5_TP/tp8_global/" class="md-nav__link">
+      <a href="../../../1_Base_de_donnees/5_TP/tp8_hopital/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    TP8 GSB [récap SIO1]
+    TP8 Hopital [vues]
   
 
     
@@ -1533,14 +1477,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/5_TP/tp8_anabase/" class="md-nav__link">
+      <a href="../../../1_Base_de_donnees/5_TP/tp9_chenil/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    TP9 Cas Anabase [Revision SIO2]
+    TP9 Chenil [jointures externes]
   
 
     
@@ -1561,14 +1505,70 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/5_TP/tp9_sauvegarde/" class="md-nav__link">
+      <a href="../../../1_Base_de_donnees/5_TP/tp10_global/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    TP10 Sauvegarde de base de données
+    TP10 GSB [récap SIO1]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tp11_anabase.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP11 Cas Anabase [Revision SIO2]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tp12_sauvegarde.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP12 Sauvegarde de base de données
   
 
     
@@ -3792,7 +3792,63 @@
   <span class="md-ellipsis">
     
   
-    CI - Déploiement avec 🐳 Docker
+    CI - Déploiement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../5_devops/5.1_notionDevops/TP_cicd_etudiant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP — Déploiement CI/CD d'une application Laravel 🚀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../5_devops/5.1_notionDevops/note/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Note
   
 
     
@@ -6613,7 +6669,7 @@ docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </sp
 <li><strong>Main branch name</strong> : main</li>
 <li>Cliquez sur <strong>Next</strong>, choisir <strong>Follows the Instance's Default</strong> puis <strong>Create project</strong></li>
 <li><strong>How do you want to analyze your repository?</strong> Choisissez <strong>Locally</strong></li>
-<li>Cliquez sur <strong>Generate a token</strong> → donnez-lui un nom "Analyze "laravel_todo_sophie" et une date d'expiration "30 days"→ <strong>Generate</strong></li>
+<li>Cliquez sur <strong>Generate a token</strong> → donnez-lui un nom "Analyze "laravel_todo_prenom" et une date d'expiration "30 days"→ <strong>Generate</strong></li>
 <li><strong>Copiez et notez le token</strong> — il ne sera plus affiché</li>
 </ol>
 <h3 id="12-installer-sonar-scanner-sur-windows">1.2 Installer Sonar Scanner sur Windows 💻<a class="headerlink" href="#12-installer-sonar-scanner-sur-windows" title="Permanent link">⚓︎</a></h3>
@@ -6633,7 +6689,7 @@ docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </sp
 <h3 id="13-configurer-le-projet-laravel">1.3 Configurer le projet Laravel 📝<a class="headerlink" href="#13-configurer-le-projet-laravel" title="Permanent link">⚓︎</a></h3>
 <p>À la <strong>racine de votre projet Laravel</strong>, créez <code>sonar-project.properties</code> :</p>
 <div class="language-properties highlight"><span class="filename">Properties</span><pre><span></span><code><span class="na">sonar.projectKey</span><span class="o">=</span><span class="s">laravel-prenom</span>
-<span class="na">sonar.projectName</span><span class="o">=</span><span class="s">Mon Projet Laravel</span>
+<span class="na">sonar.projectName</span><span class="o">=</span><span class="s">Laravel-Todo_prenom</span>
 
 <span class="na">sonar.sources</span><span class="o">=</span><span class="s">app,routes,database,resources</span>
 <span class="na">sonar.exclusions</span><span class="o">=</span><span class="s">vendor/**,node_modules/**,storage/**,bootstrap/cache/**,public/**</span>
@@ -6989,7 +7045,7 @@ On utilise donc <strong>SonarCloud</strong>, la version hébergée de SonarQube 
 <li>Importez votre dépôt Laravel</li>
 <li>Notez votre <code>SONAR_ORGANIZATION</code> et le <code>SONAR_PROJECT_KEY</code></li>
 <li><strong>Ne pas</strong> ajouter All repositories.</li>
-<li>Créer unn nouveau projet qui prend votre dépot Todo &gt; Laisser la première analys de faire</li>
+<li>Créer un nouveau projet qui prend votre dépot Todo &gt; Laisser la première analys de faire</li>
 <li>Dans votre profile &gt; Secuity &gt; Générer un nouveau Token</li>
 </ol>
 <h3 id="22-ajouter-le-token-en-secret-github">2.2 Ajouter le token en secret GitHub 🔐<a class="headerlink" href="#22-ajouter-le-token-en-secret-github" title="Permanent link">⚓︎</a></h3>

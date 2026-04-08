@@ -1186,62 +1186,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/4_SQLComplexe/TD_hopital/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TD Vues
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/4_SQLComplexe/TD_chenil/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TD jointures
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1505,14 +1449,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/5_TP/tp8_global/" class="md-nav__link">
+      <a href="../../../1_Base_de_donnees/5_TP/tp8_hopital/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    TP8 GSB [récap SIO1]
+    TP8 Hopital [vues]
   
 
     
@@ -1533,14 +1477,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/5_TP/tp8_anabase/" class="md-nav__link">
+      <a href="../../../1_Base_de_donnees/5_TP/tp9_chenil/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    TP9 Cas Anabase [Revision SIO2]
+    TP9 Chenil [jointures externes]
   
 
     
@@ -1561,14 +1505,70 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/5_TP/tp9_sauvegarde/" class="md-nav__link">
+      <a href="../../../1_Base_de_donnees/5_TP/tp10_global/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    TP10 Sauvegarde de base de données
+    TP10 GSB [récap SIO1]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tp11_anabase.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP11 Cas Anabase [Revision SIO2]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tp12_sauvegarde.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP12 Sauvegarde de base de données
   
 
     
@@ -4153,7 +4153,63 @@
   <span class="md-ellipsis">
     
   
-    CI - Déploiement avec 🐳 Docker
+    CI - Déploiement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TP_cicd_etudiant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP — Déploiement CI/CD d'une application Laravel 🚀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../note/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Note
   
 
     
@@ -6590,12 +6646,6 @@
 
 
 <h1 id="ci-tests-unitaires">CI - Tests unitaires 🧪<a class="headerlink" href="#ci-tests-unitaires" title="Permanent link">⚓︎</a></h1>
-<p>L’exécution de tests unitaires et d’intégrations est au coeur de la démarche DevOps et d’intégration continue. C’est eux qui vont permettre de détecter les anomalies dans les développements réalisés. <strong>Github Actions</strong>, si un ou plusieurs tests sont en erreur, va fournir les rapports détaillés permettant d’identifier l’origine de l’erreur, et va signaler que la tâche est en erreur. Cela peut par exemple empêcher un merge de se réaliser dans Github.</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>- name: Run tests with coverage
-  env: 
-    XDEBUG_MODE: coverage 
-    run: php artisan test --coverage --min=80
-</code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">🎯 Objectifs pédagogiques</p>
 <ul>
@@ -6604,7 +6654,14 @@
 <li>Intégrer les tests dans une <strong>pipeline d’intégration continue (CI)</strong>.  </li>
 <li>Mesurer la <strong>couverture de code</strong> et fixer un seuil minimal de qualité.</li>
 </ul>
+<p><strong>Compétence :</strong> Mettre à disposition des utilisateurs un service informatique &gt;  Réaliser les tests d’intégration et d’acceptation d’un service</p>
 </div>
+<p>L’exécution de tests unitaires et d’intégrations est au coeur de la démarche DevOps et d’intégration continue. C’est eux qui vont permettre de détecter les anomalies dans les développements réalisés. <strong>Github Actions</strong>, si un ou plusieurs tests sont en erreur, va fournir les rapports détaillés permettant d’identifier l’origine de l’erreur, et va signaler que la tâche est en erreur. Cela peut par exemple empêcher un merge de se réaliser dans Github.</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>- name: Run tests with coverage
+  env: 
+    XDEBUG_MODE: coverage 
+    run: php artisan test --coverage --min=80
+</code></pre></div>
 <h2 id="1-initialisation-de-lenvironnement-de-test">1. Initialisation de l’environnement de test 🏗️<a class="headerlink" href="#1-initialisation-de-lenvironnement-de-test" title="Permanent link">⚓︎</a></h2>
 <p>Crée un environnement dédié aux tests.</p>
 <div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>cp<span class="w"> </span>.env<span class="w"> </span>.env.testing

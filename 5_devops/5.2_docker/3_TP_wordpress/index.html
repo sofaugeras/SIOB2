@@ -1186,62 +1186,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/4_SQLComplexe/TD_hopital/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TD Vues
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/4_SQLComplexe/TD_chenil/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TD jointures
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1505,14 +1449,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/5_TP/tp8_global/" class="md-nav__link">
+      <a href="../../../1_Base_de_donnees/5_TP/tp8_hopital/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    TP8 GSB [récap SIO1]
+    TP8 Hopital [vues]
   
 
     
@@ -1533,14 +1477,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/5_TP/tp8_anabase/" class="md-nav__link">
+      <a href="../../../1_Base_de_donnees/5_TP/tp9_chenil/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    TP9 Cas Anabase [Revision SIO2]
+    TP9 Chenil [jointures externes]
   
 
     
@@ -1561,14 +1505,70 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/5_TP/tp9_sauvegarde/" class="md-nav__link">
+      <a href="../../../1_Base_de_donnees/5_TP/tp10_global/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    TP10 Sauvegarde de base de données
+    TP10 GSB [récap SIO1]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tp11_anabase.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP11 Cas Anabase [Revision SIO2]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tp12_sauvegarde.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP12 Sauvegarde de base de données
   
 
     
@@ -3795,7 +3795,63 @@
   <span class="md-ellipsis">
     
   
-    CI - Déploiement avec 🐳 Docker
+    CI - Déploiement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.1_notionDevops/TP_cicd_etudiant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP — Déploiement CI/CD d'une application Laravel 🚀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.1_notionDevops/note/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Note
   
 
     
@@ -3990,6 +4046,45 @@
       Table des matières
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nginx 🔀
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nginx 🔀">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lanalogie-du-switch-layer-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'analogie du switch Layer 7 🔌
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dans-ce-cours-deux-niveaux-de-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dans ce cours — deux niveaux de Nginx 🏗️
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#0-configurer-le-dns-local-sur-votre-pc-windows" class="md-nav__link">
@@ -6578,22 +6673,73 @@ Son espace de travail est <strong>isolé</strong> : ses conteneurs, son réseau 
 </table>
 <p>On peut illustrer la stack déployée dans ce TP à l'aide du schéma ci dessous :</p>
 <p><img alt="illustration" class="center" src="../data/stack_docker_wordpress.svg" width="80%" /></p>
-<div class="admonition info">
-<p class="admonition-title">🔀 Pourquoi Nginx n'est pas dans un conteneur ?</p>
-<p>Dans ce TP, <strong>Nginx est installé directement sur le serveur</strong> (bare-metal),
-pas dans un conteneur Docker.</p>
-<p>Son rôle est de faire du <strong>reverse proxy</strong> : il reçoit vos requêtes HTTP sur
-le port 80 et les redirige vers le bon conteneur WordPress selon votre prénom
-(<code>elouan.srv-debian.local</code> → port 8081, etc.).</p>
-<p>Le placer en dehors de Docker simplifie l'architecture pour ce TP :
-un seul Nginx gère <strong>tous les étudiants</strong> sans complexifier les réseaux Docker.</p>
-</div>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Avant de commencer</p>
 <p>Votre poste doit connaître l'adresse de <code>srv-debian.local</code> (<code>192.168.0.119</code>).<br />
 Il faudra l'ajouter dans votre fichier <code>hosts</code> (étape 0 ci-dessous).</p>
 </div>
+<h2 id="nginx">Nginx 🔀<a class="headerlink" href="#nginx" title="Permanent link">⚓︎</a></h2>
+<p><strong>Nginx</strong> (prononcé <em>"engine-x"</em>) est un logiciel open source qui joue plusieurs rôles selon la configuration :</p>
+<ul>
+<li><strong>Serveur web</strong> — sert directement les fichiers statiques (HTML, CSS, JS, images) sans passer par PHP</li>
+<li><strong>Reverse proxy</strong> — reçoit les requêtes HTTP et les transmet à une application backend (PHP-FPM, Node.js, Flask…)</li>
+<li><strong>Load balancer</strong> — répartit le trafic entre plusieurs instances d'une même application</li>
+<li><strong>Cache</strong> — mémorise les réponses pour accélérer les requêtes répétées</li>
+</ul>
+<h3 id="lanalogie-du-switch-layer-7">L'analogie du switch Layer 7 🔌<a class="headerlink" href="#lanalogie-du-switch-layer-7" title="Permanent link">⚓︎</a></h3>
+<p>Imaginez Nginx comme un <strong>switch réseau intelligent qui opère au niveau applicatif (couche 7 du modèle OSI)</strong> — il ne se contente pas de router des paquets IP, il lit le contenu HTTP (URL, en-têtes, nom de domaine) pour décider où envoyer la requête.</p>
+<table>
+<thead>
+<tr>
+<th>Concept Nginx</th>
+<th>Analogie réseau</th>
+<th>Exemple concret</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>server {}</code></td>
+<td>Un port d'écoute du switch</td>
+<td><code>listen 80; server_name api.example.com;</code></td>
+</tr>
+<tr>
+<td><code>location {}</code></td>
+<td>Une règle de routage sur ce port</td>
+<td><code>location /api { }</code> → backend API</td>
+</tr>
+<tr>
+<td><code>proxy_pass</code></td>
+<td>La règle de forwarding</td>
+<td>Requête transmise vers <code>http://app:9000</code></td>
+</tr>
+<tr>
+<td><code>root</code></td>
+<td>Servir depuis le cache local</td>
+<td>Sert directement les fichiers HTML/CSS</td>
+</tr>
+</tbody>
+</table>
+<p>Nginx <strong>reçoit</strong> les requêtes, les <strong>route</strong> selon les règles, et les <strong>forward</strong> vers le bon backend ou les sert directement depuis le disque.</p>
+<h3 id="dans-ce-cours-deux-niveaux-de-nginx">Dans ce cours — deux niveaux de Nginx 🏗️<a class="headerlink" href="#dans-ce-cours-deux-niveaux-de-nginx" title="Permanent link">⚓︎</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Nginx à deux endroits</p>
+<p>Dans notre architecture, Nginx intervient à <strong>deux niveaux distincts</strong> :</p>
+<p><strong>1. Nginx bare-metal sur <code>srv-debian</code></strong> — installé directement sur le serveur, hors Docker.
+Il écoute sur le port 80 et fait du reverse proxy vers les conteneurs selon le sous-domaine
+(<code>elouan.srv-debian.local</code> → port 8081). Un seul Nginx gère <strong>tous les projets</strong> du serveur.</p>
+<p><strong>2. Nginx dans le conteneur</strong> — à l'intérieur de la stack Docker Todo, un conteneur Nginx
+dédié reçoit les requêtes forwardées par Nginx bare-metal et les distribue : il sert les assets
+Vite directement (sans PHP), et transmet les requêtes <code>.php</code> à php-fpm via FastCGI.</p>
+<p><img alt="Flux Nginx deux niveaux" class="center" src="assets/nginx_flow.png" width="80%" /></p>
+</div>
+<details class="question">
+<summary>Pourquoi deux Nginx et pas un seul ?</summary>
+<p>Le Nginx bare-metal est le <strong>point d'entrée unique</strong> du serveur — il sait vers quel projet
+router selon le nom de domaine. Le Nginx conteneur est <strong>interne à la stack Todo</strong> — il
+optimise la livraison des assets sans toucher à php-fpm. Ce sont deux responsabilités
+différentes : routage inter-projets d'un côté, optimisation intra-application de l'autre.</p>
+</details>
 <h2 id="0-configurer-le-dns-local-sur-votre-pc-windows">0. Configurer le DNS local sur votre PC Windows 🖥️<a class="headerlink" href="#0-configurer-le-dns-local-sur-votre-pc-windows" title="Permanent link">⚓︎</a></h2>
 <p>Pour que votre navigateur comprenne <code>prenom.srv-debian.local</code>, il faut déclarer
 l'adresse IP du serveur dans le fichier <code>hosts</code> de Windows.</p>

@@ -1186,62 +1186,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/4_SQLComplexe/TD_hopital/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TD Vues
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/4_SQLComplexe/TD_chenil/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TD jointures
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1505,14 +1449,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/5_TP/tp8_global/" class="md-nav__link">
+      <a href="../../../1_Base_de_donnees/5_TP/tp8_hopital/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    TP8 GSB [récap SIO1]
+    TP8 Hopital [vues]
   
 
     
@@ -1533,14 +1477,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/5_TP/tp8_anabase/" class="md-nav__link">
+      <a href="../../../1_Base_de_donnees/5_TP/tp9_chenil/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    TP9 Cas Anabase [Revision SIO2]
+    TP9 Chenil [jointures externes]
   
 
     
@@ -1561,14 +1505,70 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/5_TP/tp9_sauvegarde/" class="md-nav__link">
+      <a href="../../../1_Base_de_donnees/5_TP/tp10_global/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    TP10 Sauvegarde de base de données
+    TP10 GSB [récap SIO1]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tp11_anabase.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP11 Cas Anabase [Revision SIO2]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tp12_sauvegarde.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP12 Sauvegarde de base de données
   
 
     
@@ -3795,7 +3795,63 @@
   <span class="md-ellipsis">
     
   
-    CI - Déploiement avec 🐳 Docker
+    CI - Déploiement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.1_notionDevops/TP_cicd_etudiant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP — Déploiement CI/CD d'une application Laravel 🚀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.1_notionDevops/note/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Note
   
 
     
@@ -6596,7 +6652,7 @@ docker<span class="w"> </span>ps<span class="w"> </span>-a<span class="w">      
 <h3 id="15-les-sources-de-limage-hello-world">1.5 Les sources de l'image hello-world 📦<a class="headerlink" href="#15-les-sources-de-limage-hello-world" title="Permanent link">⚓︎</a></h3>
 <p>Maintenant que nous avons lancé notre première « vraie » machine, intéressons-nous à son fonctionnement. Vous avez dû constater le terme « Pulling From » : c'est l'image (ou les morceaux d'image) utiles au fonctionnement de votre service. Celle-ci est téléchargée directement depuis le « Docker Hub » (il est également possible d'avoir un Hub privé). Vous pouvez voir « les sources » de l'image en question : <a href="https://github.com/docker-library/hello-world">ici</a>, comme beaucoup de projets libres l'image est disponible sur Github.</p>
 <p>Surprise ! On retrouve des plateformes (amd64, i686, armXX). Et c'est normal, Docker est multiplateforme et dans le cas de notre exemple l'exécutable « hello » est codé en C, il est donc logique de retrouver l'exécutable pour les différentes plateformes où l'image doit fonctionner.</p>
-<p>Maintenant que nous avons vu le projet, entrons plus en détail, allons voir la définition de notre image : le <a href="https://github.com/docker-library/hello-world/blob/master/i386/hello-world/Dockerfile">fichier Dockerfile.</a></p>
+<p>Maintenant que nous avons vu le projet, entrons plus en détail, allons voir la définition de notre image : le <a href="https://github.com/docker-library/hello-world/blob/master/i386/Dockerfile">fichier Dockerfile.</a></p>
 <p><img alt="Hello World 2" class="center" src="../data/hello_world3.png" width="80%" /></p>
 <p>Peu d'informations, 3 lignes :</p>
 <ul>
@@ -6677,7 +6733,7 @@ docker<span class="w"> </span>ps<span class="w"> </span>-a<span class="w">      
 <h3 id="24-exercice-volume-partage-bidirectionnel">2.4 Exercice — Volume partagé bidirectionnel 🧪<a class="headerlink" href="#24-exercice-volume-partage-bidirectionnel" title="Permanent link">⚓︎</a></h3>
 <p>Cet exercice vous permet d'observer concrètement comment un volume partagé crée un <strong>lien en temps réel</strong> entre votre machine hôte et le conteneur.</p>
 <p><strong>Étape 1 — Préparer un dossier de travail</strong> 🗂️</p>
-<p>Créez un dossier <code>tp_volume</code> sur votre machine, puis placez-vous dedans :</p>
+<p>Créez un dossier <code>tp_volume</code> sur votre machine à la racine de votre <code>C:</code>, puis placez-vous dedans (Vous n'avez pas les droits en écriture dans <code>C:\Windows\System32</code>):</p>
 <div class="language-powershell highlight"><span class="filename">PowerShell</span><pre><span></span><code><span class="n">mkdir</span> <span class="n">tp_volume</span>
 <span class="nb">cd </span><span class="n">tp_volume</span>
 </code></pre></div>
@@ -6686,7 +6742,7 @@ docker<span class="w"> </span>ps<span class="w"> </span>-a<span class="w">      
 </code></pre></div>
 <p><strong>Étape 3 — Créer un fichier depuis le conteneur</strong> ✍️</p>
 <p>Dans le shell Ubuntu du conteneur :</p>
-<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Créé depuis le conteneur Docker&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/mnt/partage/depuis_docker.txt
+<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Cree depuis le conteneur Docker&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/mnt/partage/depuis_docker.txt
 ls<span class="w"> </span>/mnt/partage
 </code></pre></div>
 <p><strong>Étape 4 — Vérifier depuis votre machine hôte</strong> 👀</p>
@@ -6697,7 +6753,7 @@ ls<span class="w"> </span>/mnt/partage
 <p>✅ Le fichier créé <strong>dans</strong> le conteneur est visible <strong>sur votre machine</strong>.</p>
 <p><strong>Étape 5 — Modifier le fichier depuis la machine hôte</strong> 🖊️</p>
 <p>Depuis votre machine, ajoutez une ligne au fichier :</p>
-<div class="language-powershell highlight"><span class="filename">PowerShell</span><pre><span></span><code><span class="nb">Add-Content</span> <span class="n">depuis_docker</span><span class="p">.</span><span class="n">txt</span> <span class="s2">&quot;Modifié depuis Windows !&quot;</span>
+<div class="language-powershell highlight"><span class="filename">PowerShell</span><pre><span></span><code><span class="nb">Add-Content</span> <span class="n">depuis_docker</span><span class="p">.</span><span class="n">txt</span> <span class="s2">&quot;Modifie depuis Windows !&quot;</span>
 </code></pre></div>
 <p><strong>Étape 6 — Vérifier la modification depuis le conteneur</strong> 🔄</p>
 <p>Retournez dans le terminal du conteneur et lisez le fichier :</p>

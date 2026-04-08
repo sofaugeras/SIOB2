@@ -12,13 +12,13 @@
         <meta name="author" content="Sophie FAUGERAS">
       
       
-        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/1_Base_de_donnees/5_TP/tp8_anabase/">
+        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/1_Base_de_donnees/5_TP/tp8_hopital/">
       
       
-        <link rel="prev" href="../tp8_global/">
+        <link rel="prev" href="../tp7_univ/">
       
       
-        <link rel="next" href="../tp9_sauvegarde/">
+        <link rel="next" href="../tp9_chenil/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>TP9 Cas Anabase [Revision SIO2] - Saint Sauveur BTS SIO SLAM</title>
+        <title>TP8 Hopital [vues] - Saint Sauveur BTS SIO SLAM</title>
       
     
     
@@ -114,7 +114,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#revision-sio2-cas-anabase" class="md-skip">
+        <a href="#td-gestion-dun-hopital" class="md-skip">
           Aller au contenu
         </a>
       
@@ -148,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TP9 Cas Anabase [Revision SIO2]
+              TP8 Hopital [vues]
             
           </span>
         </div>
@@ -1189,62 +1189,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../4_SQLComplexe/TD_hopital/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TD Vues
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../4_SQLComplexe/TD_chenil/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TD jointures
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1505,34 +1449,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../tp8_global/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TP8 GSB [récap SIO1]
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1552,7 +1468,7 @@
   <span class="md-ellipsis">
     
   
-    TP9 Cas Anabase [Revision SIO2]
+    TP8 Hopital [vues]
   
 
     
@@ -1570,7 +1486,7 @@
   <span class="md-ellipsis">
     
   
-    TP9 Cas Anabase [Revision SIO2]
+    TP8 Hopital [vues]
   
 
     
@@ -1596,10 +1512,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-modelisation" class="md-nav__link">
+  <a href="#1-creation-des-vues" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Modélisation
+        1. Création des vues
       
     </span>
   </a>
@@ -1607,10 +1523,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-exercices-de-requetes-de-projection" class="md-nav__link">
+  <a href="#2-utilisation-des-vues" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Exercices de requêtes de projection
+        2. Utilisation des vues
       
     </span>
   </a>
@@ -1618,10 +1534,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-exercices-de-requetes-de-selection" class="md-nav__link">
+  <a href="#3-questions-de-reflexion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Exercices de requêtes de sélection
+        3. Questions de réflexion
       
     </span>
   </a>
@@ -1629,32 +1545,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-exercices-de-requetes-avec-fonctions" class="md-nav__link">
+  <a href="#4-questions-sur-les-dates" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Exercices de requêtes avec fonctions
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-exercices-de-requetes-de-jointure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Exercices de requêtes de jointure
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-exercices-de-requetes-de-requetes-imbriquees" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Exercices de requêtes de requêtes imbriquées
+        4. Questions sur les Dates
       
     </span>
   </a>
@@ -1677,14 +1571,98 @@
   
   
     <li class="md-nav__item">
-      <a href="../tp9_sauvegarde/" class="md-nav__link">
+      <a href="../tp9_chenil/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    TP10 Sauvegarde de base de données
+    TP9 Chenil [jointures externes]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tp10_global/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP10 GSB [récap SIO1]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tp11_anabase.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP11 Cas Anabase [Revision SIO2]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tp12_sauvegarde.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP12 Sauvegarde de base de données
   
 
     
@@ -3908,7 +3886,63 @@
   <span class="md-ellipsis">
     
   
-    CI - Déploiement avec 🐳 Docker
+    CI - Déploiement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../5_devops/5.1_notionDevops/TP_cicd_etudiant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP — Déploiement CI/CD d'une application Laravel 🚀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../5_devops/5.1_notionDevops/note/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Note
   
 
     
@@ -6344,459 +6378,286 @@
   
 
 
-<h1 id="revision-sio2-cas-anabase">Révision SIO2 : Cas Anabase<a class="headerlink" href="#revision-sio2-cas-anabase" title="Permanent link">⚓︎</a></h1>
+<h1 id="td-gestion-dun-hopital">TD Gestion d’un Hôpital<a class="headerlink" href="#td-gestion-dun-hopital" title="Permanent link">⚓︎</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Objectif du TP</p>
-<p>Revoir les notions autour des bases de données, vu en SIO1.
-Correspond à la compétence <strong>B1.3 Développer la présence en ligne de l’organisation</strong></p>
-</div>
-<p><img alt="illustration" class="center" src="../data/anabase/illustration.png" width="50%" /></p>
-<p>Pour illustrer ces révisions, j’ai décidé de m’appuyer sur un cas créé dans les années 80 et bien connu des enseignants en informatique : le cas « <strong>Anabase</strong> » dont voici quelques extraits :</p>
-<div class="admonition success">
-<p class="admonition-title">Cas Anabase</p>
-<p>Le congrès se déroule sur une semaine de 5 jours ouvrables. Il comporte différentes sessions d’une demi-journée chacune, consacrées à des conférences, débats sur un thème donné.<br />
-Un congressiste peut participer à ce congrès envoyé par un organisme (entreprise, administration, université ou lycée) ou non.
-Il peut éventuellement être accompagné d’une personne. On suppose qu’un congressiste ne peut pas avoir plus d’un accompagnateur.<br />
-Le congressiste est affecté à un hôtel. Chaque hôtel a proposé un prix par participant et un supplément pour l’accompagnateur. Ces prix sont valables pour toutes les chambres d'un même hôtel.<br />
-Le bureau d’animation propose des activités culturelles (spectacles, excursions, concerts, visites de monuments...) pour meubler le temps des accompagnateurs et des congressistes qui ont des disponibilités dans leur emploi du temps. Chaque activité est repérée par un code activité, une désignation et un horaire de début et de fin.<br />
-Les congressistes et les accompagnateurs peuvent s’inscrire jusqu'à la veille au soir aux activités souhaitées.<br /></p>
-</div>
-<h2 id="1-modelisation">1. Modélisation<a class="headerlink" href="#1-modelisation" title="Permanent link">⚓︎</a></h2>
-<p><img alt="💡" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4a1.svg" title=":bulb:" /> Etablissez un modèle de donnée à partir des informations données ci-dessus.</p>
-<details class="info">
-<summary>Diagramme de classe</summary>
-<p><img alt="Diagramme de classe" class="center" src="../data/anabase/diagClasseAnabase.png" width="100%" /></p>
-</details>
-<details class="info">
-<summary>MPD</summary>
-<p>Le modèle relationnel obtenu est le suivant :</p>
-<p><img alt="MPD" class="center" src="../data/anabase/anabaseConcepteur.png" width="100%" /></p>
-</details>
-<p><a class="md-button md-button--primary" href="../data/anabase/anabase_mysql.sql">Télécharger fichier Création de la base Anabase <img alt="⬇️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2b07.svg" title=":arrow_down:" /></a></p>
-<h2 id="2-exercices-de-requetes-de-projection">2. Exercices de requêtes de projection<a class="headerlink" href="#2-exercices-de-requetes-de-projection" title="Permanent link">⚓︎</a></h2>
-<div class="admonition question">
-<p class="admonition-title">R1</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Enoncé</label><label for="__tabbed_1_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Afficher le nom, la date et l’heure de chaque activité.</p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_ACTIVITE</span><span class="p">,</span><span class="w"> </span><span class="n">DATE_ACTIVITE</span><span class="p">,</span><span class="w"> </span><span class="n">HEURE_ACTIVITE</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">ACTIVITE</span><span class="p">;</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition question">
-<p class="admonition-title">R2</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Enoncé</label><label for="__tabbed_2_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Afficher les villes dont sont originaires les congressistes </p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">distinct</span><span class="w"> </span><span class="n">ADRESSE_CONGRESSISTE</span><span class="w">  </span>
-<span class="k">FROM</span><span class="w">  </span><span class="n">CONGRESSISTE</span><span class="p">;</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<h2 id="3-exercices-de-requetes-de-selection">3. Exercices de requêtes de sélection<a class="headerlink" href="#3-exercices-de-requetes-de-selection" title="Permanent link">⚓︎</a></h2>
-<div class="admonition question">
-<p class="admonition-title">R3</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Enoncé</label><label for="__tabbed_3_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Donner la liste des organismes limougeauds.</p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">ORGANISME_PAYEUR</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">ADRESSE_ORGANISME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Limoges&#39;</span><span class="p">;</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition question">
-<p class="admonition-title">R4</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Enoncé</label><label for="__tabbed_4_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Donner les noms et prénoms de congressistes ne dépendant pas d’un organisme.</p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">PRENOM_CONGRESSISTE</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">N_ORGANISME</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition question">
-<p class="admonition-title">R5</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Enoncé</label><label for="__tabbed_5_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Donner la liste des congressistes situés dans les hôtels de 2 à 4.</p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">N_HOTEL</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition question">
-<p class="admonition-title">R6</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Enoncé</label><label for="__tabbed_6_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Donner la liste des activités ayant lieu le 5 ou le 7 juin 2008.</p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">ACTIVITE</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">DATE_ACTIVITE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="n">D</span><span class="w"> </span><span class="s1">&#39;2008-06-05&#39;</span><span class="w"> </span><span class="err">}</span><span class="w"> </span>
-<span class="w">    </span><span class="k">OR</span><span class="w"> </span><span class="n">DATE_ACTIVITE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="n">D</span><span class="w"> </span><span class="s1">&#39;2008-06-07&#39;</span><span class="w"> </span><span class="err">}</span><span class="p">;</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition question">
-<p class="admonition-title">R7</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Enoncé</label><label for="__tabbed_7_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Donner la liste des congressistes (nom et prénom) par ordre alphabétique.</p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">PRENOM_CONGRESSISTE</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">PRENOM_CONGRESSISTE</span><span class="p">;</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition question">
-<p class="admonition-title">R8</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Enoncé</label><label for="__tabbed_8_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Donner la liste des hôtels dont le prix participant est compris entre 35 et 52 €.</p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_HOTEL</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX_PARTICIPANT</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">HOTEL</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w">  </span><span class="n">PRIX_PARTICIPANT</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="mi">35</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="mi">52</span><span class="p">;</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition question">
-<p class="admonition-title">R9</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Enoncé</label><label for="__tabbed_9_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Donner la liste des congressistes (nom, prénom) dont le nom commence par un « M ».</p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">PRENOM_CONGRESSISTE</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w">  </span><span class="n">NOM_CONGRESSISTE</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="s1">&#39;M%&#39;</span><span class="p">;</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition question">
-<p class="admonition-title">R10</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Enoncé</label><label for="__tabbed_10_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Donner la liste des congressistes (nom, prénom) dont le nom contient un « A ».</p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">PRENOM_CONGRESSISTE</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%A%&#39;</span><span class="p">;</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition question">
-<p class="admonition-title">R11</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Enoncé</label><label for="__tabbed_11_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Donner la liste des congressistes (nom, prénom) dont le nom finit par un « T ».</p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">PRENOM_CONGRESSISTE</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%T&#39;</span><span class="p">;</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition question">
-<p class="admonition-title">R12</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Enoncé</label><label for="__tabbed_12_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Donner la liste des hôtels dont le prix participant varie entre 35 et 55 € et dont le prix supplément varie entre 20 et 30 €.</p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_HOTEL</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX_PARTICIPANT</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX_SUPPL</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w">  </span><span class="n">HOTEL</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w">  </span><span class="n">PRIX_PARTICIPANT</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="mi">35</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="mi">55</span><span class="w"> </span>
-<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">PRIX_SUPPL</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition question">
-<p class="admonition-title">R13</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Enoncé</label><label for="__tabbed_13_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Donner pour chaque hôtel  la somme des deux prix (prix participant + prix supplément).</p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_HOTEL</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX_PARTICIPANT</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX_SUPPL</span><span class="p">,</span><span class="w"> </span><span class="n">PRIX_PARTICIPANT</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">PRIX_SUPPL</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">PRIX_TOTAL</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">HOTEL</span><span class="p">;</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<h2 id="4-exercices-de-requetes-avec-fonctions">4. Exercices de requêtes avec fonctions<a class="headerlink" href="#4-exercices-de-requetes-avec-fonctions" title="Permanent link">⚓︎</a></h2>
-<div class="admonition question">
-<p class="admonition-title">R14</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Enoncé</label><label for="__tabbed_14_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Afficher le nombre total de congressistes.</p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="p">;</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition question">
-<p class="admonition-title">R15</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Enoncé</label><label for="__tabbed_15_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Afficher le prix moyen d’une chambre à Biarritz et la même chose pour les suppléments.</p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">PRIX_PARTICIPANT</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">MOY_PARTICIPANT</span><span class="p">,</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="w"> </span><span class="n">PRIX_SUPPL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">MOY_</span><span class="w"> </span><span class="n">SUPPL</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">HOTEL</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">ADRESSE_HOTEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Biarritz&#39;</span><span class="p">;</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition question">
-<p class="admonition-title">R16</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Enoncé</label><label for="__tabbed_16_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Afficher pour chaque activité le nombre de personnes l’ayant choisie.</p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">N_ACTIVITE</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">NB_FOIS</span><span class="w">  </span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">PARTICIPATION</span><span class="w"> </span>
-<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">N_ACTIVITE</span><span class="p">;</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition question">
-<p class="admonition-title">R17</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">Enoncé</label><label for="__tabbed_17_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Pour chaque congressiste participant à plus de 2 activités, afficher la moyenne du nombre de personnes</p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">N_CONGRESSISTE</span><span class="p">,</span><span class="k">AVG</span><span class="p">(</span><span class="n">NBRE_PERSONNES</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">moyenne</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">PARTICIPATION</span><span class="w"> </span>
-<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">N_CONGRESSISTE</span>
-<span class="k">HAVING</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<h2 id="5-exercices-de-requetes-de-jointure">5. Exercices de requêtes de jointure<a class="headerlink" href="#5-exercices-de-requetes-de-jointure" title="Permanent link">⚓︎</a></h2>
-<div class="admonition question">
-<p class="admonition-title">R18</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="18:2"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">Enoncé</label><label for="__tabbed_18_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Afficher pour chaque congressiste son numéro, son nom et le nom de l’hôtel où il loge.</p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">N_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">NOM_HOTEL</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">HOTEL</span>
-<span class="k">ON</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HOTEL</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span><span class="p">;</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition question">
-<p class="admonition-title">R19</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">Enoncé</label><label for="__tabbed_19_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Même résultat que dans R18, mais afficher en plus le nom de l’organisme dont il dépend. Que remarquez-vous ?</p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">N_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">NOM_HOTEL</span><span class="p">,</span><span class="w"> </span><span class="n">NOM_ORGANISME</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">HOTEL</span>
-<span class="k">ON</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HOTEL</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span>
-<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w">  </span><span class="n">ORGANISME_PAYEUR</span><span class="w"> </span><span class="n">O</span><span class="w"> </span>
-<span class="n">ONCONGRESSISTE</span><span class="p">.</span><span class="n">N_ORGANISME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">O</span><span class="p">.</span><span class="n">N_ORGANISME</span><span class="w"> </span><span class="p">;</span>
+<ul>
+<li>Savoir créer une vue. </li>
+<li>Utiliser une vue, en regroupement d’informations</li>
+<li>Révision sur les dates</li>
+</ul>
+</div>
+<p><img alt="hopital" class="center" src="../data/hopital.png" width="30%" /></p>
+<p><strong>Contexte :</strong> Vous travaillez pour un hôpital qui souhaite mieux gérer ses patients, ses médecins, et les traitements administrés. La base de données de l’hôpital contient les tables suivantes :</p>
+<ul>
+<li>Patients : Informations sur les patients.</li>
+<li>Medecins : Informations sur les médecins.</li>
+<li>Consultations : Enregistrements des consultations des patients par les médecins.</li>
+<li>Traitements : Enregistrements des traitements administrés aux patients.</li>
+</ul>
+<p><ins>schéma relationnel :</ins>
+<strong>PATIENT</strong>(<ins>patient_id</ins>, nom, prenom, date_naissance, adresse)<br />
+<strong>MEDECIN</strong> (<ins>medecin_id</ins>, nom, prenom, specialite)<br />
+<strong>CONSULTATION</strong>(<ins>consultation_id</ins>, #patient_id, #medecin_id, date_consultation, diagnostic)<br />
+<strong>TRAITEMENT</strong>(<ins>traitement_id</ins>, #consultation_id, description, cout, date_traitement)</p>
+<details class="note">
+<summary>Script de création de base</summary>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">hopital</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">patient_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">nom</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="w">    </span><span class="n">prenom</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="w">    </span><span class="n">date_naissance</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">adresse</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
+<span class="p">);</span>
 
-<span class="n">Il</span><span class="w"> </span><span class="n">faut</span><span class="w"> </span><span class="n">remarquer</span><span class="w"> </span><span class="n">que</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">congressistes</span><span class="w"> </span><span class="n">ne</span><span class="w"> </span><span class="n">dépendant</span><span class="w"> </span><span class="n">d</span><span class="err">’</span><span class="n">aucun</span><span class="w"> </span><span class="n">organisme</span><span class="w"> </span><span class="n">ne</span><span class="w"> </span><span class="n">figure</span><span class="w"> </span><span class="n">pas</span><span class="w"> </span><span class="n">comme</span><span class="w"> </span><span class="n">résultat</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">cette</span><span class="w"> </span><span class="n">requête</span><span class="w"> </span><span class="n">basée</span><span class="w"> </span><span class="n">sur</span><span class="w"> </span><span class="n">l</span><span class="err">’é</span><span class="n">galité</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">numéros</span><span class="w"> </span><span class="n">d</span><span class="err">’</span><span class="n">organisme</span><span class="p">.</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Medecins</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">medecin_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">nom</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="w">    </span><span class="n">prenom</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="w">    </span><span class="n">specialite</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">consultation_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">patient_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">medecin_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">date_consultation</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">diagnostic</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">patient_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">Patients</span><span class="p">(</span><span class="n">patient_id</span><span class="p">),</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">medecin_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">Medecins</span><span class="p">(</span><span class="n">medecin_id</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Traitements</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">traitement_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">consultation_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">description</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span>
+<span class="w">    </span><span class="n">date_traitement</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">consultation_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">Consultations</span><span class="p">(</span><span class="n">consultation_id</span><span class="p">)</span>
+<span class="p">);</span>
 </code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition question">
-<p class="admonition-title">R20</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">Enoncé</label><label for="__tabbed_20_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Afficher pour chaque congressiste son numéro, son nom et le nom de l’hôtel. Restituer cette liste par hôtel et par ordre alphabétique des congressistes.</p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_HOTEL</span><span class="p">,</span><span class="w"> </span><span class="n">N_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="w">  </span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">HOTEL</span><span class="w"> </span>
-<span class="k">ON</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HOTEL</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w">  </span><span class="n">CONGRESSISTE</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span><span class="p">,</span><span class="w">  </span><span class="n">NOM_CONGRESSISTE</span><span class="p">;</span>
+</details>
+<details class="note">
+<summary>Script d'insertion dans la base</summary>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="p">(</span><span class="n">patient_id</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">date_naissance</span><span class="p">,</span><span class="w"> </span><span class="n">adresse</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Martin&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1985-04-12&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;12 rue de la Paix, Rennes&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Dupont&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Lucas&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1992-09-03&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;4 avenue Victor Hugo, Redon&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Bernard&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Sophie&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1978-01-25&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;8 place de la Liberté, Nantes&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Leroy&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Thomas&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2001-11-18&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;5 rue des Écoles, Vannes&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Roux&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Camille&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1999-06-07&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;27 boulevard Clémenceau, Brest&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Medecins</span><span class="w"> </span><span class="p">(</span><span class="n">medecin_id</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">specialite</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Legrand&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Marc&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Généraliste&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Faure&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Nina&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Dermatologie&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Petit&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Hugo&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Cardiologie&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="p">(</span><span class="n">consultation_id</span><span class="p">,</span><span class="w"> </span><span class="n">patient_id</span><span class="p">,</span><span class="w"> </span><span class="n">medecin_id</span><span class="p">,</span><span class="w"> </span><span class="n">date_consultation</span><span class="p">,</span><span class="w"> </span><span class="n">diagnostic</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-01-10&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Grippe saisonnière&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-02-15&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Gastro-entérite&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-03-05&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Hypertension&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-03-18&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Éruption cutanée&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-04-22&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Migraine&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-05-30&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Palpitations cardiaques&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Traitements</span><span class="w"> </span><span class="p">(</span><span class="n">traitement_id</span><span class="p">,</span><span class="w"> </span><span class="n">consultation_id</span><span class="p">,</span><span class="w"> </span><span class="n">description</span><span class="p">,</span><span class="w"> </span><span class="n">cout</span><span class="p">,</span><span class="w"> </span><span class="n">date_traitement</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Antiviral et repos&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">35</span><span class="p">.</span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-01-10&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Réhydratation + antispasmodiques&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-02-15&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Mise sous antihypertenseurs&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">78</span><span class="p">.</span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-03-05&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Crème dermatologique&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">.</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-03-18&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Antalgique léger&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">.</span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-04-22&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ECG + Bêtabloquants&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">95</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-05-30&#39;</span><span class="p">);</span>
 </code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition question">
-<p class="admonition-title">R21</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">Enoncé</label><label for="__tabbed_21_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Même chose que pour R20, mais uniquement pour les congressistes des hôtels de Biarritz.</p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NOM_HOTEL</span><span class="p">,</span><span class="w"> </span><span class="n">N_CONGRESSISTE</span><span class="p">,</span><span class="w"> </span><span class="n">NOM_CONGRESSISTE</span><span class="w">  </span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">HOTEL</span><span class="w"> </span>
-<span class="k">ON</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HOTEL</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span>
-<span class="k">AND</span><span class="w"> </span><span class="n">ADRESSE_HOTEL</span><span class="w"> </span><span class="o">=</span><span class="s1">&#39;Biarritz&#39;</span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w">  </span><span class="n">CONGRESSISTE</span><span class="p">.</span><span class="n">N_HOTEL</span><span class="w"> </span><span class="p">,</span><span class="w">  </span><span class="n">NOM_CONGRESSISTE</span>
+</details>
+<h2 id="1-creation-des-vues">1. Création des vues<a class="headerlink" href="#1-creation-des-vues" title="Permanent link">⚓︎</a></h2>
+<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 1. Créer une vue pour afficher les informations détaillées des consultations, y compris les informations sur les patients et les médecins.</p>
+<details class="question">
+<summary>Correction</summary>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">ConsultationsDetaillees</span><span class="w"> </span><span class="k">AS</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">consultation_id</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">patient_nom</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">prenom</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">patient_prenom</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">nom</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">medecin_nom</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">prenom</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">medecin_prenom</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">specialite</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">diagnostic</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="k">c</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">patient_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">patient_id</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Medecins</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">medecin_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">medecin_id</span><span class="p">;</span>
 </code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<h2 id="6-exercices-de-requetes-de-requetes-imbriquees">6. Exercices de requêtes de requêtes imbriquées<a class="headerlink" href="#6-exercices-de-requetes-de-requetes-imbriquees" title="Permanent link">⚓︎</a></h2>
-<div class="admonition question">
-<p class="admonition-title">R22</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="22:2"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">Enoncé</label><label for="__tabbed_22_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Afficher le nom et le prénom des congressistes allant au concert de Jazz.</p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_congressiste</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_congressiste</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">N_congressiste</span><span class="w"> </span>
-<span class="w">    </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">N_congressiste</span><span class="w"> </span>
-<span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">PARTICIPATION</span><span class="w"> </span>
-<span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">N_activité</span><span class="w"> </span>
-<span class="w">        </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">N_ACTIVITE</span><span class="w"> </span>
-<span class="w">            </span><span class="k">FROM</span><span class="w"> </span><span class="n">ACTIVITE</span><span class="w"> </span>
-<span class="w">            </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NOM_ACTIVITE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Concert Jazz&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span>
+</details>
+<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 2. Créer une vue pour afficher les coûts totaux des traitements par patient.</p>
+<details class="question">
+<summary>Correction</summary>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">CoutTotalParPatient</span><span class="w"> </span><span class="k">AS</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">cout</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_cout</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="n">p</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">patient_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">patient_id</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Traitements</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">consultation_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">consultation_id</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">prenom</span><span class="p">;</span>
 </code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition question">
-<p class="admonition-title">R23</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="23:2"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><input id="__tabbed_23_2" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="__tabbed_23_1">Enoncé</label><label for="__tabbed_23_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Afficher le nom et le prénom des congressistes n’allant pas au tournoi de pelote basque.</p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_congressiste</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_congressiste</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">N_congressiste</span><span class="w"> </span><span class="k">NOT</span><span class="w">  </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">N_congressiste</span><span class="w"> </span>
-<span class="w">                            </span><span class="k">FROM</span><span class="w"> </span><span class="n">PARTICIPATION</span><span class="w"> </span>
-<span class="w">                            </span><span class="k">WHERE</span><span class="w"> </span><span class="n">N_activité</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">N_ACTIVITE</span><span class="w"> </span>
-<span class="w">                                                </span><span class="k">FROM</span><span class="w"> </span><span class="n">ACTIVITE</span><span class="w"> </span>
-<span class="w">                                                </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NOM_ACTIVITE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Tournoi Pelote basque&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span>
+</details>
+<h2 id="2-utilisation-des-vues">2. Utilisation des vues<a class="headerlink" href="#2-utilisation-des-vues" title="Permanent link">⚓︎</a></h2>
+<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 3. Quelles sont les consultations en cours (traitements non terminés) ?</p>
+<details class="question">
+<summary>Correction</summary>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">ConsultationsDetaillees</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">consultation_id</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">consultation_id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Traitements</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">date_traitement</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">);</span>
 </code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition question">
-<p class="admonition-title">R24</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="24:2"><input checked="checked" id="__tabbed_24_1" name="__tabbed_24" type="radio" /><input id="__tabbed_24_2" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="__tabbed_24_1">Enoncé</label><label for="__tabbed_24_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Afficher le nom et le prénom des congressistes ayant choisi une chambre d’hôtel dont le montant par jour est supérieur à 70 euros (prix chambre + prix supplémentaire).</p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_congressiste</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_congressiste</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">N_hôtel</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">N_hôtel</span><span class="w"> </span>
-<span class="w">                    </span><span class="k">FROM</span><span class="w"> </span><span class="n">HOTEL</span><span class="w"> </span>
-<span class="w">                    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Prix_Participant</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Prix_Suppl</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">70</span><span class="w"> </span><span class="p">);</span>
+</details>
+<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 4. Quels patients ont les coûts de traitement les plus élevés ?</p>
+<details class="question">
+<summary>Correction</summary>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">CoutTotalParPatient</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">total_cout</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
 </code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition question">
-<p class="admonition-title">R25</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="25:2"><input checked="checked" id="__tabbed_25_1" name="__tabbed_25" type="radio" /><input id="__tabbed_25_2" name="__tabbed_25" type="radio" /><div class="tabbed-labels"><label for="__tabbed_25_1">Enoncé</label><label for="__tabbed_25_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Afficher le nom et le prénom des congressistes ayant choisi l’activité la moins chère.</p>
-</div>
-<div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_congressiste</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_congressiste</span><span class="w"> </span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">CONGRESSISTE</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">N_congressiste</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">N_congressiste</span><span class="w"> </span>
-<span class="w">                        </span><span class="k">FROM</span><span class="w"> </span><span class="n">PARTICIPATION</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">N_activité</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">N_ACTIVITE</span><span class="w"> </span><span class="mi">1</span><span class="w">                </span>
-<span class="w">                                                                </span><span class="k">FROM</span><span class="w"> </span><span class="n">ACTIVITE</span><span class="w"> </span>
-<span class="w">                                                                </span><span class="k">WHERE</span><span class="w"> </span><span class="n">PRIX_ACTIVITE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">MIN</span><span class="p">(</span><span class="n">PRIX_ACTIVITE</span><span class="p">)</span><span class="w"> </span>
-<span class="w">                                                                                        </span><span class="k">FROM</span><span class="w"> </span><span class="n">ACTIVITE</span><span class="p">))</span><span class="w"> </span><span class="p">);</span>
+</details>
+<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 5. Quels médecins ont le plus de consultations ?</p>
+<details class="question">
+<summary>Correction</summary>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="k">c</span><span class="p">.</span><span class="n">consultation_id</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nombre_consultations</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Medecins</span><span class="w"> </span><span class="n">m</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">medecin_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">medecin_id</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">prenom</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">nombre_consultations</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
 </code></pre></div>
-</div>
-</div>
-</div>
+</details>
+<h2 id="3-questions-de-reflexion">3. Questions de réflexion<a class="headerlink" href="#3-questions-de-reflexion" title="Permanent link">⚓︎</a></h2>
+<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 6. Quels sont les avantages d’utiliser des vues pour ces types de requêtes ?</p>
+<details class="question">
+<summary>correction</summary>
+<ul>
+<li>Simplification des requêtes : Les vues permettent de simplifier des requêtes complexes en encapsulant la logique dans une vue. Cela rend les requêtes plus lisibles et plus faciles à maintenir.</li>
+<li>Sécurité : Les vues peuvent restreindre l’accès aux données sensibles en exposant uniquement certaines colonnes ou lignes. Par exemple, une vue peut masquer des informations personnelles des patients tout en permettant l’accès aux données nécessaires pour les analyses.</li>
+<li>Réutilisabilité : Une fois définie, une vue peut être réutilisée dans d’autres requêtes sans avoir à réécrire la logique. Cela permet de standardiser les accès aux données et de réduire les erreurs.</li>
+<li>Abstraction : Les vues fournissent une couche d’abstraction qui peut masquer la complexité des tables sous-jacentes. Cela permet aux utilisateurs de travailler avec des données de manière plus intuitive.</li>
+</ul>
+</details>
+<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 7. Comment les vues peuvent-elles améliorer la sécurité des données ?</p>
+<details class="question">
+<summary>Correction</summary>
+<ul>
+<li>Contrôle d’accès : Les vues peuvent être utilisées pour limiter l’accès aux données sensibles. Par exemple, une vue peut être créée pour n’afficher que les informations nécessaires à un groupe spécifique d’utilisateurs, empêchant ainsi l’accès direct aux tables sous-jacentes.</li>
+<li>Masquage des données : Les vues peuvent masquer des colonnes ou des lignes spécifiques contenant des informations sensibles. Par exemple, une vue peut exclure les adresses des patients ou les diagnostics sensibles.</li>
+<li>Audit et conformité : Les vues peuvent aider à garantir que seules les données nécessaires sont accessibles, ce qui est important pour la conformité aux réglementations sur la protection des données (comme le RGPD en Europe).</li>
+</ul>
+</details>
+<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 8. Quels seraient les impacts sur les performances si les tables contenaient des millions d’enregistrements ?</p>
+<details class="question">
+<summary>Correction</summary>
+<ul>
+<li>Performance des requêtes : Les vues peuvent améliorer la lisibilité et la maintenance du code, mais elles peuvent aussi avoir un impact sur les performances si elles sont mal utilisées. Les vues complexes ou celles qui impliquent des jointures multiples peuvent ralentir les requêtes.</li>
+<li>Indexation : L’utilisation d’index appropriés sur les tables sous-jacentes peut améliorer les performances des vues. Cependant, les vues elles-mêmes ne peuvent pas être indexées directement.</li>
+<li>Vues matérialisées : Pour les grandes tables, les vues matérialisées peuvent être utilisées pour stocker les résultats de la vue et améliorer les performances des requêtes. Les vues matérialisées nécessitent cependant des mises à jour périodiques pour refléter les changements dans les données sous-jacentes.</li>
+<li>Cache : Les SGBD modernes utilisent des mécanismes de cache pour améliorer les performances des vues. Cependant, les vues très dynamiques ou celles qui changent fréquemment peuvent ne pas bénéficier autant du cache.</li>
+</ul>
+</details>
+<h2 id="4-questions-sur-les-dates">4. Questions sur les Dates<a class="headerlink" href="#4-questions-sur-les-dates" title="Permanent link">⚓︎</a></h2>
+<p>Profitons en pour s'entraîner sur les dates <img alt="⌚️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/231a.svg" title=":watch:" /> ...</p>
+<p>lien vers la documentation MySQL : <a href="https://dev.mysql.com/doc/refman/8.4/en/date-and-time-functions.html">ici</a></p>
+<p>Voici quelques questions supplémentaires pour traiter des dates dans le contexte de la gestion d'un hôpital :</p>
+<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 9. Quels patients ont eu des consultations au cours des 30 derniers jours ?</p>
+<details class="question">
+<summary>Correction</summary>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="n">p</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">patient_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">patient_id</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">DATEADD</span><span class="p">(</span><span class="k">DAY</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="n">GETDATE</span><span class="p">());</span>
+</code></pre></div>
+</details>
+<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 10. Quels médecins ont effectué des consultations au cours de la dernière semaine ?</p>
+<details class="question">
+<summary>Correction</summary>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Medecins</span><span class="w"> </span><span class="n">m</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">medecin_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">medecin_id</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">DATEADD</span><span class="p">(</span><span class="k">DAY</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="n">GETDATE</span><span class="p">());</span>
+</code></pre></div>
+</details>
+<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 11. Quels traitements ont été administrés au cours du mois de septembre 2024 ?</p>
+<details class="question">
+<summary>Correction</summary>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">description</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">date_traitement</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Traitements</span><span class="w"> </span><span class="n">t</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">date_traitement</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="s1">&#39;2024-09-01&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="s1">&#39;2024-09-30&#39;</span><span class="p">;</span>
+</code></pre></div>
+</details>
+<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 12. Quels patients n'ont pas eu de consultations depuis plus d'un an ?</p>
+<details class="question">
+<summary>Correction</summary>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">prenom</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="n">p</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">patient_id</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">patient_id</span>
+<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="k">c</span>
+<span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">DATEADD</span><span class="p">(</span><span class="k">YEAR</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">GETDATE</span><span class="p">())</span>
+<span class="p">);</span>
+</code></pre></div>
+</details>
+<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 13. Combien de consultations ont été effectuées chaque mois au cours de l'année 2024 ?</p>
+<details class="question">
+<summary>Correction</summary>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">annee</span><span class="p">,</span><span class="w"> </span><span class="k">MONTH</span><span class="p">(</span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">mois</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nombre_consultations</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="k">c</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2024</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="p">),</span><span class="w"> </span><span class="k">MONTH</span><span class="p">(</span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="p">)</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">annee</span><span class="p">,</span><span class="w"> </span><span class="n">mois</span><span class="p">;</span>
+</code></pre></div>
+</details>
+<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 14. Quels traitements ont été administrés plus de 6 mois après la consultation correspondante ?</p>
+<details class="question">
+<summary>Correction</summary>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">description</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">date_traitement</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Traitements</span><span class="w"> </span><span class="n">t</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">consultation_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">consultation_id</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">date_traitement</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">DATEADD</span><span class="p">(</span><span class="k">MONTH</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="p">);</span>
+</code></pre></div>
+</details>
+<p><img alt="date" class="center" src="../data/date.webp" width="30%" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Gestion des dates</p>
+<p>Gérer les formats de date dans une base de données est crucial pour assurer la cohérence, la précision et la performance des requêtes. Voici quelques meilleures pratiques à suivre :</p>
+<ol>
+<li>Utiliser des types de données appropriés</li>
+</ol>
+<p><strong>DATE</strong> : Utilisez ce type pour stocker uniquement des dates (année, mois, jour).
+<strong>DATETIME</strong> ou <strong>TIMESTAMP</strong> : Utilisez ces types pour stocker des dates et des heures complètes (année, mois, jour, heure, minute, seconde).
+<em>TIME*</em> : Utilisez ce type pour stocker uniquement des heures (heure, minute, seconde).</p>
+<ol>
+<li>Normaliser les formats de date</li>
+</ol>
+<p><strong>Format ISO 8601</strong> : Utilisez le format ISO 8601 (YYYY-MM-DD) pour stocker les dates. Ce format est standardisé et évite les ambiguïtés liées aux formats régionaux.
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="s1">&#39;2024-10-15&#39;</span><span class="w">  </span><span class="c1">-- Format ISO 8601</span>
+</code></pre></div></p>
+<ol>
+<li>Indexer les colonnes de date</li>
+</ol>
+<p><strong>Indexation</strong> : Créez des index sur les colonnes de date pour améliorer les performances des requêtes qui filtrent ou trient par date.
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_date_consultation</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Consultations</span><span class="p">(</span><span class="n">date_consultation</span><span class="p">);</span>
+</code></pre></div></p>
+<ol>
+<li>Gérer les fuseaux horaires</li>
+</ol>
+<p><strong>Stockage en UTC</strong> : Stockez les dates et heures en temps universel coordonné (UTC) pour éviter les problèmes liés aux fuseaux horaires.
+<strong>Conversion locale</strong> : Convertissez les dates et heures en fuseau horaire local au moment de l'affichage ou de l'utilisation.</p>
+<ol>
+<li>Valider les entrées de date</li>
+</ol>
+<p><strong>Validation</strong> : Validez les entrées de date au niveau de l'application pour éviter les erreurs de format et les dates invalides.
+<strong>Contraintes</strong> : Utilisez des contraintes de base de données pour garantir l'intégrité des dates (par exemple, une date de naissance ne peut pas être dans le futur).</p>
+<ol>
+<li>Utiliser des fonctions de date</li>
+</ol>
+<p><strong>Fonctions intégrées</strong> : Utilisez les fonctions de date intégrées du SGBD pour manipuler et formater les dates (par exemple, <code>DATEADD</code>, <code>DATEDIFF</code>, <code>YEAR</code>, <code>MONTH</code>, <code>DAY</code>).
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">DATEADD</span><span class="p">(</span><span class="k">DAY</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="n">GETDATE</span><span class="p">());</span><span class="w">  </span><span class="c1">-- Ajoute 30 jours à la date actuelle</span>
+</code></pre></div></p>
+<ol>
+<li>Stocker les dates de manière cohérente</li>
+</ol>
+<p><strong>Consistance</strong> : Assurez-vous que toutes les dates dans la base de données sont stockées de manière cohérente, en utilisant les mêmes types de données et formats.</p>
+<ol>
+<li>Documenter les conventions de date</li>
+</ol>
+<p><strong>Documentation</strong> : Documentez les conventions de date utilisées dans votre base de données pour que tous les développeurs et utilisateurs soient au courant des pratiques standard.</p>
+<ol>
+<li>Gérer les dates nulles</li>
+</ol>
+<p><strong>Valeurs NULL</strong> : Définissez clairement comment gérer les dates nulles (par exemple, une date de fin de contrat non définie) et utilisez des valeurs par défaut appropriées si nécessaire.</p>
+<ol>
+<li>Tester les performances</li>
+</ol>
+<p><strong>Tests</strong> : Testez les performances des requêtes impliquant des dates, surtout pour les grandes tables, et optimisez les index et les requêtes en conséquence.</p>
 </div>
 
 

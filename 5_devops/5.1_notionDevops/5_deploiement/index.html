@@ -18,7 +18,7 @@
         <link rel="prev" href="../4_issues_PR/">
       
       
-        <link rel="next" href="../../5.2_docker/1_cours/">
+        <link rel="next" href="../TP_cicd_etudiant/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>CI - Déploiement avec 🐳 Docker - Saint Sauveur BTS SIO SLAM</title>
+        <title>CI - Déploiement - Saint Sauveur BTS SIO SLAM</title>
       
     
     
@@ -114,7 +114,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ci-deploiement-avec-docker" class="md-skip">
+        <a href="#ci-deploiement" class="md-skip">
           Aller au contenu
         </a>
       
@@ -148,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CI - Déploiement avec 🐳 Docker
+              CI - Déploiement
             
           </span>
         </div>
@@ -1186,62 +1186,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/4_SQLComplexe/TD_hopital/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TD Vues
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/4_SQLComplexe/TD_chenil/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TD jointures
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1505,14 +1449,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/5_TP/tp8_global/" class="md-nav__link">
+      <a href="../../../1_Base_de_donnees/5_TP/tp8_hopital/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    TP8 GSB [récap SIO1]
+    TP8 Hopital [vues]
   
 
     
@@ -1533,14 +1477,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/5_TP/tp8_anabase/" class="md-nav__link">
+      <a href="../../../1_Base_de_donnees/5_TP/tp9_chenil/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    TP9 Cas Anabase [Revision SIO2]
+    TP9 Chenil [jointures externes]
   
 
     
@@ -1561,14 +1505,70 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1_Base_de_donnees/5_TP/tp9_sauvegarde/" class="md-nav__link">
+      <a href="../../../1_Base_de_donnees/5_TP/tp10_global/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    TP10 Sauvegarde de base de données
+    TP10 GSB [récap SIO1]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tp11_anabase.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP11 Cas Anabase [Revision SIO2]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tp12_sauvegarde.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP12 Sauvegarde de base de données
   
 
     
@@ -3804,7 +3804,7 @@
   <span class="md-ellipsis">
     
   
-    CI - Déploiement avec 🐳 Docker
+    CI - Déploiement
   
 
     
@@ -3822,7 +3822,7 @@
   <span class="md-ellipsis">
     
   
-    CI - Déploiement avec 🐳 Docker
+    CI - Déploiement
   
 
     
@@ -3848,22 +3848,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-pourquoi-docker-le-probleme-du-ca-marche-chez-moi" class="md-nav__link">
+  <a href="#1-rappels-quest-ce-que-la-cicd" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 🤔 Pourquoi Docker ? Le problème du "ça marche chez moi"
+        1. Rappels — Qu'est-ce que la CI/CD ? 🔄
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. 🤔 Pourquoi Docker ? Le problème du &#34;ça marche chez moi&#34;">
+    <nav class="md-nav" aria-label="1. Rappels — Qu&#39;est-ce que la CI/CD ? 🔄">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-le-probleme-classique" class="md-nav__link">
+  <a href="#11-le-probleme-sans-cicd" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1 Le problème classique
+        1.1 Le problème sans CI/CD
       
     </span>
   </a>
@@ -3871,10 +3871,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-la-metaphore-du-conteneur-maritime" class="md-nav__link">
+  <a href="#12-ci-integration-continue" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2 🚢 La métaphore du conteneur maritime
+        1.2 CI — Intégration Continue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-cd-deploiement-continu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 CD — Déploiement Continu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-le-quality-gate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Le quality gate
       
     </span>
   </a>
@@ -3887,55 +3909,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-les-concepts-fondamentaux" class="md-nav__link">
+  <a href="#2-architecture-de-notre-chaine-cicd" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 🧱 Les concepts fondamentaux
+        2. Architecture de notre chaîne CI/CD 🏗️
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. 🧱 Les concepts fondamentaux">
+    <nav class="md-nav" aria-label="2. Architecture de notre chaîne CI/CD 🏗️">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-image-vs-conteneur" class="md-nav__link">
+  <a href="#les-acteurs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1 📦 Image vs Conteneur
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-docker-vs-machine-virtuelle" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.2 🖥️ Docker vs Machine Virtuelle
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23-le-dockerfile" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3 📝 Le Dockerfile
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#24-docker-compose-orchestrer-plusieurs-conteneurs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.4 🎼 Docker Compose — Orchestrer plusieurs conteneurs
+        Les acteurs
       
     </span>
   </a>
@@ -3948,22 +3937,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-architecture-de-notre-deploiement" class="md-nav__link">
+  <a href="#3-le-dockerfile-conteneuriser-laravel" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. 🏗️ Architecture de notre déploiement
+        3. Le Dockerfile — Conteneuriser Laravel 🐳
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. 🏗️ Architecture de notre déploiement">
+    <nav class="md-nav" aria-label="3. Le Dockerfile — Conteneuriser Laravel 🐳">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-vue-densemble" class="md-nav__link">
+  <a href="#31-pourquoi-pas-php-artisan-serve-en-production" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1 Vue d'ensemble
+        3.1 Pourquoi pas php artisan serve en production ?
       
     </span>
   </a>
@@ -3971,10 +3960,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#32-role-de-chaque-service" class="md-nav__link">
+  <a href="#32-le-build-multi-stage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2 🗂️ Rôle de chaque service
+        3.2 Le build multi-stage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-analyse-du-dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Analyse du Dockerfile
       
     </span>
   </a>
@@ -3987,22 +3987,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-construction-de-lenvironnement-docker" class="md-nav__link">
+  <a href="#4-le-docker-composeyml-stack-de-production" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. 🔨 Construction de l'environnement Docker
+        4. Le docker-compose.yml — Stack de production 🧩
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. 🔨 Construction de l&#39;environnement Docker">
+    <nav class="md-nav" aria-label="4. Le docker-compose.yml — Stack de production 🧩">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#41-structure-des-fichiers" class="md-nav__link">
+  <a href="#41-les-trois-services" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.1 📁 Structure des fichiers
+        4.1 Les trois services
       
     </span>
   </a>
@@ -4010,43 +4010,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#42-le-dockerfile-php" class="md-nav__link">
+  <a href="#42-points-cles-du-docker-composeyml" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.2 🐘 Le Dockerfile PHP
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-configuration-nginx" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.3 🌐 Configuration Nginx
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#44-le-fichier-docker-composeyml" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.4 🎼 Le fichier docker-compose.yml
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#45-le-dockerignore" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.5 🚫 Le .dockerignore
+        4.2 Points clés du docker-compose.yml
       
     </span>
   </a>
@@ -4059,22 +4026,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-variables-denvironnement-et-securite" class="md-nav__link">
+  <a href="#5-le-pipeline-github-actions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. 🔐 Variables d'environnement et sécurité
+        5. Le pipeline GitHub Actions 🤖
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5. 🔐 Variables d&#39;environnement et sécurité">
+    <nav class="md-nav" aria-label="5. Le pipeline GitHub Actions 🤖">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#51-le-fichier-env-pour-docker" class="md-nav__link">
+  <a href="#51-structure-du-fichier-ci-cdyml" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.1 Le fichier .env pour Docker
+        5.1 Structure du fichier ci-cd.yml
       
     </span>
   </a>
@@ -4082,10 +4049,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#52-jamais-de-secrets-dans-le-dockerfile-ou-docker-composeyml" class="md-nav__link">
+  <a href="#52-le-job-ci-build-test" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.2 ❌ Jamais de secrets dans le Dockerfile ou docker-compose.yml
+        5.2 Le job CI — build-test
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-le-job-cd-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Le job CD — deploy
       
     </span>
   </a>
@@ -4098,22 +4076,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-commandes-docker-essentielles" class="md-nav__link">
+  <a href="#6-les-secrets-github" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. ⌨️ Commandes Docker essentielles
+        6. Les secrets GitHub 🔐
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6. ⌨️ Commandes Docker essentielles">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-nginx-comme-reverse-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Nginx comme reverse proxy 🔀
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Nginx comme reverse proxy 🔀">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#61-cycle-de-vie-des-conteneurs" class="md-nav__link">
+  <a href="#71-lanalogie-du-switch-layer-7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.1 🔄 Cycle de vie des conteneurs
+        7.1 L'analogie du switch Layer 7 🔌
       
     </span>
   </a>
@@ -4121,10 +4110,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#62-executer-des-commandes-dans-un-conteneur" class="md-nav__link">
+  <a href="#72-deux-niveaux-de-nginx-dans-notre-architecture" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.2 💻 Exécuter des commandes dans un conteneur
+        7.2 Deux niveaux de Nginx dans notre architecture 🏗️
       
     </span>
   </a>
@@ -4132,10 +4121,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#63-gestion-des-images" class="md-nav__link">
+  <a href="#73-nginx-dans-le-conteneur" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.3 🗃️ Gestion des images
+        7.3 Nginx dans le conteneur
       
     </span>
   </a>
@@ -4148,149 +4137,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-deploiement-sur-le-serveur-debian" class="md-nav__link">
+  <a href="#8-recapitulatif-des-fichiers-du-projet" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. 🚀 Déploiement sur le serveur Debian
+        8. Récapitulatif des fichiers du projet 📁
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="7. 🚀 Déploiement sur le serveur Debian">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#71-prerequis-sur-le-serveur" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7.1 ✅ Prérequis sur le serveur
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#72-procedure-de-deploiement-complete" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7.2 📋 Procédure de déploiement complète
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#73-mise-a-jour-de-lapplication-workflow-cicd-simplifie" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7.3 🔁 Mise à jour de l'application (workflow CI/CD simplifié)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#8-concepts-avances-pour-aller-plus-loin" class="md-nav__link">
+  <a href="#9-schema-de-synthese-le-cycle-complet" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8. 🧠 Concepts avancés — Pour aller plus loin
+        9. Schéma de synthèse — Le cycle complet 🔁
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="8. 🧠 Concepts avancés — Pour aller plus loin">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#81-les-layers-et-le-cache-de-build" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        8.1 🧅 Les layers et le cache de build
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#82-multi-stage-build-image-de-production-allegee" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        8.2 🏗️ Multi-stage build (image de production allégée)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#83-healthchecks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        8.3 💓 Healthchecks
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#9-resume-ce-que-vous-devez-retenir" class="md-nav__link">
+  <a href="#pour-aller-plus-loin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9. 📋 Résumé — Ce que vous devez retenir
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="9. 📋 Résumé — Ce que vous devez retenir">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vocabulaire-a-maitriser" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📖 Vocabulaire à maîtriser
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#commandes-cles-a-retenir" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ⌨️ Commandes clés à retenir
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ressources-complementaires" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔗 Ressources complémentaires
+        Pour aller plus loin 📚
       
     </span>
   </a>
@@ -4301,6 +4173,62 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TP_cicd_etudiant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP — Déploiement CI/CD d'une application Laravel 🚀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../note/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Note
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -6728,664 +6656,492 @@
   
 
 
-<h1 id="ci-deploiement-avec-docker">CI - Déploiement avec 🐳 Docker<a class="headerlink" href="#ci-deploiement-avec-docker" title="Permanent link">⚓︎</a></h1>
-<p><img alt="en connstruction" src="../../../images/enConstruction.png" /></p>
-<div class="admonition success">
-<p class="admonition-title">🎯 Objectifs du TP</p>
-<p>Déployer une application Laravel en production</p>
+<h1 id="ci-deploiement">CI - Déploiement<a class="headerlink" href="#ci-deploiement" title="Permanent link">⚓︎</a></h1>
+<div class="admonition info">
+<p class="admonition-title"> Objectifs 🎯 CI/CD d'une application Laravel avec Docker 🚀</p>
 <ul>
-<li>🗣️ Expliquer ce qu'est Docker et pourquoi on l'utilise</li>
-<li>🔍 Comprendre l'architecture conteneur vs machine virtuelle</li>
-<li>📝 Lire et écrire un <code>Dockerfile</code> pour une application PHP/Laravel</li>
-<li>🎼 Orchestrer plusieurs services avec <code>docker-compose</code></li>
-<li>🚀 Déployer l'application <code>laravel-todo</code> sur un serveur Debian</li>
+<li>Comprendre le principe d'une chaîne CI/CD</li>
+<li>Écrire un <code>Dockerfile</code> multi-stage pour une application Laravel</li>
+<li>Décrire le rôle de chaque service dans un <code>docker-compose.yml</code> de production</li>
+<li>Configurer un pipeline GitHub Actions de bout en bout</li>
+<li>Déployer automatiquement une application sur un serveur Debian via un self-hosted runner</li>
 </ul>
+<p><strong>Compétence :</strong> Mettre à disposition des utilisateurs un service informatique &gt; Déployer un service</p>
 </div>
-<h2 id="1-pourquoi-docker-le-probleme-du-ca-marche-chez-moi">1. 🤔 Pourquoi Docker ? Le problème du "ça marche chez moi"<a class="headerlink" href="#1-pourquoi-docker-le-probleme-du-ca-marche-chez-moi" title="Permanent link">⚓︎</a></h2>
-<h3 id="11-le-probleme-classique">1.1 Le problème classique<a class="headerlink" href="#11-le-probleme-classique" title="Permanent link">⚓︎</a></h3>
-<p>Vous avez développé votre application Laravel sur votre PC Windows. Tout fonctionne. Vous la transmettez à votre collègue sous Ubuntu : <strong>❌ erreur</strong>. Vous la déployez sur le serveur de production : <strong>❌ encore une erreur</strong>.</p>
-<p>Les causes sont toujours les mêmes :</p>
-<table>
-<thead>
-<tr>
-<th>💻 Environnement</th>
-<th>🐘 PHP</th>
-<th>🐬 MySQL</th>
-<th>🟢 Node</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Votre PC</td>
-<td>8.3</td>
-<td>8.0</td>
-<td>20</td>
-</tr>
-<tr>
-<td>PC collègue</td>
-<td>8.1</td>
-<td>5.7</td>
-<td>18</td>
-</tr>
-<tr>
-<td>Serveur prod</td>
-<td>8.2</td>
-<td>8.4</td>
-<td>22</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>💡 <strong>Docker résout ce problème</strong> en embarquant l'application ET son environnement dans une unité portable appelée <strong>conteneur</strong>.</p>
-</blockquote>
-<h3 id="12-la-metaphore-du-conteneur-maritime">1.2 🚢 La métaphore du conteneur maritime<a class="headerlink" href="#12-la-metaphore-du-conteneur-maritime" title="Permanent link">⚓︎</a></h3>
-<p>Avant les conteneurs maritimes (années 1950), chaque marchandise nécessitait un conditionnement spécifique. Charger/décharger un bateau prenait des semaines. Avec le conteneur standardisé : n'importe quelle marchandise, n'importe quel port, n'importe quel navire.</p>
-<p>Docker applique exactement cette idée au logiciel : <strong>votre app + son environnement = un conteneur portable</strong>.</p>
-<hr />
-<h2 id="2-les-concepts-fondamentaux">2. 🧱 Les concepts fondamentaux<a class="headerlink" href="#2-les-concepts-fondamentaux" title="Permanent link">⚓︎</a></h2>
-<h3 id="21-image-vs-conteneur">2.1 📦 Image vs Conteneur<a class="headerlink" href="#21-image-vs-conteneur" title="Permanent link">⚓︎</a></h3>
-<p><img alt="Image vs Conteneur" src="../data/01_image_vs_conteneur.png" /></p>
+<h2 id="1-rappels-quest-ce-que-la-cicd">1. Rappels — Qu'est-ce que la CI/CD ? 🔄<a class="headerlink" href="#1-rappels-quest-ce-que-la-cicd" title="Permanent link">⚓︎</a></h2>
+<h3 id="11-le-probleme-sans-cicd">1.1 Le problème sans CI/CD<a class="headerlink" href="#11-le-probleme-sans-cicd" title="Permanent link">⚓︎</a></h3>
+<p>Sans automatisation, le cycle de vie d'une modification de code ressemble à ceci :</p>
+<ol>
+<li>Le développeur pousse son code</li>
+<li>Quelqu'un (peut-être personne) lance les tests manuellement</li>
+<li>Quelqu'un d'autre construit l'application et la dépose sur le serveur "à la main"</li>
+<li>En cas d'erreur en production, personne ne sait exactement quelle version tourne</li>
+</ol>
+<p>Ce processus est <strong>lent, risqué et non reproductible</strong>.</p>
+<h3 id="12-ci-integration-continue">1.2 CI — Intégration Continue<a class="headerlink" href="#12-ci-integration-continue" title="Permanent link">⚓︎</a></h3>
+<p>L'<strong>Intégration Continue</strong> (CI — <em>Continuous Integration</em>) automatise la vérification du code à chaque modification :</p>
 <ul>
-<li>Une <strong>image</strong> est un modèle figé, en lecture seule. Elle décrit l'OS, les dépendances, le code.</li>
-<li>Un <strong>conteneur</strong> est une instance en cours d'exécution d'une image. On peut en lancer plusieurs à partir de la même image.</li>
-<li>🔑 <strong>Analogie</strong> : l'image est la <em>recette de cuisine</em>, le conteneur est <em>le plat préparé</em>.</li>
+<li>Compilation / installation des dépendances</li>
+<li>Linting (vérification du style de code)</li>
+<li>Tests unitaires et fonctionnels</li>
+<li>Analyse statique</li>
 </ul>
-<h3 id="22-docker-vs-machine-virtuelle">2.2 🖥️ Docker vs Machine Virtuelle<a class="headerlink" href="#22-docker-vs-machine-virtuelle" title="Permanent link">⚓︎</a></h3>
-<p><img alt="Docker vs Machine Virtuelle" src="../data/02_vm_vs_docker.png" /></p>
-<p><strong>Points clés :</strong>
-- ❌ La VM virtualise le <strong>matériel</strong> → chaque VM a son propre OS complet (~2 Go chacun)
-- ✅ Docker virtualise l'<strong>OS</strong> → les conteneurs partagent le kernel de l'hôte
-- ⚡ Un conteneur démarre en <strong>&lt; 1 seconde</strong> ; une VM en <strong>30-60 secondes</strong>
-- 💾 Une VM pèse <strong>5-10 Go</strong> ; un conteneur <strong>quelques dizaines de Mo</strong></p>
-<h3 id="23-le-dockerfile">2.3 📝 Le Dockerfile<a class="headerlink" href="#23-le-dockerfile" title="Permanent link">⚓︎</a></h3>
-<p>Le <code>Dockerfile</code> est le fichier texte qui décrit comment construire une image. C'est la <strong>recette</strong> de construction.</p>
-<div class="language-dockerfile highlight"><span class="filename">Docker</span><pre><span></span><code><span class="c"># Instruction de base : on part d&#39;une image existante</span>
-<span class="k">FROM</span><span class="w"> </span><span class="s">php:8.3-fpm</span>
-
-<span class="c"># On exécute des commandes dans l&#39;image</span>
-<span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>libpng-dev
-
-<span class="c"># On copie des fichiers de notre machine vers l&#39;image</span>
-<span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>/var/www/html
-
-<span class="c"># On expose un port réseau</span>
-<span class="k">EXPOSE</span><span class="w"> </span><span class="s">9000</span>
-
-<span class="c"># La commande lancée au démarrage du conteneur</span>
-<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;php-fpm&quot;</span><span class="p">]</span>
+<details class="question">
+<summary>Pourquoi appelle-t-on ça <em>intégration</em> continue ?</summary>
+<p>Parce que le code de chaque développeur est <strong>intégré</strong> (fusionné) fréquemment dans la branche principale, et à chaque intégration, la chaîne vérifie que rien n'est cassé. Sans CI, on intègre rarement et les conflits s'accumulent.</p>
+</details>
+<h3 id="13-cd-deploiement-continu">1.3 CD — Déploiement Continu<a class="headerlink" href="#13-cd-deploiement-continu" title="Permanent link">⚓︎</a></h3>
+<p>Le <strong>Déploiement Continu</strong> (CD — <em>Continuous Deployment</em>) prolonge la CI : si tous les tests passent sur la branche principale, l'application est <strong>automatiquement déployée</strong> en production.</p>
+<p><img alt="Pipeline CI/CD" class="center" src="../data/cicd_flow.png" width="100%" /></p>
+<details class="question">
+<summary>Quelle est la différence entre CI et CD ?</summary>
+<p>La CI s'arrête à la <strong>vérification</strong> (les tests passent-ils ?).
+La CD va plus loin : elle <strong>déploie</strong> automatiquement si la CI est verte. Les deux ensemble forment la chaîne CI/CD.</p>
+</details>
+<h3 id="14-le-quality-gate">1.4 Le <em>quality gate</em><a class="headerlink" href="#14-le-quality-gate" title="Permanent link">⚓︎</a></h3>
+<p>Un <strong>quality gate</strong> (portillon qualité) est une condition bloquante dans le pipeline : si les tests échouent, le déploiement <strong>ne se déclenche pas</strong>. C'est la garantie que ce qui part en production a été validé.</p>
+<p>Dans notre pipeline, c'est le mécanisme <code>needs: build-test</code> dans GitHub Actions :</p>
+<div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="nt">deploy</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build-test</span><span class="w">   </span><span class="c1"># ← le CD attend que le CI soit vert</span>
+<span class="w">  </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.ref == &#39;refs/heads/main&#39;</span>
 </code></pre></div>
-<p><strong>Instructions essentielles :</strong></p>
+<details class="question">
+<summary>Que se passe-t-il si un développeur pousse du code qui casse un test ?</summary>
+<p>Le job <code>build-test</code> échoue, GitHub envoie une notification par e-mail, et le job <code>deploy</code> <strong>ne démarre jamais</strong>. La production reste sur la version précédente, stable.</p>
+</details>
+<h2 id="2-architecture-de-notre-chaine-cicd">2. Architecture de notre chaîne CI/CD 🏗️<a class="headerlink" href="#2-architecture-de-notre-chaine-cicd" title="Permanent link">⚓︎</a></h2>
+<p><img alt="Architecture CI/CD" class="center" src="../data/cicd_architecture.png" width="80%" /></p>
+<h3 id="les-acteurs">Les acteurs<a class="headerlink" href="#les-acteurs" title="Permanent link">⚓︎</a></h3>
 <table>
 <thead>
 <tr>
-<th>🔧 Instruction</th>
+<th>Acteur</th>
 <th>Rôle</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>FROM</code></td>
-<td>🏗️ Image de base (obligatoire, toujours en premier)</td>
+<td><strong>GitHub</strong></td>
+<td>Forge Git, héberge le code source et les secrets</td>
 </tr>
 <tr>
-<td><code>RUN</code></td>
-<td>⚙️ Exécute une commande pendant la construction</td>
+<td><strong>GitHub Actions</strong></td>
+<td>Moteur CI/CD, exécute les jobs dans des conteneurs Ubuntu</td>
 </tr>
 <tr>
-<td><code>COPY</code></td>
-<td>📋 Copie des fichiers locaux dans l'image</td>
+<td><strong>Docker Hub</strong></td>
+<td>Registry d'images Docker, stocke l'image de l'application</td>
 </tr>
 <tr>
-<td><code>WORKDIR</code></td>
-<td>📁 Définit le dossier de travail courant</td>
-</tr>
-<tr>
-<td><code>ENV</code></td>
-<td>🌍 Définit une variable d'environnement</td>
-</tr>
-<tr>
-<td><code>EXPOSE</code></td>
-<td>🔌 Documente le port écouté</td>
-</tr>
-<tr>
-<td><code>CMD</code></td>
-<td>▶️ Commande par défaut au démarrage</td>
-</tr>
-<tr>
-<td><code>ENTRYPOINT</code></td>
-<td>🎯 Point d'entrée (non surchargeable facilement)</td>
+<td><strong>srv-debian</strong></td>
+<td>Serveur de production, exécute les conteneurs via <code>docker compose</code></td>
 </tr>
 </tbody>
 </table>
-<h3 id="24-docker-compose-orchestrer-plusieurs-conteneurs">2.4 🎼 Docker Compose — Orchestrer plusieurs conteneurs<a class="headerlink" href="#24-docker-compose-orchestrer-plusieurs-conteneurs" title="Permanent link">⚓︎</a></h3>
-<p>Une application Laravel complète nécessite plusieurs services qui doivent communiquer entre eux :</p>
-<p><img alt="Docker Compose Architecture" src="../data/03_docker_compose_architecture.png" /></p>
-<p>Docker Compose orchestre tout ça avec un seul fichier <code>docker-compose.yml</code>. <strong>Une seule commande pour démarrer toute la stack.</strong></p>
-<hr />
-<h2 id="3-architecture-de-notre-deploiement">3. 🏗️ Architecture de notre déploiement<a class="headerlink" href="#3-architecture-de-notre-deploiement" title="Permanent link">⚓︎</a></h2>
-<h3 id="31-vue-densemble">3.1 Vue d'ensemble<a class="headerlink" href="#31-vue-densemble" title="Permanent link">⚓︎</a></h3>
-<p>Pour déployer <code>laravel-todo</code>, nous allons utiliser <strong>4 conteneurs</strong> :</p>
-<p><img alt="Architecture déploiement Debian" src="../data/04_architecture_deploiement.png" /></p>
-<blockquote>
-<p>🔒 <strong>Sécurité</strong> : seul le port <strong>80</strong> de Nginx est exposé à l'extérieur. MySQL (:3306) et Redis (:6379) restent isolés dans le réseau Docker interne — <strong>inaccessibles depuis Internet</strong>.</p>
-</blockquote>
-<h3 id="32-role-de-chaque-service">3.2 🗂️ Rôle de chaque service<a class="headerlink" href="#32-role-de-chaque-service" title="Permanent link">⚓︎</a></h3>
+<details class="question">
+<summary>Pourquoi passer par Docker Hub plutôt que de builder l'image directement sur le serveur ?</summary>
+<p>Construire l'image sur le serveur de production serait risqué et lent. En passant par Docker Hub, on <strong>sépare la construction du déploiement</strong> : le runner CI construit l'image dans un environnement propre et contrôlé, la pousse sur Docker Hub, et le serveur n'a plus qu'à la télécharger. Si la construction échoue, le serveur n'est jamais touché.</p>
+</details>
+<h2 id="3-le-dockerfile-conteneuriser-laravel">3. Le Dockerfile — Conteneuriser Laravel 🐳<a class="headerlink" href="#3-le-dockerfile-conteneuriser-laravel" title="Permanent link">⚓︎</a></h2>
+<h3 id="31-pourquoi-pas-php-artisan-serve-en-production">3.1 Pourquoi pas <code>php artisan serve</code> en production ?<a class="headerlink" href="#31-pourquoi-pas-php-artisan-serve-en-production" title="Permanent link">⚓︎</a></h3>
+<p><code>artisan serve</code> est le serveur de développement de Laravel. Il est :</p>
+<ul>
+<li><strong>Mono-thread</strong> : il ne peut traiter qu'une requête à la fois</li>
+<li><strong>Non optimisé</strong> : pas de gestion du cache OPcache</li>
+<li><strong>Non sécurisé</strong> : pas conçu pour être exposé à internet</li>
+</ul>
+<p>En production, on utilise <strong>php-fpm</strong> (<em>FastCGI Process Manager</em>), qui gère un pool de processus PHP en parallèle, associé à <strong>Nginx</strong> qui sert les fichiers statiques directement.</p>
+<details class="question">
+<summary>Qu'est-ce que FastCGI ?</summary>
+<p>FastCGI est un protocole de communication entre un serveur web (Nginx) et un interpréteur de langage (php-fpm). Nginx reçoit la requête HTTP, la transmet à php-fpm via le socket FastCGI, php-fpm exécute le script PHP et renvoie la réponse à Nginx, qui la retourne au client.</p>
+</details>
+<h3 id="32-le-build-multi-stage">3.2 Le build multi-stage<a class="headerlink" href="#32-le-build-multi-stage" title="Permanent link">⚓︎</a></h3>
+<p>Un Dockerfile <strong>multi-stage</strong> utilise plusieurs images successives dans le même fichier. L'intérêt est de séparer l'environnement de <strong>construction</strong> (qui a besoin de compilateurs, de Node.js, de Composer…) de l'environnement d'<strong>exécution</strong> (qui n'a besoin que du runtime PHP).</p>
+<p><img alt="Dockerfile multi-stage" class="center" src="../data/dockerfile_multistage.png" width="100%" /></p>
+<details class="question">
+<summary>Pourquoi l'image finale est-elle plus légère ?</summary>
+<p>Parce que le stage <code>runtime</code> ne copie que le résultat du build (le code + <code>vendor/</code> + <code>public/build/</code>), pas les outils qui ont servi à le construire. Node.js, Composer, les headers de compilation (<code>*-dev</code>) ne sont pas inclus. Une image de production légère est plus rapide à télécharger, à démarrer, et présente une surface d'attaque réduite.</p>
+</details>
+<h3 id="33-analyse-du-dockerfile">3.3 Analyse du Dockerfile<a class="headerlink" href="#33-analyse-du-dockerfile" title="Permanent link">⚓︎</a></h3>
+<div class="language-dockerfile highlight"><span class="filename">Docker</span><pre><span></span><code><span class="c"># ── Stage 1 : builder ──────────────────────────────────────────</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">php:8.3-cli-alpine</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">builder</span>
+
+<span class="c"># Installation des dépendances système nécessaires à la compilation</span>
+<span class="k">RUN</span><span class="w"> </span>apk<span class="w"> </span>add<span class="w"> </span>--no-cache<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libpng-dev<span class="w"> </span>libjpeg-turbo-dev<span class="w"> </span>libwebp-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libxml2-dev<span class="w"> </span>oniguruma-dev<span class="w"> </span>icu-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>docker-php-ext-install<span class="w"> </span>pdo_mysql<span class="w"> </span>mbstring<span class="w"> </span>xml<span class="w"> </span>gd<span class="w"> </span>fileinfo<span class="w"> </span>intl
+
+<span class="c"># Composer installé depuis son image officielle (propre)</span>
+<span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>composer:2<span class="w"> </span>/usr/bin/composer<span class="w"> </span>/usr/bin/composer
+
+<span class="c"># Node.js pour Vite</span>
+<span class="k">RUN</span><span class="w"> </span>apk<span class="w"> </span>add<span class="w"> </span>--no-cache<span class="w"> </span>nodejs<span class="w"> </span>npm
+
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+
+<span class="c"># On copie TOUT le code source (artisan doit être présent pour</span>
+<span class="c"># les scripts post-install de Composer)</span>
+<span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.
+
+<span class="c"># Installation des dépendances PHP sans les packages de dev</span>
+<span class="k">RUN</span><span class="w"> </span>composer<span class="w"> </span>install<span class="w"> </span>--no-dev<span class="w"> </span>--no-interaction<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--optimize-autoloader<span class="w"> </span>--prefer-dist
+
+<span class="c"># Build des assets front (Vite génère public/build/manifest.json)</span>
+<span class="k">RUN</span><span class="w"> </span>npm<span class="w"> </span>ci<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>npm<span class="w"> </span>run<span class="w"> </span>build
+
+<span class="c"># Optimisations Laravel : mise en cache des routes, vues, config</span>
+<span class="k">RUN</span><span class="w"> </span>php<span class="w"> </span>artisan<span class="w"> </span>config:cache<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>php<span class="w"> </span>artisan<span class="w"> </span>route:cache<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>php<span class="w"> </span>artisan<span class="w"> </span>view:cache
+
+<span class="c"># ── Stage 2 : runtime ──────────────────────────────────────────</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">php:8.3-fpm-alpine</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">runtime</span>
+
+<span class="c"># Extensions compilées + suppression des headers dans la même couche</span>
+<span class="k">RUN</span><span class="w"> </span>apk<span class="w"> </span>add<span class="w"> </span>--no-cache<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libpng-dev<span class="w"> </span>libjpeg-turbo-dev<span class="w"> </span>libwebp-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libxml2-dev<span class="w"> </span>oniguruma-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>docker-php-ext-install<span class="w"> </span>pdo_mysql<span class="w"> </span>mbstring<span class="w"> </span>xml<span class="w"> </span>gd<span class="w"> </span>fileinfo<span class="w"> </span>opcache<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>apk<span class="w"> </span>del<span class="w"> </span>libpng-dev<span class="w"> </span>libjpeg-turbo-dev<span class="w"> </span>libwebp-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">              </span>libxml2-dev<span class="w"> </span>oniguruma-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/cache/apk/*
+
+<span class="c"># OPcache : accélère PHP en gardant le bytecode en mémoire</span>
+<span class="k">RUN</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;opcache.enable=1&#39;</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;opcache.memory_consumption=256&#39;</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;opcache.validate_timestamps=0&#39;</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+<span class="o">}</span><span class="w"> </span>&gt;<span class="w"> </span>/usr/local/etc/php/conf.d/opcache.ini
+
+<span class="c"># Sécurité : l&#39;application tourne sous un utilisateur non-root</span>
+<span class="k">RUN</span><span class="w"> </span>addgroup<span class="w"> </span>-g<span class="w"> </span><span class="m">1000</span><span class="w"> </span>-S<span class="w"> </span>www<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>adduser<span class="w"> </span>-u<span class="w"> </span><span class="m">1000</span><span class="w"> </span>-S<span class="w"> </span>www<span class="w"> </span>-G<span class="w"> </span>www
+
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/var/www/html</span>
+
+<span class="c"># Copie du code compilé depuis le stage builder</span>
+<span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>builder<span class="w"> </span>--chown<span class="o">=</span>www:www<span class="w"> </span>/app<span class="w"> </span>.
+
+<span class="c"># Création des dossiers d&#39;écriture Laravel</span>
+<span class="k">RUN</span><span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>storage/framework/<span class="o">{</span>sessions,views,cache<span class="o">}</span><span class="w"> </span>storage/logs<span class="w"> </span><span class="se">\</span>
+<span class="w">             </span>bootstrap/cache<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>www:www<span class="w"> </span>storage<span class="w"> </span>bootstrap/cache<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">775</span><span class="w"> </span>storage<span class="w"> </span>bootstrap/cache
+
+<span class="k">USER</span><span class="w"> </span><span class="s">www</span>
+<span class="k">EXPOSE</span><span class="w"> </span><span class="s">9000</span>
+<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;php-fpm&quot;</span><span class="p">]</span>
+</code></pre></div>
+<details class="question">
+<summary>Pourquoi supprimer les packages <code>-dev</code> dans la même couche Docker (<code>RUN</code>) qu'on les installe ?</summary>
+<p>Chaque instruction <code>RUN</code> crée une <strong>couche</strong> (layer) dans l'image. Si on installe les <code>-dev</code> dans une couche et qu'on les supprime dans une autre, les fichiers supprimés existent toujours dans la couche précédente — ils sont juste masqués. L'image finale est donc aussi lourde. En regroupant installation + suppression dans un seul <code>RUN</code>, les fichiers n'apparaissent jamais dans l'image finale.</p>
+</details>
+<details class="question">
+<summary>Pourquoi créer un utilisateur <code>www</code> et ne pas utiliser <code>root</code> ?</summary>
+<p>Par principe de moindre privilège. Si un attaquant parvient à exécuter du code dans le conteneur, il se retrouve avec les droits de l'utilisateur <code>www</code>, non de <code>root</code>. Il ne peut pas modifier les fichiers système du conteneur ni, en cas de fuite, accéder à l'hôte avec des droits élevés.</p>
+</details>
+<h2 id="4-le-docker-composeyml-stack-de-production">4. Le docker-compose.yml — Stack de production 🧩<a class="headerlink" href="#4-le-docker-composeyml-stack-de-production" title="Permanent link">⚓︎</a></h2>
+<h3 id="41-les-trois-services">4.1 Les trois services<a class="headerlink" href="#41-les-trois-services" title="Permanent link">⚓︎</a></h3>
+<p>Notre application de production nécessite trois conteneurs qui collaborent :</p>
+<p><img alt="Stack Docker todo-net" class="center" src="../data/docker_stack.png" width="100%" /></p>
 <table>
 <thead>
 <tr>
-<th>🐳 Service</th>
-<th>📦 Image de base</th>
-<th>🎯 Rôle</th>
+<th>Service</th>
+<th>Image</th>
+<th>Rôle</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>app</code></td>
-<td><code>php:8.3-fpm</code></td>
-<td>⚙️ Exécute le code PHP Laravel</td>
+<td>Notre image Laravel</td>
+<td>Exécute php-fpm, traite les requêtes PHP</td>
 </tr>
 <tr>
 <td><code>nginx</code></td>
-<td><code>nginx:alpine</code></td>
-<td>🌐 Serveur web, reverse proxy vers PHP</td>
+<td><code>nginx:1.27-alpine</code></td>
+<td>Sert les fichiers statiques, passe le PHP à <code>app</code></td>
 </tr>
 <tr>
 <td><code>mysql</code></td>
 <td><code>mysql:8.0</code></td>
-<td>🗄️ Base de données</td>
-</tr>
-<tr>
-<td><code>redis</code></td>
-<td><code>redis:alpine</code></td>
-<td>⚡ Cache sessions/queues</td>
+<td>Base de données, données persistées dans un volume</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="4-construction-de-lenvironnement-docker">4. 🔨 Construction de l'environnement Docker<a class="headerlink" href="#4-construction-de-lenvironnement-docker" title="Permanent link">⚓︎</a></h2>
-<h3 id="41-structure-des-fichiers">4.1 📁 Structure des fichiers<a class="headerlink" href="#41-structure-des-fichiers" title="Permanent link">⚓︎</a></h3>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>laravel-todo/
-├── 🐳 docker/
-│   ├── nginx/
-│   │   └── default.conf       # Config Nginx
-│   └── php/
-│       └── local.ini          # Config PHP
-├── 📝 Dockerfile                 # Image PHP personnalisée
-├── 🎼 docker-compose.yml         # Orchestration des services
-├── 🏭 docker-compose.prod.yml    # Surcharges pour la production
-├── 🔐 .env                       # Variables d&#39;environnement
-└── 🚫 .dockerignore              # Fichiers à exclure de l&#39;image
+<h3 id="42-points-cles-du-docker-composeyml">4.2 Points clés du docker-compose.yml<a class="headerlink" href="#42-points-cles-du-docker-composeyml" title="Permanent link">⚓︎</a></h3>
+<p><strong>Les variables d'environnement</strong> sont injectées depuis le fichier <code>.env.prod</code> qui reste sur le serveur et n'est jamais commité :</p>
+<div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="nt">app</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">APP_KEY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${APP_KEY}</span>
+<span class="w">    </span><span class="nt">DB_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${DB_PASSWORD}</span>
 </code></pre></div>
-<h3 id="42-le-dockerfile-php">4.2 🐘 Le Dockerfile PHP<a class="headerlink" href="#42-le-dockerfile-php" title="Permanent link">⚓︎</a></h3>
-<div class="language-dockerfile highlight"><span class="filename">Docker</span><pre><span></span><code><span class="c"># docker/Dockerfile</span>
-<span class="k">FROM</span><span class="w"> </span><span class="s">php:8.3-fpm</span>
-
-<span class="c"># ── Dépendances système ──────────────────────────────────</span>
-<span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>git<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>curl<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>libpng-dev<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>libonig-dev<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>libxml2-dev<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>libzip-dev<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>zip<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>unzip<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>docker-php-ext-install<span class="w"> </span><span class="se">\</span>
-<span class="w">        </span>pdo_mysql<span class="w"> </span><span class="se">\</span>
-<span class="w">        </span>mbstring<span class="w"> </span><span class="se">\</span>
-<span class="w">        </span>exif<span class="w"> </span><span class="se">\</span>
-<span class="w">        </span>pcntl<span class="w"> </span><span class="se">\</span>
-<span class="w">        </span>bcmath<span class="w"> </span><span class="se">\</span>
-<span class="w">        </span>gd<span class="w"> </span><span class="se">\</span>
-<span class="w">        </span>zip<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>pecl<span class="w"> </span>install<span class="w"> </span>redis<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>docker-php-ext-enable<span class="w"> </span>redis<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>clean<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/apt/lists/*
-
-<span class="c"># ── Composer ────────────────────────────────────────────</span>
-<span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>composer:latest<span class="w"> </span>/usr/bin/composer<span class="w"> </span>/usr/bin/composer
-
-<span class="c"># ── Node.js (pour Vite/assets) ───────────────────────────</span>
-<span class="k">RUN</span><span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://deb.nodesource.com/setup_20.x<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash<span class="w"> </span>-<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>nodejs
-
-<span class="c"># ── Répertoire de travail ────────────────────────────────</span>
-<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/var/www/html</span>
-
-<span class="c"># ── Droits ──────────────────────────────────────────────</span>
-<span class="k">RUN</span><span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>www-data:www-data<span class="w"> </span>/var/www/html
-
-<span class="k">USER</span><span class="w"> </span><span class="s">www-data</span>
-
-<span class="k">EXPOSE</span><span class="w"> </span><span class="s">9000</span>
-
-<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;php-fpm&quot;</span><span class="p">]</span>
+<p><strong>Le healthcheck</strong> sur MySQL garantit que la base est prête avant que l'application démarre :</p>
+<div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="nt">mysql</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">healthcheck</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;CMD&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;mysqladmin&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;ping&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;-h&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;127.0.0.1&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
+<span class="w">    </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
 </code></pre></div>
-<blockquote>
-<p>⚠️ <strong>Point important :</strong> On regroupe les <code>RUN</code> en une seule commande avec <code>&amp;&amp;</code> pour minimiser le nombre de <strong>layers</strong> (couches) dans l'image. Chaque instruction <code>RUN</code> crée une couche — moins il y en a, plus l'image est légère.</p>
-</blockquote>
-<h3 id="43-configuration-nginx">4.3 🌐 Configuration Nginx<a class="headerlink" href="#43-configuration-nginx" title="Permanent link">⚓︎</a></h3>
-<div class="language-nginx highlight"><span class="filename">Nginx Configuration File</span><pre><span></span><code><span class="c1"># docker/nginx/default.conf</span>
-<span class="k">server</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kn">listen</span><span class="w"> </span><span class="mi">80</span><span class="p">;</span>
-<span class="w">    </span><span class="kn">server_name</span><span class="w"> </span><span class="s">_</span><span class="p">;</span>
-<span class="w">    </span><span class="kn">root</span><span class="w"> </span><span class="s">/var/www/html/public</span><span class="p">;</span>
-
-<span class="w">    </span><span class="kn">add_header</span><span class="w"> </span><span class="s">X-Frame-Options</span><span class="w"> </span><span class="s">&quot;SAMEORIGIN&quot;</span><span class="p">;</span>
-<span class="w">    </span><span class="kn">add_header</span><span class="w"> </span><span class="s">X-Content-Type-Options</span><span class="w"> </span><span class="s">&quot;nosniff&quot;</span><span class="p">;</span>
-
-<span class="w">    </span><span class="kn">index</span><span class="w"> </span><span class="s">index.php</span><span class="p">;</span>
-
-<span class="w">    </span><span class="kn">charset</span><span class="w"> </span><span class="s">utf-8</span><span class="p">;</span>
-
-<span class="w">    </span><span class="c1"># Toutes les requêtes → index.php (routing Laravel)</span>
-<span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kn">try_files</span><span class="w"> </span><span class="nv">$uri</span><span class="w"> </span><span class="nv">$uri/</span><span class="w"> </span><span class="s">/index.php?</span><span class="nv">$query_string</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="c1"># Traitement des fichiers PHP → PHP-FPM</span>
-<span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="p">~</span><span class="w"> </span><span class="sr">\.php$</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kn">fastcgi_pass</span><span class="w"> </span><span class="n">app</span><span class="p">:</span><span class="mi">9000</span><span class="p">;</span><span class="w">          </span><span class="c1"># &quot;app&quot; = nom du service Docker</span>
-<span class="w">        </span><span class="kn">fastcgi_param</span><span class="w"> </span><span class="s">SCRIPT_FILENAME</span><span class="w"> </span><span class="nv">$realpath_root$fastcgi_script_name</span><span class="p">;</span>
-<span class="w">        </span><span class="kn">include</span><span class="w"> </span><span class="s">fastcgi_params</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="c1"># Blocage des fichiers .htaccess</span>
-<span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="p">~</span><span class="w"> </span><span class="sr">/\.ht</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kn">deny</span><span class="w"> </span><span class="s">all</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+<p><strong>Les volumes nommés</strong> assurent la persistance des données entre les redéploiements et partagent les fichiers entre conteneurs :</p>
+<div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">todo_mysql</span><span class="p">:</span><span class="w">    </span><span class="c1"># données MySQL</span>
+<span class="w">  </span><span class="nt">todo_storage</span><span class="p">:</span><span class="w">  </span><span class="c1"># fichiers uploadés, sessions, logs Laravel</span>
+<span class="w">  </span><span class="nt">app_public</span><span class="p">:</span><span class="w">    </span><span class="c1"># assets Vite partagés entre app et nginx</span>
 </code></pre></div>
-<h3 id="44-le-fichier-docker-composeyml">4.4 🎼 Le fichier docker-compose.yml<a class="headerlink" href="#44-le-fichier-docker-composeyml" title="Permanent link">⚓︎</a></h3>
-<div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="c1"># docker-compose.yml</span>
-<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.8&#39;</span>
-
-<span class="nt">services</span><span class="p">:</span>
-
-<span class="w">  </span><span class="c1"># ── Application PHP-FPM ──────────────────────────────</span>
-<span class="w">  </span><span class="nt">app</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">build</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.</span>
-<span class="w">      </span><span class="nt">dockerfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker/Dockerfile</span>
-<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">laravel_app</span>
-<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
-<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.:/var/www/html</span><span class="w">          </span><span class="c1"># Code source monté en volume</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini</span>
-<span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">laravel_network</span>
-<span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis</span>
-
-<span class="w">  </span><span class="c1"># ── Serveur Web Nginx ────────────────────────────────</span>
-<span class="w">  </span><span class="nt">nginx</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx:alpine</span>
-<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">laravel_nginx</span>
-<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
-<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;80:80&quot;</span><span class="w">                  </span><span class="c1"># Port hôte:port conteneur</span>
-<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.:/var/www/html</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf</span>
-<span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">laravel_network</span>
-<span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app</span>
-
-<span class="w">  </span><span class="c1"># ── Base de données MySQL ────────────────────────────</span>
+<div class="admonition info">
+<p class="admonition-title">Le volume <code>app_public</code></p>
+<p>Nginx a besoin d'accéder aux assets compilés par Vite (<code>public/build/</code>) pour les servir directement sans passer par php-fpm. Ce volume est monté en lecture/écriture dans <code>app</code> et en lecture seule dans <code>nginx</code>.</p>
+</div>
+<p><strong>Le fichier <code>.env.prod</code></strong> est monté directement depuis le serveur dans le conteneur <code>app</code> :</p>
+<div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="nt">app</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">todo_storage:/var/www/html/storage</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app_public:/var/www/html/public</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/opt/todo-laravel/.env:/var/www/html/.env:ro</span><span class="w">   </span><span class="c1"># ← fichier de config prod</span>
+</code></pre></div>
+<p>Le <code>.env.prod</code> reste sur le serveur, n'est jamais dans l'image Docker, et n'est jamais commité.</p>
+<details class="question">
+<summary>Que se passerait-il si on n'utilisait pas de volumes nommés pour MySQL ?</summary>
+<p>À chaque <code>docker compose up</code>, MySQL démarrerait avec une base vide. Toutes les données des utilisateurs seraient perdues. Les volumes nommés sont <strong>indépendants du cycle de vie des conteneurs</strong> : on peut recréer le conteneur MySQL sans perdre les données.</p>
+</details>
+<details class="question">
+<summary>Pourquoi nginx et app sont-ils deux conteneurs séparés plutôt qu'un seul ?</summary>
+<p>Séparation des responsabilités. Nginx est optimisé pour servir des fichiers statiques (CSS, JS, images) très rapidement, sans jamais invoquer PHP. Seules les requêtes <code>.php</code> sont transmises à php-fpm. Cela soulage considérablement l'application et respecte le principe de <strong>séparation des préoccupations</strong> (<em>Separation of Concerns</em>).</p>
+</details>
+<h2 id="5-le-pipeline-github-actions">5. Le pipeline GitHub Actions 🤖<a class="headerlink" href="#5-le-pipeline-github-actions" title="Permanent link">⚓︎</a></h2>
+<h3 id="51-structure-du-fichier-ci-cdyml">5.1 Structure du fichier <code>ci-cd.yml</code><a class="headerlink" href="#51-structure-du-fichier-ci-cdyml" title="Permanent link">⚓︎</a></h3>
+<p>Un fichier GitHub Actions est un <strong>workflow</strong> au format YAML, placé dans <code>.github/workflows/</code>. Il décrit :</p>
+<ul>
+<li>Les <strong>déclencheurs</strong> (<code>on:</code>) — quand le pipeline s'exécute</li>
+<li>Les <strong>jobs</strong> — les groupes d'étapes</li>
+<li>Les <strong>steps</strong> — les actions individuelles</li>
+</ul>
+<div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="nt">on</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">main</span><span class="p p-Indicator">]</span><span class="w">   </span><span class="c1"># déclenché uniquement sur main</span>
+<span class="w">  </span><span class="nt">pull_request</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">main</span><span class="p p-Indicator">]</span><span class="w">   </span><span class="c1"># et sur les PR vers main</span>
+</code></pre></div>
+<h3 id="52-le-job-ci-build-test">5.2 Le job CI — <code>build-test</code><a class="headerlink" href="#52-le-job-ci-build-test" title="Permanent link">⚓︎</a></h3>
+<p>Ce job s'exécute sur un <strong>runner</strong> Ubuntu hébergé par GitHub. Il :</p>
+<ol>
+<li>Clone le repo (<code>actions/checkout@v4</code>)</li>
+<li>Installe PHP 8.3 avec les extensions nécessaires</li>
+<li>Installe les dépendances Composer et npm</li>
+<li>Build les assets Vite</li>
+<li>Lance les migrations sur une base MySQL éphémère</li>
+<li>Exécute PHPUnit</li>
+<li>Vérifie le style de code avec Laravel Pint</li>
+</ol>
+<div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">mysql</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql:8.0</span>
-<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">laravel_mysql</span>
-<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
-<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">MYSQL_DATABASE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${DB_DATABASE}</span>
-<span class="w">      </span><span class="nt">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${DB_PASSWORD}</span>
-<span class="w">      </span><span class="nt">MYSQL_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${DB_PASSWORD}</span>
-<span class="w">      </span><span class="nt">MYSQL_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${DB_USERNAME}</span>
-<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql_data:/var/lib/mysql</span><span class="w">  </span><span class="c1"># Volume nommé pour la persistance</span>
-<span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">laravel_network</span>
-
-<span class="w">  </span><span class="c1"># ── Cache Redis ──────────────────────────────────────</span>
-<span class="w">  </span><span class="nt">redis</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis:alpine</span>
-<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">laravel_redis</span>
-<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
-<span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">laravel_network</span>
-
-<span class="c1"># ── Volumes nommés (persistants) ─────────────────────</span>
-<span class="nt">volumes</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">mysql_data</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">local</span>
-
-<span class="c1"># ── Réseau interne ────────────────────────────────────</span>
-<span class="nt">networks</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">laravel_network</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridge</span>
+<span class="w">    </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">MYSQL_DATABASE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">todo_test</span>
+<span class="w">      </span><span class="nt">MYSQL_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">laravel_test</span>
+<span class="w">      </span><span class="nt">MYSQL_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">secret</span>
 </code></pre></div>
-<h3 id="45-le-dockerignore">4.5 🚫 Le .dockerignore<a class="headerlink" href="#45-le-dockerignore" title="Permanent link">⚓︎</a></h3>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code># .dockerignore
-node_modules
-vendor
-.git
-.env
-*.log
-storage/logs/*
-storage/framework/cache/*
-storage/framework/sessions/*
+<details class="question">
+<summary>Où tourne cette base MySQL pendant le CI ?</summary>
+<p>Elle tourne dans un <strong>conteneur de service</strong> Docker, lancé automatiquement par GitHub Actions le temps du job. Elle est complètement éphémère : créée au début du job, détruite à la fin. Chaque exécution du pipeline repart d'une base propre.</p>
+</details>
+<h3 id="53-le-job-cd-deploy">5.3 Le job CD — <code>deploy</code><a class="headerlink" href="#53-le-job-cd-deploy" title="Permanent link">⚓︎</a></h3>
+<p>Ce job ne se déclenche que si le job CI est vert <strong>ET</strong> qu'on est sur la branche <code>main</code> :</p>
+<div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="nt">deploy</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build-test</span><span class="w">                             </span><span class="c1"># quality gate</span>
+<span class="w">  </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.ref == &#39;refs/heads/main&#39;</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&amp;&amp; github.event_name == &#39;push&#39;</span>
 </code></pre></div>
-<blockquote>
-<p>🔑 <strong>Pourquoi c'est important ?</strong> Sans <code>.dockerignore</code>, <code>vendor/</code> (200+ Mo) et <code>node_modules/</code> seraient copiés dans l'image à chaque build — le build prendrait plusieurs minutes inutilement.</p>
-</blockquote>
-<hr />
-<h2 id="5-variables-denvironnement-et-securite">5. 🔐 Variables d'environnement et sécurité<a class="headerlink" href="#5-variables-denvironnement-et-securite" title="Permanent link">⚓︎</a></h2>
-<h3 id="51-le-fichier-env-pour-docker">5.1 Le fichier .env pour Docker<a class="headerlink" href="#51-le-fichier-env-pour-docker" title="Permanent link">⚓︎</a></h3>
-<div class="language-ini highlight"><span class="filename">INI</span><pre><span></span><code><span class="c1"># .env (à NE JAMAIS committer sur Git)</span>
-<span class="na">APP_NAME</span><span class="o">=</span><span class="s">LaravelTodo</span>
-<span class="na">APP_ENV</span><span class="o">=</span><span class="s">production</span>
-<span class="na">APP_KEY</span><span class="o">=</span><span class="w">              </span><span class="c1"># Généré par php artisan key:generate</span>
-<span class="na">APP_DEBUG</span><span class="o">=</span><span class="s">false</span>
-<span class="na">APP_URL</span><span class="o">=</span><span class="s">http://votre-ip-serveur</span>
-
-<span class="na">DB_CONNECTION</span><span class="o">=</span><span class="s">mysql</span>
-<span class="na">DB_HOST</span><span class="o">=</span><span class="s">mysql</span><span class="w">          </span><span class="c1"># ← Nom du service Docker, pas &quot;localhost&quot;</span>
-<span class="na">DB_PORT</span><span class="o">=</span><span class="s">3306</span>
-<span class="na">DB_DATABASE</span><span class="o">=</span><span class="s">laravel_todo</span>
-<span class="na">DB_USERNAME</span><span class="o">=</span><span class="s">laravel_user</span>
-<span class="na">DB_PASSWORD</span><span class="o">=</span><span class="s">motdepasse_solide_ici</span>
-
-<span class="na">CACHE_DRIVER</span><span class="o">=</span><span class="s">redis</span>
-<span class="na">SESSION_DRIVER</span><span class="o">=</span><span class="s">redis</span>
-<span class="na">QUEUE_CONNECTION</span><span class="o">=</span><span class="s">redis</span>
-<span class="na">REDIS_HOST</span><span class="o">=</span><span class="s">redis</span><span class="w">       </span><span class="c1"># ← Nom du service Docker</span>
-<span class="na">REDIS_PORT</span><span class="o">=</span><span class="s">6379</span>
+<div class="admonition info">
+<p class="admonition-title">Self-hosted runner</p>
+<p>Le job CD s'exécute sur <code>runs-on: self-hosted</code> — un runner GitHub Actions installé <strong>directement sur <code>srv-debian</code></strong>. Il se connecte à GitHub, attend les jobs, et les exécute localement sur le serveur. Pas besoin de SSH ni d'IP publique : le runner est déjà sur la machine cible.</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>GitHub ←── runner srv-debian (connexion sortante)
 </code></pre></div>
-<blockquote>
-<p>🔒 <strong>Sécurité DevOps :</strong> <code>DB_HOST=mysql</code> et <code>REDIS_HOST=redis</code> : ce sont les <strong>noms des services</strong> définis dans <code>docker-compose.yml</code>. Docker crée un DNS interne qui résout ces noms. Les conteneurs communiquent entre eux <strong>sans exposer les ports à l'extérieur</strong>.</p>
-</blockquote>
-<h3 id="52-jamais-de-secrets-dans-le-dockerfile-ou-docker-composeyml">5.2 ❌ Jamais de secrets dans le Dockerfile ou docker-compose.yml<a class="headerlink" href="#52-jamais-de-secrets-dans-le-dockerfile-ou-docker-composeyml" title="Permanent link">⚓︎</a></h3>
-<div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="c1"># ❌ MAUVAIS — secret en clair dans le code versionné</span>
-<span class="nt">environment</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">monmotdepasse123</span>
-
-<span class="c1"># ✅ BON — lecture depuis .env (non versionné)</span>
-<span class="nt">environment</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${DB_PASSWORD}</span>
+<p>C'est la solution retenue pour notre infrastructure car <code>srv-debian</code> est sur un réseau local privé non accessible depuis internet.</p>
+</div>
+<p>Il réalise trois opérations :</p>
+<p><strong>1. Build et push de l'image Docker</strong></p>
+<div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build and push Docker image</span>
+<span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker/build-push-action@v5</span>
+<span class="w">  </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">push</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no">sofaugeras/todo-laravel:latest</span>
+<span class="w">      </span><span class="no">sofaugeras/todo-laravel:${{ github.sha }}</span>
 </code></pre></div>
+<p>L'image est taguée avec <code>latest</code> (pour le déploiement) ET avec le SHA du commit (pour la traçabilité — on peut toujours savoir quelle version exacte tourne).</p>
+<p><strong>2. Déploiement direct sur le serveur</strong></p>
+<p>Puisque le runner tourne sur <code>srv-debian</code>, le déploiement s'exécute directement sans SSH :</p>
+<div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy</span>
+<span class="w">  </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">    </span><span class="no">cp /opt/todo-laravel/.env.prod .env</span>
+<span class="w">    </span><span class="no">docker compose down --remove-orphans || true</span>
+<span class="w">    </span><span class="no">docker compose pull app</span>
+<span class="w">    </span><span class="no">docker compose up -d --force-recreate</span>
+<span class="w">    </span><span class="no">sleep 5</span>
+<span class="w">    </span><span class="no">docker compose exec -T app php artisan config:cache</span>
+<span class="w">    </span><span class="no">docker compose exec -T app php artisan route:cache</span>
+<span class="w">    </span><span class="no">docker compose exec -T app php artisan view:cache</span>
+<span class="w">    </span><span class="no">docker compose exec -T app php artisan migrate --no-interaction --force</span>
+<span class="w">    </span><span class="no">docker compose exec -T app php artisan cache:clear</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Pourquoi <code>docker compose down</code> suivi d'un <code>up</code> complet ?</p>
+<p>Le runner travaille depuis son dossier <code>_work</code> (pas depuis <code>/opt/todo-laravel/</code>). Docker compose identifie les conteneurs par le nom du projet — si les conteneurs ont été créés depuis un autre dossier, il ne les reconnaît pas et refuse de les remplacer. Le <code>down</code> + <code>up --force-recreate</code> résout ce conflit proprement.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Pourquoi régénérer les caches après démarrage ?</p>
+<p>Le <code>Dockerfile</code> ne génère plus les caches Laravel pendant le build (les caches contiendraient des chemins absolus du stage builder <code>/app</code> au lieu du runtime <code>/var/www/html</code>). Les caches sont générés à chaud après le démarrage du conteneur, avec les bons chemins.</p>
+</div>
+<details class="question">
+<summary>Pourquoi <code>--no-deps</code> dans <code>docker compose up</code> ?</summary>
+<p>Sans <code>--no-deps</code>, <code>docker compose up app</code> redémarrerait aussi tous les services dont <code>app</code> dépend (mysql, nginx). Avec <code>--no-deps</code>, seul le conteneur <code>app</code> est recréé. MySQL et Nginx restent actifs — les utilisateurs connectés ne perdent pas leur session.</p>
+</details>
+<details class="question">
+<summary>Qu'est-ce qu'un secret GitHub et comment fonctionne-t-il ?</summary>
+<p>Un secret est une valeur chiffrée stockée dans les paramètres du repo GitHub (Settings → Secrets). Elle est injectée comme variable d'environnement dans les runners pendant l'exécution du pipeline, mais <strong>n'apparaît jamais dans les logs</strong> (GitHub la masque automatiquement). C'est le mécanisme sécurisé pour stocker des informations sensibles comme les tokens Docker Hub.</p>
+</details>
+<details class="question">
+<summary>Pourquoi le runner est-il enregistré sur l'organisation et pas sur un repo ?</summary>
+<p>Un runner d'<strong>organisation</strong> (<code>lyceesaintsauveur</code>) est accessible par tous les repos de l'organisation. Chaque étudiant peut ainsi utiliser le même runner <code>srv-debian13</code> depuis son propre repo, sans qu'on ait besoin de l'enregistrer manuellement sur chaque projet.</p>
+</details>
+<h2 id="6-les-secrets-github">6. Les secrets GitHub 🔐<a class="headerlink" href="#6-les-secrets-github" title="Permanent link">⚓︎</a></h2>
+<p>Notre pipeline nécessite <strong>3 secrets</strong> à configurer dans <strong>Settings → Secrets and variables → Actions</strong> du repo (ou au niveau de l'organisation) :</p>
 <table>
 <thead>
 <tr>
-<th>🚦 Pratique</th>
-<th>Risque</th>
+<th>Secret</th>
+<th>Valeur</th>
+<th>Pourquoi</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Secret en clair dans <code>docker-compose.yml</code></td>
-<td>❌ Exposé sur GitHub à tous</td>
+<td><code>DOCKERHUB_USERNAME</code></td>
+<td>Votre identifiant Docker Hub</td>
+<td>S'authentifier pour pousser l'image</td>
 </tr>
 <tr>
-<td>Secret dans le <code>Dockerfile</code></td>
-<td>❌ Gravé dans les layers de l'image</td>
+<td><code>DOCKERHUB_TOKEN</code></td>
+<td>Token Docker Hub (pas le mdp)</td>
+<td>Authentification sécurisée</td>
 </tr>
 <tr>
-<td>Secret dans <code>.env</code> (gitignore)</td>
-<td>✅ Sûr — jamais versionné</td>
-</tr>
-<tr>
-<td>Secret dans un gestionnaire (Vault, Secrets)</td>
-<td>✅✅ Idéal en production réelle</td>
+<td><code>DOCKERHUB_IMAGE</code></td>
+<td><code>votre-user/todo-laravel</code></td>
+<td>Nom de l'image à builder et pousser</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="6-commandes-docker-essentielles">6. ⌨️ Commandes Docker essentielles<a class="headerlink" href="#6-commandes-docker-essentielles" title="Permanent link">⚓︎</a></h2>
-<h3 id="61-cycle-de-vie-des-conteneurs">6.1 🔄 Cycle de vie des conteneurs<a class="headerlink" href="#61-cycle-de-vie-des-conteneurs" title="Permanent link">⚓︎</a></h3>
-<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code><span class="c1"># 🚀 Construire les images et démarrer tous les services</span>
-docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
-
-<span class="c1"># 👀 Voir les conteneurs en cours d&#39;exécution</span>
-docker<span class="w"> </span>compose<span class="w"> </span>ps
-
-<span class="c1"># 📋 Voir les logs (temps réel)</span>
-docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>-f
-
-<span class="c1"># 🔍 Logs d&#39;un service spécifique</span>
-docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>app
-
-<span class="c1"># ⏸️ Arrêter les conteneurs (sans supprimer)</span>
-docker<span class="w"> </span>compose<span class="w"> </span>stop
-
-<span class="c1"># 🛑 Arrêter ET supprimer les conteneurs</span>
-docker<span class="w"> </span>compose<span class="w"> </span>down
-
-<span class="c1"># ⚠️ Supprimer aussi les volumes (PERD LES DONNÉES BDD)</span>
-docker<span class="w"> </span>compose<span class="w"> </span>down<span class="w"> </span>-v
-</code></pre></div>
-<h3 id="62-executer-des-commandes-dans-un-conteneur">6.2 💻 Exécuter des commandes dans un conteneur<a class="headerlink" href="#62-executer-des-commandes-dans-un-conteneur" title="Permanent link">⚓︎</a></h3>
-<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code><span class="c1"># 🐚 Ouvrir un shell dans le conteneur PHP</span>
-docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>app<span class="w"> </span>bash
-
-<span class="c1"># 🎨 Exécuter une commande artisan</span>
-docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>app<span class="w"> </span>php<span class="w"> </span>artisan<span class="w"> </span>migrate
-
-<span class="c1"># 📦 Exécuter composer</span>
-docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>app<span class="w"> </span>composer<span class="w"> </span>install<span class="w"> </span>--no-dev
-
-<span class="c1"># 🖼️ Exécuter npm (build assets Vite)</span>
-docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>app<span class="w"> </span>npm<span class="w"> </span>run<span class="w"> </span>build
-</code></pre></div>
-<h3 id="63-gestion-des-images">6.3 🗃️ Gestion des images<a class="headerlink" href="#63-gestion-des-images" title="Permanent link">⚓︎</a></h3>
-<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code><span class="c1"># 📋 Lister les images locales</span>
-docker<span class="w"> </span>images
-
-<span class="c1"># 🗑️ Supprimer une image</span>
-docker<span class="w"> </span>rmi<span class="w"> </span>nom_image
-
-<span class="c1"># 🧹 Supprimer toutes les images inutilisées</span>
-docker<span class="w"> </span>image<span class="w"> </span>prune<span class="w"> </span>-a
-
-<span class="c1"># 💽 Voir l&#39;espace disque utilisé par Docker</span>
-docker<span class="w"> </span>system<span class="w"> </span>df
-</code></pre></div>
-<hr />
-<h2 id="7-deploiement-sur-le-serveur-debian">7. 🚀 Déploiement sur le serveur Debian<a class="headerlink" href="#7-deploiement-sur-le-serveur-debian" title="Permanent link">⚓︎</a></h2>
-<h3 id="71-prerequis-sur-le-serveur">7.1 ✅ Prérequis sur le serveur<a class="headerlink" href="#71-prerequis-sur-le-serveur" title="Permanent link">⚓︎</a></h3>
-<p>Docker Engine et Docker Compose Plugin doivent être installés (voir le HowTo joint). Vérifiez :</p>
-<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>docker<span class="w"> </span>--version<span class="w">          </span><span class="c1"># Docker version 27.x.x</span>
-docker<span class="w"> </span>compose<span class="w"> </span>version<span class="w">    </span><span class="c1"># Docker Compose version v2.x.x</span>
-</code></pre></div>
-<h3 id="72-procedure-de-deploiement-complete">7.2 📋 Procédure de déploiement complète<a class="headerlink" href="#72-procedure-de-deploiement-complete" title="Permanent link">⚓︎</a></h3>
-<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code><span class="c1"># 1️⃣ Cloner le projet depuis GitHub</span>
-git<span class="w"> </span>clone<span class="w"> </span>https://github.com/votre-user/laravel-todo.git
-<span class="nb">cd</span><span class="w"> </span>laravel-todo
-
-<span class="c1"># 2️⃣ Créer le fichier .env de production</span>
-cp<span class="w"> </span>.env.example<span class="w"> </span>.env
-nano<span class="w"> </span>.env<span class="w">          </span><span class="c1"># Remplir les variables (DB, APP_KEY, etc.)</span>
-
-<span class="c1"># 3️⃣ Construire et démarrer les conteneurs</span>
-docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
-
-<span class="c1"># 4️⃣ Initialiser l&#39;application Laravel</span>
-docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>app<span class="w"> </span>composer<span class="w"> </span>install<span class="w"> </span>--no-dev<span class="w"> </span>--optimize-autoloader
-docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>app<span class="w"> </span>php<span class="w"> </span>artisan<span class="w"> </span>key:generate
-docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>app<span class="w"> </span>php<span class="w"> </span>artisan<span class="w"> </span>migrate<span class="w"> </span>--force
-docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>app<span class="w"> </span>php<span class="w"> </span>artisan<span class="w"> </span>storage:link
-docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>app<span class="w"> </span>npm<span class="w"> </span>ci<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>app<span class="w"> </span>npm<span class="w"> </span>run<span class="w"> </span>build
-docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>app<span class="w"> </span>php<span class="w"> </span>artisan<span class="w"> </span>config:cache
-docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>app<span class="w"> </span>php<span class="w"> </span>artisan<span class="w"> </span>route:cache
-docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>app<span class="w"> </span>php<span class="w"> </span>artisan<span class="w"> </span>view:cache
-
-<span class="c1"># 5️⃣ Vérifier que tout tourne</span>
-docker<span class="w"> </span>compose<span class="w"> </span>ps
-</code></pre></div>
-<h3 id="73-mise-a-jour-de-lapplication-workflow-cicd-simplifie">7.3 🔁 Mise à jour de l'application (workflow CI/CD simplifié)<a class="headerlink" href="#73-mise-a-jour-de-lapplication-workflow-cicd-simplifie" title="Permanent link">⚓︎</a></h3>
-<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code><span class="c1"># Sur le serveur, dans le dossier du projet</span>
-git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
-docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
-docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>app<span class="w"> </span>composer<span class="w"> </span>install<span class="w"> </span>--no-dev<span class="w"> </span>--optimize-autoloader
-docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>app<span class="w"> </span>php<span class="w"> </span>artisan<span class="w"> </span>migrate<span class="w"> </span>--force
-docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>app<span class="w"> </span>php<span class="w"> </span>artisan<span class="w"> </span>config:cache
-</code></pre></div>
-<hr />
-<h2 id="8-concepts-avances-pour-aller-plus-loin">8. 🧠 Concepts avancés — Pour aller plus loin<a class="headerlink" href="#8-concepts-avances-pour-aller-plus-loin" title="Permanent link">⚓︎</a></h2>
-<h3 id="81-les-layers-et-le-cache-de-build">8.1 🧅 Les layers et le cache de build<a class="headerlink" href="#81-les-layers-et-le-cache-de-build" title="Permanent link">⚓︎</a></h3>
-<p>Docker construit les images en <strong>couches</strong> (<em>layers</em>). Chaque instruction du Dockerfile est une couche. Si une couche n'a pas changé, Docker réutilise le <strong>cache</strong> → le build est rapide.</p>
-<div class="language-dockerfile highlight"><span class="filename">Docker</span><pre><span></span><code><span class="c"># ✅ Optimisé : on copie d&#39;abord les fichiers de dépendances</span>
-<span class="c"># Ces fichiers changent rarement → les couches sont cachées</span>
-
-<span class="k">COPY</span><span class="w"> </span>composer.json<span class="w"> </span>composer.lock<span class="w"> </span>./
-<span class="k">RUN</span><span class="w"> </span>composer<span class="w"> </span>install<span class="w"> </span>--no-scripts
-
-<span class="k">COPY</span><span class="w"> </span>package.json<span class="w"> </span>package-lock.json<span class="w"> </span>./
-<span class="k">RUN</span><span class="w"> </span>npm<span class="w"> </span>ci
-
-<span class="c"># On copie le code source EN DERNIER (change souvent)</span>
-<span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.
-</code></pre></div>
-<blockquote>
-<p>💡 <strong>Conseil pro</strong> : mettez toujours le <code>COPY . .</code> en dernier dans votre Dockerfile. Le code source change à chaque commit — si vous le copiez tôt, toutes les couches suivantes (composer install, npm ci...) sont invalidées et rebuiltées entièrement.</p>
-</blockquote>
-<h3 id="82-multi-stage-build-image-de-production-allegee">8.2 🏗️ Multi-stage build (image de production allégée)<a class="headerlink" href="#82-multi-stage-build-image-de-production-allegee" title="Permanent link">⚓︎</a></h3>
-<div class="language-dockerfile highlight"><span class="filename">Docker</span><pre><span></span><code><span class="c"># ── Stage 1 : Build des assets ──────────────────────────</span>
-<span class="k">FROM</span><span class="w"> </span><span class="s">node:20-alpine</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">node_builder</span>
-<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
-<span class="k">COPY</span><span class="w"> </span>package*.json<span class="w"> </span>./
-<span class="k">RUN</span><span class="w"> </span>npm<span class="w"> </span>ci
-<span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.
-<span class="k">RUN</span><span class="w"> </span>npm<span class="w"> </span>run<span class="w"> </span>build
-
-<span class="c"># ── Stage 2 : Image PHP finale ──────────────────────────</span>
-<span class="k">FROM</span><span class="w"> </span><span class="s">php:8.3-fpm</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">production</span>
-<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/var/www/html</span>
-
-<span class="c"># On copie UNIQUEMENT les assets compilés du stage précédent</span>
-<span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>node_builder<span class="w"> </span>/app/public/build<span class="w"> </span>./public/build
-
-<span class="c"># Le reste de l&#39;installation...</span>
-</code></pre></div>
-<blockquote>
-<p>✅ <strong>Avantage :</strong> L'image finale ne contient pas Node.js (300+ Mo économisés). Node n'est présent que pendant la construction, pas dans l'image de production.</p>
-</blockquote>
-<h3 id="83-healthchecks">8.3 💓 Healthchecks<a class="headerlink" href="#83-healthchecks" title="Permanent link">⚓︎</a></h3>
-<div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="nt">mysql</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql:8.0</span>
-<span class="w">  </span><span class="nt">healthcheck</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;CMD&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;mysqladmin&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;ping&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;-h&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;localhost&quot;</span><span class="p p-Indicator">]</span>
-<span class="w">    </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
-<span class="w">    </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
-<span class="w">    </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
-
-<span class="nt">app</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">depends_on</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">mysql</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_healthy</span><span class="w">   </span><span class="c1"># Attend que MySQL soit prêt</span>
-</code></pre></div>
-<blockquote>
-<p>⚠️ Sans healthcheck, <code>app</code> peut démarrer avant que MySQL soit prêt → erreur de connexion au démarrage.</p>
-</blockquote>
-<hr />
-<h2 id="9-resume-ce-que-vous-devez-retenir">9. 📋 Résumé — Ce que vous devez retenir<a class="headerlink" href="#9-resume-ce-que-vous-devez-retenir" title="Permanent link">⚓︎</a></h2>
-<p><img alt="Cycle de vie Docker" src="../data/05_cycle_docker.png" /></p>
-<h3 id="vocabulaire-a-maitriser">📖 Vocabulaire à maîtriser<a class="headerlink" href="#vocabulaire-a-maitriser" title="Permanent link">⚓︎</a></h3>
-<table>
-<thead>
-<tr>
-<th>📚 Terme</th>
-<th>📝 Définition</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Image</strong></td>
-<td>📦 Modèle immuable d'un conteneur</td>
-</tr>
-<tr>
-<td><strong>Conteneur</strong></td>
-<td>🟢 Instance en cours d'exécution d'une image</td>
-</tr>
-<tr>
-<td><strong>Dockerfile</strong></td>
-<td>📝 Fichier de construction d'une image</td>
-</tr>
-<tr>
-<td><strong>Docker Hub</strong></td>
-<td>☁️ Registre public d'images</td>
-</tr>
-<tr>
-<td><strong>Layer / Couche</strong></td>
-<td>🧅 Chaque instruction RUN/COPY crée une couche</td>
-</tr>
-<tr>
-<td><strong>Volume</strong></td>
-<td>💾 Persistance de données hors du conteneur</td>
-</tr>
-<tr>
-<td><strong>Network</strong></td>
-<td>🔌 Réseau virtuel entre conteneurs</td>
-</tr>
-<tr>
-<td><strong>docker-compose</strong></td>
-<td>🎼 Outil d'orchestration multi-conteneurs</td>
-</tr>
-<tr>
-<td><strong>Registry</strong></td>
-<td>🗄️ Dépôt d'images (public ou privé)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="commandes-cles-a-retenir">⌨️ Commandes clés à retenir<a class="headerlink" href="#commandes-cles-a-retenir" title="Permanent link">⚓︎</a></h3>
-<table>
-<thead>
-<tr>
-<th>Commande</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>docker compose up -d --build</code></td>
-<td>🚀 Construire et démarrer</td>
-</tr>
-<tr>
-<td><code>docker compose exec app bash</code></td>
-<td>💻 Entrer dans le conteneur</td>
-</tr>
-<tr>
-<td><code>docker compose logs -f</code></td>
-<td>📋 Surveiller les logs</td>
-</tr>
-<tr>
-<td><code>docker compose down</code></td>
-<td>🛑 Arrêter et supprimer</td>
-</tr>
-<tr>
-<td><code>docker compose ps</code></td>
-<td>👀 État des conteneurs</td>
-</tr>
-<tr>
-<td><code>docker system df</code></td>
-<td>💽 Espace disque Docker</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="ressources-complementaires">🔗 Ressources complémentaires<a class="headerlink" href="#ressources-complementaires" title="Permanent link">⚓︎</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Plus besoin de secrets SSH</p>
+<p>Avec le self-hosted runner, le job CD s'exécute directement sur <code>srv-debian</code>. Les secrets <code>SSH_HOST</code>, <code>SSH_USER</code>, <code>SSH_PRIVATE_KEY</code> et <code>SSH_PORT</code> ne sont plus nécessaires — le runner est déjà sur le serveur.</p>
+</div>
+<details class="question">
+<summary>Pourquoi utiliser un token Docker Hub plutôt que le mot de passe du compte ?</summary>
+<p>Si le token est compromis, on peut le révoquer sur Docker Hub sans changer le mot de passe du compte. C'est le principe des <strong>credentials à portée limitée</strong> : le token n'a accès qu'aux opérations nécessaires (push d'images), pas à la gestion du compte.</p>
+</details>
+<h2 id="7-nginx-comme-reverse-proxy">7. Nginx comme reverse proxy 🔀<a class="headerlink" href="#7-nginx-comme-reverse-proxy" title="Permanent link">⚓︎</a></h2>
+<p><strong>Nginx</strong> (prononcé <em>"engine-x"</em>) est un logiciel open source qui joue plusieurs rôles selon la configuration :</p>
 <ul>
-<li>📖 Documentation officielle Docker : https://docs.docker.com</li>
-<li>📦 Docker Hub : https://hub.docker.com</li>
-<li>🧪 Play with Docker (bac à sable en ligne) : https://labs.play-with-docker.com</li>
-<li>⛵ Laravel Sail (alternative officielle) : https://laravel.com/docs/sail</li>
-<li>🎓 Bret Fisher Udemy Course : Docker Mastery</li>
+<li><strong>Serveur web</strong> — sert directement les fichiers statiques (HTML, CSS, JS, images) sans passer par PHP</li>
+<li><strong>Reverse proxy</strong> — reçoit les requêtes HTTP et les transmet à une application backend (PHP-FPM, Node.js, Flask…)</li>
+<li><strong>Load balancer</strong> — répartit le trafic entre plusieurs instances d'une même application</li>
+<li><strong>Cache</strong> — mémorise les réponses pour accélérer les requêtes répétées</li>
 </ul>
-<hr />
-<p><em>📅 Cours réalisé pour le BTS SIO 2ème année — Module DevOps</em>
-<em>🏗️ Projet support : laravel-todo — Déploiement sur serveur Debian 12</em></p>
+<h3 id="71-lanalogie-du-switch-layer-7">7.1 L'analogie du switch Layer 7 🔌<a class="headerlink" href="#71-lanalogie-du-switch-layer-7" title="Permanent link">⚓︎</a></h3>
+<p>Imaginez Nginx comme un <strong>switch réseau intelligent qui opère au niveau applicatif (couche 7 du modèle OSI)</strong> — il ne se contente pas de router des paquets IP, il lit le contenu HTTP (URL, en-têtes, nom de domaine) pour décider où envoyer la requête.</p>
+<table>
+<thead>
+<tr>
+<th>Concept Nginx</th>
+<th>Analogie réseau</th>
+<th>Exemple concret</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>server {}</code></td>
+<td>Un port d'écoute du switch</td>
+<td><code>listen 80; server_name api.example.com;</code></td>
+</tr>
+<tr>
+<td><code>location {}</code></td>
+<td>Une règle de routage sur ce port</td>
+<td><code>location /api { }</code> → backend API</td>
+</tr>
+<tr>
+<td><code>proxy_pass</code></td>
+<td>La règle de forwarding</td>
+<td>Requête transmise vers <code>http://app:9000</code></td>
+</tr>
+<tr>
+<td><code>root</code></td>
+<td>Servir depuis le cache local</td>
+<td>Sert directement les fichiers HTML/CSS</td>
+</tr>
+</tbody>
+</table>
+<p>Nginx <strong>reçoit</strong> les requêtes, les <strong>route</strong> selon les règles, et les <strong>forward</strong> vers le bon backend ou les sert directement depuis le disque.</p>
+<h3 id="72-deux-niveaux-de-nginx-dans-notre-architecture">7.2 Deux niveaux de Nginx dans notre architecture 🏗️<a class="headerlink" href="#72-deux-niveaux-de-nginx-dans-notre-architecture" title="Permanent link">⚓︎</a></h3>
+<p><img alt="Flux Nginx deux niveaux" class="center" src="./data/nginx_flow.png" width="100%" /></p>
+<div class="admonition info">
+<p class="admonition-title">Nginx à deux endroits</p>
+<p>Dans notre architecture, Nginx intervient à <strong>deux niveaux distincts</strong> :</p>
+<p><strong>1. Nginx bare-metal sur <code>srv-debian</code></strong> — installé directement sur le serveur, hors Docker.
+Il écoute sur le port 80 et fait du reverse proxy vers les conteneurs selon le sous-domaine
+(<code>todo.srv-debian.local</code> → port 9090). Un seul Nginx gère <strong>tous les projets</strong> du serveur.</p>
+<p><strong>2. Nginx dans le conteneur</strong> — à l'intérieur de la stack Docker Todo, un conteneur Nginx
+dédié reçoit les requêtes forwardées par Nginx bare-metal et les distribue : il sert les assets
+Vite directement (sans PHP), et transmet les requêtes <code>.php</code> à php-fpm via FastCGI.</p>
+</div>
+<h3 id="73-nginx-dans-le-conteneur">7.3 Nginx dans le conteneur<a class="headerlink" href="#73-nginx-dans-le-conteneur" title="Permanent link">⚓︎</a></h3>
+<p>À l'intérieur de la stack Docker, le conteneur Nginx a une configuration différente : il sert les fichiers statiques directement et passe les requêtes PHP à php-fpm via FastCGI :</p>
+<div class="language-nginx highlight"><span class="filename">Nginx Configuration File</span><pre><span></span><code><span class="k">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kn">try_files</span><span class="w"> </span><span class="nv">$uri</span><span class="w"> </span><span class="nv">$uri/</span><span class="w"> </span><span class="s">/index.php?</span><span class="nv">$query_string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">location</span><span class="w"> </span><span class="p">~</span><span class="w"> </span><span class="sr">\.php$</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kn">fastcgi_pass</span><span class="w"> </span><span class="n">app</span><span class="p">:</span><span class="mi">9000</span><span class="p">;</span><span class="w">        </span><span class="c1"># &quot;app&quot; = nom du service Docker</span>
+<span class="w">    </span><span class="kn">fastcgi_param</span><span class="w"> </span><span class="s">SCRIPT_FILENAME</span><span class="w"> </span><span class="nv">$realpath_root$fastcgi_script_name</span><span class="p">;</span>
+<span class="w">    </span><span class="kn">include</span><span class="w"> </span><span class="s">fastcgi_params</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<details class="question">
+<summary>Comment Nginx sait-il joindre le conteneur <code>app</code> par son nom ?</summary>
+<p>Docker crée un <strong>réseau interne</strong> (<code>todo-net</code>). Dans ce réseau, chaque conteneur est accessible par son nom de service. <code>app:9000</code> est résolu par le DNS interne de Docker vers l'adresse IP du conteneur <code>app</code>, port 9000.</p>
+</details>
+<details class="question">
+<summary>Pourquoi deux Nginx et pas un seul ?</summary>
+<p>Le Nginx bare-metal est le <strong>point d'entrée unique</strong> du serveur — il sait vers quel projet router selon le nom de domaine. Le Nginx conteneur est <strong>interne à la stack Todo</strong> — il optimise la livraison des assets sans toucher à php-fpm. Ce sont deux responsabilités différentes : routage inter-projets d'un côté, optimisation intra-application de l'autre.</p>
+</details>
+<h2 id="8-recapitulatif-des-fichiers-du-projet">8. Récapitulatif des fichiers du projet 📁<a class="headerlink" href="#8-recapitulatif-des-fichiers-du-projet" title="Permanent link">⚓︎</a></h2>
+<p><img alt="Structure du projet" class="center" src="../data/project_structure.png" width="100%" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Règle absolue</p>
+<p>Le fichier <code>.env.prod</code> contient des mots de passe et des clés secrètes. Il ne doit <strong>jamais</strong> être commité sur GitHub. Il est créé manuellement sur le serveur lors de la mise en place de l'infrastructure.</p>
+</div>
+<h2 id="9-schema-de-synthese-le-cycle-complet">9. Schéma de synthèse — Le cycle complet 🔁<a class="headerlink" href="#9-schema-de-synthese-le-cycle-complet" title="Permanent link">⚓︎</a></h2>
+<p><img alt="Cycle complet CI/CD" class="center" src="../data/cicd_cycle_complet.png" width="100%" /></p>
+<details class="question">
+<summary>Combien de temps faut-il entre un <code>git push</code> et la mise en ligne ?</summary>
+<p>Sur notre configuration, environ 4 à 6 minutes : 2 à 3 minutes pour le CI (install + tests), 2 à 3 minutes pour le CD (build Docker + push + déploiement via self-hosted runner). Des optimisations comme le cache GitHub Actions pour les layers Docker et le cache Composer permettent de réduire ce temps.</p>
+</details>
+<details class="question">
+<summary>Que se passe-t-il si le déploiement plante en cours de route ?</summary>
+<p>Le conteneur <code>app</code> qui tournait avant n'est remplacé que lorsque le nouveau démarre correctement. Si <code>docker compose up -d app</code> échoue (image corrompue, erreur de migration…), l'ancien conteneur continue de tourner. C'est une forme basique de <strong>déploiement sans interruption</strong> (<em>zero-downtime deployment</em>).</p>
+</details>
+<h2 id="pour-aller-plus-loin">Pour aller plus loin 📚<a class="headerlink" href="#pour-aller-plus-loin" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li><strong>Blue/Green deployment</strong> : maintenir deux environnements de production et basculer le trafic instantanément</li>
+<li><strong>Rollback automatique</strong> : revenir à la version précédente si des erreurs sont détectées après déploiement</li>
+<li><strong>Notifications</strong> : Slack, e-mail ou webhook en cas d'échec du pipeline</li>
+<li><strong>Environnements de staging</strong> : déployer automatiquement sur un serveur de test avant la production</li>
+<li><strong>Secrets management</strong> : HashiCorp Vault pour centraliser et auditer les secrets d'infrastructure</li>
+</ul>
 
 
 

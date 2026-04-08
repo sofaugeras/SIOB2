@@ -12,13 +12,13 @@
         <meta name="author" content="Sophie FAUGERAS">
       
       
-        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/1_Base_de_donnees/4_SQLComplexe/TD_hopital/">
+        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/1_Base_de_donnees/5_TP/tp11_sauvegarde/">
       
       
-        <link rel="prev" href="../cours/">
+        <link rel="prev" href="../tp10_global/">
       
       
-        <link rel="next" href="../TD_chenil/">
+        <link rel="next" href="../tp12_anabase/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>TD Vues - Saint Sauveur BTS SIO SLAM</title>
+        <title>Sauvegarde de Base de données sous MySQL - Saint Sauveur BTS SIO SLAM</title>
       
     
     
@@ -114,7 +114,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#td-gestion-dun-hopital" class="md-skip">
+        <a href="#sauvegarde-de-base-de-donnees-sous-mysql" class="md-skip">
           Aller au contenu
         </a>
       
@@ -148,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TD Vues
+              Sauvegarde de Base de données sous MySQL
             
           </span>
         </div>
@@ -1113,8 +1113,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1125,11 +1123,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
         
           
           <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
@@ -1150,7 +1150,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1168,7 +1168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cours/" class="md-nav__link">
+      <a href="../../4_SQLComplexe/cours/" class="md-nav__link">
         
   
   
@@ -1176,153 +1176,6 @@
     
   
     Cours
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TD Vues
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TD Vues
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-creation-des-vues" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Création des vues
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-utilisation-des-vues" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Utilisation des vues
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-questions-de-reflexion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Questions de réflexion
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-questions-sur-les-dates" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Questions sur les Dates
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../TD_chenil/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TD jointures
   
 
     
@@ -1348,8 +1201,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -1358,13 +1213,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
         
           
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
@@ -1385,7 +1238,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1403,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5_TP/tp1_decouverte/" class="md-nav__link">
+      <a href="../tp1_decouverte/" class="md-nav__link">
         
   
   
@@ -1431,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5_TP/tp2_inventaireParc/" class="md-nav__link">
+      <a href="../tp2_inventaireParc/" class="md-nav__link">
         
   
   
@@ -1459,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5_TP/tp3_cinema/" class="md-nav__link">
+      <a href="../tp3_cinema/" class="md-nav__link">
         
   
   
@@ -1487,7 +1340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5_TP/tp4_cinema2/" class="md-nav__link">
+      <a href="../tp4_cinema2/" class="md-nav__link">
         
   
   
@@ -1515,7 +1368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5_TP/tp5_sncf/" class="md-nav__link">
+      <a href="../tp5_sncf/" class="md-nav__link">
         
   
   
@@ -1543,7 +1396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5_TP/tp6_vol2/" class="md-nav__link">
+      <a href="../tp6_vol2/" class="md-nav__link">
         
   
   
@@ -1571,7 +1424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5_TP/tp7_univ/" class="md-nav__link">
+      <a href="../tp7_univ/" class="md-nav__link">
         
   
   
@@ -1599,14 +1452,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5_TP/tp8_global/" class="md-nav__link">
+      <a href="../tp8_hopital/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    TP8 GSB [récap SIO1]
+    TP8 Hopital [vues]
   
 
     
@@ -1627,14 +1480,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5_TP/tp8_anabase/" class="md-nav__link">
+      <a href="../tp9_chenil/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    TP9 Cas Anabase [Revision SIO2]
+    TP9 Chenil [jointures externes]
   
 
     
@@ -1655,14 +1508,70 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5_TP/tp9_sauvegarde/" class="md-nav__link">
+      <a href="../tp10_global/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    TP10 Sauvegarde de base de données
+    TP10 GSB [récap SIO1]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tp11_anabase.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP11 Cas Anabase [Revision SIO2]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tp12_sauvegarde.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP12 Sauvegarde de base de données
   
 
     
@@ -3886,7 +3795,63 @@
   <span class="md-ellipsis">
     
   
-    CI - Déploiement avec 🐳 Docker
+    CI - Déploiement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../5_devops/5.1_notionDevops/TP_cicd_etudiant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP — Déploiement CI/CD d'une application Laravel 🚀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../5_devops/5.1_notionDevops/note/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Note
   
 
     
@@ -6322,286 +6287,181 @@
   
 
 
-<h1 id="td-gestion-dun-hopital">TD Gestion d’un Hôpital<a class="headerlink" href="#td-gestion-dun-hopital" title="Permanent link">⚓︎</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Objectif du TP</p>
-<ul>
-<li>Savoir créer une vue. </li>
-<li>Utiliser une vue, en regroupement d’informations</li>
-<li>Révision sur les dates</li>
-</ul>
-</div>
-<p><img alt="hopital" class="center" src="../data/hopital.png" width="30%" /></p>
-<p><strong>Contexte :</strong> Vous travaillez pour un hôpital qui souhaite mieux gérer ses patients, ses médecins, et les traitements administrés. La base de données de l’hôpital contient les tables suivantes :</p>
-<ul>
-<li>Patients : Informations sur les patients.</li>
-<li>Medecins : Informations sur les médecins.</li>
-<li>Consultations : Enregistrements des consultations des patients par les médecins.</li>
-<li>Traitements : Enregistrements des traitements administrés aux patients.</li>
-</ul>
-<p><ins>schéma relationnel :</ins>
-<strong>PATIENT</strong>(<ins>patient_id</ins>, nom, prenom, date_naissance, adresse)<br />
-<strong>MEDECIN</strong> (<ins>medecin_id</ins>, nom, prenom, specialite)<br />
-<strong>CONSULTATION</strong>(<ins>consultation_id</ins>, #patient_id, #medecin_id, date_consultation, diagnostic)<br />
-<strong>TRAITEMENT</strong>(<ins>traitement_id</ins>, #consultation_id, description, cout, date_traitement)</p>
+<h1 id="sauvegarde-de-base-de-donnees-sous-mysql">Sauvegarde de Base de données sous MySQL<a class="headerlink" href="#sauvegarde-de-base-de-donnees-sous-mysql" title="Permanent link">⚓︎</a></h1>
+<h2 id="0-preparation-de-lenvironnement">0. Préparation de l’environnement<a class="headerlink" href="#0-preparation-de-lenvironnement" title="Permanent link">⚓︎</a></h2>
+<ol>
+<li>Récupérer la base de données exemple <code>tp_sauvegarde</code>.
+<a class="md-button md-button--primary" href="../data/tpSauv/tp_sauvegarde.sql">Télécharger base sauvegarde <img alt="⬇️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2b07.svg" title=":arrow_down:" /></a></li>
+</ol>
 <details class="note">
-<summary>Script de création de base</summary>
-<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">hopital</span><span class="p">;</span>
-<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="n">patient_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">    </span><span class="n">nom</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
-<span class="w">    </span><span class="n">prenom</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
-<span class="w">    </span><span class="n">date_naissance</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
-<span class="w">    </span><span class="n">adresse</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
-<span class="p">);</span>
-
-<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Medecins</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="n">medecin_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">    </span><span class="n">nom</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
-<span class="w">    </span><span class="n">prenom</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
-<span class="w">    </span><span class="n">specialite</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-<span class="p">);</span>
-
-<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="n">consultation_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">    </span><span class="n">patient_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
-<span class="w">    </span><span class="n">medecin_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
-<span class="w">    </span><span class="n">date_consultation</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
-<span class="w">    </span><span class="n">diagnostic</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
-<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">patient_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">Patients</span><span class="p">(</span><span class="n">patient_id</span><span class="p">),</span>
-<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">medecin_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">Medecins</span><span class="p">(</span><span class="n">medecin_id</span><span class="p">)</span>
-<span class="p">);</span>
-
-<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Traitements</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="n">traitement_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">    </span><span class="n">consultation_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
-<span class="w">    </span><span class="n">description</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span>
-<span class="w">    </span><span class="n">date_traitement</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
-<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">consultation_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">Consultations</span><span class="p">(</span><span class="n">consultation_id</span><span class="p">)</span>
-<span class="p">);</span>
-</code></pre></div>
+<summary>Descriptif</summary>
+<p><code>utilisateurs</code> : contient les informations des utilisateurs inscrits.<br />
+  <code>commandes</code> : enregistre les commandes passées par les utilisateurs. Une relation existe entre les tables utilisateurs et commandes grâce à la clé étrangère <code>utilisateur_id</code>.<br />
+  <code>logs</code> : journalise les actions réalisées dans le système.</p>
 </details>
-<details class="note">
-<summary>Script d'insertion dans la base</summary>
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="p">(</span><span class="n">patient_id</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">date_naissance</span><span class="p">,</span><span class="w"> </span><span class="n">adresse</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span>
-<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Martin&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1985-04-12&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;12 rue de la Paix, Rennes&#39;</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Dupont&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Lucas&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1992-09-03&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;4 avenue Victor Hugo, Redon&#39;</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Bernard&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Sophie&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1978-01-25&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;8 place de la Liberté, Nantes&#39;</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Leroy&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Thomas&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2001-11-18&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;5 rue des Écoles, Vannes&#39;</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Roux&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Camille&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1999-06-07&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;27 boulevard Clémenceau, Brest&#39;</span><span class="p">);</span>
-<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Medecins</span><span class="w"> </span><span class="p">(</span><span class="n">medecin_id</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">specialite</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span>
-<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Legrand&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Marc&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Généraliste&#39;</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Faure&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Nina&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Dermatologie&#39;</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Petit&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Hugo&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Cardiologie&#39;</span><span class="p">);</span>
-<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="p">(</span><span class="n">consultation_id</span><span class="p">,</span><span class="w"> </span><span class="n">patient_id</span><span class="p">,</span><span class="w"> </span><span class="n">medecin_id</span><span class="p">,</span><span class="w"> </span><span class="n">date_consultation</span><span class="p">,</span><span class="w"> </span><span class="n">diagnostic</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span>
-<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-01-10&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Grippe saisonnière&#39;</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-02-15&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Gastro-entérite&#39;</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-03-05&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Hypertension&#39;</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-03-18&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Éruption cutanée&#39;</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-04-22&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Migraine&#39;</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-05-30&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Palpitations cardiaques&#39;</span><span class="p">);</span>
-<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Traitements</span><span class="w"> </span><span class="p">(</span><span class="n">traitement_id</span><span class="p">,</span><span class="w"> </span><span class="n">consultation_id</span><span class="p">,</span><span class="w"> </span><span class="n">description</span><span class="p">,</span><span class="w"> </span><span class="n">cout</span><span class="p">,</span><span class="w"> </span><span class="n">date_traitement</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span>
-<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Antiviral et repos&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">35</span><span class="p">.</span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-01-10&#39;</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Réhydratation + antispasmodiques&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-02-15&#39;</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Mise sous antihypertenseurs&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">78</span><span class="p">.</span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-03-05&#39;</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Crème dermatologique&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">.</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-03-18&#39;</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Antalgique léger&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">.</span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-04-22&#39;</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ECG + Bêtabloquants&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">95</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-05-30&#39;</span><span class="p">);</span>
+<ol>
+<li>Visualiser sa structure et son contenu :</li>
+</ol>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SHOW</span><span class="w"> </span><span class="n">TABLES</span><span class="p">;</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">nom_table</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 </code></pre></div>
+<h2 id="1-sauvegarde-par-phpmyadmin">1. Sauvegarde par PHPMyAdmin<a class="headerlink" href="#1-sauvegarde-par-phpmyadmin" title="Permanent link">⚓︎</a></h2>
+<h3 id="11-sauvegarde-au-format-base-de-donnees-duplication">1.1 Sauvegarde au format Base de données (duplication)<a class="headerlink" href="#11-sauvegarde-au-format-base-de-donnees-duplication" title="Permanent link">⚓︎</a></h3>
+<p><img alt="sauvegarde" class="center" src="../data/tpSauv/sauvegarde_phpMyAdmin.png" width="50%" /></p>
+<h3 id="12-sauvegarde-sous-forme-de-script-sql">1.2 Sauvegarde sous forme de script SQL<a class="headerlink" href="#12-sauvegarde-sous-forme-de-script-sql" title="Permanent link">⚓︎</a></h3>
+<p>👀 Prenez le temps d'observer toutes les options proposées par cet écran</p>
+<p><img alt="sauvegarde" class="center" src="../data/tpSauv/sauve1.png" width="50%" /></p>
+<details class="info">
+<summary>Résultat</summary>
+<p><a class="md-button md-button--primary" href="../data/tpSauv/tp_sauvegarde_script.sql">Télécharger le script obtenu <img alt="⬇️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2b07.svg" title=":arrow_down:" /></a></p>
 </details>
-<h2 id="1-creation-des-vues">1. Création des vues<a class="headerlink" href="#1-creation-des-vues" title="Permanent link">⚓︎</a></h2>
-<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 1. Créer une vue pour afficher les informations détaillées des consultations, y compris les informations sur les patients et les médecins.</p>
+<h2 id="2-sauvegarde-par-mysqldump">2. Sauvegarde par mysqldump<a class="headerlink" href="#2-sauvegarde-par-mysqldump" title="Permanent link">⚓︎</a></h2>
+<details class="warning">
+<summary>préalable</summary>
+<ul>
+<li>localiser <code>mysqldump.exe</code> qui doit etre dans <code>C:\wamp64\bin\mysql\mysqlX.X.X\bin</code><br /></li>
+<li>Ajouter ce chemin dans les variables d'environnement de Windows. Cela permettra d'utiliser la commande MySQLdump depuis une invite de commande peu importe le répertoire ou l'on se trouve<br /></li>
+</ul>
+<p><strong>Détail</strong>  <br />
+  - Accédez à <strong>Panneau de configuration &gt; Système &gt; Paramètres avancés &gt; Variables d'environnement</strong>.<br />
+  - Trouvez la variable <strong>Path</strong> dans la section <mark>Système</mark> et cliquez sur Modifier.<br />
+  - Ajoutez le chemin vers le répertoire bin de MySQL (par exemple, <code>C:\Program Files\MySQL\MySQL Server X.X\bin</code>).<br />
+  - Redémarrez l’Invite de commandes.
+  - tester si cela fonctionne en ouvrant une invite de commande <strong>cmd</strong> et en tapant <code>mysqldump --version</code><br /></p>
+</details>
+<h4 id="21-sauvegarde-avec-mysqldump">2.1 Sauvegarde avec <code>mysqldump</code><a class="headerlink" href="#21-sauvegarde-avec-mysqldump" title="Permanent link">⚓︎</a></h4>
+<p>👉 Expliquer la commande de base pour sauvegarder une base de données </p>
+<p><div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>mysqldump<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>tp_sauvegarde<span class="w"> </span>&gt;<span class="w"> </span>sauvegarde_tp.sql
+</code></pre></div>
+<strong>note</strong> : le mot de passe demandé à l'execution de la commande est celui de la base de données (associé au <code>root</code>)</p>
+<p><strong>indication</strong> : lire la <a href="https://dev.mysql.com/doc/refman/8.4/en/mysqldump.html" target="blank">documentation</a></p>
+<p>👉 Vérifier que le fichier de sauvegarde est bien créé. Où a t'il été créé ?</p>
 <details class="question">
-<summary>Correction</summary>
-<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">ConsultationsDetaillees</span><span class="w"> </span><span class="k">AS</span>
-<span class="k">SELECT</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">consultation_id</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">patient_nom</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">prenom</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">patient_prenom</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">nom</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">medecin_nom</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">prenom</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">medecin_prenom</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">specialite</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">diagnostic</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="k">c</span>
-<span class="k">JOIN</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">patient_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">patient_id</span>
-<span class="k">JOIN</span><span class="w"> </span><span class="n">Medecins</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">medecin_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">medecin_id</span><span class="p">;</span>
-</code></pre></div>
+<summary>solution</summary>
+<p>Le fichier <code>sauvegarde_tp.sql</code> est créé dans le répertoire où la commande a été exécutée.</p>
 </details>
-<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 2. Créer une vue pour afficher les coûts totaux des traitements par patient.</p>
-<details class="question">
-<summary>Correction</summary>
-<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">CoutTotalParPatient</span><span class="w"> </span><span class="k">AS</span>
-<span class="k">SELECT</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">cout</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_cout</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="n">p</span>
-<span class="k">JOIN</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">patient_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">patient_id</span>
-<span class="k">JOIN</span><span class="w"> </span><span class="n">Traitements</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">consultation_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">consultation_id</span>
-<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">prenom</span><span class="p">;</span>
-</code></pre></div>
-</details>
-<h2 id="2-utilisation-des-vues">2. Utilisation des vues<a class="headerlink" href="#2-utilisation-des-vues" title="Permanent link">⚓︎</a></h2>
-<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 3. Quelles sont les consultations en cours (traitements non terminés) ?</p>
-<details class="question">
-<summary>Correction</summary>
-<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">ConsultationsDetaillees</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">consultation_id</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">consultation_id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Traitements</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">date_traitement</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">);</span>
-</code></pre></div>
-</details>
-<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 4. Quels patients ont les coûts de traitement les plus élevés ?</p>
-<details class="question">
-<summary>Correction</summary>
-<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">CoutTotalParPatient</span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">total_cout</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
-</code></pre></div>
-</details>
-<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 5. Quels médecins ont le plus de consultations ?</p>
-<details class="question">
-<summary>Correction</summary>
-<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="k">c</span><span class="p">.</span><span class="n">consultation_id</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nombre_consultations</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">Medecins</span><span class="w"> </span><span class="n">m</span>
-<span class="k">JOIN</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">medecin_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">medecin_id</span>
-<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">prenom</span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">nombre_consultations</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
-</code></pre></div>
-</details>
-<h2 id="3-questions-de-reflexion">3. Questions de réflexion<a class="headerlink" href="#3-questions-de-reflexion" title="Permanent link">⚓︎</a></h2>
-<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 6. Quels sont les avantages d’utiliser des vues pour ces types de requêtes ?</p>
+<p>👉 Lancer un éditeur de texte pour explorer le contenu de <code>sauvegarde_tp.sql</code> et expliquer le format des sauvegardes (fichiers SQL).</p>
+<p>❓ Quelles sont les informations présentes dans le fichier de sauvegarde ?</p>
 <details class="question">
 <summary>correction</summary>
-<ul>
-<li>Simplification des requêtes : Les vues permettent de simplifier des requêtes complexes en encapsulant la logique dans une vue. Cela rend les requêtes plus lisibles et plus faciles à maintenir.</li>
-<li>Sécurité : Les vues peuvent restreindre l’accès aux données sensibles en exposant uniquement certaines colonnes ou lignes. Par exemple, une vue peut masquer des informations personnelles des patients tout en permettant l’accès aux données nécessaires pour les analyses.</li>
-<li>Réutilisabilité : Une fois définie, une vue peut être réutilisée dans d’autres requêtes sans avoir à réécrire la logique. Cela permet de standardiser les accès aux données et de réduire les erreurs.</li>
-<li>Abstraction : Les vues fournissent une couche d’abstraction qui peut masquer la complexité des tables sous-jacentes. Cela permet aux utilisateurs de travailler avec des données de manière plus intuitive.</li>
-</ul>
+<p>Le fichier comprend toutes les instructions pour recréer la base, structure et données</p>
 </details>
-<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 7. Comment les vues peuvent-elles améliorer la sécurité des données ?</p>
+<p>❓ Comment récupérer uniquement la structure des tables sans les données ?</p>
 <details class="question">
-<summary>Correction</summary>
-<ul>
-<li>Contrôle d’accès : Les vues peuvent être utilisées pour limiter l’accès aux données sensibles. Par exemple, une vue peut être créée pour n’afficher que les informations nécessaires à un groupe spécifique d’utilisateurs, empêchant ainsi l’accès direct aux tables sous-jacentes.</li>
-<li>Masquage des données : Les vues peuvent masquer des colonnes ou des lignes spécifiques contenant des informations sensibles. Par exemple, une vue peut exclure les adresses des patients ou les diagnostics sensibles.</li>
-<li>Audit et conformité : Les vues peuvent aider à garantir que seules les données nécessaires sont accessibles, ce qui est important pour la conformité aux réglementations sur la protection des données (comme le RGPD en Europe).</li>
-</ul>
-</details>
-<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 8. Quels seraient les impacts sur les performances si les tables contenaient des millions d’enregistrements ?</p>
-<details class="question">
-<summary>Correction</summary>
-<ul>
-<li>Performance des requêtes : Les vues peuvent améliorer la lisibilité et la maintenance du code, mais elles peuvent aussi avoir un impact sur les performances si elles sont mal utilisées. Les vues complexes ou celles qui impliquent des jointures multiples peuvent ralentir les requêtes.</li>
-<li>Indexation : L’utilisation d’index appropriés sur les tables sous-jacentes peut améliorer les performances des vues. Cependant, les vues elles-mêmes ne peuvent pas être indexées directement.</li>
-<li>Vues matérialisées : Pour les grandes tables, les vues matérialisées peuvent être utilisées pour stocker les résultats de la vue et améliorer les performances des requêtes. Les vues matérialisées nécessitent cependant des mises à jour périodiques pour refléter les changements dans les données sous-jacentes.</li>
-<li>Cache : Les SGBD modernes utilisent des mécanismes de cache pour améliorer les performances des vues. Cependant, les vues très dynamiques ou celles qui changent fréquemment peuvent ne pas bénéficier autant du cache.</li>
-</ul>
-</details>
-<h2 id="4-questions-sur-les-dates">4. Questions sur les Dates<a class="headerlink" href="#4-questions-sur-les-dates" title="Permanent link">⚓︎</a></h2>
-<p>Profitons en pour s'entraîner sur les dates <img alt="⌚️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/231a.svg" title=":watch:" /> ...</p>
-<p>lien vers la documentation MySQL : <a href="https://dev.mysql.com/doc/refman/8.4/en/date-and-time-functions.html">ici</a></p>
-<p>Voici quelques questions supplémentaires pour traiter des dates dans le contexte de la gestion d'un hôpital :</p>
-<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 9. Quels patients ont eu des consultations au cours des 30 derniers jours ?</p>
-<details class="question">
-<summary>Correction</summary>
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="n">p</span>
-<span class="k">JOIN</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">patient_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">patient_id</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">DATEADD</span><span class="p">(</span><span class="k">DAY</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="n">GETDATE</span><span class="p">());</span>
-</code></pre></div>
-</details>
-<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 10. Quels médecins ont effectué des consultations au cours de la dernière semaine ?</p>
-<details class="question">
-<summary>Correction</summary>
-<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">Medecins</span><span class="w"> </span><span class="n">m</span>
-<span class="k">JOIN</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">medecin_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">medecin_id</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">DATEADD</span><span class="p">(</span><span class="k">DAY</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="n">GETDATE</span><span class="p">());</span>
-</code></pre></div>
-</details>
-<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 11. Quels traitements ont été administrés au cours du mois de septembre 2024 ?</p>
-<details class="question">
-<summary>Correction</summary>
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">description</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">date_traitement</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">Traitements</span><span class="w"> </span><span class="n">t</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">date_traitement</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="s1">&#39;2024-09-01&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="s1">&#39;2024-09-30&#39;</span><span class="p">;</span>
-</code></pre></div>
-</details>
-<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 12. Quels patients n'ont pas eu de consultations depuis plus d'un an ?</p>
-<details class="question">
-<summary>Correction</summary>
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">prenom</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="n">p</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">patient_id</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">patient_id</span>
-<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="k">c</span>
-<span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">DATEADD</span><span class="p">(</span><span class="k">YEAR</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">GETDATE</span><span class="p">())</span>
-<span class="p">);</span>
-</code></pre></div>
-</details>
-<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 13. Combien de consultations ont été effectuées chaque mois au cours de l'année 2024 ?</p>
-<details class="question">
-<summary>Correction</summary>
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">annee</span><span class="p">,</span><span class="w"> </span><span class="k">MONTH</span><span class="p">(</span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">mois</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nombre_consultations</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="k">c</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2024</span>
-<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="p">),</span><span class="w"> </span><span class="k">MONTH</span><span class="p">(</span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="p">)</span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">annee</span><span class="p">,</span><span class="w"> </span><span class="n">mois</span><span class="p">;</span>
-</code></pre></div>
-</details>
-<p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 14. Quels traitements ont été administrés plus de 6 mois après la consultation correspondante ?</p>
-<details class="question">
-<summary>Correction</summary>
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">description</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">date_traitement</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">Traitements</span><span class="w"> </span><span class="n">t</span>
-<span class="k">JOIN</span><span class="w"> </span><span class="n">Consultations</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">consultation_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">consultation_id</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">date_traitement</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">DATEADD</span><span class="p">(</span><span class="k">MONTH</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">date_consultation</span><span class="p">);</span>
-</code></pre></div>
-</details>
-<p><img alt="date" class="center" src="../data/date.webp" width="30%" /></p>
-<div class="admonition tip">
-<p class="admonition-title">Gestion des dates</p>
-<p>Gérer les formats de date dans une base de données est crucial pour assurer la cohérence, la précision et la performance des requêtes. Voici quelques meilleures pratiques à suivre :</p>
-<ol>
-<li>Utiliser des types de données appropriés</li>
-</ol>
-<p><strong>DATE</strong> : Utilisez ce type pour stocker uniquement des dates (année, mois, jour).
-<strong>DATETIME</strong> ou <strong>TIMESTAMP</strong> : Utilisez ces types pour stocker des dates et des heures complètes (année, mois, jour, heure, minute, seconde).
-<em>TIME*</em> : Utilisez ce type pour stocker uniquement des heures (heure, minute, seconde).</p>
-<ol>
-<li>Normaliser les formats de date</li>
-</ol>
-<p><strong>Format ISO 8601</strong> : Utilisez le format ISO 8601 (YYYY-MM-DD) pour stocker les dates. Ce format est standardisé et évite les ambiguïtés liées aux formats régionaux.
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="s1">&#39;2024-10-15&#39;</span><span class="w">  </span><span class="c1">-- Format ISO 8601</span>
+<summary>proposition</summary>
+<p>Réaliser une sauvegarde contenant uniquement la structure :
+  <div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>mysqldump<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>--no-data<span class="w"> </span>tp_sauvegarde<span class="w"> </span>&gt;<span class="w"> </span>structure_tp.sql
 </code></pre></div></p>
-<ol>
-<li>Indexer les colonnes de date</li>
-</ol>
-<p><strong>Indexation</strong> : Créez des index sur les colonnes de date pour améliorer les performances des requêtes qui filtrent ou trient par date.
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_date_consultation</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Consultations</span><span class="p">(</span><span class="n">date_consultation</span><span class="p">);</span>
+</details>
+<h4 id="22-simuler-une-perte-de-donnees">2.2 Simuler une perte de données<a class="headerlink" href="#22-simuler-une-perte-de-donnees" title="Permanent link">⚓︎</a></h4>
+<p>👉 Supprimer une table ou des données :</p>
+<details class="question">
+<summary>proposition</summary>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">logs</span><span class="p">;</span>
+</code></pre></div>
+</details>
+<p>👉 Vérifier que les données sont perdues :</p>
+<details class="question">
+<summary>proposition</summary>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">logs</span><span class="p">;</span>
+</code></pre></div>
+</details>
+<h4 id="23-restauration-des-donnees">2.3 Restauration des données<a class="headerlink" href="#23-restauration-des-donnees" title="Permanent link">⚓︎</a></h4>
+<p>👉 Restaurer la base à partir de la sauvegarde :
+   <div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>mysql<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>tp_sauvegarde<span class="w"> </span>&lt;<span class="w"> </span>sauvegarde_tp.sql
+</code></pre></div>
+👉 Vérifier que les données sont restaurées :
+   <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">logs</span><span class="p">;</span>
 </code></pre></div></p>
+<p>❓ Que se passe-t-il si la base de données <code>tp_sauvegarde</code> n’existe pas avant la restauration ?</p>
+<details class="question">
+<summary>proposition</summary>
+<p>Erreur SQL, la base n'existe pas.</p>
+</details>
+<p>❓ Que faire pour éviter ce problème lors de grandes restaurations ?</p>
+<details class="question">
+<summary>proposition</summary>
+<p>Inclure l'option <code>--add-drop-database</code> lors de la sauvegarde pour que le fichier contienne la commande <code>DROP DATABASE IF EXISTS</code>.</p>
+</details>
+<h4 id="24-automatisation-des-sauvegardes">2.4 Automatisation des sauvegardes<a class="headerlink" href="#24-automatisation-des-sauvegardes" title="Permanent link">⚓︎</a></h4>
+<p>👉 Expliquer comment planifier des sauvegardes régulières avec le planificateur de tâches sous Windows.</p>
+<details class="question">
+<summary>proposition</summary>
+<p><strong>Étape 1 : Préparer le script de sauvegarde</strong><br />
+  1. Créez un fichier batch (par exemple, <code>backup_mysql.bat</code>) :
+     <div class="language-batch highlight"><span class="filename">Batchfile</span><pre><span></span><code><span class="p">@</span><span class="k">echo</span> off
+<span class="k">set</span> <span class="nv">BACKUP_DIR</span><span class="p">=</span>C:\backups
+<span class="k">set</span> <span class="nv">TIMESTAMP</span><span class="p">=</span><span class="nv">%date:~10,4%</span>-<span class="nv">%date:~4,2%</span>-<span class="nv">%date:~7,2%</span>
+<span class="k">set</span> <span class="nv">BACKUP_FILE</span><span class="p">=</span><span class="nv">%BACKUP_DIR%</span>\all_databases_<span class="nv">%TIMESTAMP%</span>.sql
+
+<span class="k">set</span> <span class="nv">MYSQL_USER</span><span class="p">=</span>root
+<span class="k">set</span> <span class="nv">MYSQL_PASSWORD</span><span class="p">=</span>VotreMotDePasse
+
+<span class="k">if</span> <span class="k">not</span> <span class="k">exist</span> <span class="s2">&quot;</span><span class="nv">%BACKUP_DIR%</span><span class="s2">&quot;</span> <span class="k">mkdir</span> <span class="s2">&quot;</span><span class="nv">%BACKUP_DIR%</span><span class="s2">&quot;</span>
+
+mysqldump -u <span class="nv">%MYSQL_USER%</span> -p<span class="nv">%MYSQL_PASSWORD%</span> --all-databases <span class="p">&gt;</span> <span class="s2">&quot;</span><span class="nv">%BACKUP_FILE%</span><span class="s2">&quot;</span>
+
+<span class="k">if</span> <span class="nv">%ERRORLEVEL%</span> <span class="ow">EQU</span> 0 <span class="p">(</span>
+   <span class="k">echo</span> Sauvegarde réussie : <span class="nv">%BACKUP_FILE%</span>
+<span class="p">)</span> <span class="k">else</span> <span class="p">(</span>
+   <span class="k">echo</span> Erreur lors de la sauvegarde
+<span class="p">)</span>
+<span class="k">pause</span>
+</code></pre></div>
+  <strong>Explications des variables :</strong></p>
+<ul>
+<li><strong>BACKUP_DIR</strong> : Répertoire où les sauvegardes seront enregistrées. Vous pouvez modifier <code>C:\backups</code> par un chemin de votre choix.<br /></li>
+<li><strong>MYSQL_USER</strong> et <strong>MYSQL_PASSWORD</strong> : Identifiants de connexion à votre serveur MySQL. Remplacez VotreMotDePasse par le mot de passe du compte MySQL <code>root</code> (ou un autre utilisateur disposant des droits nécessaires).<br /></li>
+<li>
+<p><strong>TIMESTAMP</strong> : Génère une date au format YYYY-MM-DD pour inclure dans le nom du fichier.</p>
+</li>
+<li>
+<p>Testez le fichier batch en double-cliquant dessus ou via l'Invite de commandes.</p>
+</li>
+</ul>
+<p><strong>Étape 2 : Configurer le Planificateur de tâches</strong><br />
+  1. Ouvrez le <strong>Planificateur de tâches</strong> : Appuyez sur <code>Win + R</code>, tapez <code>taskschd.msc</code> et appuyez sur Entrée.<br />
+  2. Créez une nouvelle tâche :Cliquez sur <strong>Créer une tâche...</strong> dans le menu de droite.<br />
+  3. Configurez la tâche :<br />
+  <strong>Général :</strong> Donnez un nom à la tâche, par exemple, "Sauvegarde MySQL", puis Cochez <strong>Exécuter même si l'utilisateur n'est pas connecté</strong> et sélectionnez <strong>Exécuter avec les autorisations maximales</strong>.<br />
+  <strong>Déclencheurs :</strong> Cliquez sur <strong>Nouveau...</strong> et planifiez l'exécution (par exemple, quotidiennement à 2h du matin).<br />
+  <strong>Actions :</strong> Cliquez sur <strong>Nouveau...</strong>, choisissez <strong>Démarrer un programme</strong>, et indiquez le chemin vers votre fichier batch (<code>backup_mysql.bat</code>).<br />
+  4. Sauvegardez et testez : Cliquez sur <strong>OK</strong> et exécutez la tâche manuellement pour vérifier son fonctionnement.</p>
+</details>
+<p>❓ Donner une commande sauvegarder 2 bases de données en même temps.</p>
+<details class="question">
+<summary>proposition</summary>
+<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>mysqldump<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>--databases<span class="w"> </span>tp_sauvegarde<span class="w"> </span>autre_base<span class="w"> </span>&gt;<span class="w"> </span>multi_backup.sql
+</code></pre></div>
+</details>
+<p>❓  Donner une commande pour sauvegarder et compresser la sauvegarde :</p>
+<details class="question">
+<summary>proposition</summary>
+<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>mysqldump<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>tp_sauvegarde<span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>sauvegarde_tp.sql.gz
+</code></pre></div>
+</details>
+<div class="admonition info">
+<p class="admonition-title">Conseils généraux</p>
 <ol>
-<li>Gérer les fuseaux horaires</li>
+<li><strong>Vérification des sauvegardes :</strong><ul>
+<li>Testez régulièrement les fichiers de sauvegarde en restaurant une base sur un environnement de test.</li>
+</ul>
+</li>
+<li><strong>Sécurisation :</strong><ul>
+<li>Stockez les sauvegardes dans un endroit sécurisé, idéalement sur un autre serveur ou un service cloud.</li>
+<li>Utilisez un mot de passe dédié à la sauvegarde.</li>
+</ul>
+</li>
+<li><strong>Compression des sauvegardes :</strong><ul>
+<li>Ajoutez une étape de compression pour économiser de l'espace :</li>
+<li>Sous Linux :
+    <div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>mysqldump<span class="w"> </span>...<span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span>sauvegarde.sql.gz
+</code></pre></div></li>
+<li>Sous Windows, utilisez un outil comme 7-Zip dans le script.</li>
+</ul>
+</li>
 </ol>
-<p><strong>Stockage en UTC</strong> : Stockez les dates et heures en temps universel coordonné (UTC) pour éviter les problèmes liés aux fuseaux horaires.
-<strong>Conversion locale</strong> : Convertissez les dates et heures en fuseau horaire local au moment de l'affichage ou de l'utilisation.</p>
-<ol>
-<li>Valider les entrées de date</li>
-</ol>
-<p><strong>Validation</strong> : Validez les entrées de date au niveau de l'application pour éviter les erreurs de format et les dates invalides.
-<strong>Contraintes</strong> : Utilisez des contraintes de base de données pour garantir l'intégrité des dates (par exemple, une date de naissance ne peut pas être dans le futur).</p>
-<ol>
-<li>Utiliser des fonctions de date</li>
-</ol>
-<p><strong>Fonctions intégrées</strong> : Utilisez les fonctions de date intégrées du SGBD pour manipuler et formater les dates (par exemple, <code>DATEADD</code>, <code>DATEDIFF</code>, <code>YEAR</code>, <code>MONTH</code>, <code>DAY</code>).
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">DATEADD</span><span class="p">(</span><span class="k">DAY</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="n">GETDATE</span><span class="p">());</span><span class="w">  </span><span class="c1">-- Ajoute 30 jours à la date actuelle</span>
-</code></pre></div></p>
-<ol>
-<li>Stocker les dates de manière cohérente</li>
-</ol>
-<p><strong>Consistance</strong> : Assurez-vous que toutes les dates dans la base de données sont stockées de manière cohérente, en utilisant les mêmes types de données et formats.</p>
-<ol>
-<li>Documenter les conventions de date</li>
-</ol>
-<p><strong>Documentation</strong> : Documentez les conventions de date utilisées dans votre base de données pour que tous les développeurs et utilisateurs soient au courant des pratiques standard.</p>
-<ol>
-<li>Gérer les dates nulles</li>
-</ol>
-<p><strong>Valeurs NULL</strong> : Définissez clairement comment gérer les dates nulles (par exemple, une date de fin de contrat non définie) et utilisez des valeurs par défaut appropriées si nécessaire.</p>
-<ol>
-<li>Tester les performances</li>
-</ol>
-<p><strong>Tests</strong> : Testez les performances des requêtes impliquant des dates, surtout pour les grandes tables, et optimisez les index et les requêtes en conséquence.</p>
+<p>Découvrir les outils de sauvegarde tiers comme <strong>Percona XtraBackup</strong> ou <strong>MySQL Enterprise Backup</strong>.</p>
 </div>
 
 
