@@ -8,20 +8,24 @@
 
 !!! warning "Actu SIO1 SLAM"
 
-    📌 Thème en cours B2 : [SQL avancé](./1_Base_de_donnees/4_SQLComplexe/cours.md) : Requêtes imbriquées <br />
-    ⌛️ A venir : opérateurs ensemblistes, jointures externes<br />
+    📌 Thème en cours B2 : [PHP : développement avec Resto](./7_Programmation/7.3_developpementPHP/00_presentation.md) <br />
+    ⌛️ A venir : stage <br />
     
     📅 Stage SIO1 : lundi 18 mai - vendredi 19 juin 2026, retour au lycée le lundi 22 juin de 8h30 à 12h30 <br />
 
 ??? note "🚨 *Thèmes traités B2 SLAM Semestre 2*"
 
     - [POO en Python](https://sofaugeras.github.io/TNSI/T2_Programmation/2.2_Programmation_Orientee_Objet/cours/)
+    - 🎓 TP noté POO en PHP
     - [UML Introduction](./3_UML/3.1_diagrammeClasse/3.1.0_IntroUML.md) 
     - [UML Diagramme de classe](./3_UML/3.1_diagrammeClasse/3.1.1_diagrammeDeClasse.md)
+    - 🎓 QCM Diagramme de classe
     - [Calcul d'un MPD](./3_UML/3.1_diagrammeClasse/3.1.2_CalculMPD.md)
     - [Diagramme de cas d'utilisation - Use Case](./3_UML/3.2_UseCase/cours.md)
     - [Diagramme de séquence](./3_UML/3.3_Sequence/cours.md) 
     - 🎓 DS UML : mercredi 18 Mars
+    - [SQL avancé](./1_Base_de_donnees/4_SQLComplexe/cours.md) : Requêtes imbriquées, opérateurs ensemblistes, jointures externes
+    - 🎓 TP Noté SQL Avancé
 
 ??? note "🚨 *Thèmes traités B1 semestre 1*"
 
@@ -35,12 +39,11 @@
 
 !!! warning "Actu SIO2 SLAM"
 
-    📌 Thème en cours B2 : [Docker](./5_devops/5.2_docker/1_cours.md) <br />
+    📌 Thème en cours B2 : [deploiement continue](./5_devops/5.1_notionDevops/5_deploiement.md)<br />
     ⌛️ A venir B2 :  <br />
-    🎓 TP Programmation BdD : Mercredi 18 mars ou Mercredi 1er Avril
 
-    📌 Thème en cours B3 : [Audit de Code](./6_Cybersecurite/6.1_cours/9_auditCode.md) <br />
-    ⌛️ A venir B3 : [révision Cyber](./6_Cybersecurite/6.1_cours/9_exercices.md) <br />
+    📌 Thème en cours B3 : Oral : analyse de cas Cyber <br />
+    ⌛️ A venir B3 : [révision Cyber](./6_Cybersecurite/6.1_cours/9_exercices.md)  <br />
 
     📅 Stage SIO2 : lundi 5 janvier - vendredi 13 février 2026<br />
 
@@ -75,17 +78,21 @@
    
 ??? note "🚨 *Thèmes traités B2*"
 
-    - [Rappel Base de données : Anabase](./1_Base_de_donnees/5_TP/tp8_anabase.md)
-    - [Modèle MVC : principes](./7_Programmation/7.3_MVC/cours.md)
+    - [Rappel Base de données : Anabase](./1_Base_de_donnees/5_TP/tp12_anabase.md)
+    - [Modèle MVC : principes](./7_Programmation/7.4_MVC/cours.md)
     - [Laravel : installation Bac à sable](./4_Laravel/4.1_installation/cours.md)
     - [Laravel : Initilisation Projet ToDo](./4_Laravel/4.2_toDo/4.2.1_initialisation.md)
     - [Laravel : Gestion des catégories](./4_Laravel/4.2_toDo/4.2.2_Ajout_catégorie.md)
     - [Laravel : Gestion des listes](./4_Laravel/4.2_toDo/4.2.4_GestionListes.md)
+    - 🎓 TP Noté : Use Case Todo
     - [Intégration continue : TP avec laravel](./5_devops/5.1_notionDevops/2_ci.md)
     - [Intégration continue : les tests](./5_devops/5.1_notionDevops/3_tests.md)
     - [découverte NoSQL](./1_Base_de_donnees/6_NoSQL/cours.md)
     - [Programmation BdD](./2_Programmation_SQL/sommaire.md)
-    - [Intégration continue : Issue et Pull Request](./5_devops/5.1_notionDevops/4_issues_PR.md)
+    - [Intégration continue : Issue et Pull Request](./5_devops/5.1_notionDevops/4_issues_PR.md) + 🎓 évaluation Ci 
+    - 🎓 TP Programmation BdD : Mercredi 18 mars ou Mercredi 1er Avril
+    - [Docker](./5_devops/5.2_docker/1_cours.md) 
+
 
 ??? note "🚨 *Thèmes traités B3*"
 
@@ -101,6 +108,7 @@
     - [TP Violation de gestion d'authentification et de session](./6_Cybersecurite/6.2_TP/3_tpViolationGestionAuthentification.md)
     - [Pentest](./6_Cybersecurite/6.1_cours/8_pentest.md) 
     - 🎓 Etude de cas Blanche
+    -  [Audit de Code](./6_Cybersecurite/6.1_cours/9_auditCode.md) 
 
 <!--
 !!! warning "Calendrier de l'avent"

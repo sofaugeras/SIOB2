@@ -1,4 +1,4 @@
-# 4. TP Docker — Écrire son premier Dockerfile 🐍
+# 4. TP Docker — Python 🐍
 
 Projet : application Flask + Redis sur `srv-debian`
 
@@ -8,30 +8,32 @@ Projet : application Flask + Redis sur `srv-debian`
     - Écrire un **Dockerfile** pour une application Python
     - Écrire un **docker-compose.yml** de zéro
     - Faire communiquer **2 conteneurs** via un réseau Docker
+    - Accéder à l'application **via Nginx** (sans port dans l'URL)
     - Corriger ses erreurs en lisant les **logs**
 
 !!! warning "Prérequis"
     - Avoir réalisé le TP précédent (WordPress avec Docker Compose)
     - Être connecté à `srv-debian` en SSH
+    - Nginx est déjà configuré sur `srv-debian` (géré par le professeur)
 
-## 🗺️ Ce qu'on va construire
+## 🗺️ Ce que l'on va construire
 
 Une application web Python qui **compte le nombre de visites** du site.  
 À chaque fois qu'un visiteur charge la page, le compteur s'incrémente.  
 Le compteur est stocké dans **Redis** (une base de données ultra-rapide en mémoire).
 
-```
-Navigateur  →  [Flask :5000]  →  [Redis :6379]
-                  conteneur          conteneur
-                  (Python)           (compteur)
-```
+![Stack Flask + Redis + Nginx](./data/stack_flask_redis.png){: .center width=80%}
 
-**Ce qui est fourni :** le code Python (`app.py` + `requirements.txt`)  
+!!! info "🔧 Rôle de Nginx ici"
+    Nginx joue le rôle de **reverse proxy** : il reçoit les requêtes sur le port 80
+    et les redirige vers votre conteneur Flask. C'est exactement ce qu'il fait
+    déjà pour vos sites WordPress.  
+    **Avantage :** l'URL finale ne contient pas de numéro de port.
+
+**Ce qui est fourni :** le code Python (`app.py` + `requirements.txt`) + la config Nginx  
 **Ce que vous écrivez :** le `Dockerfile` et le `docker-compose.yml`
 
- 
-
-## Étape 1 — Préparer son espace de travail 📁
+## 1. Préparer son espace de travail 📁
 
 Connectez-vous à `srv-debian` et créez un dossier pour ce TP :
 
@@ -44,9 +46,7 @@ mkdir ~/flask-counter
 cd ~/flask-counter
 ```
 
- 
-
-## Étape 2 — Découvrir le code fourni 🐍
+## 2. Découvrir le code fourni 🐍
 
 ### Le fichier `app.py`
 
@@ -119,9 +119,7 @@ Vous devez avoir :
 -rw-r--r--  requirements.txt
 ```
 
- 
-
-## Étape 3 — Écrire le Dockerfile 📝
+## 3. Écrire le Dockerfile 📝
 
 !!! abstract "Rappel — À quoi sert le Dockerfile ?"
     Le Dockerfile décrit comment **construire l'image** de votre application.  
@@ -151,8 +149,6 @@ FROM ______:______
     FROM python:3.11-slim
     ```
 
- 
-
 **Instruction 2 — Dossier de travail**
 
 Définissez `/app` comme dossier de travail dans le conteneur.  
@@ -166,8 +162,6 @@ WORKDIR ______
     ```dockerfile
     WORKDIR /app
     ```
-
- 
 
 **Instruction 3 — Copier les dépendances EN PREMIER**
 
@@ -187,8 +181,6 @@ COPY ______ .
     COPY requirements.txt .
     ```
 
- 
-
 **Instruction 4 — Installer les dépendances Python**
 
 `pip` est le gestionnaire de paquets Python (l'équivalent de `composer` en PHP).  
@@ -203,8 +195,6 @@ RUN pip install --no-cache-dir -r ______
     RUN pip install --no-cache-dir -r requirements.txt
     ```
 
- 
-
 **Instruction 5 — Copier le reste du code**
 
 Maintenant qu'on a installé les dépendances, on copie le code source.
@@ -217,8 +207,6 @@ COPY ______ ______
     ```dockerfile
     COPY . .
     ```
-
- 
 
 **Instruction 6 — Exposer le port**
 
@@ -233,8 +221,6 @@ EXPOSE ______
     EXPOSE 5000
     ```
 
- 
-
 **Instruction 7 — Commande de démarrage**
 
 La commande pour lancer l'application Python est `python app.py`.
@@ -247,8 +233,6 @@ CMD ["______", "______"]
     ```dockerfile
     CMD ["python", "app.py"]
     ```
-
- 
 
 ### ✅ Dockerfile complet attendu
 
@@ -270,8 +254,6 @@ Une fois toutes les instructions complétées, votre Dockerfile doit ressembler 
 
     CMD ["python", "app.py"]
     ```
-
- 
 
 ## Étape 4 — Écrire le docker-compose.yml ⚙️
 
@@ -303,12 +285,15 @@ networks:
   # ... réseau interne
 ```
 
- 
-
 **Service `web` — l'application Flask**
 
 Flask n'utilise pas une image toute faite — elle se **construit** à partir de votre Dockerfile.  
 Le mot-clé pour ça est `build: .` (construire depuis le dossier courant).
+
+!!! info "Port interne uniquement"
+    Contrairement au TP WordPress, vous n'exposez **pas** de port vers l'extérieur ici.
+    Nginx se charge de faire le lien entre l'URL publique et votre conteneur Flask.
+    Le port 5000 reste **interne au serveur**.
 
 ```yaml
   web:
@@ -316,38 +301,37 @@ Le mot-clé pour ça est `build: .` (construire depuis le dossier courant).
     container_name: flask_VOTRE_PRENOM
     restart: unless-stopped
     ports:
-      - "______ :5000"    # PORT_EXTERNE:PORT_INTERNE
+      - "127.0.0.1:______:5000"    # Accessible uniquement depuis localhost (pour Nginx)
     networks:
       - ______
     depends_on:
       - ______
 ```
 
-!!! question "Quel port externe choisir ?"
-    Vous avez déjà le port 808X occupé par WordPress.  
-    Choisissez un port dans la plage **9081-9083** selon votre prénom :
+!!! question "Quel port local choisir ?"
+    Choisissez un port dans la plage **9081-9083** selon votre prénom.  
+    Ce port n'est **pas accessible depuis votre navigateur** directement —  
+    c'est Nginx qui va l'utiliser en interne.
 
-    | Étudiant  | Port WordPress | Port Flask |
-    |   --|     |    |
-    | elouan    | 8081          | 9081       |
-    | alexandre | 8082          | 9082       |
-    | mael      | 8083          | 9083       |
+    | Étudiant  | Port Flask (local) |
+    |   --|     |
+    | elouan    | 9081              |
+    | alexandre | 9082              |
+    | mael      | 9083              |
 
 ??? help "Indice service web"
     ```yaml
       web:
         build: .
-        container_name: flask_elouan
+        container_name: flask_prenom
         restart: unless-stopped
         ports:
-          - "9081:5000"
+          - "127.0.0.1:VOTRE_PORT:5000"
         networks:
           - flask_network
         depends_on:
           - redis
     ```
-
- 
 
 **Service `redis` — la base de données**
 
@@ -371,13 +355,11 @@ Elle n'a pas besoin de configuration particulière.
     ```yaml
       redis:
         image: redis:alpine
-        container_name: redis_elouan
+        container_name: redis_prenom
         restart: unless-stopped
         networks:
           - flask_network
     ```
-
- 
 
 **Le réseau interne**
 
@@ -396,38 +378,38 @@ networks:
         driver: bridge
     ```
 
- 
-
 ### ✅ docker-compose.yml complet attendu
 
-??? done "Solution complète (elouan)"
+??? done "Solution complète"
     ```yaml
     services:
 
+      # ── Application Flask ──────────────────────────────────────────────
       web:
-        build: .
-        container_name: flask_elouan
+        build: .                          # Construit l'image depuis le Dockerfile local
+        container_name: flask_PRENOM
         restart: unless-stopped
         ports:
-          - "9081:5000"
+          - "127.0.0.1:VOTRE_PORT:5000"                   # PORT_HOTE:PORT_CONTENEUR
         networks:
           - flask_network
         depends_on:
-          - redis
+          - redis                         # Redis démarre avant Flask
 
+      # ── Base de données Redis ──────────────────────────────────────────
       redis:
-        image: redis:alpine
-        container_name: redis_elouan
+        image: redis:alpine               # Image officielle, version légère
+        container_name: redis_PRENOM
         restart: unless-stopped
         networks:
           - flask_network
 
+    # ── Réseau interne ─────────────────────────────────────────────────
     networks:
       flask_network:
         driver: bridge
-    ```
 
- 
+    ```
 
 ## Étape 5 — Construire et tester 🚀
 
@@ -467,31 +449,39 @@ docker compose ps
 
 Résultat attendu :
 
+```bash
+catam@srv-debian13:~/flask-counter$ docker compose ps
+NAME          IMAGE               COMMAND                  SERVICE   CREATED          STATUS          PORTS
+flask_catam   flask-counter-web   "python app.py"          web       20 seconds ago   Up 17 seconds   127.0.0.1:8084->5000/tcp
+redis_catam   redis:alpine        "docker-entrypoint.s…"   redis     21 seconds ago   Up 18 seconds   6379/tcp
 ```
-NAME             STATUS    PORTS
-flask_elouan     running   0.0.0.0:9081->5000/tcp
-redis_elouan     running
-```
 
- 
+## 6. Tester dans le navigateur 🌐
 
-## Étape 6 — Tester dans le navigateur 🌐
+!!! success "URL sans numéro de port"
+    Grâce à Nginx, vous accédez à votre application **directement par son nom**,
+    sans avoir à taper un numéro de port dans l'URL.
 
-| Étudiant  | URL à ouvrir                          |
-|   --|             |
-| elouan    | http://elouan.srv-debian.local:9081   |
-| alexandre | http://alexandre.srv-debian.local:9082|
-| mael      | http://mael.srv-debian.local:9083     |
+| Étudiant  | URL à ouvrir                        |
+|   --|           |
+| elouan    | http://flask.elouan.srv-debian.local    |
+| alexandre | http://flask.alexandre.srv-debian.local |
+| mael      | http://flask.mael.srv-debian.local      |
 
 Actualisez la page plusieurs fois — le compteur doit s'incrémenter à chaque fois.
 
+??? bug "fix Ce site est inaccessible"
+  et votre vhosts dans `C:\Windows\System32\drivers\etc` ...
+  Ajouter la ligne `192.168.0.119 flask.prenom.srv-debian.local`
+  
 !!! success "🎉 Ça fonctionne !"
+    ![illustration](./data/docker_redis_compteur.png){: .center width=50%}
+
     Votre application Flask communique avec Redis via le réseau Docker interne.  
-    Flask utilise le nom `redis` pour joindre le conteneur Redis — c'est le **DNS interne Docker**.
+    Flask utilise le nom `redis` pour joindre le conteneur Redis — c'est le **DNS interne Docker**.  
+    Et Nginx rend l'application accessible sans numéro de port dans l'URL.
 
- 
-
-## Étape 7 — Corriger ses erreurs 🔧
+## 7. Corriger ses erreurs 🔧
 
 C'est la compétence la plus importante en DevOps : **savoir diagnostiquer**.
 
@@ -532,9 +522,7 @@ python3 -c "import redis; r=redis.Redis(host='redis'); print(r.ping())"
 exit
 ```
 
- 
-
-## Étape 8 — Questions de réflexion 🧠
+## 8. Questions de réflexion 🧠
 
 !!! question "📝 À répondre dans votre compte-rendu"
 
@@ -556,6 +544,11 @@ exit
     Le compteur de visites est stocké dans Redis, pas sur disque.  
     Que se passe-t-il si vous faites `docker compose down` puis `docker compose up -d` ?  
     Testez et expliquez. Comment corriger ça ?
+
+    **Question 5**  
+    Dans le `docker-compose.yml`, le port est déclaré `127.0.0.1:8081:5000`
+    et non simplement `8081:5000`.  
+    Quelle est la différence ? Pourquoi est-ce important du point de vue sécurité ?
 
 ??? done "Éléments de correction"
 
@@ -586,7 +579,10 @@ exit
       redis_data:
     ```
 
- 
+    **Q5** — `127.0.0.1:8081:5000` lie le port **uniquement sur l'interface locale** du serveur.
+    Le port 8081 n'est donc **pas joignable depuis l'extérieur** — seulement depuis Nginx qui tourne
+    sur la même machine. Sans le `127.0.0.1:`, le port serait ouvert sur toutes les interfaces réseau
+    et n'importe qui sur le réseau pourrait contourner Nginx et accéder directement à Flask.
 
 ## 🧾 Synthèse — Ce que vous avez écrit
 

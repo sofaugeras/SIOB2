@@ -1,4 +1,4 @@
-# TP Conférence
+# TP Université
 
 !!! note "Objectif du TP"
 

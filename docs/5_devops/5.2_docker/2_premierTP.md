@@ -154,7 +154,7 @@ Maintenant que nous avons lancé notre première « vraie » machine, intéresso
 
 Surprise ! On retrouve des plateformes (amd64, i686, armXX). Et c'est normal, Docker est multiplateforme et dans le cas de notre exemple l'exécutable « hello » est codé en C, il est donc logique de retrouver l'exécutable pour les différentes plateformes où l'image doit fonctionner.
 
-Maintenant que nous avons vu le projet, entrons plus en détail, allons voir la définition de notre image : le [fichier Dockerfile.](https://github.com/docker-library/hello-world/blob/master/i386/hello-world/Dockerfile)
+Maintenant que nous avons vu le projet, entrons plus en détail, allons voir la définition de notre image : le [fichier Dockerfile.](https://github.com/docker-library/hello-world/blob/master/i386/Dockerfile)
 
 ![Hello World 2](./data/hello_world3.png){: .center width=80%}
 
@@ -278,7 +278,7 @@ Cet exercice vous permet d'observer concrètement comment un volume partagé cr�
 
 **Étape 1 — Préparer un dossier de travail** 🗂️
 
-Créez un dossier `tp_volume` sur votre machine, puis placez-vous dedans :
+Créez un dossier `tp_volume` sur votre machine à la racine de votre ``C:``, puis placez-vous dedans (Vous n'avez pas les droits en écriture dans ``C:\Windows\System32``):
 
 ```powershell
 mkdir tp_volume
@@ -296,7 +296,7 @@ docker run -v ${PWD}:/mnt/partage -it ubuntu bash
 Dans le shell Ubuntu du conteneur :
 
 ```bash
-echo "Créé depuis le conteneur Docker" > /mnt/partage/depuis_docker.txt
+echo "Cree depuis le conteneur Docker" > /mnt/partage/depuis_docker.txt
 ls /mnt/partage
 ```
 
@@ -316,7 +316,7 @@ cat depuis_docker.txt
 Depuis votre machine, ajoutez une ligne au fichier :
 
 ```powershell
-Add-Content depuis_docker.txt "Modifié depuis Windows !"
+Add-Content depuis_docker.txt "Modifie depuis Windows !"
 ```
 
 **Étape 6 — Vérifier la modification depuis le conteneur** 🔄

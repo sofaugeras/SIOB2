@@ -1,5 +1,14 @@
 # CI - Tests unitaires 🧪
 
+!!! info  "🎯 Objectifs pédagogiques"
+
+    - Comprendre la structure des tests **Unit** et **Feature** dans Laravel.  
+    - Écrire, exécuter et interpréter des tests automatisés.  
+    - Intégrer les tests dans une **pipeline d’intégration continue (CI)**.  
+    - Mesurer la **couverture de code** et fixer un seuil minimal de qualité.
+
+    **Compétence :** Mettre à disposition des utilisateurs un service informatique >  Réaliser les tests d’intégration et d’acceptation d’un service
+
 L’exécution de tests unitaires et d’intégrations est au coeur de la démarche DevOps et d’intégration continue. C’est eux qui vont permettre de détecter les anomalies dans les développements réalisés. **Github Actions**, si un ou plusieurs tests sont en erreur, va fournir les rapports détaillés permettant d’identifier l’origine de l’erreur, et va signaler que la tâche est en erreur. Cela peut par exemple empêcher un merge de se réaliser dans Github.
 
 ```
@@ -8,12 +17,6 @@ L’exécution de tests unitaires et d’intégrations est au coeur de la démar
     XDEBUG_MODE: coverage 
     run: php artisan test --coverage --min=80
 ```
-
-!!! info  "🎯 Objectifs pédagogiques"
-    - Comprendre la structure des tests **Unit** et **Feature** dans Laravel.  
-    - Écrire, exécuter et interpréter des tests automatisés.  
-    - Intégrer les tests dans une **pipeline d’intégration continue (CI)**.  
-    - Mesurer la **couverture de code** et fixer un seuil minimal de qualité.
 
 ##  1. Initialisation de l’environnement de test 🏗️
 

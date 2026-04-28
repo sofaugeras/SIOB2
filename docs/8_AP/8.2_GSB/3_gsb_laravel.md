@@ -8,7 +8,7 @@
     - A.4.1.2 – Conception ou adaptation de l’interface utilisateur d’une solution applicative 
     - A.4.1.8 – Réalisation des tests nécessaires à la validation d’éléments adaptés ou développés
 
-Le contexte GSB Laravel reprend le cahier des charges défini en première année sur le contexte [GSB Compte rendu de visite](1_gsb_v1.md). L'environnement technologique évolue. La DSI vous demande de faire évoluer votre application vers une [architecture MVC](../../7_Programmation/7.3_MVC/cours.md), utilisant le [framework Laravel](../../4_Laravel/sommaire.md).
+Le contexte GSB Laravel reprend le cahier des charges défini en première année sur le contexte [GSB Compte rendu de visite](1_gsb_v1.md). L'environnement technologique évolue. La DSI vous demande de faire évoluer votre application vers une [architecture MVC](../../7_Programmation/7.4_MVC/cours.md), utilisant le [framework Laravel](../../4_Laravel/sommaire.md).
 
 **Environnement technologique :** 
 

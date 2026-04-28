@@ -21,7 +21,6 @@
 **CONSULTATION**(^^consultation_id^^, #patient_id, #medecin_id, date_consultation, diagnostic)<br />
 **TRAITEMENT**(^^traitement_id^^, #consultation_id, description, cout, date_traitement)
 
-
 ??? note "Script de création de base"
 
     ```SQL
@@ -175,7 +174,6 @@
     - Vues matérialisées : Pour les grandes tables, les vues matérialisées peuvent être utilisées pour stocker les résultats de la vue et améliorer les performances des requêtes. Les vues matérialisées nécessitent cependant des mises à jour périodiques pour refléter les changements dans les données sous-jacentes.
     - Cache : Les SGBD modernes utilisent des mécanismes de cache pour améliorer les performances des vues. Cependant, les vues très dynamiques ou celles qui changent fréquemment peuvent ne pas bénéficier autant du cache.
 
-
 ## 4. Questions sur les Dates
 
 Profitons en pour s'entraîner sur les dates :watch: ...
@@ -310,4 +308,3 @@ Voici quelques questions supplémentaires pour traiter des dates dans le context
     10. Tester les performances
 
     **Tests** : Testez les performances des requêtes impliquant des dates, surtout pour les grandes tables, et optimisez les index et les requêtes en conséquence.
-

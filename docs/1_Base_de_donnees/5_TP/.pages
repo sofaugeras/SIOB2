@@ -5,9 +5,10 @@ nav:
     - TP3 Base Cinéma [LMD] : tp3_cinema.md
     - TP4 Base Cinéma2 [LMD]: tp4_cinema2.md
     - TP5 SNCF [LDD] : tp5_sncf.md
-    - TP6 VOL Complexe [SQL complexe] : tp6_vol2.md
-    - TP7 Université [SQL complexe] : tp7_univ.md
-    - Cas Anabase [Revision SIO2] : tp8_anabase.md
-    - TP9 Sauvegarde de base de données : tp9_sauvegarde.md
-
-
+    - TP6 VOL Complexe [imbriquée + ensembliste] : tp6_vol2.md
+    - TP7 Université [Vues] : tp7_univ.md
+    - TP8 Hopital [vues] : tp8_hopital.md
+    - TP9 Chenil [jointures externes] : tp9_chenil.md
+    - TP10 GSB [récap SIO1] : tp10_global.md
+    - TP11 Cas Anabase [Revision SIO2] : tp11_anabase.md
+    - TP12 Sauvegarde de base de données : tp12_sauvegarde.md

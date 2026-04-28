@@ -207,9 +207,9 @@ Il est toujours possible d'utiliser des jointures dans la requête principale et
 
 	UNION
 
-	SELECT vol_pilote
+	(SELECT vol_pilote
 	FROM VOL
-	WHERE vol_avion = 1;
+	WHERE vol_avion = 1);
 
 	--Solution sans UNION
 	SELECT pil_no, pil_nom, pil_prénom
@@ -230,8 +230,8 @@ Il est toujours possible d'utiliser des jointures dans la requête principale et
 	SELECT av_ville
 	FROM AVION
 	INTERSECT
-	SELECT pil_ville
-	FROM PILOTE;
+	(SELECT pil_ville
+	FROM PILOTE);
 
 	--Solution sans INTERSECT
 	SELECT DISTINCT av_ville
@@ -249,10 +249,10 @@ Il est toujours possible d'utiliser des jointures dans la requête principale et
 	SELECT vol_pilote
 	FROM VOL
 	WHERE vol_avion = 1;
-	UNION
-	SELECT vol_pilote
+	INTERSECT
+	(SELECT vol_pilote
 	FROM VOL
-	WHERE vol_avion = 2;
+	WHERE vol_avion = 2);
 
 	--Solution sans UNION
 	SELECT pil_no, pil_nom, pil_prénom
@@ -314,3 +314,4 @@ Il est toujours possible d'utiliser des jointures dans la requête principale et
 	ON AVION.av_no = VOL.vol_avion
 	WHERE vol_avion IS NULL;
 	```
+	

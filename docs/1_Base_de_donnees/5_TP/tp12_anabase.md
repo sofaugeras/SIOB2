@@ -1,7 +1,8 @@
 # Révision SIO2 : Cas Anabase
 
 !!! note "Objectif du TP"
-	Revoir les notions autour des bases de données, vu en SIO1, semestre 1.
+
+	Revoir les notions autour des bases de données, vu en SIO1.
     Correspond à la compétence **B1.3 Développer la présence en ligne de l’organisation**
 
 ![illustration](./data/anabase/illustration.png){: width=50% .center}
@@ -17,6 +18,7 @@ Pour illustrer ces révisions, j’ai décidé de m’appuyer sur un cas créé 
     Les congressistes et les accompagnateurs peuvent s’inscrire jusqu'à la veille au soir aux activités souhaitées.<br />
 
 ## 1. Modélisation
+
 :bulb: Etablissez un modèle de donnée à partir des informations données ci-dessus.
 
 ??? info "Diagramme de classe"

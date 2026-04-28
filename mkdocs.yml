@@ -70,11 +70,14 @@ markdown_extensions:
         pygments_lang_class: true
         auto_title_map:
             "Text Only": "📋 Texte"
+            "text": "📋 Texte"
             "Python": "🐍 Python"
             "Python Console Session": "🐍 Python"
             "JavaScript": "🍵 JavaScript"
             "SQL": "🐬 SQL"
             "PHP": "🐘 PHP"
+            "dockerfile": "🐳 Dockerfile"
+            "nginx": "🌀 Nginx"
             "Prompt": "💻 Console"
             "Bash": "💻 Console"
             "E-mail": "📥 Entrée"

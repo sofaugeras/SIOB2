@@ -90,7 +90,7 @@ Identifiants : `votre_prenom` / `vzfC8eDN*ym7`
 3. **Main branch name** : main
 6. Cliquez sur **Next**, choisir **Follows the Instance's Default** puis **Create project**
 7. **How do you want to analyze your repository?** Choisissez **Locally**
-8. Cliquez sur **Generate a token** → donnez-lui un nom "Analyze "laravel_todo_sophie" et une date d'expiration "30 days"→ **Generate**
+8. Cliquez sur **Generate a token** → donnez-lui un nom "Analyze "laravel_todo_prenom" et une date d'expiration "30 days"→ **Generate**
 9. **Copiez et notez le token** — il ne sera plus affiché
 
 ### 1.2 Installer Sonar Scanner sur Windows 💻
@@ -120,7 +120,7 @@ sonar-scanner --version
 
 ```properties
 sonar.projectKey=laravel-prenom
-sonar.projectName=Mon Projet Laravel
+sonar.projectName=Laravel-Todo_prenom
 
 sonar.sources=app,routes,database,resources
 sonar.exclusions=vendor/**,node_modules/**,storage/**,bootstrap/cache/**,public/**
@@ -174,7 +174,7 @@ Les notes de qualité s'affichent sous forme de lettres **A à E** pour :
 
 ![illustration](./data/overwiew.png){: .center width=80%}
 
-### 1.6 ❓ Questions — Partie 1
+### 1.6 ❓ Questions
 
 !!! question "Question 1.1 📊"
     === "Enoncé"
@@ -336,7 +336,7 @@ Les notes de qualité s'affichent sous forme de lettres **A à E** pour :
 3. Importez votre dépôt Laravel
 4. Notez votre `SONAR_ORGANIZATION` et le `SONAR_PROJECT_KEY`
 5. **Ne pas** ajouter All repositories.
-6. Créer unn nouveau projet qui prend votre dépot Todo > Laisser la première analys de faire
+6. Créer un nouveau projet qui prend votre dépot Todo > Laisser la première analys de faire
 7. Dans votre profile > Secuity > Générer un nouveau Token
 
 ### 2.2 Ajouter le token en secret GitHub 🔐
@@ -430,7 +430,7 @@ par
 ```bash
 git add .github/workflows/sonar.yml .gitignore
 git commit -m "feat: ajout analyse SonarCloud en CI"
-git push origin develop
+git push origin main
 ```
 
 !!! warning "Secrets à ne jamais versionner ⚠️"
@@ -463,7 +463,7 @@ puis consulter le rapport d'analyse dans l'interface SonarQube Cloud
 
 ![illustration](./data/dashborad_sonarQubeClooud.png){: .center width=80%}
 
-### 2.5 ❓ Questions — Partie 2
+### 2.5 ❓ Questions
 
 !!! question "Question 2.1 🌐"
     === "Enoncé"
