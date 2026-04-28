@@ -304,7 +304,7 @@
           
   
   
-  PL/SQL ➿
+  PL/SQL ⏰
 
         </a>
       </li>
@@ -1715,7 +1715,7 @@
   <span class="md-ellipsis">
     
   
-    PL/SQL ➿
+    PL/SQL ⏰
   
 
     
@@ -1731,7 +1731,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    PL/SQL ➿
+    PL/SQL ⏰
   
 
           </label>
@@ -5611,7 +5611,7 @@
   <span class="md-ellipsis">
     
   
-    0. Ateliers de professionnalisation
+    Ateliers de professionnalisation
   
 
     
@@ -6671,15 +6671,15 @@
 <p>L'application web finale est consultable sur le serveur de la classe : <code>http://r3st0.srv-debian.local/</code></p>
 <details class="info">
 <summary>Vhots</summary>
-</details>
 <p>Pour avoir acces à <code>http://r3st0.srv-debian.local/</code>, il faut que votre puisse savoir sur quel IP est hébergé le serveur web (au lycée, <code>192.168.0.119</code>), il faut donc créer un Vhost sur votre poste.</p>
 <p>Dans un powershell lancé en administrateur, lancer la commande suivante :
-  <code>Add-Content -Path "C:\Windows\System32\drivers\etc\hosts" -Value "192.168.0.119   r3st0.srv-debian.local"</code></p>
+<code>Add-Content -Path "C:\Windows\System32\drivers\etc\hosts" -Value "192.168.0.119   r3st0.srv-debian.local"</code></p>
+</details>
 <h2 id="2-le-patron-de-conception-mvc">2. Le patron de conception MVC<a class="headerlink" href="#2-le-patron-de-conception-mvc" title="Permanent link">⚓︎</a></h2>
 <p>Le développement d'une application web complexe, proposant de multiples fonctionnalités par des équipes de plusieurs informaticiens, nécessite d'établir des règles dans les étapes du développement et dans l'organisation du projet.</p>
 <p>Pour passer de l'écriture d'un simple programme au développement d'une application <strong>maintenable et évolutive</strong>, il est indispensable d'industrialiser et de rationaliser son codage. C'est ce que proposent les patrons de conception, notamment <strong>MVC</strong>.</p>
 <h3 id="21-trois-composants-fondamentaux">2.1 Trois composants fondamentaux<a class="headerlink" href="#21-trois-composants-fondamentaux" title="Permanent link">⚓︎</a></h3>
-<p><img alt="illustration" class="center" src="../data/schema_mvc.svg" width="50%" /></p>
+<p><img alt="illustration" class="center" src="../data/schema_mvc.svg" width="80%" /></p>
 <table>
 <thead>
 <tr>
@@ -6709,7 +6709,7 @@
 <li><strong>Maintenance et évolutivité</strong> : on peut modifier un composant sans toucher aux autres</li>
 </ul>
 <h2 id="3-contexte-applicatif-le-site-r3st0fr">3. Contexte applicatif : le site r3st0.fr<a class="headerlink" href="#3-contexte-applicatif-le-site-r3st0fr" title="Permanent link">⚓︎</a></h2>
-<p>Le site <strong>r3st0.fr</strong> est construit à l'image des sites de critique de restaurants existants (LaFourchette, TripAdvisor…).</p>
+<p>Le site <strong>r3st0.local</strong> est construit à l'image des sites de critique de restaurants existants (LaFourchette, TripAdvisor…).</p>
 <p>Son objectif : recenser les caractéristiques des restaurants, collecter les avis des consommateurs, et diffuser ces informations aux visiteurs.</p>
 <h3 id="31-types-dutilisateurs">3.1 Types d'utilisateurs<a class="headerlink" href="#31-types-dutilisateurs" title="Permanent link">⚓︎</a></h3>
 <p><strong>Visiteur non authentifié</strong></p>
@@ -6725,7 +6725,7 @@
 <li>Aimer des restaurants ⭐</li>
 <li>Noter et critiquer des restaurants</li>
 </ul>
-<p><img alt="illustration diagramme de cas d'utilisation" class="center" src="../data/diagramme_cas_utilisation_r3st0.svg" width="50%" /></p>
+<p><img alt="illustration diagramme de cas d'utilisation" class="center" src="../data/diagramme_cas_utilisation_r3st0.svg" width="80%" /></p>
 <h2 id="32-modele-de-donnees">3.2 Modèle de données<a class="headerlink" href="#32-modele-de-donnees" title="Permanent link">⚓︎</a></h2>
 <p>Schéma relationnel de la base de données :</p>
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>resto (idR, nomR, numAdrR, voieAdrR, cpR, villeR,
