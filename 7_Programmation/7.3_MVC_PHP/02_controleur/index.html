@@ -12,13 +12,13 @@
         <meta name="author" content="Sophie FAUGERAS">
       
       
-        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/7_Programmation/7.3_developpementPHP/03_vue/">
+        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/7_Programmation/7.3_MVC_PHP/02_controleur/">
       
       
-        <link rel="prev" href="../02_controleur/">
+        <link rel="prev" href="../01_generalites/">
       
       
-        <link rel="next" href="../04_modele/">
+        <link rel="next" href="../03_vue/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>3. La vue 🖼️ - Saint Sauveur BTS SIO SLAM</title>
+        <title>2. Le contrôleur 🎛️ - Saint Sauveur BTS SIO SLAM</title>
       
     
     
@@ -114,7 +114,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#3-la-vue" class="md-skip">
+        <a href="#2-le-controleur" class="md-skip">
           Aller au contenu
         </a>
       
@@ -148,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3. La vue 🖼️
+              2. Le contrôleur 🎛️
             
           </span>
         </div>
@@ -5187,34 +5187,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../02_controleur/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2. Le contrôleur 🎛️
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -5234,7 +5206,7 @@
   <span class="md-ellipsis">
     
   
-    3. La vue 🖼️
+    2. Le contrôleur 🎛️
   
 
     
@@ -5252,7 +5224,7 @@
   <span class="md-ellipsis">
     
   
-    3. La vue 🖼️
+    2. Le contrôleur 🎛️
   
 
     
@@ -5278,110 +5250,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
+  <a href="#1-controleur-de-connexion-connexionphp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Introduction
+        1. Contrôleur de connexion : connexion.php 🔐
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#partie-a-analyse-dune-vue-existante" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Partie A — Analyse d'une vue existante 🔍
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#question-1-les-photos-vuedetailrestophp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Question 1 — Les photos (vueDetailResto.php) 📷
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Question 1 — Les photos (vueDetailResto.php) 📷">
+    <nav class="md-nav" aria-label="1. Contrôleur de connexion : connexion.php 🔐">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-fonctions-du-modele-utilisees" class="md-nav__link">
+  <a href="#contexte" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1 — Fonctions du modèle utilisées ⚙️
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-annexes-correspondantes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.2 — Annexes correspondantes 📄
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rappel-tableaux-associatifs-php" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rappel : tableaux associatifs PHP
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13-composition-de-chaque-cellule-de-lesphotos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.3 — Composition de chaque cellule de $lesPhotos 🔎
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#14-acces-au-nom-du-fichier-de-la-premiere-photo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.4 — Accès au nom du fichier de la première photo 🔎
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#15-role-de-countlesphotos-0" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5 — Rôle de count($lesPhotos) &gt; 0 🤔
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#16-syntaxe-generale-dacces-aux-champs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.6 — Syntaxe générale d'accès aux champs ⌨️
+        Contexte
       
     </span>
   </a>
@@ -5394,55 +5278,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#question-2-les-types-de-cuisine-vuedetailrestophp" class="md-nav__link">
+  <a href="#2-controleur-de-deconnexion-deconnexionphp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Question 2 — Les types de cuisine (vueDetailResto.php) 🍽️
+        2. Contrôleur de déconnexion : deconnexion.php 🚪
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Question 2 — Les types de cuisine (vueDetailResto.php) 🍽️">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-controleur-de-recherche-rechercherestophp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Contrôleur de recherche : rechercheResto.php 🔍
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Contrôleur de recherche : rechercheResto.php 🔍">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-origine-de-lestypescuisine" class="md-nav__link">
+  <a href="#contexte_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1 — Origine de $lesTypesCuisine 🎯
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-schema-de-lestypescuisine" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.2 — Schéma de $lesTypesCuisine 🗺️
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23-nombre-de-types-de-cuisine" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3 — Nombre de types de cuisine 🔢
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#24-acces-au-libelle" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.4 — Accès au libellé ⌨️
+        Contexte
       
     </span>
   </a>
@@ -5455,82 +5317,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#question-3-le-restaurant-vuedetailrestophp" class="md-nav__link">
+  <a href="#4-analyse-de-rechercherestophp-gestion-de-laffichage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Question 3 — Le restaurant (vueDetailResto.php) 🏠
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Question 3 — Le restaurant (vueDetailResto.php) 🏠">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-origine-de-unresto" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.1 — Origine de $unResto 🎯
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-schema-de-unresto" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.2 — Schéma de $unResto 🗺️
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-utilisation-dans-la-vue" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.3 — Utilisation dans la vue 🔎
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34-nombre-de-restaurants-dans-la-variable" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.4 — Nombre de restaurants dans la variable 🔢
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#35-acces-au-nom-du-restaurant" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.5 — Accès au nom du restaurant ⌨️
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#synthese-role-de-la-vue" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Synthèse — Rôle de la vue 📌
+        4. Analyse de rechercheResto.php : gestion de l'affichage 🔍
       
     </span>
   </a>
@@ -5538,196 +5328,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#partie-b-adaptation-de-vues" class="md-nav__link">
+  <a href="#5-synthese-role-et-fonctionnement-du-controleur" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Partie B — Adaptation de vues ✏️
+        5. Synthèse — Rôle et fonctionnement du contrôleur 📌
       
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#question-4-adaptation-du-menu-general" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Question 4 — Adaptation du menu général 🌐
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Question 4 — Adaptation du menu général 🌐">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-fonction-pour-connaitre-letat-de-connexion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 — Fonction pour connaître l'état de connexion 🎯
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-type-de-donnee-retourne" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2 — Type de donnée retourné 🔎
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-element-affiche-par-defaut" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.3 — Élément affiché par défaut 🖼️
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#44-adapter-le-menu" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.4 — Adapter le menu ✏️
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#question-5-profil-types-de-cuisine-preferes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Question 5 — Profil : types de cuisine préférés 🍽️
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Question 5 — Profil : types de cuisine préférés 🍽️">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51-structure-de-mestypecuisineaimes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.1 — Structure de $mesTypeCuisineAimes 🗺️
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52-syntaxe-dacces-au-libelle" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.2 — Syntaxe d'accès au libellé ⌨️
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#53-et-54-code-html-dans-la-vue" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.3 et 5.4 — Code HTML dans la vue 🔎
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#55-parcourir-et-afficher-les-types-de-cuisine" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.5 — Parcourir et afficher les types de cuisine ✏️
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#56-integration-dans-la-vue" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.6 — Intégration dans la vue ✏️
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#question-6-profil-restaurants-aimes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Question 6 — Profil : restaurants aimés ⭐
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Question 6 — Profil : restaurants aimés ⭐">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#61-acces-aux-donnees-dans-mesrestosaimes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.1 — Accès aux données dans $mesRestosAimes 🔎
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#62-parcourir-et-afficher-les-noms" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.2 — Parcourir et afficher les noms ✏️
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#63-adapter-la-vue-affichage-dynamique" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.3 — Adapter la vue : affichage dynamique ✏️
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -5747,6 +5354,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../03_vue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. La vue 🖼️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../04_modele/" class="md-nav__link">
         
   
@@ -5754,7 +5389,7 @@
   <span class="md-ellipsis">
     
   
-    4. Le modèle et accès aux données (PDO) 🗄️
+    4. Le modèle et PDO 🗄️
   
 
     
@@ -5796,66 +5431,6 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    7.4 MVC
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    7.4 MVC
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
               
                 
   
@@ -5863,14 +5438,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../7.4_MVC/cours/" class="md-nav__link">
+      <a href="../06_laravel/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🌐 Cours MVC avec Laravel
+    3. MVC avec Laravel 🌐
   
 
     
@@ -6960,455 +6535,967 @@
   
 
 
-<h1 id="3-la-vue">3. La vue 🖼️<a class="headerlink" href="#3-la-vue" title="Permanent link">⚓︎</a></h1>
-<p><img alt="en construction" class="center" src="../../../images/enConstruction.png" width="50%" /></p>
-<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">⚓︎</a></h2>
-<p>La <strong>vue</strong> a pour rôle unique d'<strong>afficher les données</strong> à l'utilisateur. Elle utilise des variables créées ou récupérées par le contrôleur, sans effectuer de traitement.</p>
-<blockquote>
-<p>💡 Une vue contient essentiellement du code <strong>HTML qui intègre du PHP</strong> (et non l'inverse). Cela permet d'éviter les multiples <code>echo</code> et les concaténations complexes.</p>
-</blockquote>
-<p>Cette partie étudie la vue <code>vueDetailResto.php</code>, appelée par le contrôleur <code>detailResto.php</code>.</p>
-<h2 id="partie-a-analyse-dune-vue-existante">Partie A — Analyse d'une vue existante 🔍<a class="headerlink" href="#partie-a-analyse-dune-vue-existante" title="Permanent link">⚓︎</a></h2>
-<h2 id="question-1-les-photos-vuedetailrestophp">Question 1 — Les photos (<code>vueDetailResto.php</code>) 📷<a class="headerlink" href="#question-1-les-photos-vuedetailrestophp" title="Permanent link">⚓︎</a></h2>
-<p><strong>Documents à utiliser :</strong> fichiers du projet, annexes 1, 2, 5 et 6</p>
-<h3 id="11-fonctions-du-modele-utilisees">1.1 — Fonctions du modèle utilisées ⚙️<a class="headerlink" href="#11-fonctions-du-modele-utilisees" title="Permanent link">⚓︎</a></h3>
-<p>Quelles fonctions définies dans le modèle sont utilisées dans le contrôleur <code>detailResto.php</code> ?</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>Trois fonctions du modèle sont utilisées dans <code>detailResto.php</code> :</p>
-<ul>
-<li><code>getRestoByIdR($idR)</code> — récupère les informations du restaurant</li>
-<li><code>getTypesCuisineByIdR($idR)</code> — récupère les types de cuisine associés</li>
-<li><code>getPhotosByIdR($idR)</code> — récupère les photos du restaurant</li>
-</ul>
-</details>
-<h3 id="12-annexes-correspondantes">1.2 — Annexes correspondantes 📄<a class="headerlink" href="#12-annexes-correspondantes" title="Permanent link">⚓︎</a></h3>
-<p>Quelles annexes présentent le résultat d'exécution des fonctions trouvées à la question précédente ?</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>On trouve les résultats d'exécution dans les <strong>annexes 4, 6 et 8</strong>, respectivement pour <code>getRestoByIdR()</code>, <code>getPhotosByIdR()</code> et <code>getTypesCuisineByIdR()</code>.</p>
-</details>
-<h3 id="rappel-tableaux-associatifs-php">Rappel : tableaux associatifs PHP<a class="headerlink" href="#rappel-tableaux-associatifs-php" title="Permanent link">⚓︎</a></h3>
-<p>Un tableau associatif permet de stocker plusieurs informations dans une seule variable. L'accès aux données se fait via des <strong>clés</strong> (chaînes de caractères) plutôt que des indices numériques.</p>
-<p><strong>Exemple :</strong></p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Déclaration</span>
-<span class="x">$tabEtudiant = [</span>
-<span class="x">    &#39;prenom&#39; =&gt; &#39;Lionel&#39;,</span>
-<span class="x">    &#39;nom&#39;    =&gt; &#39;Romain&#39;,</span>
-<span class="x">    &#39;age&#39;    =&gt; 48</span>
-<span class="x">];</span>
+<h1 id="2-le-controleur">2. Le contrôleur 🎛️<a class="headerlink" href="#2-le-controleur" title="Permanent link">⚓︎</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Rappel sur les contrôleurs</p>
+<p><img alt="illustration" class="center" src="../data/mvc_composants_annotes.svg" width="100%" /></p>
+<p>Un contrôleur est l'élément <strong>central</strong> d'une fonctionnalité sur un site MVC. Chaque fonctionnalité est gérée par un contrôleur qui :</p>
+<ol>
+<li><strong>Récupère</strong> les données transmises par un formulaire (GET/POST)</li>
+<li><strong>Appelle</strong> les fonctions du modèle pour lire ou écrire en base de données</li>
+<li><strong>Traite</strong> les données (logique applicative)</li>
+<li><strong>Appelle</strong> la vue pour afficher le résultat à l'utilisateur</li>
+</ol>
+</div>
+<h2 id="1-controleur-de-connexion-connexionphp">1. Contrôleur de connexion : <code>connexion.php</code> 🔐<a class="headerlink" href="#1-controleur-de-connexion-connexionphp" title="Permanent link">⚓︎</a></h2>
+<p><strong>Documents à utiliser :</strong> fichiers du projet, annexes 1, 2, 3, 4</p>
+<details class="info">
+<summary>Annexe 1 - section de test du fichier modèle authentification.inc.php  📄</summary>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">if ($_SERVER[&quot;SCRIPT_FILENAME&quot;] == __FILE__) {</span>
+<span class="x">    // prog principal de test</span>
+<span class="x">    header(&#39;Content-Type:text/plain&#39;);</span>
 
-<span class="x">// Accès en lecture</span>
-<span class="x">echo $tabEtudiant[&#39;prenom&#39;];   // affiche : Lionel</span>
+<span class="x">    // test de connexion</span>
+<span class="x">    if (isLoggedOn()) {</span>
+<span class="x">        echo &quot;logged\n&quot;;</span>
+<span class="x">    } else {</span>
+<span class="x">        echo &quot;not logged\n&quot;;</span>
+<span class="x">    }</span>
 
-<span class="x">// Modification</span>
-<span class="x">$tabEtudiant[&#39;prenom&#39;] = &#39;Patrice&#39;;</span>
-</code></pre></div>
-<p>Après l'appel à <code>getPhotosByIdR()</code>, la variable <code>$lesPhotos</code> contient un tableau dont chaque case est un tableau associatif :</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>$lesPhotos
-├── [0] → [&#39;idP&#39; =&gt; 1, &#39;cheminP&#39; =&gt; &#39;entrepote.jpg&#39;, &#39;idR&#39; =&gt; 1]
-├── [1] → [&#39;idP&#39; =&gt; 2, &#39;cheminP&#39; =&gt; &#39;entrepote2.jpg&#39;, &#39;idR&#39; =&gt; 1]
-└── [2] → [&#39;idP&#39; =&gt; 3, &#39;cheminP&#39; =&gt; &#39;entrepote3.jpg&#39;, &#39;idR&#39; =&gt; 1]
-</code></pre></div>
-<h3 id="13-composition-de-chaque-cellule-de-lesphotos">1.3 — Composition de chaque cellule de <code>$lesPhotos</code> 🔎<a class="headerlink" href="#13-composition-de-chaque-cellule-de-lesphotos" title="Permanent link">⚓︎</a></h3>
-<p>Comment est composée chacune des cellules du tableau <code>$lesPhotos</code> ?</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>Chaque cellule du tableau <code>$lesPhotos</code> est un <strong>tableau associatif</strong> contenant les informations d'une photo : <code>idP</code> (identifiant), <code>cheminP</code> (nom du fichier) et <code>idR</code> (identifiant du restaurant associé).</p>
-</details>
-<h3 id="14-acces-au-nom-du-fichier-de-la-premiere-photo">1.4 — Accès au nom du fichier de la première photo 🔎<a class="headerlink" href="#14-acces-au-nom-du-fichier-de-la-premiere-photo" title="Permanent link">⚓︎</a></h3>
-<p>Repérer dans le code de <code>vueDetailResto.php</code> l'instruction PHP permettant d'afficher le chemin de la première photo.</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Extrait de vueDetailResto.php</span>
-<span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="nb">count</span><span class="p">(</span><span class="nv">$lesPhotos</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="cp">?&gt;</span>
-<span class="x">    &lt;img src=&quot;photos/</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$lesPhotos</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;cheminP&quot;</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">&quot; alt=&quot;photo du restaurant&quot; /&gt;</span>
-<span class="cp">&lt;?php</span> <span class="p">}</span> <span class="cp">?&gt;</span>
-</code></pre></div>
-<p>Quelle est l'instruction permettant d'accéder au chemin de la <strong>première</strong> photo ?</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$lesPhotos</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;cheminP&quot;</span><span class="p">]</span> <span class="cp">?&gt;</span>
-</code></pre></div>
-L'indice <code>0</code> désigne la première photo du tableau, et la clé <code>"cheminP"</code> donne accès au nom du fichier image.</p>
-</details>
-<h3 id="15-role-de-countlesphotos-0">1.5 — Rôle de <code>count($lesPhotos) &gt; 0</code> 🤔<a class="headerlink" href="#15-role-de-countlesphotos-0" title="Permanent link">⚓︎</a></h3>
-<p>Quel est le rôle de la condition <code>if(count($lesPhotos) &gt; 0)</code> dans le code de la vue ?</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>Cette condition <strong>vérifie que le tableau contient au moins une photo</strong> avant d'essayer de l'afficher. Si aucune photo n'a été associée au restaurant, le tableau serait vide et accéder à <code>$lesPhotos[0]</code> provoquerait une erreur.</p>
-</details>
-<h3 id="16-syntaxe-generale-dacces-aux-champs">1.6 — Syntaxe générale d'accès aux champs ⌨️<a class="headerlink" href="#16-syntaxe-generale-dacces-aux-champs" title="Permanent link">⚓︎</a></h3>
-<p>Quelle est la syntaxe générale permettant d'accéder à un champ (<code>idP</code>, <code>cheminP</code> ou <code>idR</code>) contenu dans la variable <code>$lesPhotos</code> ?</p>
-<p>Compléter :</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Pour accéder à idP de la photo à l&#39;indice $i :</span>
-<span class="x">$lesPhotos[___][&quot;___&quot;]</span>
+<span class="x">    login(&quot;test@bts.sio&quot;, &quot;sio&quot;);   // login de test : test@bts.sio</span>
+<span class="x">                        // mot de passe de test : sio</span>
+<span class="x">    if (isLoggedOn()) {</span>
+<span class="x">        echo &quot;logged\n&quot;;</span>
+<span class="x">    } else {</span>
+<span class="x">        echo &quot;not logged\n&quot;;</span>
+<span class="x">    }</span>
 
-<span class="x">// Pour accéder à cheminP de la photo à l&#39;indice $i :</span>
-<span class="x">___________</span>
+<span class="x">    $mail=getMailULoggedOn();</span>
+<span class="x">    echo &quot;utilisateur connecté avec cette adresse : $mail \n&quot;;</span>
 
-<span class="x">// Pour afficher toutes les photos avec une boucle :</span>
-<span class="x">for ($i = 0; $i &lt; count($lesPhotos); $i++) {</span>
-<span class="x">    echo $lesPhotos[___][&quot;___&quot;];</span>
+<span class="x">    // deconnexion</span>
+<span class="x">    logout();</span>
 <span class="x">}</span>
 </code></pre></div>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>La syntaxe générale est :
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$lesPhotos[indice][&quot;nom du champ&quot;]</span>
-</code></pre></div></p>
-<p>Exemples complétés :
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// idP de la photo à l&#39;indice $i :</span>
-<span class="x">$lesPhotos[$i][&quot;idP&quot;]</span>
+</details>
+<details class="info">
+<summary>Annexe 2 - résultat d'exécution du script authentification.inc.php  📄</summary>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>not logged
+logged
+utilisateur connecté avec cette adresse : test@bts.sio  
+</code></pre></div>
+</details>
+<details class="info">
+<summary>Annexe 3 - vueAuthentification.php 📄</summary>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;h1&gt;Connexion&lt;/h1&gt;</span>
+<span class="x">&lt;form action=&quot;./?action=connexion&quot; method=&quot;POST&quot;&gt;</span>
 
-<span class="x">// cheminP de la photo à l&#39;indice $i :</span>
-<span class="x">$lesPhotos[$i][&quot;cheminP&quot;]</span>
+<span class="x">    &lt;input type=&quot;text&quot; name=&quot;mailU&quot; placeholder=&quot;Email de connexion&quot; /&gt;&lt;br /&gt;</span>
+<span class="x">    &lt;input type=&quot;password&quot; name=&quot;mdpU&quot; placeholder=&quot;Mot de passe&quot;  /&gt;&lt;br /&gt;</span>
+<span class="x">    &lt;input type=&quot;submit&quot; /&gt;</span>
 
-<span class="x">// Afficher le cheminP de toutes les photos :</span>
-<span class="x">for ($i = 0; $i &lt; count($lesPhotos); $i++) {</span>
-<span class="x">    echo $lesPhotos[$i][&quot;cheminP&quot;];</span>
-<span class="x">}</span>
-</code></pre></div></p>
-</details>
-<h2 id="question-2-les-types-de-cuisine-vuedetailrestophp">Question 2 — Les types de cuisine (<code>vueDetailResto.php</code>) 🍽️<a class="headerlink" href="#question-2-les-types-de-cuisine-vuedetailrestophp" title="Permanent link">⚓︎</a></h2>
-<p><strong>Documents à utiliser :</strong> fichiers du projet, annexes 1, 2, 7 et 8</p>
-<h3 id="21-origine-de-lestypescuisine">2.1 — Origine de <code>$lesTypesCuisine</code> 🎯<a class="headerlink" href="#21-origine-de-lestypescuisine" title="Permanent link">⚓︎</a></h3>
-<p>Quel contrôleur produit la variable <code>$lesTypesCuisine</code> ? Préciser le nom de la fonction et du modèle utilisés.</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>C'est le contrôleur <strong><code>detailResto.php</code></strong> qui produit <code>$lesTypesCuisine</code> via l'appel :
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$lesTypesCuisine = getTypesCuisineByIdR($idR);</span>
+<span class="x">&lt;/form&gt;</span>
+<span class="x">&lt;br /&gt;</span>
+<span class="x">&lt;a href=&quot;./?action=inscription&quot;&gt;Inscription&lt;/a&gt;</span>
 </code></pre></div>
-La fonction <code>getTypesCuisineByIdR()</code> est définie dans le modèle <code>bd.typeCuisine.inc.php</code>.</p>
 </details>
-<h3 id="22-schema-de-lestypescuisine">2.2 — Schéma de <code>$lesTypesCuisine</code> 🗺️<a class="headerlink" href="#22-schema-de-lestypescuisine" title="Permanent link">⚓︎</a></h3>
-<p>Schématiser le contenu de la variable <code>$lesTypesCuisine</code> (sur le modèle du schéma de <code>$lesPhotos</code>).</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>$lesTypesCuisine
-├── [0] → [...]
-├── [1] → [...]
-└── [...]
-</code></pre></div>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>Comme <code>$lesPhotos</code>, il s'agit d'un <strong>tableau de tableaux associatifs</strong> :
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>$lesTypesCuisine
-├── [0] → [&#39;idTC&#39; =&gt; 1, &#39;libelleTC&#39; =&gt; &#39;Sud-Ouest&#39;]
-├── [1] → [&#39;idTC&#39; =&gt; 3, &#39;libelleTC&#39; =&gt; &#39;Viande&#39;]
-└── [2] → [&#39;idTC&#39; =&gt; 5, &#39;libelleTC&#39; =&gt; &#39;Grillade&#39;]
-</code></pre></div></p>
-</details>
-<h3 id="23-nombre-de-types-de-cuisine">2.3 — Nombre de types de cuisine 🔢<a class="headerlink" href="#23-nombre-de-types-de-cuisine" title="Permanent link">⚓︎</a></h3>
-<p>Combien de types de cuisine sont contenus dans cette variable pour le restaurant consulté ?</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>Il y a <strong>3 types de cuisine</strong> pour le restaurant de l'exemple (l'entrepote).</p>
-</details>
-<h3 id="24-acces-au-libelle">2.4 — Accès au libellé ⌨️<a class="headerlink" href="#24-acces-au-libelle" title="Permanent link">⚓︎</a></h3>
-<p>Quelle est la syntaxe permettant d'accéder au libellé d'un type de cuisine contenu dans la variable ?</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$lesTypesCuisine[$i][&#39;libelleTC&#39;]</span>
-</code></pre></div>
-Où <code>$i</code> est l'indice de l'élément dans le tableau.</p>
-</details>
-<h2 id="question-3-le-restaurant-vuedetailrestophp">Question 3 — Le restaurant (<code>vueDetailResto.php</code>) 🏠<a class="headerlink" href="#question-3-le-restaurant-vuedetailrestophp" title="Permanent link">⚓︎</a></h2>
-<p><strong>Documents à utiliser :</strong> fichiers du projet, annexes 1, 2, 3 et 4</p>
-<h3 id="31-origine-de-unresto">3.1 — Origine de <code>$unResto</code> 🎯<a class="headerlink" href="#31-origine-de-unresto" title="Permanent link">⚓︎</a></h3>
-<p>Quel contrôleur produit la variable <code>$unResto</code> ? Préciser le nom de la fonction et du modèle.</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>C'est le contrôleur <strong><code>detailResto.php</code></strong> qui produit <code>$unResto</code> via :
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$unResto = getRestoByIdR($idR);</span>
-</code></pre></div>
-La fonction <code>getRestoByIdR()</code> est définie dans le modèle <strong><code>bd.resto.inc.php</code></strong>.</p>
-</details>
-<h3 id="32-schema-de-unresto">3.2 — Schéma de <code>$unResto</code> 🗺️<a class="headerlink" href="#32-schema-de-unresto" title="Permanent link">⚓︎</a></h3>
-<p>Schématiser le contenu de la variable <code>$unResto</code>.</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>$unResto → [&#39;idR&#39;    =&gt; ...,
-             &#39;nomR&#39;   =&gt; ...,
-             ...
-            ]
-</code></pre></div>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>Contrairement à <code>$lesPhotos</code> ou <code>$lesTypesCuisine</code>, <code>$unResto</code> est un <strong>tableau associatif simple</strong> (une seule dimension) :
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>$unResto → [
-    &#39;idR&#39;          =&gt; 1,
-    &#39;nomR&#39;         =&gt; &quot;l&#39;entrepote&quot;,
-    &#39;numAdrR&#39;      =&gt; 2,
-    &#39;voieAdrR&#39;     =&gt; &quot;rue Maurice Ravel&quot;,
-    &#39;cpR&#39;          =&gt; &quot;33000&quot;,
-    &#39;villeR&#39;       =&gt; &quot;Bordeaux&quot;,
-    &#39;latitudeDegR&#39; =&gt; 44.7948,
-    &#39;longitudeDegR&#39;=&gt; -0.58754,
-    &#39;descR&#39;        =&gt; &quot;description&quot;,
-    &#39;horairesR&#39;    =&gt; &quot;&lt;table&gt;...&lt;/table&gt;&quot;
-]
-</code></pre></div></p>
-</details>
-<h3 id="33-utilisation-dans-la-vue">3.3 — Utilisation dans la vue 🔎<a class="headerlink" href="#33-utilisation-dans-la-vue" title="Permanent link">⚓︎</a></h3>
-<p>Quelles sections de code dans la vue utilisent la variable <code>$unResto</code> ?</p>
-<p>Voici un extrait de <code>vueDetailResto.php</code> :</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;h1&gt;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$unResto</span><span class="p">[</span><span class="s1">&#39;nomR&#39;</span><span class="p">];</span> <span class="cp">?&gt;</span><span class="x">&lt;/h1&gt;</span>
+<details class="info">
+<summary>Annexe 4 -  contrôleur connexion.php à compléter 📄</summary>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">if</span> <span class="p">(</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&quot;SCRIPT_FILENAME&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span> <span class="p">){</span>
+    <span class="nv">$racine</span><span class="o">=</span><span class="s2">&quot;..&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">include_once</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/modele/authentification.inc.php&quot;</span><span class="p">;</span>
 
-<span class="x">&lt;p id=&quot;principal&quot;&gt;</span>
-<span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="nb">count</span><span class="p">(</span><span class="nv">$lesPhotos</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="cp">?&gt;</span>
-<span class="x">        &lt;img src=&quot;photos/</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$lesPhotos</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;cheminP&quot;</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">&quot; alt=&quot;photo du restaurant&quot; /&gt;</span>
-<span class="x">    </span><span class="cp">&lt;?php</span> <span class="p">}</span> <span class="cp">?&gt;</span>
-<span class="x">    </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$unResto</span><span class="p">[</span><span class="s1">&#39;descR&#39;</span><span class="p">];</span> <span class="cp">?&gt;</span>
-<span class="x">&lt;/p&gt;</span>
+<span class="c1">// creation du menu burger</span>
+<span class="nv">$menuBurger</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+<span class="nv">$menuBurger</span><span class="p">[]</span> <span class="o">=</span> <span class="k">Array</span><span class="p">(</span><span class="s2">&quot;url&quot;</span><span class="o">=&gt;</span><span class="s2">&quot;./?action=connexion&quot;</span><span class="p">,</span><span class="s2">&quot;label&quot;</span><span class="o">=&gt;</span><span class="s2">&quot;Connexion&quot;</span><span class="p">);</span>
+<span class="nv">$menuBurger</span><span class="p">[]</span> <span class="o">=</span> <span class="k">Array</span><span class="p">(</span><span class="s2">&quot;url&quot;</span><span class="o">=&gt;</span><span class="s2">&quot;./?action=inscription&quot;</span><span class="p">,</span><span class="s2">&quot;label&quot;</span><span class="o">=&gt;</span><span class="s2">&quot;Inscription&quot;</span><span class="p">);</span>
 
-<span class="x">&lt;h2 id=&quot;adresse&quot;&gt;Adresse&lt;/h2&gt;</span>
-<span class="x">&lt;p&gt;</span>
-<span class="x">    </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$unResto</span><span class="p">[</span><span class="s1">&#39;numAdrR&#39;</span><span class="p">];</span> <span class="cp">?&gt;</span>
-<span class="x">    </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$unResto</span><span class="p">[</span><span class="s1">&#39;voieAdrR&#39;</span><span class="p">];</span> <span class="cp">?&gt;</span><span class="x">&lt;br /&gt;</span>
-<span class="x">    </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$unResto</span><span class="p">[</span><span class="s1">&#39;cpR&#39;</span><span class="p">];</span> <span class="cp">?&gt;</span>
-<span class="x">    </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$unResto</span><span class="p">[</span><span class="s1">&#39;villeR&#39;</span><span class="p">];</span> <span class="cp">?&gt;</span>
-<span class="x">&lt;/p&gt;</span>
+<span class="c1">// recuperation des donnees GET, POST, et SESSION</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;mailU&quot;</span><span class="p">])</span> <span class="o">||</span> <span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;mdpU&quot;</span><span class="p">])){</span>
+    <span class="c1">// on affiche le formulaire de connexion</span>
+    <span class="nv">$titre</span> <span class="o">=</span> <span class="s2">&quot;authentification&quot;</span><span class="p">;</span>
+    <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php&quot;</span><span class="p">;</span>
+    <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/vueAuthentification.php&quot;</span><span class="p">;</span>
+    <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+    <span class="c1">// à completer</span>
+
+
+<span class="p">}</span>
+
+<span class="cp">?&gt;</span>
 </code></pre></div>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>La variable <code>$unResto</code> est utilisée dans plusieurs sections de la vue :</p>
+</details>
+<h3 id="contexte">Contexte<a class="headerlink" href="#contexte" title="Permanent link">⚓︎</a></h3>
+<p>Le contrôleur de connexion gère <strong>deux cas</strong> :</p>
+<p><strong>Cas 1 — Affichage du formulaire</strong>
+L'utilisateur clique sur "Connexion" dans le menu. Le contrôleur est appelé <strong>sans paramètre</strong> → il affiche le formulaire de connexion.</p>
+<p><strong>Cas 2 — Traitement du formulaire</strong>
+L'utilisateur a saisi son login et mot de passe et validé le formulaire. Le contrôleur reçoit ces données → il tente la connexion.</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Contrôleur connexion.php
+        │
+        ├─ [Pas de paramètre] ──────────────────► vue : vueAuthentification.php
+        │                                          (affiche le formulaire)
+        │
+        └─ [login + mdp transmis]
+                    │
+                    ├─ [connexion OK] ────────────► vue : vueConfirmationAuth.php
+                    │
+                    └─ [connexion KO] ────────────► vue : vueAuthentification.php
+                                                    (formulaire affiché de nouveau)
+</code></pre></div>
+<p>Deux scripts modèle sont utilisés :</p>
 <ul>
-<li><strong>Titre</strong> : <code>$unResto['nomR']</code></li>
-<li><strong>Description</strong> : <code>$unResto['descR']</code></li>
-<li><strong>Adresse</strong> : <code>$unResto['numAdrR']</code>, <code>$unResto['voieAdrR']</code>, <code>$unResto['cpR']</code>, <code>$unResto['villeR']</code></li>
-<li><strong>Horaires</strong> : <code>$unResto['horairesR']</code></li>
+<li><code>authentification.inc.php</code></li>
+<li><code>bd.utilisateur.inc.php</code></li>
 </ul>
-</details>
-<h3 id="34-nombre-de-restaurants-dans-la-variable">3.4 — Nombre de restaurants dans la variable 🔢<a class="headerlink" href="#34-nombre-de-restaurants-dans-la-variable" title="Permanent link">⚓︎</a></h3>
-<p>Combien de restaurants sont contenus dans la variable <code>$unResto</code> ?</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p><strong>Un seul restaurant.</strong> Contrairement aux autres variables (<code>$lesPhotos</code>, <code>$lesTypesCuisine</code>), <code>$unResto</code> est un tableau associatif à une dimension — il ne représente qu'une seule occurrence de la table <code>resto</code>.</p>
-</details>
-<h3 id="35-acces-au-nom-du-restaurant">3.5 — Accès au nom du restaurant ⌨️<a class="headerlink" href="#35-acces-au-nom-du-restaurant" title="Permanent link">⚓︎</a></h3>
-<p>Quelle est la syntaxe permettant d'accéder au nom d'un restaurant contenu dans <code>$unResto</code> ?</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$unResto[&#39;nomR&#39;]</span>
+<p><strong>Observation du modèle d'authentification</strong> (annexes 1 et 2) 👓</p>
+<p>La section de test du fichier <code>authentification.inc.php</code> :</p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&quot;SCRIPT_FILENAME&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Content-Type:text/plain&#39;</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">isLoggedOn</span><span class="p">())</span> <span class="p">{</span>
+        <span class="k">echo</span> <span class="s2">&quot;logged</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">echo</span> <span class="s2">&quot;not logged</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">login</span><span class="p">(</span><span class="s2">&quot;test@bts.sio&quot;</span><span class="p">,</span> <span class="s2">&quot;sio&quot;</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">isLoggedOn</span><span class="p">())</span> <span class="p">{</span>
+        <span class="k">echo</span> <span class="s2">&quot;logged</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">echo</span> <span class="s2">&quot;not logged</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nv">$mail</span> <span class="o">=</span> <span class="nx">getMailULoggedOn</span><span class="p">();</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
 </code></pre></div>
+<p>❓ <strong>Premier appel à</strong> <code>isLoggedOn()</code> 🔎</p>
+<p>Lors du <strong>1er appel</strong> à <code>isLoggedOn()</code>, l'utilisateur est-il connecté ?</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p>Non. Au premier appel à <code>isLoggedOn()</code>, aucune connexion n'a encore eu lieu. La fonction retourne <strong><code>false</code></strong>, l'utilisateur n'est pas connecté.</p>
 </details>
-<h2 id="synthese-role-de-la-vue">Synthèse — Rôle de la vue 📌<a class="headerlink" href="#synthese-role-de-la-vue" title="Permanent link">⚓︎</a></h2>
+<p>❓ <strong>Deuxième appel à</strong> <code>isLoggedOn()</code> 🔎</p>
+<p>Lors du <strong>2ème appel</strong> à <code>isLoggedOn()</code> (après l'appel à <code>login()</code>), l'utilisateur est-il connecté ?</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p>Oui. Après l'appel à <code>login("test@bts.sio", "sio")</code>, l'utilisateur est connecté. La fonction <code>isLoggedOn()</code> retourne <strong><code>true</code></strong>.</p>
+</details>
+<p>❓ <strong>Quelle fonction permet la connexion de l'utilisateur ?</strong> Donner sa définition (signature/prototype).🎯</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p>Il s'agit de la fonction <code>login()</code>.</p>
+<p>Prototype :
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>fonction login(utilisateur : chaîne, motDePasse : chaîne) : booléen
+</code></pre></div></p>
+<p>En PHP :
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">login($mailU, $mdpU);</span>
+</code></pre></div></p>
+</details>
+<p>❓ <strong>Décrivez le rôle de chacune des fonctions du modèle.</strong> ⚙️</p>
 <table>
 <thead>
 <tr>
-<th>Principe</th>
-<th>Détail</th>
+<th>Fonction</th>
+<th>Rôle</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>La vue utilise les données du contrôleur</td>
-<td>Variables préparées et transmises par le contrôleur</td>
+<td><code>login($mail, $mdp)</code></td>
+<td></td>
 </tr>
 <tr>
-<td>Pas de logique applicative dans la vue</td>
-<td>Pas de traitement, uniquement de l'affichage</td>
+<td><code>isLoggedOn()</code></td>
+<td></td>
 </tr>
 <tr>
-<td>Pas d'accès direct à la BD</td>
-<td>Les requêtes sont dans le modèle</td>
+<td><code>getMailULoggedOn()</code></td>
+<td></td>
 </tr>
 <tr>
-<td>Code PHP limité au minimum</td>
-<td><code>for</code>, <code>if</code>, <code>echo</code> pour l'affichage dynamique</td>
+<td><code>logout()</code></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>💡 Le choix de PHP dans la vue n'est qu'un exemple. Des moteurs de templates comme <strong>Twig</strong> (utilisé dans Laravel et Symfony) permettent d'écrire des vues encore plus propres.</p>
-</blockquote>
-<h2 id="partie-b-adaptation-de-vues">Partie B — Adaptation de vues ✏️<a class="headerlink" href="#partie-b-adaptation-de-vues" title="Permanent link">⚓︎</a></h2>
-<h2 id="question-4-adaptation-du-menu-general">Question 4 — Adaptation du menu général 🌐<a class="headerlink" href="#question-4-adaptation-du-menu-general" title="Permanent link">⚓︎</a></h2>
-<p><strong>Documents à utiliser :</strong> fichiers du projet, annexe 9</p>
-<p>Lorsqu'un utilisateur est connecté, le lien <strong>"Connexion"</strong> du menu doit être remplacé par <strong>"Mon Profil"</strong>.</p>
-<p>Le menu se trouve dans la vue <code>entete.html.php</code>.</p>
-<h3 id="41-fonction-pour-connaitre-letat-de-connexion">4.1 — Fonction pour connaître l'état de connexion 🎯<a class="headerlink" href="#41-fonction-pour-connaitre-letat-de-connexion" title="Permanent link">⚓︎</a></h3>
-<p>Quelle fonction du modèle <code>authentification.inc.php</code> permet de connaître l'état de connexion du visiteur ?</p>
 <details class="question">
 <summary>Éléments de réponses ✅</summary>
-<p>Il s'agit de la fonction <strong><code>isLoggedOn()</code></strong>, déjà utilisée dans la partie contrôleur. Elle retourne <code>true</code> si un utilisateur est connecté, <code>false</code> sinon.</p>
+<table>
+<thead>
+<tr>
+<th>Fonction</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>login($mail, $mdp)</code></td>
+<td>Connecte l'utilisateur dont le mail et le mot de passe sont passés en paramètre.</td>
+</tr>
+<tr>
+<td><code>isLoggedOn()</code></td>
+<td>Retourne <code>true</code> si un utilisateur est connecté, <code>false</code> sinon.</td>
+</tr>
+<tr>
+<td><code>getMailULoggedOn()</code></td>
+<td>Retourne l'adresse mail de l'utilisateur actuellement connecté (son identifiant).</td>
+</tr>
+<tr>
+<td><code>logout()</code></td>
+<td>Déconnecte l'utilisateur actuellement connecté.</td>
+</tr>
+</tbody>
+</table>
 </details>
-<h3 id="42-type-de-donnee-retourne">4.2 — Type de donnée retourné 🔎<a class="headerlink" href="#42-type-de-donnee-retourne" title="Permanent link">⚓︎</a></h3>
-<p>Quel type de donnée est renvoyé par cette fonction ? Donner des exemples de valeurs.</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>La fonction <code>isLoggedOn()</code> retourne un <strong>booléen</strong> : <code>true</code> ou <code>false</code>.</p>
+<p>❓ Schéma d'authentification 🗺️</p>
+<p>À l'aide des annexes 2 et 3, compléter le schéma ci-dessous :</p>
+<p><img alt="illustration" class="center" src="../data/2schemaAuth.png" width="80%" /></p>
+<details class="info">
+<summary>Annexe 2 - résultat d'exécution du script authentification.inc.php  📄</summary>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>not logged
+logged
+utilisateur connecté avec cette adresse : test@bts.sio  
+</code></pre></div>
 </details>
-<h3 id="43-element-affiche-par-defaut">4.3 — Élément affiché par défaut 🖼️<a class="headerlink" href="#43-element-affiche-par-defaut" title="Permanent link">⚓︎</a></h3>
-<p>Quel élément de la liste du menu général est affiché lorsque l'utilisateur <strong>n'est pas</strong> connecté ?</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>Par défaut (utilisateur non connecté), le dernier élément du menu est affiché :
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;li&gt;</span>
-<span class="x">    &lt;a href=&quot;./?action=connexion&quot;&gt;</span>
-<span class="x">        &lt;img src=&quot;images/profil.png&quot; alt=&quot;loupe&quot; /&gt;Connexion</span>
-<span class="x">    &lt;/a&gt;</span>
-<span class="x">&lt;/li&gt;</span>
-</code></pre></div></p>
-</details>
-<h3 id="44-adapter-le-menu">4.4 — Adapter le menu ✏️<a class="headerlink" href="#44-adapter-le-menu" title="Permanent link">⚓︎</a></h3>
-<p>Modifier le code de <code>entete.html.php</code> pour afficher alternativement "Mon Profil" ou "Connexion" :</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;!-- Menu général - extrait de entete.html.php --&gt;</span>
-<span class="x">&lt;ul&gt;</span>
-<span class="x">    &lt;!-- ... autres items du menu ... --&gt;</span>
+<details class="info">
+<summary>Annexe 3 - vueAuthentification.php  📄</summary>
+<div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Connexion<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;./?action=connexion&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span><span class="p">&gt;</span>
 
-<span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="cm">/* à compléter */</span><span class="p">)</span> <span class="p">{</span> <span class="cp">?&gt;</span>
-<span class="x">        &lt;li&gt;</span>
-<span class="x">            &lt;a href=&quot;./?action=profil&quot;&gt;</span>
-<span class="x">                &lt;img src=&quot;images/profil.png&quot; alt=&quot;profil&quot; /&gt;</span>
-<span class="x">                Mon Profil</span>
-<span class="x">            &lt;/a&gt;</span>
-<span class="x">        &lt;/li&gt;</span>
-<span class="x">    </span><span class="cp">&lt;?php</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="cp">?&gt;</span>
-<span class="x">        &lt;li&gt;</span>
-<span class="x">            &lt;a href=&quot;./?action=connexion&quot;&gt;</span>
-<span class="x">                &lt;img src=&quot;images/connexion.png&quot; alt=&quot;connexion&quot; /&gt;</span>
-<span class="x">                Connexion</span>
-<span class="x">            &lt;/a&gt;</span>
-<span class="x">        &lt;/li&gt;</span>
-<span class="x">    </span><span class="cp">&lt;?php</span> <span class="p">}</span> <span class="cp">?&gt;</span>
-<span class="x">&lt;/ul&gt;</span>
-</code></pre></div>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="nx">isLoggedOn</span><span class="p">())</span> <span class="p">{</span> <span class="cp">?&gt;</span>
-<span class="x">    &lt;li&gt;</span>
-<span class="x">        &lt;a href=&quot;./?action=profil&quot;&gt;</span>
-<span class="x">            &lt;img src=&quot;images/profil.png&quot; alt=&quot;loupe&quot; /&gt;Mon Profil</span>
-<span class="x">        &lt;/a&gt;</span>
-<span class="x">    &lt;/li&gt;</span>
-<span class="cp">&lt;?php</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="cp">?&gt;</span>
-<span class="x">    &lt;li&gt;</span>
-<span class="x">        &lt;a href=&quot;./?action=connexion&quot;&gt;</span>
-<span class="x">            &lt;img src=&quot;images/profil.png&quot; alt=&quot;loupe&quot; /&gt;Connexion</span>
-<span class="x">        &lt;/a&gt;</span>
-<span class="x">    &lt;/li&gt;</span>
-<span class="cp">&lt;?php</span> <span class="p">}</span> <span class="cp">?&gt;</span>
-</code></pre></div>
-</details>
-<h2 id="question-5-profil-types-de-cuisine-preferes">Question 5 — Profil : types de cuisine préférés 🍽️<a class="headerlink" href="#question-5-profil-types-de-cuisine-preferes" title="Permanent link">⚓︎</a></h2>
-<p><strong>Documents à utiliser :</strong> fichiers du projet, annexes 10 et 12</p>
-<p>Pour tester ce code, vous devez être <strong>connecté</strong> sur le site, puis accéder à la page "Mon Profil".</p>
-<p>Le contrôleur <code>monProfil.php</code> crée la variable :</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$mesTypeCuisineAimes = getTypesCuisinePreferesByMailU($mailU);</span>
-</code></pre></div>
-<h3 id="51-structure-de-mestypecuisineaimes">5.1 — Structure de <code>$mesTypeCuisineAimes</code> 🗺️<a class="headerlink" href="#51-structure-de-mestypecuisineaimes" title="Permanent link">⚓︎</a></h3>
-<p>Afficher la variable dans le contrôleur avec <code>print_r($mesTypeCuisineAimes)</code>, puis schématiser sa structure.</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>C'est un <strong>tableau de tableaux associatifs</strong>, identique à la structure de <code>$lesTypesCuisine</code> :
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>$mesTypeCuisineAimes
-├── [0] → [&#39;idTC&#39; =&gt; 2, &#39;libelleTC&#39; =&gt; &#39;Sud-Ouest&#39;]
-├── [1] → [&#39;idTC&#39; =&gt; 4, &#39;libelleTC&#39; =&gt; &#39;Viande&#39;]
-└── [2] → [&#39;idTC&#39; =&gt; 7, &#39;libelleTC&#39; =&gt; &#39;Grillade&#39;]
-</code></pre></div></p>
-</details>
-<h3 id="52-syntaxe-dacces-au-libelle">5.2 — Syntaxe d'accès au libellé ⌨️<a class="headerlink" href="#52-syntaxe-dacces-au-libelle" title="Permanent link">⚓︎</a></h3>
-<p>Quelle syntaxe permet d'atteindre le libellé d'un type de cuisine dans <code>$mesTypeCuisineAimes</code> ?</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$mesTypeCuisineAimes[$i][&#39;libelleTC&#39;]</span>
-</code></pre></div>
-</details>
-<h3 id="53-et-54-code-html-dans-la-vue">5.3 et 5.4 — Code HTML dans la vue 🔎<a class="headerlink" href="#53-et-54-code-html-dans-la-vue" title="Permanent link">⚓︎</a></h3>
-<p>Repérer dans <code>vueMonProfil.php</code> le code HTML permettant d'afficher les types de cuisine. Quelle partie de code est répétée ?</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>Le code HTML statique contient des éléments <code>&lt;li&gt;</code> répétés :
-<div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;tagFood&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;tag&quot;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;tag&quot;</span><span class="p">&gt;</span>#<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>sud ouest<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;tag&quot;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;tag&quot;</span><span class="p">&gt;</span>#<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>viande<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;tag&quot;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;tag&quot;</span><span class="p">&gt;</span>#<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>grillade<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</code></pre></div>
-C'est la balise <code>&lt;li class="tag"&gt;</code> et son contenu qui est répétée pour chaque type de cuisine.</p>
-</details>
-<h3 id="55-parcourir-et-afficher-les-types-de-cuisine">5.5 — Parcourir et afficher les types de cuisine ✏️<a class="headerlink" href="#55-parcourir-et-afficher-les-types-de-cuisine" title="Permanent link">⚓︎</a></h3>
-<p>Écrire le code PHP permettant de parcourir <code>$mesTypeCuisineAimes</code> et d'afficher pour chaque type le libellé associé :</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="k">foreach</span> <span class="p">(</span><span class="nv">$mesTypeCuisineAimes</span> <span class="k">as</span> <span class="cm">/* à compléter */</span><span class="p">)</span> <span class="p">{</span> <span class="cp">?&gt;</span>
-<span class="x">    </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="cm">/* afficher le libellé */</span> <span class="cp">?&gt;</span>
-<span class="cp">&lt;?php</span> <span class="p">}</span> <span class="cp">?&gt;</span>
-</code></pre></div>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nb">count</span><span class="p">(</span><span class="nv">$mesTypeCuisineAimes</span><span class="p">);</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="cp">?&gt;</span>
-<span class="x">    </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$mesTypeCuisineAimes</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s1">&#39;libelleTC&#39;</span><span class="p">]</span> <span class="cp">?&gt;</span>
-<span class="cp">&lt;?php</span> <span class="p">}</span> <span class="cp">?&gt;</span>
-</code></pre></div>
-</details>
-<h3 id="56-integration-dans-la-vue">5.6 — Intégration dans la vue ✏️<a class="headerlink" href="#56-integration-dans-la-vue" title="Permanent link">⚓︎</a></h3>
-<p>Modifier le code pour respecter les balises HTML trouvées en 5.3, et intégrer ce code dans <code>vueMonProfil.php</code>.</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;!-- Exemple de structure HTML attendue --&gt;</span>
-<span class="x">&lt;ul id=&quot;typesCuisineAimes&quot;&gt;</span>
-<span class="x">    &lt;li&gt;Japonaise&lt;/li&gt;</span>
-<span class="x">    &lt;li&gt;Française&lt;/li&gt;</span>
-<span class="x">    &lt;!-- ... --&gt;</span>
-<span class="x">&lt;/ul&gt;</span>
-</code></pre></div>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;ul id=&quot;tagFood&quot;&gt;</span>
-<span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nb">count</span><span class="p">(</span><span class="nv">$mesTypeCuisineAimes</span><span class="p">);</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="cp">?&gt;</span>
-<span class="x">        &lt;li class=&quot;tag&quot;&gt;</span>
-<span class="x">            &lt;span class=&quot;tag&quot;&gt;#&lt;/span&gt;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$mesTypeCuisineAimes</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">&quot;libelleTC&quot;</span><span class="p">]</span> <span class="cp">?&gt;</span>
-<span class="x">        &lt;/li&gt;</span>
-<span class="x">    </span><span class="cp">&lt;?php</span> <span class="p">}</span> <span class="cp">?&gt;</span>
-<span class="x">&lt;/ul&gt;</span>
-</code></pre></div>
-</details>
-<h2 id="question-6-profil-restaurants-aimes">Question 6 — Profil : restaurants aimés ⭐<a class="headerlink" href="#question-6-profil-restaurants-aimes" title="Permanent link">⚓︎</a></h2>
-<p><strong>Documents à utiliser :</strong> fichiers du projet, annexes 11 et 12</p>
-<p>Le contrôleur <code>monProfil.php</code> crée la variable :</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$mesRestosAimes = getRestosAimesByMailU($mailU);</span>
-</code></pre></div>
-<p>L'objectif : afficher la liste des restaurants aimés sous forme de <strong>liens cliquables</strong> vers la fiche de chaque restaurant.</p>
-<p>Structure d'un lien attendu :</p>
-<div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;./?action=detail&amp;idR=4&quot;</span><span class="p">&gt;</span>Cidrerie du fronton<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</code></pre></div>
-<h3 id="61-acces-aux-donnees-dans-mesrestosaimes">6.1 — Accès aux données dans <code>$mesRestosAimes</code> 🔎<a class="headerlink" href="#61-acces-aux-donnees-dans-mesrestosaimes" title="Permanent link">⚓︎</a></h3>
-<p>En procédant comme pour l'exercice précédent, expliquer comment accéder à :
-- l'<strong>identifiant</strong> de chaque restaurant
-- le <strong>nom</strong> de chaque restaurant</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Accès à l&#39;identifiant :</span>
-<span class="x">$mesRestosAimes[$i][&#39;idR&#39;]</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;mailU&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Email de connexion&quot;</span> <span class="p">/&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;mdpU&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Mot de passe&quot;</span>  <span class="p">/&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="p">/&gt;</span>
 
-<span class="x">// Accès au nom :</span>
-<span class="x">$mesRestosAimes[$i][&#39;nomR&#39;]</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;./?action=inscription&quot;</span><span class="p">&gt;</span>Inscription<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
 </details>
-<h3 id="62-parcourir-et-afficher-les-noms">6.2 — Parcourir et afficher les noms ✏️<a class="headerlink" href="#62-parcourir-et-afficher-les-noms" title="Permanent link">⚓︎</a></h3>
-<p>Écrire le code PHP permettant de parcourir <code>$mesRestosAimes</code> et d'afficher le nom de chaque restaurant.</p>
 <details class="question">
 <summary>Éléments de réponses ✅</summary>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nb">count</span><span class="p">(</span><span class="nv">$mesRestosAimes</span><span class="p">);</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="cp">?&gt;</span>
-<span class="x">    </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$mesRestosAimes</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">&quot;nomR&quot;</span><span class="p">]</span> <span class="cp">?&gt;</span>
-<span class="cp">&lt;?php</span> <span class="p">}</span> <span class="cp">?&gt;</span>
-</code></pre></div>
+<p><img alt="illustration" class="center" src="../data/2schemaAuth_corr.png" width="80%" /></p>
 </details>
-<h3 id="63-adapter-la-vue-affichage-dynamique">6.3 — Adapter la vue : affichage dynamique ✏️<a class="headerlink" href="#63-adapter-la-vue-affichage-dynamique" title="Permanent link">⚓︎</a></h3>
-<p>Modifier <code>vueMonProfil.php</code> pour remplacer l'affichage statique par un affichage dynamique. Chaque restaurant doit être un lien vers sa fiche :</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;ul id=&quot;restosAimes&quot;&gt;</span>
-<span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">foreach</span> <span class="p">(</span><span class="nv">$mesRestosAimes</span> <span class="k">as</span> <span class="cm">/* à compléter */</span><span class="p">)</span> <span class="p">{</span> <span class="cp">?&gt;</span>
-<span class="x">        &lt;li&gt;</span>
-<span class="x">            &lt;a href=&quot;./?action=detail&amp;idR=</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="cm">/* identifiant */</span> <span class="cp">?&gt;</span><span class="x">&quot;&gt;</span>
-<span class="x">                </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="cm">/* nom */</span> <span class="cp">?&gt;</span>
-<span class="x">            &lt;/a&gt;</span>
-<span class="x">        &lt;/li&gt;</span>
-<span class="x">    </span><span class="cp">&lt;?php</span> <span class="p">}</span> <span class="cp">?&gt;</span>
-<span class="x">&lt;/ul&gt;</span>
+<p>❓ <strong>Compléter le contrôleur</strong> <code>connexion.php</code> ✏️</p>
+<p>En vous inspirant de la section de test du modèle, compléter le code du contrôleur en respectant les étapes suivantes :</p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="c1">// Étape 1 : inclure les modèles nécessaires</span>
+<span class="k">include_once</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/modele/authentification.inc.php&quot;</span><span class="p">;</span>
+<span class="k">include_once</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/modele/bd.utilisateur.inc.php&quot;</span><span class="p">;</span>
+
+<span class="c1">// Étape 2 : récupérer les données POST si elles existent</span>
+<span class="k">if</span> <span class="p">(</span><span class="cm">/* condition : des données sont transmises */</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="c1">// Récupérer login et mot de passe depuis $_POST</span>
+    <span class="nv">$mail</span> <span class="o">=</span> <span class="cm">/* à compléter */</span><span class="p">;</span>
+    <span class="nv">$mdp</span>  <span class="o">=</span> <span class="cm">/* à compléter */</span><span class="p">;</span>
+
+    <span class="c1">// Tenter la connexion</span>
+    <span class="cm">/* à compléter */</span><span class="p">;</span>
+
+    <span class="c1">// Tester si la connexion a réussi</span>
+    <span class="k">if</span> <span class="p">(</span><span class="cm">/* à compléter */</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Afficher la confirmation</span>
+        <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php&quot;</span><span class="p">;</span>
+        <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/vueConfirmationAuth.php&quot;</span><span class="p">;</span>
+        <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php&quot;</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// Afficher le formulaire à nouveau</span>
+        <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php&quot;</span><span class="p">;</span>
+        <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/vueAuthentification.php&quot;</span><span class="p">;</span>
+        <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="c1">// Étape déjà faite : afficher le formulaire de connexion</span>
+    <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php&quot;</span><span class="p">;</span>
+    <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/vueAuthentification.php&quot;</span><span class="p">;</span>
+    <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
 </code></pre></div>
 <details class="question">
 <summary>Éléments de réponses ✅</summary>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nb">count</span><span class="p">(</span><span class="nv">$mesRestosAimes</span><span class="p">);</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="cp">?&gt;</span>
-<span class="x">    &lt;a href=&quot;./?action=detail&amp;idR=</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$mesRestosAimes</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">&quot;idR&quot;</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">&quot;&gt;</span>
-<span class="x">        </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$mesRestosAimes</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">&quot;nomR&quot;</span><span class="p">]</span> <span class="cp">?&gt;</span>
-<span class="x">    &lt;/a&gt;&lt;br /&gt;</span>
-<span class="cp">&lt;?php</span> <span class="p">}</span> <span class="cp">?&gt;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&quot;SCRIPT_FILENAME&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$racine</span> <span class="o">=</span> <span class="s2">&quot;..&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">include_once</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/modele/authentification.inc.php&quot;</span><span class="p">;</span>
+
+<span class="c1">// recuperation des donnees GET, POST, et SESSION</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;mailU&quot;</span><span class="p">])</span> <span class="o">||</span> <span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;mdpU&quot;</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="c1">// Pas de données → afficher le formulaire</span>
+    <span class="nv">$titre</span> <span class="o">=</span> <span class="s2">&quot;authentification&quot;</span><span class="p">;</span>
+    <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php&quot;</span><span class="p">;</span>
+    <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/vueAuthentification.php&quot;</span><span class="p">;</span>
+    <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php&quot;</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nv">$mailU</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;mailU&quot;</span><span class="p">];</span>
+    <span class="nv">$mdpU</span>  <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;mdpU&quot;</span><span class="p">];</span>
+
+    <span class="nx">login</span><span class="p">(</span><span class="nv">$mailU</span><span class="p">,</span> <span class="nv">$mdpU</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">isLoggedOn</span><span class="p">())</span> <span class="p">{</span>
+        <span class="c1">// Connexion réussie</span>
+        <span class="nv">$titre</span> <span class="o">=</span> <span class="s2">&quot;confirmation&quot;</span><span class="p">;</span>
+        <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php&quot;</span><span class="p">;</span>
+        <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/vueConfirmationAuth.php&quot;</span><span class="p">;</span>
+        <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php&quot;</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// Échec : réafficher le formulaire</span>
+        <span class="nv">$titre</span> <span class="o">=</span> <span class="s2">&quot;authentification&quot;</span><span class="p">;</span>
+        <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php&quot;</span><span class="p">;</span>
+        <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/vueAuthentification.php&quot;</span><span class="p">;</span>
+        <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
 </code></pre></div>
 </details>
-<p><em><a href="../02_controleur/">← Partie 2</a> | <a href="../04_modele/">Partie 4 — Modèle →</a></em></p>
+<h2 id="2-controleur-de-deconnexion-deconnexionphp">2. Contrôleur de déconnexion : <code>deconnexion.php</code> 🚪<a class="headerlink" href="#2-controleur-de-deconnexion-deconnexionphp" title="Permanent link">⚓︎</a></h2>
+<p><strong>Documents à utiliser :</strong> fichiers du projet, annexes 1, 2 et 5</p>
+<details class="info">
+<summary>Annexe 1 - section de test du fichier modèle authentification.inc.php  📄</summary>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">if ($_SERVER[&quot;SCRIPT_FILENAME&quot;] == __FILE__) {</span>
+<span class="x">    // prog principal de test</span>
+<span class="x">    header(&#39;Content-Type:text/plain&#39;);</span>
+
+<span class="x">    // test de connexion</span>
+<span class="x">    if (isLoggedOn()) {</span>
+<span class="x">        echo &quot;logged\n&quot;;</span>
+<span class="x">    } else {</span>
+<span class="x">        echo &quot;not logged\n&quot;;</span>
+<span class="x">    }</span>
+
+<span class="x">    login(&quot;test@bts.sio&quot;, &quot;sio&quot;);   // login de test : test@bts.sio</span>
+<span class="x">                        // mot de passe de test : sio</span>
+<span class="x">    if (isLoggedOn()) {</span>
+<span class="x">        echo &quot;logged\n&quot;;</span>
+<span class="x">    } else {</span>
+<span class="x">        echo &quot;not logged\n&quot;;</span>
+<span class="x">    }</span>
+
+<span class="x">    $mail=getMailULoggedOn();</span>
+<span class="x">    echo &quot;utilisateur connecté avec cette adresse : $mail \n&quot;;</span>
+
+<span class="x">    // deconnexion</span>
+<span class="x">    logout();</span>
+<span class="x">}</span>
+</code></pre></div>
+</details>
+<details class="info">
+<summary>Annexe 2 - résultat d'exécution du script authentification.inc.php  📄</summary>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>not logged
+logged
+utilisateur connecté avec cette adresse : test@bts.sio  
+</code></pre></div>
+</details>
+<details class="info">
+<summary>Annexe 5 - contrôleur deconnexion.php à compléter  📄</summary>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">if</span> <span class="p">(</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&quot;SCRIPT_FILENAME&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span> <span class="p">){</span>
+    <span class="nv">$racine</span><span class="o">=</span><span class="s2">&quot;..&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">include_once</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/modele/authentification.inc.php&quot;</span><span class="p">;</span>
+
+<span class="c1">// recuperation des donnees GET, POST, et SESSION</span>
+
+<span class="c1">// appel des fonctions permettant de recuperer les donnees utiles a l&#39;affichage</span>
+
+<span class="c1">// traitement si necessaire des donnees recuperees</span>
+
+
+<span class="c1">// appel du script de vue qui permet de gerer l&#39;affichage des donnees</span>
+<span class="nv">$titre</span> <span class="o">=</span> <span class="s2">&quot;Deconnexion&quot;</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php&quot;</span><span class="p">;</span>
+
+<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php&quot;</span><span class="p">;</span>
+
+<span class="cp">?&gt;</span>
+</code></pre></div>
+</details>
+<p>❓ <strong>Quelle fonction du modèle permet de déconnecter l'utilisateur actuellement connecté ?</strong> 🎯</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p>C'est la fonction <strong><code>logout()</code></strong>. Elle ne prend aucun paramètre.</p>
+</details>
+<p>❓ <strong>Vue de confirmation</strong> 🖼️ : Quelle vue permettant de confirmer la déconnexion devra être appelée par ce contrôleur ?</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p>C'est le script <strong><code>vueDeconnexion.php</code></strong> (ou <code>vueAuthentification.php</code> selon la version du projet).</p>
+</details>
+<p>❓ <strong>Donnée à transmettre</strong>📨 : Lors de la déconnexion, est-il utile de transmettre une donnée au contrôleur ?</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p><strong>Non.</strong> Aucune donnée n'est nécessaire. La fonction <code>logout()</code> ne prend pas de paramètre : elle déconnecte l'utilisateur actuellement en session, sans avoir besoin d'identifiant.</p>
+</details>
+<p>🔨 <strong>Compléter</strong> <code>deconnexion.php</code> ✏️</p>
+<p>Compléter le code du contrôleur. Il doit :</p>
+<ul>
+<li>Appeler la fonction appropriée du modèle</li>
+<li>Afficher un message de confirmation</li>
+</ul>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">include_once</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/modele/authentification.inc.php&quot;</span><span class="p">;</span>
+
+<span class="c1">// Déconnecter l&#39;utilisateur</span>
+<span class="cm">/* à compléter */</span><span class="p">;</span>
+
+<span class="c1">// Afficher la confirmation</span>
+<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php&quot;</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue//* à compléter */&quot;</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php&quot;</span><span class="p">;</span>
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&quot;SCRIPT_FILENAME&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$racine</span> <span class="o">=</span> <span class="s2">&quot;..&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">include_once</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/modele/authentification.inc.php&quot;</span><span class="p">;</span>
+
+<span class="c1">// Déconnecter l&#39;utilisateur</span>
+<span class="nx">logout</span><span class="p">();</span>
+
+<span class="c1">// Afficher la confirmation</span>
+<span class="nv">$titre</span> <span class="o">=</span> <span class="s2">&quot;authentification&quot;</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php&quot;</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/vueAuthentification.php&quot;</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php&quot;</span><span class="p">;</span>
+<span class="cp">?&gt;</span>
+</code></pre></div>
+</details>
+<h2 id="3-controleur-de-recherche-rechercherestophp">3. Contrôleur de recherche : <code>rechercheResto.php</code> 🔍<a class="headerlink" href="#3-controleur-de-recherche-rechercherestophp" title="Permanent link">⚓︎</a></h2>
+<p><strong>Documents à utiliser :</strong> fichiers du projet, annexes 6, 7, 8 et 9</p>
+<details class="info">
+<summary>Annexe 6 - contrôleur rechercheResto.php à compléter 📄</summary>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&quot;SCRIPT_FILENAME&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$racine</span> <span class="o">=</span> <span class="s2">&quot;..&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">include_once</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/modele/bd.resto.inc.php&quot;</span><span class="p">;</span>
+
+<span class="c1">// creation du menu burger</span>
+<span class="nv">$menuBurger</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+<span class="nv">$menuBurger</span><span class="p">[]</span> <span class="o">=</span> <span class="k">Array</span><span class="p">(</span><span class="s2">&quot;url&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;./?action=recherche&amp;critere=nom&quot;</span><span class="p">,</span> <span class="s2">&quot;label&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Recherche par nom&quot;</span><span class="p">);</span>
+<span class="nv">$menuBurger</span><span class="p">[]</span> <span class="o">=</span> <span class="k">Array</span><span class="p">(</span><span class="s2">&quot;url&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;./?action=recherche&amp;critere=adresse&quot;</span><span class="p">,</span> <span class="s2">&quot;label&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Recherche par adresse&quot;</span><span class="p">);</span>
+
+<span class="c1">// critere de recherche par defaut</span>
+<span class="nv">$critere</span> <span class="o">=</span> <span class="s2">&quot;nom&quot;</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s2">&quot;critere&quot;</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="nv">$critere</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s2">&quot;critere&quot;</span><span class="p">];</span>
+<span class="p">}</span>
+<span class="c1">// recuperation des donnees GET, POST, et SESSION</span>
+<span class="c1">// recherche par nom</span>
+<span class="nv">$nomR</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="c1">// recherche par adresse</span>
+<span class="nv">$voieAdrR</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="nv">$cpR</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="nv">$villeR</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+
+<span class="c1">// appel des fonctions permettant de recuperer les donnees utiles a l&#39;affichage</span>
+<span class="c1">// Si on provient du formulaire de recherche : $critere indique le type de recherche à effectuer</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">))</span> <span class="p">{</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="nv">$critere</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="s1">&#39;nom&#39;</span><span class="o">:</span>
+            <span class="c1">// recherche par nom</span>
+
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="s1">&#39;adresse&#39;</span><span class="o">:</span>
+            <span class="c1">// recherche par adresse</span>
+
+            <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// traitement si necessaire des donnees recuperees</span>
+<span class="p">;</span>
+
+<span class="c1">// appel du script de vue qui permet de gerer l&#39;affichage des donnees</span>
+<span class="nv">$titre</span> <span class="o">=</span> <span class="s2">&quot;Recherche d&#39;un restaurant&quot;</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php&quot;</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/vueRechercheResto.php&quot;</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php&quot;</span><span class="p">;</span>
+<span class="cp">?&gt;</span>
+</code></pre></div>
+</details>
+<details class="info">
+<summary>Annexe 7 - vue vueRechercheResto.php 📄</summary>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;h1&gt;Recherche d&#39;un restaurant&lt;/h1&gt;</span>
+<span class="x">&lt;form action=&quot;./?action=recherche&amp;critere=</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$critere</span> <span class="cp">?&gt;</span><span class="x">&quot; method=&quot;POST&quot;&gt;</span>
+
+<span class="x">    </span><span class="cp">&lt;?php</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="nv">$critere</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="s2">&quot;nom&quot;</span><span class="o">:</span>
+            <span class="cp">?&gt;</span>
+<span class="x">            Recherche par nom : &lt;br /&gt;</span>
+<span class="x">            &lt;input type=&quot;text&quot; name=&quot;nomR&quot; placeholder=&quot;nom&quot; value=&quot;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$nomR</span> <span class="cp">?&gt;</span><span class="x">&quot; /&gt;&lt;br /&gt;</span>
+<span class="x">            </span><span class="cp">&lt;?php</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="s2">&quot;adresse&quot;</span><span class="o">:</span>
+            <span class="cp">?&gt;</span>
+<span class="x">            Recherche par adresse : &lt;br /&gt;</span>
+<span class="x">            &lt;input type=&quot;text&quot; name=&quot;villeR&quot; placeholder=&quot;ville&quot; value=&quot;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$villeR</span> <span class="cp">?&gt;</span><span class="x">&quot;/&gt;&lt;br /&gt;</span>
+<span class="x">            &lt;input type=&quot;text&quot; name=&quot;cpR&quot; placeholder=&quot;code postal&quot; value=&quot;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$cpR</span> <span class="cp">?&gt;</span><span class="x">&quot;/&gt;&lt;br /&gt;</span>
+<span class="x">            &lt;input type=&quot;text&quot; name=&quot;voieAdrR&quot; placeholder=&quot;rue&quot; value=&quot;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$voieAdrR</span> <span class="cp">?&gt;</span><span class="x">&quot;/&gt;&lt;br /&gt;</span>
+<span class="x">            </span><span class="cp">&lt;?php</span>
+            <span class="k">break</span><span class="p">;</span>
+
+    <span class="p">}</span>
+    <span class="cp">?&gt;</span>
+<span class="x">    &lt;br /&gt;&lt;br /&gt;</span>
+<span class="x">    &lt;input type=&quot;submit&quot; value=&quot;Rechercher&quot; /&gt;</span>
+
+<span class="x">&lt;/form&gt;</span>
+</code></pre></div>
+</details>
+<details class="info">
+<summary>Annexe 8 - vue vueResultRecherche.php 📄</summary>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;h1&gt;Liste des restaurants&lt;/h1&gt;</span>
+<span class="cp">&lt;?php</span>
+<span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nb">count</span><span class="p">(</span><span class="nv">$listeRestos</span><span class="p">);</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="cp">?&gt;</span>
+<span class="x">    &lt;div class=&quot;card&quot;&gt;</span>
+<span class="x">        &lt;div class=&quot;descrCard&quot;&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="s2">&quot;&lt;a href=&#39;./?action=detail&amp;idR=&quot;</span> <span class="o">.</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s1">&#39;idR&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&#39;&gt;&quot;</span> <span class="o">.</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s1">&#39;nomR&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&lt;/a&gt;&quot;</span><span class="p">;</span> <span class="cp">?&gt;</span>
+<span class="x">            &lt;br /&gt;</span>
+<span class="x">            </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">&quot;numAdrR&quot;</span><span class="p">]</span> <span class="cp">?&gt;</span>
+<span class="x">            </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">&quot;voieAdrR&quot;</span><span class="p">]</span> <span class="cp">?&gt;</span>
+<span class="x">            &lt;br /&gt;</span>
+<span class="x">            </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">&quot;cpR&quot;</span><span class="p">]</span> <span class="cp">?&gt;</span>
+<span class="x">            </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">&quot;villeR&quot;</span><span class="p">]</span> <span class="cp">?&gt;</span>
+<span class="x">        &lt;/div&gt;</span>
+<span class="x">        &lt;div class=&quot;tagCard&quot;&gt;</span>
+<span class="x">            &lt;ul id=&quot;tagFood&quot;&gt;       </span>
+<span class="x">            &lt;/ul&gt;</span>
+<span class="x">        &lt;/div&gt;</span>
+<span class="x">    &lt;/div&gt;</span>
+<span class="x">    </span><span class="cp">&lt;?php</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre></div>
+</details>
+<details class="info">
+<summary>Annexe 9 - extrait du modèle bd.resto.inc.php 📄</summary>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">include_once</span> <span class="s2">&quot;bd.inc.php&quot;</span><span class="p">;</span>
+
+<span class="k">function</span> <span class="nf">getRestoByIdR</span><span class="p">(</span><span class="nv">$idR</span><span class="p">)</span> <span class="p">{</span><span class="o">...</span><span class="p">}</span>
+
+<span class="k">function</span> <span class="nf">getRestosByNomR</span><span class="p">(</span><span class="nv">$nomR</span><span class="p">)</span> <span class="p">{</span><span class="o">...</span><span class="p">}</span>
+
+<span class="k">function</span> <span class="nf">getRestosByAdresse</span><span class="p">(</span><span class="nv">$voieAdrR</span><span class="p">,</span> <span class="nv">$cpR</span><span class="p">,</span> <span class="nv">$villeR</span><span class="p">)</span> <span class="p">{</span><span class="o">...</span><span class="p">}</span>
+
+
+<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&quot;SCRIPT_FILENAME&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// prog principal de test</span>
+    <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Content-Type:text/plain&#39;</span><span class="p">);</span>
+
+    <span class="k">echo</span> <span class="s2">&quot;getRestos() : </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nx">getRestos</span><span class="p">());</span>
+
+    <span class="k">echo</span> <span class="s2">&quot;getRestoByIdR(idR) : </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nx">getRestoByIdR</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+
+    <span class="k">echo</span> <span class="s2">&quot;getRestosByNomR(nomR) : </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nx">getRestosByNomR</span><span class="p">(</span><span class="s2">&quot;charcut&quot;</span><span class="p">));</span>
+
+    <span class="k">echo</span> <span class="s2">&quot;getRestosByAdresse(voieAdrR, cpR, villeR) : </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nx">getRestosByAdresse</span><span class="p">(</span><span class="s2">&quot;Ravel&quot;</span><span class="p">,</span> <span class="s2">&quot;33000&quot;</span><span class="p">,</span> <span class="s2">&quot;Bordeaux&quot;</span><span class="p">));</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre></div>
+</details>
+<h3 id="contexte_1">Contexte<a class="headerlink" href="#contexte_1" title="Permanent link">⚓︎</a></h3>
+<p>Le contrôleur <code>rechercheResto.php</code> gère <strong>deux situations</strong> :</p>
+<ol>
+<li>Affichage du formulaire de recherche (<code>vueRechercheResto.php</code>)</li>
+<li>Exécution de la recherche et affichage des résultats (<code>vueResultRecherche.php</code>)</li>
+</ol>
+<p>La vue <code>vueResultRecherche.php</code> affiche la variable <code>$listeRestos</code>.</p>
+<p>❓ En consultant <code>bd.resto.inc.php</code>, <strong>donner la <em>signature</em> de chacune de ces fonctions</strong> ⚙️</p>
+<details class="tip">
+<summary>Signature d'une fonction</summary>
+<p>Une signature de fonction définit les entrées et sorties des fonctions et des méthodes, nom des variables ainsi que leurs types.</p>
+</details>
+<table>
+<thead>
+<tr>
+<th>Fonction</th>
+<th>Signature complète</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>getRestos()</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>getRestosByNomR($nomR)</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>getRestosByAdresse($voie, $cp, $ville)</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<table>
+<thead>
+<tr>
+<th>Fonction</th>
+<th>Signature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>getRestos()</code></td>
+<td><code>fonction getRestos() : tableau</code></td>
+</tr>
+<tr>
+<td><code>getRestosByNomR($nomR)</code></td>
+<td><code>fonction getRestosByNomR(nomR : chaîne) : tableau</code></td>
+</tr>
+<tr>
+<td><code>getRestosByAdresse($voie, $cp, $ville)</code></td>
+<td><code>fonction getRestosByAdresse(voieAdrR : chaîne, cpR : chaîne, villeR : chaîne) : tableau</code></td>
+</tr>
+</tbody>
+</table>
+</details>
+<p>❓ <strong>Afficher le contenu de <code>$_POST</code> dans le contrôleur avec</strong> <code>print_r($_POST)</code> 📨</p>
+<p>Quelle est sa valeur dans les deux cas suivants :</p>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Contenu de <code>$_POST</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recherche par nom</td>
+<td></td>
+</tr>
+<tr>
+<td>Recherche par adresse (ex: "rue saint rémi 33000 bordeaux")</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p><strong>Recherche par nom</strong> (ex: "entrepote") :</p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">Array (</span>
+<span class="x">    [nomR] =&gt; entrepote</span>
+<span class="x">)</span>
+</code></pre></div>
+<p><strong>Recherche par adresse</strong> (rue saint remi 33000 bordeaux) :</p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">Array (</span>
+<span class="x">    [voieAdrR] =&gt; rue saint remi</span>
+<span class="x">    [cpR]      =&gt; 33000</span>
+<span class="x">    [villeR]   =&gt; bordeaux</span>
+<span class="x">)</span>
+</code></pre></div>
+</details>
+<p>❓ <strong>Quels sont les noms des variables transmises</strong> au contrôleur en méthode <strong>POST</strong> lors d'une recherche ? 📋</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p>Les variables suivantes sont transmises en méthode POST : <strong><code>nomR</code></strong>, <strong><code>voieAdrR</code></strong>, <strong><code>cpR</code></strong> et <strong><code>villeR</code></strong>.
+Elles correspondent aux champs des deux formulaires de recherche (par nom et par adresse).</p>
+</details>
+<p>🔨 <strong>Compléter la section de récupération des données POST pour valoriser</strong> <code>$nomR</code>, <code>$voieAdrR</code>, <code>$cpR</code> et <code>$villeR</code> 📥</p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Initialisation par défaut</span>
+<span class="x">$nomR     = &quot;&quot;;</span>
+<span class="x">$voieAdrR = &quot;&quot;;</span>
+<span class="x">$cpR      = &quot;&quot;;</span>
+<span class="x">$villeR   = &quot;&quot;;</span>
+
+<span class="x">// Récupération conditionnelle (exemple pour $nomR)</span>
+<span class="x">if (isset($_POST[&#39;nomR&#39;])) {</span>
+<span class="x">    $nomR = $_POST[&#39;nomR&#39;];</span>
+<span class="x">}</span>
+
+<span class="x">// À compléter pour les autres variables :</span>
+<span class="x">/* ... */</span>
+</code></pre></div>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$nomR = &quot;&quot;;</span>
+<span class="x">if (isset($_POST[&quot;nomR&quot;])) {</span>
+<span class="x">    $nomR = $_POST[&quot;nomR&quot;];</span>
+<span class="x">}</span>
+
+<span class="x">$voieAdrR = &quot;&quot;;</span>
+<span class="x">if (isset($_POST[&quot;voieAdrR&quot;])) {</span>
+<span class="x">    $voieAdrR = $_POST[&quot;voieAdrR&quot;];</span>
+<span class="x">}</span>
+
+<span class="x">$cpR = &quot;&quot;;</span>
+<span class="x">if (isset($_POST[&quot;cpR&quot;])) {</span>
+<span class="x">    $cpR = $_POST[&quot;cpR&quot;];</span>
+<span class="x">}</span>
+
+<span class="x">$villeR = &quot;&quot;;</span>
+<span class="x">if (isset($_POST[&quot;villeR&quot;])) {</span>
+<span class="x">    $villeR = $_POST[&quot;villeR&quot;];</span>
+<span class="x">}</span>
+</code></pre></div>
+</details>
+<p>🔨 <strong>Compléter le code de chaque cas en faisant appel à la fonction appropriée du modèle</strong>. Les données récupérées doivent être placées dans <code>$listeRestos</code>. ✏️</p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">if (!empty($_POST)) {</span>
+<span class="x">    $typeRecherche = $_POST[&#39;typeRecherche&#39;] ?? &#39;&#39;;</span>
+
+<span class="x">    switch ($typeRecherche) {</span>
+<span class="x">        case &#39;nom&#39;:</span>
+<span class="x">            $listeRestos = /* à compléter */;</span>
+<span class="x">            break;</span>
+
+<span class="x">        case &#39;adresse&#39;:</span>
+<span class="x">            $listeRestos = /* à compléter */;</span>
+<span class="x">            break;</span>
+
+<span class="x">        default:</span>
+<span class="x">            $listeRestos = getRestos();</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+</code></pre></div>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">switch ($critere) {</span>
+<span class="x">    case &#39;nom&#39;:</span>
+<span class="x">        $listeRestos = getRestosByNomR($nomR);</span>
+<span class="x">        break;</span>
+
+<span class="x">    case &#39;adresse&#39;:</span>
+<span class="x">        $listeRestos = getRestosByAdresse($voieAdrR, $cpR, $villeR);</span>
+<span class="x">        break;</span>
+<span class="x">}</span>
+</code></pre></div>
+</details>
+<p>❓ <strong>Pourquoi l'appel aux fonctions du modèle est-il conditionné par</strong><code>!empty($_POST)</code> ? 🤔 </p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p>On ne peut pas effectuer de recherche si aucune donnée n'est transmise par le formulaire. Si <code>$_POST</code> est vide, c'est que l'utilisateur n'a pas encore soumis de formulaire : on affiche simplement le formulaire vide, sans lancer de requête en base de données.</p>
+</details>
+<p>🔨 <strong>Ajouter l'appel à la vue de résultats</strong>🖼️ : La vue <code>vueResultRecherche.php</code> ne doit être affichée que si des données ont été trouvées. Ajouter son inclusion en fin de contrôleur.</p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// En fin de contrôleur</span>
+<span class="x">include &quot;$racine/vue/entete.html.php&quot;;</span>
+
+<span class="x">// Toujours afficher le formulaire de recherche</span>
+<span class="x">include &quot;$racine/vue/vueRechercheResto.php&quot;;</span>
+
+<span class="x">// Afficher les résultats uniquement si une recherche a été faite</span>
+<span class="x">if (/* condition à compléter */) {</span>
+<span class="x">    include &quot;$racine/vue/vueResultRecherche.php&quot;;</span>
+<span class="x">}</span>
+
+<span class="x">include &quot;$racine/vue/pied.html.php&quot;;</span>
+</code></pre></div>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$titre = &quot;Recherche d&#39;un restaurant&quot;;</span>
+<span class="x">include &quot;$racine/vue/entete.html.php&quot;;</span>
+<span class="x">include &quot;$racine/vue/vueRechercheResto.php&quot;;</span>
+
+<span class="x">if (!empty($_POST)) {</span>
+<span class="x">    // Afficher les résultats uniquement si une recherche a été soumise</span>
+<span class="x">    include &quot;$racine/vue/vueResultRecherche.php&quot;;</span>
+<span class="x">}</span>
+
+<span class="x">include &quot;$racine/vue/pied.html.php&quot;;</span>
+</code></pre></div>
+</details>
+<h2 id="4-analyse-de-rechercherestophp-gestion-de-laffichage">4. Analyse de <code>rechercheResto.php</code> : gestion de l'affichage 🔍<a class="headerlink" href="#4-analyse-de-rechercherestophp-gestion-de-laffichage" title="Permanent link">⚓︎</a></h2>
+<p><strong>Documents à utiliser :</strong> fichiers du projet, annexes 6, 7 et 8</p>
+<details class="info">
+<summary>Annexe 6 - contrôleur rechercheResto.php à compléter 📄</summary>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&quot;SCRIPT_FILENAME&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$racine</span> <span class="o">=</span> <span class="s2">&quot;..&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">include_once</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/modele/bd.resto.inc.php&quot;</span><span class="p">;</span>
+
+<span class="c1">// creation du menu burger</span>
+<span class="nv">$menuBurger</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+<span class="nv">$menuBurger</span><span class="p">[]</span> <span class="o">=</span> <span class="k">Array</span><span class="p">(</span><span class="s2">&quot;url&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;./?action=recherche&amp;critere=nom&quot;</span><span class="p">,</span> <span class="s2">&quot;label&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Recherche par nom&quot;</span><span class="p">);</span>
+<span class="nv">$menuBurger</span><span class="p">[]</span> <span class="o">=</span> <span class="k">Array</span><span class="p">(</span><span class="s2">&quot;url&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;./?action=recherche&amp;critere=adresse&quot;</span><span class="p">,</span> <span class="s2">&quot;label&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Recherche par adresse&quot;</span><span class="p">);</span>
+
+<span class="c1">// critere de recherche par defaut</span>
+<span class="nv">$critere</span> <span class="o">=</span> <span class="s2">&quot;nom&quot;</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s2">&quot;critere&quot;</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="nv">$critere</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s2">&quot;critere&quot;</span><span class="p">];</span>
+<span class="p">}</span>
+<span class="c1">// recuperation des donnees GET, POST, et SESSION</span>
+<span class="c1">// recherche par nom</span>
+<span class="nv">$nomR</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="c1">// recherche par adresse</span>
+<span class="nv">$voieAdrR</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="nv">$cpR</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="nv">$villeR</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+
+<span class="c1">// appel des fonctions permettant de recuperer les donnees utiles a l&#39;affichage</span>
+<span class="c1">// Si on provient du formulaire de recherche : $critere indique le type de recherche à effectuer</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">))</span> <span class="p">{</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="nv">$critere</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="s1">&#39;nom&#39;</span><span class="o">:</span>
+            <span class="c1">// recherche par nom</span>
+
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="s1">&#39;adresse&#39;</span><span class="o">:</span>
+            <span class="c1">// recherche par adresse</span>
+
+            <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// traitement si necessaire des donnees recuperees</span>
+<span class="p">;</span>
+
+<span class="c1">// appel du script de vue qui permet de gerer l&#39;affichage des donnees</span>
+<span class="nv">$titre</span> <span class="o">=</span> <span class="s2">&quot;Recherche d&#39;un restaurant&quot;</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php&quot;</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/vueRechercheResto.php&quot;</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php&quot;</span><span class="p">;</span>
+<span class="cp">?&gt;</span>
+</code></pre></div>
+</details>
+<details class="info">
+<summary>Annexe 7 - vue vueRechercheResto.php 📄</summary>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;h1&gt;Recherche d&#39;un restaurant&lt;/h1&gt;</span>
+<span class="x">&lt;form action=&quot;./?action=recherche&amp;critere=</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$critere</span> <span class="cp">?&gt;</span><span class="x">&quot; method=&quot;POST&quot;&gt;</span>
+
+<span class="x">    </span><span class="cp">&lt;?php</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="nv">$critere</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="s2">&quot;nom&quot;</span><span class="o">:</span>
+            <span class="cp">?&gt;</span>
+<span class="x">            Recherche par nom : &lt;br /&gt;</span>
+<span class="x">            &lt;input type=&quot;text&quot; name=&quot;nomR&quot; placeholder=&quot;nom&quot; value=&quot;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$nomR</span> <span class="cp">?&gt;</span><span class="x">&quot; /&gt;&lt;br /&gt;</span>
+<span class="x">            </span><span class="cp">&lt;?php</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="s2">&quot;adresse&quot;</span><span class="o">:</span>
+            <span class="cp">?&gt;</span>
+<span class="x">            Recherche par adresse : &lt;br /&gt;</span>
+<span class="x">            &lt;input type=&quot;text&quot; name=&quot;villeR&quot; placeholder=&quot;ville&quot; value=&quot;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$villeR</span> <span class="cp">?&gt;</span><span class="x">&quot;/&gt;&lt;br /&gt;</span>
+<span class="x">            &lt;input type=&quot;text&quot; name=&quot;cpR&quot; placeholder=&quot;code postal&quot; value=&quot;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$cpR</span> <span class="cp">?&gt;</span><span class="x">&quot;/&gt;&lt;br /&gt;</span>
+<span class="x">            &lt;input type=&quot;text&quot; name=&quot;voieAdrR&quot; placeholder=&quot;rue&quot; value=&quot;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$voieAdrR</span> <span class="cp">?&gt;</span><span class="x">&quot;/&gt;&lt;br /&gt;</span>
+<span class="x">            </span><span class="cp">&lt;?php</span>
+            <span class="k">break</span><span class="p">;</span>
+
+    <span class="p">}</span>
+    <span class="cp">?&gt;</span>
+<span class="x">    &lt;br /&gt;&lt;br /&gt;</span>
+<span class="x">    &lt;input type=&quot;submit&quot; value=&quot;Rechercher&quot; /&gt;</span>
+
+<span class="x">&lt;/form&gt;</span>
+</code></pre></div>
+</details>
+<details class="info">
+<summary>Annexe 8 - vue vueResultRecherche.php 📄</summary>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;h1&gt;Liste des restaurants&lt;/h1&gt;</span>
+<span class="cp">&lt;?php</span>
+<span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nb">count</span><span class="p">(</span><span class="nv">$listeRestos</span><span class="p">);</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="cp">?&gt;</span>
+<span class="x">    &lt;div class=&quot;card&quot;&gt;</span>
+<span class="x">        &lt;div class=&quot;descrCard&quot;&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="s2">&quot;&lt;a href=&#39;./?action=detail&amp;idR=&quot;</span> <span class="o">.</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s1">&#39;idR&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&#39;&gt;&quot;</span> <span class="o">.</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s1">&#39;nomR&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&lt;/a&gt;&quot;</span><span class="p">;</span> <span class="cp">?&gt;</span>
+<span class="x">            &lt;br /&gt;</span>
+<span class="x">            </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">&quot;numAdrR&quot;</span><span class="p">]</span> <span class="cp">?&gt;</span>
+<span class="x">            </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">&quot;voieAdrR&quot;</span><span class="p">]</span> <span class="cp">?&gt;</span>
+<span class="x">            &lt;br /&gt;</span>
+<span class="x">            </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">&quot;cpR&quot;</span><span class="p">]</span> <span class="cp">?&gt;</span>
+<span class="x">            </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">&quot;villeR&quot;</span><span class="p">]</span> <span class="cp">?&gt;</span>
+<span class="x">        &lt;/div&gt;</span>
+<span class="x">        &lt;div class=&quot;tagCard&quot;&gt;</span>
+<span class="x">            &lt;ul id=&quot;tagFood&quot;&gt;       </span>
+<span class="x">            &lt;/ul&gt;</span>
+<span class="x">        &lt;/div&gt;</span>
+<span class="x">    &lt;/div&gt;</span>
+<span class="x">    </span><span class="cp">&lt;?php</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre></div>
+</details>
+<p>❓ Dans le code source de <code>vueRechercheResto.php</code>, **quelle variable permet de choisir l'affichage du formulaire de recherche par <em>nom</em> ou par <em>adresse</em> ** ? 🔎</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p>C'est la variable <strong><code>$critere</code></strong>. Selon sa valeur (<code>'nom'</code> ou <code>'adresse'</code>), la vue affiche le bon formulaire de recherche.</p>
+</details>
+<p>❓ <strong>Quelle variable transmise en méthode GET au contrôleur permet de connaître le type de recherche souhaité ?</strong> 📨</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p>C'est la variable <strong><code>critere</code></strong> (sans <code>$</code>, car on parle de la variable transmise dans l'URL en méthode GET). Elle est récupérée dans le contrôleur via <code>$_GET["critere"]</code>.</p>
+</details>
+<p>❓ <strong>Rechercher où est faite cette transmission :</strong> quel script ? quelle ligne ? 🗺️</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p>La transmission se fait dans le champ <code>action</code> du formulaire de recherche dans <code>vueRechercheResto.php</code> :</p>
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;form action=&quot;./?action=recherche&amp;critere=</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$critere</span> <span class="cp">?&gt;</span><span class="x">&quot; method=&quot;POST&quot;&gt;</span>
+</code></pre></div>
+La valeur de <code>$critere</code> est ainsi ajoutée à l'URL en méthode GET à chaque soumission du formulaire.</p>
+</details>
+<p>❓ <strong>Sans cette transmission</strong> 🤔</p>
+<ul>
+<li>Sans cette information, le contrôleur pourrait-il savoir quelle recherche effectuer ?</li>
+<li>Sans cette information, la vue pourrait-elle savoir quel formulaire afficher ?</li>
+</ul>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p><strong>4.4 — Le contrôleur :</strong> Oui, en théorie on pourrait analyser le contenu des variables transmises en POST (si <code>$nomR</code> n'est pas vide → recherche par nom, sinon → recherche par adresse). Mais cette approche est moins fiable et moins lisible.</p>
+<p><strong>4.5 — La vue :</strong> Non. La vue ne pourrait pas savoir quel formulaire afficher si la variable <code>$critere</code> n'est pas transmise. Il faut toujours afficher le bon formulaire (par nom ou par adresse), même quand aucune donnée POST n'est présente.</p>
+</details>
+<p>❓ Lorsqu'une recherche est effectuée, la vue affiche à nouveau le formulaire avec des valeurs pré-remplies. <strong>Quelles variables sont alors utilisées ?</strong> 📋</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p>Les variables <strong><code>$nomR</code></strong>, <strong><code>$voieAdrR</code></strong>, <strong><code>$cpR</code></strong> et <strong><code>$villeR</code></strong> sont utilisées pour pré-remplir les champs de recherche. Elles ont été valorisées dans le contrôleur à partir de <code>$_POST</code>, et la vue les utilise comme valeurs par défaut des champs <code>&lt;input&gt;</code>.</p>
+</details>
+<h2 id="5-synthese-role-et-fonctionnement-du-controleur">5. Synthèse — Rôle et fonctionnement du contrôleur 📌<a class="headerlink" href="#5-synthese-role-et-fonctionnement-du-controleur" title="Permanent link">⚓︎</a></h2>
+<p>Le contrôleur est l'élément central des fonctionnalités d'une application MVC. Il permet de :</p>
+<table>
+<thead>
+<tr>
+<th>Rôle</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Récupérer les actions utilisateur</td>
+<td>Données GET, POST (saisies, choix, sélections)</td>
+</tr>
+<tr>
+<td>Interroger le modèle</td>
+<td>Appel aux fonctions pour lire ou écrire en base</td>
+</tr>
+<tr>
+<td>Traiter les données</td>
+<td>Logique applicative, calculs, validations</td>
+</tr>
+<tr>
+<td>Commander l'affichage</td>
+<td>Appel aux vues avec les données préparées</td>
+</tr>
+</tbody>
+</table>
+<h4 id="schema-du-fonctionnement-de-rechercherestophp-recherche-par-nom">Schéma du fonctionnement de <code>rechercheResto.php</code> (recherche par nom)<a class="headerlink" href="#schema-du-fonctionnement-de-rechercherestophp-recherche-par-nom" title="Permanent link">⚓︎</a></h4>
+<p><img alt="illustration" class="center" src="../data/rechercheResto.png" width="60%" /></p>
+<h4 id="regles-dorganisation">Règles d'organisation<a class="headerlink" href="#regles-dorganisation" title="Permanent link">⚓︎</a></h4>
+<ul>
+<li>Les <strong>fonctions du modèle</strong> sont accessibles grâce à <code>include_once</code> en début de contrôleur</li>
+<li>Les <strong>vues</strong> sont incluses <strong>en fin</strong> de contrôleur, une fois toute la logique applicative traitée</li>
+</ul>
+<p><em><a href="../03_vue/">3. Les Vues →</a></em></p>
 
 
 

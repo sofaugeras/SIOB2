@@ -12,7 +12,7 @@
         <meta name="author" content="Sophie FAUGERAS">
       
       
-        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/7_Programmation/7.3_developpementPHP/01_generalites/">
+        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/7_Programmation/7.3_MVC_PHP/01_generalites/">
       
       
         <link rel="prev" href="../00_presentation/">
@@ -5467,7 +5467,7 @@
   <span class="md-ellipsis">
     
   
-    4. Le modèle et accès aux données (PDO) 🗄️
+    4. Le modèle et PDO 🗄️
   
 
     
@@ -5509,66 +5509,6 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    7.4 MVC
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    7.4 MVC
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
               
                 
   
@@ -5576,14 +5516,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../7.4_MVC/cours/" class="md-nav__link">
+      <a href="../06_laravel/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🌐 Cours MVC avec Laravel
+    3. MVC avec Laravel 🌐
   
 
     
@@ -6680,7 +6620,7 @@
 <p>L'objectif de cette partie est d'<strong>analyser globalement l'organisation du site</strong> avant d'étudier chaque composant MVC en détail.</p>
 <p><img alt="illustration" class="center" src="../data/resto_accueil.png" width="80%" /></p>
 </div>
-<p><a class="md-button" href="../data/ressourcesTP.zip">Download zip du projet Resto ⤵️</a></p>
+<p><a class="md-button" href="../data/RessourcesResto.zip">Download zip du projet Resto ⤵️</a></p>
 <h2 id="1-mise-en-place">1 Mise en place 🛠️<a class="headerlink" href="#1-mise-en-place" title="Permanent link">⚓︎</a></h2>
 <h3 id="11-partie-sql">1.1 Partie SQL 🗄️<a class="headerlink" href="#11-partie-sql" title="Permanent link">⚓︎</a></h3>
 <ol>
@@ -6702,32 +6642,7 @@
 <li>Ouvrir <code>http://localhost/resto/</code> dans le navigateur</li>
 </ol>
 <p>L'arborescence du projet est la suivante :</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>resto/
-├── index.php
-├── accueil.php
-├── getRacine.php
-├── controleur/
-│   ├── controleurPrincipal.php
-│   ├── listeRestos.php
-│   ├── detailResto.php
-│   ├── rechercheResto.php
-│   ├── connexion.php
-│   ├── deconnexion.php
-│   └── monProfil.php
-├── modele/
-│   ├── bd.inc.php
-│   ├── bd.resto.inc.php
-│   ├── bd.utilisateur.inc.php
-│   ├── bd.critiquer.inc.php
-│   ├── bd.aimer.inc.php
-│   └── authentification.inc.php
-└── vue/
-    ├── entete.html.php
-    ├── pied.html.php
-    ├── vueListeRestos.php
-    ├── vueDetailResto.php
-    └── ...
-</code></pre></div>
+<p><img alt="arborescence" class="center" src="../data/arboTP1.png" width="50%" /></p>
 <h3 id="13-configuration-de-la-base-de-donnees">1.3 Configuration de la base de données ⚙️<a class="headerlink" href="#13-configuration-de-la-base-de-donnees" title="Permanent link">⚓︎</a></h3>
 <p>Avant de commencer, paramétrer le fichier <code>modele/bd.inc.php</code> :</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$login   = &quot;resto&quot;;</span>
@@ -7989,7 +7904,17 @@
 </tr>
 </tbody>
 </table>
-<p><img alt="illustration" class="center" src="../data/mvc_composants_annotes.svg" width="100%" /></p>
+<p>Modèle, vue et contrôleur sont les trois composants de base d'une fonctionnalité proposée par un site web. Dans le cas étudié, la fonctionnalité est l'affichage de la liste des restaurants renseignés sur le site.</p>
+<p>Chaque fonctionnalité fait ainsi appel aux composants :</p>
+<ul>
+<li><strong>Modèle</strong> : fonction d'accès à la base de données ;</li>
+<li><strong>Vue</strong> : affichage des données à l'utilisateur ;</li>
+<li><strong>Contrôleur</strong> : composant chargé de la logique applicative : récupération les données saisies par l'utilisateur, appel des fonctions du modèle, traitement des données, puis appel des vues pour l'affichage.</li>
+</ul>
+<p>Le patron de conception MVC contraint et guide le programmeur dans sa manière de coder une application. Il lui impose des règles, mais en retour il permet de faciliter la maintenance, et le travail en équipe. Ainsi il est interdit de faire le moindre affichage dans le modèle ou dans le contrôleur.</p>
+<p>L'accès aux données, une requête SQL par exemple ne doit se trouver que dans le modèle.</p>
+<p>La vue ne doit contenir que du code d'affichage de données provenant du contrôleur, ou éventuellement du modèle.</p>
+<p><img alt="illustration" class="center" src="../data/patternMVC.png" width="100%" /></p>
 <p><em><a href="../02_controleur/">Partie 2 — Contrôleur →</a></em></p>
 
 

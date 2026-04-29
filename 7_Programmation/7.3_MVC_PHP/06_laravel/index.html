@@ -12,13 +12,13 @@
         <meta name="author" content="Sophie FAUGERAS">
       
       
-        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/7_Programmation/7.3_developpementPHP/04_modele/">
+        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/7_Programmation/7.3_MVC_PHP/06_laravel/">
       
       
-        <link rel="prev" href="../03_vue/">
+        <link rel="prev" href="../05_controleur_principal/">
       
       
-        <link rel="next" href="../05_controleur_principal/">
+        <link rel="next" href="../../../8_AP/0.sommaire/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>4. Le modèle et accès aux données (PDO) 🗄️ - Saint Sauveur BTS SIO SLAM</title>
+        <title>3. MVC avec Laravel 🌐 - Saint Sauveur BTS SIO SLAM</title>
       
     
     
@@ -114,7 +114,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#4-le-modele-et-acces-aux-donnees-pdo" class="md-skip">
+        <a href="#3-mvc-avec-laravel" class="md-skip">
           Aller au contenu
         </a>
       
@@ -148,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              4. Le modèle et accès aux données (PDO) 🗄️
+              3. MVC avec Laravel 🌐
             
           </span>
         </div>
@@ -5243,44 +5243,17 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    4. Le modèle et accès aux données (PDO) 🗄️
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../04_modele/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Le modèle et accès aux données (PDO) 🗄️
+    4. Le modèle et PDO 🗄️
   
 
     
@@ -5289,580 +5262,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Introduction
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Introduction">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pdo-interface-universelle-dacces-aux-donnees" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PDO : interface universelle d'accès aux données
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fonctions-de-base-pdo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fonctions de base PDO
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#a-analyse-du-fonctionnement-du-modele" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A — Analyse du fonctionnement du modèle 🔍
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#question-1-analyse-de-getrestobyidr-dans-bdrestoincphp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Question 1 — Analyse de getRestoByIdR() dans bd.resto.inc.php 🔎
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Question 1 — Analyse de getRestoByIdR() dans bd.resto.inc.php 🔎">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#requetes-preparees" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Requêtes préparées
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#11-parametre-de-la-fonction" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.1 — Paramètre de la fonction 🔎
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-requete-executee" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.2 — Requête exécutée 🗄️
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13-pourquoi-une-seule-ligne" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.3 — Pourquoi une seule ligne ? 🤔
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#le-curseur-et-fetch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Le curseur et fetch()
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parcours-complet-dun-curseur-while" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parcours complet d'un curseur (while)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#14-syntaxe-dacces-a-un-tableau-associatif" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.4 — Syntaxe d'accès à un tableau associatif ⌨️
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#15-acces-au-nom-du-restaurant" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5 — Accès au nom du restaurant ⌨️
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#question-2-analyse-de-getrestosbynomr" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Question 2 — Analyse de getRestosByNomR() 🔎
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Question 2 — Analyse de getRestosByNomR() 🔎">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-requete-sql-dans-getrestosbynomr" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.1 — Requête SQL dans getRestosByNomR() 🗄️
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-requete-reellement-executee" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.2 — Requête réellement exécutée 🗄️
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23-resultats-multiples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3 — Résultats multiples 🤔
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#24-type-de-retour-de-la-fonction" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.4 — Type de retour de la fonction 🤔
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#question-3-analyse-de-getnotemoyennebyidr-dans-bdcritiquerincphp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Question 3 — Analyse de getNoteMoyenneByIdR() dans bd.critiquer.inc.php 📊
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Question 3 — Analyse de getNoteMoyenneByIdR() dans bd.critiquer.inc.php 📊">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-role-de-la-requete" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.1 — Rôle de la requête 🤔
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-nombre-de-resultats-attendus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.2 — Nombre de résultats attendus 🔢
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-nom-de-la-colonne-dans-le-resultat" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.3 — Nom de la colonne dans le résultat 🔎
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34-valeurs-retournees" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.4 — Valeurs retournées 🔎
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#35-resultat-retourne-par-la-fonction" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.5 — Résultat retourné par la fonction 🔎
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#36-explication-de-la-condition-finale" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.6 — Explication de la condition finale 🤔
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#question-4-insertion-de-donnees-addaimer-dans-bdaimerincphp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Question 4 — Insertion de données : addAimer() dans bd.aimer.inc.php ⭐
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Question 4 — Insertion de données : addAimer() dans bd.aimer.inc.php ⭐">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#contexte" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Contexte
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#41-role-de-la-requete" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 — Rôle de la requête 🗄️
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-differentes-constantes-pdo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2 — Différentes constantes PDO 🤔
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-valeur-retournee-par-execute" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.3 — Valeur retournée par execute() 🔎
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#44-type-de-retour-de-addaimer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.4 — Type de retour de addAimer() 🔎
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#45-double-insertion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.5 — Double insertion 🤔
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#synthese-pdo-et-connexion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Synthèse — PDO et connexion 📌
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Synthèse — PDO et connexion 📌">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#connexion-a-la-base-de-donnees" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Connexion à la base de données
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gestion-des-exceptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Gestion des exceptions
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#b-ajout-de-fonctionnalites-au-modele" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        B — Ajout de fonctionnalités au modèle ✏️
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#question-5-creer-la-fonction-delaimer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Question 5 — Créer la fonction delAimer() 🗑️
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Question 5 — Créer la fonction delAimer() 🗑️">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51-cle-primaire-de-aimer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.1 — Clé primaire de aimer 🔎
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52-syntaxe-sql-de-suppression" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.2 — Syntaxe SQL de suppression 🗄️
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#53-requete-de-suppression" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.3 — Requête de suppression 🗄️
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#54-test-dans-phpmyadmin" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.4 — Test dans phpMyAdmin 🧪
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#55-emplacement-de-la-fonction" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.5 — Emplacement de la fonction 📁
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#56-prototype-de-la-fonction" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.6 — Prototype de la fonction ⌨️
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#57-ecrire-le-code-de-delaimer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.7 — Écrire le code de delAimer() ✏️
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#question-6-consultation-des-critiques-dun-restaurant" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Question 6 — Consultation des critiques d'un restaurant 💬
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Question 6 — Consultation des critiques d&#39;un restaurant 💬">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#travail-a-realiser" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Travail à réaliser
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -5896,45 +5295,30 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
               
                 
   
   
+    
   
   
-    
-    
-    
-    
+  
+    <li class="md-nav__item md-nav__item--active">
       
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
-        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
-            
   
   
   <span class="md-ellipsis">
     
   
-    7.4 MVC
+    3. MVC avec Laravel 🌐
   
 
     
@@ -5942,35 +5326,17 @@
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    7.4 MVC
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../7.4_MVC/cours/" class="md-nav__link">
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    🌐 Cours MVC avec Laravel
+    3. MVC avec Laravel 🌐
   
 
     
@@ -5979,6 +5345,92 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-quest-ce-que-mvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Qu’est-ce que MVC ?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-le-controleur-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Le Contrôleur (C)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-la-vue-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. La Vue (V)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-le-modele-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Le Modèle (M)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-les-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Les Routes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-schema-de-synthese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Schéma de synthèse
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -7060,555 +6512,113 @@
   
 
 
-<h1 id="4-le-modele-et-acces-aux-donnees-pdo">4. Le modèle et accès aux données (PDO) 🗄️<a class="headerlink" href="#4-le-modele-et-acces-aux-donnees-pdo" title="Permanent link">⚓︎</a></h1>
-<p><img alt="en construction" class="center" src="../../../images/enConstruction.png" width="50%" /></p>
-<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">⚓︎</a></h2>
-<p>Le <strong>modèle</strong> est la couche de l'architecture MVC dédiée à l'<strong>accès aux données</strong>. Dans ce TP, nous étudions comment PHP dialogue avec la base de données MariaDB/MySQL via l'interface <strong>PDO</strong> (PHP Data Objects).</p>
-<h3 id="pdo-interface-universelle-dacces-aux-donnees">PDO : interface universelle d'accès aux données<a class="headerlink" href="#pdo-interface-universelle-dacces-aux-donnees" title="Permanent link">⚓︎</a></h3>
-<p>PDO fonctionne avec de multiples SGBDR : MySQL, MariaDB, PostgreSQL, SQLite…</p>
-<blockquote>
-<p>💡 L'avantage de PDO : si vous changez de SGBDR, vous n'avez pas à réécrire toutes les fonctions d'accès aux données.</p>
-</blockquote>
-<h3 id="fonctions-de-base-pdo">Fonctions de base PDO<a class="headerlink" href="#fonctions-de-base-pdo" title="Permanent link">⚓︎</a></h3>
-<table>
-<thead>
-<tr>
-<th>Étape</th>
-<th>Fonction PDO</th>
-<th>Rôle</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td><code>new PDO(...)</code></td>
-<td>Connexion à la base de données</td>
-</tr>
-<tr>
-<td>2</td>
-<td><code>$cnx-&gt;prepare($sql)</code></td>
-<td>Prépare la requête SQL</td>
-</tr>
-<tr>
-<td>3</td>
-<td><code>$req-&gt;bindValue(...)</code></td>
-<td>Associe une valeur à un paramètre</td>
-</tr>
-<tr>
-<td>4</td>
-<td><code>$req-&gt;execute()</code></td>
-<td>Exécute la requête</td>
-</tr>
-<tr>
-<td>5</td>
-<td><code>$req-&gt;fetch(PDO::FETCH_ASSOC)</code></td>
-<td>Récupère une ligne de résultat</td>
-</tr>
-</tbody>
-</table>
-<h2 id="a-analyse-du-fonctionnement-du-modele">A — Analyse du fonctionnement du modèle 🔍<a class="headerlink" href="#a-analyse-du-fonctionnement-du-modele" title="Permanent link">⚓︎</a></h2>
-<h2 id="question-1-analyse-de-getrestobyidr-dans-bdrestoincphp">Question 1 — Analyse de <code>getRestoByIdR()</code> dans <code>bd.resto.inc.php</code> 🔎<a class="headerlink" href="#question-1-analyse-de-getrestobyidr-dans-bdrestoincphp" title="Permanent link">⚓︎</a></h2>
-<p><strong>Documents à utiliser :</strong> fichiers du projet, annexes 1, 2, 4, 5 et 7</p>
-<h3 id="requetes-preparees">Requêtes préparées<a class="headerlink" href="#requetes-preparees" title="Permanent link">⚓︎</a></h3>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">function getRestoByIdR($idR) {</span>
-<span class="x">    $cnx = connexionPDO();</span>
-<span class="x">    $req = $cnx-&gt;prepare(&quot;SELECT * FROM resto WHERE idR = :idR&quot;);</span>
-<span class="x">    $req-&gt;bindValue(&#39;:idR&#39;, $idR, PDO::PARAM_INT);</span>
-<span class="x">    $req-&gt;execute();</span>
-<span class="x">    $resultat = $req-&gt;fetch(PDO::FETCH_ASSOC);</span>
-<span class="x">    return $resultat;</span>
-<span class="x">}</span>
-</code></pre></div>
-<p>Le tag <code>:idR</code> dans la requête est un <strong>paramètre nommé</strong>. La fonction <code>bindValue()</code> l'associe à la variable PHP.</p>
-<p>La constante <code>PDO::PARAM_INT</code> vérifie que la valeur est bien un entier. S'il y avait plusieurs paramètres, on ferait plusieurs appels à <code>bindValue()</code>.</p>
-<h3 id="11-parametre-de-la-fonction">1.1 — Paramètre de la fonction 🔎<a class="headerlink" href="#11-parametre-de-la-fonction" title="Permanent link">⚓︎</a></h3>
-<p>Indiquer le nom du paramètre de la fonction et sa valeur dans l'exemple d'utilisation de l'annexe 4.</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>Le paramètre de la fonction est <strong><code>$idR</code></strong>. Dans l'exemple de l'annexe 4, cet appel est <code>getRestoByIdR(1)</code> donc <code>$idR</code> vaut <strong>1</strong>.</p>
-</details>
-<h3 id="12-requete-executee">1.2 — Requête exécutée 🗄️<a class="headerlink" href="#12-requete-executee" title="Permanent link">⚓︎</a></h3>
-<p>À l'aide des annexes, retrouver la requête SQL exécutée par la fonction <code>getRestoByIdR()</code>.</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">resto</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">idR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">:</span><span class="n">idR</span>
-</code></pre></div>
-Après l'appel à <code>bindValue()</code>, la requête réellement exécutée avec l'exemple est :
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">resto</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">idR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
-</code></pre></div></p>
-</details>
-<h3 id="13-pourquoi-une-seule-ligne">1.3 — Pourquoi une seule ligne ? 🤔<a class="headerlink" href="#13-pourquoi-une-seule-ligne" title="Permanent link">⚓︎</a></h3>
-<p>Expliquer pourquoi cette requête SQL ne retourne qu'une seule ligne.</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>La requête ne retourne qu'une seule ligne car la condition <code>WHERE idR = :idR</code> est basée sur la valeur de la <strong>clé primaire</strong> de la table <code>resto</code>. Par définition, la clé primaire est unique : il ne peut exister qu'un seul restaurant avec un <code>idR</code> donné.</p>
-</details>
-<h3 id="le-curseur-et-fetch">Le curseur et <code>fetch()</code><a class="headerlink" href="#le-curseur-et-fetch" title="Permanent link">⚓︎</a></h3>
-<p>Quand une requête SQL est exécutée, le SGBDR renvoie un <strong>curseur</strong> : un ensemble de lignes et de colonnes organisées comme un tableau.</p>
-<p><strong>Exemple pour <code>SELECT idR, nomR, villeR FROM resto</code> :</strong></p>
-<table>
-<thead>
-<tr>
-<th>idR</th>
-<th>nomR</th>
-<th>villeR</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>l'entrepote</td>
-<td>Bordeaux</td>
-</tr>
-<tr>
-<td>2</td>
-<td>le bar du charcutier</td>
-<td>Bordeaux</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Sapporo</td>
-<td>Bordeaux</td>
-</tr>
-</tbody>
-</table>
-<p>Ce curseur contient 3 lignes et 3 colonnes. Il est lu <strong>ligne par ligne</strong> avec <code>fetch()</code>.</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$resultat = $req-&gt;fetch(PDO::FETCH_ASSOC);</span>
-<span class="x">// Résultat : [&#39;idR&#39; =&gt; 1, &#39;nomR&#39; =&gt; &quot;l&#39;entrepote&quot;, &#39;villeR&#39; =&gt; &#39;Bordeaux&#39;]</span>
-</code></pre></div>
-<h3 id="parcours-complet-dun-curseur-while">Parcours complet d'un curseur (<code>while</code>)<a class="headerlink" href="#parcours-complet-dun-curseur-while" title="Permanent link">⚓︎</a></h3>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$ligne = $req-&gt;fetch(PDO::FETCH_ASSOC);</span>
-<span class="x">while ($ligne) {</span>
-<span class="x">    $resultat[] = $ligne;</span>
-<span class="x">    $ligne = $req-&gt;fetch(PDO::FETCH_ASSOC);</span>
-<span class="x">}</span>
-<span class="x">// Quand fetch() retourne false, la boucle s&#39;arrête</span>
-</code></pre></div>
-<h3 id="14-syntaxe-dacces-a-un-tableau-associatif">1.4 — Syntaxe d'accès à un tableau associatif ⌨️<a class="headerlink" href="#14-syntaxe-dacces-a-un-tableau-associatif" title="Permanent link">⚓︎</a></h3>
-<p>Rappeler la syntaxe utilisée pour accéder à un champ d'un tableau associatif.</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$nomTableauAssociatif[&#39;nomDuChamp&#39;]</span>
-</code></pre></div>
-Par exemple : <code>$unResto['nomR']</code></p>
-</details>
-<h3 id="15-acces-au-nom-du-restaurant">1.5 — Accès au nom du restaurant ⌨️<a class="headerlink" href="#15-acces-au-nom-du-restaurant" title="Permanent link">⚓︎</a></h3>
-<p>Rappeler comment accéder au nom du restaurant dans la variable retournée par <code>getRestoByIdR()</code>.</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$unResto[&#39;nomR&#39;]</span>
-</code></pre></div>
-</details>
-<h2 id="question-2-analyse-de-getrestosbynomr">Question 2 — Analyse de <code>getRestosByNomR()</code> 🔎<a class="headerlink" href="#question-2-analyse-de-getrestosbynomr" title="Permanent link">⚓︎</a></h2>
-<p><strong>Documents à utiliser :</strong> fichiers du projet, annexes 2, 4, 6 et 7</p>
-<h3 id="21-requete-sql-dans-getrestosbynomr">2.1 — Requête SQL dans <code>getRestosByNomR()</code> 🗄️<a class="headerlink" href="#21-requete-sql-dans-getrestosbynomr" title="Permanent link">⚓︎</a></h3>
-<p>Quelle requête SQL est envoyée à <code>prepare()</code> dans <code>getRestosByNomR()</code> ?</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">resto</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">nomR</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="p">:</span><span class="n">nomR</span>
-</code></pre></div>
-</details>
-<h3 id="22-requete-reellement-executee">2.2 — Requête réellement exécutée 🗄️<a class="headerlink" href="#22-requete-reellement-executee" title="Permanent link">⚓︎</a></h3>
-<p>Si on appelle <code>getRestosByNomR('charcut')</code>, quelle requête SQL est réellement exécutée après l'appel à <code>bindValue()</code> ?</p>
-<blockquote>
-<p>💡 Penser à l'opérateur SQL <code>LIKE</code> et aux wildcards <code>%</code>.</p>
-</blockquote>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">resto</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">nomR</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%charcut%&#39;</span>
-</code></pre></div>
-Le <code>bindValue()</code> associe <code>"%charcut%"</code> au paramètre <code>:nomR</code>. Les <code>%</code> permettent de trouver tous les restaurants dont le nom <strong>contient</strong> la chaîne <code>charcut</code>.</p>
-</details>
-<h3 id="23-resultats-multiples">2.3 — Résultats multiples 🤔<a class="headerlink" href="#23-resultats-multiples" title="Permanent link">⚓︎</a></h3>
-<p>Cette requête est-elle susceptible de retourner <strong>plusieurs lignes</strong> ?</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p><strong>Oui.</strong> Le symbole <code>%</code> dans la clause <code>LIKE</code> permet de trouver tous les restaurants dont le nom contient <code>charcut</code>. Plusieurs restaurants peuvent correspondre à ce critère.</p>
-</details>
-<h3 id="24-type-de-retour-de-la-fonction">2.4 — Type de retour de la fonction 🤔<a class="headerlink" href="#24-type-de-retour-de-la-fonction" title="Permanent link">⚓︎</a></h3>
-<p>Parmi les deux propositions, laquelle est correcte ? Justifier à l'aide du code et de vos connaissances.</p>
-<p><strong>a)</strong> La variable <code>$resultat</code> retournée est un <strong>tableau associatif</strong> contenant les informations d'un restaurant.</p>
-<p><strong>b)</strong> La variable <code>$resultat</code> retournée est un <strong>tableau de tableaux associatifs</strong>. Chaque case contient les informations d'un restaurant.</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>La proposition <strong>b)</strong> est correcte. Dans le code de <code>getRestosByNomR()</code>, une boucle <code>while</code> parcourt le curseur et construit un <strong>tableau de tableaux associatifs</strong> :
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">while ($ligne = $req-&gt;fetch(PDO::FETCH_ASSOC)) {</span>
-<span class="x">    $resultat[] = $ligne;</span>
-<span class="x">}</span>
-</code></pre></div>
-Chaque <code>$ligne</code> est un tableau associatif (un restaurant), et <code>$resultat[]</code> accumule toutes les lignes. La requête pouvant retourner plusieurs restaurants, <code>$resultat</code> peut donc contenir plusieurs tableaux associatifs.</p>
-</details>
-<h2 id="question-3-analyse-de-getnotemoyennebyidr-dans-bdcritiquerincphp">Question 3 — Analyse de <code>getNoteMoyenneByIdR()</code> dans <code>bd.critiquer.inc.php</code> 📊<a class="headerlink" href="#question-3-analyse-de-getnotemoyennebyidr-dans-bdcritiquerincphp" title="Permanent link">⚓︎</a></h2>
-<p><strong>Documents à utiliser :</strong> fichiers du projet, annexe 8</p>
-<h3 id="31-role-de-la-requete">3.1 — Rôle de la requête 🤔<a class="headerlink" href="#31-role-de-la-requete" title="Permanent link">⚓︎</a></h3>
-<p>Expliquer le rôle de cette requête :</p>
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">note</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">critiquer</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">idR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">:</span><span class="n">idR</span>
-</code></pre></div>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>Cette requête <strong>calcule la note moyenne</strong> d'un restaurant en faisant la moyenne de toutes les critiques reçues (colonne <code>note</code> de la table <code>critiquer</code>), pour le restaurant dont l'identifiant <code>idR</code> est passé en paramètre.</p>
-</details>
-<h3 id="32-nombre-de-resultats-attendus">3.2 — Nombre de résultats attendus 🔢<a class="headerlink" href="#32-nombre-de-resultats-attendus" title="Permanent link">⚓︎</a></h3>
-<p>Combien de résultats cette requête SQL retourne-t-elle ?</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>La fonction <code>AVG()</code> est une fonction d'agrégation : elle retourne <strong>un seul résultat</strong> (la moyenne calculée), peu importe le nombre de critiques du restaurant.</p>
-</details>
-<h3 id="33-nom-de-la-colonne-dans-le-resultat">3.3 — Nom de la colonne dans le résultat 🔎<a class="headerlink" href="#33-nom-de-la-colonne-dans-le-resultat" title="Permanent link">⚓︎</a></h3>
-<p>Exécuter la requête (en remplaçant <code>:idR</code> par <code>2</code>) dans phpMyAdmin. Comment est nommée la colonne affichée dans le résultat ?</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>La colonne est nommée <strong><code>avg(note)</code></strong> — SQL utilise le nom de la fonction comme nom de colonne par défaut lorsqu'aucun alias n'est défini. C'est pourquoi dans le code PHP on accède au résultat via <code>$resultat["avg(note)"]</code>.</p>
-</details>
-<h3 id="34-valeurs-retournees">3.4 — Valeurs retournées 🔎<a class="headerlink" href="#34-valeurs-retournees" title="Permanent link">⚓︎</a></h3>
-<p>Exécuter la requête avec un identifiant <strong>existant</strong>, puis avec un identifiant <strong>impossible</strong> (ex: <code>0</code> ou <code>-1</code>).</p>
-<table>
-<thead>
-<tr>
-<th>Cas</th>
-<th>Valeur retournée</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Restaurant existant avec critiques</td>
-<td></td>
-</tr>
-<tr>
-<td>Restaurant sans critiques ou inexistant</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<table>
-<thead>
-<tr>
-<th>Cas</th>
-<th>Valeur retournée</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Restaurant existant avec critiques</td>
-<td>Un <strong>nombre réel</strong> (ex: <code>3.67</code>)</td>
-</tr>
-<tr>
-<td>Restaurant sans critiques ou inexistant</td>
-<td><strong><code>NULL</code></strong></td>
-</tr>
-</tbody>
-</table>
-</details>
-<h3 id="35-resultat-retourne-par-la-fonction">3.5 — Résultat retourné par la fonction 🔎<a class="headerlink" href="#35-resultat-retourne-par-la-fonction" title="Permanent link">⚓︎</a></h3>
-<p>À partir des questions précédentes, indiquer quel résultat sera retourné par la fonction selon les cas.</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
+<h1 id="3-mvc-avec-laravel">3. MVC avec Laravel 🌐<a class="headerlink" href="#3-mvc-avec-laravel" title="Permanent link">⚓︎</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Compétences</p>
+<p><strong>B2.1. Conception et développement d’une solution applicative</strong></p>
 <ul>
-<li>Si le restaurant a des critiques → la fonction retourne sa <strong>note moyenne</strong> (nombre réel).</li>
-<li>Si le restaurant n'a pas de critiques ou n'existe pas → la fonction retourne <strong><code>0</code></strong> (grâce à la condition finale qui intercepte le <code>NULL</code>).</li>
+<li>Participation à la conception de l’architecture d’une solution applicative</li>
+<li>Exploitation des ressources du cadre applicatif (framework)</li>
+<li>Exploitation des technologies Web et mobile pour mettre en oeuvre les échanges entre applications</li>
+<li>Utilisation de composants d’accès aux données</li>
 </ul>
-</details>
-<h3 id="36-explication-de-la-condition-finale">3.6 — Explication de la condition finale 🤔<a class="headerlink" href="#36-explication-de-la-condition-finale" title="Permanent link">⚓︎</a></h3>
-<p>Expliquer la condition suivante en fin de fonction :</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">if ($resultat[&quot;avg(note)&quot;] != NULL) {</span>
-<span class="x">    return $resultat[&quot;avg(note)&quot;];</span>
-<span class="x">} else {</span>
-<span class="x">    return 0;</span>
-<span class="x">}</span>
-</code></pre></div>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p><code>$resultat["avg(note)"]</code> contient la valeur renvoyée par la requête SQL :</p>
+</div>
+<p>🎯 <strong>Objectifs</strong> </p>
 <ul>
-<li>Si le restaurant a des critiques, <code>AVG()</code> retourne un nombre → la condition est vraie → on retourne ce nombre.</li>
-<li>Si le restaurant n'a pas de critiques (ou n'existe pas), <code>AVG()</code> retourne <code>NULL</code> → la condition est fausse → on retourne <code>0</code> pour éviter d'afficher <code>NULL</code> dans la vue.</li>
+<li>Comprendre ce qu’est le <strong>pattern MVC</strong></li>
+<li>Identifier le rôle du <strong>Modèle</strong>, de la <strong>Vue</strong> et du <strong>Contrôleur</strong></li>
+<li>Introduire la notion de <strong>routes</strong></li>
+<li>Illustrer chaque notion avec un <strong>exemple Laravel</strong></li>
 </ul>
-</details>
-<h2 id="question-4-insertion-de-donnees-addaimer-dans-bdaimerincphp">Question 4 — Insertion de données : <code>addAimer()</code> dans <code>bd.aimer.inc.php</code> ⭐<a class="headerlink" href="#question-4-insertion-de-donnees-addaimer-dans-bdaimerincphp" title="Permanent link">⚓︎</a></h2>
-<p><strong>Documents à utiliser :</strong> fichiers du projet, annexes 9, 10 et 11</p>
-<h3 id="contexte">Contexte<a class="headerlink" href="#contexte" title="Permanent link">⚓︎</a></h3>
-<p>Dans la base, la table <code>aimer</code> indique qu'un utilisateur aime un restaurant. Pour "aimer" un restaurant, l'utilisateur clique sur l'étoile ⭐ dans la fiche du restaurant.</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">function addAimer($idR, $mailU) {</span>
-<span class="x">    $cnx = connexionPDO();</span>
-<span class="x">    $req = $cnx-&gt;prepare(&quot;INSERT INTO aimer (idR, mailU) VALUES (:idR, :mailU)&quot;);</span>
-<span class="x">    $req-&gt;bindValue(&#39;:idR&#39;,   $idR,   PDO::PARAM_INT);</span>
-<span class="x">    $req-&gt;bindValue(&#39;:mailU&#39;, $mailU, PDO::PARAM_STR);</span>
-<span class="x">    return $req-&gt;execute();</span>
-<span class="x">}</span>
-</code></pre></div>
-<h3 id="41-role-de-la-requete">4.1 — Rôle de la requête 🗄️<a class="headerlink" href="#41-role-de-la-requete" title="Permanent link">⚓︎</a></h3>
-<p>Expliquer le rôle de la requête présente dans <code>addAimer()</code>.</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>La requête <code>INSERT INTO aimer (idR, mailU) VALUES (:idR, :mailU)</code> <strong>insère une nouvelle ligne</strong> dans la table <code>aimer</code>. Cette ligne signifie qu'un utilisateur (identifié par son <code>mailU</code>) aime un restaurant (identifié par son <code>idR</code>).</p>
-</details>
-<h3 id="42-differentes-constantes-pdo">4.2 — Différentes constantes PDO 🤔<a class="headerlink" href="#42-differentes-constantes-pdo" title="Permanent link">⚓︎</a></h3>
-<p>Pourquoi les deux appels à <code>bindValue()</code> n'utilisent-ils pas la même constante PDO en 3ème paramètre ?</p>
-<table>
-<thead>
-<tr>
-<th>Paramètre</th>
-<th>Constante PDO</th>
-<th>Raison</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>:idR</code></td>
-<td><code>PDO::PARAM_INT</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>:mailU</code></td>
-<td><code>PDO::PARAM_STR</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<table>
-<thead>
-<tr>
-<th>Paramètre</th>
-<th>Constante PDO</th>
-<th>Raison</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>:idR</code></td>
-<td><code>PDO::PARAM_INT</code></td>
-<td><code>idR</code> est un <strong>entier</strong> dans la base de données (clé primaire numérique).</td>
-</tr>
-<tr>
-<td><code>:mailU</code></td>
-<td><code>PDO::PARAM_STR</code></td>
-<td><code>mailU</code> est une <strong>chaîne de caractères</strong> (adresse email).</td>
-</tr>
-</tbody>
-</table>
-<p>La constante PDO indique à la bibliothèque le type de la valeur, afin de valider et formater correctement les paramètres avant exécution.</p>
-</details>
-<h3 id="43-valeur-retournee-par-execute">4.3 — Valeur retournée par <code>execute()</code> 🔎<a class="headerlink" href="#43-valeur-retournee-par-execute" title="Permanent link">⚓︎</a></h3>
-<p>À l'aide de l'annexe 11 (documentation PHP), déterminer quelle valeur est retournée par <code>execute()</code> en cas de réussite ou d'échec.</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>La fonction <code>execute()</code> retourne :
-- <strong><code>true</code></strong> en cas de réussite de l'exécution
-- <strong><code>false</code></strong> en cas d'échec</p>
-</details>
-<h3 id="44-type-de-retour-de-addaimer">4.4 — Type de retour de <code>addAimer()</code> 🔎<a class="headerlink" href="#44-type-de-retour-de-addaimer" title="Permanent link">⚓︎</a></h3>
-<p>Déduire de la question précédente le type de données retourné par <code>addAimer()</code>.</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>La fonction <code>addAimer()</code> retourne directement la valeur renvoyée par <code>execute()</code>. Elle retourne donc un <strong>booléen</strong> (<code>true</code> ou <code>false</code>).</p>
-</details>
-<h3 id="45-double-insertion">4.5 — Double insertion 🤔<a class="headerlink" href="#45-double-insertion" title="Permanent link">⚓︎</a></h3>
-<p>Si un utilisateur tente d'aimer un restaurant qu'il <strong>aime déjà</strong>, quelle sera la valeur retournée par <code>addAimer()</code> ? Pourquoi ?</p>
-<blockquote>
-<p>💡 Rappel : <code>(idR, mailU)</code> est la clé primaire de la table <code>aimer</code>.</p>
-</blockquote>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>La fonction retournera <strong><code>false</code></strong>. En effet, <code>(idR, mailU)</code> est la clé primaire de la table <code>aimer</code> : il est impossible d'insérer deux fois la même paire de valeurs. La tentative d'insertion échoue avec une violation de contrainte de clé primaire, et <code>execute()</code> retourne <code>false</code>.</p>
-<blockquote>
-<p>⚠️ En mode debug PDO (<code>PDO::ERRMODE_EXCEPTION</code>), une <strong>exception est levée</strong> et le programme s'arrête au lieu de retourner <code>false</code>.</p>
-</blockquote>
-</details>
-<h2 id="synthese-pdo-et-connexion">Synthèse — PDO et connexion 📌<a class="headerlink" href="#synthese-pdo-et-connexion" title="Permanent link">⚓︎</a></h2>
-<h3 id="connexion-a-la-base-de-donnees">Connexion à la base de données<a class="headerlink" href="#connexion-a-la-base-de-donnees" title="Permanent link">⚓︎</a></h3>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">function connexionPDO() {</span>
-<span class="x">    global $login, $mdp, $bd, $serveur;</span>
-<span class="x">    $conn = new PDO(&quot;mysql:host=$serveur;dbname=$bd&quot;, $login, $mdp);</span>
-<span class="x">    $conn-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);</span>
-<span class="x">    return $conn;</span>
-<span class="x">}</span>
-</code></pre></div>
-<table>
-<thead>
-<tr>
-<th>Paramètre <code>new PDO()</code></th>
-<th>Rôle</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>mysql:host=$serveur</code></td>
-<td>Driver et adresse du serveur</td>
-</tr>
-<tr>
-<td><code>dbname=$bd</code></td>
-<td>Nom de la base de données</td>
-</tr>
-<tr>
-<td><code>$login</code></td>
-<td>Utilisateur MySQL</td>
-</tr>
-<tr>
-<td><code>$mdp</code></td>
-<td>Mot de passe</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>⚠️ <code>PDO::ERRMODE_EXCEPTION</code> est utile en <strong>développement</strong>. En production, il est préférable de le désactiver pour ne pas exposer les informations de la base de données.</p>
-</blockquote>
-<h3 id="gestion-des-exceptions">Gestion des exceptions<a class="headerlink" href="#gestion-des-exceptions" title="Permanent link">⚓︎</a></h3>
-<table>
-<thead>
-<tr>
-<th>Bloc</th>
-<th>Rôle</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>try</code></td>
-<td>Code à exécuter sous condition d'absence d'erreur</td>
-</tr>
-<tr>
-<td><code>catch (PDOException $e)</code></td>
-<td>Interception des erreurs PDO : affichage et arrêt</td>
-</tr>
-</tbody>
-</table>
-<h2 id="b-ajout-de-fonctionnalites-au-modele">B — Ajout de fonctionnalités au modèle ✏️<a class="headerlink" href="#b-ajout-de-fonctionnalites-au-modele" title="Permanent link">⚓︎</a></h2>
-<h2 id="question-5-creer-la-fonction-delaimer">Question 5 — Créer la fonction <code>delAimer()</code> 🗑️<a class="headerlink" href="#question-5-creer-la-fonction-delaimer" title="Permanent link">⚓︎</a></h2>
-<p><strong>Documents à utiliser :</strong> fichiers du projet, annexes 9 et 10</p>
-<h3 id="51-cle-primaire-de-aimer">5.1 — Clé primaire de <code>aimer</code> 🔎<a class="headerlink" href="#51-cle-primaire-de-aimer" title="Permanent link">⚓︎</a></h3>
-<p>Quelle est la clé primaire de la table <code>aimer</code> ?</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>La clé primaire est <strong>composée</strong> de deux champs : <strong><code>idR</code></strong> et <strong><code>mailU</code></strong>. Les deux ensemble identifient de façon unique qu'un utilisateur aime un restaurant précis.</p>
-</details>
-<h3 id="52-syntaxe-sql-de-suppression">5.2 — Syntaxe SQL de suppression 🗄️<a class="headerlink" href="#52-syntaxe-sql-de-suppression" title="Permanent link">⚓︎</a></h3>
-<p>Rappeler la syntaxe de la requête de suppression en SQL.</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span><span class="p">;</span>
-</code></pre></div>
-Avec clé primaire composée :
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">champ1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valeur1</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">champ2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valeur2</span><span class="p">;</span>
-</code></pre></div></p>
-</details>
-<h3 id="53-requete-de-suppression">5.3 — Requête de suppression 🗄️<a class="headerlink" href="#53-requete-de-suppression" title="Permanent link">⚓︎</a></h3>
-<p>Écrire la requête SQL permettant de supprimer <strong>une occurrence précise</strong> de la table <code>aimer</code>.</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">aimer</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">idR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">mailU</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;test@bts.sio&#39;</span><span class="p">;</span>
-</code></pre></div>
-Avec des paramètres PDO :
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">aimer</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">idR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">:</span><span class="n">idR</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">mailU</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">:</span><span class="n">mailU</span>
-</code></pre></div></p>
-</details>
-<h3 id="54-test-dans-phpmyadmin">5.4 — Test dans phpMyAdmin 🧪<a class="headerlink" href="#54-test-dans-phpmyadmin" title="Permanent link">⚓︎</a></h3>
-<p>Se connecter à phpMyAdmin et tester la requête avec un exemple concret.</p>
-<h3 id="55-emplacement-de-la-fonction">5.5 — Emplacement de la fonction 📁<a class="headerlink" href="#55-emplacement-de-la-fonction" title="Permanent link">⚓︎</a></h3>
-<p>Dans quel script du modèle doit être placée la fonction <code>delAimer()</code> ? Justifier.</p>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>La fonction <code>delAimer()</code> doit être placée dans le script <strong><code>bd.aimer.inc.php</code></strong>. C'est dans ce fichier que se trouvent toutes les fonctions d'accès à la table <code>aimer</code> (<code>addAimer()</code>…). Regrouper les fonctions d'accès à une même table dans un même fichier est un principe fondamental du MVC.</p>
-</details>
-<h3 id="56-prototype-de-la-fonction">5.6 — Prototype de la fonction ⌨️<a class="headerlink" href="#56-prototype-de-la-fonction" title="Permanent link">⚓︎</a></h3>
-<p>Quels paramètres sont nécessaires à <code>delAimer()</code> pour supprimer précisément une occurrence ? En déduire le prototype :</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">function delAimer(_____, _____) {</span>
-<span class="x">    // ...</span>
-<span class="x">}</span>
-</code></pre></div>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p>La fonction a besoin des deux champs de la clé primaire pour cibler une occurrence précise :</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>fonction delAimer(mailU : chaîne, idR : entier) : booléen
-</code></pre></div>
-<p>En PHP :
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">function delAimer($mailU, $idR) { ... }</span>
-</code></pre></div></p>
-</details>
-<h3 id="57-ecrire-le-code-de-delaimer">5.7 — Écrire le code de <code>delAimer()</code> ✏️<a class="headerlink" href="#57-ecrire-le-code-de-delaimer" title="Permanent link">⚓︎</a></h3>
-<p>Écrire le code complet de la fonction, en vous inspirant de <code>addAimer()</code>. Ajouter un appel de test dans la section de test du script.</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">function delAimer($idR, $mailU) {</span>
-<span class="x">    $cnx = connexionPDO();</span>
+<h2 id="1-quest-ce-que-mvc">1. Qu’est-ce que MVC ?<a class="headerlink" href="#1-quest-ce-que-mvc" title="Permanent link">⚓︎</a></h2>
+<p><strong>MVC = Modèle – Vue – Contrôleur</strong></p>
+<p>👉 C’est un <strong>patron d’architecture logicielle</strong> qui sépare une application en <strong>3 parties distinctes</strong> .</p>
+<p>!!! note "Notes"
+    ce pattern permet une bonne organisation du son code source. Pour l'instant vous codiez sans vraiment de structure, avec globalement, même si c'était rangé ; des pages Web qui mélangent traitement (PHP), accès aux données (SQL) et présentation (balises HTML). Même si c'est complètement fonctionnel, nous allons nous efforcer à partir de maintenant à séparer ces parties.</p>
+<ul>
+<li>🗂️ <strong>Modèle (M)</strong> : gère les <strong>données</strong> et la <strong>logique métier</strong> (accès BD, règles de validation).</li>
+<li>🎨 <strong>Vue (V)</strong> : l’<strong>interface utilisateur</strong> (HTML, Blade, CSS, JS).</li>
+<li>🧭 <strong>Contrôleur (C)</strong> : reçoit la requête, interagit avec le Modèle, choisit la Vue à afficher.</li>
+</ul>
+<p>⚡ Idée clé : <strong>séparer les responsabilités</strong> → code plus clair, plus facile à tester et à maintenir.</p>
+<p><img alt="illustation" class="center" src="../data/mvc.png" width="50%" /></p>
+<h2 id="2-le-controleur-c">2. Le Contrôleur (C)<a class="headerlink" href="#2-le-controleur-c" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>👂 Rôle : recevoir la <strong>requête HTTP</strong> (ex. URL <code>/accounts</code>).</li>
+<li>📞 Appelle le Modèle pour récupérer ou modifier des données.</li>
+<li>📤 Transmet ces données à une Vue.</li>
+</ul>
+<h4 id="exemple-laravel">📌 Exemple Laravel<a class="headerlink" href="#exemple-laravel" title="Permanent link">⚓︎</a></h4>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// routes/web.php</span>
+<span class="x">use App\Http\Controllers\AccountController;</span>
 
-<span class="x">    $req = $cnx-&gt;prepare(&quot;/* requête à compléter */&quot;);</span>
-
-<span class="x">    // bindValue à compléter</span>
-
-<span class="x">    return $req-&gt;execute();</span>
-<span class="x">}</span>
+<span class="x">Route::get(&#39;/accounts&#39;, [AccountController::class, &#39;index&#39;]);</span>
 </code></pre></div>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">function delAimer($mailU, $idR) {</span>
-<span class="x">    $resultat = -1;</span>
-<span class="x">    try {</span>
-<span class="x">        $cnx = connexionPDO();</span>
-<span class="x">        $req = $cnx-&gt;prepare(&quot;DELETE FROM aimer WHERE idR = :idR AND mailU = :mailU&quot;);</span>
-<span class="x">        $req-&gt;bindValue(&#39;:idR&#39;,   $idR,   PDO::PARAM_INT);</span>
-<span class="x">        $req-&gt;bindValue(&#39;:mailU&#39;, $mailU, PDO::PARAM_STR);</span>
-<span class="x">        $resultat = $req-&gt;execute();</span>
-<span class="x">    } catch (PDOException $e) {</span>
-<span class="x">        print &quot;Erreur !: &quot; . $e-&gt;getMessage();</span>
-<span class="x">        die();</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// app/Http/Controllers/AccountController.php</span>
+<span class="x">namespace App\Http\Controllers;</span>
+<span class="x">use App\Models\Account;</span>
+
+<span class="x">class AccountController extends Controller {</span>
+<span class="x">    public function index() {</span>
+<span class="x">        $accounts = Account::all();</span>
+<span class="x">        return view(&#39;accounts.index&#39;, compact(&#39;accounts&#39;));</span>
 <span class="x">    }</span>
-<span class="x">    return $resultat;</span>
 <span class="x">}</span>
 </code></pre></div>
-<p>Dans la section de test :
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">echo &quot;\n delAimer(\&quot;test@bts.sio\&quot;, 2) : \n&quot;;</span>
-<span class="x">print_r(delAimer(&quot;test@bts.sio&quot;, 2));</span>
-</code></pre></div></p>
-</details>
-<h2 id="question-6-consultation-des-critiques-dun-restaurant">Question 6 — Consultation des critiques d'un restaurant 💬<a class="headerlink" href="#question-6-consultation-des-critiques-dun-restaurant" title="Permanent link">⚓︎</a></h2>
-<p><strong>Documents à utiliser :</strong> fichiers du projet, annexe 12</p>
-<p>La fiche descriptive d'un restaurant doit afficher en bas de page la <strong>liste des critiques</strong> (notes et commentaires) laissées par les utilisateurs.</p>
-<p>La vue et le contrôleur sont déjà codés, mais la fonction du modèle retourne pour l'instant une liste vide.</p>
-<h3 id="travail-a-realiser">Travail à réaliser<a class="headerlink" href="#travail-a-realiser" title="Permanent link">⚓︎</a></h3>
-<p>À partir de la structure de la table <code>critiquer</code> :</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>critiquer (idR, mailU, note, commentaire)
+<h2 id="3-la-vue-v">3. La Vue (V)<a class="headerlink" href="#3-la-vue-v" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>🎨 Rôle : afficher les données passées par le contrôleur.</li>
+<li>❌ Pas de logique métier → uniquement présentation.</li>
+</ul>
+<h4 id="exemple-laravel-blade">📌 Exemple Laravel (Blade)<a class="headerlink" href="#exemple-laravel-blade" title="Permanent link">⚓︎</a></h4>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>{{-- resources/views/accounts/index.blade.php --}}
+&lt;h1&gt;💳 Liste des comptes&lt;/h1&gt;
+&lt;ul&gt;
+@foreach ($accounts as $a)
+  &lt;li&gt;{{ $a-&gt;owner }} : {{ number_format($a-&gt;balance, 2, &#39;,&#39;, &#39; &#39;) }} €&lt;/li&gt;
+@endforeach
+&lt;/ul&gt;
 </code></pre></div>
-<details class="question">
-<summary>Éléments de réponses ✅</summary>
-<p><strong>Prototype de la fonction :</strong>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>fonction getCritiquerByIdR(idR : entier) : tableau de tableaux associatifs
-</code></pre></div></p>
-<p><strong>Requête SQL :</strong>
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">critiquer</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">idR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
-</code></pre></div></p>
-<p><strong>Structure de données retournée :</strong>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>$critiques
-├── [0] → [&#39;idR&#39; =&gt; 1, &#39;mailU&#39; =&gt; &#39;user@mail.com&#39;, &#39;note&#39; =&gt; 4, &#39;commentaire&#39; =&gt; &#39;...&#39;]
-├── [1] → [&#39;idR&#39; =&gt; 1, &#39;mailU&#39; =&gt; &#39;autre@mail.com&#39;, &#39;note&#39; =&gt; 3, &#39;commentaire&#39; =&gt; &#39;...&#39;]
-└── ...
-</code></pre></div></p>
-<p><strong>Code complet de <code>getCritiquerByIdR()</code> :</strong>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">function getCritiquerByIdR($idR) {</span>
-<span class="x">    $resultat = array();</span>
-<span class="x">    try {</span>
-<span class="x">        $cnx = connexionPDO();</span>
-<span class="x">        $req = $cnx-&gt;prepare(&quot;SELECT * FROM critiquer WHERE idR = :idR&quot;);</span>
-<span class="x">        $req-&gt;bindValue(&#39;:idR&#39;, $idR, PDO::PARAM_INT);</span>
-<span class="x">        $req-&gt;execute();</span>
-<span class="x">        $ligne = $req-&gt;fetch(PDO::FETCH_ASSOC);</span>
-<span class="x">        while ($ligne) {</span>
-<span class="x">            $resultat[] = $ligne;</span>
-<span class="x">            $ligne = $req-&gt;fetch(PDO::FETCH_ASSOC);</span>
-<span class="x">        }</span>
-<span class="x">    } catch (PDOException $e) {</span>
-<span class="x">        print &quot;Erreur !: &quot; . $e-&gt;getMessage();</span>
-<span class="x">        die();</span>
-<span class="x">    }</span>
-<span class="x">    return $resultat;</span>
+<h2 id="4-le-modele-m">4. Le Modèle (M)<a class="headerlink" href="#4-le-modele-m" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>🗂️ Rôle : gérer les données et la logique métier.</li>
+<li>🔗 Connecté à la base via <strong>Eloquent ORM</strong> sous Laravel.</li>
+</ul>
+<h4 id="exemple-laravel_1">📌 Exemple Laravel<a class="headerlink" href="#exemple-laravel_1" title="Permanent link">⚓︎</a></h4>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// app/Models/Account.php</span>
+<span class="x">namespace App\Models;</span>
+<span class="x">use Illuminate\Database\Eloquent\Model;</span>
+
+<span class="x">class Account extends Model {</span>
+<span class="x">    protected $fillable = [&#39;owner&#39;, &#39;balance&#39;];</span>
+<span class="x">    public $timestamps = false;</span>
 <span class="x">}</span>
-</code></pre></div></p>
-<p>Dans la section de test :
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">echo &quot;\n getCritiquerByIdR(1) : \n&quot;;</span>
-<span class="x">print_r(getCritiquerByIdR(1));</span>
-</code></pre></div></p>
-</details>
-<p><em><a href="../03_vue/">← Partie 3</a> | <a href="../05_controleur_principal/">Partie 5 — Contrôleur principal →</a></em></p>
+</code></pre></div>
+<hr />
+<h2 id="5-les-routes">5. Les Routes<a class="headerlink" href="#5-les-routes" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>🧭 Une <strong>route</strong> associe une <strong>URL</strong> + une <strong>méthode HTTP</strong> à un <strong>contrôleur</strong>.</li>
+<li>📍 Définies dans <code>routes/web.php</code>.</li>
+</ul>
+<h4 id="exemple-laravel_2">📌 Exemple Laravel<a class="headerlink" href="#exemple-laravel_2" title="Permanent link">⚓︎</a></h4>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">Route::get(&#39;/accounts&#39;, [AccountController::class, &#39;index&#39;]);</span>
+<span class="x">Route::post(&#39;/accounts/transfer&#39;, [AccountController::class, &#39;transfer&#39;]);</span>
+</code></pre></div>
+<hr />
+<h2 id="6-schema-de-synthese">6. Schéma de synthèse<a class="headerlink" href="#6-schema-de-synthese" title="Permanent link">⚓︎</a></h2>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>🌍 Navigateur → 🧭 Route → 🧑‍💻 Contrôleur → 🗂️ Modèle → 🗄️ Base de données
+         ↑                                        ↓
+         └────────────── 🎨 Vue (HTML/Blade) ←─────┘
+</code></pre></div>
+<p>✅ <strong>Récap rapide</strong></p>
+<ol>
+<li><strong>Route</strong> → indique quel contrôleur appeler</li>
+<li><strong>Contrôleur</strong> → reçoit la requête, appelle le modèle</li>
+<li><strong>Modèle</strong> → gère données et règles métier</li>
+<li><strong>Vue</strong> → affiche la réponse</li>
+</ol>
+<p>👉 Dans Laravel, tout est déjà structuré pour appliquer MVC.</p>
+<p><img alt="synthèse" class="center" src="../data/mvc-diagram.png" /></p>
 
 
 

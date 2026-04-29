@@ -12,13 +12,13 @@
         <meta name="author" content="Sophie FAUGERAS">
       
       
-        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/7_Programmation/7.3_developpementPHP/00_presentation/">
+        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/7_Programmation/7.3_MVC_PHP/05_controleur_principal/">
       
       
-        <link rel="prev" href="../../7.2_POO/exercices/">
+        <link rel="prev" href="../04_modele/">
       
       
-        <link rel="next" href="../01_generalites/">
+        <link rel="next" href="../06_laravel/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>0. Architecture MVC - Saint Sauveur BTS SIO SLAM</title>
+        <title>5. Le contrôleur principal 🚦 - Saint Sauveur BTS SIO SLAM</title>
       
     
     
@@ -114,7 +114,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#0-architecture-mvc" class="md-skip">
+        <a href="#5-le-controleur-principal" class="md-skip">
           Aller au contenu
         </a>
       
@@ -148,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              0. Architecture MVC
+              5. Le contrôleur principal 🚦
             
           </span>
         </div>
@@ -5131,37 +5131,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    0. Architecture MVC
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../00_presentation/" class="md-nav__link">
         
   
   
@@ -5177,126 +5150,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-organisation-en-5-parties" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Organisation en 5 parties
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-le-patron-de-conception-mvc" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Le patron de conception MVC
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Le patron de conception MVC">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-trois-composants-fondamentaux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.1 Trois composants fondamentaux
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-avantages-du-mvc" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.2 Avantages du MVC
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-contexte-applicatif-le-site-r3st0fr" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Contexte applicatif : le site r3st0.fr
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Contexte applicatif : le site r3st0.fr">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-types-dutilisateurs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.1 Types d'utilisateurs
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#32-modele-de-donnees" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.2 Modèle de données
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#33-fonctionnalites-hors-perimetre-du-tp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.3 Fonctionnalités hors périmètre du TP
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -5400,7 +5253,7 @@
   <span class="md-ellipsis">
     
   
-    4. Le modèle et accès aux données (PDO) 🗄️
+    4. Le modèle et PDO 🗄️
   
 
     
@@ -5418,10 +5271,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../05_controleur_principal/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Le contrôleur principal 🚦
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -5437,70 +5317,130 @@
   
 
       </a>
-    </li>
-  
+      
+        
 
-              
-            
-          </ul>
-        </nav>
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-analyse-du-fonctionnement-du-controleur-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Analyse du fonctionnement du contrôleur principal 🔍
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Analyse du fonctionnement du contrôleur principal 🔍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-analyse-de-lexistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Analyse de l'existant 🔎
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-le-controleur-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Le contrôleur principal 📌
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-integration-de-controleurs-pre-existants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Intégration de contrôleurs pré-existants 🔧
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Intégration de contrôleurs pré-existants 🔧">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-cgu-conditions-generales-dutilisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 CGU (Conditions Générales d'Utilisation) 📜
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-aimer-un-restaurant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Aimer un restaurant ⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-inscription" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Inscription 📝
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-bilan-de-la-serie-de-tp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Bilan de la série de TP 🏆
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
 
               
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    7.4 MVC
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    7.4 MVC
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -5509,14 +5449,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../7.4_MVC/cours/" class="md-nav__link">
+      <a href="../06_laravel/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🌐 Cours MVC avec Laravel
+    3. MVC avec Laravel 🌐
   
 
     
@@ -6606,171 +6546,589 @@
   
 
 
-<h1 id="0-architecture-mvc">0. Architecture MVC<a class="headerlink" href="#0-architecture-mvc" title="Permanent link">⚓︎</a></h1>
+<h1 id="5-le-controleur-principal">5. Le contrôleur principal 🚦<a class="headerlink" href="#5-le-controleur-principal" title="Permanent link">⚓︎</a></h1>
+<p>Jusqu'ici, chaque contrôleur était étudié individuellement. Dans une application MVC réelle, il existe un <strong>contrôleur principal</strong> (ou <em>front controller</em>) qui sert de <strong>point d'entrée unique</strong> : toutes les requêtes passent par lui, et c'est lui qui délègue le traitement au bon contrôleur.</p>
+<p>Dans notre application, ce rôle est joué par <code>index.php</code> + <code>controleurPrincipal.php</code>.</p>
+<h2 id="1-analyse-du-fonctionnement-du-controleur-principal">1. Analyse du fonctionnement du contrôleur principal 🔍<a class="headerlink" href="#1-analyse-du-fonctionnement-du-controleur-principal" title="Permanent link">⚓︎</a></h2>
+<h3 id="11-analyse-de-lexistant">1.1 Analyse de l'existant 🔎<a class="headerlink" href="#11-analyse-de-lexistant" title="Permanent link">⚓︎</a></h3>
+<p><strong>Documents à utiliser :</strong> fichiers du projet, annexes 1, 2 et 3</p>
+<details class="info">
+<summary>Annexe 1 - index.php 📄</summary>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">include</span> <span class="s2">&quot;getRacine.php&quot;</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/controleur/controleurPrincipal.php&quot;</span><span class="p">;</span>
+<span class="k">include_once</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/modele/authentification.inc.php&quot;</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s2">&quot;action&quot;</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="nv">$action</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s2">&quot;action&quot;</span><span class="p">];</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="p">{</span>
+    <span class="nv">$action</span> <span class="o">=</span> <span class="s2">&quot;defaut&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nv">$fichier</span> <span class="o">=</span> <span class="nx">controleurPrincipal</span><span class="p">(</span><span class="nv">$action</span><span class="p">);</span>
+<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/controleur/</span><span class="si">$fichier</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="cp">?&gt;</span>
+</code></pre></div>
+</details>
+<details class="info">
+<summary>Annexe 2 - controleurPrincipal.php 📄</summary>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="k">function</span> <span class="nf">controleurPrincipal</span><span class="p">(</span><span class="nv">$action</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$lesActions</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+    <span class="nv">$lesActions</span><span class="p">[</span><span class="s2">&quot;defaut&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;listeRestos.php&quot;</span><span class="p">;</span>
+    <span class="nv">$lesActions</span><span class="p">[</span><span class="s2">&quot;liste&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;listeRestos.php&quot;</span><span class="p">;</span>
+    <span class="nv">$lesActions</span><span class="p">[</span><span class="s2">&quot;detail&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;detailResto.php&quot;</span><span class="p">;</span>
+    <span class="nv">$lesActions</span><span class="p">[</span><span class="s2">&quot;recherche&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;rechercheResto.php&quot;</span><span class="p">;</span>
+    <span class="nv">$lesActions</span><span class="p">[</span><span class="s2">&quot;connexion&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;connexion.php&quot;</span><span class="p">;</span>
+    <span class="nv">$lesActions</span><span class="p">[</span><span class="s2">&quot;deconnexion&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;deconnexion.php&quot;</span><span class="p">;</span>
+    <span class="nv">$lesActions</span><span class="p">[</span><span class="s2">&quot;profil&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;monProfil.php&quot;</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nb">array_key_exists</span><span class="p">(</span><span class="nv">$action</span><span class="p">,</span> <span class="nv">$lesActions</span><span class="p">))</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$lesActions</span><span class="p">[</span><span class="nv">$action</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$lesActions</span><span class="p">[</span><span class="s2">&quot;defaut&quot;</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cp">?&gt;</span>
+</code></pre></div>
+</details>
+<details class="info">
+<summary>Annexe 3 - extrait de la documentation PHP 📄</summary>
+<p><code>array_key_exists</code>    (PHP 4 &gt;= 4.0.7, PHP 5, PHP 7)</p>
+<p><code>array_key_exists</code> — Vérifie si une clé existe dans un tableau</p>
+<p><strong>Description</strong> : <code>array_key_exists ( mixed $key , array $array ) : bool</code></p>
+<p><code>array_key_exists()</code> retourne <code>TRUE</code> s'il existe une clé du nom de <code>key</code> dans le tableau <code>array</code>. <code>key</code> peut être n'importe quelle valeur valide d'index de tableau.</p>
+<p><strong>Liste de paramètres</strong><br />
+<code>key</code> Valeur à vérifier.<br />
+<code>array</code>   Un tableau contenant les clés à vérifier.<br /></p>
+<p><strong>Valeurs de retour</strong> Cette fonction retourne <code>TRUE</code> en cas de succès ou <code>FALSE</code> si une erreur survient.</p>
+</details>
 <div class="admonition note">
-<p class="admonition-title">Contexte</p>
-<p><strong>Thème du cours :</strong> Découverte du patron de conception <strong>MVC</strong> et de l'accès aux données dans une application web en PHP.</p>
-<p>@crédit : Suite de TP cré par Mathieu Capliez avec les relectures de Yann Barrot, Roger Sanchez et Fabricec Missonnier Pour le <a href="https://www.reseaucerta.org/">Certa</a> en 2019</p>
-<p><strong>Compétences :</strong></p>
-<ul>
-<li>Activité 1.2. Réponse aux incidents et aux demandes d’assistance et d’évolution &gt; Traitement des demandes concernant les applications</li>
-<li>Activité 1.3. Développement de la présence en ligne de l’organisation &gt; Participation à l’évolution d’un site Web exploitant les données de l’organisation</li>
-</ul>
-<p><strong>Savoirs-faire :</strong></p>
-<ul>
-<li>Conception et réalisation d’une solution applicative</li>
-<li>Concevoir une interface utilisateur</li>
-<li>Identification, développement, utilisation ou adaptation de composants logiciels</li>
-<li>Interpréter un schéma de base de données</li>
-<li>Développer et maintenir une application exploitant une base de données partagée</li>
-</ul>
-<p><strong>Objectifs pédagogiques :</strong></p>
-<ul>
-<li>Appréhender les <strong>principes du patron de conception MVC</strong></li>
-<li>Comprendre comment <strong>accéder à une base de données</strong> depuis une application PHP</li>
-<li>Analyser une application web existante, puis la modifier et l'enrichir</li>
-</ul>
-<p>La démarche est <strong>inductive</strong> (O.A.C. — Observation · Analyse · Conceptualisation) : vous partez d'une application fonctionnelle que vous analysez avant d'y apporter des modifications.</p>
-<p><strong>Prérequis :</strong></p>
-<ul>
-<li>Bases du développement PHP/HTML : variables, formulaires, structures de contrôle, tableaux, fonctions</li>
-<li>Exploitation d'une base de données MariaDB/MySQL : import de base, requêtes SQL</li>
-</ul>
+<p class="admonition-title">Rappel : transmission en méthode GET</p>
+<p>Les paramètres GET sont visibles dans l'URL :</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>http://serveur/dossier/index.php?action=connexion
+</code></pre></div>
+<p>Dans cet exemple : le paramètre <code>action</code> a la valeur <code>connexion</code>.</p>
 </div>
-<h2 id="1-organisation-en-5-parties">1. Organisation en 5 parties<a class="headerlink" href="#1-organisation-en-5-parties" title="Permanent link">⚓︎</a></h2>
+<p>❓ Naviguer successivement sur les écrans de connexion, recherche et accueil. <strong>Relever les URL et compléter le tableau :</strong> 📨</p>
 <table>
 <thead>
 <tr>
-<th>Partie</th>
-<th>Thème</th>
+<th>Écran</th>
+<th>URL complète</th>
+<th>Paramètre GET</th>
+<th>Valeur</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="../01_generalites/">Partie 1</a></td>
-<td>Généralités sur le MVC et analyse de la structure du site existant</td>
+<td>Connexion</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td><a href="../02_controleur/">Partie 2</a></td>
-<td>Analyse du fonctionnement du contrôleur et ajout de fonctionnalités</td>
+<td>Recherche</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td><a href="../03_vue/">Partie 3</a></td>
-<td>Analyse du fonctionnement d'une vue puis ajout de nouvelles fonctionnalités</td>
-</tr>
-<tr>
-<td><a href="../04_modele/">Partie 4</a></td>
-<td>Fonctionnement du modèle et principes de l'accès aux données en PHP avec PDO</td>
-</tr>
-<tr>
-<td><a href="../05_controleur_principal/">Partie 5</a></td>
-<td>Analyse du contrôleur principal et intégration de nouvelles fonctionnalités</td>
+<td>Accueil</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<p>L'application web finale est consultable sur le serveur de la classe : <code>http://r3st0.srv-debian.local/</code></p>
-<details class="info">
-<summary>Vhots</summary>
-<p>Pour avoir acces à <code>http://r3st0.srv-debian.local/</code>, il faut que votre puisse savoir sur quel IP est hébergé le serveur web (au lycée, <code>192.168.0.119</code>), il faut donc créer un Vhost sur votre poste.</p>
-<p>Dans un powershell lancé en administrateur, lancer la commande suivante :
-<code>Add-Content -Path "C:\Windows\System32\drivers\etc\hosts" -Value "192.168.0.119   r3st0.srv-debian.local"</code></p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<table>
+<thead>
+<tr>
+<th>Écran</th>
+<th>URL complète</th>
+<th>Paramètre GET</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Connexion</td>
+<td><code>http://serveur/resto/?action=connexion</code></td>
+<td><code>action</code></td>
+<td><code>connexion</code></td>
+</tr>
+<tr>
+<td>Recherche</td>
+<td><code>http://serveur/resto/?action=recherche</code></td>
+<td><code>action</code></td>
+<td><code>recherche</code></td>
+</tr>
+<tr>
+<td>Accueil</td>
+<td><code>http://serveur/resto/?action=accueil</code></td>
+<td><code>action</code></td>
+<td><code>accueil</code></td>
+</tr>
+</tbody>
+</table>
 </details>
-<h2 id="2-le-patron-de-conception-mvc">2. Le patron de conception MVC<a class="headerlink" href="#2-le-patron-de-conception-mvc" title="Permanent link">⚓︎</a></h2>
-<p>Le développement d'une application web complexe, proposant de multiples fonctionnalités par des équipes de plusieurs informaticiens, nécessite d'établir des règles dans les étapes du développement et dans l'organisation du projet.</p>
-<p>Pour passer de l'écriture d'un simple programme au développement d'une application <strong>maintenable et évolutive</strong>, il est indispensable d'industrialiser et de rationaliser son codage. C'est ce que proposent les patrons de conception, notamment <strong>MVC</strong>.</p>
-<h3 id="21-trois-composants-fondamentaux">2.1 Trois composants fondamentaux<a class="headerlink" href="#21-trois-composants-fondamentaux" title="Permanent link">⚓︎</a></h3>
-<p><img alt="illustration" class="center" src="../data/schema_mvc.svg" width="80%" /></p>
+<p>❓ <strong>Valeurs possibles de</strong><code>$action</code> 🔎</p>
+<p>Le fichier <code>index.php</code> reçoit tous les paramètres GET :</p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">if (isset($_GET[&quot;action&quot;])) {</span>
+<span class="x">    $action = $_GET[&quot;action&quot;];</span>
+<span class="x">} else {</span>
+<span class="x">    $action = &quot;defaut&quot;;</span>
+<span class="x">}</span>
+
+<span class="x">$fichier = controleurPrincipal($action);</span>
+<span class="x">include &quot;$racine/controleur/$fichier&quot;;</span>
+</code></pre></div>
+<p>À l'aide de l'annexe 1 et de la réponse à la question précédente, <strong>indiquer les valeurs que peut prendre la variable</strong> <code>$action</code>.</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p>La variable <code>$action</code> peut prendre les valeurs suivantes : <code>"defaut"</code>, <code>"recherche"</code>, <code>"accueil"</code> et <code>"connexion"</code> (et toutes les autres actions définies dans <code>$lesActions</code>).</p>
+</details>
+<p>❓ <strong>Structure de</strong> <code>$lesActions</code> 🗺️</p>
+<p>La fonction <code>controleurPrincipal()</code> (annexe 2) :</p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">function controleurPrincipal($action) {</span>
+<span class="x">    $lesActions = array();</span>
+
+<span class="x">    $lesActions[&quot;defaut&quot;]      = &quot;listeRestos.php&quot;;</span>
+<span class="x">    $lesActions[&quot;liste&quot;]       = &quot;listeRestos.php&quot;;</span>
+<span class="x">    $lesActions[&quot;detail&quot;]      = &quot;detailResto.php&quot;;</span>
+<span class="x">    $lesActions[&quot;recherche&quot;]   = &quot;rechercheResto.php&quot;;</span>
+<span class="x">    $lesActions[&quot;connexion&quot;]   = &quot;connexion.php&quot;;</span>
+<span class="x">    $lesActions[&quot;deconnexion&quot;] = &quot;deconnexion.php&quot;;</span>
+<span class="x">    $lesActions[&quot;profil&quot;]      = &quot;monProfil.php&quot;;</span>
+
+<span class="x">    if (array_key_exists($action, $lesActions)) {</span>
+<span class="x">        return $lesActions[$action];</span>
+<span class="x">    } else {</span>
+<span class="x">        return $lesActions[&quot;defaut&quot;];</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+</code></pre></div>
+<p><strong>Schématiser la structure de la variable</strong> <code>$lesActions</code> :</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>$lesActions
+├── &quot;defaut&quot;      → &quot;listeRestos.php&quot;
+├── &quot;liste&quot;       → &quot;listeRestos.php&quot;
+├── ...
+</code></pre></div>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>$lesActions (tableau associatif)
+├── &quot;defaut&quot;      → &quot;listeRestos.php&quot;
+├── &quot;liste&quot;       → &quot;listeRestos.php&quot;
+├── &quot;detail&quot;      → &quot;detailResto.php&quot;
+├── &quot;recherche&quot;   → &quot;rechercheResto.php&quot;
+├── &quot;connexion&quot;   → &quot;connexion.php&quot;
+├── &quot;deconnexion&quot; → &quot;deconnexion.php&quot;
+└── &quot;profil&quot;      → &quot;monProfil.php&quot;
+</code></pre></div>
+</details>
+<p>❓ <strong>Quelle partie de la structure <code>$lesActions</code> est similaire aux données trouvées en question 1.1 ?</strong> 🔗</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p>Les <strong>clés</strong> du tableau associatif <code>$lesActions</code> (<code>"connexion"</code>, <code>"recherche"</code>, <code>"accueil"</code>…) sont similaires aux <strong>valeurs du paramètre <code>action</code></strong> transmises dans les URL en méthode GET. C'est bien l'action reçue qui sert de clé pour retrouver le fichier contrôleur à charger.</p>
+</details>
+<p>❓ À partir des questions précédentes, <strong>indiquer quelles valeurs peuvent être transmises à la fonction</strong> <code>controleurPrincipal()</code> 📋</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p>Les valeurs pouvant être transmises correspondent aux <strong>clés du tableau <code>$lesActions</code></strong> :
+<code>"defaut"</code>, <code>"liste"</code>, <code>"detail"</code>, <code>"recherche"</code>, <code>"connexion"</code>, <code>"deconnexion"</code>, <code>"profil"</code>.</p>
+</details>
+<p>❓ <strong>Pour chaque valeur transmise, indiquer quelle valeur sera retournée :</strong> 📋</p>
+<table>
+<thead>
+<tr>
+<th>Valeur de <code>$action</code></th>
+<th>Valeur retournée</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>"liste"</code></td>
+<td><code>"listeRestos.php"</code></td>
+</tr>
+<tr>
+<td><code>"connexion"</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>"detail"</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>"recherche"</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>"profil"</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>"defaut"</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<table>
+<thead>
+<tr>
+<th>Valeur de <code>$action</code></th>
+<th>Valeur retournée</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>"liste"</code></td>
+<td><code>"listeRestos.php"</code></td>
+</tr>
+<tr>
+<td><code>"connexion"</code></td>
+<td><code>"connexion.php"</code></td>
+</tr>
+<tr>
+<td><code>"detail"</code></td>
+<td><code>"detailResto.php"</code></td>
+</tr>
+<tr>
+<td><code>"recherche"</code></td>
+<td><code>"rechercheResto.php"</code></td>
+</tr>
+<tr>
+<td><code>"profil"</code></td>
+<td><code>"monProfil.php"</code></td>
+</tr>
+<tr>
+<td><code>"defaut"</code></td>
+<td><code>"listeRestos.php"</code></td>
+</tr>
+</tbody>
+</table>
+</details>
+<p>❓ <strong>Que se passe-t-il si l'action transmise n'existe <em>pas</em> dans <code>$lesActions</code> ? Quelle valeur est retournée ?</strong> 🤔</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p>Lorsque l'action transmise n'existe pas dans <code>$lesActions</code>, le bloc <code>else</code> est exécuté et la fonction retourne <strong><code>$lesActions["defaut"]</code></strong>, c'est-à-dire <strong><code>"listeRestos.php"</code></strong>. L'utilisateur voit donc la liste des restaurants par défaut.</p>
+</details>
+<p>❓ <strong>Expliquer l'utilité de la condition utilisant <code>array_key_exists()</code> dans la fonction.</strong> 🤔</p>
+<blockquote>
+<p>Documentation PHP : <code>array_key_exists(mixed $key, array $array) : bool</code><br />
+Retourne <code>true</code> si la clé <code>$key</code> existe dans le tableau <code>$array</code>.</p>
+</blockquote>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p><code>array_key_exists()</code> permet de <strong>vérifier si l'action demandée existe</strong> dans le tableau <code>$lesActions</code> avant d'y accéder. Sans cette vérification, accéder à une clé inexistante (<code>$lesActions["actionInexistante"]</code>) générerait un avertissement PHP et retournerait <code>null</code>. La fonction protège ainsi contre les URL mal formées ou les tentatives d'accès à des actions non définies.</p>
+</details>
+<p>❓ <strong>Quel script contrôleur est appelé par <code>index.php</code> lorsque la variable GET <code>action</code> <em>n'est pas renseignée</em> ?</strong> 🔎</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p>Lorsque <code>action</code> n'est pas renseignée, <code>index.php</code> affecte <code>"defaut"</code> à <code>$action</code>. La fonction <code>controleurPrincipal("defaut")</code> retourne <strong><code>"listeRestos.php"</code></strong> : c'est la liste des restaurants qui s'affiche.</p>
+</details>
+<p>❓ <strong>Quel script contrôleur est appelé par <code>index.php</code> lorsque <code>action</code> vaut <code>"liste"</code> ?</strong> 🔎</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p>Lorsque <code>action</code> vaut <code>"liste"</code>, la fonction retourne <strong><code>"listeRestos.php"</code></strong> — même résultat que <code>"defaut"</code>, car les deux clés pointent vers le même fichier contrôleur.</p>
+</details>
+<h3 id="12-le-controleur-principal">1.2 Le contrôleur principal 📌<a class="headerlink" href="#12-le-controleur-principal" title="Permanent link">⚓︎</a></h3>
+<p>La variable <code>$lesActions</code> contient l'ensemble des <strong>contrôleurs accessibles</strong> sur le site. Chaque clé correspond à un script contrôleur.</p>
+<p><img alt="structure variable action" class="center" src="../data/structureVariableAction.png" width="60%" /></p>
+<p>🔨 <strong>Ajouter une nouvelle fonctionnalité</strong></p>
+<p>Pour intégrer une nouvelle fonctionnalité, il faut :</p>
+<ol>
+<li><strong>Créer le contrôleur</strong> dans le dossier <code>controleur/</code></li>
+<li><strong>Créer la vue</strong> dans le dossier <code>vue/</code></li>
+<li><strong>Créer les fonctions modèle</strong> si nécessaire dans <code>modele/</code></li>
+<li><strong>Déclarer l'action</strong> dans <code>controleurPrincipal()</code> : <code>$lesActions['uneAction'] = "scriptControleur.php";</code></li>
+<li><strong>Créer le lien</strong> pointant vers la nouvelle action : <code>&lt;a href="./?action=uneAction"&gt;Lien vers la fonctionnalité&lt;/a&gt;</code></li>
+</ol>
+<p>⚠️ Règle importante : Les contrôleurs ne sont <mark>jamais</mark> appelés directement dans l'URL. On passe <strong>toujours</strong> par <code>index.php</code> et le paramètre <code>action</code>.</p>
+<p>Exemple avec connexion :</p>
+<p><img alt="Accès contrôleur de connexion" class="center" src="../data/connexion.png" width="60%" /></p>
+<p><br /></p>
+<p><img alt="Le nom du fichier contrôleur est masqué à l'utilisateur qui ne voit que l'action." class="center" src="../data/index.png" width="80%" /></p>
+<p>Dans l'exemple ci dessus, le nom du fichier index.php n'est pas visible, on peut soit l'indiquer, soit faire référence à l'emplacement "/" qui désigne le fichier index.php dans la configuration du serveur web Apache .</p>
+<p>Les contrôleurs ne sont jamais directement appelés dans l'URL, on doit toujours passer par le contrôleur principal, et donc par index.php. Il en est de même avec les formulaires, comme celui de connexion.</p>
+<p><img alt="Extrait de la vue affichant le formulaire de connexion" class="center" src="../data/formulaireConnexion.png" width="80%" /></p>
+<p>On remarque que les données du formulaire sont transmises en méthode POST à index.php. Lors de l'inclusion du fichier contrôleur (connexion.php), ces données seront aussi accessibles dans le contrôleur.</p>
+<p>Pour intégrer une nouvelle fonctionnalité au site web, il faut donc :</p>
+<ul>
+<li>créer un nouveau contrôleur dans le dossier approprié,</li>
+<li>créer la vue et le modèle associé si besoin,</li>
+<li>ajouter une action dans la variable $lesActions associant le nom de l'action au nom du script contrôleur,</li>
+<li>donner l'accès à ce contrôleur par l'intermédiaire d'un lien ou d'un formulaire transmettant l'action en méthode GET.</li>
+</ul>
+<h2 id="2-integration-de-controleurs-pre-existants">2. Intégration de contrôleurs pré-existants 🔧<a class="headerlink" href="#2-integration-de-controleurs-pre-existants" title="Permanent link">⚓︎</a></h2>
+<h3 id="21-cgu-conditions-generales-dutilisation">2.1 CGU (Conditions Générales d'Utilisation) 📜<a class="headerlink" href="#21-cgu-conditions-generales-dutilisation" title="Permanent link">⚓︎</a></h3>
+<p><strong>Documents à utiliser :</strong> fichiers du projet, annexe 4</p>
+<details class="info">
+<summary>Annexe 4 - extrait du fichier entete.html.php 📄</summary>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;ul id=&quot;menuGeneral&quot;&gt;</span>
+<span class="x">    &lt;li&gt;&lt;a href=&quot;./?action=accueil&quot;&gt;Accueil&lt;/a&gt;&lt;/li&gt;</span>
+<span class="x">    &lt;li&gt;&lt;a href=&quot;./?action=recherche&quot;&gt;&lt;img src=&quot;images/rechercher.png&quot; alt=&quot;loupe&quot; /&gt;Recherche&lt;/a&gt;&lt;/li&gt;</span>
+<span class="x">    &lt;li&gt;&lt;/li&gt;</span>
+
+<span class="x">    &lt;li id=&quot;logo&quot;&gt;&lt;a href=&quot;./?action=accueil&quot;&gt;&lt;img src=&quot;images/logoBarre.png&quot; alt=&quot;logo&quot; /&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span class="x">    &lt;li&gt;&lt;/li&gt;</span>
+<span class="x">    &lt;li&gt;&lt;a href=&quot;./?action=cgu&quot;&gt;CGU&lt;/a&gt;&lt;/li&gt;</span>
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">if</span><span class="p">(</span><span class="nx">isLoggedOn</span><span class="p">()){</span> <span class="cp">?&gt;</span>
+<span class="x">    &lt;li&gt;&lt;a href=&quot;./?action=profil&quot;&gt;&lt;img src=&quot;images/profil.png&quot; alt=&quot;loupe&quot; /&gt;Mon Profil&lt;/a&gt;&lt;/li&gt;</span>
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="p">}</span>
+    <span class="k">else</span><span class="p">{</span> <span class="cp">?&gt;</span>
+<span class="x">    &lt;li&gt;&lt;a href=&quot;./?action=connexion&quot;&gt;&lt;img src=&quot;images/profil.png&quot; alt=&quot;loupe&quot; /&gt;Connexion&lt;/a&gt;&lt;/li&gt;</span>
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="p">}</span> <span class="cp">?&gt;</span>
+
+<span class="x">&lt;/ul&gt;</span>
+</code></pre></div>
+</details>
+<p>Les conditions générales d'utilisations ont déjà été écrites. La vue et le contrôleur associés sont disponibles. De même, le menu général propose un lien vers celles ci.</p>
+<p>Lorsque l'on clique sur ce lien les CGU ne sont pas affichées, le contrôleur par défaut est chargé à la place.</p>
+<p>❓ <strong>Repérer dans le menu général l'**action</strong> correspondant au contrôleur des CGU.** 🔎</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p>Dans le menu général, le lien vers les CGU est :
+<div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;./?action=cgu&quot;</span><span class="p">&gt;</span>CGU<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</code></pre></div>
+L'action associée est <strong><code>"cgu"</code></strong>.</p>
+</details>
+<p>❓ <strong>Placer les fichiers fournis en ressource dans les <em>dossiers appropriés</em></strong> (<code>controleur/</code> et <code>vue/</code>). 📁</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<ul>
+<li><strong><code>cgu.php</code></strong> → dossier <code>controleur/</code></li>
+<li><strong><code>vueCgu.php</code></strong> → dossier <code>vue/</code></li>
+</ul>
+</details>
+<p>❓ <strong>Rédiger l'instruction à ajouter dans <code>controleurPrincipal()</code> pour intégrer les CGU :</strong>✏️</p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$lesActions[&quot;___&quot;] = &quot;___&quot;;</span>
+</code></pre></div>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$lesActions[&quot;cgu&quot;] = &quot;cgu.php&quot;;</span>
+</code></pre></div>
+Cette ligne est à insérer dans la fonction <code>controleurPrincipal()</code>, juste après les autres initialisations de <code>$lesActions</code>.</p>
+</details>
+<p>❓ <strong>Ajouter la nouvelle action à la fonction</strong>, puis <strong>tester</strong> le lien CGU dans le menu. 🧪</p>
+<h3 id="22-aimer-un-restaurant">2.2 Aimer un restaurant ⭐<a class="headerlink" href="#22-aimer-un-restaurant" title="Permanent link">⚓︎</a></h3>
+<p><strong>Documents à utiliser :</strong> fichiers du projet, annexe 5</p>
+<details class="info">
+<summary>Annexe 5 - contrôleur aimer.php 📄</summary>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&quot;SCRIPT_FILENAME&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$racine</span> <span class="o">=</span> <span class="s2">&quot;..&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">include_once</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/modele/bd.aimer.inc.php&quot;</span><span class="p">;</span>
+
+<span class="c1">// recuperation des donnees GET, POST, et SESSION</span>
+<span class="nv">$idR</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s2">&quot;idR&quot;</span><span class="p">];</span>
+
+<span class="c1">// appel des fonctions permettant de recuperer les donnees utiles a l&#39;affichage</span>
+
+<span class="nv">$mailU</span> <span class="o">=</span> <span class="nx">getMailULoggedOn</span><span class="p">();</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$mailU</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$aimer</span> <span class="o">=</span> <span class="nx">getAimerById</span><span class="p">(</span><span class="nv">$mailU</span><span class="p">,</span> <span class="nv">$idR</span><span class="p">);</span>
+
+<span class="c1">// traitement si necessaire des donnees recuperees</span>
+    <span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$aimer</span> <span class="o">==</span> <span class="k">false</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">addAimer</span><span class="p">(</span><span class="nv">$mailU</span><span class="p">,</span> <span class="nv">$idR</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">delAimer</span><span class="p">(</span><span class="nv">$mailU</span><span class="p">,</span> <span class="nv">$idR</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// redirection vers le referer</span>
+<span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Location: &#39;</span> <span class="o">.</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;HTTP_REFERER&#39;</span><span class="p">]);</span>
+<span class="cp">?&gt;</span>
+</code></pre></div>
+</details>
+<p>Lorsqu'un utilisateur connecté consulte la fiche descriptive d'un restaurant, il a la possibilité d'ajouter celui-ci dans la liste des restaurants qu'il aime. Cette action se fait en cliquant sur l'étoile située à droite du nom du restaurant. Tant que l'utilisateur n'a pas aimé ce restaurant, l'étoile est grisée.</p>
+<p><img alt="Lien sous forme d'une étoile pour aimer un restaurant" class="center" src="../data/etoile.png" width="60%" /></p>
+<p>Lorsqu’on clique sur ce lien, le traitement n'est pas effectué, rien n'est enregistré dans la table aimer. Le contrôleur par défaut est chargé à la place.</p>
+<p>❓ <strong>Quelle vue permet d'afficher la fiche descriptive d'un restaurant ?</strong> 🖼️</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p>Le fichier <strong><code>vueDetailResto.php</code></strong> permet d'afficher la fiche descriptive d'un restaurant.</p>
+</details>
+<p>❓ <strong>Repérer dans le code de la vue le lien correspondant à l'étoile</strong> ⭐.</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$aimer</span> <span class="o">!=</span> <span class="k">false</span><span class="p">)</span> <span class="p">{</span> <span class="cp">?&gt;</span>
+<span class="x">    &lt;a href=&quot;./?action=aimer&amp;idR=</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$unResto</span><span class="p">[</span><span class="s1">&#39;idR&#39;</span><span class="p">];</span> <span class="cp">?&gt;</span><span class="x">&quot;&gt;</span>
+<span class="x">        &lt;img class=&quot;aimer&quot; src=&quot;images/aime.png&quot; alt=&quot;j&#39;aime ce restaurant&quot;&gt;</span>
+<span class="x">    &lt;/a&gt;</span>
+<span class="cp">&lt;?php</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="cp">?&gt;</span>
+<span class="x">    &lt;a href=&quot;./?action=aimer&amp;idR=</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$unResto</span><span class="p">[</span><span class="s1">&#39;idR&#39;</span><span class="p">];</span> <span class="cp">?&gt;</span><span class="x">&quot;&gt;</span>
+<span class="x">        &lt;img class=&quot;aimer&quot; src=&quot;images/aimepas.png&quot; alt=&quot;je n&#39;aime pas encore ce restaurant&quot;&gt;</span>
+<span class="x">    &lt;/a&gt;</span>
+<span class="cp">&lt;?php</span> <span class="p">}</span> <span class="cp">?&gt;</span>
+</code></pre></div>
+</details>
+<p>❓ <strong>Quels sont les paramètres envoyés en méthode GET lors du clic sur l'étoile ?</strong> Préciser le <strong>nom</strong> et la <strong>valeur</strong> de chaque paramètre.📨</p>
+<table>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<table>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>action</code></td>
+<td><code>"aimer"</code></td>
+</tr>
+<tr>
+<td><code>idR</code></td>
+<td>identifiant du restaurant affiché (ex: <code>7</code>)</td>
+</tr>
+</tbody>
+</table>
+</details>
+<p>❓ À partir du script contrôleur fourni, <strong>déterminer dans quels scripts sont utilisées les deux variables transmises en GET</strong>. 🔎</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<ul>
+<li>Le paramètre <strong><code>action</code></strong> est utilisé par <strong><code>index.php</code></strong> pour sélectionner le contrôleur à charger.</li>
+<li>Le paramètre <strong><code>idR</code></strong> est utilisé par le contrôleur <strong><code>aimer.php</code></strong> pour savoir quel restaurant l'utilisateur souhaite aimer.</li>
+</ul>
+</details>
+<p>🔨 <strong>Placer le fichier contrôleur fourni dans le dossier approprié.</strong> 📁</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p><code>aimer.php</code> est un fichier contrôleur → il doit être placé dans le dossier <strong><code>controleur/</code></strong>.</p>
+</details>
+<p>🔨 <strong>Rédiger l'instruction à ajouter dans <code>controleurPrincipal()</code> pour la nouvelle action "aimer" :</strong> ✏️</p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$lesActions[&quot;___&quot;] = &quot;___&quot;;</span>
+</code></pre></div>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$lesActions[&quot;aimer&quot;] = &quot;aimer.php&quot;;</span>
+</code></pre></div>
+</details>
+<p>🔨 <strong>Ajouter la nouvelle action</strong>, puis tester en cliquant sur l'étoile (vous devez être <strong>authentifié</strong>). 🧪</p>
+<p>🔨 <strong>Le contrôleur <code>aimer.php</code> fait-il appel à une vue ?</strong>🖼️</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p><strong>Non.</strong> Le contrôleur <code>aimer.php</code> ne contient aucune inclusion de vue. Il effectue l'action (enregistrer le "j'aime" en base), puis redirige l'utilisateur vers la page précédente.</p>
+</details>
+<p>❓ <strong>Le <code>referer</code> HTTP 🌐</strong></p>
+<p>En fin de contrôleur se trouve cette instruction :</p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">header(&#39;Location: &#39; . $_SERVER[&#39;HTTP_REFERER&#39;]);</span>
+</code></pre></div>
+<p>🔎 Rechercher la signification du terme <strong>referer</strong> en HTTP.</p>
+<p>Pour comprendre son fonctionnement :</p>
+<ol>
+<li>Commenter l'instruction <code>header()</code> ci-dessus</li>
+<li>Afficher à la place la valeur de <code>$_SERVER['HTTP_REFERER']</code></li>
+<li>Tester l'action d'aimer sur un restaurant</li>
+</ol>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p>Le <strong>referer</strong> (ou <em>referrer</em>) HTTP est l'<strong>URL de la page sur laquelle se trouvait le lien</strong> qui a mené à la page actuelle. C'est le navigateur qui transmet cette information au serveur dans l'en-tête HTTP <code>Referer</code>.</p>
+</details>
+<p>❓ <strong>Que contient la variable</strong> <code>$_SERVER['HTTP_REFERER']</code> ? 🔎</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p>La variable contient l'URL de la fiche restaurant que l'on consultait, par exemple [http://serveur/resto/?action=detail&amp;idR=7]</p>
+</details>
+<p>❓ <strong>Déduire de vos observations le rôle de</strong> <code>header('Location: ' . $_SERVER['HTTP_REFERER']);</code> 🤔</p>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<p>Cette instruction <strong>redirige le navigateur vers la page précédente</strong> (la fiche du restaurant). Ainsi, après avoir cliqué sur l'étoile, l'utilisateur revient automatiquement sur la fiche du restaurant, sans que la page change visuellement — seule l'étoile change d'état.</p>
+</details>
+<h3 id="23-inscription">2.3 Inscription 📝<a class="headerlink" href="#23-inscription" title="Permanent link">⚓︎</a></h3>
+<p>Le formulaire d'inscription est accessible par l'intermédiaire d'un lien dans la section "connexion" du site.</p>
+<p>❓ Analyser le lien d'inscription, puis apporter les modifications nécessaires pour rendre l'inscription fonctionnelle.✏️</p>
+<p>🚩 Le modèle, la vue et le contrôleur sont déjà disponibles. Reprendre la même logique que pour les exercices précédents :</p>
+<blockquote>
+<ol>
+<li>Identifier l'action dans le lien</li>
+<li>Placer les fichiers dans les bons dossiers</li>
+<li>Ajouter l'action dans <code>controleurPrincipal()</code></li>
+<li>Tester</li>
+</ol>
+</blockquote>
+<details class="question">
+<summary>Éléments de réponses ✅</summary>
+<ol>
+<li>Le lien d'inscription utilise l'action <strong><code>"inscription"</code></strong>.</li>
+<li>Placer les fichiers :<ul>
+<li><code>inscription.php</code> → dossier <code>controleur/</code></li>
+<li><code>vueInscription.php</code> → dossier <code>vue/</code></li>
+</ul>
+</li>
+<li>Ajouter dans <code>controleurPrincipal()</code> :
+    <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$lesActions[&quot;inscription&quot;] = &quot;inscription.php&quot;;</span>
+</code></pre></div></li>
+<li>Tester en cliquant sur le lien "Inscription" dans la page de connexion.</li>
+</ol>
+</details>
+<h2 id="3-bilan-de-la-serie-de-tp">3. Bilan de la série de TP 🏆<a class="headerlink" href="#3-bilan-de-la-serie-de-tp" title="Permanent link">⚓︎</a></h2>
+<p><a class="md-button" href="../data/siteComplet.zip">Download zip du projet Resto ⤵️</a></p>
+<p>Vous avez maintenant étudié et manipulé les <strong>4 composants</strong> d'une application MVC en PHP :</p>
 <table>
 <thead>
 <tr>
 <th>Composant</th>
+<th>Fichiers</th>
 <th>Rôle</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Modèle</strong></td>
-<td>Fonctions d'accès à la base de données</td>
-</tr>
-<tr>
-<td><strong>Vue</strong></td>
-<td>Affichage des données à l'utilisateur (HTML/CSS)</td>
+<td><strong>Contrôleur principal</strong></td>
+<td><code>index.php</code>, <code>controleurPrincipal.php</code></td>
+<td>Point d'entrée, routage</td>
 </tr>
 <tr>
 <td><strong>Contrôleur</strong></td>
-<td>Coordination : récupère les données, applique la logique, appelle la vue</td>
+<td><code>controleur/*.php</code></td>
+<td>Logique applicative, coordination</td>
+</tr>
+<tr>
+<td><strong>Vue</strong></td>
+<td><code>vue/*.php</code></td>
+<td>Affichage HTML</td>
+</tr>
+<tr>
+<td><strong>Modèle</strong></td>
+<td><code>modele/bd.*.inc.php</code></td>
+<td>Accès aux données (PDO)</td>
 </tr>
 </tbody>
 </table>
-<h3 id="22-avantages-du-mvc">2.2 Avantages du MVC<a class="headerlink" href="#22-avantages-du-mvc" title="Permanent link">⚓︎</a></h3>
-<ul>
-<li><strong>Travail en équipe</strong> : les composants peuvent être écrits par différentes personnes</li>
-<li><strong>Test fonctionnel</strong> : chaque composant peut être testé séparément</li>
-<li><strong>Maintenance et évolutivité</strong> : on peut modifier un composant sans toucher aux autres</li>
-</ul>
-<h2 id="3-contexte-applicatif-le-site-r3st0fr">3. Contexte applicatif : le site r3st0.fr<a class="headerlink" href="#3-contexte-applicatif-le-site-r3st0fr" title="Permanent link">⚓︎</a></h2>
-<p>Le site <strong>r3st0.local</strong> est construit à l'image des sites de critique de restaurants existants (LaFourchette, TripAdvisor…).</p>
-<p>Son objectif : recenser les caractéristiques des restaurants, collecter les avis des consommateurs, et diffuser ces informations aux visiteurs.</p>
-<h3 id="31-types-dutilisateurs">3.1 Types d'utilisateurs<a class="headerlink" href="#31-types-dutilisateurs" title="Permanent link">⚓︎</a></h3>
-<p><strong>Visiteur non authentifié</strong></p>
-<ul>
-<li>Module de recherche (par nom, adresse, type de cuisine, multi-critères)</li>
-<li>Module d'inscription</li>
-<li>Accès aux fiches restaurant : caractéristiques, types de cuisine, évaluations</li>
-</ul>
-<p><strong>Utilisateur authentifié</strong></p>
-<ul>
-<li>Personnalisation du profil</li>
-<li>Choix de ses types de cuisine préférés</li>
-<li>Aimer des restaurants ⭐</li>
-<li>Noter et critiquer des restaurants</li>
-</ul>
-<p><img alt="illustration diagramme de cas d'utilisation" class="center" src="../data/diagramme_cas_utilisation_r3st0.svg" width="80%" /></p>
-<h2 id="32-modele-de-donnees">3.2 Modèle de données<a class="headerlink" href="#32-modele-de-donnees" title="Permanent link">⚓︎</a></h2>
-<p>Schéma relationnel de la base de données :</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>resto (idR, nomR, numAdrR, voieAdrR, cpR, villeR,
-       latitudeDegR, longitudeDegR, descR, horairesR)
-  clé primaire : idR
-
-utilisateur (mailU, mdpU, pseudoU)
-  clé primaire : mailU
-
-typeCuisine (idTC, libelleTC)
-  clé primaire : idTC
-
-photo (idP, cheminP, idR)
-  clé primaire : idP
-  clé étrangère : idR → resto(idR)
-
-critiquer (idR, mailU, note, commentaire)
-  clé primaire : idR, mailU
-  clé étrangère : idR → resto(idR)
-  clé étrangère : mailU → utilisateur(mailU)
-
-aimer (idR, mailU)
-  clé primaire : idR, mailU
-  clé étrangère : idR → resto(idR)
-  clé étrangère : mailU → utilisateur(mailU)
-
-proposer (idR, idTC)
-  clé primaire : idR, idTC
-  clé étrangère : idR → resto(idR)
-  clé étrangère : idTC → typeCuisine(idTC)
-
-preferer (mailU, idTC)
-  clé primaire : mailU, idTC
-  clé étrangère : mailU → utilisateur(mailU)
-  clé étrangère : idTC → typeCuisine(idTC)
-</code></pre></div>
-<h2 id="33-fonctionnalites-hors-perimetre-du-tp">3.3 Fonctionnalités hors périmètre du TP<a class="headerlink" href="#33-fonctionnalites-hors-perimetre-du-tp" title="Permanent link">⚓︎</a></h2>
-<p>Les fonctionnalités suivantes sont présentes dans la version finale mais ne font <strong>pas</strong> l'objet d'exercices :</p>
-<ul>
-<li>Écran d'accueil avec les meilleurs restaurants</li>
-<li>Gestion des types de cuisine préférés</li>
-<li>Affichage des restaurants préférés</li>
-<li>Administration de ses propres critiques</li>
-<li>Recherches adaptées aux goûts de l'utilisateur</li>
-</ul>
+<p><strong><em>Flux complet d'une requête</em></strong>
+<img alt="illustration" class="center" src="../data/flux_requete_mvc_r3st0.svg" width="60%" /></p>
 
 
 
