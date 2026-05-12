@@ -6819,10 +6819,12 @@ tests/
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p><strong>Points clés :</strong>
-- Retourner un <strong>403</strong> (Forbidden) plutôt qu'un 404 permet de ne pas confirmer l'existence de la ressource à l'attaquant.
-- La vérification d'appartenance (<code>checkIfUserCanAccessFacture</code>) doit systématiquement être effectuée côté serveur.
-- Le rate limiting (<code>throttleUserAccess</code>) ralentit les tentatives d'énumération.</p>
+<p><strong>Points clés :</strong></p>
+<ul>
+<li>Retourner un <strong>403</strong> (Forbidden) plutôt qu'un 404 permet de ne pas confirmer l'existence de la ressource à l'attaquant.</li>
+<li>La vérification d'appartenance (<code>checkIfUserCanAccessFacture</code>) doit systématiquement être effectuée côté serveur.</li>
+<li>Le rate limiting (<code>throttleUserAccess</code>) ralentit les tentatives d'énumération.</li>
+</ul>
 </details>
 <h2 id="authentification">Authentification<a class="headerlink" href="#authentification" title="Permanent link">⚓︎</a></h2>
 <p>L'entreprise vous demande de mettre en place un système d'authentification centralisé (SSO) pour l'ensemble de ses applications. Expliquer en quoi, la mise en place de ce système risque de réduire la sécurité de l'ensemble des applications.</p>
@@ -6831,28 +6833,34 @@ tests/
 <summary>Éléments de correction</summary>
 <p><strong>Risque du SSO (Single Sign-On)</strong></p>
 <p>Le SSO crée un <strong>point unique de défaillance</strong> (<em>single point of failure</em>) : si le serveur d'authentification est compromis, <strong>toutes</strong> les applications du système le sont simultanément. Un attaquant qui vole un token SSO valide obtient un accès à l'ensemble du périmètre applicatif.</p>
-<p>Autres risques :
-- Vol de session / token JWT mal sécurisé : propagation immédiate à toutes les apps.
-- Attaque sur le fournisseur d'identité (IdP) : impact maximal.
-- Absence de révocation rapide des sessions en cas de compromission.</p>
+<p>Autres risques :</p>
+<ul>
+<li>Vol de session / token JWT mal sécurisé : propagation immédiate à toutes les apps.</li>
+<li>Attaque sur le fournisseur d'identité (IdP) : impact maximal.</li>
+<li>Absence de révocation rapide des sessions en cas de compromission.</li>
+</ul>
 <p><strong>Solution recommandée : SSO + MFA</strong></p>
 <p>Combiner le SSO avec une <strong>authentification multi-facteurs (MFA/2FA)</strong> permet de compenser le risque. Même si le mot de passe est compromis, le second facteur bloque l'accès.</p>
-<p>Mesures complémentaires :
-- Mettre en place une <strong>durée de vie courte</strong> pour les tokens (access token ~15 min, refresh token révocable).
-- Utiliser des protocoles éprouvés : <strong>OAuth 2.0 / OpenID Connect</strong>.
-- Surveiller et logger toutes les authentifications via le SIEM.
-- Prévoir un <strong>plan de reprise</strong> en cas de défaillance du SSO (authentification locale de secours).</p>
+<p>Mesures complémentaires :</p>
+<ul>
+<li>Mettre en place une <strong>durée de vie courte</strong> pour les tokens (access token ~15 min, refresh token révocable).</li>
+<li>Utiliser des protocoles éprouvés : <strong>OAuth 2.0 / OpenID Connect</strong>.</li>
+<li>Surveiller et logger toutes les authentifications via le SIEM.</li>
+<li>Prévoir un <strong>plan de reprise</strong> en cas de défaillance du SSO (authentification locale de secours).</li>
+</ul>
 </details>
 <h2 id="les-logs">Les logs<a class="headerlink" href="#les-logs" title="Permanent link">⚓︎</a></h2>
 <p>Expliquer en quoi les logs d'accès à une application peuvent être utiles pour identifier des problèmes de sécurité. Décrivez un cas concret où les logs permettraient d'identifier une faille de sécurité, indiquer si le traitement doit être manuel ou automatisé.</p>
 <details class="question">
 <summary>Éléments de correction</summary>
 <p><strong>Utilité des logs</strong></p>
-<p>Les logs d'accès enregistrent toutes les requêtes HTTP reçues par le serveur (IP source, méthode, URL, code de réponse, taille…). Ils permettent de :
-- Détecter des comportements anormaux (nombreuses requêtes depuis une même IP, scans de fichiers…).
-- Identifier des tentatives d'exploitation (injection SQL dans les paramètres GET, XSS…).
-- Reconstituer la chronologie d'une attaque a posteriori (forensique).
-- Déclencher des alertes automatiques (IDS/SIEM).</p>
+<p>Les logs d'accès enregistrent toutes les requêtes HTTP reçues par le serveur (IP source, méthode, URL, code de réponse, taille…). Ils permettent de :</p>
+<ul>
+<li>Détecter des comportements anormaux (nombreuses requêtes depuis une même IP, scans de fichiers…).</li>
+<li>Identifier des tentatives d'exploitation (injection SQL dans les paramètres GET, XSS…).</li>
+<li>Reconstituer la chronologie d'une attaque a posteriori (forensique).</li>
+<li>Déclencher des alertes automatiques (IDS/SIEM).</li>
+</ul>
 <p><strong>Cas concret : détection d'une attaque par énumération d'identifiants</strong></p>
 <p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>192.168.1.4 - GET /facture?id=8986 → 200
 192.168.1.4 - GET /facture?id=8987 → 404
@@ -6917,9 +6925,11 @@ Une même IP effectue des centaines de requêtes en incrémentant un paramètre 
 </code></pre></div>
 Il s'agit d'une tentative d'injection <strong>XSS réfléchie</strong> (Cross-Site Scripting). L'attaquant injecte un script JavaScript dans le paramètre <code>query</code> qui, si la page l'affiche sans échappement, sera exécuté dans le navigateur de la victime et enverra ses cookies à <code>192.168.1.4</code>. Le serveur a répondu <strong>200</strong> : la requête a été acceptée, ce qui suggère que la faille est exploitable.</p>
 <p><strong>Correction du code</strong></p>
-<p>Le code présente deux problèmes :
-1. <code>$query</code> est affiché directement sans échappement → <strong>XSS</strong>
-2. Le placeholder <code>?</code> dans <code>LIKE '%?%'</code> est mal utilisé (les <code>%</code> doivent être dans la valeur, pas autour du <code>?</code>) → <strong>requête préparée incorrecte</strong></p>
+<p>Le code présente deux problèmes :</p>
+<ol>
+<li><code>$query</code> est affiché directement sans échappement → <strong>XSS</strong></li>
+<li>Le placeholder <code>?</code> dans <code>LIKE '%?%'</code> est mal utilisé (les <code>%</code> doivent être dans la valeur, pas autour du <code>?</code>) → <strong>requête préparée incorrecte</strong></li>
+</ol>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="c1">// 1. Récupérer et assainir l&#39;entrée utilisateur</span>
 <span class="nv">$query</span> <span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;query&#39;</span><span class="p">]</span> <span class="o">??</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">);</span>
@@ -6971,7 +6981,8 @@ Il s'agit d'une tentative d'injection <strong>XSS réfléchie</strong> (Cross-Si
 <span class="x">    &lt;/form&gt;</span>
 <span class="x">&lt;/div&gt;</span>
 </code></pre></div>
-<p>::: tip Rappel</p>
+<div class="admonition tip">
+<p class="admonition-title">Rappel</p>
 <p>Filtrer les entrées utilisateur avec la fonction <code>htmlspecialchars()</code>. Cette fonction permet de convertir les caractères spéciaux en entités HTML.</p>
 <p>Exemple :</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Échappe les caractères spéciaux. C&#39;est à dire que les caractères spéciaux seront convertis en entités HTML.</span>
@@ -6982,13 +6993,13 @@ Il s'agit d'une tentative d'injection <strong>XSS réfléchie</strong> (Cross-Si
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Supprime les balises HTML</span>
 <span class="x">$name = strip_tags($_POST[&#39;name&#39;]);</span>
 </code></pre></div>
-<p>:::</p>
+</div>
 <p>Proposez une solution pour corriger cette faille.</p>
 <details class="question">
 <summary>Éléments de correction</summary>
 <p><strong>Nature de la faille</strong></p>
-<p>Les variables <code>$name</code> et <code>$email</code> sont affichées directement dans la page sans aucun traitement. Un attaquant peut soumettre le formulaire avec la valeur :
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&lt;script&gt;alert(&#39;XSS&#39;)&lt;/script&gt;
+<p>Les variables <code>$name</code> et <code>$email</code> sont affichées directement dans la page sans aucun traitement. Un attaquant peut soumettre le formulaire avec la valeur :</p>
+<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&lt;script&gt;alert(&#39;XSS&#39;)&lt;/script&gt;
 </code></pre></div>
 Ce script sera interprété par le navigateur → <strong>XSS réfléchie</strong>.</p>
 <p><strong>Correction avec <code>htmlspecialchars()</code></strong></p>
@@ -7117,10 +7128,12 @@ Cela permet d'extraire l'intégralité de la base de données (<strong>OWASP A03
 <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_ASSOC</span><span class="p">);</span>
 <span class="cp">?&gt;</span>
 </code></pre></div>
-<p><strong>Points clés :</strong>
-- Ne <strong>jamais</strong> concaténer une entrée utilisateur dans une requête SQL.
-- Utiliser les <strong>requêtes préparées</strong> (<code>prepare</code> + <code>execute</code>) : le moteur SQL sépare le code des données.
-- Valider le type attendu (<code>FILTER_VALIDATE_INT</code>) en amont pour rejeter toute valeur non entière.</p>
+<p><strong>Points clés :</strong></p>
+<ul>
+<li>Ne <strong>jamais</strong> concaténer une entrée utilisateur dans une requête SQL.</li>
+<li>Utiliser les <strong>requêtes préparées</strong> (<code>prepare</code> + <code>execute</code>) : le moteur SQL sépare le code des données.</li>
+<li>Valider le type attendu (<code>FILTER_VALIDATE_INT</code>) en amont pour rejeter toute valeur non entière.</li>
+</ul>
 </details>
 <h2 id="faille-2-variante">Faille 2 variante<a class="headerlink" href="#faille-2-variante" title="Permanent link">⚓︎</a></h2>
 <p>L'auditeur a trouvé une faille de type Injection SQL. Observer le code source suivant :</p>
@@ -7187,10 +7200,11 @@ Cela permet d'extraire l'intégralité de la base de données (<strong>OWASP A03
 <span class="x">    &lt;/ul&gt;</span>
 <span class="x">&lt;/div&gt;</span>
 </code></pre></div>
-<p>::: tip Rappel</p>
+<div class="admonition tip">
+<p class="admonition-title">Rappel</p>
 <p>Le principe de la faille CSRF est de faire une requête à l'insu de l'utilisateur. Pour cela, il faut que l'utilisateur soit connecté à votre application. Ensuite, vous devez faire une requête à l'insu de l'utilisateur.</p>
 <p>Pour corriger cette faille, vous devez ajouter un token dans le formulaire (ou en SESSION). Ce token doit être généré aléatoirement et doit être vérifié lors de l'accès à la page.</p>
-<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Génère un token aléatoire</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Génère un token aléatoire</span>
 <span class="x">$_SESSION[&#39;token&#39;] = bin2hex(random_bytes(32));</span>
 
 <span class="x">// Vérifier le token</span>
@@ -7199,7 +7213,7 @@ Cela permet d'extraire l'intégralité de la base de données (<strong>OWASP A03
 <span class="x">    // ...</span>
 <span class="x">}</span>
 </code></pre></div>
-:::</p>
+</div>
 <p>Proposez une solution pour corriger cette faille.</p>
 <details class="question">
 <summary>Éléments de correction</summary>
@@ -7248,10 +7262,12 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <span class="x">    &lt;/ul&gt;</span>
 <span class="x">&lt;/div&gt;</span>
 </code></pre></div>
-<p><strong>Points clés :</strong>
-- Utiliser <strong>POST</strong> (jamais GET) pour les actions qui modifient des données.
-- Utiliser <code>hash_equals()</code> plutôt que <code>===</code> pour comparer les tokens (résistant aux attaques temporelles).
-- Invalider le token après usage (<strong>token à usage unique</strong>).</p>
+<p><strong>Points clés :</strong></p>
+<ul>
+<li>Utiliser <strong>POST</strong> (jamais GET) pour les actions qui modifient des données.</li>
+<li>Utiliser <code>hash_equals()</code> plutôt que <code>===</code> pour comparer les tokens (résistant aux attaques temporelles).</li>
+<li>Invalider le token après usage (<strong>token à usage unique</strong>).</li>
+</ul>
 </details>
 <h2 id="faille-4">Faille 4<a class="headerlink" href="#faille-4" title="Permanent link">⚓︎</a></h2>
 <p>L'auditeur a trouvé une faille de type Inclusion de fichier. Il a réussi à afficher le contenu du fichier <code>config.php</code>.</p>
@@ -7262,9 +7278,10 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <span class="c1">// Exemple : index.php?page=config</span>
 <span class="cp">?&gt;</span>
 </code></pre></div>
-<p>::: tip Rappel</p>
+<div class="admonition tip">
+<p class="admonition-title">Rappel</p>
 <p>Pour corriger cette faille, vous devez limiter les fichiers qui peuvent être inclus. Par exemple, vous pouvez créer un tableau avec les fichiers autorisés.</p>
-<p>:::</p>
+</div>
 <p>Proposez une solution pour corriger cette faille.</p>
 <details class="question">
 <summary>Éléments de correction</summary>
@@ -7290,10 +7307,12 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <span class="k">include</span> <span class="nv">$page</span> <span class="o">.</span> <span class="s1">&#39;.php&#39;</span><span class="p">;</span>
 <span class="cp">?&gt;</span>
 </code></pre></div>
-<p><strong>Points clés :</strong>
-- Toujours utiliser une <strong>liste blanche</strong> (les valeurs autorisées), jamais une liste noire.
-- Le paramètre <code>true</code> dans <code>in_array()</code> active la comparaison stricte (type + valeur).
-- Ne jamais construire un chemin de fichier directement depuis une entrée utilisateur.</p>
+<p><strong>Points clés :</strong></p>
+<ul>
+<li>Toujours utiliser une <strong>liste blanche</strong> (les valeurs autorisées), jamais une liste noire.</li>
+<li>Le paramètre <code>true</code> dans <code>in_array()</code> active la comparaison stricte (type + valeur).</li>
+<li>Ne jamais construire un chemin de fichier directement depuis une entrée utilisateur.</li>
+</ul>
 </details>
 <h2 id="faille-5">Faille 5<a class="headerlink" href="#faille-5" title="Permanent link">⚓︎</a></h2>
 <p>L'auditeur a trouvé une faille de type bruteforce.</p>
@@ -7319,15 +7338,16 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <span class="x">    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Envoyer&lt;/button&gt;</span>
 <span class="x">&lt;/form&gt;</span>
 </code></pre></div>
-<p>::: tip Rappel</p>
+<div class="admonition tip">
+<p class="admonition-title">Rappel</p>
 <p>Pour corriger cette faille, plusieurs solutions sont possibles :</p>
 <ul>
-<li>Limiter le nombre de tentatives de connexion (par exemple 3 tentatives).</li>
+<li>Limiter le nombre de tentatives de connexion (par exemple 3 tentatives)</li>
 <li>Ajouter un token CSRF dans le formulaire. (voir faille 3)</li>
 <li>Ajouter un délai entre chaque tentative de connexion. (exemple : 1 seconde)</li>
 </ul>
 <p>L'objectif est de limiter le nombre de tentatives de connexion. L'objectif est de ralentir l'attaque brute force.</p>
-<p>:::</p>
+</div>
 <p>Proposez une solution pour corriger cette faille.</p>
 <details class="question">
 <summary>Éléments de correction</summary>
@@ -7379,11 +7399,13 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <span class="x">    &lt;button type=&quot;submit&quot;&gt;Envoyer&lt;/button&gt;</span>
 <span class="x">&lt;/form&gt;</span>
 </code></pre></div>
-<p><strong>Solutions complémentaires à combiner :</strong>
-- <strong>Token CSRF</strong> pour empêcher le rejeu automatisé de requêtes.
-- <strong>CAPTCHA</strong> après N tentatives échouées.
-- <strong>Délai exponentiel</strong> : 1s, 2s, 4s… entre les tentatives.
-- Stocker le compteur en base de données (plutôt qu'en session) pour résister au changement de session.</p>
+<p><strong>Solutions complémentaires à combiner :</strong></p>
+<ul>
+<li><strong>Token CSRF</strong> pour empêcher le rejeu automatisé de requêtes.</li>
+<li><strong>CAPTCHA</strong> après N tentatives échouées.</li>
+<li><strong>Délai exponentiel</strong> : 1s, 2s, 4s… entre les tentatives.</li>
+<li>Stocker le compteur en base de données (plutôt qu'en session) pour résister au changement de session.</li>
+</ul>
 </details>
 <h2 id="faille-6">Faille 6<a class="headerlink" href="#faille-6" title="Permanent link">⚓︎</a></h2>
 <p>L'attaquant a trouvé une faille de type manque de contrôle d'accès. Il a réussi à accéder à une page qui n'est pas accessible aux utilisateurs.</p>
@@ -7429,11 +7451,13 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p><strong>Points clés :</strong>
-- <code>auth</code> vérifie que l'utilisateur est <strong>connecté</strong>.
-- <code>admin</code> vérifie qu'il possède le <strong>rôle admin</strong>.
-- Ces deux vérifications sont indépendantes et cumulables.
-- Toujours protéger les routes sensibles côté <strong>serveur</strong>, jamais uniquement en masquant des liens dans le HTML.</p>
+<p><strong>Points clés :</strong></p>
+<ul>
+<li><code>auth</code> vérifie que l'utilisateur est <strong>connecté</strong>.</li>
+<li><code>admin</code> vérifie qu'il possède le <strong>rôle admin</strong>.</li>
+<li>Ces deux vérifications sont indépendantes et cumulables.</li>
+<li>Toujours protéger les routes sensibles côté <strong>serveur</strong>, jamais uniquement en masquant des liens dans le HTML.</li>
+</ul>
 </details>
 <h2 id="faille-7">Faille 7<a class="headerlink" href="#faille-7" title="Permanent link">⚓︎</a></h2>
 <p>Identifiez les failles de sécurité dans le code source suivant :</p>
@@ -7474,10 +7498,12 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <span class="p">}</span>
 <span class="cp">?&gt;</span>
 </code></pre></div>
-<p><strong>Points clés :</strong>
-- <code>FILTER_VALIDATE_EMAIL</code> valide <strong>et</strong> assainit l'email en une seule opération.
-- La requête préparée rend l'injection SQL <strong>impossible</strong>.
-- <code>htmlspecialchars()</code> protège contre une éventuelle réaffichage XSS ultérieur.</p>
+<p><strong>Points clés :</strong></p>
+<ul>
+<li><code>FILTER_VALIDATE_EMAIL</code> valide <strong>et</strong> assainit l'email en une seule opération.</li>
+<li>La requête préparée rend l'injection SQL <strong>impossible</strong>.</li>
+<li><code>htmlspecialchars()</code> protège contre une éventuelle réaffichage XSS ultérieur.</li>
+</ul>
 </details>
 <h2 id="faille-8">Faille 8<a class="headerlink" href="#faille-8" title="Permanent link">⚓︎</a></h2>
 <p>Identifiez les failles de sécurité dans le code source suivant :</p>
@@ -7493,21 +7519,21 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <span class="cp">?&gt;</span>
 </code></pre></div>
 <p>Proposez une solution pour corriger cette faille.</p>
-<p>::: tip Rappel</p>
+<div class="admonition tip">
+<p class="admonition-title">Rappel</p>
+</div>
 <p>Filtrer une saisie utilisateur :</p>
-<ul>
-<li><code>htmlspecialchars()</code> : Convertit les caractères spéciaux en entités HTML.</li>
-<li><code>strip_tags()</code> : Supprime les balises HTML.</li>
-<li><code>filter_input()</code> : Filtre une variable avec un filtre spécifique.</li>
-<li><code>FILTER_SANITIZE_STRING</code> : Supprime les balises HTML et les caractères spéciaux.</li>
-<li><code>FILTER_SANITIZE_EMAIL</code> : Supprime les caractères illégaux dans un email.</li>
-<li><code>FILTER_SANITIZE_URL</code> : Supprime les caractères illégaux dans une URL.</li>
-<li><code>FILTER_SANITIZE_NUMBER_INT</code> : Supprime tous les caractères sauf les chiffres et le signe + et -.</li>
-<li>Exemple : <code>filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);</code></li>
-<li>Exemple : <code>filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);</code></li>
-<li>Voir plus de filtres : <a href="https://www.php.net/manual/fr/filter.filters.sanitize.php">https://www.php.net/manual/fr/filter.filters.sanitize.php</a></li>
-</ul>
-<p>:::</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>- `htmlspecialchars()` : Convertit les caractères spéciaux en entités HTML.
+- `strip_tags()` : Supprime les balises HTML.
+- `filter_input()` : Filtre une variable avec un filtre spécifique.
+- `FILTER_SANITIZE_STRING` : Supprime les balises HTML et les caractères spéciaux.
+- `FILTER_SANITIZE_EMAIL` : Supprime les caractères illégaux dans un email.
+- `FILTER_SANITIZE_URL` : Supprime les caractères illégaux dans une URL.
+- `FILTER_SANITIZE_NUMBER_INT` : Supprime tous les caractères sauf les chiffres et le signe + et -.
+- Exemple : `filter_input(INPUT_POST, &#39;name&#39;, FILTER_SANITIZE_STRING);`
+- Exemple : `filter_input(INPUT_POST, &#39;email&#39;, FILTER_SANITIZE_EMAIL);`
+- Voir plus de filtres : [https://www.php.net/manual/fr/filter.filters.sanitize.php](https://www.php.net/manual/fr/filter.filters.sanitize.php)
+</code></pre></div>
 <details class="question">
 <summary>Éléments de correction</summary>
 <p><strong>Faille identifiée</strong></p>
@@ -7684,7 +7710,8 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <span class="p">}</span>
 </code></pre></div>
 <p>L'auditeur vous indique que vous devez mettre en place en place un token afin d'éviter le rejeu de requête.</p>
-<p>::: tip Protection CSRF / Token</p>
+<div class="admonition tip">
+<p class="admonition-title">Protection CSRF / Token</p>
 <p>Pour protéger votre application contre les attaques CSRF, vous devez ajouter un token CSRF dans le formulaire. Ce token doit être généré aléatoirement et doit être vérifié lors de l'accès à la page.</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Vérifier le token</span>
 <span class="x">if (isset($_POST[&#39;token&#39;]) &amp;&amp; $_POST[&#39;token&#39;] === $_SESSION[&#39;token&#39;]) {</span>
@@ -7701,9 +7728,10 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <p>Et dans le formulaire :</p>
 <div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;hidden&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;token&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&lt;?= $_SESSION[&#39;token&#39;] ?&gt;&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>:::</p>
+</div>
 <p>Proposez une solution pour corriger cette faille.</p>
-<p>::: tip Rappel</p>
+<div class="admonition tip">
+<p class="admonition-title">Rappel</p>
 <p>Pour corriger cette faille, d'autres solutions sont possibles :</p>
 <ul>
 <li>Limiter le nombre de tentatives de connexion (par exemple 3 tentatives).</li>
@@ -7711,7 +7739,7 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <li>Ajouter un délai entre chaque tentative de connexion. (exemple : 1 seconde)</li>
 </ul>
 <p>L'objectif est de limiter le nombre de tentatives de connexion. L'objectif est de ralentir l'attaque brute force.</p>
-<p>:::</p>
+</div>
 <details class="question">
 <summary>Éléments de correction</summary>
 <p><strong>Nature de la faille</strong></p>
@@ -7763,10 +7791,12 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <span class="x">    &lt;input type=&quot;submit&quot; value=&quot;Login&quot;&gt;</span>
 <span class="x">&lt;/form&gt;</span>
 </code></pre></div>
-<p><strong>Points clés :</strong>
-- <code>bin2hex(random_bytes(32))</code> génère un token cryptographiquement sûr (meilleur que <code>uniqid()</code>).
-- <code>hash_equals()</code> compare les tokens de manière sécurisée (résistant aux timing attacks).
-- Le token est <strong>renouvelé après chaque soumission</strong> (usage unique).</p>
+<p><strong>Points clés :</strong></p>
+<ul>
+<li><code>bin2hex(random_bytes(32))</code> génère un token cryptographiquement sûr (meilleur que <code>uniqid()</code>).</li>
+<li><code>hash_equals()</code> compare les tokens de manière sécurisée (résistant aux timing attacks).</li>
+<li>Le token est <strong>renouvelé après chaque soumission</strong> (usage unique).</li>
+</ul>
 </details>
 <h2 id="faille-12">Faille 12<a class="headerlink" href="#faille-12" title="Permanent link">⚓︎</a></h2>
 <p>L'auditeur a trouvé une faille de type défaut de sécurisation de votre application. En effet lors de l'audit il découvre les enregistrements suivants en base de données :</p>
@@ -7809,7 +7839,8 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <span class="cp">?&gt;</span>
 </code></pre></div>
 <p>Proposez une solution pour corriger cette faille.</p>
-<p>::: details Documentation</p>
+<div class="admonition tip">
+<p class="admonition-title">details Documentation</p>
 <p>Pour stocker un mot de passe, vous devez utiliser la fonction <code>password_hash()</code>.</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$password = password_hash($_POST[&#39;password&#39;], PASSWORD_DEFAULT);</span>
 </code></pre></div>
@@ -7818,7 +7849,7 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <span class="x">    // Le mot de passe est valide</span>
 <span class="x">}</span>
 </code></pre></div>
-<p>:::</p>
+</div>
 <details class="question">
 <summary>Éléments de correction</summary>
 <p><strong>Faille identifiée</strong></p>
@@ -7855,10 +7886,12 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>| admin | $2y$10$xK8J...hashed... |
 | user  | $2y$10$aB3C...hashed... |
 </code></pre></div></p>
-<p><strong>Points clés :</strong>
-- <code>password_hash()</code> utilise <strong>bcrypt</strong> par défaut (salage automatique + coût configurable).
-- Ne <strong>jamais</strong> comparer les mots de passe avec <code>===</code> — toujours utiliser <code>password_verify()</code>.
-- Ne pas <code>htmlspecialchars</code> ou <code>filter_input</code> le mot de passe <strong>avant</strong> de le hacher : cela pourrait le modifier et créer des problèmes de comparaison.</p>
+<p><strong>Points clés :</strong></p>
+<ul>
+<li><code>password_hash()</code> utilise <strong>bcrypt</strong> par défaut (salage automatique + coût configurable).</li>
+<li>Ne <strong>jamais</strong> comparer les mots de passe avec <code>===</code> — toujours utiliser <code>password_verify()</code>.</li>
+<li>Ne pas <code>htmlspecialchars</code> ou <code>filter_input</code> le mot de passe <strong>avant</strong> de le hacher : cela pourrait le modifier et créer des problèmes de comparaison.</li>
+</ul>
 </details>
 <h2 id="double-authentification">Double authentification<a class="headerlink" href="#double-authentification" title="Permanent link">⚓︎</a></h2>
 <p>L'auditeur a trouvé une faille de sécurité dans votre application. Il vous demande de mettre en place une double authentification pour renforcer la sécurité de votre application.</p>
@@ -7965,10 +7998,12 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
     <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>Valider<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div>
-<p><strong>Points clés :</strong>
-- L'utilisateur n'est <strong>pas</strong> connecté entre l'étape 1 et l'étape 2 (<code>pending_user_id</code> ≠ <code>user_id</code>).
-- Le code TOTP est valable ~30 secondes et <strong>ne peut pas être rejoué</strong>.
-- En cas de perte de l'appareil, prévoir des codes de secours (backup codes).</p>
+<p><strong>Points clés :</strong></p>
+<ul>
+<li>L'utilisateur n'est <strong>pas</strong> connecté entre l'étape 1 et l'étape 2 (<code>pending_user_id</code> ≠ <code>user_id</code>).</li>
+<li>Le code TOTP est valable ~30 secondes et <strong>ne peut pas être rejoué</strong>.</li>
+<li>En cas de perte de l'appareil, prévoir des codes de secours (backup codes).</li>
+</ul>
 </details>
 <h2 id="appel-dapi">Appel d'API<a class="headerlink" href="#appel-dapi" title="Permanent link">⚓︎</a></h2>
 <p>Lors de la phase de développement Antonin rencontre des problèmes d'appels aux API :</p>
