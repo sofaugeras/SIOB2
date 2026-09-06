@@ -1,5 +1,7 @@
 # Laravel
 
+![logo](./data/laravel_logo.png){: .center with=30%}
+
 !!! info "Compétences visées B2 SLAM"
 
     - **B2.1 SLAM** – Concevoir et développer une solution applicative

@@ -371,7 +371,7 @@ Notre pipeline nécessite **4 secrets** à configurer dans **Settings → Secret
 <!--
 !!! info "Plus besoin de secrets SSH"
     Avec le self-hosted runner, le job CD s'exécute directement sur `srv-debian`. Les secrets `SSH_HOST`, `SSH_USER`, `SSH_PRIVATE_KEY` et `SSH_PORT` ne sont plus nécessaires — le runner est déjà sur le serveur.
--->
+
 !!! warning "Générer votre APP_KEY"
     Avant le premier déploiement, vous devez renseigner votre `APP_KEY` dans le fichier `/opt/todo-prenom/.env.prod` sur le serveur. Générez-la en local dans votre projet Laravel :
 
@@ -386,6 +386,7 @@ Notre pipeline nécessite **4 secrets** à configurer dans **Settings → Secret
     nano /opt/todo-prenom/.env.prod
     # Renseignez APP_KEY=base64:...
     ```
+-->
 
 ??? question "Pourquoi utiliser un token Docker Hub plutôt que le mot de passe du compte ?"
     Si le token est compromis, on peut le révoquer sur Docker Hub sans changer le mot de passe du compte. C'est le principe des **credentials à portée limitée** : le token n'a accès qu'aux opérations nécessaires (push d'images), pas à la gestion du compte.
@@ -394,19 +395,47 @@ Notre pipeline nécessite **4 secrets** à configurer dans **Settings → Secret
 
 !!! tip "Fichiers à télécharger 📥"
 
-    [⬇️ docker-compose.yml](./data/docker-compose.yml){ .md-button }
-    [⬇️ ci-cd.yml](./data/ci-cd.yml){ .md-button }
+    [⬇️ ZIP docker-compose.yml et ci-cd.yml](./data/cicd.zip){ .md-button }
 
 ### 7.1 Fork du repo sous l'organisation
 
 Le runner GitHub Actions est enregistré sur l'organisation `lyceesaintsauveur`. Pour que votre pipeline puisse l'utiliser, votre repo doit appartenir à cette organisation.
 
-Créez un fork du repo de référence sous l'organisation :
+Créez un fork du repo de référence sous l'organisation en respectant le nom du repo en `laravel-todo-prenom`:
 
 `github.com/sofaugeras/laravel-todo` → **Fork** → Owner : `lyceesaintsauveur` → Repository name : `laravel-todo-prenom`
 
 !!! warning "Activer GitHub Actions sur le fork"
     Après le fork, GitHub désactive les workflows par sécurité. Rendez-vous dans l'onglet **Actions** de votre repo et cliquez **"I understand my workflows, go ahead and enable them"**.
+
+!!! info "activer votre projet laravel-prenom en local"
+    Voici les commandes pour installer le projet sur votre poste avec WAMP :
+
+    1. Cloner le dépôt
+    Placez-vous dans le dossier www de WAMP :
+    `cd C:/wamp64/www`
+    git clone <url-du-repo> laravel-todo-prenom
+    `cd laravel-todo-prenom`
+
+    2. Installer les dépendances
+    ```
+    composer install
+    npm install
+    ```
+
+    3. Configurer l'environnement
+    ``cp .env.example .env``
+    Puis éditez le .env avec vos accès MySQL WAMP :
+    ```
+    APP_URL=http://localhost/laravel-todo-prenom/public
+
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=laravel-todo-prenom
+    DB_USERNAME=root
+    DB_PASSWORD=
+    ```
 
 ### 7.2 Configurer les secrets
 

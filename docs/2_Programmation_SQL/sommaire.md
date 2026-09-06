@@ -1,3 +1,7 @@
+# Sommaire
+
+![logo](./5.1_Procedures_stockees/data/logo.png){: .center width=15%}
+
 !!! abstract "Compétences"
     B2.3 SLAM Gérer les données
     Développer des fonctionnalités applicatives au sein d’un système de gestion de base de données (relationnel ou non)

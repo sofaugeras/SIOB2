@@ -1,5 +1,7 @@
 # sommaire
 
+![logo](./1_introduction/data/mysql-logo.png){: .center width=30%}
+
 !!! abstract "Compétences"
     B1.3 Développer la présence en ligne de l’organisation
     > Cette compétence suppose qu'un site web existe pour l'organisation cliente, dans un premier temps il s'agit de l'étudier pour connaître le système de gestion de contenu (CMS) ou l'architecture utilisé, ==la base de données associée==, la charte graphique mise en place, le code utilisé. C'est là l'occasion d'une initiation à la programmation web avec différents langages : langages à balise (HTML, CSS, XML), langages de contrôle (Javascript, PHP, Python...) et ==langages d‟accès aux données et d'interrogation==.

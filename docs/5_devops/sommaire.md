@@ -1,5 +1,7 @@
 # sommaire
 
+![logo](./5.1_notionDevops/data/logo.png){: .center width=50%}
+
 1. [Notion devops](./5.1_notionDevops/1_cours.md)
 2. [Intégration continue - Mise en place](./5.1_notionDevops/2_ci.md)
 3. [Intégration continue - les tests](./5.1_notionDevops/3_tests.md)

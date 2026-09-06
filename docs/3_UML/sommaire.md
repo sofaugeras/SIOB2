@@ -1,5 +1,7 @@
 # sommaire UML
 
+![logo](./3.1_diagrammeClasse/data/logo_UML.png){: .center width=30%}
+
 !!! abstract "Compétences"
     Activité B2.1. Conception et développement d’une solution applicative
     > Analyse d’un besoin exprimé et de son contexte juridique<br />

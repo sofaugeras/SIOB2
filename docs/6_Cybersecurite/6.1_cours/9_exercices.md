@@ -150,6 +150,7 @@ Modifier l'accès aux factures en utilisant les fonctions à votre disposition a
     ```
 
     **Points clés :**
+
     - Retourner un **403** (Forbidden) plutôt qu'un 404 permet de ne pas confirmer l'existence de la ressource à l'attaquant.
     - La vérification d'appartenance (`checkIfUserCanAccessFacture`) doit systématiquement être effectuée côté serveur.
     - Le rate limiting (`throttleUserAccess`) ralentit les tentatives d'énumération.
@@ -167,6 +168,7 @@ Proposez une solution à cette problématique.
     Le SSO crée un **point unique de défaillance** (*single point of failure*) : si le serveur d'authentification est compromis, **toutes** les applications du système le sont simultanément. Un attaquant qui vole un token SSO valide obtient un accès à l'ensemble du périmètre applicatif.
 
     Autres risques :
+
     - Vol de session / token JWT mal sécurisé : propagation immédiate à toutes les apps.
     - Attaque sur le fournisseur d'identité (IdP) : impact maximal.
     - Absence de révocation rapide des sessions en cas de compromission.
@@ -176,6 +178,7 @@ Proposez une solution à cette problématique.
     Combiner le SSO avec une **authentification multi-facteurs (MFA/2FA)** permet de compenser le risque. Même si le mot de passe est compromis, le second facteur bloque l'accès.
 
     Mesures complémentaires :
+
     - Mettre en place une **durée de vie courte** pour les tokens (access token ~15 min, refresh token révocable).
     - Utiliser des protocoles éprouvés : **OAuth 2.0 / OpenID Connect**.
     - Surveiller et logger toutes les authentifications via le SIEM.
@@ -190,6 +193,7 @@ Expliquer en quoi les logs d'accès à une application peuvent être utiles pour
     **Utilité des logs**
 
     Les logs d'accès enregistrent toutes les requêtes HTTP reçues par le serveur (IP source, méthode, URL, code de réponse, taille…). Ils permettent de :
+
     - Détecter des comportements anormaux (nombreuses requêtes depuis une même IP, scans de fichiers…).
     - Identifier des tentatives d'exploitation (injection SQL dans les paramètres GET, XSS…).
     - Reconstituer la chronologie d'une attaque a posteriori (forensique).
@@ -261,6 +265,7 @@ foreach ($result as $article) {
     **Correction du code**
 
     Le code présente deux problèmes :
+
     1. `$query` est affiché directement sans échappement → **XSS**
     2. Le placeholder `?` dans `LIKE '%?%'` est mal utilisé (les `%` doivent être dans la valeur, pas autour du `?`) → **requête préparée incorrecte**
 
@@ -322,27 +327,25 @@ if (isset($_POST['name']) && isset($_POST['email'])) {
 </div>
 ```
 
-::: tip Rappel
+!!! tip "Rappel"
 
-Filtrer les entrées utilisateur avec la fonction `htmlspecialchars()`. Cette fonction permet de convertir les caractères spéciaux en entités HTML.
+    Filtrer les entrées utilisateur avec la fonction `htmlspecialchars()`. Cette fonction permet de convertir les caractères spéciaux en entités HTML.
 
-Exemple :
+    Exemple :
 
-```php
-// Échappe les caractères spéciaux. C'est à dire que les caractères spéciaux seront convertis en entités HTML.
-$name = htmlspecialchars($_POST['name']);
-```
+    ```php
+    // Échappe les caractères spéciaux. C'est à dire que les caractères spéciaux seront convertis en entités HTML.
+    $name = htmlspecialchars($_POST['name']);
+    ```
 
-Autre solution, utiliser la fonction `strip_tags()`. Cette fonction permet de supprimer les balises HTML.
+    Autre solution, utiliser la fonction `strip_tags()`. Cette fonction permet de supprimer les balises HTML.
 
-Exemple :
+    Exemple :
 
-```php
-// Supprime les balises HTML
-$name = strip_tags($_POST['name']);
-```
-
-:::
+    ```php
+    // Supprime les balises HTML
+    $name = strip_tags($_POST['name']);
+    ```
 
 Proposez une solution pour corriger cette faille.
 
@@ -351,6 +354,7 @@ Proposez une solution pour corriger cette faille.
     **Nature de la faille**
 
     Les variables `$name` et `$email` sont affichées directement dans la page sans aucun traitement. Un attaquant peut soumettre le formulaire avec la valeur :
+
     ```
     <script>alert('XSS')</script>
     ```
@@ -520,6 +524,7 @@ Proposez une solution pour corriger cette faille.
     ```
 
     **Points clés :**
+
     - Ne **jamais** concaténer une entrée utilisateur dans une requête SQL.
     - Utiliser les **requêtes préparées** (`prepare` + `execute`) : le moteur SQL sépare le code des données.
     - Valider le type attendu (`FILTER_VALIDATE_INT`) en amont pour rejeter toute valeur non entière.
@@ -606,24 +611,21 @@ if(isset($_GET['id'])) {
 </div>
 ```
 
-::: tip Rappel
+!!! tip "Rappel"
+    Le principe de la faille CSRF est de faire une requête à l'insu de l'utilisateur. Pour cela, il faut que l'utilisateur soit connecté à votre application. Ensuite, vous devez faire une requête à l'insu de l'utilisateur.
 
-Le principe de la faille CSRF est de faire une requête à l'insu de l'utilisateur. Pour cela, il faut que l'utilisateur soit connecté à votre application. Ensuite, vous devez faire une requête à l'insu de l'utilisateur.
+    Pour corriger cette faille, vous devez ajouter un token dans le formulaire (ou en SESSION). Ce token doit être généré aléatoirement et doit être vérifié lors de l'accès à la page.
 
-Pour corriger cette faille, vous devez ajouter un token dans le formulaire (ou en SESSION). Ce token doit être généré aléatoirement et doit être vérifié lors de l'accès à la page.
+    ```php
+    // Génère un token aléatoire
+    $_SESSION['token'] = bin2hex(random_bytes(32));
 
-```php
-// Génère un token aléatoire
-$_SESSION['token'] = bin2hex(random_bytes(32));
-
-// Vérifier le token
-if (isset($_POST['token']) && $_POST['token'] === $_SESSION['token']) {
-    // Le token est valide, nous pouvons traiter la requête
-    // ...
-}
-```
-:::
-
+    // Vérifier le token
+    if (isset($_POST['token']) && $_POST['token'] === $_SESSION['token']) {
+        // Le token est valide, nous pouvons traiter la requête
+        // ...
+    }
+    ```
 Proposez une solution pour corriger cette faille.
 
 ??? question "Éléments de correction"
@@ -681,6 +683,7 @@ Proposez une solution pour corriger cette faille.
     ```
 
     **Points clés :**
+
     - Utiliser **POST** (jamais GET) pour les actions qui modifient des données.
     - Utiliser `hash_equals()` plutôt que `===` pour comparer les tokens (résistant aux attaques temporelles).
     - Invalider le token après usage (**token à usage unique**).
@@ -700,11 +703,8 @@ include $_GET['page'] . '.php';
 ?>
 ```
 
-::: tip Rappel
-
-Pour corriger cette faille, vous devez limiter les fichiers qui peuvent être inclus. Par exemple, vous pouvez créer un tableau avec les fichiers autorisés.
-
-:::
+!!! tip "Rappel"
+    Pour corriger cette faille, vous devez limiter les fichiers qui peuvent être inclus. Par exemple, vous pouvez créer un tableau avec les fichiers autorisés.
 
 Proposez une solution pour corriger cette faille.
 
@@ -739,6 +739,7 @@ Proposez une solution pour corriger cette faille.
     ```
 
     **Points clés :**
+
     - Toujours utiliser une **liste blanche** (les valeurs autorisées), jamais une liste noire.
     - Le paramètre `true` dans `in_array()` active la comparaison stricte (type + valeur).
     - Ne jamais construire un chemin de fichier directement depuis une entrée utilisateur.
@@ -772,17 +773,15 @@ if (isset($_POST['password'])) {
 </form>
 ```
 
-::: tip Rappel
+!!! tip "Rappel"
+    Pour corriger cette faille, plusieurs solutions sont possibles :
 
-Pour corriger cette faille, plusieurs solutions sont possibles :
+    - Limiter le nombre de tentatives de connexion (par exemple 3 tentatives)
+    - Ajouter un token CSRF dans le formulaire. (voir faille 3)
+    - Ajouter un délai entre chaque tentative de connexion. (exemple : 1 seconde)
 
-- Limiter le nombre de tentatives de connexion (par exemple 3 tentatives).
-- Ajouter un token CSRF dans le formulaire. (voir faille 3)
-- Ajouter un délai entre chaque tentative de connexion. (exemple : 1 seconde)
+    L'objectif est de limiter le nombre de tentatives de connexion. L'objectif est de ralentir l'attaque brute force.
 
-L'objectif est de limiter le nombre de tentatives de connexion. L'objectif est de ralentir l'attaque brute force.
-
-:::
 
 Proposez une solution pour corriger cette faille.
 
@@ -843,6 +842,7 @@ Proposez une solution pour corriger cette faille.
     ```
 
     **Solutions complémentaires à combiner :**
+
     - **Token CSRF** pour empêcher le rejeu automatisé de requêtes.
     - **CAPTCHA** après N tentatives échouées.
     - **Délai exponentiel** : 1s, 2s, 4s… entre les tentatives.
@@ -909,6 +909,7 @@ Proposez une solution pour corriger cette faille.
     ```
 
     **Points clés :**
+
     - `auth` vérifie que l'utilisateur est **connecté**.
     - `admin` vérifie qu'il possède le **rôle admin**.
     - Ces deux vérifications sont indépendantes et cumulables.
@@ -962,6 +963,7 @@ Proposez une solution pour corriger cette faille.
     ```
 
     **Points clés :**
+
     - `FILTER_VALIDATE_EMAIL` valide **et** assainit l'email en une seule opération.
     - La requête préparée rend l'injection SQL **impossible**.
     - `htmlspecialchars()` protège contre une éventuelle réaffichage XSS ultérieur.
@@ -984,23 +986,20 @@ if (isset($_POST['name']) && isset($_POST['email'])) {
 ```
 
 Proposez une solution pour corriger cette faille.
-
-::: tip Rappel
+!!! tip "Rappel"
 
 Filtrer une saisie utilisateur :
 
-- `htmlspecialchars()` : Convertit les caractères spéciaux en entités HTML.
-- `strip_tags()` : Supprime les balises HTML.
-- `filter_input()` : Filtre une variable avec un filtre spécifique.
-  - `FILTER_SANITIZE_STRING` : Supprime les balises HTML et les caractères spéciaux.
-  - `FILTER_SANITIZE_EMAIL` : Supprime les caractères illégaux dans un email.
-  - `FILTER_SANITIZE_URL` : Supprime les caractères illégaux dans une URL.
-  - `FILTER_SANITIZE_NUMBER_INT` : Supprime tous les caractères sauf les chiffres et le signe + et -.
-  - Exemple : `filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);`
-  - Exemple : `filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);`
-  - Voir plus de filtres : [https://www.php.net/manual/fr/filter.filters.sanitize.php](https://www.php.net/manual/fr/filter.filters.sanitize.php)
-
-:::
+    - `htmlspecialchars()` : Convertit les caractères spéciaux en entités HTML.
+    - `strip_tags()` : Supprime les balises HTML.
+    - `filter_input()` : Filtre une variable avec un filtre spécifique.
+    - `FILTER_SANITIZE_STRING` : Supprime les balises HTML et les caractères spéciaux.
+    - `FILTER_SANITIZE_EMAIL` : Supprime les caractères illégaux dans un email.
+    - `FILTER_SANITIZE_URL` : Supprime les caractères illégaux dans une URL.
+    - `FILTER_SANITIZE_NUMBER_INT` : Supprime tous les caractères sauf les chiffres et le signe + et -.
+    - Exemple : `filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);`
+    - Exemple : `filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);`
+    - Voir plus de filtres : [https://www.php.net/manual/fr/filter.filters.sanitize.php](https://www.php.net/manual/fr/filter.filters.sanitize.php)
 
 ??? question "Éléments de correction"
 
@@ -1205,45 +1204,41 @@ if ($user && password_verify($password, $user['password'])) {
 
 L'auditeur vous indique que vous devez mettre en place en place un token afin d'éviter le rejeu de requête.
 
-::: tip Protection CSRF / Token
+!!! tip "Protection CSRF / Token"
 
-Pour protéger votre application contre les attaques CSRF, vous devez ajouter un token CSRF dans le formulaire. Ce token doit être généré aléatoirement et doit être vérifié lors de l'accès à la page.
+    Pour protéger votre application contre les attaques CSRF, vous devez ajouter un token CSRF dans le formulaire. Ce token doit être généré aléatoirement et doit être vérifié lors de l'accès à la page.
 
-```php
-// Vérifier le token
-if (isset($_POST['token']) && $_POST['token'] === $_SESSION['token']) {
-    // Nous avons consommé le token, nous pouvons le supprimer
-    unset($_SESSION['token']);
+    ```php
+    // Vérifier le token
+    if (isset($_POST['token']) && $_POST['token'] === $_SESSION['token']) {
+        // Nous avons consommé le token, nous pouvons le supprimer
+        unset($_SESSION['token']);
 
-    // Le token est valide, nous pouvons traiter la requête
-    // ...
-}
+        // Le token est valide, nous pouvons traiter la requête
+        // ...
+    }
 
-// Génère un token aléatoire
-$_SESSION['token'] = uniqid();
-```
+    // Génère un token aléatoire
+    $_SESSION['token'] = uniqid();
+    ```
 
-Et dans le formulaire :
+    Et dans le formulaire :
 
-```html
-<input type="hidden" name="token" value="<?= $_SESSION['token'] ?>">
-```
-
-:::
+    ```html
+    <input type="hidden" name="token" value="<?= $_SESSION['token'] ?>">
+    ```
 
 Proposez une solution pour corriger cette faille.
 
-::: tip Rappel
+!!! tip "Rappel"
 
-Pour corriger cette faille, d'autres solutions sont possibles :
+    Pour corriger cette faille, d'autres solutions sont possibles :
 
-- Limiter le nombre de tentatives de connexion (par exemple 3 tentatives).
-- Ajouter un token CSRF dans le formulaire. (voir faille 3)
-- Ajouter un délai entre chaque tentative de connexion. (exemple : 1 seconde)
+    - Limiter le nombre de tentatives de connexion (par exemple 3 tentatives).
+    - Ajouter un token CSRF dans le formulaire. (voir faille 3)
+    - Ajouter un délai entre chaque tentative de connexion. (exemple : 1 seconde)
 
-L'objectif est de limiter le nombre de tentatives de connexion. L'objectif est de ralentir l'attaque brute force.
-
-:::
+    L'objectif est de limiter le nombre de tentatives de connexion. L'objectif est de ralentir l'attaque brute force.
 
 ??? question "Éléments de correction"
 
@@ -1302,6 +1297,7 @@ L'objectif est de limiter le nombre de tentatives de connexion. L'objectif est d
     ```
 
     **Points clés :**
+
     - `bin2hex(random_bytes(32))` génère un token cryptographiquement sûr (meilleur que `uniqid()`).
     - `hash_equals()` compare les tokens de manière sécurisée (résistant aux timing attacks).
     - Le token est **renouvelé après chaque soumission** (usage unique).
@@ -1358,23 +1354,21 @@ if ($user && $password === $user['password']) {
 
 Proposez une solution pour corriger cette faille.
 
-::: details Documentation
+!!! tip "details Documentation"
 
-Pour stocker un mot de passe, vous devez utiliser la fonction `password_hash()`.
+    Pour stocker un mot de passe, vous devez utiliser la fonction `password_hash()`.
 
-```php
-$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-```
+    ```php
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    ```
 
-Pour vérifier un mot de passe, vous devez utiliser la fonction `password_verify()`.
+    Pour vérifier un mot de passe, vous devez utiliser la fonction `password_verify()`.
 
-```php
-if (password_verify($_POST['password'], $user['password'])) {
-    // Le mot de passe est valide
-}
-```
-
-:::
+    ```php
+    if (password_verify($_POST['password'], $user['password'])) {
+        // Le mot de passe est valide
+    }
+    ```
 
 ??? question "Éléments de correction"
 
@@ -1422,6 +1416,7 @@ if (password_verify($_POST['password'], $user['password'])) {
     ```
 
     **Points clés :**
+
     - `password_hash()` utilise **bcrypt** par défaut (salage automatique + coût configurable).
     - Ne **jamais** comparer les mots de passe avec `===` — toujours utiliser `password_verify()`.
     - Ne pas `htmlspecialchars` ou `filter_input` le mot de passe **avant** de le hacher : cela pourrait le modifier et créer des problèmes de comparaison.
@@ -1557,6 +1552,7 @@ Proposez une solution pour mettre en place une double authentification dans votr
     ```
 
     **Points clés :**
+
     - L'utilisateur n'est **pas** connecté entre l'étape 1 et l'étape 2 (`pending_user_id` ≠ `user_id`).
     - Le code TOTP est valable ~30 secondes et **ne peut pas être rejoué**.
     - En cas de perte de l'appareil, prévoir des codes de secours (backup codes).

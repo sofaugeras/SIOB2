@@ -1,5 +1,7 @@
 # Sommaire
 
+![logo](./6.1_cours/data/CyberSécurité.png){: .center with=10%}
+
 !!! info "Compétences Cyber SLAM"
 
     **Activité B3.5**. Cybersécurisation d’une solution applicative et de son développement
@@ -11,7 +13,7 @@
     - Analyse des connexions (logs)
     - Analyse d’incidents de sécurité, proposition et mise en oeuvre de contre-mesures
 
-## Les TP 
+## Les TP
 
 - [Authentification TOTP](./6.2_TP/6_1_TPAuthMA_partie1.md)
 - [Authentification Force brute](./6.2_TP/6_2_TPAuthMA_partie2.md)
@@ -38,7 +40,6 @@
 - [hack the box](https://www.hackthebox.com/){:target="_blank"} : exploiter des vulnérabilités
 - [Try hack me](https://tryhackme.com/){:target="_blank"} : exploiter des vulnérabilités
 - [Blue team labs](https://blueteamlabs.online/){:target="_blank"}
-
 
 ## Ressources support de cours
 

@@ -12,12 +12,14 @@ Cette épreuve vise à évaluer chez la personne candidate l’acquisition des c
 ^^2 – Modalités d’évaluation^^<br />
 Cette épreuve est **orale**. Elle prend appui sur des réalisations professionnelles vécues par la personne candidate au cours de sa formation et recensées son **portfolio**. <br />
 La commission d’évaluation dispose d’un dossier remis par la personne candidate.<br />
-Contenu du dossier E4 :<br />
+Contenu du dossier E5 :<br />
 - [ ] Attestations de stage<br />
 - [ ] Portfolio numerique, accessible en ligne<br />
 - [ ] Portefeuille de compétence<br />
 
-Vous trouverez la fiche d'évaluation :arrow_forward:[ici](./data/EvaluationE4.pdf):arrow_backward:
+Vous trouverez la fiche d'évaluation :arrow_forward:[ici](./data/GrilleE5_2026.pdf):arrow_backward:
+
+![Grille E5](./data/grilleE5%20.png){: .center width=50%}
 
 !!! info "Déroulement"
     L'épreuve se déroule devant un enseignant de la spécialité et un professionnel ou devant deux enseignants de la spécialité, elle dure 40 minutes. La première phase est une phase de présentation de son parcours professionnel (avant, pendant et après le BTS). La seconde phase est une phase d'interrogation du jury, qui doit disposer de suffisamment de matière pour compléter la grille d'évaluation mentionnée ci dessus.

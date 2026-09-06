@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="300" height="300">
+  <title>Logo Cybersécurité</title>
+  <desc>Bouclier numérique avec cadenas et circuits électroniques — tons bleus, fond transparent</desc>
+
+  <defs>
+    <linearGradient id="shackleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B5D4F4"/>
+      <stop offset="100%" stop-color="#378ADD"/>
+    </linearGradient>
+    <linearGradient id="lockGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2080D8"/>
+      <stop offset="100%" stop-color="#0C447C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer dashed ring -->
+  <circle cx="200" cy="200" r="183" fill="none" stroke="#378ADD" stroke-width="1" stroke-dasharray="3 11" opacity="0.35"/>
+  <circle cx="200" cy="200" r="170" fill="none" stroke="#185FA5" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Six hexagonal nodes on outer ring (r=183, every 60° from top) -->
+  <g opacity="0.85">
+    <circle cx="200" cy="20"  r="5.5" fill="#85B7EB" stroke="#378ADD" stroke-width="1.2"/>
+    <circle cx="358" cy="110" r="5.5" fill="#85B7EB" stroke="#378ADD" stroke-width="1.2"/>
+    <circle cx="358" cy="290" r="5.5" fill="#85B7EB" stroke="#378ADD" stroke-width="1.2"/>
+    <circle cx="200" cy="380" r="5.5" fill="#85B7EB" stroke="#378ADD" stroke-width="1.2"/>
+    <circle cx="42"  cy="290" r="5.5" fill="#85B7EB" stroke="#378ADD" stroke-width="1.2"/>
+    <circle cx="42"  cy="110" r="5.5" fill="#85B7EB" stroke="#378ADD" stroke-width="1.2"/>
+  </g>
+
+  <!-- Circuit traces: L-shaped, node → shield edge -->
+  <!-- Top -->
+  <line x1="200" y1="26" x2="200" y2="72" stroke="#378ADD" stroke-width="1" opacity="0.5"/>
+  <circle cx="200" cy="72" r="2.5" fill="#378ADD" opacity="0.65"/>
+  <!-- Top-right -->
+  <polyline points="353,115 292,115 266,98" fill="none" stroke="#378ADD" stroke-width="1" opacity="0.5"/>
+  <circle cx="292" cy="115" r="2.5" fill="#378ADD" opacity="0.65"/>
+  <!-- Bottom-right -->
+  <polyline points="353,285 300,285 266,262" fill="none" stroke="#378ADD" stroke-width="1" opacity="0.5"/>
+  <circle cx="300" cy="285" r="2.5" fill="#378ADD" opacity="0.65"/>
+  <!-- Bottom -->
+  <line x1="200" y1="374" x2="200" y2="342" stroke="#378ADD" stroke-width="1" opacity="0.5"/>
+  <circle cx="200" cy="342" r="2.5" fill="#378ADD" opacity="0.65"/>
+  <!-- Bottom-left -->
+  <polyline points="47,285 100,285 134,262" fill="none" stroke="#378ADD" stroke-width="1" opacity="0.5"/>
+  <circle cx="100" cy="285" r="2.5" fill="#378ADD" opacity="0.65"/>
+  <!-- Top-left -->
+  <polyline points="47,115 108,115 134,98" fill="none" stroke="#378ADD" stroke-width="1" opacity="0.5"/>
+  <circle cx="108" cy="115" r="2.5" fill="#378ADD" opacity="0.65"/>
+
+  <!-- Shield subtle fill -->
+  <path d="M 200 72 L 268 100 L 268 228 Q 268 312 200 348 Q 132 312 132 228 L 132 100 Z"
+        fill="#185FA5" opacity="0.1"/>
+
+  <!-- Shield inner glow contour -->
+  <path d="M 200 80 L 262 106 L 262 226 Q 262 304 200 338 Q 138 304 138 226 L 138 106 Z"
+        fill="none" stroke="#85B7EB" stroke-width="0.8" stroke-linejoin="round" opacity="0.25"/>
+
+  <!-- Shield main outline -->
+  <path d="M 200 72 L 268 100 L 268 228 Q 268 312 200 348 Q 132 312 132 228 L 132 100 Z"
+        fill="none" stroke="#378ADD" stroke-width="2.8" stroke-linejoin="round"/>
+
+  <!-- Shield top horizontal accent -->
+  <line x1="148" y1="112" x2="252" y2="112" stroke="#85B7EB" stroke-width="0.8" opacity="0.45"/>
+  <circle cx="148" cy="112" r="2" fill="#85B7EB" opacity="0.55"/>
+  <circle cx="252" cy="112" r="2" fill="#85B7EB" opacity="0.55"/>
+
+  <!-- Side circuit stubs inside shield -->
+  <line x1="132" y1="158" x2="153" y2="158" stroke="#378ADD" stroke-width="0.9" opacity="0.4"/>
+  <circle cx="132" cy="158" r="2" fill="#378ADD" opacity="0.45"/>
+  <line x1="268" y1="158" x2="247" y2="158" stroke="#378ADD" stroke-width="0.9" opacity="0.4"/>
+  <circle cx="268" cy="158" r="2" fill="#378ADD" opacity="0.45"/>
+  <line x1="132" y1="190" x2="148" y2="190" stroke="#378ADD" stroke-width="0.9" opacity="0.3"/>
+  <line x1="268" y1="190" x2="252" y2="190" stroke="#378ADD" stroke-width="0.9" opacity="0.3"/>
+
+  <!-- Lock shackle -->
+  <path d="M 174 202 A 26 26 0 0 1 226 202"
+        fill="none" stroke="#85B7EB" stroke-width="9" stroke-linecap="round"/>
+  <path d="M 174 202 A 26 26 0 0 1 226 202"
+        fill="none" stroke="url(#shackleGrad)" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Lock body -->
+  <rect x="160" y="198" width="80" height="70" rx="9" fill="url(#lockGrad)"/>
+  <rect x="160" y="198" width="80" height="70" rx="9" fill="none" stroke="#85B7EB" stroke-width="1.8"/>
+  <rect x="162" y="200" width="76" height="8" rx="4" fill="#378ADD" opacity="0.35"/>
+
+  <!-- Keyhole -->
+  <circle cx="200" cy="227" r="13" fill="#0C447C"/>
+  <circle cx="200" cy="227" r="13" fill="none" stroke="#85B7EB" stroke-width="1.2"/>
+  <rect x="196.5" y="233" width="7" height="14" rx="3" fill="#0C447C"/>
+  <circle cx="200" cy="223" r="4.5" fill="#85B7EB" opacity="0.5"/>
+
+  <!-- Subtle binary text inside shield -->
+  <text x="156" y="285" font-family="monospace" font-size="8" fill="#378ADD" opacity="0.3" letter-spacing="2">10110100</text>
+  <text x="164" y="296" font-family="monospace" font-size="8" fill="#378ADD" opacity="0.2" letter-spacing="2">01001011</text>
+  <text x="156" y="307" font-family="monospace" font-size="8" fill="#378ADD" opacity="0.15" letter-spacing="2">11010110</text>
+
+</svg>
