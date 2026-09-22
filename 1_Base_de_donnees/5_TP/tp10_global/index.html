@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6742,7 +6742,7 @@ Utilise <code>LEFT JOIN</code> pour garder toutes les lignes de la table de gauc
 <p><strong>Mots-clés :</strong> <code>=</code> <code>&lt;&gt;</code> <code>&lt;</code> <code>&gt;</code> <code>BETWEEN</code> <code>IN</code> <code>NOT IN</code> <code>LIKE</code> <code>IS NULL</code> <code>IS NOT NULL</code> <code>AND</code> <code>OR</code> <code>NOT</code>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">MED_NOMCOMMERCIAL</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">medicament</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">FAM_CODE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;ABP&#39;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">FAM_CODE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'ABP'</span>
 <span class="w">  </span><span class="k">AND</span><span class="w"> </span><span class="n">MED_PRIXECHANTILLON</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
 </code></pre></div></p>
 <div class="admonition success">
@@ -6840,7 +6840,7 @@ un ordre par défaut.</p>
 <summary>Correction</summary>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">VIS_MATRICULE</span><span class="p">,</span><span class="w"> </span><span class="n">VIS_NOM</span><span class="p">,</span><span class="w"> </span><span class="n">VIS_VILLE</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">visiteur</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">VIS_CP</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;75%&#39;</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">VIS_CP</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'75%'</span><span class="p">;</span>
 </code></pre></div>
 </details>
 <p><strong>Q3.</strong> Listez les médicaments dont le prix échantillon est compris entre <strong>5 et 15 euros</strong> (inclus). Affichez le nom commercial et le prix.</p>
@@ -6864,7 +6864,7 @@ un ordre par défaut.</p>
 <summary>Correction</summary>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">VIS_NOM</span><span class="p">,</span><span class="w"> </span><span class="n">Vis_PRENOM</span><span class="p">,</span><span class="w"> </span><span class="n">SEC_CODE</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">visiteur</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">SEC_CODE</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;O&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;N&#39;</span><span class="p">);</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">SEC_CODE</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">'E'</span><span class="p">,</span><span class="w"> </span><span class="s1">'O'</span><span class="p">,</span><span class="w"> </span><span class="s1">'N'</span><span class="p">);</span>
 </code></pre></div>
 </details>
 <p><strong>Q6.</strong> Affichez les rapports de visite rédigés <strong>après le 1er janvier 2015</strong>, triés par date décroissante.</p>
@@ -6872,7 +6872,7 @@ un ordre par défaut.</p>
 <summary>Correction</summary>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">VIS_MATRICULE</span><span class="p">,</span><span class="w"> </span><span class="n">RAP_NUM</span><span class="p">,</span><span class="w"> </span><span class="n">RAP_DATE</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">rapport_visite</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">RAP_DATE</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="s1">&#39;2015-01-01&#39;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">RAP_DATE</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="s1">'2015-01-01'</span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">RAP_DATE</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
 </code></pre></div>
 </details>
@@ -7024,7 +7024,7 @@ un ordre par défaut.</p>
 <summary>Correction</summary>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">vue_visiteurs_secteur</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">SEC_LIBELLE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Est&#39;</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">SEC_LIBELLE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Est'</span><span class="p">;</span>
 </code></pre></div>
 </details>
 <p><strong>Q22.</strong> Créez une vue <code>vue_bilan_offres</code> qui affiche, pour chaque médicament, son nom commercial et le total d'échantillons offerts (toutes visites confondues).</p>
@@ -7104,7 +7104,7 @@ un ordre par défaut.</p>
 <p><strong>Q28.</strong> Affichez les villes présentes <strong>à la fois</strong> parmi les visiteurs et parmi les praticiens (intersection).</p>
 <details class="question">
 <summary>Correction</summary>
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="c1">-- Émulation de l&#39;intersection avec IN</span>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="c1">-- Émulation de l'intersection avec IN</span>
 <span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">VIS_VILLE</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">ville</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">visiteur</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">VIS_VILLE</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span>
@@ -7315,7 +7315,7 @@ un ordre par défaut.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6922,7 +6922,7 @@ Voici la présentation du raisonnement en REGEX :</p>
 Malheureusement, aucune expression régulière ne donnera un résultat parfait.</p>
 <h5 id="3411-expression-1">3.4.1.1  Expression 1<a class="headerlink" href="#3411-expression-1" title="Permanent link">⚓︎</a></h5>
 <p>L'expression régulière de Wikipedia est intéressante mais simplifiée. Voici une autre <a href="http://emailregex.com/">expression</a> , compatible RFC 5322, un peu plus complète : 
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>(?:[a-z0-9!#$%&amp;&#39;*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;&#39;*+\/=?^_`{|}~-]+)*|&quot;(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*&quot;)@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>(?:[a-z0-9!#$%&amp;'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+\/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])
 </code></pre></div>
 <img alt="expression" class="center" src="../data/regularExpression.png" width="50%" /></p>
 <p>Le résultat reste imparfait, notamment le domaine racine (.com, .fr, etc.) mais exploitable.</p>
@@ -6977,19 +6977,19 @@ nom="Zorg"</p>
 </code></pre></div>
 <h3 id="44-regex-en-powershell">4.4  Regex en Powershell<a class="headerlink" href="#44-regex-en-powershell" title="Permanent link">⚓︎</a></h3>
 <p>La commande -match utilise les expressions régulières :</p>
-<p><div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code><span class="nv">$nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Zorg&quot;</span>
-<span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="nv">$nom</span><span class="w"> </span>-match<span class="w"> </span><span class="s2">&quot;[M-Z]or.</span>$<span class="s2">&quot;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
-<span class="w">  </span>write-host<span class="w"> </span><span class="s2">&quot;il y a correspondance&quot;</span>
+<p><div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code><span class="nv">$nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Zorg"</span>
+<span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="nv">$nom</span><span class="w"> </span>-match<span class="w"> </span><span class="s2">"[M-Z]or.</span>$<span class="s2">"</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span>write-host<span class="w"> </span><span class="s2">"il y a correspondance"</span>
 <span class="o">}</span>
 </code></pre></div>
 A noter : en PowerShell, le caractère d'échappement est <mark>`</mark> : il s'obtient avec <span class="keys"><kbd class="key-alt-graph">AltGr</kbd><span>+</span><kbd class="key-7">7</kbd></span></p>
 <h3 id="45-regex-en-php">4.5  Regex en PHP<a class="headerlink" href="#45-regex-en-php" title="Permanent link">⚓︎</a></h3>
 <p>La commande -match utilise les expressions régulières :</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="k">if</span> <span class="p">(</span><span class="nb">preg_match</span><span class="p">(</span><span class="s2">&quot;/[M-Z]or.$/g&quot;</span><span class="p">,</span> <span class="s2">&quot;Zorg&quot;</span><span class="p">))</span> <span class="p">{</span>
-    <span class="k">echo</span> <span class="s2">&quot;A match was found.&quot;</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">preg_match</span><span class="p">(</span><span class="s2">"/[M-Z]or.$/g"</span><span class="p">,</span> <span class="s2">"Zorg"</span><span class="p">))</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">"A match was found."</span><span class="p">;</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="k">echo</span> <span class="s2">&quot;A match was not found.&quot;</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">"A match was not found."</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="cp">?&gt;</span>
 </code></pre></div>
@@ -7003,10 +7003,10 @@ A noter : en PowerShell, le caractère d'échappement est <mark>`</mark> : il s'
 <span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Matcher</span><span class="w"> </span><span class="n">matcher</span><span class="p">;</span>
 
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">motif</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Pattern</span><span class="p">.</span><span class="na">compile</span><span class="p">(</span><span class="s">&quot;[M-Z]or.$&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">matcher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pattern</span><span class="p">.</span><span class="na">matcher</span><span class="p">(</span><span class="s">&quot;Zorg mon ami Zorg&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">motif</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Pattern</span><span class="p">.</span><span class="na">compile</span><span class="p">(</span><span class="s">"[M-Z]or.$"</span><span class="p">);</span>
+<span class="w">        </span><span class="n">matcher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pattern</span><span class="p">.</span><span class="na">matcher</span><span class="p">(</span><span class="s">"Zorg mon ami Zorg"</span><span class="p">);</span>
 <span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">matcher</span><span class="p">.</span><span class="na">find</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Trouvé !&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Trouvé !"</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div>
@@ -7156,7 +7156,7 @@ A noter : en PowerShell, le caractère d'échappement est <mark>`</mark> : il s'
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6540,9 +6540,9 @@
 <h2 id="1-validation-des-entrees">1. Validation des entrées<a class="headerlink" href="#1-validation-des-entrees" title="Permanent link">⚓︎</a></h2>
 <p>Toujours s’assurer que toutes les données saisies par l’utilisateur sont validées et assainies constitue la première ligne de défense contre de nombreuses attaques courantes, comme l’injection SQL ou le cross-site scripting (XSS). Laravel fournit de puissantes règles de validation que tu peux utiliser pour garantir l’intégrité des données.</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$request-&gt;validate([</span>
-<span class="x">    &#39;username&#39; =&gt; &#39;required|string|max:255&#39;,</span>
-<span class="x">    &#39;email&#39; =&gt; &#39;required|email|unique:users,email&#39;,</span>
-<span class="x">    &#39;password&#39; =&gt; &#39;required|min:8|confirmed&#39;,</span>
+<span class="x">    'username' =&gt; 'required|string|max:255',</span>
+<span class="x">    'email' =&gt; 'required|email|unique:users,email',</span>
+<span class="x">    'password' =&gt; 'required|min:8|confirmed',</span>
 <span class="x">]);</span>
 </code></pre></div>
 <ul>
@@ -6558,9 +6558,9 @@
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">public function store(Request $request): RedirectResponse</span>
 <span class="x">    {</span>
 <span class="x">        $request-&gt;validate([</span>
-<span class="x">            &#39;token&#39; =&gt; [&#39;required&#39;],</span>
-<span class="x">            &#39;email&#39; =&gt; [&#39;required&#39;, &#39;email&#39;],</span>
-<span class="x">            &#39;password&#39; =&gt; [&#39;required&#39;, &#39;confirmed&#39;, Rules\Password::defaults()],</span>
+<span class="x">            'token' =&gt; ['required'],</span>
+<span class="x">            'email' =&gt; ['required', 'email'],</span>
+<span class="x">            'password' =&gt; ['required', 'confirmed', Rules\Password::defaults()],</span>
 <span class="x">        ]);</span>
 </code></pre></div>
 <div class="admonition question">
@@ -6575,7 +6575,7 @@
 <span class="x">    {</span>
 <span class="x">        // Vérification des entrées du formulaire</span>
 <span class="x">        $request-&gt;validate([</span>
-<span class="x">            &#39;texte&#39; =&gt; &#39;required|string|max:256&#39;,</span>
+<span class="x">            'texte' =&gt; 'required|string|max:256',</span>
 <span class="x">        ]);</span>
 <span class="x">        ....</span>
 <span class="x">    }</span>
@@ -6587,7 +6587,7 @@
 <h2 id="2-prevention-contre-sql-injection">2. Prevention contre SQL Injection<a class="headerlink" href="#2-prevention-contre-sql-injection" title="Permanent link">⚓︎</a></h2>
 <p>L'utilisation de l'ORM Eloquent aide à prévenir les attaques par injection SQL. Utilisez toujours des requêtes paramétrées et évitez de concaténer l'entrée de l'utilisateur dans les instructions SQL.</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Safe query using Eloquent</span>
-<span class="x">$user = User::where(&#39;email&#39;, $email)-&gt;first();</span>
+<span class="x">$user = User::where('email', $email)-&gt;first();</span>
 </code></pre></div>
 <h2 id="3-prevention-des-attaques-xss">3. Prévention des attaques XSS<a class="headerlink" href="#3-prevention-des-attaques-xss" title="Permanent link">⚓︎</a></h2>
 <p>Pour éviter les attaques XSS, toujours échapper à l'entrée de l'utilisateur avant de la rendre dans la vue. Le moteur de modèle Blade de Laravel échappe automatiquement à la sortie des données en utilisant le <code>{{ }}</code> syntaxe.</p>
@@ -6598,18 +6598,18 @@
 <p>Laravel inclut une protection intégrée de la CSRF. Assurez-vous que vos formulaires incluent le jeton CSRF en utilisant le @csrf Directive.</p>
 <p>dans template.blade.php : <code>&lt;meta name="csrf-token" content="{{ csrf_token() }}"&gt;</code>
 et dans home.blade.php :
-<div class="language-HTML highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;{{ route(&#39;todo.save&#39;) }}&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;add&quot;</span><span class="p">&gt;</span>
+<div class="language-HTML highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">"{{ route('todo.save') }}"</span> <span class="na">method</span><span class="o">=</span><span class="s">"POST"</span> <span class="na">class</span><span class="o">=</span><span class="s">"add"</span><span class="p">&gt;</span>
     @csrf 
 </code></pre></div></p>
 <h2 id="5-limitation-de-debit-et-regulation-des-requetes">5. Limitation de débit et régulation des requêtes<a class="headerlink" href="#5-limitation-de-debit-et-regulation-des-requetes" title="Permanent link">⚓︎</a></h2>
 <p>Pour protéger l'application contre les attaques par force brute, on peut mettre en place une limitation du nombre de requêtes grâce au middleware <code>ThrottleRequests</code> de Laravel.</p>
 <p>dans <code>routes/auth.php</code>, repérer les routes <code>/login</code> et modifier les ainsi.
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">Route::get(&#39;login&#39;, [AuthenticatedSessionController::class, &#39;create&#39;])</span>
-<span class="x">        -&gt;middleware(&#39;throttle:10,1&#39;)   // 10 requêtes / min sur l’affichage du formulaire</span>
-<span class="x">        -&gt;name(&#39;login&#39;);</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">Route::get('login', [AuthenticatedSessionController::class, 'create'])</span>
+<span class="x">        -&gt;middleware('throttle:10,1')   // 10 requêtes / min sur l’affichage du formulaire</span>
+<span class="x">        -&gt;name('login');</span>
 
-<span class="x">Route::post(&#39;login&#39;, [AuthenticatedSessionController::class, &#39;store&#39;])</span>
-<span class="x">    -&gt;middleware(&#39;throttle:5,1&#39;);   // 5 tentatives de connexion / min</span>
+<span class="x">Route::post('login', [AuthenticatedSessionController::class, 'store'])</span>
+<span class="x">    -&gt;middleware('throttle:5,1');   // 5 tentatives de connexion / min</span>
 </code></pre></div></p>
 <ul>
 <li>throttle:10,1 signifie : → maximum 10 requêtes par minute (le second chiffre indique la durée en minutes).</li>
@@ -6625,17 +6625,17 @@ et dans home.blade.php :
 <p><div class="language-python highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
-<span class="n">URL</span> <span class="o">=</span> <span class="s2">&quot;http://localhost:8000/login&quot;</span>  <span class="c1"># adapte si besoin (port, domaine, etc.)</span>
+<span class="n">URL</span> <span class="o">=</span> <span class="s2">"http://localhost:8000/login"</span>  <span class="c1"># adapte si besoin (port, domaine, etc.)</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">):</span>  <span class="c1"># 15 requêtes</span>
     <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Requête </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">: status = </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Requête </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">: status = </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
     <span class="c1"># Affiche quelques headers utiles si présents</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  X-RateLimit-Limit     :&quot;</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;X-RateLimit-Limit&quot;</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  X-RateLimit-Remaining :&quot;</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;X-RateLimit-Remaining&quot;</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Retry-After           :&quot;</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Retry-After&quot;</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">40</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"  X-RateLimit-Limit     :"</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"X-RateLimit-Limit"</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"  X-RateLimit-Remaining :"</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"X-RateLimit-Remaining"</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"  Retry-After           :"</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"Retry-After"</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"-"</span> <span class="o">*</span> <span class="mi">40</span><span class="p">)</span>
 
     <span class="c1"># On attend très peu pour rester dans la même minute</span>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># 2 secondes entre chaque requête</span>
@@ -6691,15 +6691,15 @@ Tu dois avoir quelque chose de ce type (structure Laravel 11/12) :</p>
 
 <span class="x">    // Logging sécurité pour les dépassements de limite (HTTP 429)</span>
 <span class="x">    $exceptions-&gt;render(function (ThrottleRequestsException $e, Request $request) {</span>
-<span class="x">        Log::channel(&#39;security&#39;)-&gt;warning(&#39;Brute-force / rate limit déclenché&#39;, [</span>
-<span class="x">            &#39;ip&#39;         =&gt; $request-&gt;ip(),</span>
-<span class="x">            &#39;url&#39;        =&gt; $request-&gt;fullUrl(),</span>
-<span class="x">            &#39;method&#39;     =&gt; $request-&gt;method(),</span>
-<span class="x">            &#39;user_agent&#39; =&gt; $request-&gt;userAgent(),</span>
+<span class="x">        Log::channel('security')-&gt;warning('Brute-force / rate limit déclenché', [</span>
+<span class="x">            'ip'         =&gt; $request-&gt;ip(),</span>
+<span class="x">            'url'        =&gt; $request-&gt;fullUrl(),</span>
+<span class="x">            'method'     =&gt; $request-&gt;method(),</span>
+<span class="x">            'user_agent' =&gt; $request-&gt;userAgent(),</span>
 <span class="x">        ]);</span>
 
 <span class="x">        // Ne rien retourner ici =&gt; Laravel utilisera la réponse 429 par défaut</span>
-<span class="x">        // (page &quot;Too Many Attempts&quot; ou JSON selon le contexte).</span>
+<span class="x">        // (page "Too Many Attempts" ou JSON selon le contexte).</span>
 <span class="x">    });</span>
 
 <span class="x">    // Tu peux laisser d’autres config ici si Laravel en a généré</span>
@@ -6719,17 +6719,17 @@ Tu dois avoir quelque chose de ce type (structure Laravel 11/12) :</p>
 <p>🔧 Étape 2 : Modifier <code>config/logging.php</code></p>
 <p>Création d’un canal de log dédié à la sécurité 📁🛡️. Pour isoler les traces d’attaque dans un fichier spécifique : <code>storage/logs/security.log</code></p>
 <p>Dans "<strong>channels</strong>", ajouter :
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&#39;security&#39; =&gt; [</span>
-<span class="x">    &#39;driver&#39; =&gt; &#39;single&#39;,</span>
-<span class="x">    &#39;path&#39;   =&gt; storage_path(&#39;logs/security.log&#39;),</span>
-<span class="x">    &#39;level&#39;  =&gt; &#39;warning&#39;,</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">'security' =&gt; [</span>
+<span class="x">    'driver' =&gt; 'single',</span>
+<span class="x">    'path'   =&gt; storage_path('logs/security.log'),</span>
+<span class="x">    'level'  =&gt; 'warning',</span>
 <span class="x">],</span>
 </code></pre></div>
 💥💥 Relancer le script Python qui simule l'attaque par force brute</p>
 <h4 id="analyse-des-logs-de-securite">Analyse des logs de sécurité 📜🕵️‍♂️<a class="headerlink" href="#analyse-des-logs-de-securite" title="Permanent link">⚓︎</a></h4>
 <p>Ouvrir les logs <code>storage/logs/security.log</code></p>
 <p>Vous devez voir des entrées de ce type :
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>[2025-11-25 20:01:45] local.WARNING: Brute-force / rate limit déclenché {&quot;ip&quot;:&quot;127.0.0.1&quot;,&quot;url&quot;:&quot;http://localhost:8000/login&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;user_agent&quot;:&quot;python-requests/2.31.0&quot;} 
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>[2025-11-25 20:01:45] local.WARNING: Brute-force / rate limit déclenché {"ip":"127.0.0.1","url":"http://localhost:8000/login","method":"GET","user_agent":"python-requests/2.31.0"} 
 </code></pre></div>
 Ce que montrent ces logs :</p>
 <ul>
@@ -6749,11 +6749,11 @@ Login KO (mauvais mot de passe) → entrée “warning” dans security.log<br /
 <p>On réutilise le même canal que pour le <code>throttle</code> (déjà en place) dans <code>config/logging.php</code> :</p>
 <p>'channels' =&gt; [
     // ...</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&#39;security&#39; =&gt; [
-    &#39;driver&#39; =&gt; &#39;single&#39;,
-    &#39;path&#39;   =&gt; storage_path(&#39;logs/security.log&#39;),
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>'security' =&gt; [
+    'driver' =&gt; 'single',
+    'path'   =&gt; storage_path('logs/security.log'),
     // Gestion du niveaux de logs dans le .env
-    &#39;level&#39;  =&gt; env(&#39;LOG_LEVEL&#39;, &#39;debug&#39;),
+    'level'  =&gt; env('LOG_LEVEL', 'debug'),
 ],
 </code></pre></div>
 <p>],</p>
@@ -6771,28 +6771,28 @@ Login KO (mauvais mot de passe) → entrée “warning” dans security.log<br /
 <span class="x">public function store(LoginRequest $request): RedirectResponse</span>
 <span class="x">{</span>
 <span class="x">    try {</span>
-<span class="x">        // Tentative d&#39;authentification (throw ValidationException si KO)</span>
+<span class="x">        // Tentative d'authentification (throw ValidationException si KO)</span>
 <span class="x">        $request-&gt;authenticate();</span>
 
 <span class="x">        // Regénération de la session en cas de succès</span>
 <span class="x">        $request-&gt;session()-&gt;regenerate();</span>
 
 <span class="x">        // LOG: connexion réussie</span>
-<span class="x">        Log::channel(&#39;security&#39;)-&gt;info(&#39;Login OK&#39;, [</span>
-<span class="x">            &#39;ip&#39;         =&gt; $request-&gt;ip(),</span>
-<span class="x">            &#39;email&#39;      =&gt; $request-&gt;input(&#39;email&#39;),</span>
-<span class="x">            &#39;user_id&#39;    =&gt; optional($request-&gt;user())-&gt;id,</span>
-<span class="x">            &#39;user_agent&#39; =&gt; $request-&gt;userAgent(),</span>
+<span class="x">        Log::channel('security')-&gt;info('Login OK', [</span>
+<span class="x">            'ip'         =&gt; $request-&gt;ip(),</span>
+<span class="x">            'email'      =&gt; $request-&gt;input('email'),</span>
+<span class="x">            'user_id'    =&gt; optional($request-&gt;user())-&gt;id,</span>
+<span class="x">            'user_agent' =&gt; $request-&gt;userAgent(),</span>
 <span class="x">        ]);</span>
 
-<span class="x">        return redirect()-&gt;intended(&#39;/&#39;);</span>
+<span class="x">        return redirect()-&gt;intended('/');</span>
 <span class="x">    } catch (ValidationException $e) {</span>
 <span class="x">        // LOG: tentative de connexion échouée</span>
-<span class="x">        Log::channel(&#39;security&#39;)-&gt;warning(&#39;Login KO&#39;, [</span>
-<span class="x">            &#39;ip&#39;         =&gt; $request-&gt;ip(),</span>
-<span class="x">            &#39;email&#39;      =&gt; $request-&gt;input(&#39;email&#39;),</span>
-<span class="x">            &#39;user_agent&#39; =&gt; $request-&gt;userAgent(),</span>
-<span class="x">            &#39;errors&#39;     =&gt; $e-&gt;errors(),   // optionnel, pour tracer le type d’erreur</span>
+<span class="x">        Log::channel('security')-&gt;warning('Login KO', [</span>
+<span class="x">            'ip'         =&gt; $request-&gt;ip(),</span>
+<span class="x">            'email'      =&gt; $request-&gt;input('email'),</span>
+<span class="x">            'user_agent' =&gt; $request-&gt;userAgent(),</span>
+<span class="x">            'errors'     =&gt; $e-&gt;errors(),   // optionnel, pour tracer le type d’erreur</span>
 <span class="x">        ]);</span>
 
 <span class="x">        // On relance l’exception pour laisser Laravel gérer le retour formulaire + messages</span>
@@ -6966,7 +6966,7 @@ Log::debug($message);
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

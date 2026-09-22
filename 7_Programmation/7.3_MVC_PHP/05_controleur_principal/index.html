@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6555,19 +6555,19 @@
 <details class="info">
 <summary>Annexe 1 - index.php 📄</summary>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="k">include</span> <span class="s2">&quot;getRacine.php&quot;</span><span class="p">;</span>
-<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/controleur/controleurPrincipal.php&quot;</span><span class="p">;</span>
-<span class="k">include_once</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/modele/authentification.inc.php&quot;</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">"getRacine.php"</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/controleur/controleurPrincipal.php"</span><span class="p">;</span>
+<span class="k">include_once</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/modele/authentification.inc.php"</span><span class="p">;</span>
 
-<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s2">&quot;action&quot;</span><span class="p">]))</span> <span class="p">{</span>
-    <span class="nv">$action</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s2">&quot;action&quot;</span><span class="p">];</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s2">"action"</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="nv">$action</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s2">"action"</span><span class="p">];</span>
 <span class="p">}</span>
 <span class="k">else</span> <span class="p">{</span>
-    <span class="nv">$action</span> <span class="o">=</span> <span class="s2">&quot;defaut&quot;</span><span class="p">;</span>
+    <span class="nv">$action</span> <span class="o">=</span> <span class="s2">"defaut"</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nv">$fichier</span> <span class="o">=</span> <span class="nx">controleurPrincipal</span><span class="p">(</span><span class="nv">$action</span><span class="p">);</span>
-<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/controleur/</span><span class="si">$fichier</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/controleur/</span><span class="si">$fichier</span><span class="s2">"</span><span class="p">;</span>
 <span class="cp">?&gt;</span>
 </code></pre></div>
 </details>
@@ -6577,19 +6577,19 @@
 
 <span class="k">function</span> <span class="nf">controleurPrincipal</span><span class="p">(</span><span class="nv">$action</span><span class="p">)</span> <span class="p">{</span>
     <span class="nv">$lesActions</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
-    <span class="nv">$lesActions</span><span class="p">[</span><span class="s2">&quot;defaut&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;listeRestos.php&quot;</span><span class="p">;</span>
-    <span class="nv">$lesActions</span><span class="p">[</span><span class="s2">&quot;liste&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;listeRestos.php&quot;</span><span class="p">;</span>
-    <span class="nv">$lesActions</span><span class="p">[</span><span class="s2">&quot;detail&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;detailResto.php&quot;</span><span class="p">;</span>
-    <span class="nv">$lesActions</span><span class="p">[</span><span class="s2">&quot;recherche&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;rechercheResto.php&quot;</span><span class="p">;</span>
-    <span class="nv">$lesActions</span><span class="p">[</span><span class="s2">&quot;connexion&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;connexion.php&quot;</span><span class="p">;</span>
-    <span class="nv">$lesActions</span><span class="p">[</span><span class="s2">&quot;deconnexion&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;deconnexion.php&quot;</span><span class="p">;</span>
-    <span class="nv">$lesActions</span><span class="p">[</span><span class="s2">&quot;profil&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;monProfil.php&quot;</span><span class="p">;</span>
+    <span class="nv">$lesActions</span><span class="p">[</span><span class="s2">"defaut"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"listeRestos.php"</span><span class="p">;</span>
+    <span class="nv">$lesActions</span><span class="p">[</span><span class="s2">"liste"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"listeRestos.php"</span><span class="p">;</span>
+    <span class="nv">$lesActions</span><span class="p">[</span><span class="s2">"detail"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"detailResto.php"</span><span class="p">;</span>
+    <span class="nv">$lesActions</span><span class="p">[</span><span class="s2">"recherche"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"rechercheResto.php"</span><span class="p">;</span>
+    <span class="nv">$lesActions</span><span class="p">[</span><span class="s2">"connexion"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"connexion.php"</span><span class="p">;</span>
+    <span class="nv">$lesActions</span><span class="p">[</span><span class="s2">"deconnexion"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"deconnexion.php"</span><span class="p">;</span>
+    <span class="nv">$lesActions</span><span class="p">[</span><span class="s2">"profil"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"monProfil.php"</span><span class="p">;</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="nb">array_key_exists</span><span class="p">(</span><span class="nv">$action</span><span class="p">,</span> <span class="nv">$lesActions</span><span class="p">))</span> <span class="p">{</span>
         <span class="k">return</span> <span class="nv">$lesActions</span><span class="p">[</span><span class="nv">$action</span><span class="p">];</span>
     <span class="p">}</span>
     <span class="k">else</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nv">$lesActions</span><span class="p">[</span><span class="s2">&quot;defaut&quot;</span><span class="p">];</span>
+        <span class="k">return</span> <span class="nv">$lesActions</span><span class="p">[</span><span class="s2">"defaut"</span><span class="p">];</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
@@ -6680,14 +6680,14 @@
 </details>
 <p>❓ <strong>Valeurs possibles de</strong><code>$action</code> 🔎</p>
 <p>Le fichier <code>index.php</code> reçoit tous les paramètres GET :</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">if (isset($_GET[&quot;action&quot;])) {</span>
-<span class="x">    $action = $_GET[&quot;action&quot;];</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">if (isset($_GET["action"])) {</span>
+<span class="x">    $action = $_GET["action"];</span>
 <span class="x">} else {</span>
-<span class="x">    $action = &quot;defaut&quot;;</span>
+<span class="x">    $action = "defaut";</span>
 <span class="x">}</span>
 
 <span class="x">$fichier = controleurPrincipal($action);</span>
-<span class="x">include &quot;$racine/controleur/$fichier&quot;;</span>
+<span class="x">include "$racine/controleur/$fichier";</span>
 </code></pre></div>
 <p>À l'aide de l'annexe 1 et de la réponse à la question précédente, <strong>indiquer les valeurs que peut prendre la variable</strong> <code>$action</code>.</p>
 <details class="question">
@@ -6699,37 +6699,37 @@
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">function controleurPrincipal($action) {</span>
 <span class="x">    $lesActions = array();</span>
 
-<span class="x">    $lesActions[&quot;defaut&quot;]      = &quot;listeRestos.php&quot;;</span>
-<span class="x">    $lesActions[&quot;liste&quot;]       = &quot;listeRestos.php&quot;;</span>
-<span class="x">    $lesActions[&quot;detail&quot;]      = &quot;detailResto.php&quot;;</span>
-<span class="x">    $lesActions[&quot;recherche&quot;]   = &quot;rechercheResto.php&quot;;</span>
-<span class="x">    $lesActions[&quot;connexion&quot;]   = &quot;connexion.php&quot;;</span>
-<span class="x">    $lesActions[&quot;deconnexion&quot;] = &quot;deconnexion.php&quot;;</span>
-<span class="x">    $lesActions[&quot;profil&quot;]      = &quot;monProfil.php&quot;;</span>
+<span class="x">    $lesActions["defaut"]      = "listeRestos.php";</span>
+<span class="x">    $lesActions["liste"]       = "listeRestos.php";</span>
+<span class="x">    $lesActions["detail"]      = "detailResto.php";</span>
+<span class="x">    $lesActions["recherche"]   = "rechercheResto.php";</span>
+<span class="x">    $lesActions["connexion"]   = "connexion.php";</span>
+<span class="x">    $lesActions["deconnexion"] = "deconnexion.php";</span>
+<span class="x">    $lesActions["profil"]      = "monProfil.php";</span>
 
 <span class="x">    if (array_key_exists($action, $lesActions)) {</span>
 <span class="x">        return $lesActions[$action];</span>
 <span class="x">    } else {</span>
-<span class="x">        return $lesActions[&quot;defaut&quot;];</span>
+<span class="x">        return $lesActions["defaut"];</span>
 <span class="x">    }</span>
 <span class="x">}</span>
 </code></pre></div>
 <p><strong>Schématiser la structure de la variable</strong> <code>$lesActions</code> :</p>
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>$lesActions
-├── &quot;defaut&quot;      → &quot;listeRestos.php&quot;
-├── &quot;liste&quot;       → &quot;listeRestos.php&quot;
+├── "defaut"      → "listeRestos.php"
+├── "liste"       → "listeRestos.php"
 ├── ...
 </code></pre></div>
 <details class="question">
 <summary>Éléments de réponses ✅</summary>
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>$lesActions (tableau associatif)
-├── &quot;defaut&quot;      → &quot;listeRestos.php&quot;
-├── &quot;liste&quot;       → &quot;listeRestos.php&quot;
-├── &quot;detail&quot;      → &quot;detailResto.php&quot;
-├── &quot;recherche&quot;   → &quot;rechercheResto.php&quot;
-├── &quot;connexion&quot;   → &quot;connexion.php&quot;
-├── &quot;deconnexion&quot; → &quot;deconnexion.php&quot;
-└── &quot;profil&quot;      → &quot;monProfil.php&quot;
+├── "defaut"      → "listeRestos.php"
+├── "liste"       → "listeRestos.php"
+├── "detail"      → "detailResto.php"
+├── "recherche"   → "rechercheResto.php"
+├── "connexion"   → "connexion.php"
+├── "deconnexion" → "deconnexion.php"
+└── "profil"      → "monProfil.php"
 </code></pre></div>
 </details>
 <p>❓ <strong>Quelle partie de la structure <code>$lesActions</code> est similaire aux données trouvées en question 1.1 ?</strong> 🔗</p>
@@ -6872,19 +6872,19 @@ Retourne <code>true</code> si la clé <code>$key</code> existe dans le tableau <
 <p><strong>Documents à utiliser :</strong> fichiers du projet, annexe 4</p>
 <details class="info">
 <summary>Annexe 4 - extrait du fichier entete.html.php 📄</summary>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;ul id=&quot;menuGeneral&quot;&gt;</span>
-<span class="x">    &lt;li&gt;&lt;a href=&quot;./?action=accueil&quot;&gt;Accueil&lt;/a&gt;&lt;/li&gt;</span>
-<span class="x">    &lt;li&gt;&lt;a href=&quot;./?action=recherche&quot;&gt;&lt;img src=&quot;images/rechercher.png&quot; alt=&quot;loupe&quot; /&gt;Recherche&lt;/a&gt;&lt;/li&gt;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;ul id="menuGeneral"&gt;</span>
+<span class="x">    &lt;li&gt;&lt;a href="./?action=accueil"&gt;Accueil&lt;/a&gt;&lt;/li&gt;</span>
+<span class="x">    &lt;li&gt;&lt;a href="./?action=recherche"&gt;&lt;img src="images/rechercher.png" alt="loupe" /&gt;Recherche&lt;/a&gt;&lt;/li&gt;</span>
 <span class="x">    &lt;li&gt;&lt;/li&gt;</span>
 
-<span class="x">    &lt;li id=&quot;logo&quot;&gt;&lt;a href=&quot;./?action=accueil&quot;&gt;&lt;img src=&quot;images/logoBarre.png&quot; alt=&quot;logo&quot; /&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span class="x">    &lt;li id="logo"&gt;&lt;a href="./?action=accueil"&gt;&lt;img src="images/logoBarre.png" alt="logo" /&gt;&lt;/a&gt;&lt;/li&gt;</span>
 <span class="x">    &lt;li&gt;&lt;/li&gt;</span>
-<span class="x">    &lt;li&gt;&lt;a href=&quot;./?action=cgu&quot;&gt;CGU&lt;/a&gt;&lt;/li&gt;</span>
+<span class="x">    &lt;li&gt;&lt;a href="./?action=cgu"&gt;CGU&lt;/a&gt;&lt;/li&gt;</span>
 <span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">if</span><span class="p">(</span><span class="nx">isLoggedOn</span><span class="p">()){</span> <span class="cp">?&gt;</span>
-<span class="x">    &lt;li&gt;&lt;a href=&quot;./?action=profil&quot;&gt;&lt;img src=&quot;images/profil.png&quot; alt=&quot;loupe&quot; /&gt;Mon Profil&lt;/a&gt;&lt;/li&gt;</span>
+<span class="x">    &lt;li&gt;&lt;a href="./?action=profil"&gt;&lt;img src="images/profil.png" alt="loupe" /&gt;Mon Profil&lt;/a&gt;&lt;/li&gt;</span>
 <span class="x">    </span><span class="cp">&lt;?php</span> <span class="p">}</span>
     <span class="k">else</span><span class="p">{</span> <span class="cp">?&gt;</span>
-<span class="x">    &lt;li&gt;&lt;a href=&quot;./?action=connexion&quot;&gt;&lt;img src=&quot;images/profil.png&quot; alt=&quot;loupe&quot; /&gt;Connexion&lt;/a&gt;&lt;/li&gt;</span>
+<span class="x">    &lt;li&gt;&lt;a href="./?action=connexion"&gt;&lt;img src="images/profil.png" alt="loupe" /&gt;Connexion&lt;/a&gt;&lt;/li&gt;</span>
 <span class="x">    </span><span class="cp">&lt;?php</span> <span class="p">}</span> <span class="cp">?&gt;</span>
 
 <span class="x">&lt;/ul&gt;</span>
@@ -6896,7 +6896,7 @@ Retourne <code>true</code> si la clé <code>$key</code> existe dans le tableau <
 <details class="question">
 <summary>Éléments de réponses ✅</summary>
 <p>Dans le menu général, le lien vers les CGU est :
-<div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;./?action=cgu&quot;</span><span class="p">&gt;</span>CGU<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"./?action=cgu"</span><span class="p">&gt;</span>CGU<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 </code></pre></div>
 L'action associée est <strong><code>"cgu"</code></strong>.</p>
 </details>
@@ -6909,11 +6909,11 @@ L'action associée est <strong><code>"cgu"</code></strong>.</p>
 </ul>
 </details>
 <p>❓ <strong>Rédiger l'instruction à ajouter dans <code>controleurPrincipal()</code> pour intégrer les CGU :</strong>✏️</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$lesActions[&quot;___&quot;] = &quot;___&quot;;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$lesActions["___"] = "___";</span>
 </code></pre></div>
 <details class="question">
 <summary>Éléments de réponses ✅</summary>
-<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$lesActions[&quot;cgu&quot;] = &quot;cgu.php&quot;;</span>
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$lesActions["cgu"] = "cgu.php";</span>
 </code></pre></div>
 Cette ligne est à insérer dans la fonction <code>controleurPrincipal()</code>, juste après les autres initialisations de <code>$lesActions</code>.</p>
 </details>
@@ -6924,18 +6924,18 @@ Cette ligne est à insérer dans la fonction <code>controleurPrincipal()</code>,
 <summary>Annexe 5 - contrôleur aimer.php 📄</summary>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
-<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&quot;SCRIPT_FILENAME&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nv">$racine</span> <span class="o">=</span> <span class="s2">&quot;..&quot;</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">"SCRIPT_FILENAME"</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$racine</span> <span class="o">=</span> <span class="s2">".."</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="k">include_once</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/modele/bd.aimer.inc.php&quot;</span><span class="p">;</span>
+<span class="k">include_once</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/modele/bd.aimer.inc.php"</span><span class="p">;</span>
 
 <span class="c1">// recuperation des donnees GET, POST, et SESSION</span>
-<span class="nv">$idR</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s2">&quot;idR&quot;</span><span class="p">];</span>
+<span class="nv">$idR</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s2">"idR"</span><span class="p">];</span>
 
-<span class="c1">// appel des fonctions permettant de recuperer les donnees utiles a l&#39;affichage</span>
+<span class="c1">// appel des fonctions permettant de recuperer les donnees utiles a l'affichage</span>
 
 <span class="nv">$mailU</span> <span class="o">=</span> <span class="nx">getMailULoggedOn</span><span class="p">();</span>
-<span class="k">if</span> <span class="p">(</span><span class="nv">$mailU</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$mailU</span> <span class="o">!=</span> <span class="s2">""</span><span class="p">)</span> <span class="p">{</span>
     <span class="nv">$aimer</span> <span class="o">=</span> <span class="nx">getAimerById</span><span class="p">(</span><span class="nv">$mailU</span><span class="p">,</span> <span class="nv">$idR</span><span class="p">);</span>
 
 <span class="c1">// traitement si necessaire des donnees recuperees</span>
@@ -6948,7 +6948,7 @@ Cette ligne est à insérer dans la fonction <code>controleurPrincipal()</code>,
 <span class="p">}</span>
 
 <span class="c1">// redirection vers le referer</span>
-<span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Location: &#39;</span> <span class="o">.</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;HTTP_REFERER&#39;</span><span class="p">]);</span>
+<span class="nb">header</span><span class="p">(</span><span class="s1">'Location: '</span> <span class="o">.</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">'HTTP_REFERER'</span><span class="p">]);</span>
 <span class="cp">?&gt;</span>
 </code></pre></div>
 </details>
@@ -6964,12 +6964,12 @@ Cette ligne est à insérer dans la fonction <code>controleurPrincipal()</code>,
 <details class="question">
 <summary>Éléments de réponses ✅</summary>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$aimer</span> <span class="o">!=</span> <span class="k">false</span><span class="p">)</span> <span class="p">{</span> <span class="cp">?&gt;</span>
-<span class="x">    &lt;a href=&quot;./?action=aimer&amp;idR=</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$unResto</span><span class="p">[</span><span class="s1">&#39;idR&#39;</span><span class="p">];</span> <span class="cp">?&gt;</span><span class="x">&quot;&gt;</span>
-<span class="x">        &lt;img class=&quot;aimer&quot; src=&quot;images/aime.png&quot; alt=&quot;j&#39;aime ce restaurant&quot;&gt;</span>
+<span class="x">    &lt;a href="./?action=aimer&amp;idR=</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$unResto</span><span class="p">[</span><span class="s1">'idR'</span><span class="p">];</span> <span class="cp">?&gt;</span><span class="x">"&gt;</span>
+<span class="x">        &lt;img class="aimer" src="images/aime.png" alt="j'aime ce restaurant"&gt;</span>
 <span class="x">    &lt;/a&gt;</span>
 <span class="cp">&lt;?php</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="cp">?&gt;</span>
-<span class="x">    &lt;a href=&quot;./?action=aimer&amp;idR=</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$unResto</span><span class="p">[</span><span class="s1">&#39;idR&#39;</span><span class="p">];</span> <span class="cp">?&gt;</span><span class="x">&quot;&gt;</span>
-<span class="x">        &lt;img class=&quot;aimer&quot; src=&quot;images/aimepas.png&quot; alt=&quot;je n&#39;aime pas encore ce restaurant&quot;&gt;</span>
+<span class="x">    &lt;a href="./?action=aimer&amp;idR=</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$unResto</span><span class="p">[</span><span class="s1">'idR'</span><span class="p">];</span> <span class="cp">?&gt;</span><span class="x">"&gt;</span>
+<span class="x">        &lt;img class="aimer" src="images/aimepas.png" alt="je n'aime pas encore ce restaurant"&gt;</span>
 <span class="x">    &lt;/a&gt;</span>
 <span class="cp">&lt;?php</span> <span class="p">}</span> <span class="cp">?&gt;</span>
 </code></pre></div>
@@ -7028,11 +7028,11 @@ Cette ligne est à insérer dans la fonction <code>controleurPrincipal()</code>,
 <p><code>aimer.php</code> est un fichier contrôleur → il doit être placé dans le dossier <strong><code>controleur/</code></strong>.</p>
 </details>
 <p>🔨 <strong>Rédiger l'instruction à ajouter dans <code>controleurPrincipal()</code> pour la nouvelle action "aimer" :</strong> ✏️</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$lesActions[&quot;___&quot;] = &quot;___&quot;;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$lesActions["___"] = "___";</span>
 </code></pre></div>
 <details class="question">
 <summary>Éléments de réponses ✅</summary>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$lesActions[&quot;aimer&quot;] = &quot;aimer.php&quot;;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$lesActions["aimer"] = "aimer.php";</span>
 </code></pre></div>
 </details>
 <p>🔨 <strong>Ajouter la nouvelle action</strong>, puis tester en cliquant sur l'étoile (vous devez être <strong>authentifié</strong>). 🧪</p>
@@ -7043,7 +7043,7 @@ Cette ligne est à insérer dans la fonction <code>controleurPrincipal()</code>,
 </details>
 <p>❓ <strong>Le <code>referer</code> HTTP 🌐</strong></p>
 <p>En fin de contrôleur se trouve cette instruction :</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">header(&#39;Location: &#39; . $_SERVER[&#39;HTTP_REFERER&#39;]);</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">header('Location: ' . $_SERVER['HTTP_REFERER']);</span>
 </code></pre></div>
 <p>🔎 Rechercher la signification du terme <strong>referer</strong> en HTTP.</p>
 <p>Pour comprendre son fonctionnement :</p>
@@ -7088,7 +7088,7 @@ Cette ligne est à insérer dans la fonction <code>controleurPrincipal()</code>,
 </ul>
 </li>
 <li>Ajouter dans <code>controleurPrincipal()</code> :
-    <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$lesActions[&quot;inscription&quot;] = &quot;inscription.php&quot;;</span>
+    <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$lesActions["inscription"] = "inscription.php";</span>
 </code></pre></div></li>
 <li>Tester en cliquant sur le lien "Inscription" dans la page de connexion.</li>
 </ol>
@@ -7275,7 +7275,7 @@ Cette ligne est à insérer dans la fonction <code>controleurPrincipal()</code>,
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

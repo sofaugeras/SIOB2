@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -7127,13 +7127,13 @@ Proposez une correction du code PHP/Laravel et expliquez en quoi cette correctio
 <div class="tabbed-block">
 <p><strong>Exemple 1 — Injection SQL</strong></p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// ❌ Code vulnérable</span>
-<span class="x">$users = DB::select(&quot;SELECT * FROM users WHERE email = &#39;&quot; . $email . &quot;&#39;&quot;);</span>
+<span class="x">$users = DB::select("SELECT * FROM users WHERE email = '" . $email . "'");</span>
 
 <span class="x">// ✅ Requête paramétrée</span>
-<span class="x">$users = DB::select(&quot;SELECT * FROM users WHERE email = ?&quot;, [$email]);</span>
+<span class="x">$users = DB::select("SELECT * FROM users WHERE email = ?", [$email]);</span>
 
 <span class="x">// ✅ Ou avec Eloquent (recommandé Laravel)</span>
-<span class="x">$users = User::where(&#39;email&#39;, $email)-&gt;get();</span>
+<span class="x">$users = User::where('email', $email)-&gt;get();</span>
 </code></pre></div>
 <p><strong>Exemple 2 — Méthode trop complexe (refactoring)</strong></p>
 <p>Découper une méthode de 60 lignes avec 8 <code>if</code> en plusieurs méthodes privées<br />
@@ -7170,10 +7170,10 @@ On utilise donc <strong>SonarCloud</strong>, la version hébergée de SonarQube 
 <p>Depuis votre poste Windows, créez <code>.github/workflows/sonar.yml</code> :</p>
 <div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SonarCloud Analysis</span>
 
-<span class="c1"># Se déclenche uniquement quand le workflow &quot;tests&quot; est terminé</span>
+<span class="c1"># Se déclenche uniquement quand le workflow "tests" est terminé</span>
 <span class="nt">on</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">workflow_run</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">workflows</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">&quot;tests&quot;</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">workflows</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">"tests"</span><span class="w"> </span><span class="p p-Indicator">]</span>
 <span class="w">    </span><span class="nt">types</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">completed</span><span class="w"> </span><span class="p p-Indicator">]</span>
 
 <span class="nt">jobs</span><span class="p">:</span>
@@ -7182,7 +7182,7 @@ On utilise donc <strong>SonarCloud</strong>, la version hébergée de SonarQube 
 <span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
 
 <span class="w">    </span><span class="c1"># Lance le scan que les tests aient réussi ou échoué</span>
-<span class="w">    </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ github.event.workflow_run.conclusion != &#39;cancelled&#39; }}</span>
+<span class="w">    </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ github.event.workflow_run.conclusion != 'cancelled' }}</span>
 
 <span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout du code</span>
@@ -7236,7 +7236,7 @@ On utilise donc <strong>SonarCloud</strong>, la version hébergée de SonarQube 
 </code></pre></div>
 <h3 id="24-pousser-et-observer">2.4 Pousser et observer ▶️<a class="headerlink" href="#24-pousser-et-observer" title="Permanent link">⚓︎</a></h3>
 <div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.github/workflows/sonar.yml<span class="w"> </span>.gitignore
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;feat: ajout analyse SonarCloud en CI&quot;</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"feat: ajout analyse SonarCloud en CI"</span>
 git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
 </code></pre></div>
 <div class="admonition warning">
@@ -7583,7 +7583,7 @@ L'approche SonarCloud en CI garantit une qualité continue et automatisée, adap
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

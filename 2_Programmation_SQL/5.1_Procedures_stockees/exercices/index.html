@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6559,7 +6559,7 @@
 
 <span class="c1">-- Exécuter cette procédure pour afficher le nombre des commandes :</span>
 <span class="k">CALL</span><span class="w"> </span><span class="n">SP_NbrCommandes</span><span class="p">(</span><span class="o">@</span><span class="n">n</span><span class="p">);</span>
-<span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="s1">&#39;Le nombre de commandes : &#39;</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">n</span><span class="p">);</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="s1">'Le nombre de commandes : '</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">n</span><span class="p">);</span>
 </code></pre></div>
 </details>
 <h2 id="exercice-3">Exercice 3<a class="headerlink" href="#exercice-3" title="Permanent link">⚓︎</a></h2>
@@ -6575,14 +6575,14 @@
 <span class="k">END</span><span class="w"> </span><span class="o">|</span>
 <span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
 
-<span class="c1">-- Exécuter cette procédure pour afficher le nombre d&#39;articles de la commande numéro 1 :</span>
+<span class="c1">-- Exécuter cette procédure pour afficher le nombre d'articles de la commande numéro 1 :</span>
 <span class="k">CALL</span><span class="w"> </span><span class="n">SP_NbrArtCom</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">n</span><span class="p">);</span>
-<span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="s1">&#39;Le nombre d\&#39;</span><span class="n">articles</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">commande</span><span class="w"> </span><span class="n">numéro</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">est</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;, @n);</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="s1">'Le nombre d\'</span><span class="n">articles</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">commande</span><span class="w"> </span><span class="n">numéro</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">est</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s1">', @n);</span>
 
 <span class="s1">-- Ou avec une variable :</span>
 <span class="s1">SET @nc = 1;</span>
 <span class="s1">CALL SP_NbrArtCom(@nc, @n);</span>
-<span class="s1">SELECT CONCAT(&#39;</span><span class="n">Le</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="n">d</span><span class="err">\</span><span class="s1">&#39;articles de la commande numéro &#39;</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">nc</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; est : &#39;</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">n</span><span class="p">);</span>
+<span class="s1">SELECT CONCAT('</span><span class="n">Le</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="n">d</span><span class="err">\</span><span class="s1">'articles de la commande numéro '</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">nc</span><span class="p">,</span><span class="w"> </span><span class="s1">' est : '</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">n</span><span class="p">);</span>
 </code></pre></div>
 </details>
 <h2 id="exercice-4">Exercice 4<a class="headerlink" href="#exercice-4" title="Permanent link">⚓︎</a></h2>
@@ -6617,11 +6617,11 @@
 
 <span class="c1">-- Exécuter cette procédure pour afficher la liste des commandes effectuées entre le</span>
 <span class="c1">-- 10/10/2006 et le 14/12/2006 :</span>
-<span class="k">CALL</span><span class="w"> </span><span class="n">SP_ComPeriode</span><span class="p">(</span><span class="s1">&#39;2006-10-10&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2006-12-14&#39;</span><span class="p">);</span>
+<span class="k">CALL</span><span class="w"> </span><span class="n">SP_ComPeriode</span><span class="p">(</span><span class="s1">'2006-10-10'</span><span class="p">,</span><span class="w"> </span><span class="s1">'2006-12-14'</span><span class="p">);</span>
 
 <span class="c1">-- Ou avec des variables :</span>
-<span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">dd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;2006-10-10&#39;</span><span class="p">;</span>
-<span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">df</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;2006-12-14&#39;</span><span class="p">;</span>
+<span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">dd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'2006-10-10'</span><span class="p">;</span>
+<span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">df</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'2006-12-14'</span><span class="p">;</span>
 <span class="k">CALL</span><span class="w"> </span><span class="n">SP_ComPeriode</span><span class="p">(</span><span class="o">@</span><span class="n">dd</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">df</span><span class="p">);</span>
 </code></pre></div>
 </details>
@@ -6638,12 +6638,12 @@
 <span class="w">                </span><span class="k">WHERE</span><span class="w"> </span><span class="n">datcom</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="n">dateD</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">dateF</span><span class="p">);</span>
 
 <span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="o">@</span><span class="n">nbr</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="k">THEN</span>
-<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;Période Rouge&#39;</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">periode</span><span class="p">;</span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">'Période Rouge'</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">periode</span><span class="p">;</span>
 <span class="w">    </span><span class="k">ELSE</span>
 <span class="w">        </span><span class="k">IF</span><span class="w"> </span><span class="o">@</span><span class="n">nbr</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="k">THEN</span>
-<span class="w">            </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;Période Blanche&#39;</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">periode</span><span class="p">;</span>
+<span class="w">            </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">'Période Blanche'</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">periode</span><span class="p">;</span>
 <span class="w">        </span><span class="k">ELSE</span>
-<span class="w">            </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;Période Jaune&#39;</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">periode</span><span class="p">;</span>
+<span class="w">            </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">'Période Jaune'</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">periode</span><span class="p">;</span>
 <span class="w">        </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
 <span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
 <span class="k">END</span><span class="w"> </span><span class="o">|</span>
@@ -6660,14 +6660,14 @@
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="o">|</span>
 <span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">SP_EnregistrerLigneCom</span><span class="w"> </span><span class="p">(</span><span class="k">IN</span><span class="w"> </span><span class="n">numCom</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="n">numart</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="n">qte</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">)</span>
 <span class="k">BEGIN</span>
-<span class="w">    </span><span class="c1">-- Vérification de l&#39;existence de l&#39;article et de la disponibilité du stock</span>
+<span class="w">    </span><span class="c1">-- Vérification de l'existence de l'article et de la disponibilité du stock</span>
 <span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">numart</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">numart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numart</span><span class="p">)</span>
 <span class="w">        </span><span class="k">OR</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">numart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numart</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">qte</span><span class="w"> </span><span class="k">THEN</span>
-<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;Cet article n\&#39;</span><span class="n">existe</span><span class="w"> </span><span class="n">pas</span><span class="w"> </span><span class="n">ou</span><span class="w"> </span><span class="n">le</span><span class="w"> </span><span class="n">stock</span><span class="w"> </span><span class="n">est</span><span class="w"> </span><span class="n">insuffisant</span><span class="s1">&#39; AS message;</span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">'Cet article n\'</span><span class="n">existe</span><span class="w"> </span><span class="n">pas</span><span class="w"> </span><span class="n">ou</span><span class="w"> </span><span class="n">le</span><span class="w"> </span><span class="n">stock</span><span class="w"> </span><span class="n">est</span><span class="w"> </span><span class="n">insuffisant</span><span class="s1">' AS message;</span>
 <span class="s1">    ELSE</span>
 <span class="s1">        START TRANSACTION;</span>
 
-<span class="s1">        -- Création de la commande si elle n&#39;</span><span class="n">existe</span><span class="w"> </span><span class="n">pas</span>
+<span class="s1">        -- Création de la commande si elle n'</span><span class="n">existe</span><span class="w"> </span><span class="n">pas</span>
 <span class="w">        </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">numcom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Commande</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">numCom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numCom</span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span>
 <span class="w">            </span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">commande</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="n">numCom</span><span class="p">,</span><span class="w"> </span><span class="n">NOW</span><span class="p">());</span>
 <span class="w">        </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
@@ -6828,7 +6828,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6779,18 +6779,18 @@ Ce qui donne : </p>
 </code></pre></div>
 <strong>Note :</strong> Il est possible d'imbriquer plusieurs blocs d'instructions. De même, à l'intérieur d'un bloc d'instructions, plusieurs blocs d'instructions peuvent se suivre. Ceux-ci permettent donc de structurer les instructions en plusieurs parties distinctes et sur plusieurs niveaux d'imbrication différents.</p>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">BEGIN</span>
-<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;Bloc d&#39;&#39;instructions principal&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">'Bloc d''instructions principal'</span><span class="p">;</span>
 
 <span class="w">    </span><span class="k">BEGIN</span>
-<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;Bloc d&#39;&#39;instructions 2, imbriqué dans le bloc principal&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">'Bloc d''instructions 2, imbriqué dans le bloc principal'</span><span class="p">;</span>
 
 <span class="w">        </span><span class="k">BEGIN</span>
-<span class="w">            </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;Bloc d&#39;&#39;instructions 3, imbriqué dans le bloc d&#39;&#39;instructions 2&#39;</span><span class="p">;</span>
+<span class="w">            </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">'Bloc d''instructions 3, imbriqué dans le bloc d''instructions 2'</span><span class="p">;</span>
 <span class="w">        </span><span class="k">END</span><span class="p">;</span>
 <span class="w">    </span><span class="k">END</span><span class="p">;</span>
 
 <span class="w">    </span><span class="k">BEGIN</span>
-<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;Bloc d&#39;&#39;instructions 4, imbriqué dans le bloc principal&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">'Bloc d''instructions 4, imbriqué dans le bloc principal'</span><span class="p">;</span>
 <span class="w">    </span><span class="k">END</span><span class="p">;</span>
 
 <span class="k">END</span><span class="p">;</span>
@@ -6848,7 +6848,7 @@ exemple : </p>
 <p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">IndexVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">PUart</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">numart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 <span class="k">SELECT</span><span class="w"> </span><span class="o">@</span><span class="n">IndexVar</span><span class="p">,</span><span class="w"> </span><span class="n">Desart</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="p">;</span>
-<span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="s1">&#39;La variable est &#39;</span><span class="p">,</span><span class="w"> </span><span class="k">CONVERT</span><span class="p">(</span><span class="o">@</span><span class="n">IndexVar</span><span class="p">,</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">));</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="s1">'La variable est '</span><span class="p">,</span><span class="w"> </span><span class="k">CONVERT</span><span class="p">(</span><span class="o">@</span><span class="n">IndexVar</span><span class="p">,</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">));</span>
 </code></pre></div>
 <em>Explication :</em> Affiche la valeur de <code>@IndexVar</code> concaténée avec une chaîne de caractères. Puisque <code>@IndexVar</code> est de type numérique et qu'on ne peut jamais concaténer une valeur numérique avec une valeur chaîne de caractères, il faut passer par une fonction de conversion dont la syntaxe est la suivante : <code>CONVERT(Valeur à convertir, Type de conversion)</code> <a href="https://sql.sh/fonctions/convert">Doc ici</a></p>
 <h3 id="procedure-avec-deux-parametres-un-entrant-et-un-sortant">Procédure avec deux paramètres, un entrant et un sortant<a class="headerlink" href="#procedure-avec-deux-parametres-un-entrant-et-un-sortant" title="Permanent link">⚓︎</a></h3>
@@ -6889,16 +6889,16 @@ La déclaration d'une variable locale se fait avec l'instruction <code>DECLARE</
 <span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">v_date</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_DATE</span><span class="p">();</span><span class="w">               </span>
 <span class="w">    </span><span class="c1">-- On déclare une variable locale et on lui met une valeur par défaut</span>
 
-<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">DATE_FORMAT</span><span class="p">(</span><span class="n">v_date</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;%W %e %M %Y&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Aujourdhui</span><span class="p">;</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">DATE_FORMAT</span><span class="p">(</span><span class="n">v_date</span><span class="p">,</span><span class="w"> </span><span class="s1">'%W %e %M %Y'</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Aujourdhui</span><span class="p">;</span>
 
 <span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="n">v_date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v_date</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">DAY</span><span class="p">;</span><span class="w">                     </span>
 <span class="w">    </span><span class="c1">-- On change la valeur de la variable locale</span>
-<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">DATE_FORMAT</span><span class="p">(</span><span class="n">v_date</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;%W %e %M %Y&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Demain</span><span class="p">;</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">DATE_FORMAT</span><span class="p">(</span><span class="n">v_date</span><span class="p">,</span><span class="w"> </span><span class="s1">'%W %e %M %Y'</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Demain</span><span class="p">;</span>
 <span class="k">END</span><span class="w"> </span><span class="o">|</span>
 <span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 ▶️ Appel : 
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SET</span><span class="w"> </span><span class="n">lc_time_names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;fr_FR&#39;</span><span class="p">;</span>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SET</span><span class="w"> </span><span class="n">lc_time_names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'fr_FR'</span><span class="p">;</span>
 <span class="k">CALL</span><span class="w"> </span><span class="n">aujourdhui_demain</span><span class="p">();</span>
 </code></pre></div></p>
 <h2 id="3-modification-dune-ps">3. Modification d'une PS<a class="headerlink" href="#3-modification-dune-ps" title="Permanent link">⚓︎</a></h2>
@@ -6931,9 +6931,9 @@ La déclaration d'une variable locale se fait avec l'instruction <code>DECLARE</
 <span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_animal_id</span><span class="p">;</span>
 
 <span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="n">v_annee</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2010</span><span class="w"> </span><span class="k">THEN</span>
-<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;né avant 2010&#39;</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">naissance</span><span class="p">;</span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">'né avant 2010'</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">naissance</span><span class="p">;</span>
 <span class="w">    </span><span class="k">ELSE</span><span class="w">    </span><span class="c1">-- Pas de THEN</span>
-<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;né après 2010&#39;</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">naissance</span><span class="p">;</span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">'né après 2010'</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">naissance</span><span class="p">;</span>
 <span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span><span class="w"> </span><span class="c1">-- Toujours obligatoire</span>
 
 <span class="k">END</span><span class="w"> </span><span class="o">|</span>
@@ -6953,17 +6953,17 @@ Sinon afficher 'Stock disponible'
 ▶️ Ecrire la procédure stockée verifier_stock() </p>
 </div>
 <div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="cm">/* On souhaite vérifier si le stock de l&#39;article passé en paramètre a atteint son seuil minimum.</span>
-<span class="cm">Si c&#39;est le cas afficher le message &#39;Rupture de stock&#39; : */</span>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="cm">/* On souhaite vérifier si le stock de l'article passé en paramètre a atteint son seuil minimum.</span>
+<span class="cm">Si c'est le cas afficher le message 'Rupture de stock' : */</span>
 <span class="k">DELIMITER</span><span class="w"> </span><span class="o">|</span>
 <span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">affichage_rupture</span><span class="p">(</span><span class="k">IN</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="nb">INT</span><span class="p">)</span>
 <span class="k">BEGIN</span>
 <span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">QS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NumArt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num</span><span class="p">);</span>
 <span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">SM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">SeuilMin</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NumArt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num</span><span class="p">);</span><span class="w"> </span>
 <span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="o">@</span><span class="n">QS</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="o">@</span><span class="n">SM</span><span class="w"> </span><span class="k">THEN</span>
-<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;Rupture de stock&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">'Rupture de stock'</span><span class="p">;</span>
 <span class="w">    </span><span class="k">ELSE</span><span class="w"> </span>
-<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;Stock disponible&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">'Stock disponible'</span><span class="p">;</span>
 <span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
 <span class="k">END</span><span class="w"> </span><span class="o">|</span>
 <span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
@@ -7000,11 +7000,11 @@ Sinon afficher 'Stock disponible'
 
 <span class="w">    </span><span class="k">CASE</span>
 <span class="w">        </span><span class="k">WHEN</span><span class="w"> </span><span class="n">v_annee</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2010</span><span class="w"> </span><span class="k">THEN</span>
-<span class="w">            </span><span class="k">SET</span><span class="w"> </span><span class="n">p_message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Je suis né avant 2010.&#39;</span><span class="p">;</span>
+<span class="w">            </span><span class="k">SET</span><span class="w"> </span><span class="n">p_message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Je suis né avant 2010.'</span><span class="p">;</span>
 <span class="w">        </span><span class="k">WHEN</span><span class="w"> </span><span class="n">v_annee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2010</span><span class="w"> </span><span class="k">THEN</span>
-<span class="w">            </span><span class="k">SET</span><span class="w"> </span><span class="n">p_message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Je suis né en 2010.&#39;</span><span class="p">;</span>
+<span class="w">            </span><span class="k">SET</span><span class="w"> </span><span class="n">p_message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Je suis né en 2010.'</span><span class="p">;</span>
 <span class="w">        </span><span class="k">ELSE</span>
-<span class="w">            </span><span class="k">SET</span><span class="w"> </span><span class="n">p_message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Je suis né après 2010.&#39;</span><span class="p">;</span><span class="w">   </span>
+<span class="w">            </span><span class="k">SET</span><span class="w"> </span><span class="n">p_message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Je suis né après 2010.'</span><span class="p">;</span><span class="w">   </span>
 <span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">CASE</span><span class="p">;</span>
 <span class="k">END</span><span class="w"> </span><span class="o">|</span>
 <span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
@@ -7036,9 +7036,9 @@ Observation qui affiche 'Non Disponible' si la quantité en stock est égale à 
 <span class="k">BEGIN</span>
 <span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">NumArt</span><span class="p">,</span><span class="w"> </span><span class="n">DesArt</span><span class="p">,</span><span class="w"> </span><span class="n">PUArt</span><span class="p">,</span>
 <span class="w">        </span><span class="k">CASE</span>
-<span class="w">            </span><span class="k">WHEN</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;Non Disponible&#39;</span>
-<span class="w">            </span><span class="k">WHEN</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">SeuilMinimum</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;Disponible&#39;</span>
-<span class="w">            </span><span class="k">ELSE</span><span class="w"> </span><span class="s1">&#39;à Commander&#39;</span>
+<span class="w">            </span><span class="k">WHEN</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">'Non Disponible'</span>
+<span class="w">            </span><span class="k">WHEN</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">SeuilMinimum</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">'Disponible'</span>
+<span class="w">            </span><span class="k">ELSE</span><span class="w"> </span><span class="s1">'à Commander'</span>
 <span class="w">        </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">observation</span>
 <span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">article</span><span class="p">;</span>
 <span class="k">END</span><span class="w"> </span><span class="o">|</span>
@@ -7322,7 +7322,7 @@ Elles permettent également de <strong>sécuriser une base de données</strong>.
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

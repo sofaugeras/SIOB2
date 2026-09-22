@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6639,17 +6639,17 @@
 </tbody>
 </table>
 <h4 id="anatomie-dune-bonne-issue">Anatomie d'une bonne Issue<a class="headerlink" href="#anatomie-dune-bonne-issue" title="Permanent link">⚓︎</a></h4>
-<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code>Titre : [Bug] La suppression d&#39;une tâche ne rafraîchit pas la liste
+<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code>Titre : [Bug] La suppression d'une tâche ne rafraîchit pas la liste
 
 <span class="gu">## Comportement attendu</span>
 La liste des tâches se met à jour immédiatement après suppression.
 
 <span class="gu">## Comportement observé</span>
-La tâche reste visible jusqu&#39;au rechargement complet de la page.
+La tâche reste visible jusqu'au rechargement complet de la page.
 
 <span class="gu">## Étapes de reproduction</span>
 <span class="k">1.</span> Aller sur /tasks
-<span class="k">2.</span> Cliquer &quot;Supprimer&quot; sur une tâche
+<span class="k">2.</span> Cliquer "Supprimer" sur une tâche
 <span class="k">3.</span> Constater que la tâche reste affichée
 
 <span class="gu">## Environnement</span>
@@ -6754,51 +6754,51 @@ Resolves #12
 </tbody>
 </table>
 <p>Exemples pour le projet <code>laravel-todo</code> :</p>
-<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;feat(tasks): add status filter component - Closes #2&quot;</span>
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;fix(tasks): add confirmation modal before delete - Closes #1&quot;</span>
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;ci: publish coverage report as PR comment - Closes #3&quot;</span>
+<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"feat(tasks): add status filter component - Closes #2"</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"fix(tasks): add confirmation modal before delete - Closes #1"</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"ci: publish coverage report as PR comment - Closes #3"</span>
 </code></pre></div>
 <h3 id="16-lier-issues-et-pull-requests-tracabilite-complete">1.6 Lier Issues et Pull Requests — traçabilité complète<a class="headerlink" href="#16-lier-issues-et-pull-requests-tracabilite-complete" title="Permanent link">⚓︎</a></h3>
 <p>Les références croisées GitHub permettent de naviguer du commit jusqu'à l'Issue d'origine.</p>
-<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span class="gh"># Dans le body d&#39;une PR :</span>
-Closes <span class="ni">#5</span>      → ferme l&#39;issue 5 automatiquement au merge
-Refs <span class="ni">#5</span>        → crée un lien sans fermer l&#39;issue
+<div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span class="gh"># Dans le body d'une PR :</span>
+Closes <span class="ni">#5</span>      → ferme l'issue 5 automatiquement au merge
+Refs <span class="ni">#5</span>        → crée un lien sans fermer l'issue
 See <span class="ni">#5</span>         → référence informelle
 
 <span class="gh"># Dans un message de commit :</span>
-git commit -m &quot;feat(tasks): add filter - Closes <span class="ni">#5</span>&quot;
+git commit -m "feat(tasks): add filter - Closes <span class="ni">#5</span>"
 </code></pre></div>
 <p>GitHub affiche ces références dans le fil de chaque Issue. On peut ainsi retracer : <strong>pourquoi</strong> ce code a été écrit (Issue), <strong>comment</strong> il a été proposé (PR), et <strong>quand</strong> il a été intégré (commit sur <code>main</code>).</p>
 <h2 id="2-application-sur-laravel-todo">2. Application sur <code>laravel-todo</code><a class="headerlink" href="#2-application-sur-laravel-todo" title="Permanent link">⚓︎</a></h2>
 <p>On simule un flux professionnel complet avec 3 Issues et 3 Pull Requests sur le projet <code>laravel-todo</code>. Chaque Issue correspond à un travail réel sur l'application.</p>
 <h3 id="21-issue-1-bug-pas-de-confirmation-avant-suppression">2.1 Issue #1 — Bug : pas de confirmation avant suppression<a class="headerlink" href="#21-issue-1-bug-pas-de-confirmation-avant-suppression" title="Permanent link">⚓︎</a></h3>
 <p><strong>Issue À créer sur GitHub :</strong></p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Titre  : [Bug] Suppression d&#39;une tâche sans confirmation
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Titre  : [Bug] Suppression d'une tâche sans confirmation
 Labels : bug
 Assignée à : vous-meme
 </code></pre></div>
 <div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span class="gu">## Description</span>
-La suppression d&#39;une tâche se fait sans demander confirmation à l&#39;utilisateur.
+La suppression d'une tâche se fait sans demander confirmation à l'utilisateur.
 Cela peut entraîner des suppressions accidentelles.
 
 <span class="gu">## Comportement attendu</span>
-Une modale de confirmation doit s&#39;afficher avant la suppression effective.
+Une modale de confirmation doit s'afficher avant la suppression effective.
 
-<span class="gu">## Critères d&#39;acceptation</span>
-<span class="k">- [ ]</span> Une modale apparaît lors du clic sur &quot;Supprimer&quot;
-<span class="k">- [ ]</span> La suppression ne se fait qu&#39;après confirmation explicite
+<span class="gu">## Critères d'acceptation</span>
+<span class="k">- [ ]</span> Une modale apparaît lors du clic sur "Supprimer"
+<span class="k">- [ ]</span> La suppression ne se fait qu'après confirmation explicite
 <span class="k">- [ ]</span> Un test Feature couvre ce comportement
 </code></pre></div>
 <p><img alt="illustration" class="center" src="../data/issue.png" width="50%" /></p>
 <p>Avant de commencer le développement, on ramène en local l'issue et on passe automatiquement sur la branche
 <div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code><span class="c1">##### avant le code ###########</span>
 git<span class="w"> </span>checkout<span class="w"> </span>main<span class="w"> </span>
-&gt;&gt;Already<span class="w"> </span>on<span class="w"> </span><span class="s1">&#39;main&#39;</span>
-<span class="w">  </span>Your<span class="w"> </span>branch<span class="w"> </span>is<span class="w"> </span>up<span class="w"> </span>to<span class="w"> </span>date<span class="w"> </span>with<span class="w"> </span><span class="s1">&#39;origin/main&#39;</span>.
+&gt;&gt;Already<span class="w"> </span>on<span class="w"> </span><span class="s1">'main'</span>
+<span class="w">  </span>Your<span class="w"> </span>branch<span class="w"> </span>is<span class="w"> </span>up<span class="w"> </span>to<span class="w"> </span>date<span class="w"> </span>with<span class="w"> </span><span class="s1">'origin/main'</span>.
 git<span class="w"> </span>pull
 &gt;&gt;<span class="w"> </span>Already<span class="w"> </span>up<span class="w"> </span>to<span class="w"> </span>date.
 git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>fix/delete-confirmation
-&gt;&gt;<span class="w"> </span>Switched<span class="w"> </span>to<span class="w"> </span>a<span class="w"> </span>new<span class="w"> </span>branch<span class="w"> </span><span class="s1">&#39;fix/delete-confirmation&#39;</span>
+&gt;&gt;<span class="w"> </span>Switched<span class="w"> </span>to<span class="w"> </span>a<span class="w"> </span>new<span class="w"> </span>branch<span class="w"> </span><span class="s1">'fix/delete-confirmation'</span>
 </code></pre></div></p>
 <details class="tip">
 <summary>Eléments de correction</summary>
@@ -6833,12 +6833,12 @@ git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </
 <p><strong>Workflow Git :</strong></p>
 <div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code><span class="c1"># ... développement de la modification ...</span>
 
-<span class="c1"># Ne pas oublier le lint pour ne pas provoquer d&#39;erreur sur la CI</span>
+<span class="c1"># Ne pas oublier le lint pour ne pas provoquer d'erreur sur la CI</span>
 vendor/bin/pint
 php<span class="w"> </span>artisan<span class="w"> </span><span class="nb">test</span>
 
 git<span class="w"> </span>add<span class="w"> </span>-A
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;fix(tasks): add confirmation modal before delete - Closes #1&quot;</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"fix(tasks): add confirmation modal before delete - Closes #1"</span>
 &gt;&gt;<span class="w"> </span><span class="o">[</span>fix/delete-confirmation<span class="w"> </span><span class="m">8835423</span><span class="o">]</span><span class="w"> </span>fix<span class="o">(</span>tasks<span class="o">)</span>:<span class="w"> </span>add<span class="w"> </span>confirmation<span class="w"> </span>modal<span class="w"> </span>before<span class="w"> </span>delete<span class="w"> </span>-<span class="w"> </span>Closes<span class="w"> </span><span class="c1">#1</span>
 <span class="w">  </span><span class="m">11</span><span class="w"> </span>files<span class="w"> </span>changed,<span class="w"> </span><span class="m">290</span><span class="w"> </span>insertions<span class="o">(</span>+<span class="o">)</span>,<span class="w"> </span><span class="m">143</span><span class="w"> </span>deletions<span class="o">(</span>-<span class="o">)</span>
 <span class="w">  </span>rewrite<span class="w"> </span>resources/views/auth/login.blade.php<span class="w"> </span><span class="o">(</span><span class="m">88</span>%<span class="o">)</span>
@@ -6854,7 +6854,7 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
 <span class="w">  </span>Total<span class="w"> </span><span class="m">23</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">16</span><span class="o">)</span>,<span class="w"> </span>reused<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>,<span class="w"> </span>pack-reused<span class="w"> </span><span class="m">0</span>
 <span class="w">  </span>remote:<span class="w"> </span>Resolving<span class="w"> </span>deltas:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">16</span>/16<span class="o">)</span>,<span class="w"> </span>completed<span class="w"> </span>with<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="nb">local</span><span class="w"> </span>objects.
 <span class="w">  </span>remote:<span class="w"> </span>
-<span class="w">  </span>remote:<span class="w"> </span>Create<span class="w"> </span>a<span class="w"> </span>pull<span class="w"> </span>request<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;fix/delete-confirmation&#39;</span><span class="w"> </span>on<span class="w"> </span>GitHub<span class="w"> </span>by<span class="w"> </span>visiting:
+<span class="w">  </span>remote:<span class="w"> </span>Create<span class="w"> </span>a<span class="w"> </span>pull<span class="w"> </span>request<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">'fix/delete-confirmation'</span><span class="w"> </span>on<span class="w"> </span>GitHub<span class="w"> </span>by<span class="w"> </span>visiting:
 <span class="w">  </span>remote:<span class="w">      </span>https://github.com/sofaugeras/laravel-todo/pull/new/fix/delete-confirmation
 <span class="w">  </span>remote:
 <span class="w">  </span>To<span class="w"> </span>https://github.com/sofaugeras/laravel-todo.git
@@ -6864,12 +6864,12 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Titre  : fix(tasks): add confirmation modal before delete - Closes #1
 </code></pre></div>
 <div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span class="gu">## Description</span>
-Ajout d&#39;une modale de confirmation Bootstrap avant la suppression d&#39;une tâche.
+Ajout d'une modale de confirmation Bootstrap avant la suppression d'une tâche.
 
 <span class="gu">## Changements</span>
 <span class="k">-</span><span class="w"> </span>Remplacement du lien direct par un bouton déclenchant une modale
 <span class="k">-</span><span class="w"> </span>Route de suppression passée en DELETE
-<span class="k">-</span><span class="w"> </span>Ajout de <span class="sb">`@stack(&#39;scripts&#39;)`</span> dans <span class="sb">`template.blade.php`</span>
+<span class="k">-</span><span class="w"> </span>Ajout de <span class="sb">`@stack('scripts')`</span> dans <span class="sb">`template.blade.php`</span>
 <span class="k">-</span><span class="w"> </span>Tests Feature couvrant le comportement
 
 <span class="gu">## Tests</span>
@@ -6908,14 +6908,14 @@ Labels    : feature
 Milestone : v1.1
 </code></pre></div>
 <div class="language-markdown highlight"><span class="filename">Markdown</span><pre><span></span><code><span class="gu">## User story</span>
-En tant qu&#39;utilisateur, je veux filtrer mes tâches par statut
+En tant qu'utilisateur, je veux filtrer mes tâches par statut
 afin de me concentrer sur ce qui est en cours.
 
-<span class="gu">## Critères d&#39;acceptation</span>
+<span class="gu">## Critères d'acceptation</span>
 
 <span class="k">- [ ]</span> 3 boutons de filtre : Toutes / En cours / Terminées
 <span class="k">- [ ]</span> Le filtre est réactif (sans rechargement de page)
-<span class="k">- [ ]</span> L&#39;état du filtre actif est visuellement indiqué
+<span class="k">- [ ]</span> L'état du filtre actif est visuellement indiqué
 <span class="k">- [ ]</span> Tests Feature ajoutés
 </code></pre></div>
 </div>
@@ -6926,7 +6926,7 @@ git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </
 <span class="c1"># ... développement du composant filtre ...</span>
 
 git<span class="w"> </span>add<span class="w"> </span>-A
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;feat(tasks): add status filter - Closes #2&quot;</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"feat(tasks): add status filter - Closes #2"</span>
 git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>feature/task-filter
 </code></pre></div>
 </div>
@@ -6950,12 +6950,12 @@ Closes #
 
 <span class="gu">## Checklist</span>
 <span class="k">- [ ]</span> Mon code respecte le style du projet (<span class="sb">`vendor/bin/pint --test`</span>)
-<span class="k">- [ ]</span> J&#39;ai ajouté des tests couvrant mes changements
+<span class="k">- [ ]</span> J'ai ajouté des tests couvrant mes changements
 <span class="k">- [ ]</span> Tous les tests passent en local (<span class="sb">`php artisan test`</span>)
 <span class="k">- [ ]</span> La documentation a été mise à jour si nécessaire
 <span class="k">- [ ]</span> Le message de commit suit la convention <span class="sb">`type(scope): description`</span>
 
-<span class="gu">## Captures d&#39;écran (si changement d&#39;interface)</span>
+<span class="gu">## Captures d'écran (si changement d'interface)</span>
 &lt;!-- Ajouter des captures avant/après si pertinent --&gt;
 </code></pre></div>
 <h3 id="23-resume-du-flux-complet">2.3 Résumé du flux complet<a class="headerlink" href="#23-resume-du-flux-complet" title="Permanent link">⚓︎</a></h3>
@@ -7112,7 +7112,7 @@ Closes #
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

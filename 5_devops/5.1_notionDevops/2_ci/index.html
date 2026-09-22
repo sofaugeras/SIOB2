@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6641,7 +6641,7 @@ L’intégration continue, c’est un garde-fou automatique qui assure la qualit
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>git init
 git branch -M main
 
-echo &quot;/vendor
+echo "/vendor
 /node_modules
 /public/build
 /storage/*.key
@@ -6650,10 +6650,10 @@ echo &quot;/vendor
 /storage/logs/*
 .env
 database/*.sqlite
-&quot; &gt;&gt; .gitignore
+" &gt;&gt; .gitignore
 
 git add .
-git commit -m &quot;Initial commit: Laravel ToDo&quot;
+git commit -m "Initial commit: Laravel ToDo"
 </code></pre></div>
 <h3 id="22-sur-github">2.2 Sur Github<a class="headerlink" href="#22-sur-github" title="Permanent link">⚓︎</a></h3>
 <p>Sur GitHub, créer un <code>New repository</code> avec pour nom <code>laravel-todo</code>.</p>
@@ -6688,7 +6688,7 @@ DB_PASSWORD=laravel
 </code></pre></div>
 Puis pousser le fichier sur github</p>
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>git add .env.ci
-git commit -m &quot;Add CI env for MySQL&quot;
+git commit -m "Add CI env for MySQL"
 git push origin main
 </code></pre></div>
 <h3 id="25-workflow-github-actions-ci">2.5 Workflow GitHub Actions (CI)<a class="headerlink" href="#25-workflow-github-actions-ci" title="Permanent link">⚓︎</a></h3>
@@ -6715,7 +6715,7 @@ jobs:
         ports:
           - 3306:3306
         options: &gt;-
-          --health-cmd=&quot;mysqladmin ping -h 127.0.0.1 -proot&quot;
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -proot"
           --health-interval=10s
           --health-timeout=5s
           --health-retries=10
@@ -6726,7 +6726,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: &#39;8.3&#39;
+          php-version: '8.3'
           extensions: mbstring, xml, ctype, curl, dom, fileinfo, gd, pdo_mysql
           coverage: xdebug
 
@@ -6734,7 +6734,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.composer/cache/files
-          key: composer-${{ hashFiles(&#39;**/composer.lock&#39;) }}
+          key: composer-${{ hashFiles('**/composer.lock') }}
 
       - name: Install Composer deps
         run: composer install --no-interaction --no-progress --prefer-dist
@@ -6742,8 +6742,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: &#39;20&#39;
-          cache: &#39;npm&#39;
+          node-version: '20'
+          cache: 'npm'
 
       - name: Install Node deps
         run: npm ci
@@ -6792,7 +6792,7 @@ jobs:
 </code></pre></div>
 Pousser vos modifications.
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>git add .github/workflows/ci.yml
-git commit -m &quot;CI MySQL: build + migrate + lint + analyse + tests&quot;
+git commit -m "CI MySQL: build + migrate + lint + analyse + tests"
 git push origin main
 </code></pre></div></p>
 <h2 id="3-verifier-la-ci">3. Vérifier la CI<a class="headerlink" href="#3-verifier-la-ci" title="Permanent link">⚓︎</a></h2>
@@ -6833,7 +6833,7 @@ git push origin main
 <li>
 <p>Termine la mise en place de pint en poussant les modifications vers github :
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>git add .
-git commit -m &quot;Fix code style with Pint&quot;
+git commit -m "Fix code style with Pint"
 git push origin main
 </code></pre></div></p>
 </li>
@@ -6842,19 +6842,19 @@ git push origin main
 <h3 id="33-regles-minimales-pour-le-style-de-code">3.3 Règles minimales pour le style de code<a class="headerlink" href="#33-regles-minimales-pour-le-style-de-code" title="Permanent link">⚓︎</a></h3>
 <p>On va figer les règles de bases dans le projet dans un fichier <code>pint.json</code> minimal que tu peux placer à la racine du projet.</p>
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>{
-    &quot;preset&quot;: &quot;laravel&quot;,
-    &quot;rules&quot;: {
-        &quot;binary_operator_spaces&quot;: {
-            &quot;default&quot;: &quot;single_space&quot;
+    "preset": "laravel",
+    "rules": {
+        "binary_operator_spaces": {
+            "default": "single_space"
         },
-        &quot;concat_space&quot;: {
-            &quot;spacing&quot;: &quot;one&quot;
+        "concat_space": {
+            "spacing": "one"
         },
-        &quot;ordered_imports&quot;: {
-            &quot;sort_algorithm&quot;: &quot;alpha&quot;
+        "ordered_imports": {
+            "sort_algorithm": "alpha"
         },
-        &quot;single_quote&quot;: true,
-        &quot;no_unused_imports&quot;: true
+        "single_quote": true,
+        "no_unused_imports": true
     }
 }
 </code></pre></div>
@@ -6882,10 +6882,10 @@ git push origin main
 <h2 id="4-standardiser-les-commandes-avec-les-scripts-composer">4. Standardiser les commandes avec les scripts Composer 🧩<a class="headerlink" href="#4-standardiser-les-commandes-avec-les-scripts-composer" title="Permanent link">⚓︎</a></h2>
 <p>Pour faciliter l’exécution des vérifications de qualité, on centralise les commandes clés dans le fichier <strong><code>composer.json</code></strong>, section <strong><code>scripts</code></strong>.<br />
 Cela permet à chaque développeur (ou à la CI) d’utiliser des commandes uniformes.</p>
-<div class="language-json highlight"><span class="filename">JSON</span><pre><span></span><code><span class="nt">&quot;scripts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;lint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vendor/bin/pint --test&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;analyse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vendor/bin/phpstan analyse&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;test&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;php artisan test --coverage --min=80&quot;</span>
+<div class="language-json highlight"><span class="filename">JSON</span><pre><span></span><code><span class="nt">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">"lint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vendor/bin/pint --test"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"analyse"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vendor/bin/phpstan analyse"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"test"</span><span class="p">:</span><span class="w"> </span><span class="s2">"php artisan test --coverage --min=80"</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>🔍 <strong>Explications</strong></p>
@@ -7058,7 +7058,7 @@ Cela permet à chaque développeur (ou à la CI) d’utiliser des commandes unif
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

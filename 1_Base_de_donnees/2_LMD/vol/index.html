@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6428,7 +6428,7 @@ R29 : Liste des avions (NumAvion et NomAvion) pilotés par le pilote nommé Hoar
 <span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span>
 <span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">PILOTE</span>
 <span class="k">ON</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">NumPilote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">.</span><span class="n">NumPilote</span>
-<span class="k">Where</span><span class="w"> </span><span class="n">NomPilote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Toto&quot;</span><span class="p">;</span>
+<span class="k">Where</span><span class="w"> </span><span class="n">NomPilote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Toto"</span><span class="p">;</span>
 </code></pre></div>
 </div>
 </div>
@@ -6444,7 +6444,7 @@ R29 : Liste des avions (NumAvion et NomAvion) pilotés par le pilote nommé Hoar
 <div class="tabbed-block">
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">Count</span><span class="p">(</span><span class="n">NumVol</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">NbVolGillot</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">VilleDepart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Gillot&quot;</span><span class="w"> </span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">VilleDepart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Gillot"</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 </div>
 </div>
@@ -6460,7 +6460,7 @@ R29 : Liste des avions (NumAvion et NomAvion) pilotés par le pilote nommé Hoar
 <div class="tabbed-block">
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">Count</span><span class="p">(</span><span class="n">VOL</span><span class="p">.</span><span class="n">NumVol</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">NbATR</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">AVION</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">AVION</span><span class="p">.</span><span class="n">NumAvion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">NumAvion</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">AVION</span><span class="p">.</span><span class="n">NomAvion</span><span class="w"> </span><span class="k">Like</span><span class="w"> </span><span class="ss">&quot;ATR*&quot;</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">AVION</span><span class="p">.</span><span class="n">NomAvion</span><span class="w"> </span><span class="k">Like</span><span class="w"> </span><span class="ss">"ATR*"</span><span class="p">;</span>
 </code></pre></div>
 </div>
 </div>
@@ -6497,8 +6497,8 @@ R29 : Liste des avions (NumAvion et NomAvion) pilotés par le pilote nommé Hoar
 <span class="k">ON</span><span class="w"> </span><span class="n">AVION</span><span class="p">.</span><span class="n">NumAvion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vol</span><span class="p">.</span><span class="n">NumAvion</span><span class="p">)</span>
 <span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">PILOTE</span>
 <span class="k">ON</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">NumPilote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">.</span><span class="n">NumPilote</span><span class="p">)</span>
-<span class="k">WHERE</span><span class="w">  </span><span class="n">PILOTE</span><span class="p">.</span><span class="n">NomPilote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Hoareau&quot;</span>
-<span class="k">AND</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">VilleDepart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Gillot&quot;</span><span class="w"> </span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w">  </span><span class="n">PILOTE</span><span class="p">.</span><span class="n">NomPilote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Hoareau"</span>
+<span class="k">AND</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">VilleDepart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Gillot"</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 </div>
 </div>
@@ -6651,7 +6651,7 @@ R29 : Liste des avions (NumAvion et NomAvion) pilotés par le pilote nommé Hoar
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

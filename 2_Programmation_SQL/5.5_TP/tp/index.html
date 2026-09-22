@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6507,7 +6507,7 @@
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="c1">-- Département auquel appartient un employé</span>
 <span class="n">Departement</span><span class="w"> </span><span class="p">(</span><span class="n">NumDept</span><span class="p">,</span><span class="w"> </span><span class="n">NomDept</span><span class="p">,</span><span class="w"> </span><span class="n">Localisation</span><span class="p">)</span>
 
-<span class="c1">-- Employés de l&#39;entreprise</span>
+<span class="c1">-- Employés de l'entreprise</span>
 <span class="n">Employe</span><span class="w"> </span><span class="p">(</span><span class="n">NumEmp</span><span class="p">,</span><span class="w"> </span><span class="n">NomEmp</span><span class="p">,</span><span class="w"> </span><span class="n">PrenomEmp</span><span class="p">,</span><span class="w"> </span><span class="n">DateEmbauche</span><span class="p">,</span><span class="w"> </span><span class="n">Poste</span><span class="p">,</span><span class="w"> </span><span class="n">NumDept</span><span class="p">,</span><span class="w"> </span><span class="n">SalaireBase</span><span class="p">)</span>
 
 <span class="c1">-- Bulletins de paie mensuels</span>
@@ -6561,25 +6561,25 @@
 
 <span class="c1">-- Jeu de données</span>
 <span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Departement</span><span class="w"> </span><span class="k">VALUES</span>
-<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Informatique&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Paris&#39;</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Comptabilité&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Lyon&#39;</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Ressources Humaines&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Marseille&#39;</span><span class="p">);</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">'Informatique'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Paris'</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">'Comptabilité'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Lyon'</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">'Ressources Humaines'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Marseille'</span><span class="p">);</span>
 
 <span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Employe</span><span class="w"> </span><span class="k">VALUES</span>
-<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w">  </span><span class="s1">&#39;Martin&#39;</span><span class="p">,</span><span class="w">   </span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span><span class="w">   </span><span class="s1">&#39;2018-03-15&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Développeur&#39;</span><span class="p">,</span><span class="w">       </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3200</span><span class="p">.</span><span class="mi">00</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w">  </span><span class="s1">&#39;Dupont&#39;</span><span class="p">,</span><span class="w">   </span><span class="s1">&#39;Bruno&#39;</span><span class="p">,</span><span class="w">   </span><span class="s1">&#39;2020-06-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Analyste&#39;</span><span class="p">,</span><span class="w">          </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2800</span><span class="p">.</span><span class="mi">00</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w">  </span><span class="s1">&#39;Bernard&#39;</span><span class="p">,</span><span class="w">  </span><span class="s1">&#39;Claire&#39;</span><span class="p">,</span><span class="w">  </span><span class="s1">&#39;2017-09-10&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Comptable&#39;</span><span class="p">,</span><span class="w">         </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2600</span><span class="p">.</span><span class="mi">00</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="s1">&#39;Leroy&#39;</span><span class="p">,</span><span class="w">    </span><span class="s1">&#39;David&#39;</span><span class="p">,</span><span class="w">   </span><span class="s1">&#39;2021-01-20&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Comptable&#39;</span><span class="p">,</span><span class="w">         </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2500</span><span class="p">.</span><span class="mi">00</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w">  </span><span class="s1">&#39;Moreau&#39;</span><span class="p">,</span><span class="w">   </span><span class="s1">&#39;Emilie&#39;</span><span class="p">,</span><span class="w">  </span><span class="s1">&#39;2015-11-05&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;RH Manager&#39;</span><span class="p">,</span><span class="w">        </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3500</span><span class="p">.</span><span class="mi">00</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w">  </span><span class="s1">&#39;Simon&#39;</span><span class="p">,</span><span class="w">    </span><span class="s1">&#39;Franck&#39;</span><span class="p">,</span><span class="w">  </span><span class="s1">&#39;2022-04-18&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Développeur&#39;</span><span class="p">,</span><span class="w">       </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3000</span><span class="p">.</span><span class="mi">00</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="w">  </span><span class="s1">&#39;Laurent&#39;</span><span class="p">,</span><span class="w">  </span><span class="s1">&#39;Gaëlle&#39;</span><span class="p">,</span><span class="w">  </span><span class="s1">&#39;2019-07-22&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Chef de projet&#39;</span><span class="p">,</span><span class="w">    </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4000</span><span class="p">.</span><span class="mi">00</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="w">  </span><span class="s1">&#39;Michel&#39;</span><span class="p">,</span><span class="w">   </span><span class="s1">&#39;Hugo&#39;</span><span class="p">,</span><span class="w">    </span><span class="s1">&#39;2023-02-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Stagiaire&#39;</span><span class="p">,</span><span class="w">         </span><span class="mi">2</span><span class="p">,</span><span class="w">  </span><span class="mi">900</span><span class="p">.</span><span class="mi">00</span><span class="p">);</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w">  </span><span class="s1">'Martin'</span><span class="p">,</span><span class="w">   </span><span class="s1">'Alice'</span><span class="p">,</span><span class="w">   </span><span class="s1">'2018-03-15'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Développeur'</span><span class="p">,</span><span class="w">       </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3200</span><span class="p">.</span><span class="mi">00</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w">  </span><span class="s1">'Dupont'</span><span class="p">,</span><span class="w">   </span><span class="s1">'Bruno'</span><span class="p">,</span><span class="w">   </span><span class="s1">'2020-06-01'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Analyste'</span><span class="p">,</span><span class="w">          </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2800</span><span class="p">.</span><span class="mi">00</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w">  </span><span class="s1">'Bernard'</span><span class="p">,</span><span class="w">  </span><span class="s1">'Claire'</span><span class="p">,</span><span class="w">  </span><span class="s1">'2017-09-10'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Comptable'</span><span class="p">,</span><span class="w">         </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2600</span><span class="p">.</span><span class="mi">00</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="s1">'Leroy'</span><span class="p">,</span><span class="w">    </span><span class="s1">'David'</span><span class="p">,</span><span class="w">   </span><span class="s1">'2021-01-20'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Comptable'</span><span class="p">,</span><span class="w">         </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2500</span><span class="p">.</span><span class="mi">00</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w">  </span><span class="s1">'Moreau'</span><span class="p">,</span><span class="w">   </span><span class="s1">'Emilie'</span><span class="p">,</span><span class="w">  </span><span class="s1">'2015-11-05'</span><span class="p">,</span><span class="w"> </span><span class="s1">'RH Manager'</span><span class="p">,</span><span class="w">        </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3500</span><span class="p">.</span><span class="mi">00</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w">  </span><span class="s1">'Simon'</span><span class="p">,</span><span class="w">    </span><span class="s1">'Franck'</span><span class="p">,</span><span class="w">  </span><span class="s1">'2022-04-18'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Développeur'</span><span class="p">,</span><span class="w">       </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3000</span><span class="p">.</span><span class="mi">00</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="w">  </span><span class="s1">'Laurent'</span><span class="p">,</span><span class="w">  </span><span class="s1">'Gaëlle'</span><span class="p">,</span><span class="w">  </span><span class="s1">'2019-07-22'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Chef de projet'</span><span class="p">,</span><span class="w">    </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4000</span><span class="p">.</span><span class="mi">00</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="w">  </span><span class="s1">'Michel'</span><span class="p">,</span><span class="w">   </span><span class="s1">'Hugo'</span><span class="p">,</span><span class="w">    </span><span class="s1">'2023-02-01'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Stagiaire'</span><span class="p">,</span><span class="w">         </span><span class="mi">2</span><span class="p">,</span><span class="w">  </span><span class="mi">900</span><span class="p">.</span><span class="mi">00</span><span class="p">);</span>
 
 <span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Prime</span><span class="w"> </span><span class="k">VALUES</span>
-<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Ancienneté&#39;</span><span class="p">,</span><span class="w">   </span><span class="mi">500</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-01-01&#39;</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Performance&#39;</span><span class="p">,</span><span class="w">  </span><span class="mi">300</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-01-01&#39;</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Ancienneté&#39;</span><span class="p">,</span><span class="w">   </span><span class="mi">800</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-01-01&#39;</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Performance&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-01-01&#39;</span><span class="p">);</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">'Ancienneté'</span><span class="p">,</span><span class="w">   </span><span class="mi">500</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">'2024-01-01'</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">'Performance'</span><span class="p">,</span><span class="w">  </span><span class="mi">300</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">'2024-01-01'</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s1">'Ancienneté'</span><span class="p">,</span><span class="w">   </span><span class="mi">800</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">'2024-01-01'</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="s1">'Performance'</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">'2024-01-01'</span><span class="p">);</span>
 </code></pre></div>
 </details>
 <h2 id="exercice-1-procedures-stockees-calcul-et-generation-de-bulletin">Exercice 1 — Procédures stockées : calcul et génération de bulletin<a class="headerlink" href="#exercice-1-procedures-stockees-calcul-et-generation-de-bulletin" title="Permanent link">⚓︎</a></h2>
@@ -6648,7 +6648,7 @@
 <span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="n">v_net</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">v_brut</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_cotis</span><span class="p">;</span>
 
 <span class="w">    </span><span class="c1">-- Récupération du nom complet</span>
-<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="n">PrenomEmp</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">NomEmp</span><span class="p">)</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">v_nom</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="n">PrenomEmp</span><span class="p">,</span><span class="w"> </span><span class="s1">' '</span><span class="p">,</span><span class="w"> </span><span class="n">NomEmp</span><span class="p">)</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">v_nom</span>
 <span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">Employe</span>
 <span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NumEmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_numEmp</span><span class="p">;</span>
 
@@ -6658,8 +6658,8 @@
 
 <span class="w">    </span><span class="c1">-- Message de confirmation</span>
 <span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span>
-<span class="w">        </span><span class="s1">&#39;Bulletin généré pour &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">v_nom</span><span class="p">,</span>
-<span class="w">        </span><span class="s1">&#39; — Net : &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">v_net</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; €&#39;</span>
+<span class="w">        </span><span class="s1">'Bulletin généré pour '</span><span class="p">,</span><span class="w"> </span><span class="n">v_nom</span><span class="p">,</span>
+<span class="w">        </span><span class="s1">' — Net : '</span><span class="p">,</span><span class="w"> </span><span class="n">v_net</span><span class="p">,</span><span class="w"> </span><span class="s1">' €'</span>
 <span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">confirmation</span><span class="p">;</span>
 <span class="k">END</span><span class="w"> </span><span class="o">|</span>
 <span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
@@ -6700,7 +6700,7 @@
 
 <span class="w">    </span><span class="k">CLOSE</span><span class="w"> </span><span class="n">cur_employes</span><span class="p">;</span>
 
-<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="s1">&#39;Bulletins générés pour le département &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">p_numDept</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">bilan</span><span class="p">;</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="s1">'Bulletins générés pour le département '</span><span class="p">,</span><span class="w"> </span><span class="n">p_numDept</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">bilan</span><span class="p">;</span>
 <span class="k">END</span><span class="w"> </span><span class="o">|</span>
 <span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
 
@@ -6729,14 +6729,14 @@
 <span class="k">BEGIN</span>
 <span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">v_existe</span><span class="w"> </span><span class="nb">INT</span><span class="p">;</span>
 
-<span class="w">    </span><span class="c1">-- Vérification de l&#39;existence de l&#39;employé</span>
+<span class="w">    </span><span class="c1">-- Vérification de l'existence de l'employé</span>
 <span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">v_existe</span>
 <span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">Employe</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NumEmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_numEmp</span><span class="p">;</span>
 
 <span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="n">v_existe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span>
-<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;Employé introuvable.&#39;</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">erreur</span><span class="p">;</span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">'Employé introuvable.'</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">erreur</span><span class="p">;</span>
 <span class="w">    </span><span class="n">ELSEIF</span><span class="w"> </span><span class="n">p_montant</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span>
-<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;Montant invalide : il doit être strictement positif.&#39;</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">erreur</span><span class="p">;</span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="s1">'Montant invalide : il doit être strictement positif.'</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">erreur</span><span class="p">;</span>
 <span class="w">    </span><span class="k">ELSE</span>
 <span class="w">        </span><span class="k">START</span><span class="w"> </span><span class="k">TRANSACTION</span><span class="p">;</span>
 
@@ -6752,17 +6752,17 @@
 <span class="w">        </span><span class="k">COMMIT</span><span class="p">;</span>
 
 <span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span>
-<span class="w">            </span><span class="s1">&#39;Prime de &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">p_montant</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; € versée avec succès.&#39;</span><span class="p">,</span>
-<span class="w">            </span><span class="s1">&#39; Salaire de base mis à jour.&#39;</span>
+<span class="w">            </span><span class="s1">'Prime de '</span><span class="p">,</span><span class="w"> </span><span class="n">p_montant</span><span class="p">,</span><span class="w"> </span><span class="s1">' € versée avec succès.'</span><span class="p">,</span>
+<span class="w">            </span><span class="s1">' Salaire de base mis à jour.'</span>
 <span class="w">        </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">confirmation</span><span class="p">;</span>
 <span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
 <span class="k">END</span><span class="w"> </span><span class="o">|</span>
 <span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
 
 <span class="c1">-- Tests :</span>
-<span class="k">CALL</span><span class="w"> </span><span class="n">verser_prime</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Ancienneté&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">.</span><span class="mi">00</span><span class="p">);</span><span class="w">   </span><span class="c1">-- Cas normal</span>
-<span class="k">CALL</span><span class="w"> </span><span class="n">verser_prime</span><span class="p">(</span><span class="mi">99</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Performance&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">.</span><span class="mi">00</span><span class="p">);</span><span class="w"> </span><span class="c1">-- Employé inexistant</span>
-<span class="k">CALL</span><span class="w"> </span><span class="n">verser_prime</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Ancienneté&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">.</span><span class="mi">00</span><span class="p">);</span><span class="w">  </span><span class="c1">-- Montant invalide</span>
+<span class="k">CALL</span><span class="w"> </span><span class="n">verser_prime</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">'Ancienneté'</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">.</span><span class="mi">00</span><span class="p">);</span><span class="w">   </span><span class="c1">-- Cas normal</span>
+<span class="k">CALL</span><span class="w"> </span><span class="n">verser_prime</span><span class="p">(</span><span class="mi">99</span><span class="p">,</span><span class="w"> </span><span class="s1">'Performance'</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">.</span><span class="mi">00</span><span class="p">);</span><span class="w"> </span><span class="c1">-- Employé inexistant</span>
+<span class="k">CALL</span><span class="w"> </span><span class="n">verser_prime</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">'Ancienneté'</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">.</span><span class="mi">00</span><span class="p">);</span><span class="w">  </span><span class="c1">-- Montant invalide</span>
 </code></pre></div>
 </details>
 <h2 id="exercice-3-triggers-historisation-et-controle">Exercice 3 — Triggers : historisation et contrôle<a class="headerlink" href="#exercice-3-triggers-historisation-et-controle" title="Permanent link">⚓︎</a></h2>
@@ -6813,8 +6813,8 @@
 <span class="w">    </span><span class="k">AND</span><span class="w">   </span><span class="n">Annee</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">Annee</span><span class="p">;</span>
 
 <span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="n">v_existe</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span>
-<span class="w">        </span><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">&#39;45000&#39;</span>
-<span class="w">            </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Un bulletin existe déjà pour cet employé ce mois-ci.&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">'45000'</span>
+<span class="w">            </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Un bulletin existe déjà pour cet employé ce mois-ci.'</span><span class="p">;</span>
 <span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
 <span class="k">END</span><span class="w"> </span><span class="o">|</span>
 <span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
@@ -6839,16 +6839,16 @@
 <span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NumEmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">OLD</span><span class="p">.</span><span class="n">NumEmp</span><span class="p">;</span>
 
 <span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="n">v_nbBulletins</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span>
-<span class="w">        </span><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">&#39;45000&#39;</span>
-<span class="w">            </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Suppression impossible : cet employé possède des bulletins de paie.&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">'45000'</span>
+<span class="w">            </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Suppression impossible : cet employé possède des bulletins de paie.'</span><span class="p">;</span>
 <span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
 <span class="k">END</span><span class="w"> </span><span class="o">|</span>
 <span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
 
-<span class="c1">-- Test (doit échouer si l&#39;employé 1 a des bulletins) :</span>
+<span class="c1">-- Test (doit échouer si l'employé 1 a des bulletins) :</span>
 <span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Employe</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NumEmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 
-<span class="c1">-- Test (doit réussir si l&#39;employé 8 n&#39;a pas de bulletins) :</span>
+<span class="c1">-- Test (doit réussir si l'employé 8 n'a pas de bulletins) :</span>
 <span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Employe</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NumEmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span>
 </code></pre></div>
 </details>
@@ -6872,12 +6872,12 @@
 <span class="w">    </span><span class="n">SalaireChiffre</span><span class="w"> </span><span class="n">VARBINARY</span><span class="p">(</span><span class="mi">256</span><span class="p">)</span>
 <span class="p">);</span>
 
-<span class="c1">-- Clé de chiffrement (en pratique, stockée hors de la BDD, ex : variable d&#39;environnement)</span>
-<span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">cle_secrete</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;MaCleSecrete2024!&#39;</span><span class="p">;</span>
+<span class="c1">-- Clé de chiffrement (en pratique, stockée hors de la BDD, ex : variable d'environnement)</span>
+<span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">cle_secrete</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'MaCleSecrete2024!'</span><span class="p">;</span>
 
 <span class="k">DELIMITER</span><span class="w"> </span><span class="o">|</span>
 
-<span class="c1">-- Procédure d&#39;insertion avec chiffrement AES</span>
+<span class="c1">-- Procédure d'insertion avec chiffrement AES</span>
 <span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">inserer_employe_securise</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="k">IN</span><span class="w"> </span><span class="n">p_numEmp</span><span class="w">  </span><span class="nb">INT</span><span class="p">,</span>
 <span class="w">    </span><span class="k">IN</span><span class="w"> </span><span class="n">p_nom</span><span class="w">     </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
@@ -6892,7 +6892,7 @@
 <span class="w">        </span><span class="n">p_prenom</span><span class="p">,</span>
 <span class="w">        </span><span class="n">AES_ENCRYPT</span><span class="p">(</span><span class="n">p_salaire</span><span class="p">,</span><span class="w"> </span><span class="o">@</span><span class="n">cle_secrete</span><span class="p">)</span>
 <span class="w">    </span><span class="p">);</span>
-<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="s1">&#39;Employé &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">p_prenom</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">p_nom</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; inséré avec salaire chiffré.&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">confirmation</span><span class="p">;</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="s1">'Employé '</span><span class="p">,</span><span class="w"> </span><span class="n">p_prenom</span><span class="p">,</span><span class="w"> </span><span class="s1">' '</span><span class="p">,</span><span class="w"> </span><span class="n">p_nom</span><span class="p">,</span><span class="w"> </span><span class="s1">' inséré avec salaire chiffré.'</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">confirmation</span><span class="p">;</span>
 <span class="k">END</span><span class="w"> </span><span class="o">|</span>
 
 <span class="c1">-- Procédure de lecture avec déchiffrement AES</span>
@@ -6910,8 +6910,8 @@
 <span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
 
 <span class="c1">-- Tests :</span>
-<span class="k">CALL</span><span class="w"> </span><span class="n">inserer_employe_securise</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Martin&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">3200</span><span class="p">.</span><span class="mi">00</span><span class="p">);</span>
-<span class="k">CALL</span><span class="w"> </span><span class="n">inserer_employe_securise</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Dupont&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Bruno&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2800</span><span class="p">.</span><span class="mi">00</span><span class="p">);</span>
+<span class="k">CALL</span><span class="w"> </span><span class="n">inserer_employe_securise</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">'Martin'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Alice'</span><span class="p">,</span><span class="w"> </span><span class="mi">3200</span><span class="p">.</span><span class="mi">00</span><span class="p">);</span>
+<span class="k">CALL</span><span class="w"> </span><span class="n">inserer_employe_securise</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">'Dupont'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Bruno'</span><span class="p">,</span><span class="w"> </span><span class="mi">2800</span><span class="p">.</span><span class="mi">00</span><span class="p">);</span>
 
 <span class="c1">-- Lecture chiffrée brute (illisible)</span>
 <span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">EmployeSecurise</span><span class="p">;</span>
@@ -6931,13 +6931,13 @@
 <p><strong>3.</strong> Créer un trigger <code>after_delete_bulletin</code> qui journalise toute suppression de bulletin dans la table d'audit avec le message <code>SUPPRESSION</code>.</p>
 <details class="question">
 <summary>Correction</summary>
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="c1">-- Table d&#39;audit</span>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="c1">-- Table d'audit</span>
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">AuditAccesBulletin</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">NumAudit</span><span class="w">      </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span>
 <span class="w">    </span><span class="n">UtilisateurDB</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
 <span class="w">    </span><span class="n">DateAcces</span><span class="w">     </span><span class="n">DATETIME</span><span class="p">,</span>
 <span class="w">    </span><span class="n">NumBulletin</span><span class="w">   </span><span class="nb">INT</span><span class="p">,</span>
-<span class="w">    </span><span class="n">TypeAcces</span><span class="w">     </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w">  </span><span class="c1">-- &#39;CONSULTATION&#39; ou &#39;SUPPRESSION&#39;</span>
+<span class="w">    </span><span class="n">TypeAcces</span><span class="w">     </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w">  </span><span class="c1">-- 'CONSULTATION' ou 'SUPPRESSION'</span>
 <span class="p">);</span>
 
 <span class="k">DELIMITER</span><span class="w"> </span><span class="o">|</span>
@@ -6945,9 +6945,9 @@
 <span class="c1">-- Procédure de consultation avec audit</span>
 <span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">consulter_bulletin</span><span class="w"> </span><span class="p">(</span><span class="k">IN</span><span class="w"> </span><span class="n">p_numBulletin</span><span class="w"> </span><span class="nb">INT</span><span class="p">)</span>
 <span class="k">BEGIN</span>
-<span class="w">    </span><span class="c1">-- Enregistrement de l&#39;accès dans la table d&#39;audit</span>
+<span class="w">    </span><span class="c1">-- Enregistrement de l'accès dans la table d'audit</span>
 <span class="w">    </span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">AuditAccesBulletin</span><span class="w"> </span><span class="p">(</span><span class="n">UtilisateurDB</span><span class="p">,</span><span class="w"> </span><span class="n">DateAcces</span><span class="p">,</span><span class="w"> </span><span class="n">NumBulletin</span><span class="p">,</span><span class="w"> </span><span class="n">TypeAcces</span><span class="p">)</span>
-<span class="w">    </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="k">CURRENT_USER</span><span class="p">(),</span><span class="w"> </span><span class="n">NOW</span><span class="p">(),</span><span class="w"> </span><span class="n">p_numBulletin</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;CONSULTATION&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="k">CURRENT_USER</span><span class="p">(),</span><span class="w"> </span><span class="n">NOW</span><span class="p">(),</span><span class="w"> </span><span class="n">p_numBulletin</span><span class="p">,</span><span class="w"> </span><span class="s1">'CONSULTATION'</span><span class="p">);</span>
 
 <span class="w">    </span><span class="c1">-- Retour du bulletin demandé</span>
 <span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">B</span><span class="p">.</span><span class="n">NumBulletin</span><span class="p">,</span><span class="w"> </span><span class="n">E</span><span class="p">.</span><span class="n">NomEmp</span><span class="p">,</span><span class="w"> </span><span class="n">E</span><span class="p">.</span><span class="n">PrenomEmp</span><span class="p">,</span>
@@ -6957,13 +6957,13 @@
 <span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">B</span><span class="p">.</span><span class="n">NumBulletin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_numBulletin</span><span class="p">;</span>
 <span class="k">END</span><span class="w"> </span><span class="o">|</span>
 
-<span class="c1">-- Trigger d&#39;audit sur suppression</span>
+<span class="c1">-- Trigger d'audit sur suppression</span>
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">after_delete_bulletin</span>
 <span class="k">AFTER</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Bulletin</span>
 <span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
 <span class="k">BEGIN</span>
 <span class="w">    </span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">AuditAccesBulletin</span><span class="w"> </span><span class="p">(</span><span class="n">UtilisateurDB</span><span class="p">,</span><span class="w"> </span><span class="n">DateAcces</span><span class="p">,</span><span class="w"> </span><span class="n">NumBulletin</span><span class="p">,</span><span class="w"> </span><span class="n">TypeAcces</span><span class="p">)</span>
-<span class="w">    </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="k">CURRENT_USER</span><span class="p">(),</span><span class="w"> </span><span class="n">NOW</span><span class="p">(),</span><span class="w"> </span><span class="k">OLD</span><span class="p">.</span><span class="n">NumBulletin</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;SUPPRESSION&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="k">CURRENT_USER</span><span class="p">(),</span><span class="w"> </span><span class="n">NOW</span><span class="p">(),</span><span class="w"> </span><span class="k">OLD</span><span class="p">.</span><span class="n">NumBulletin</span><span class="p">,</span><span class="w"> </span><span class="s1">'SUPPRESSION'</span><span class="p">);</span>
 <span class="k">END</span><span class="w"> </span><span class="o">|</span>
 
 <span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
@@ -6971,17 +6971,17 @@
 <span class="c1">-- Tests :</span>
 <span class="k">CALL</span><span class="w"> </span><span class="n">consulter_bulletin</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 
-<span class="c1">-- Suppression d&#39;un bulletin (déclenchera le trigger d&#39;audit)</span>
+<span class="c1">-- Suppression d'un bulletin (déclenchera le trigger d'audit)</span>
 <span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Bulletin</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NumBulletin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 
-<span class="c1">-- Consultation de la table d&#39;audit</span>
+<span class="c1">-- Consultation de la table d'audit</span>
 <span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">AuditAccesBulletin</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">DateAcces</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Bonne pratique</p>
 <p>La table d'audit ne doit <strong>jamais être modifiable</strong> par les utilisateurs applicatifs. Seul un compte d'administration dédié doit pouvoir la lire. On peut renforcer cela avec :
-<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">REVOKE</span><span class="w"> </span><span class="k">INSERT</span><span class="p">,</span><span class="w"> </span><span class="k">UPDATE</span><span class="p">,</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">GestionPaie</span><span class="p">.</span><span class="n">AuditAccesBulletin</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="s1">&#39;rh_user&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="p">;</span>
-<span class="k">REVOKE</span><span class="w"> </span><span class="k">INSERT</span><span class="p">,</span><span class="w"> </span><span class="k">UPDATE</span><span class="p">,</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">GestionPaie</span><span class="p">.</span><span class="n">AuditAccesBulletin</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="s1">&#39;compta_user&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="p">;</span>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">REVOKE</span><span class="w"> </span><span class="k">INSERT</span><span class="p">,</span><span class="w"> </span><span class="k">UPDATE</span><span class="p">,</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">GestionPaie</span><span class="p">.</span><span class="n">AuditAccesBulletin</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="s1">'rh_user'</span><span class="o">@</span><span class="s1">'localhost'</span><span class="p">;</span>
+<span class="k">REVOKE</span><span class="w"> </span><span class="k">INSERT</span><span class="p">,</span><span class="w"> </span><span class="k">UPDATE</span><span class="p">,</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">GestionPaie</span><span class="p">.</span><span class="n">AuditAccesBulletin</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="s1">'compta_user'</span><span class="o">@</span><span class="s1">'localhost'</span><span class="p">;</span>
 </code></pre></div></p>
 </div>
 </details>
@@ -7131,7 +7131,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

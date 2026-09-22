@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6591,11 +6591,11 @@
 
 <span class="w">    </span><span class="k">FETCH</span><span class="w"> </span><span class="n">curs_clients</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">v_nom</span><span class="p">,</span><span class="w"> </span><span class="n">v_prenom</span><span class="p">;</span><span class="w">    </span>
 <span class="w">    </span><span class="c1">-- On récupère la première ligne et on assigne les valeurs récupérées à nos variables locales</span>
-<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="n">v_prenom</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">v_nom</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s1">&#39;Premier client&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="n">v_prenom</span><span class="p">,</span><span class="w"> </span><span class="s1">' '</span><span class="p">,</span><span class="w"> </span><span class="n">v_nom</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s1">'Premier client'</span><span class="p">;</span>
 
 <span class="w">    </span><span class="k">FETCH</span><span class="w"> </span><span class="n">curs_clients</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">v_nom</span><span class="p">,</span><span class="w"> </span><span class="n">v_prenom</span><span class="p">;</span>
 <span class="w">    </span><span class="c1">-- On récupère la seconde ligne et on assigne les valeurs récupérées à nos variables locales</span>
-<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="n">v_prenom</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">v_nom</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s1">&#39;Second client&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="n">v_prenom</span><span class="p">,</span><span class="w"> </span><span class="s1">' '</span><span class="p">,</span><span class="w"> </span><span class="n">v_nom</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s1">'Second client'</span><span class="p">;</span>
 
 <span class="w">    </span><span class="k">CLOSE</span><span class="w"> </span><span class="n">curs_clients</span><span class="p">;</span><span class="w">     </span><span class="c1">-- Fermeture du curseur</span>
 <span class="k">END</span><span class="w"> </span><span class="o">|</span>
@@ -6627,7 +6627,7 @@
 
 <span class="w">    </span><span class="n">LOOP</span><span class="w">                                                  </span>
 <span class="w">        </span><span class="k">FETCH</span><span class="w"> </span><span class="n">curs_clients</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">v_nom</span><span class="p">,</span><span class="w"> </span><span class="n">v_prenom</span><span class="p">;</span><span class="w">                   </span>
-<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="n">v_prenom</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">v_nom</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s1">&#39;Client&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="n">v_prenom</span><span class="p">,</span><span class="w"> </span><span class="s1">' '</span><span class="p">,</span><span class="w"> </span><span class="n">v_nom</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s1">'Client'</span><span class="p">;</span>
 <span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="n">LOOP</span><span class="p">;</span>
 
 <span class="w">    </span><span class="k">CLOSE</span><span class="w"> </span><span class="n">curs_clients</span><span class="p">;</span><span class="w"> </span>
@@ -6661,9 +6661,9 @@ L'article Numéro ........  portant la désignation ........ coûte .........</p
 <span class="w">            </span><span class="k">IF</span><span class="w"> </span><span class="n">fin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">THEN</span>
 <span class="w">                </span><span class="n">LEAVE</span><span class="w"> </span><span class="n">boucle</span><span class="p">;</span>
 <span class="w">            </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
-<span class="w">            </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="s1">&#39;L\&#39;</span><span class="n">article</span><span class="w"> </span><span class="n">numéro</span><span class="w"> </span><span class="s1">&#39;, v_a,</span>
-<span class="s1">                          &#39;</span><span class="w"> </span><span class="n">portant</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">désignation</span><span class="w"> </span><span class="s1">&#39;, v_b,</span>
-<span class="s1">                          &#39;</span><span class="w"> </span><span class="n">coûte</span><span class="w"> </span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">v_c</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">resultat</span><span class="p">;</span>
+<span class="w">            </span><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="s1">'L\'</span><span class="n">article</span><span class="w"> </span><span class="n">numéro</span><span class="w"> </span><span class="s1">', v_a,</span>
+<span class="s1">                          '</span><span class="w"> </span><span class="n">portant</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">désignation</span><span class="w"> </span><span class="s1">', v_b,</span>
+<span class="s1">                          '</span><span class="w"> </span><span class="n">coûte</span><span class="w"> </span><span class="err">'</span><span class="p">,</span><span class="w"> </span><span class="n">v_c</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">resultat</span><span class="p">;</span>
 <span class="w">        </span><span class="k">END</span><span class="w"> </span><span class="n">LOOP</span><span class="p">;</span>
 
 <span class="w">        </span><span class="k">CLOSE</span><span class="w"> </span><span class="n">Cur_ListeArt</span><span class="p">;</span>
@@ -6818,7 +6818,7 @@ L'article Numéro ........  portant la désignation ........ coûte .........</p
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

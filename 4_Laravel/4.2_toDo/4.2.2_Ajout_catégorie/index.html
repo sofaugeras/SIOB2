@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6607,7 +6607,7 @@ Une TODO List est un procédé qui se veut simple et efficace pour gérer les t�
 <span class="p">{</span>
     <span class="k">use</span> <span class="nx">HasFactory</span><span class="p">;</span>
 
-    <span class="k">protected</span> <span class="nv">$fillable</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;texte&#39;</span><span class="p">,</span> <span class="s1">&#39;termine&#39;</span><span class="p">,</span> <span class="s1">&#39;important&#39;</span><span class="p">];</span>
+    <span class="k">protected</span> <span class="nv">$fillable</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'texte'</span><span class="p">,</span> <span class="s1">'termine'</span><span class="p">,</span> <span class="s1">'important'</span><span class="p">];</span>
 
     <span class="k">public</span> <span class="k">function</span> <span class="nf">categories</span><span class="p">()</span><span class="o">:</span> <span class="nx">BelongsToMany</span>
     <span class="p">{</span>
@@ -6655,7 +6655,7 @@ On va donc faire une saisie directement en Base de données. Mais en phase de mi
 <p>Je travaille dans le contexte Laravel 10 pour créer une application de gestion de taches.<br />
 Une tache peut être affecter à une catégorie : pro, famille, sport, associatif par exemple.<br />
 Ci dessous le code de la migration de la table : <br /></p>
-<p>```php
+<p><code>hp
     public function up(): void
     {
         Schema::create('categories', function (Blueprint $table) {
@@ -6664,8 +6664,7 @@ Ci dessous le code de la migration de la table : <br /></p>
             $table-&gt;primary('idcat');
             $table-&gt;timestamps();
         });
-    }
-    ````
+    }</code>
 Peux tu me donner le seeder correspondant ?</p>
 </details>
 <p>On va créer un nouveau fichier dans le répertoire <code>database\seeders</code>, qui contiendra les données à injecter en table.
@@ -6692,15 +6691,15 @@ Peux tu me donner le seeder correspondant ?</p>
     <span class="k">public</span> <span class="k">function</span> <span class="nf">run</span><span class="p">()</span>
     <span class="p">{</span>
         <span class="nv">$categories</span> <span class="o">=</span> <span class="p">[</span>
-            <span class="p">[</span><span class="s1">&#39;idcat&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;libelle&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Pro&#39;</span><span class="p">],</span>
-            <span class="p">[</span><span class="s1">&#39;idcat&#39;</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;libelle&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Famille&#39;</span><span class="p">],</span>
-            <span class="p">[</span><span class="s1">&#39;idcat&#39;</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;libelle&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Sport&#39;</span><span class="p">],</span>
-            <span class="p">[</span><span class="s1">&#39;idcat&#39;</span> <span class="o">=&gt;</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;libelle&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Associatif&#39;</span><span class="p">],</span>
-            <span class="c1">// Ajoutez d&#39;autres catégories au besoin</span>
+            <span class="p">[</span><span class="s1">'idcat'</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">'libelle'</span> <span class="o">=&gt;</span> <span class="s1">'Pro'</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">'idcat'</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">'libelle'</span> <span class="o">=&gt;</span> <span class="s1">'Famille'</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">'idcat'</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">'libelle'</span> <span class="o">=&gt;</span> <span class="s1">'Sport'</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">'idcat'</span> <span class="o">=&gt;</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">'libelle'</span> <span class="o">=&gt;</span> <span class="s1">'Associatif'</span><span class="p">],</span>
+            <span class="c1">// Ajoutez d'autres catégories au besoin</span>
         <span class="p">];</span>
 
-        <span class="c1">// Insertion des données dans la table &#39;categories&#39;</span>
-        <span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">&#39;categories&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">insert</span><span class="p">(</span><span class="nv">$categories</span><span class="p">);</span>
+        <span class="c1">// Insertion des données dans la table 'categories'</span>
+        <span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">'categories'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">insert</span><span class="p">(</span><span class="nv">$categories</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="cp">?&gt;</span>
@@ -6712,7 +6711,7 @@ Peux tu me donner le seeder correspondant ?</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">class DatabaseSeeder extends Seeder</span>
 <span class="x">{</span>
 <span class="x">    /**</span>
-<span class="x">     * Seed the application&#39;s database.</span>
+<span class="x">     * Seed the application's database.</span>
 <span class="x">     */</span>
 <span class="x">    public function run(): void</span>
 <span class="x">    {</span>
@@ -6747,7 +6746,7 @@ php artisan migrate:fresh --seed --seeder=CategoriesSeeder
 <span class="x"> */</span>
 <span class="x">public function listeCatégories()</span>
 <span class="x">{</span>
-<span class="x">    return view(&quot;home&quot;, [&quot;categories&quot; =&gt; Categories::all()]);</span>
+<span class="x">    return view("home", ["categories" =&gt; Categories::all()]);</span>
 <span class="x">}</span>
 </code></pre></div>
 </details>
@@ -6757,7 +6756,7 @@ php artisan migrate:fresh --seed --seeder=CategoriesSeeder
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">//Liste</span>
 <span class="x">public function liste()</span>
 <span class="x">{</span>
-<span class="x">    return view(&quot;home&quot;, [&quot;todos&quot; =&gt; Todos::all(), &quot;categories&quot; =&gt; Categories::all()]);</span>
+<span class="x">    return view("home", ["todos" =&gt; Todos::all(), "categories" =&gt; Categories::all()]);</span>
 <span class="x">}</span>
 </code></pre></div>
 </details>
@@ -6784,12 +6783,12 @@ php artisan migrate:fresh --seed --seeder=CategoriesSeeder
 <details class="tips">
 <summary>Code dans home pour les boites à cocher</summary>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x"> &lt;!-- boites à cocher pour les catégories --&gt;</span>
-<span class="x">&lt;div class=&quot;form-group&quot;&gt;</span>
+<span class="x">&lt;div class="form-group"&gt;</span>
 <span class="x">&lt;label&gt;Catégories&lt;/label&gt;</span>
 <span class="x">    @foreach($categories as $categorie)</span>
-<span class="x">        &lt;div class=&quot;form-check&quot;&gt;</span>
-<span class="x">            &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; name=&quot;categories[]&quot; value=&quot;{{ $categorie-&gt;id }}&quot;&gt;</span>
-<span class="x">            &lt;label class=&quot;form-check-label&quot;&gt;{{ $categorie-&gt;libelle }}&lt;/label&gt;</span>
+<span class="x">        &lt;div class="form-check"&gt;</span>
+<span class="x">            &lt;input class="form-check-input" type="checkbox" name="categories[]" value="{{ $categorie-&gt;id }}"&gt;</span>
+<span class="x">            &lt;label class="form-check-label"&gt;{{ $categorie-&gt;libelle }}&lt;/label&gt;</span>
 <span class="x">        &lt;/div&gt;</span>
 <span class="x">    @endforeach</span>
 <span class="x">&lt;/div&gt;</span>
@@ -6807,14 +6806,14 @@ php artisan migrate:fresh --seed --seeder=CategoriesSeeder
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Créer la migration de la table d'association <code>create_categories_todos_table. et supprimer celle de</code>categorise`.</p>
 <p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
 <span class="x">{</span>
-<span class="x">    Schema::create(&#39;categories_todos&#39;, function (Blueprint $table) {</span>
-<span class="x">        $table-&gt;integer(&#39;categories_id&#39;);</span>
-<span class="x">        $table-&gt;integer(&#39;todos_id&#39;);</span>
+<span class="x">    Schema::create('categories_todos', function (Blueprint $table) {</span>
+<span class="x">        $table-&gt;integer('categories_id');</span>
+<span class="x">        $table-&gt;integer('todos_id');</span>
 <span class="x">        //Clé primaire composée</span>
-<span class="x">        $table-&gt;primary([&#39;categories_id&#39;, &#39;todos_id&#39;]);</span>
+<span class="x">        $table-&gt;primary(['categories_id', 'todos_id']);</span>
 <span class="x">        //Clés étrangères</span>
-<span class="x">        $table-&gt;foreign(&#39;categories_id&#39;)-&gt;references(&#39;id&#39;)-&gt;on(&#39;categories&#39;);</span>
-<span class="x">        $table-&gt;foreign(&#39;todos_id&#39;)-&gt;references(&#39;id&#39;)-&gt;on(&#39;todos&#39;)-&gt;onDelete(&#39;cascade&#39;);</span>
+<span class="x">        $table-&gt;foreign('categories_id')-&gt;references('id')-&gt;on('categories');</span>
+<span class="x">        $table-&gt;foreign('todos_id')-&gt;references('id')-&gt;on('todos')-&gt;onDelete('cascade');</span>
 
 <span class="x">        $table-&gt;timestamps();</span>
 <span class="x">    });</span>
@@ -6823,11 +6822,11 @@ php artisan migrate:fresh --seed --seeder=CategoriesSeeder
 <img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Reprendre la migration de la table   <code>catégories</code></p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x"> public function up(): void</span>
 <span class="x">{</span>
-<span class="x">    Schema::create(&#39;categories&#39;, function (Blueprint $table) {</span>
-<span class="x">        $table-&gt;integer(&#39;id&#39;);</span>
-<span class="x">        $table-&gt;string(&#39;libelle&#39;);</span>
+<span class="x">    Schema::create('categories', function (Blueprint $table) {</span>
+<span class="x">        $table-&gt;integer('id');</span>
+<span class="x">        $table-&gt;string('libelle');</span>
 <span class="x">        //Clé primaire</span>
-<span class="x">        $table-&gt;primary(&#39;id&#39;);</span>
+<span class="x">        $table-&gt;primary('id');</span>
 <span class="x">        $table-&gt;timestamps();</span>
 <span class="x">    });</span>
 <span class="x">}</span>
@@ -6835,14 +6834,14 @@ php artisan migrate:fresh --seed --seeder=CategoriesSeeder
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> Reprendre la migration de la table   <code>Todos</code></p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
 <span class="x">{</span>
-<span class="x">    Schema::create(&#39;todos&#39;, function (Blueprint $table) {</span>
-<span class="x">        $table-&gt;integer(&#39;id&#39;)-&gt;autoIncrement();</span>
-<span class="x">        $table-&gt;string(&#39;texte&#39;);</span>
-<span class="x">        $table-&gt;boolean(&#39;termine&#39;)-&gt;default(0);</span>
-<span class="x">        $table-&gt;boolean(&#39;important&#39;)-&gt;default(0);</span>
+<span class="x">    Schema::create('todos', function (Blueprint $table) {</span>
+<span class="x">        $table-&gt;integer('id')-&gt;autoIncrement();</span>
+<span class="x">        $table-&gt;string('texte');</span>
+<span class="x">        $table-&gt;boolean('termine')-&gt;default(0);</span>
+<span class="x">        $table-&gt;boolean('important')-&gt;default(0);</span>
 
 <span class="x">        #Déclaraction de la clé primaire</span>
-<span class="x">        $table-&gt;primary(&#39;id&#39;);</span>
+<span class="x">        $table-&gt;primary('id');</span>
 
 <span class="x">        $table-&gt;timestamps();</span>
 <span class="x">        /*Utilisation du softDelete*/</span>
@@ -6862,9 +6861,9 @@ Lisez un peu de documentation <a href="https://laravel.sillo.org/cours-laravel-1
 <span class="x">    //....</span>
 <span class="x">        $todo-&gt;save();</span>
 <span class="x">        $todo-&gt;categories()-&gt;attach($cats); /*A ajouter */</span>
-<span class="x">        return redirect()-&gt;route(&#39;todo.liste&#39;);</span>
+<span class="x">        return redirect()-&gt;route('todo.liste');</span>
 <span class="x">    } else{</span>
-<span class="x">        return redirect()-&gt;route(&#39;todo.liste&#39;)-&gt;with(&#39;message&#39;, &quot;Veuillez saisir une note à ajouter&quot;);</span>
+<span class="x">        return redirect()-&gt;route('todo.liste')-&gt;with('message', "Veuillez saisir une note à ajouter");</span>
 <span class="x">    }</span>
 
 <span class="x">}</span>
@@ -6878,15 +6877,15 @@ Lisez un peu de documentation <a href="https://laravel.sillo.org/cours-laravel-1
 <p>Il faut modifier la migration de Todo pour ajouter la fonction SQL de deleteOnCascade.</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
 <span class="x">{</span>
-<span class="x">    Schema::create(&#39;categories_todos&#39;, function (Blueprint $table) {</span>
-<span class="x">        $table-&gt;integer(&#39;categories_id&#39;);</span>
-<span class="x">        $table-&gt;integer(&#39;todos_id&#39;);</span>
+<span class="x">    Schema::create('categories_todos', function (Blueprint $table) {</span>
+<span class="x">        $table-&gt;integer('categories_id');</span>
+<span class="x">        $table-&gt;integer('todos_id');</span>
 
-<span class="x">        $table-&gt;foreign(&#39;categories_id&#39;)-&gt;references(&#39;id&#39;)-&gt;on(&#39;categories&#39;);</span>
-<span class="x">        $table-&gt;foreign(&#39;todos_id&#39;)-&gt;references(&#39;id&#39;)-&gt;on(&#39;todos&#39;)</span>
-<span class="x">            -&gt;onDelete(&#39;cascade&#39;);</span>
+<span class="x">        $table-&gt;foreign('categories_id')-&gt;references('id')-&gt;on('categories');</span>
+<span class="x">        $table-&gt;foreign('todos_id')-&gt;references('id')-&gt;on('todos')</span>
+<span class="x">            -&gt;onDelete('cascade');</span>
 
-<span class="x">        $table-&gt;primary([&#39;categories_id&#39;, &#39;todos_id&#39;]);</span>
+<span class="x">        $table-&gt;primary(['categories_id', 'todos_id']);</span>
 <span class="x">        $table-&gt;timestamps();</span>
 <span class="x">    });</span>
 <span class="x">}</span>
@@ -6914,7 +6913,7 @@ Lisez un peu de documentation <a href="https://laravel.sillo.org/cours-laravel-1
     <span class="k">use</span> <span class="nx">HasFactory</span><span class="p">;</span>
     <span class="k">use</span> <span class="nx">SoftDeletes</span><span class="p">;</span>
 
-    <span class="k">protected</span> <span class="nv">$fillable</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;texte&#39;</span><span class="p">,</span> <span class="s1">&#39;termine&#39;</span><span class="p">,</span> <span class="s1">&#39;important&#39;</span><span class="p">];</span>
+    <span class="k">protected</span> <span class="nv">$fillable</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'texte'</span><span class="p">,</span> <span class="s1">'termine'</span><span class="p">,</span> <span class="s1">'important'</span><span class="p">];</span>
 
     <span class="k">public</span> <span class="k">function</span> <span class="nf">categories</span><span class="p">()</span><span class="o">:</span> <span class="nx">BelongsToMany</span>
     <span class="p">{</span>
@@ -6930,12 +6929,12 @@ Lisez un peu de documentation <a href="https://laravel.sillo.org/cours-laravel-1
 <summary>migration Todo</summary>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">public function up(): void</span>
 <span class="x">{</span>
-<span class="x">    Schema::create(&#39;todos&#39;, function (Blueprint $table) {</span>
-<span class="x">        $table-&gt;integer(&#39;id&#39;)-&gt;autoIncrement();</span>
-<span class="x">        #$table-&gt;primary(&#39;id&#39;);</span>
-<span class="x">        $table-&gt;string(&#39;texte&#39;);</span>
-<span class="x">        $table-&gt;boolean(&#39;termine&#39;)-&gt;default(0);</span>
-<span class="x">        $table-&gt;boolean(&#39;important&#39;)-&gt;default(0);</span>
+<span class="x">    Schema::create('todos', function (Blueprint $table) {</span>
+<span class="x">        $table-&gt;integer('id')-&gt;autoIncrement();</span>
+<span class="x">        #$table-&gt;primary('id');</span>
+<span class="x">        $table-&gt;string('texte');</span>
+<span class="x">        $table-&gt;boolean('termine')-&gt;default(0);</span>
+<span class="x">        $table-&gt;boolean('important')-&gt;default(0);</span>
 
 <span class="x">        $table-&gt;timestamps();</span>
 <span class="x">        /*Utilisation du softDelete*/</span>
@@ -6956,11 +6955,11 @@ Lisez un peu de documentation <a href="https://laravel.sillo.org/cours-laravel-1
 <summary>Code de web.php</summary>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">    Route::controller(TodosController::class)-&gt;group(function () {</span>
 
-<span class="x">    Route::post(&#39;/action/add&#39;, &#39;saveTodo&#39;)-&gt;name(&#39;todo.save&#39;);</span>
-<span class="x">    Route::get(&#39;/action/done/{id}&#39; , &#39;markAsDone&#39;)-&gt;name(&#39;todo.done&#39;);</span>
-<span class="x">    Route::get(&#39;/action/delete/{id}&#39;, &#39;deleteTodo&#39;)-&gt;name(&#39;todo.delete&#39;);</span>
-<span class="x">    Route::get(&#39;/action/lower/{id}&#39;,  &#39;lowerPriority&#39;)-&gt;name(&#39;todo.lower&#39;);</span>
-<span class="x">    Route::get(&#39;/action/raise/{id}&#39;, &#39;raisePriority&#39;)-&gt;name(&#39;todo.raise&#39;);</span>
+<span class="x">    Route::post('/action/add', 'saveTodo')-&gt;name('todo.save');</span>
+<span class="x">    Route::get('/action/done/{id}' , 'markAsDone')-&gt;name('todo.done');</span>
+<span class="x">    Route::get('/action/delete/{id}', 'deleteTodo')-&gt;name('todo.delete');</span>
+<span class="x">    Route::get('/action/lower/{id}',  'lowerPriority')-&gt;name('todo.lower');</span>
+<span class="x">    Route::get('/action/raise/{id}', 'raisePriority')-&gt;name('todo.raise');</span>
 <span class="x">});</span>
 </code></pre></div>
 </details>
@@ -7112,7 +7111,7 @@ Lisez un peu de documentation <a href="https://laravel.sillo.org/cours-laravel-1
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

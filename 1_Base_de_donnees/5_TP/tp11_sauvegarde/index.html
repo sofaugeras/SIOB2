@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6509,9 +6509,9 @@
 <span class="k">set</span> <span class="nv">MYSQL_USER</span><span class="p">=</span>root
 <span class="k">set</span> <span class="nv">MYSQL_PASSWORD</span><span class="p">=</span>VotreMotDePasse
 
-<span class="k">if</span> <span class="k">not</span> <span class="k">exist</span> <span class="s2">&quot;</span><span class="nv">%BACKUP_DIR%</span><span class="s2">&quot;</span> <span class="k">mkdir</span> <span class="s2">&quot;</span><span class="nv">%BACKUP_DIR%</span><span class="s2">&quot;</span>
+<span class="k">if</span> <span class="k">not</span> <span class="k">exist</span> <span class="s2">"</span><span class="nv">%BACKUP_DIR%</span><span class="s2">"</span> <span class="k">mkdir</span> <span class="s2">"</span><span class="nv">%BACKUP_DIR%</span><span class="s2">"</span>
 
-mysqldump -u <span class="nv">%MYSQL_USER%</span> -p<span class="nv">%MYSQL_PASSWORD%</span> --all-databases <span class="p">&gt;</span> <span class="s2">&quot;</span><span class="nv">%BACKUP_FILE%</span><span class="s2">&quot;</span>
+mysqldump -u <span class="nv">%MYSQL_USER%</span> -p<span class="nv">%MYSQL_PASSWORD%</span> --all-databases <span class="p">&gt;</span> <span class="s2">"</span><span class="nv">%BACKUP_FILE%</span><span class="s2">"</span>
 
 <span class="k">if</span> <span class="nv">%ERRORLEVEL%</span> <span class="ow">EQU</span> 0 <span class="p">(</span>
    <span class="k">echo</span> Sauvegarde réussie : <span class="nv">%BACKUP_FILE%</span>
@@ -6721,7 +6721,7 @@ mysqldump -u <span class="nv">%MYSQL_USER%</span> -p<span class="nv">%MYSQL_PASS
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

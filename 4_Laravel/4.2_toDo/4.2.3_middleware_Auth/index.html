@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6508,18 +6508,18 @@ npm run dev
 <p><div class="language-PHP highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Ajouter les namespaces nécessaires ! </span>
 <span class="x">public function run()</span>
 <span class="x">    {</span>
-<span class="x">        // Exemple d&#39;insertion d&#39;un utilisateur</span>
-<span class="x">        DB::table(&#39;users&#39;)-&gt;insert([</span>
-<span class="x">            &#39;name&#39; =&gt; &#39;John Doe&#39;,</span>
-<span class="x">            &#39;email&#39; =&gt; &#39;john.doe@example.com&#39;,</span>
-<span class="x">            &#39;email_verified_at&#39; =&gt; now(),</span>
-<span class="x">            &#39;password&#39; =&gt; Hash::make(&#39;mdp&#39;), // Assurez-vous de hasher le mot de passe</span>
-<span class="x">            &#39;remember_token&#39; =&gt; Str::random(10),</span>
-<span class="x">            &#39;created_at&#39; =&gt; now(),</span>
-<span class="x">            &#39;updated_at&#39; =&gt; now(),</span>
+<span class="x">        // Exemple d'insertion d'un utilisateur</span>
+<span class="x">        DB::table('users')-&gt;insert([</span>
+<span class="x">            'name' =&gt; 'John Doe',</span>
+<span class="x">            'email' =&gt; 'john.doe@example.com',</span>
+<span class="x">            'email_verified_at' =&gt; now(),</span>
+<span class="x">            'password' =&gt; Hash::make('mdp'), // Assurez-vous de hasher le mot de passe</span>
+<span class="x">            'remember_token' =&gt; Str::random(10),</span>
+<span class="x">            'created_at' =&gt; now(),</span>
+<span class="x">            'updated_at' =&gt; now(),</span>
 <span class="x">        ]);</span>
 
-<span class="x">        // Ajoutez d&#39;autres utilisateurs au besoin</span>
+<span class="x">        // Ajoutez d'autres utilisateurs au besoin</span>
 </code></pre></div>
 Ajouter le seeder <code>UserSeeder</code> dans le <code>DatabaseSeeder</code> </p>
 <p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">        $this-&gt;call([</span>
@@ -6532,22 +6532,22 @@ Puis relancer la migration avec les tables concernant l'authentification (Users,
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>php artisan migrate:fresh --seed
 </code></pre></div>
 <p>▶️ Il faut à présent activer le middelware d'authentication sur nos routes todo. Reprendre le <code>web.php</code> et ajouter les lignes dans le nouveau web.php qui contient en plus des liens vers la gestion de l'autentification.</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Groupe de routes avec middleware d&#39;authentification</span>
-<span class="x">Route::get(&#39;/dashboard&#39;, function () {</span>
-<span class="x">    return view(&#39;dashboard&#39;);</span>
-<span class="x">})-&gt;middleware([&#39;auth&#39;, &#39;verified&#39;])-&gt;name(&#39;dashboard&#39;);</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Groupe de routes avec middleware d'authentification</span>
+<span class="x">Route::get('/dashboard', function () {</span>
+<span class="x">    return view('dashboard');</span>
+<span class="x">})-&gt;middleware(['auth', 'verified'])-&gt;name('dashboard');</span>
 
-<span class="x">Route::middleware(&#39;auth&#39;)-&gt;group(function () {</span>
-<span class="x">    Route::get(&#39;/profile&#39;, [ProfileController::class, &#39;edit&#39;])-&gt;name(&#39;profile.edit&#39;);</span>
-<span class="x">    Route::patch(&#39;/profile&#39;, [ProfileController::class, &#39;update&#39;])-&gt;name(&#39;profile.update&#39;);</span>
-<span class="x">    Route::delete(&#39;/profile&#39;, [ProfileController::class, &#39;destroy&#39;])-&gt;name(&#39;profile.destroy&#39;);</span>
+<span class="x">Route::middleware('auth')-&gt;group(function () {</span>
+<span class="x">    Route::get('/profile', [ProfileController::class, 'edit'])-&gt;name('profile.edit');</span>
+<span class="x">    Route::patch('/profile', [ProfileController::class, 'update'])-&gt;name('profile.update');</span>
+<span class="x">    Route::delete('/profile', [ProfileController::class, 'destroy'])-&gt;name('profile.destroy');</span>
 <span class="x">});</span>
 </code></pre></div>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Activation du middleware d&#39;authentification pour toutes les routes Todos. Création d&#39;un groupe de routes.</span>
-<span class="x">Route::middleware(&#39;auth&#39;)-&gt;group(function () {</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Activation du middleware d'authentification pour toutes les routes Todos. Création d'un groupe de routes.</span>
+<span class="x">Route::middleware('auth')-&gt;group(function () {</span>
 <span class="x">    // Action correspondant au form de la vue (donc POST) et appel de la fonction saveTodo du controller</span>
 <span class="x">    // Route concernant les todos</span>
-<span class="x">    Route::get(&#39;/&#39;, [TodosController::class, &#39;liste&#39;])-&gt;name(&#39;todo.liste&#39;);</span>
+<span class="x">    Route::get('/', [TodosController::class, 'liste'])-&gt;name('todo.liste');</span>
 <span class="x">    [...]</span>
 <span class="x">});</span>
 </code></pre></div>
@@ -6559,9 +6559,9 @@ npm run dev
 php artisan view:clear
 </code></pre></div>
 <p>L'installation de breeze/blade a également casser le fichier <code>app.js</code>. Remettre les lignes suivantes :</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">import &#39;bootstrap/dist/css/bootstrap.min.css&#39;;</span>
-<span class="x">import &#39;bootstrap-icons/font/bootstrap-icons.css&#39;;</span>
-<span class="x">import &#39;@popperjs/core&#39;;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">import 'bootstrap/dist/css/bootstrap.min.css';</span>
+<span class="x">import 'bootstrap-icons/font/bootstrap-icons.css';</span>
+<span class="x">import '@popperjs/core';</span>
 </code></pre></div>
 </details>
 <p>▶️ Observer dans l'arborescence ce que vous a apporté l'installation de Breeze (dans <code>views</code>, dans <code>js/Pages/auth</code>)</p>
@@ -6580,22 +6580,22 @@ php artisan view:clear
 <p>▶️ On commence par créer un fichier de log dédié. Dans <code>config\logging.php</code> ajouter l'entrée suivante :</p>
 <p>Dans "<strong>channels</strong>", ajouter : </p>
 <p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>// canal dédié aux mails
-        &#39;mail&#39; =&gt; [
-            &#39;driver&#39; =&gt; &#39;single&#39;,
-            &#39;path&#39; =&gt; storage_path(&#39;logs/mails.log&#39;),
-            &#39;level&#39; =&gt; &#39;debug&#39;,
+        'mail' =&gt; [
+            'driver' =&gt; 'single',
+            'path' =&gt; storage_path('logs/mails.log'),
+            'level' =&gt; 'debug',
         ],
 </code></pre></div>
 ▶️ puis dans le <code>.env</code>
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>MAIL_MAILER=custom_log
-MAIL_FROM_ADDRESS=&quot;noreply@exemple.local&quot;
-MAIL_FROM_NAME=&quot;Laravel Todo 2026&quot;
+MAIL_FROM_ADDRESS="noreply@exemple.local"
+MAIL_FROM_NAME="Laravel Todo 2026"
 </code></pre></div>
 ▶️ puis dans le mailer <code>config\mail.php</code>, ajouter l'entrée suivante :
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>// mailer personnalisé pointant vers notre canal
-    &#39;custom_log&#39; =&gt; [
-        &#39;transport&#39; =&gt; &#39;log&#39;,
-        &#39;channel&#39; =&gt; &#39;mail&#39;, // nom du canal défini plus haut
+    'custom_log' =&gt; [
+        'transport' =&gt; 'log',
+        'channel' =&gt; 'mail', // nom du canal défini plus haut
     ],
 </code></pre></div>
 → Les mails seront écrits dans storage/logs/mails.log.</p>
@@ -6757,7 +6757,7 @@ MAIL_FROM_NAME=&quot;Laravel Todo 2026&quot;
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

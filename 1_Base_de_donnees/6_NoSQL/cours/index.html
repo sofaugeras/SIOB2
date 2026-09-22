@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6760,7 +6760,7 @@
 </li>
 <li>
 <p><strong>Créer une collection et insérer un document</strong> :
-   <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">insertOne</span><span class="p">({</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Laptop&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">price</span><span class="o">:</span><span class="w"> </span><span class="mf">1200</span><span class="p">,</span><span class="w"> </span><span class="nx">stock</span><span class="o">:</span><span class="w"> </span><span class="mf">50</span><span class="w"> </span><span class="p">})</span>
+   <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">insertOne</span><span class="p">({</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">"Laptop"</span><span class="p">,</span><span class="w"> </span><span class="nx">price</span><span class="o">:</span><span class="w"> </span><span class="mf">1200</span><span class="p">,</span><span class="w"> </span><span class="nx">stock</span><span class="o">:</span><span class="w"> </span><span class="mf">50</span><span class="w"> </span><span class="p">})</span>
 </code></pre></div></p>
 </li>
 <li>
@@ -6807,23 +6807,23 @@ Accepter l'installation de MongoDB Compass</p>
 </ol>
 <p><a class="md-button" href="../data/restaurants.zip">🔽 Télécharger le jeu de données restaurants</a></p>
 <div class="language-json highlight"><span class="filename">JSON</span><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;address&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">     </span><span class="nt">&quot;building&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1007&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="nt">&quot;coord&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="mf">-73.856077</span><span class="p">,</span><span class="w"> </span><span class="mf">40.848447</span><span class="w"> </span><span class="p">],</span>
-<span class="w">     </span><span class="nt">&quot;street&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Morris Park Ave&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="nt">&quot;zipcode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10462&quot;</span>
+<span class="w">  </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="nt">"building"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1007"</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">"coord"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="mf">-73.856077</span><span class="p">,</span><span class="w"> </span><span class="mf">40.848447</span><span class="w"> </span><span class="p">],</span>
+<span class="w">     </span><span class="nt">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Morris Park Ave"</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">"zipcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10462"</span>
 <span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;borough&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bronx&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;cuisine&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bakery&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;grades&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">     </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;$date&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1393804800000</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="nt">&quot;grade&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">},</span>
-<span class="w">     </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;$date&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1378857600000</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="nt">&quot;grade&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="p">},</span>
-<span class="w">     </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;$date&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1358985600000</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="nt">&quot;grade&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">},</span>
-<span class="w">     </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;$date&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1322006400000</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="nt">&quot;grade&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="p">},</span>
-<span class="w">     </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;$date&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1299715200000</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="nt">&quot;grade&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="nt">"borough"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bronx"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"cuisine"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bakery"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"grades"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">     </span><span class="p">{</span><span class="w"> </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"$date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1393804800000</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="nt">"grade"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A"</span><span class="p">,</span><span class="w"> </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">},</span>
+<span class="w">     </span><span class="p">{</span><span class="w"> </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"$date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1378857600000</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="nt">"grade"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A"</span><span class="p">,</span><span class="w"> </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="p">},</span>
+<span class="w">     </span><span class="p">{</span><span class="w"> </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"$date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1358985600000</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="nt">"grade"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A"</span><span class="p">,</span><span class="w"> </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">},</span>
+<span class="w">     </span><span class="p">{</span><span class="w"> </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"$date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1322006400000</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="nt">"grade"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A"</span><span class="p">,</span><span class="w"> </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="p">},</span>
+<span class="w">     </span><span class="p">{</span><span class="w"> </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"$date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1299715200000</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="nt">"grade"</span><span class="p">:</span><span class="w"> </span><span class="s2">"B"</span><span class="p">,</span><span class="w"> </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="w"> </span><span class="p">}</span>
 <span class="w">  </span><span class="p">],</span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Morris Park Bake Shop&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;restaurant_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;30075445&quot;</span>
+<span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Morris Park Bake Shop"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"restaurant_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"30075445"</span>
 <span class="p">}</span>
 </code></pre></div>
 <ol>
@@ -6895,10 +6895,10 @@ Accepter l'installation de MongoDB Compass</p>
 <div class="tabbed-block">
 <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">restaurant_id</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">borough</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;address.zipcode&quot;</span><span class="o">:</span><span class="mf">1</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="nx">_id</span><span class="o">:</span><span class="mf">0</span><span class="p">}</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">restaurant_id</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">borough</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"address.zipcode"</span><span class="o">:</span><span class="mf">1</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="nx">_id</span><span class="o">:</span><span class="mf">0</span><span class="p">}</span>
 <span class="p">)</span>
 <span class="c1">//ou</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">({},{</span><span class="s2">&quot;restaurant_id&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;borough&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;address.zipcode&quot;</span><span class="w"> </span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;_id&quot;</span><span class="o">:</span><span class="mf">0</span><span class="p">});</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">({},{</span><span class="s2">"restaurant_id"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="s2">"name"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">"borough"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">"address.zipcode"</span><span class="w"> </span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">"_id"</span><span class="o">:</span><span class="mf">0</span><span class="p">});</span>
 </code></pre></div>
 </div>
 </div>
@@ -6913,7 +6913,7 @@ Accepter l'installation de MongoDB Compass</p>
 </div>
 <div class="tabbed-block">
 <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">borough</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bronx&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">borough</span><span class="o">:</span><span class="w"> </span><span class="s2">"Bronx"</span><span class="w"> </span><span class="p">}</span>
 <span class="p">)</span>
 </code></pre></div>
 </div>
@@ -6929,7 +6929,7 @@ Accepter l'installation de MongoDB Compass</p>
 </div>
 <div class="tabbed-block">
 <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">borough</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bronx&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">borough</span><span class="o">:</span><span class="w"> </span><span class="s2">"Bronx"</span><span class="w"> </span><span class="p">}</span>
 <span class="p">).</span><span class="nx">limit</span><span class="p">(</span><span class="mf">5</span><span class="p">)</span>
 </code></pre></div>
 </div>
@@ -6945,7 +6945,7 @@ Accepter l'installation de MongoDB Compass</p>
 </div>
 <div class="tabbed-block">
 <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">borough</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bronx&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">borough</span><span class="o">:</span><span class="w"> </span><span class="s2">"Bronx"</span><span class="w"> </span><span class="p">}</span>
 <span class="p">).</span><span class="nx">limit</span><span class="p">(</span><span class="mf">5</span><span class="p">).</span><span class="nx">skip</span><span class="p">(</span><span class="mf">5</span><span class="p">)</span>
 </code></pre></div>
 </div>
@@ -6960,7 +6960,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour trouver les restaurants qui ont obtenu un score supérieur à 90. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">grades</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$elemMatch</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;score&quot;</span><span class="o">:</span><span class="p">{</span><span class="nx">$gt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">90</span><span class="p">}}}});</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">grades</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$elemMatch</span><span class="o">:</span><span class="p">{</span><span class="s2">"score"</span><span class="o">:</span><span class="p">{</span><span class="nx">$gt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">90</span><span class="p">}}}});</span>
 </code></pre></div>
 </div>
 </div>
@@ -6974,7 +6974,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour trouver les restaurants qui ont obtenu un score supérieur à 80 mais inférieur à 100. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">grades</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$elemMatch</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;score&quot;</span><span class="o">:</span><span class="p">{</span><span class="nx">$gt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">80</span><span class="p">,</span><span class="w"> </span><span class="nx">$lte</span><span class="w"> </span><span class="o">:</span><span class="mf">100</span><span class="p">}}}});</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">grades</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$elemMatch</span><span class="o">:</span><span class="p">{</span><span class="s2">"score"</span><span class="o">:</span><span class="p">{</span><span class="nx">$gt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">80</span><span class="p">,</span><span class="w"> </span><span class="nx">$lte</span><span class="w"> </span><span class="o">:</span><span class="mf">100</span><span class="p">}}}});</span>
 </code></pre></div>
 </div>
 </div>
@@ -6988,7 +6988,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour trouver les restaurants dont la latitude est inférieure à -95.754168. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="s2">&quot;address.coord.0&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$lt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">95.754168</span><span class="p">}});</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="s2">"address.coord.0"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$lt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">95.754168</span><span class="p">}});</span>
 </code></pre></div>
 </div>
 </div>
@@ -7005,9 +7005,9 @@ Accepter l'installation de MongoDB Compass</p>
 <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">       </span><span class="p">{</span><span class="nx">$and</span><span class="o">:</span>
 <span class="w">            </span><span class="p">[</span>
-<span class="w">               </span><span class="p">{</span><span class="s2">&quot;cuisine&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$ne</span><span class="w"> </span><span class="o">:</span><span class="s2">&quot;American &quot;</span><span class="p">}},</span>
-<span class="w">               </span><span class="p">{</span><span class="s2">&quot;grades.score&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$gt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">70</span><span class="p">}},</span>
-<span class="w">               </span><span class="p">{</span><span class="s2">&quot;address.coord&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$lt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">65.754168</span><span class="p">}}</span>
+<span class="w">               </span><span class="p">{</span><span class="s2">"cuisine"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$ne</span><span class="w"> </span><span class="o">:</span><span class="s2">"American "</span><span class="p">}},</span>
+<span class="w">               </span><span class="p">{</span><span class="s2">"grades.score"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$gt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">70</span><span class="p">}},</span>
+<span class="w">               </span><span class="p">{</span><span class="s2">"address.coord"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$lt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">65.754168</span><span class="p">}}</span>
 <span class="w">            </span><span class="p">]</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">            </span><span class="p">);</span>
@@ -7026,9 +7026,9 @@ Accepter l'installation de MongoDB Compass</p>
 <div class="tabbed-block">
 <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">                   </span><span class="p">{</span>
-<span class="w">                     </span><span class="s2">&quot;cuisine&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$ne</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;American &quot;</span><span class="p">},</span>
-<span class="w">                     </span><span class="s2">&quot;grades.score&quot;</span><span class="w"> </span><span class="o">:</span><span class="p">{</span><span class="nx">$gt</span><span class="o">:</span><span class="w"> </span><span class="mf">70</span><span class="p">},</span>
-<span class="w">                     </span><span class="s2">&quot;address.coord&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$lt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">65.754168</span><span class="p">}</span>
+<span class="w">                     </span><span class="s2">"cuisine"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$ne</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">"American "</span><span class="p">},</span>
+<span class="w">                     </span><span class="s2">"grades.score"</span><span class="w"> </span><span class="o">:</span><span class="p">{</span><span class="nx">$gt</span><span class="o">:</span><span class="w"> </span><span class="mf">70</span><span class="p">},</span>
+<span class="w">                     </span><span class="s2">"address.coord"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$lt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">65.754168</span><span class="p">}</span>
 <span class="w">                    </span><span class="p">}</span>
 <span class="w">             </span><span class="p">);</span>
 </code></pre></div>
@@ -7045,11 +7045,11 @@ Accepter l'installation de MongoDB Compass</p>
 </div>
 <div class="tabbed-block">
 <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                     </span><span class="s2">&quot;cuisine&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$ne</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;American&quot;</span><span class="p">},</span>
-<span class="w">                     </span><span class="s2">&quot;grades.grade&quot;</span><span class="w"> </span><span class="o">:</span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
-<span class="w">                     </span><span class="s2">&quot;borough&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$ne</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Brooklyn&quot;</span><span class="p">}</span>
+<span class="w">                     </span><span class="s2">"cuisine"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$ne</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">"American"</span><span class="p">},</span>
+<span class="w">                     </span><span class="s2">"grades.grade"</span><span class="w"> </span><span class="o">:</span><span class="s2">"A"</span><span class="p">,</span>
+<span class="w">                     </span><span class="s2">"borough"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$ne</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">"Brooklyn"</span><span class="p">}</span>
 <span class="w">               </span><span class="p">}</span><span class="w"> </span>
-<span class="w">            </span><span class="p">).</span><span class="nx">sort</span><span class="p">({</span><span class="s2">&quot;cuisine&quot;</span><span class="o">:-</span><span class="mf">1</span><span class="p">});</span>
+<span class="w">            </span><span class="p">).</span><span class="nx">sort</span><span class="p">({</span><span class="s2">"cuisine"</span><span class="o">:-</span><span class="mf">1</span><span class="p">});</span>
 </code></pre></div>
 </div>
 </div>
@@ -7066,9 +7066,9 @@ Accepter l'installation de MongoDB Compass</p>
 <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">                    </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="sr">/^Wil/</span><span class="p">},</span>
 <span class="w">                    </span><span class="p">{</span>
-<span class="w">                    </span><span class="s2">&quot;restaurant_id&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
-<span class="w">                    </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;borough&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span>
-<span class="w">                    </span><span class="s2">&quot;cuisine&quot;</span><span class="w"> </span><span class="o">:</span><span class="mf">1</span>
+<span class="w">                    </span><span class="s2">"restaurant_id"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">                    </span><span class="s2">"name"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">"borough"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span>
+<span class="w">                    </span><span class="s2">"cuisine"</span><span class="w"> </span><span class="o">:</span><span class="mf">1</span>
 <span class="w">                    </span><span class="p">}</span>
 <span class="w">                    </span><span class="p">);</span>
 </code></pre></div>
@@ -7087,9 +7087,9 @@ Accepter l'installation de MongoDB Compass</p>
 <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">                </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="sr">/ces$/</span><span class="p">},</span>
 <span class="w">                </span><span class="p">{</span>
-<span class="w">                </span><span class="s2">&quot;restaurant_id&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
-<span class="w">                </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;borough&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span>
-<span class="w">                </span><span class="s2">&quot;cuisine&quot;</span><span class="w"> </span><span class="o">:</span><span class="mf">1</span>
+<span class="w">                </span><span class="s2">"restaurant_id"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">"name"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">"borough"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">"cuisine"</span><span class="w"> </span><span class="o">:</span><span class="mf">1</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="p">);</span>
 </code></pre></div>
@@ -7106,11 +7106,11 @@ Accepter l'installation de MongoDB Compass</p>
 </div>
 <div class="tabbed-block">
 <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
-<span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="sr">/.*Reg.*/</span><span class="p">},</span>
+<span class="p">{</span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="sr">/.*Reg.*/</span><span class="p">},</span>
 <span class="p">{</span>
-<span class="s2">&quot;restaurant_id&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
-<span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;borough&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span>
-<span class="s2">&quot;cuisine&quot;</span><span class="w"> </span><span class="o">:</span><span class="mf">1</span>
+<span class="s2">"restaurant_id"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="s2">"name"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">"borough"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span>
+<span class="s2">"cuisine"</span><span class="w"> </span><span class="o">:</span><span class="mf">1</span>
 <span class="p">}</span>
 <span class="p">);</span>
 </code></pre></div>
@@ -7128,10 +7128,10 @@ Accepter l'installation de MongoDB Compass</p>
 <div class="tabbed-block">
 <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="p">{</span><span class="w"> </span>
-<span class="s2">&quot;borough&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bronx&quot;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span>
+<span class="s2">"borough"</span><span class="o">:</span><span class="w"> </span><span class="s2">"Bronx"</span><span class="w"> </span><span class="p">,</span><span class="w"> </span>
 <span class="nx">$or</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-<span class="p">{</span><span class="w"> </span><span class="s2">&quot;cuisine&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;American &quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="p">{</span><span class="w"> </span><span class="s2">&quot;cuisine&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Chinese&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">{</span><span class="w"> </span><span class="s2">"cuisine"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">"American "</span><span class="w"> </span><span class="p">},</span>
+<span class="p">{</span><span class="w"> </span><span class="s2">"cuisine"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">"Chinese"</span><span class="w"> </span><span class="p">}</span>
 <span class="p">]</span><span class="w"> </span>
 <span class="p">}</span><span class="w"> </span>
 <span class="p">);</span>
@@ -7149,11 +7149,11 @@ Accepter l'installation de MongoDB Compass</p>
 </div>
 <div class="tabbed-block">
 <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
-<span class="w">            </span><span class="p">{</span><span class="s2">&quot;borough&quot;</span><span class="w"> </span><span class="o">:</span><span class="p">{</span><span class="nx">$in</span><span class="w"> </span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;Staten Island&quot;</span><span class="p">,</span><span class="s2">&quot;Queens&quot;</span><span class="p">,</span><span class="s2">&quot;Bronx&quot;</span><span class="p">,</span><span class="s2">&quot;Brooklyn&quot;</span><span class="p">]}},</span>
+<span class="w">            </span><span class="p">{</span><span class="s2">"borough"</span><span class="w"> </span><span class="o">:</span><span class="p">{</span><span class="nx">$in</span><span class="w"> </span><span class="o">:</span><span class="p">[</span><span class="s2">"Staten Island"</span><span class="p">,</span><span class="s2">"Queens"</span><span class="p">,</span><span class="s2">"Bronx"</span><span class="p">,</span><span class="s2">"Brooklyn"</span><span class="p">]}},</span>
 <span class="w">            </span><span class="p">{</span>
-<span class="w">            </span><span class="s2">&quot;restaurant_id&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;borough&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;cuisine&quot;</span><span class="w"> </span><span class="o">:</span><span class="mf">1</span>
+<span class="w">            </span><span class="s2">"restaurant_id"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">"name"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">"borough"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">"cuisine"</span><span class="w"> </span><span class="o">:</span><span class="mf">1</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">            </span><span class="p">);</span>
 </code></pre></div>
@@ -7170,11 +7170,11 @@ Accepter l'installation de MongoDB Compass</p>
 </div>
 <div class="tabbed-block">
 <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
-<span class="w">    </span><span class="p">{</span><span class="s2">&quot;borough&quot;</span><span class="w"> </span><span class="o">:</span><span class="p">{</span><span class="nx">$nin</span><span class="w"> </span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;Staten Island&quot;</span><span class="p">,</span><span class="s2">&quot;Queens&quot;</span><span class="p">,</span><span class="s2">&quot;Bronx&quot;</span><span class="p">,</span><span class="s2">&quot;Brooklyn&quot;</span><span class="p">]}},</span>
+<span class="w">    </span><span class="p">{</span><span class="s2">"borough"</span><span class="w"> </span><span class="o">:</span><span class="p">{</span><span class="nx">$nin</span><span class="w"> </span><span class="o">:</span><span class="p">[</span><span class="s2">"Staten Island"</span><span class="p">,</span><span class="s2">"Queens"</span><span class="p">,</span><span class="s2">"Bronx"</span><span class="p">,</span><span class="s2">"Brooklyn"</span><span class="p">]}},</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">    </span><span class="s2">&quot;restaurant_id&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;borough&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;cuisine&quot;</span><span class="w"> </span><span class="o">:</span><span class="mf">1</span>
+<span class="w">    </span><span class="s2">"restaurant_id"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"name"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">"borough"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"cuisine"</span><span class="w"> </span><span class="o">:</span><span class="mf">1</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="p">);</span>
 </code></pre></div>
@@ -7191,15 +7191,15 @@ Accepter l'installation de MongoDB Compass</p>
 </div>
 <div class="tabbed-block">
 <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
-<span class="w">            </span><span class="p">{</span><span class="s2">&quot;grades.score&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span>
+<span class="w">            </span><span class="p">{</span><span class="s2">"grades.score"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span>
 <span class="w">            </span><span class="p">{</span><span class="w"> </span><span class="nx">$not</span><span class="o">:</span><span class="w"> </span>
 <span class="w">            </span><span class="p">{</span><span class="nx">$gt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">}</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="p">{</span>
-<span class="w">            </span><span class="s2">&quot;restaurant_id&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;borough&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;cuisine&quot;</span><span class="w"> </span><span class="o">:</span><span class="mf">1</span>
+<span class="w">            </span><span class="s2">"restaurant_id"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">"name"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">"borough"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">"cuisine"</span><span class="w"> </span><span class="o">:</span><span class="mf">1</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">            </span><span class="p">);</span>
 </code></pre></div>
@@ -7218,12 +7218,12 @@ Accepter l'installation de MongoDB Compass</p>
 <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">    </span><span class="p">{</span><span class="nx">$or</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="sr">/^Wil/</span><span class="p">},</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span><span class="s2">&quot;$and&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="p">{</span><span class="s2">&quot;cuisine&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$ne</span><span class="w"> </span><span class="o">:</span><span class="s2">&quot;American &quot;</span><span class="p">}},</span><span class="w"> </span>
-<span class="w">        </span><span class="p">{</span><span class="s2">&quot;cuisine&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$ne</span><span class="w"> </span><span class="o">:</span><span class="s2">&quot;Chinees&quot;</span><span class="p">}}</span>
+<span class="w">    </span><span class="p">{</span><span class="s2">"$and"</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span><span class="s2">"cuisine"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$ne</span><span class="w"> </span><span class="o">:</span><span class="s2">"American "</span><span class="p">}},</span><span class="w"> </span>
+<span class="w">        </span><span class="p">{</span><span class="s2">"cuisine"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$ne</span><span class="w"> </span><span class="o">:</span><span class="s2">"Chinees"</span><span class="p">}}</span>
 <span class="w">    </span><span class="p">]}</span>
 <span class="w">    </span><span class="p">]}</span>
-<span class="w">    </span><span class="p">,{</span><span class="s2">&quot;restaurant_id&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;borough&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;cuisine&quot;</span><span class="w"> </span><span class="o">:</span><span class="mf">1</span><span class="p">}</span>
+<span class="w">    </span><span class="p">,{</span><span class="s2">"restaurant_id"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="s2">"name"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">"borough"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">"cuisine"</span><span class="w"> </span><span class="o">:</span><span class="mf">1</span><span class="p">}</span>
 <span class="w">    </span><span class="p">);</span>
 </code></pre></div>
 </div>
@@ -7240,11 +7240,11 @@ Accepter l'installation de MongoDB Compass</p>
 <div class="tabbed-block">
 <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="w"> </span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">         </span><span class="s2">&quot;grades.date&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">ISODate</span><span class="p">(</span><span class="s2">&quot;2014-08-11T00:00:00Z&quot;</span><span class="p">),</span><span class="w"> </span>
-<span class="w">         </span><span class="s2">&quot;grades.grade&quot;</span><span class="o">:</span><span class="s2">&quot;A&quot;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span>
-<span class="w">         </span><span class="s2">&quot;grades.score&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">11</span>
+<span class="w">         </span><span class="s2">"grades.date"</span><span class="o">:</span><span class="w"> </span><span class="nx">ISODate</span><span class="p">(</span><span class="s2">"2014-08-11T00:00:00Z"</span><span class="p">),</span><span class="w"> </span>
+<span class="w">         </span><span class="s2">"grades.grade"</span><span class="o">:</span><span class="s2">"A"</span><span class="w"> </span><span class="p">,</span><span class="w"> </span>
+<span class="w">         </span><span class="s2">"grades.score"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">11</span>
 <span class="w">        </span><span class="p">},</span><span class="w"> </span>
-<span class="w">        </span><span class="p">{</span><span class="s2">&quot;restaurant_id&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;grades&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">}</span>
+<span class="w">        </span><span class="p">{</span><span class="s2">"restaurant_id"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="s2">"name"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">"grades"</span><span class="o">:</span><span class="mf">1</span><span class="p">}</span>
 <span class="w">     </span><span class="p">);</span>
 </code></pre></div>
 </div>
@@ -7260,11 +7260,11 @@ Accepter l'installation de MongoDB Compass</p>
 </div>
 <div class="tabbed-block">
 <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="w"> </span>
-<span class="w">              </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;grades.1.date&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">ISODate</span><span class="p">(</span><span class="s2">&quot;2014-08-11T00:00:00Z&quot;</span><span class="p">),</span><span class="w"> </span>
-<span class="w">                </span><span class="s2">&quot;grades.1.grade&quot;</span><span class="o">:</span><span class="s2">&quot;A&quot;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span>
-<span class="w">                </span><span class="s2">&quot;grades.1.score&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">9</span>
+<span class="w">              </span><span class="p">{</span><span class="w"> </span><span class="s2">"grades.1.date"</span><span class="o">:</span><span class="w"> </span><span class="nx">ISODate</span><span class="p">(</span><span class="s2">"2014-08-11T00:00:00Z"</span><span class="p">),</span><span class="w"> </span>
+<span class="w">                </span><span class="s2">"grades.1.grade"</span><span class="o">:</span><span class="s2">"A"</span><span class="w"> </span><span class="p">,</span><span class="w"> </span>
+<span class="w">                </span><span class="s2">"grades.1.score"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">9</span>
 <span class="w">              </span><span class="p">},</span><span class="w"> </span>
-<span class="w">               </span><span class="p">{</span><span class="s2">&quot;restaurant_id&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;grades&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">}</span>
+<span class="w">               </span><span class="p">{</span><span class="s2">"restaurant_id"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="s2">"name"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">"grades"</span><span class="o">:</span><span class="mf">1</span><span class="p">}</span>
 <span class="w">           </span><span class="p">);</span>
 </code></pre></div>
 </div>
@@ -7281,9 +7281,9 @@ Accepter l'installation de MongoDB Compass</p>
 <div class="tabbed-block">
 <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="w"> </span>
 <span class="w">              </span><span class="p">{</span><span class="w"> </span>
-<span class="w">                </span><span class="s2">&quot;address.coord.1&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$gt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">42</span><span class="p">,</span><span class="w"> </span><span class="nx">$lte</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">52</span><span class="p">}</span>
+<span class="w">                </span><span class="s2">"address.coord.1"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">$gt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">42</span><span class="p">,</span><span class="w"> </span><span class="nx">$lte</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">52</span><span class="p">}</span>
 <span class="w">              </span><span class="p">},</span>
-<span class="w">                </span><span class="p">{</span><span class="s2">&quot;restaurant_id&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;address&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;coord&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">}</span>
+<span class="w">                </span><span class="p">{</span><span class="s2">"restaurant_id"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="s2">"name"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">"address"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">"coord"</span><span class="o">:</span><span class="mf">1</span><span class="p">}</span>
 <span class="w">           </span><span class="p">);</span>
 </code></pre></div>
 </div>
@@ -7298,7 +7298,7 @@ Accepter l'installation de MongoDB Compass</p>
 <p>Écrivez une requête MongoDB pour organiser le nom des restaurants dans l'ordre croissant avec toutes les colonnes. </p>
 </div>
 <div class="tabbed-block">
-<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">sort</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">});</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">sort</span><span class="p">({</span><span class="s2">"name"</span><span class="o">:</span><span class="mf">1</span><span class="p">});</span>
 </code></pre></div>
 </div>
 </div>
@@ -7313,7 +7313,7 @@ Accepter l'installation de MongoDB Compass</p>
 </div>
 <div class="tabbed-block">
 <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">sort</span><span class="p">(</span>
-<span class="w">                  </span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="o">:-</span><span class="mf">1</span><span class="p">}</span>
+<span class="w">                  </span><span class="p">{</span><span class="s2">"name"</span><span class="o">:-</span><span class="mf">1</span><span class="p">}</span>
 <span class="w">                  </span><span class="p">);</span>
 </code></pre></div>
 </div>
@@ -7329,7 +7329,7 @@ Accepter l'installation de MongoDB Compass</p>
 </div>
 <div class="tabbed-block">
 <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">sort</span><span class="p">(</span>
-<span class="w">                   </span><span class="p">{</span><span class="s2">&quot;cuisine&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;borough&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">,}</span>
+<span class="w">                   </span><span class="p">{</span><span class="s2">"cuisine"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">"borough"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">,}</span>
 <span class="w">                  </span><span class="p">);</span>
 </code></pre></div>
 </div>
@@ -7345,7 +7345,7 @@ Accepter l'installation de MongoDB Compass</p>
 </div>
 <div class="tabbed-block">
 <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
-<span class="w">             </span><span class="p">{</span><span class="s2">&quot;address.street&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span>
+<span class="w">             </span><span class="p">{</span><span class="s2">"address.street"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span>
 <span class="w">                 </span><span class="p">{</span><span class="w"> </span><span class="nx">$exists</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
 <span class="w">             </span><span class="p">}</span><span class="w"> </span>
 <span class="w">           </span><span class="p">);</span>
@@ -7363,7 +7363,7 @@ Accepter l'installation de MongoDB Compass</p>
 </div>
 <div class="tabbed-block">
 <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
-<span class="w">            </span><span class="p">{</span><span class="s2">&quot;address.coord&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span>
+<span class="w">            </span><span class="p">{</span><span class="s2">"address.coord"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span>
 <span class="w">               </span><span class="p">{</span><span class="nx">$type</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">}</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">           </span><span class="p">);</span>
@@ -7381,10 +7381,10 @@ Accepter l'installation de MongoDB Compass</p>
 </div>
 <div class="tabbed-block">
 <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
-<span class="w">              </span><span class="p">{</span><span class="s2">&quot;grades.score&quot;</span><span class="w"> </span><span class="o">:</span>
+<span class="w">              </span><span class="p">{</span><span class="s2">"grades.score"</span><span class="w"> </span><span class="o">:</span>
 <span class="w">                 </span><span class="p">{</span><span class="nx">$mod</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">7</span><span class="p">,</span><span class="mf">0</span><span class="p">]}</span>
 <span class="w">              </span><span class="p">},</span>
-<span class="w">                 </span><span class="p">{</span><span class="s2">&quot;restaurant_id&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;grades&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">}</span>
+<span class="w">                 </span><span class="p">{</span><span class="s2">"restaurant_id"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="s2">"name"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="s2">"grades"</span><span class="o">:</span><span class="mf">1</span><span class="p">}</span>
 <span class="w">            </span><span class="p">);</span>
 </code></pre></div>
 </div>
@@ -7401,13 +7401,13 @@ Accepter l'installation de MongoDB Compass</p>
 <div class="tabbed-block">
 <div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">db</span><span class="p">.</span><span class="nx">restaurants</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span>
 <span class="w">           </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="o">:</span><span class="w"> </span>
-<span class="w">             </span><span class="p">{</span><span class="w"> </span><span class="nx">$regex</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;mon.*&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">$options</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;i&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
+<span class="w">             </span><span class="p">{</span><span class="w"> </span><span class="nx">$regex</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">"mon.*"</span><span class="p">,</span><span class="w"> </span><span class="nx">$options</span><span class="o">:</span><span class="w"> </span><span class="s2">"i"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
 <span class="w">           </span><span class="p">},</span>
 <span class="w">               </span><span class="p">{</span>
-<span class="w">                 </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span>
-<span class="w">                 </span><span class="s2">&quot;borough&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span>
-<span class="w">                 </span><span class="s2">&quot;address.coord&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span>
-<span class="w">                 </span><span class="s2">&quot;cuisine&quot;</span><span class="w"> </span><span class="o">:</span><span class="mf">1</span>
+<span class="w">                 </span><span class="s2">"name"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span>
+<span class="w">                 </span><span class="s2">"borough"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span>
+<span class="w">                 </span><span class="s2">"address.coord"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span>
+<span class="w">                 </span><span class="s2">"cuisine"</span><span class="w"> </span><span class="o">:</span><span class="mf">1</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">           </span><span class="p">);</span>
 </code></pre></div>
@@ -7428,10 +7428,10 @@ Accepter l'installation de MongoDB Compass</p>
 <span class="w">             </span><span class="p">{</span><span class="w"> </span><span class="nx">$regex</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="sr">/^Mad/i</span><span class="p">,</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
 <span class="w">           </span><span class="p">},</span>
 <span class="w">               </span><span class="p">{</span>
-<span class="w">                 </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span>
-<span class="w">                 </span><span class="s2">&quot;borough&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span>
-<span class="w">                 </span><span class="s2">&quot;address.coord&quot;</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span>
-<span class="w">                 </span><span class="s2">&quot;cuisine&quot;</span><span class="w"> </span><span class="o">:</span><span class="mf">1</span>
+<span class="w">                 </span><span class="s2">"name"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span>
+<span class="w">                 </span><span class="s2">"borough"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span>
+<span class="w">                 </span><span class="s2">"address.coord"</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span>
+<span class="w">                 </span><span class="s2">"cuisine"</span><span class="w"> </span><span class="o">:</span><span class="mf">1</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">           </span><span class="p">);</span>
 </code></pre></div>
@@ -7585,7 +7585,7 @@ Accepter l'installation de MongoDB Compass</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

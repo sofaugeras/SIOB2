@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6552,7 +6552,7 @@
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// routes/web.php</span>
 <span class="x">use App\Http\Controllers\AccountController;</span>
 
-<span class="x">Route::get(&#39;/accounts&#39;, [AccountController::class, &#39;index&#39;]);</span>
+<span class="x">Route::get('/accounts', [AccountController::class, 'index']);</span>
 </code></pre></div>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// app/Http/Controllers/AccountController.php</span>
 <span class="x">namespace App\Http\Controllers;</span>
@@ -6561,7 +6561,7 @@
 <span class="x">class AccountController extends Controller {</span>
 <span class="x">    public function index() {</span>
 <span class="x">        $accounts = Account::all();</span>
-<span class="x">        return view(&#39;accounts.index&#39;, compact(&#39;accounts&#39;));</span>
+<span class="x">        return view('accounts.index', compact('accounts'));</span>
 <span class="x">    }</span>
 <span class="x">}</span>
 </code></pre></div>
@@ -6575,7 +6575,7 @@
 &lt;h1&gt;💳 Liste des comptes&lt;/h1&gt;
 &lt;ul&gt;
 @foreach ($accounts as $a)
-  &lt;li&gt;{{ $a-&gt;owner }} : {{ number_format($a-&gt;balance, 2, &#39;,&#39;, &#39; &#39;) }} €&lt;/li&gt;
+  &lt;li&gt;{{ $a-&gt;owner }} : {{ number_format($a-&gt;balance, 2, ',', ' ') }} €&lt;/li&gt;
 @endforeach
 &lt;/ul&gt;
 </code></pre></div>
@@ -6590,7 +6590,7 @@
 <span class="x">use Illuminate\Database\Eloquent\Model;</span>
 
 <span class="x">class Account extends Model {</span>
-<span class="x">    protected $fillable = [&#39;owner&#39;, &#39;balance&#39;];</span>
+<span class="x">    protected $fillable = ['owner', 'balance'];</span>
 <span class="x">    public $timestamps = false;</span>
 <span class="x">}</span>
 </code></pre></div>
@@ -6601,8 +6601,8 @@
 <li>📍 Définies dans <code>routes/web.php</code>.</li>
 </ul>
 <h4 id="exemple-laravel_2">📌 Exemple Laravel<a class="headerlink" href="#exemple-laravel_2" title="Permanent link">⚓︎</a></h4>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">Route::get(&#39;/accounts&#39;, [AccountController::class, &#39;index&#39;]);</span>
-<span class="x">Route::post(&#39;/accounts/transfer&#39;, [AccountController::class, &#39;transfer&#39;]);</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">Route::get('/accounts', [AccountController::class, 'index']);</span>
+<span class="x">Route::post('/accounts/transfer', [AccountController::class, 'transfer']);</span>
 </code></pre></div>
 <hr />
 <h2 id="6-schema-de-synthese">6. Schéma de synthèse<a class="headerlink" href="#6-schema-de-synthese" title="Permanent link">⚓︎</a></h2>
@@ -6765,7 +6765,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

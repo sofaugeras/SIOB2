@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6883,7 +6883,7 @@ via un terminal chiffré. C'est l'outil quotidien de tout administrateur systèm
 Il vous sera demandé un mot de passe. <strong>Le mot de passe initial est votre prénom.</strong></p>
 <details class="question">
 <summary>C'est normal d'avoir ce message ?</summary>
-<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>The authenticity of host &#39;srv-debian.local&#39; can&#39;t be established.
+<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>The authenticity of host 'srv-debian.local' can't be established.
 Are you sure you want to continue connecting (yes/no)?
 </code></pre></div>
 <strong>Oui, c'est normal</strong> la première fois. Tapez <code>yes</code> et appuyez sur Entrée.<br />
@@ -7056,7 +7056,7 @@ EXIT<span class="p">;</span>
 <div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code><span class="c1"># Voir toutes les images téléchargées sur le serveur</span>
 docker<span class="w"> </span>images
 
-<span class="c1"># Voir l&#39;espace disque utilisé par Docker</span>
+<span class="c1"># Voir l'espace disque utilisé par Docker</span>
 docker<span class="w"> </span>system<span class="w"> </span>df
 
 <span class="c1"># Voir tous les conteneurs (y compris arrêtés)</span>
@@ -7109,7 +7109,7 @@ docker<span class="w"> </span>compose<span class="w"> </span>down
 <div class="admonition tip">
 <p class="admonition-title">Bonus — Modifier le docker-compose.yml</p>
 <p>Ajoutez la variable d'environnement suivante dans le service <code>wordpress</code> :
-<div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="nt">WORDPRESS_DEBUG</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1&quot;</span>
+<div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="nt">WORDPRESS_DEBUG</span><span class="p">:</span><span class="w"> </span><span class="s">"1"</span>
 </code></pre></div>
 Puis relancez avec <code>docker compose up -d</code>.<br />
 Qu'est-ce qui change dans le comportement de WordPress ?</p>
@@ -7186,7 +7186,7 @@ docker<span class="w"> </span>compose<span class="w"> </span>down
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>C:\wamp64\www\VOTRE_SITE\wp-config.php
 </code></pre></div>
 Cherchez la ligne :
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">define( &#39;DB_NAME&#39;, &#39;nom_de_votre_base&#39; );</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">define( 'DB_NAME', 'nom_de_votre_base' );</span>
 </code></pre></div></p>
 </details>
 <h3 id="92-copier-les-fichiers-wp-content">9.2 Copier les fichiers wp-content 📁<a class="headerlink" href="#92-copier-les-fichiers-wp-content" title="Permanent link">⚓︎</a></h3>
@@ -7238,7 +7238,7 @@ Ces identifiants sont définis dans votre <code>docker-compose.yml</code>.</p>
 <details class="warning">
 <summary>Erreur 'Access denied' ?</summary>
 <p>Vérifiez que vous utilisez bien les identifiants de votre <code>docker-compose.yml</code> :
-<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>cat<span class="w"> </span>~/wordpress/docker-compose.yml<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-A3<span class="w"> </span><span class="s2">&quot;WORDPRESS_DB&quot;</span>
+<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>cat<span class="w"> </span>~/wordpress/docker-compose.yml<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-A3<span class="w"> </span><span class="s2">"WORDPRESS_DB"</span>
 </code></pre></div></p>
 </details>
 <h3 id="95-remplacer-le-dossier-wp-content">9.5 Remplacer le dossier wp-content 📂<a class="headerlink" href="#95-remplacer-le-dossier-wp-content" title="Permanent link">⚓︎</a></h3>
@@ -7267,18 +7267,18 @@ On les met à jour directement en SQL :</p>
 <span class="w">  </span>-u<span class="w"> </span>wp_VOTRE_PRENOM<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-pwp_pass_VOTRE_PRENOM<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>wp_VOTRE_PRENOM<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-e<span class="w"> </span><span class="s2">&quot;UPDATE wp_options</span>
-<span class="s2">      SET option_value = &#39;http://VOTRE_PRENOM.srv-debian.local&#39;</span>
-<span class="s2">      WHERE option_name IN (&#39;siteurl&#39;, &#39;home&#39;);&quot;</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="s2">"UPDATE wp_options</span>
+<span class="s2">      SET option_value = 'http://VOTRE_PRENOM.srv-debian.local'</span>
+<span class="s2">      WHERE option_name IN ('siteurl', 'home');"</span>
 </code></pre></div>
 <p>Vérifiez que la mise à jour a bien été appliquée :</p>
 <div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>mysql<span class="w"> </span>mysql<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-u<span class="w"> </span>wp_VOTRE_PRENOM<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-pwp_pass_VOTRE_PRENOM<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>wp_VOTRE_PRENOM<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-e<span class="w"> </span><span class="s2">&quot;SELECT option_name, option_value</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="s2">"SELECT option_name, option_value</span>
 <span class="s2">      FROM wp_options</span>
-<span class="s2">      WHERE option_name IN (&#39;siteurl&#39;, &#39;home&#39;);&quot;</span>
+<span class="s2">      WHERE option_name IN ('siteurl', 'home');"</span>
 </code></pre></div>
 <p>Vous devez voir :</p>
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>+-+-+
@@ -7295,24 +7295,24 @@ Il faut remplacer toutes ces occurrences en SQL.</p>
 <div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>mysql<span class="w"> </span>mysql<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-u<span class="w"> </span>wp_VOTRE_PRENOM<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-pwp_pass_VOTRE_PRENOM<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>wp_VOTRE_PRENOM<span class="w"> </span><span class="s">&lt;&lt; &#39;SQL&#39;</span>
+<span class="w">  </span>wp_VOTRE_PRENOM<span class="w"> </span><span class="s">&lt;&lt; 'SQL'</span>
 <span class="s">-- Contenu des articles et pages</span>
 <span class="s">UPDATE wp_posts</span>
 <span class="s">SET post_content = REPLACE(post_content,</span>
-<span class="s">  &#39;http://localhost/VOTRE_SITE&#39;,</span>
-<span class="s">  &#39;http://VOTRE_PRENOM.srv-debian.local&#39;);</span>
+<span class="s">  'http://localhost/VOTRE_SITE',</span>
+<span class="s">  'http://VOTRE_PRENOM.srv-debian.local');</span>
 
 <span class="s">-- URLs des médias (guid)</span>
 <span class="s">UPDATE wp_posts</span>
 <span class="s">SET guid = REPLACE(guid,</span>
-<span class="s">  &#39;http://localhost/VOTRE_SITE&#39;,</span>
-<span class="s">  &#39;http://VOTRE_PRENOM.srv-debian.local&#39;);</span>
+<span class="s">  'http://localhost/VOTRE_SITE',</span>
+<span class="s">  'http://VOTRE_PRENOM.srv-debian.local');</span>
 
 <span class="s">-- Métadonnées (chemin des images)</span>
 <span class="s">UPDATE wp_postmeta</span>
 <span class="s">SET meta_value = REPLACE(meta_value,</span>
-<span class="s">  &#39;http://localhost/VOTRE_SITE&#39;,</span>
-<span class="s">  &#39;http://VOTRE_PRENOM.srv-debian.local&#39;);</span>
+<span class="s">  'http://localhost/VOTRE_SITE',</span>
+<span class="s">  'http://VOTRE_PRENOM.srv-debian.local');</span>
 <span class="s">SQL</span>
 </code></pre></div>
 <div class="admonition tip">
@@ -7525,7 +7525,7 @@ docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> 
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

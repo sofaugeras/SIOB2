@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6652,69 +6652,69 @@
 <details class="question">
 <summary>Corrigé</summary>
 <p><strong>Exemple <code>login.php</code> (simplifié avec anti-bruteforce)</strong></p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="k">require</span> <span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/config.php&#39;</span><span class="p">;</span> <span class="cp">?&gt;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="k">require</span> <span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">'/config.php'</span><span class="p">;</span> <span class="cp">?&gt;</span>
 <span class="x">&lt;!DOCTYPE html&gt;</span>
-<span class="x">&lt;html lang=&quot;fr&quot;&gt;</span>
-<span class="x">&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Connexion sécurisée&lt;/title&gt;&lt;/head&gt;</span>
+<span class="x">&lt;html lang="fr"&gt;</span>
+<span class="x">&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;title&gt;Connexion sécurisée&lt;/title&gt;&lt;/head&gt;</span>
 <span class="x">&lt;body&gt;</span>
 <span class="x">&lt;h1&gt;Connexion&lt;/h1&gt;</span>
 <span class="cp">&lt;?php</span>
-<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;REQUEST_METHOD&#39;</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;POST&#39;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nv">$email</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="nx">FILTER_VALIDATE_EMAIL</span><span class="p">);</span>
-    <span class="nv">$password</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]</span> <span class="o">??</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">'REQUEST_METHOD'</span><span class="p">]</span> <span class="o">===</span> <span class="s1">'POST'</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$email</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">'email'</span><span class="p">,</span> <span class="nx">FILTER_VALIDATE_EMAIL</span><span class="p">);</span>
+    <span class="nv">$password</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'password'</span><span class="p">]</span> <span class="o">??</span> <span class="s1">''</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(</span><span class="nv">$email</span> <span class="o">&amp;&amp;</span> <span class="nv">$password</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM users WHERE email = ?&#39;</span><span class="p">);</span>
+        <span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s1">'SELECT * FROM users WHERE email = ?'</span><span class="p">);</span>
         <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$email</span><span class="p">]);</span>
         <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">();</span>
 
         <span class="k">if</span> <span class="p">(</span><span class="nv">$user</span><span class="p">)</span> <span class="p">{</span>
             <span class="c1">// Vérifier si verrouillé</span>
-            <span class="k">if</span> <span class="p">(</span><span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;lock_until&#39;</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nb">strtotime</span><span class="p">(</span><span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;lock_until&#39;</span><span class="p">])</span> <span class="o">&gt;</span> <span class="nb">time</span><span class="p">())</span> <span class="p">{</span>
-                <span class="k">echo</span> <span class="s1">&#39;&lt;p style=&quot;color:red&quot;&gt;Compte temporairement verrouillé. Réessayez plus tard.&lt;/p&gt;&#39;</span><span class="p">;</span>
-            <span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nb">password_verify</span><span class="p">(</span><span class="nv">$password</span><span class="p">,</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;password_hash&#39;</span><span class="p">]))</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nv">$user</span><span class="p">[</span><span class="s1">'lock_until'</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nb">strtotime</span><span class="p">(</span><span class="nv">$user</span><span class="p">[</span><span class="s1">'lock_until'</span><span class="p">])</span> <span class="o">&gt;</span> <span class="nb">time</span><span class="p">())</span> <span class="p">{</span>
+                <span class="k">echo</span> <span class="s1">'&lt;p style="color:red"&gt;Compte temporairement verrouillé. Réessayez plus tard.&lt;/p&gt;'</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nb">password_verify</span><span class="p">(</span><span class="nv">$password</span><span class="p">,</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">'password_hash'</span><span class="p">]))</span> <span class="p">{</span>
                 <span class="c1">// Succès → reset compteur</span>
-                <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s1">&#39;UPDATE users SET failed_attempts=0, lock_until=NULL WHERE id=?&#39;</span><span class="p">)</span>
-                    <span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]]);</span>
-                <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">];</span>
-                <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;user_email&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">];</span>
-                <span class="k">if</span> <span class="p">(</span><span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;mfa_enabled&#39;</span><span class="p">])</span> <span class="p">{</span>
-                    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;mfa_required&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
-                    <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Location: mfa_verify.php&#39;</span><span class="p">);</span>
+                <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s1">'UPDATE users SET failed_attempts=0, lock_until=NULL WHERE id=?'</span><span class="p">)</span>
+                    <span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$user</span><span class="p">[</span><span class="s1">'id'</span><span class="p">]]);</span>
+                <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'user_id'</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">'id'</span><span class="p">];</span>
+                <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'user_email'</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">'email'</span><span class="p">];</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nv">$user</span><span class="p">[</span><span class="s1">'mfa_enabled'</span><span class="p">])</span> <span class="p">{</span>
+                    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'mfa_required'</span><span class="p">]</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+                    <span class="nb">header</span><span class="p">(</span><span class="s1">'Location: mfa_verify.php'</span><span class="p">);</span>
                 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                    <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Location: mfa_setup.php&#39;</span><span class="p">);</span>
+                    <span class="nb">header</span><span class="p">(</span><span class="s1">'Location: mfa_setup.php'</span><span class="p">);</span>
                 <span class="p">}</span>
                 <span class="k">exit</span><span class="p">;</span>
             <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
                 <span class="c1">// Échec → incrémenter</span>
-                <span class="nv">$failed</span> <span class="o">=</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;failed_attempts&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-                <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s1">&#39;UPDATE users SET failed_attempts=?, last_failed_at=NOW() WHERE id=?&#39;</span><span class="p">)</span>
-                    <span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$failed</span><span class="p">,</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]]);</span>
+                <span class="nv">$failed</span> <span class="o">=</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">'failed_attempts'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+                <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s1">'UPDATE users SET failed_attempts=?, last_failed_at=NOW() WHERE id=?'</span><span class="p">)</span>
+                    <span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$failed</span><span class="p">,</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">'id'</span><span class="p">]]);</span>
 
                 <span class="k">if</span> <span class="p">(</span><span class="nv">$failed</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
                     <span class="c1">// Verrouillage 15 minutes</span>
-                    <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s1">&#39;UPDATE users SET lock_until=? WHERE id=?&#39;</span><span class="p">)</span>
-                        <span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nb">date</span><span class="p">(</span><span class="s1">&#39;Y-m-d H:i:s&#39;</span><span class="p">,</span> <span class="nb">time</span><span class="p">()</span> <span class="o">+</span> <span class="mi">15</span><span class="o">*</span><span class="mi">60</span><span class="p">),</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]]);</span>
-                    <span class="k">echo</span> <span class="s1">&#39;&lt;p style=&quot;color:red&quot;&gt;Compte verrouillé 15 minutes.&lt;/p&gt;&#39;</span><span class="p">;</span>
+                    <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s1">'UPDATE users SET lock_until=? WHERE id=?'</span><span class="p">)</span>
+                        <span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nb">date</span><span class="p">(</span><span class="s1">'Y-m-d H:i:s'</span><span class="p">,</span> <span class="nb">time</span><span class="p">()</span> <span class="o">+</span> <span class="mi">15</span><span class="o">*</span><span class="mi">60</span><span class="p">),</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">'id'</span><span class="p">]]);</span>
+                    <span class="k">echo</span> <span class="s1">'&lt;p style="color:red"&gt;Compte verrouillé 15 minutes.&lt;/p&gt;'</span><span class="p">;</span>
                 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
                     <span class="c1">// Délai progressif (anti-bruteforce)</span>
                     <span class="nv">$delay</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nv">$failed</span> <span class="o">-</span> <span class="mi">4</span><span class="p">);</span> <span class="c1">// à partir du 5e échec</span>
                     <span class="k">if</span> <span class="p">(</span><span class="nv">$delay</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="nb">sleep</span><span class="p">(</span><span class="nv">$delay</span><span class="p">);</span>
-                    <span class="k">echo</span> <span class="s1">&#39;&lt;p style=&quot;color:red&quot;&gt;Identifiants incorrects.&lt;/p&gt;&#39;</span><span class="p">;</span>
+                    <span class="k">echo</span> <span class="s1">'&lt;p style="color:red"&gt;Identifiants incorrects.&lt;/p&gt;'</span><span class="p">;</span>
                 <span class="p">}</span>
             <span class="p">}</span>
         <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
             <span class="c1">// Compte inexistant → message neutre</span>
-            <span class="k">echo</span> <span class="s1">&#39;&lt;p style=&quot;color:red&quot;&gt;Identifiants incorrects.&lt;/p&gt;&#39;</span><span class="p">;</span>
+            <span class="k">echo</span> <span class="s1">'&lt;p style="color:red"&gt;Identifiants incorrects.&lt;/p&gt;'</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="cp">?&gt;</span>
-<span class="x">&lt;form method=&quot;post&quot;&gt;</span>
-<span class="x">    &lt;label&gt;Email &lt;input type=&quot;email&quot; name=&quot;email&quot; required&gt;&lt;/label&gt;&lt;br&gt;</span>
-<span class="x">    &lt;label&gt;Mot de passe &lt;input type=&quot;password&quot; name=&quot;password&quot; required&gt;&lt;/label&gt;&lt;br&gt;</span>
-<span class="x">    &lt;button type=&quot;submit&quot;&gt;Se connecter&lt;/button&gt;</span>
+<span class="x">&lt;form method="post"&gt;</span>
+<span class="x">    &lt;label&gt;Email &lt;input type="email" name="email" required&gt;&lt;/label&gt;&lt;br&gt;</span>
+<span class="x">    &lt;label&gt;Mot de passe &lt;input type="password" name="password" required&gt;&lt;/label&gt;&lt;br&gt;</span>
+<span class="x">    &lt;button type="submit"&gt;Se connecter&lt;/button&gt;</span>
 <span class="x">&lt;/form&gt;</span>
-<span class="x">&lt;p&gt;&lt;a href=&quot;register.php&quot;&gt;Créer un compte&lt;/a&gt;&lt;/p&gt;</span>
+<span class="x">&lt;p&gt;&lt;a href="register.php"&gt;Créer un compte&lt;/a&gt;&lt;/p&gt;</span>
 <span class="x">&lt;/body&gt;&lt;/html&gt;</span>
 </code></pre></div>
 </details>
@@ -6864,7 +6864,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

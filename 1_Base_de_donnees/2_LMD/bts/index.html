@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6536,7 +6536,7 @@
 <div class="tabbed-block">
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">etudiant</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">classe</span><span class="w"> </span><span class="o">=</span><span class="ss">&quot;SIO1&quot;</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">classe</span><span class="w"> </span><span class="o">=</span><span class="ss">"SIO1"</span><span class="p">;</span>
 </code></pre></div>
 </div>
 </div>
@@ -6552,7 +6552,7 @@
 <div class="tabbed-block">
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">etudiant</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">classe</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%2&quot;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">classe</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">"%2"</span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">classe</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
 </code></pre></div>
 </div>
@@ -6587,7 +6587,7 @@ Est-il possible d'avoir les étudiants d'une classe par ordre décroissant de mo
 <div class="tabbed-block">
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">etudiant</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">classe</span><span class="o">=</span><span class="s1">&#39;SIO1&#39;</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">classe</span><span class="o">=</span><span class="s1">'SIO1'</span><span class="p">;</span>
 </code></pre></div>
 </div>
 </div>
@@ -6603,7 +6603,7 @@ Est-il possible d'avoir les étudiants d'une classe par ordre décroissant de mo
 <div class="tabbed-block">
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="w"> </span><span class="n">classe</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">etudiant</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">classe</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%2&#39;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">classe</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'%2'</span>
 <span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">classe</span><span class="p">;</span>
 </code></pre></div>
 </div>
@@ -6620,7 +6620,7 @@ Est-il possible d'avoir les étudiants d'une classe par ordre décroissant de mo
 <div class="tabbed-block">
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">classe</span><span class="p">,</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">moyenneGen</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">etudiant</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">classe</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%2&#39;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">classe</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'%2'</span>
 <span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">classe</span><span class="p">;</span>
 </code></pre></div>
 </div>
@@ -6893,7 +6893,7 @@ Pour tester, ajouter quelques étudiants à l'une des classes.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

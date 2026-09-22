@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6550,13 +6550,13 @@
 <p><strong>R4 :</strong> Numéro de l'avion le plus utilisé. </p>
 <details class="question">
 <summary>Correction</summary>
-<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="cm">/* On veut l&#39;avion qui a réalisé le plus de vol.</span>
-<span class="cm">On détermine d&#39;abord le nombre de vol par avion */</span>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="cm">/* On veut l'avion qui a réalisé le plus de vol.</span>
+<span class="cm">On détermine d'abord le nombre de vol par avion */</span>
 <span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">vol</span>
 <span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">vol_avion</span><span class="p">)</span>
 
-<span class="cm">/*L&#39;avion qui a le plus volé sera celui dont son nombre de vol est égale au maximun des nombres de vols de tous les avions.</span>
+<span class="cm">/*L'avion qui a le plus volé sera celui dont son nombre de vol est égale au maximun des nombres de vols de tous les avions.</span>
 <span class="cm">On ne peut pas faire MAX(COUNT()) donc on écrit &gt;= ALL COUNT</span>
 
 <span class="cm">Donc, le nombre de vols pour un avion doit être  &gt;= à tous les nombres de vols par avion: */</span>
@@ -6571,14 +6571,14 @@
 <p><strong>R5 :</strong> Le nom de la ville où sont stockés le plus d'avions.</p>
 <details class="question">
 <summary>Correction</summary>
-<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">On</span><span class="w"> </span><span class="n">décompte</span><span class="w"> </span><span class="n">le</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="n">d</span><span class="s1">&#39;avion par ville</span>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">On</span><span class="w"> </span><span class="n">décompte</span><span class="w"> </span><span class="n">le</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="n">d</span><span class="s1">'avion par ville</span>
 <span class="s1">SELECT COUNT(*)</span>
 <span class="s1">FROM avion</span>
 <span class="s1">GROUP BY av_ville</span>
 
 <span class="s1">On veut le maximun de ces décomptes &gt;= ALL</span>
 
-<span class="s1">Puis, on affiche la ville dont le décompte d&#39;</span><span class="n">avion</span><span class="w"> </span><span class="n">est</span><span class="w"> </span><span class="err">é</span><span class="n">gal</span><span class="w"> </span><span class="err">à</span><span class="w"> </span><span class="n">ce</span><span class="w"> </span><span class="n">maximun</span>
+<span class="s1">Puis, on affiche la ville dont le décompte d'</span><span class="n">avion</span><span class="w"> </span><span class="n">est</span><span class="w"> </span><span class="err">é</span><span class="n">gal</span><span class="w"> </span><span class="err">à</span><span class="w"> </span><span class="n">ce</span><span class="w"> </span><span class="n">maximun</span>
 <span class="k">SELECT</span><span class="w"> </span><span class="n">av_ville</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">avion</span>
 <span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">av_ville</span>
@@ -6652,12 +6652,12 @@
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">pil_nom</span><span class="p">,</span><span class="w"> </span><span class="n">pil_prénom</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">pilote</span><span class="p">,</span><span class="w"> </span><span class="n">Vol</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">pil_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vol_pilote</span>
-<span class="k">AND</span><span class="w"> </span><span class="n">pil_ville</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Brest&#39;</span>
+<span class="k">AND</span><span class="w"> </span><span class="n">pil_ville</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Brest'</span>
 <span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Pil_no</span><span class="p">,</span><span class="w"> </span><span class="n">pil_nom</span><span class="p">,</span><span class="w"> </span><span class="n">pil_prénom</span>
 <span class="k">HAVING</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
 <span class="w">            </span><span class="k">FROM</span><span class="w"> </span><span class="n">pilote</span><span class="p">,</span><span class="w"> </span><span class="n">Vol</span>
 <span class="w">            </span><span class="k">WHERE</span><span class="w"> </span><span class="n">pil_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vol_pilote</span>
-<span class="w">            </span><span class="k">AND</span><span class="w"> </span><span class="n">pil_ville</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Brest&#39;</span>
+<span class="w">            </span><span class="k">AND</span><span class="w"> </span><span class="n">pil_ville</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Brest'</span>
 <span class="w">            </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Pil_no</span><span class="p">)</span>
 </code></pre></div>
 </details>
@@ -6669,7 +6669,7 @@
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="c1">--Solution avec Union</span>
 <span class="k">SELECT</span><span class="w"> </span><span class="n">pil_no</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">pil_ville</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;BREST&#39;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">pil_ville</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'BREST'</span>
 
 <span class="k">UNION</span>
 
@@ -6680,7 +6680,7 @@
 <span class="c1">--Solution sans UNION</span>
 <span class="k">SELECT</span><span class="w"> </span><span class="n">pil_no</span><span class="p">,</span><span class="w"> </span><span class="n">pil_nom</span><span class="p">,</span><span class="w"> </span><span class="n">pil_prénom</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">pil_ville</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;BREST&#39;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">pil_ville</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'BREST'</span>
 <span class="w">    </span><span class="k">OR</span><span class="w"> </span><span class="n">pil_no</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">vol_pilote</span>
 <span class="w">                    </span><span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span>
 <span class="w">                    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">vol_avion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
@@ -6915,7 +6915,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

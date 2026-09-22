@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6551,27 +6551,27 @@
 <p><strong>Documents à utiliser :</strong> fichiers du projet, annexes 1, 2, 3, 4</p>
 <details class="info">
 <summary>Annexe 1 - section de test du fichier modèle authentification.inc.php  📄</summary>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">if ($_SERVER[&quot;SCRIPT_FILENAME&quot;] == __FILE__) {</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">if ($_SERVER["SCRIPT_FILENAME"] == __FILE__) {</span>
 <span class="x">    // prog principal de test</span>
-<span class="x">    header(&#39;Content-Type:text/plain&#39;);</span>
+<span class="x">    header('Content-Type:text/plain');</span>
 
 <span class="x">    // test de connexion</span>
 <span class="x">    if (isLoggedOn()) {</span>
-<span class="x">        echo &quot;logged\n&quot;;</span>
+<span class="x">        echo "logged\n";</span>
 <span class="x">    } else {</span>
-<span class="x">        echo &quot;not logged\n&quot;;</span>
+<span class="x">        echo "not logged\n";</span>
 <span class="x">    }</span>
 
-<span class="x">    login(&quot;test@bts.sio&quot;, &quot;sio&quot;);   // login de test : test@bts.sio</span>
+<span class="x">    login("test@bts.sio", "sio");   // login de test : test@bts.sio</span>
 <span class="x">                        // mot de passe de test : sio</span>
 <span class="x">    if (isLoggedOn()) {</span>
-<span class="x">        echo &quot;logged\n&quot;;</span>
+<span class="x">        echo "logged\n";</span>
 <span class="x">    } else {</span>
-<span class="x">        echo &quot;not logged\n&quot;;</span>
+<span class="x">        echo "not logged\n";</span>
 <span class="x">    }</span>
 
 <span class="x">    $mail=getMailULoggedOn();</span>
-<span class="x">    echo &quot;utilisateur connecté avec cette adresse : $mail \n&quot;;</span>
+<span class="x">    echo "utilisateur connecté avec cette adresse : $mail \n";</span>
 
 <span class="x">    // deconnexion</span>
 <span class="x">    logout();</span>
@@ -6588,37 +6588,37 @@ utilisateur connecté avec cette adresse : test@bts.sio
 <details class="info">
 <summary>Annexe 3 - vueAuthentification.php 📄</summary>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;h1&gt;Connexion&lt;/h1&gt;</span>
-<span class="x">&lt;form action=&quot;./?action=connexion&quot; method=&quot;POST&quot;&gt;</span>
+<span class="x">&lt;form action="./?action=connexion" method="POST"&gt;</span>
 
-<span class="x">    &lt;input type=&quot;text&quot; name=&quot;mailU&quot; placeholder=&quot;Email de connexion&quot; /&gt;&lt;br /&gt;</span>
-<span class="x">    &lt;input type=&quot;password&quot; name=&quot;mdpU&quot; placeholder=&quot;Mot de passe&quot;  /&gt;&lt;br /&gt;</span>
-<span class="x">    &lt;input type=&quot;submit&quot; /&gt;</span>
+<span class="x">    &lt;input type="text" name="mailU" placeholder="Email de connexion" /&gt;&lt;br /&gt;</span>
+<span class="x">    &lt;input type="password" name="mdpU" placeholder="Mot de passe"  /&gt;&lt;br /&gt;</span>
+<span class="x">    &lt;input type="submit" /&gt;</span>
 
 <span class="x">&lt;/form&gt;</span>
 <span class="x">&lt;br /&gt;</span>
-<span class="x">&lt;a href=&quot;./?action=inscription&quot;&gt;Inscription&lt;/a&gt;</span>
+<span class="x">&lt;a href="./?action=inscription"&gt;Inscription&lt;/a&gt;</span>
 </code></pre></div>
 </details>
 <details class="info">
 <summary>Annexe 4 -  contrôleur connexion.php à compléter 📄</summary>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="k">if</span> <span class="p">(</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&quot;SCRIPT_FILENAME&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span> <span class="p">){</span>
-    <span class="nv">$racine</span><span class="o">=</span><span class="s2">&quot;..&quot;</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">"SCRIPT_FILENAME"</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span> <span class="p">){</span>
+    <span class="nv">$racine</span><span class="o">=</span><span class="s2">".."</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="k">include_once</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/modele/authentification.inc.php&quot;</span><span class="p">;</span>
+<span class="k">include_once</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/modele/authentification.inc.php"</span><span class="p">;</span>
 
 <span class="c1">// creation du menu burger</span>
 <span class="nv">$menuBurger</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
-<span class="nv">$menuBurger</span><span class="p">[]</span> <span class="o">=</span> <span class="k">Array</span><span class="p">(</span><span class="s2">&quot;url&quot;</span><span class="o">=&gt;</span><span class="s2">&quot;./?action=connexion&quot;</span><span class="p">,</span><span class="s2">&quot;label&quot;</span><span class="o">=&gt;</span><span class="s2">&quot;Connexion&quot;</span><span class="p">);</span>
-<span class="nv">$menuBurger</span><span class="p">[]</span> <span class="o">=</span> <span class="k">Array</span><span class="p">(</span><span class="s2">&quot;url&quot;</span><span class="o">=&gt;</span><span class="s2">&quot;./?action=inscription&quot;</span><span class="p">,</span><span class="s2">&quot;label&quot;</span><span class="o">=&gt;</span><span class="s2">&quot;Inscription&quot;</span><span class="p">);</span>
+<span class="nv">$menuBurger</span><span class="p">[]</span> <span class="o">=</span> <span class="k">Array</span><span class="p">(</span><span class="s2">"url"</span><span class="o">=&gt;</span><span class="s2">"./?action=connexion"</span><span class="p">,</span><span class="s2">"label"</span><span class="o">=&gt;</span><span class="s2">"Connexion"</span><span class="p">);</span>
+<span class="nv">$menuBurger</span><span class="p">[]</span> <span class="o">=</span> <span class="k">Array</span><span class="p">(</span><span class="s2">"url"</span><span class="o">=&gt;</span><span class="s2">"./?action=inscription"</span><span class="p">,</span><span class="s2">"label"</span><span class="o">=&gt;</span><span class="s2">"Inscription"</span><span class="p">);</span>
 
 <span class="c1">// recuperation des donnees GET, POST, et SESSION</span>
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;mailU&quot;</span><span class="p">])</span> <span class="o">||</span> <span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;mdpU&quot;</span><span class="p">])){</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">"mailU"</span><span class="p">])</span> <span class="o">||</span> <span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">"mdpU"</span><span class="p">])){</span>
     <span class="c1">// on affiche le formulaire de connexion</span>
-    <span class="nv">$titre</span> <span class="o">=</span> <span class="s2">&quot;authentification&quot;</span><span class="p">;</span>
-    <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php&quot;</span><span class="p">;</span>
-    <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/vueAuthentification.php&quot;</span><span class="p">;</span>
-    <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php&quot;</span><span class="p">;</span>
+    <span class="nv">$titre</span> <span class="o">=</span> <span class="s2">"authentification"</span><span class="p">;</span>
+    <span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php"</span><span class="p">;</span>
+    <span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/vueAuthentification.php"</span><span class="p">;</span>
+    <span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php"</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="k">else</span>
 <span class="p">{</span>
@@ -6656,21 +6656,21 @@ L'utilisateur a saisi son login et mot de passe et validé le formulaire. Le con
 <p><strong>Observation du modèle d'authentification</strong> (annexes 1 et 2) 👓</p>
 <p>La section de test du fichier <code>authentification.inc.php</code> :</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&quot;SCRIPT_FILENAME&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Content-Type:text/plain&#39;</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">"SCRIPT_FILENAME"</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">header</span><span class="p">(</span><span class="s1">'Content-Type:text/plain'</span><span class="p">);</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="nx">isLoggedOn</span><span class="p">())</span> <span class="p">{</span>
-        <span class="k">echo</span> <span class="s2">&quot;logged</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+        <span class="k">echo</span> <span class="s2">"logged</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="k">echo</span> <span class="s2">&quot;not logged</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+        <span class="k">echo</span> <span class="s2">"not logged</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="nx">login</span><span class="p">(</span><span class="s2">&quot;test@bts.sio&quot;</span><span class="p">,</span> <span class="s2">&quot;sio&quot;</span><span class="p">);</span>
+    <span class="nx">login</span><span class="p">(</span><span class="s2">"test@bts.sio"</span><span class="p">,</span> <span class="s2">"sio"</span><span class="p">);</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="nx">isLoggedOn</span><span class="p">())</span> <span class="p">{</span>
-        <span class="k">echo</span> <span class="s2">&quot;logged</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+        <span class="k">echo</span> <span class="s2">"logged</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="k">echo</span> <span class="s2">&quot;not logged</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+        <span class="k">echo</span> <span class="s2">"not logged</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
     <span class="p">}</span>
 
     <span class="nv">$mail</span> <span class="o">=</span> <span class="nx">getMailULoggedOn</span><span class="p">();</span>
@@ -6769,15 +6769,15 @@ utilisateur connecté avec cette adresse : test@bts.sio
 <details class="info">
 <summary>Annexe 3 - vueAuthentification.php  📄</summary>
 <div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Connexion<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;./?action=connexion&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">"./?action=connexion"</span> <span class="na">method</span><span class="o">=</span><span class="s">"POST"</span><span class="p">&gt;</span>
 
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;mailU&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Email de connexion&quot;</span> <span class="p">/&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;mdpU&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Mot de passe&quot;</span>  <span class="p">/&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">name</span><span class="o">=</span><span class="s">"mailU"</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">"Email de connexion"</span> <span class="p">/&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"password"</span> <span class="na">name</span><span class="o">=</span><span class="s">"mdpU"</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">"Mot de passe"</span>  <span class="p">/&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span> <span class="p">/&gt;</span>
 
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;./?action=inscription&quot;</span><span class="p">&gt;</span>Inscription<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"./?action=inscription"</span><span class="p">&gt;</span>Inscription<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
 </details>
 <details class="question">
@@ -6788,8 +6788,8 @@ utilisateur connecté avec cette adresse : test@bts.sio
 <p>En vous inspirant de la section de test du modèle, compléter le code du contrôleur en respectant les étapes suivantes :</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="c1">// Étape 1 : inclure les modèles nécessaires</span>
-<span class="k">include_once</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/modele/authentification.inc.php&quot;</span><span class="p">;</span>
-<span class="k">include_once</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/modele/bd.utilisateur.inc.php&quot;</span><span class="p">;</span>
+<span class="k">include_once</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/modele/authentification.inc.php"</span><span class="p">;</span>
+<span class="k">include_once</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/modele/bd.utilisateur.inc.php"</span><span class="p">;</span>
 
 <span class="c1">// Étape 2 : récupérer les données POST si elles existent</span>
 <span class="k">if</span> <span class="p">(</span><span class="cm">/* condition : des données sont transmises */</span><span class="p">)</span> <span class="p">{</span>
@@ -6804,57 +6804,57 @@ utilisateur connecté avec cette adresse : test@bts.sio
     <span class="c1">// Tester si la connexion a réussi</span>
     <span class="k">if</span> <span class="p">(</span><span class="cm">/* à compléter */</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// Afficher la confirmation</span>
-        <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php&quot;</span><span class="p">;</span>
-        <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/vueConfirmationAuth.php&quot;</span><span class="p">;</span>
-        <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php&quot;</span><span class="p">;</span>
+        <span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php"</span><span class="p">;</span>
+        <span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/vueConfirmationAuth.php"</span><span class="p">;</span>
+        <span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php"</span><span class="p">;</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
         <span class="c1">// Afficher le formulaire à nouveau</span>
-        <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php&quot;</span><span class="p">;</span>
-        <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/vueAuthentification.php&quot;</span><span class="p">;</span>
-        <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php&quot;</span><span class="p">;</span>
+        <span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php"</span><span class="p">;</span>
+        <span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/vueAuthentification.php"</span><span class="p">;</span>
+        <span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php"</span><span class="p">;</span>
     <span class="p">}</span>
 
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
     <span class="c1">// Étape déjà faite : afficher le formulaire de connexion</span>
-    <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php&quot;</span><span class="p">;</span>
-    <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/vueAuthentification.php&quot;</span><span class="p">;</span>
-    <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php&quot;</span><span class="p">;</span>
+    <span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php"</span><span class="p">;</span>
+    <span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/vueAuthentification.php"</span><span class="p">;</span>
+    <span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php"</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="cp">?&gt;</span>
 </code></pre></div>
 <details class="question">
 <summary>Éléments de réponses ✅</summary>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&quot;SCRIPT_FILENAME&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nv">$racine</span> <span class="o">=</span> <span class="s2">&quot;..&quot;</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">"SCRIPT_FILENAME"</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$racine</span> <span class="o">=</span> <span class="s2">".."</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="k">include_once</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/modele/authentification.inc.php&quot;</span><span class="p">;</span>
+<span class="k">include_once</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/modele/authentification.inc.php"</span><span class="p">;</span>
 
 <span class="c1">// recuperation des donnees GET, POST, et SESSION</span>
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;mailU&quot;</span><span class="p">])</span> <span class="o">||</span> <span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;mdpU&quot;</span><span class="p">]))</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">"mailU"</span><span class="p">])</span> <span class="o">||</span> <span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">"mdpU"</span><span class="p">]))</span> <span class="p">{</span>
     <span class="c1">// Pas de données → afficher le formulaire</span>
-    <span class="nv">$titre</span> <span class="o">=</span> <span class="s2">&quot;authentification&quot;</span><span class="p">;</span>
-    <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php&quot;</span><span class="p">;</span>
-    <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/vueAuthentification.php&quot;</span><span class="p">;</span>
-    <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php&quot;</span><span class="p">;</span>
+    <span class="nv">$titre</span> <span class="o">=</span> <span class="s2">"authentification"</span><span class="p">;</span>
+    <span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php"</span><span class="p">;</span>
+    <span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/vueAuthentification.php"</span><span class="p">;</span>
+    <span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php"</span><span class="p">;</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="nv">$mailU</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;mailU&quot;</span><span class="p">];</span>
-    <span class="nv">$mdpU</span>  <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;mdpU&quot;</span><span class="p">];</span>
+    <span class="nv">$mailU</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">"mailU"</span><span class="p">];</span>
+    <span class="nv">$mdpU</span>  <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">"mdpU"</span><span class="p">];</span>
 
     <span class="nx">login</span><span class="p">(</span><span class="nv">$mailU</span><span class="p">,</span> <span class="nv">$mdpU</span><span class="p">);</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="nx">isLoggedOn</span><span class="p">())</span> <span class="p">{</span>
         <span class="c1">// Connexion réussie</span>
-        <span class="nv">$titre</span> <span class="o">=</span> <span class="s2">&quot;confirmation&quot;</span><span class="p">;</span>
-        <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php&quot;</span><span class="p">;</span>
-        <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/vueConfirmationAuth.php&quot;</span><span class="p">;</span>
-        <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php&quot;</span><span class="p">;</span>
+        <span class="nv">$titre</span> <span class="o">=</span> <span class="s2">"confirmation"</span><span class="p">;</span>
+        <span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php"</span><span class="p">;</span>
+        <span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/vueConfirmationAuth.php"</span><span class="p">;</span>
+        <span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php"</span><span class="p">;</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
         <span class="c1">// Échec : réafficher le formulaire</span>
-        <span class="nv">$titre</span> <span class="o">=</span> <span class="s2">&quot;authentification&quot;</span><span class="p">;</span>
-        <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php&quot;</span><span class="p">;</span>
-        <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/vueAuthentification.php&quot;</span><span class="p">;</span>
-        <span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php&quot;</span><span class="p">;</span>
+        <span class="nv">$titre</span> <span class="o">=</span> <span class="s2">"authentification"</span><span class="p">;</span>
+        <span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php"</span><span class="p">;</span>
+        <span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/vueAuthentification.php"</span><span class="p">;</span>
+        <span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php"</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="cp">?&gt;</span>
@@ -6864,27 +6864,27 @@ utilisateur connecté avec cette adresse : test@bts.sio
 <p><strong>Documents à utiliser :</strong> fichiers du projet, annexes 1, 2 et 5</p>
 <details class="info">
 <summary>Annexe 1 - section de test du fichier modèle authentification.inc.php  📄</summary>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">if ($_SERVER[&quot;SCRIPT_FILENAME&quot;] == __FILE__) {</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">if ($_SERVER["SCRIPT_FILENAME"] == __FILE__) {</span>
 <span class="x">    // prog principal de test</span>
-<span class="x">    header(&#39;Content-Type:text/plain&#39;);</span>
+<span class="x">    header('Content-Type:text/plain');</span>
 
 <span class="x">    // test de connexion</span>
 <span class="x">    if (isLoggedOn()) {</span>
-<span class="x">        echo &quot;logged\n&quot;;</span>
+<span class="x">        echo "logged\n";</span>
 <span class="x">    } else {</span>
-<span class="x">        echo &quot;not logged\n&quot;;</span>
+<span class="x">        echo "not logged\n";</span>
 <span class="x">    }</span>
 
-<span class="x">    login(&quot;test@bts.sio&quot;, &quot;sio&quot;);   // login de test : test@bts.sio</span>
+<span class="x">    login("test@bts.sio", "sio");   // login de test : test@bts.sio</span>
 <span class="x">                        // mot de passe de test : sio</span>
 <span class="x">    if (isLoggedOn()) {</span>
-<span class="x">        echo &quot;logged\n&quot;;</span>
+<span class="x">        echo "logged\n";</span>
 <span class="x">    } else {</span>
-<span class="x">        echo &quot;not logged\n&quot;;</span>
+<span class="x">        echo "not logged\n";</span>
 <span class="x">    }</span>
 
 <span class="x">    $mail=getMailULoggedOn();</span>
-<span class="x">    echo &quot;utilisateur connecté avec cette adresse : $mail \n&quot;;</span>
+<span class="x">    echo "utilisateur connecté avec cette adresse : $mail \n";</span>
 
 <span class="x">    // deconnexion</span>
 <span class="x">    logout();</span>
@@ -6901,23 +6901,23 @@ utilisateur connecté avec cette adresse : test@bts.sio
 <details class="info">
 <summary>Annexe 5 - contrôleur deconnexion.php à compléter  📄</summary>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="k">if</span> <span class="p">(</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&quot;SCRIPT_FILENAME&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span> <span class="p">){</span>
-    <span class="nv">$racine</span><span class="o">=</span><span class="s2">&quot;..&quot;</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">"SCRIPT_FILENAME"</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span> <span class="p">){</span>
+    <span class="nv">$racine</span><span class="o">=</span><span class="s2">".."</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="k">include_once</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/modele/authentification.inc.php&quot;</span><span class="p">;</span>
+<span class="k">include_once</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/modele/authentification.inc.php"</span><span class="p">;</span>
 
 <span class="c1">// recuperation des donnees GET, POST, et SESSION</span>
 
-<span class="c1">// appel des fonctions permettant de recuperer les donnees utiles a l&#39;affichage</span>
+<span class="c1">// appel des fonctions permettant de recuperer les donnees utiles a l'affichage</span>
 
 <span class="c1">// traitement si necessaire des donnees recuperees</span>
 
 
-<span class="c1">// appel du script de vue qui permet de gerer l&#39;affichage des donnees</span>
-<span class="nv">$titre</span> <span class="o">=</span> <span class="s2">&quot;Deconnexion&quot;</span><span class="p">;</span>
-<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php&quot;</span><span class="p">;</span>
+<span class="c1">// appel du script de vue qui permet de gerer l'affichage des donnees</span>
+<span class="nv">$titre</span> <span class="o">=</span> <span class="s2">"Deconnexion"</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php"</span><span class="p">;</span>
 
-<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php&quot;</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php"</span><span class="p">;</span>
 
 <span class="cp">?&gt;</span>
 </code></pre></div>
@@ -6944,33 +6944,33 @@ utilisateur connecté avec cette adresse : test@bts.sio
 <li>Afficher un message de confirmation</li>
 </ul>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="k">include_once</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/modele/authentification.inc.php&quot;</span><span class="p">;</span>
+<span class="k">include_once</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/modele/authentification.inc.php"</span><span class="p">;</span>
 
-<span class="c1">// Déconnecter l&#39;utilisateur</span>
+<span class="c1">// Déconnecter l'utilisateur</span>
 <span class="cm">/* à compléter */</span><span class="p">;</span>
 
 <span class="c1">// Afficher la confirmation</span>
-<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php&quot;</span><span class="p">;</span>
-<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue//* à compléter */&quot;</span><span class="p">;</span>
-<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php&quot;</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php"</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue//* à compléter */"</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php"</span><span class="p">;</span>
 <span class="cp">?&gt;</span>
 </code></pre></div>
 <details class="question">
 <summary>Éléments de réponses ✅</summary>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&quot;SCRIPT_FILENAME&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nv">$racine</span> <span class="o">=</span> <span class="s2">&quot;..&quot;</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">"SCRIPT_FILENAME"</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$racine</span> <span class="o">=</span> <span class="s2">".."</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="k">include_once</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/modele/authentification.inc.php&quot;</span><span class="p">;</span>
+<span class="k">include_once</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/modele/authentification.inc.php"</span><span class="p">;</span>
 
-<span class="c1">// Déconnecter l&#39;utilisateur</span>
+<span class="c1">// Déconnecter l'utilisateur</span>
 <span class="nx">logout</span><span class="p">();</span>
 
 <span class="c1">// Afficher la confirmation</span>
-<span class="nv">$titre</span> <span class="o">=</span> <span class="s2">&quot;authentification&quot;</span><span class="p">;</span>
-<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php&quot;</span><span class="p">;</span>
-<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/vueAuthentification.php&quot;</span><span class="p">;</span>
-<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php&quot;</span><span class="p">;</span>
+<span class="nv">$titre</span> <span class="o">=</span> <span class="s2">"authentification"</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php"</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/vueAuthentification.php"</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php"</span><span class="p">;</span>
 <span class="cp">?&gt;</span>
 </code></pre></div>
 </details>
@@ -6980,38 +6980,38 @@ utilisateur connecté avec cette adresse : test@bts.sio
 <summary>Annexe 6 - contrôleur rechercheResto.php à compléter 📄</summary>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
-<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&quot;SCRIPT_FILENAME&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nv">$racine</span> <span class="o">=</span> <span class="s2">&quot;..&quot;</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">"SCRIPT_FILENAME"</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$racine</span> <span class="o">=</span> <span class="s2">".."</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="k">include_once</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/modele/bd.resto.inc.php&quot;</span><span class="p">;</span>
+<span class="k">include_once</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/modele/bd.resto.inc.php"</span><span class="p">;</span>
 
 <span class="c1">// creation du menu burger</span>
 <span class="nv">$menuBurger</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
-<span class="nv">$menuBurger</span><span class="p">[]</span> <span class="o">=</span> <span class="k">Array</span><span class="p">(</span><span class="s2">&quot;url&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;./?action=recherche&amp;critere=nom&quot;</span><span class="p">,</span> <span class="s2">&quot;label&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Recherche par nom&quot;</span><span class="p">);</span>
-<span class="nv">$menuBurger</span><span class="p">[]</span> <span class="o">=</span> <span class="k">Array</span><span class="p">(</span><span class="s2">&quot;url&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;./?action=recherche&amp;critere=adresse&quot;</span><span class="p">,</span> <span class="s2">&quot;label&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Recherche par adresse&quot;</span><span class="p">);</span>
+<span class="nv">$menuBurger</span><span class="p">[]</span> <span class="o">=</span> <span class="k">Array</span><span class="p">(</span><span class="s2">"url"</span> <span class="o">=&gt;</span> <span class="s2">"./?action=recherche&amp;critere=nom"</span><span class="p">,</span> <span class="s2">"label"</span> <span class="o">=&gt;</span> <span class="s2">"Recherche par nom"</span><span class="p">);</span>
+<span class="nv">$menuBurger</span><span class="p">[]</span> <span class="o">=</span> <span class="k">Array</span><span class="p">(</span><span class="s2">"url"</span> <span class="o">=&gt;</span> <span class="s2">"./?action=recherche&amp;critere=adresse"</span><span class="p">,</span> <span class="s2">"label"</span> <span class="o">=&gt;</span> <span class="s2">"Recherche par adresse"</span><span class="p">);</span>
 
 <span class="c1">// critere de recherche par defaut</span>
-<span class="nv">$critere</span> <span class="o">=</span> <span class="s2">&quot;nom&quot;</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s2">&quot;critere&quot;</span><span class="p">]))</span> <span class="p">{</span>
-    <span class="nv">$critere</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s2">&quot;critere&quot;</span><span class="p">];</span>
+<span class="nv">$critere</span> <span class="o">=</span> <span class="s2">"nom"</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s2">"critere"</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="nv">$critere</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s2">"critere"</span><span class="p">];</span>
 <span class="p">}</span>
 <span class="c1">// recuperation des donnees GET, POST, et SESSION</span>
 <span class="c1">// recherche par nom</span>
-<span class="nv">$nomR</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="nv">$nomR</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
 <span class="c1">// recherche par adresse</span>
-<span class="nv">$voieAdrR</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
-<span class="nv">$cpR</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
-<span class="nv">$villeR</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="nv">$voieAdrR</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+<span class="nv">$cpR</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+<span class="nv">$villeR</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
 
-<span class="c1">// appel des fonctions permettant de recuperer les donnees utiles a l&#39;affichage</span>
+<span class="c1">// appel des fonctions permettant de recuperer les donnees utiles a l'affichage</span>
 <span class="c1">// Si on provient du formulaire de recherche : $critere indique le type de recherche à effectuer</span>
 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">))</span> <span class="p">{</span>
     <span class="k">switch</span> <span class="p">(</span><span class="nv">$critere</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">case</span> <span class="s1">&#39;nom&#39;</span><span class="o">:</span>
+        <span class="k">case</span> <span class="s1">'nom'</span><span class="o">:</span>
             <span class="c1">// recherche par nom</span>
 
             <span class="k">break</span><span class="p">;</span>
-        <span class="k">case</span> <span class="s1">&#39;adresse&#39;</span><span class="o">:</span>
+        <span class="k">case</span> <span class="s1">'adresse'</span><span class="o">:</span>
             <span class="c1">// recherche par adresse</span>
 
             <span class="k">break</span><span class="p">;</span>
@@ -7021,40 +7021,40 @@ utilisateur connecté avec cette adresse : test@bts.sio
 <span class="c1">// traitement si necessaire des donnees recuperees</span>
 <span class="p">;</span>
 
-<span class="c1">// appel du script de vue qui permet de gerer l&#39;affichage des donnees</span>
-<span class="nv">$titre</span> <span class="o">=</span> <span class="s2">&quot;Recherche d&#39;un restaurant&quot;</span><span class="p">;</span>
-<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php&quot;</span><span class="p">;</span>
-<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/vueRechercheResto.php&quot;</span><span class="p">;</span>
-<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php&quot;</span><span class="p">;</span>
+<span class="c1">// appel du script de vue qui permet de gerer l'affichage des donnees</span>
+<span class="nv">$titre</span> <span class="o">=</span> <span class="s2">"Recherche d'un restaurant"</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php"</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/vueRechercheResto.php"</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php"</span><span class="p">;</span>
 <span class="cp">?&gt;</span>
 </code></pre></div>
 </details>
 <details class="info">
 <summary>Annexe 7 - vue vueRechercheResto.php 📄</summary>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;h1&gt;Recherche d&#39;un restaurant&lt;/h1&gt;</span>
-<span class="x">&lt;form action=&quot;./?action=recherche&amp;critere=</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$critere</span> <span class="cp">?&gt;</span><span class="x">&quot; method=&quot;POST&quot;&gt;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;h1&gt;Recherche d'un restaurant&lt;/h1&gt;</span>
+<span class="x">&lt;form action="./?action=recherche&amp;critere=</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$critere</span> <span class="cp">?&gt;</span><span class="x">" method="POST"&gt;</span>
 
 <span class="x">    </span><span class="cp">&lt;?php</span>
     <span class="k">switch</span> <span class="p">(</span><span class="nv">$critere</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">case</span> <span class="s2">&quot;nom&quot;</span><span class="o">:</span>
+        <span class="k">case</span> <span class="s2">"nom"</span><span class="o">:</span>
             <span class="cp">?&gt;</span>
 <span class="x">            Recherche par nom : &lt;br /&gt;</span>
-<span class="x">            &lt;input type=&quot;text&quot; name=&quot;nomR&quot; placeholder=&quot;nom&quot; value=&quot;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$nomR</span> <span class="cp">?&gt;</span><span class="x">&quot; /&gt;&lt;br /&gt;</span>
+<span class="x">            &lt;input type="text" name="nomR" placeholder="nom" value="</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$nomR</span> <span class="cp">?&gt;</span><span class="x">" /&gt;&lt;br /&gt;</span>
 <span class="x">            </span><span class="cp">&lt;?php</span>
             <span class="k">break</span><span class="p">;</span>
-        <span class="k">case</span> <span class="s2">&quot;adresse&quot;</span><span class="o">:</span>
+        <span class="k">case</span> <span class="s2">"adresse"</span><span class="o">:</span>
             <span class="cp">?&gt;</span>
 <span class="x">            Recherche par adresse : &lt;br /&gt;</span>
-<span class="x">            &lt;input type=&quot;text&quot; name=&quot;villeR&quot; placeholder=&quot;ville&quot; value=&quot;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$villeR</span> <span class="cp">?&gt;</span><span class="x">&quot;/&gt;&lt;br /&gt;</span>
-<span class="x">            &lt;input type=&quot;text&quot; name=&quot;cpR&quot; placeholder=&quot;code postal&quot; value=&quot;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$cpR</span> <span class="cp">?&gt;</span><span class="x">&quot;/&gt;&lt;br /&gt;</span>
-<span class="x">            &lt;input type=&quot;text&quot; name=&quot;voieAdrR&quot; placeholder=&quot;rue&quot; value=&quot;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$voieAdrR</span> <span class="cp">?&gt;</span><span class="x">&quot;/&gt;&lt;br /&gt;</span>
+<span class="x">            &lt;input type="text" name="villeR" placeholder="ville" value="</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$villeR</span> <span class="cp">?&gt;</span><span class="x">"/&gt;&lt;br /&gt;</span>
+<span class="x">            &lt;input type="text" name="cpR" placeholder="code postal" value="</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$cpR</span> <span class="cp">?&gt;</span><span class="x">"/&gt;&lt;br /&gt;</span>
+<span class="x">            &lt;input type="text" name="voieAdrR" placeholder="rue" value="</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$voieAdrR</span> <span class="cp">?&gt;</span><span class="x">"/&gt;&lt;br /&gt;</span>
 <span class="x">            </span><span class="cp">&lt;?php</span>
             <span class="k">break</span><span class="p">;</span>
 
     <span class="p">}</span>
     <span class="cp">?&gt;</span>
 <span class="x">    &lt;br /&gt;&lt;br /&gt;</span>
-<span class="x">    &lt;input type=&quot;submit&quot; value=&quot;Rechercher&quot; /&gt;</span>
+<span class="x">    &lt;input type="submit" value="Rechercher" /&gt;</span>
 
 <span class="x">&lt;/form&gt;</span>
 </code></pre></div>
@@ -7065,17 +7065,17 @@ utilisateur connecté avec cette adresse : test@bts.sio
 <span class="cp">&lt;?php</span>
 <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nb">count</span><span class="p">(</span><span class="nv">$listeRestos</span><span class="p">);</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
     <span class="cp">?&gt;</span>
-<span class="x">    &lt;div class=&quot;card&quot;&gt;</span>
-<span class="x">        &lt;div class=&quot;descrCard&quot;&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="s2">&quot;&lt;a href=&#39;./?action=detail&amp;idR=&quot;</span> <span class="o">.</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s1">&#39;idR&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&#39;&gt;&quot;</span> <span class="o">.</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s1">&#39;nomR&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&lt;/a&gt;&quot;</span><span class="p">;</span> <span class="cp">?&gt;</span>
+<span class="x">    &lt;div class="card"&gt;</span>
+<span class="x">        &lt;div class="descrCard"&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="s2">"&lt;a href='./?action=detail&amp;idR="</span> <span class="o">.</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s1">'idR'</span><span class="p">]</span> <span class="o">.</span> <span class="s2">"'&gt;"</span> <span class="o">.</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s1">'nomR'</span><span class="p">]</span> <span class="o">.</span> <span class="s2">"&lt;/a&gt;"</span><span class="p">;</span> <span class="cp">?&gt;</span>
 <span class="x">            &lt;br /&gt;</span>
-<span class="x">            </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">&quot;numAdrR&quot;</span><span class="p">]</span> <span class="cp">?&gt;</span>
-<span class="x">            </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">&quot;voieAdrR&quot;</span><span class="p">]</span> <span class="cp">?&gt;</span>
+<span class="x">            </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">"numAdrR"</span><span class="p">]</span> <span class="cp">?&gt;</span>
+<span class="x">            </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">"voieAdrR"</span><span class="p">]</span> <span class="cp">?&gt;</span>
 <span class="x">            &lt;br /&gt;</span>
-<span class="x">            </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">&quot;cpR&quot;</span><span class="p">]</span> <span class="cp">?&gt;</span>
-<span class="x">            </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">&quot;villeR&quot;</span><span class="p">]</span> <span class="cp">?&gt;</span>
+<span class="x">            </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">"cpR"</span><span class="p">]</span> <span class="cp">?&gt;</span>
+<span class="x">            </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">"villeR"</span><span class="p">]</span> <span class="cp">?&gt;</span>
 <span class="x">        &lt;/div&gt;</span>
-<span class="x">        &lt;div class=&quot;tagCard&quot;&gt;</span>
-<span class="x">            &lt;ul id=&quot;tagFood&quot;&gt;       </span>
+<span class="x">        &lt;div class="tagCard"&gt;</span>
+<span class="x">            &lt;ul id="tagFood"&gt;       </span>
 <span class="x">            &lt;/ul&gt;</span>
 <span class="x">        &lt;/div&gt;</span>
 <span class="x">    &lt;/div&gt;</span>
@@ -7087,7 +7087,7 @@ utilisateur connecté avec cette adresse : test@bts.sio
 <details class="info">
 <summary>Annexe 9 - extrait du modèle bd.resto.inc.php 📄</summary>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="k">include_once</span> <span class="s2">&quot;bd.inc.php&quot;</span><span class="p">;</span>
+<span class="k">include_once</span> <span class="s2">"bd.inc.php"</span><span class="p">;</span>
 
 <span class="k">function</span> <span class="nf">getRestoByIdR</span><span class="p">(</span><span class="nv">$idR</span><span class="p">)</span> <span class="p">{</span><span class="o">...</span><span class="p">}</span>
 
@@ -7096,21 +7096,21 @@ utilisateur connecté avec cette adresse : test@bts.sio
 <span class="k">function</span> <span class="nf">getRestosByAdresse</span><span class="p">(</span><span class="nv">$voieAdrR</span><span class="p">,</span> <span class="nv">$cpR</span><span class="p">,</span> <span class="nv">$villeR</span><span class="p">)</span> <span class="p">{</span><span class="o">...</span><span class="p">}</span>
 
 
-<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&quot;SCRIPT_FILENAME&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">"SCRIPT_FILENAME"</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// prog principal de test</span>
-    <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Content-Type:text/plain&#39;</span><span class="p">);</span>
+    <span class="nb">header</span><span class="p">(</span><span class="s1">'Content-Type:text/plain'</span><span class="p">);</span>
 
-    <span class="k">echo</span> <span class="s2">&quot;getRestos() : </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">"getRestos() : </span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
     <span class="nb">print_r</span><span class="p">(</span><span class="nx">getRestos</span><span class="p">());</span>
 
-    <span class="k">echo</span> <span class="s2">&quot;getRestoByIdR(idR) : </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">"getRestoByIdR(idR) : </span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
     <span class="nb">print_r</span><span class="p">(</span><span class="nx">getRestoByIdR</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
 
-    <span class="k">echo</span> <span class="s2">&quot;getRestosByNomR(nomR) : </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
-    <span class="nb">print_r</span><span class="p">(</span><span class="nx">getRestosByNomR</span><span class="p">(</span><span class="s2">&quot;charcut&quot;</span><span class="p">));</span>
+    <span class="k">echo</span> <span class="s2">"getRestosByNomR(nomR) : </span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nx">getRestosByNomR</span><span class="p">(</span><span class="s2">"charcut"</span><span class="p">));</span>
 
-    <span class="k">echo</span> <span class="s2">&quot;getRestosByAdresse(voieAdrR, cpR, villeR) : </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
-    <span class="nb">print_r</span><span class="p">(</span><span class="nx">getRestosByAdresse</span><span class="p">(</span><span class="s2">&quot;Ravel&quot;</span><span class="p">,</span> <span class="s2">&quot;33000&quot;</span><span class="p">,</span> <span class="s2">&quot;Bordeaux&quot;</span><span class="p">));</span>
+    <span class="k">echo</span> <span class="s2">"getRestosByAdresse(voieAdrR, cpR, villeR) : </span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nx">getRestosByAdresse</span><span class="p">(</span><span class="s2">"Ravel"</span><span class="p">,</span> <span class="s2">"33000"</span><span class="p">,</span> <span class="s2">"Bordeaux"</span><span class="p">));</span>
 <span class="p">}</span>
 <span class="cp">?&gt;</span>
 </code></pre></div>
@@ -7217,14 +7217,14 @@ Elles correspondent aux champs des deux formulaires de recherche (par nom et par
 </details>
 <p>🔨 <strong>Compléter la section de récupération des données POST pour valoriser</strong> <code>$nomR</code>, <code>$voieAdrR</code>, <code>$cpR</code> et <code>$villeR</code> 📥</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Initialisation par défaut</span>
-<span class="x">$nomR     = &quot;&quot;;</span>
-<span class="x">$voieAdrR = &quot;&quot;;</span>
-<span class="x">$cpR      = &quot;&quot;;</span>
-<span class="x">$villeR   = &quot;&quot;;</span>
+<span class="x">$nomR     = "";</span>
+<span class="x">$voieAdrR = "";</span>
+<span class="x">$cpR      = "";</span>
+<span class="x">$villeR   = "";</span>
 
 <span class="x">// Récupération conditionnelle (exemple pour $nomR)</span>
-<span class="x">if (isset($_POST[&#39;nomR&#39;])) {</span>
-<span class="x">    $nomR = $_POST[&#39;nomR&#39;];</span>
+<span class="x">if (isset($_POST['nomR'])) {</span>
+<span class="x">    $nomR = $_POST['nomR'];</span>
 <span class="x">}</span>
 
 <span class="x">// À compléter pour les autres variables :</span>
@@ -7232,37 +7232,37 @@ Elles correspondent aux champs des deux formulaires de recherche (par nom et par
 </code></pre></div>
 <details class="question">
 <summary>Éléments de réponses ✅</summary>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$nomR = &quot;&quot;;</span>
-<span class="x">if (isset($_POST[&quot;nomR&quot;])) {</span>
-<span class="x">    $nomR = $_POST[&quot;nomR&quot;];</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$nomR = "";</span>
+<span class="x">if (isset($_POST["nomR"])) {</span>
+<span class="x">    $nomR = $_POST["nomR"];</span>
 <span class="x">}</span>
 
-<span class="x">$voieAdrR = &quot;&quot;;</span>
-<span class="x">if (isset($_POST[&quot;voieAdrR&quot;])) {</span>
-<span class="x">    $voieAdrR = $_POST[&quot;voieAdrR&quot;];</span>
+<span class="x">$voieAdrR = "";</span>
+<span class="x">if (isset($_POST["voieAdrR"])) {</span>
+<span class="x">    $voieAdrR = $_POST["voieAdrR"];</span>
 <span class="x">}</span>
 
-<span class="x">$cpR = &quot;&quot;;</span>
-<span class="x">if (isset($_POST[&quot;cpR&quot;])) {</span>
-<span class="x">    $cpR = $_POST[&quot;cpR&quot;];</span>
+<span class="x">$cpR = "";</span>
+<span class="x">if (isset($_POST["cpR"])) {</span>
+<span class="x">    $cpR = $_POST["cpR"];</span>
 <span class="x">}</span>
 
-<span class="x">$villeR = &quot;&quot;;</span>
-<span class="x">if (isset($_POST[&quot;villeR&quot;])) {</span>
-<span class="x">    $villeR = $_POST[&quot;villeR&quot;];</span>
+<span class="x">$villeR = "";</span>
+<span class="x">if (isset($_POST["villeR"])) {</span>
+<span class="x">    $villeR = $_POST["villeR"];</span>
 <span class="x">}</span>
 </code></pre></div>
 </details>
 <p>🔨 <strong>Compléter le code de chaque cas en faisant appel à la fonction appropriée du modèle</strong>. Les données récupérées doivent être placées dans <code>$listeRestos</code>. ✏️</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">if (!empty($_POST)) {</span>
-<span class="x">    $typeRecherche = $_POST[&#39;typeRecherche&#39;] ?? &#39;&#39;;</span>
+<span class="x">    $typeRecherche = $_POST['typeRecherche'] ?? '';</span>
 
 <span class="x">    switch ($typeRecherche) {</span>
-<span class="x">        case &#39;nom&#39;:</span>
+<span class="x">        case 'nom':</span>
 <span class="x">            $listeRestos = /* à compléter */;</span>
 <span class="x">            break;</span>
 
-<span class="x">        case &#39;adresse&#39;:</span>
+<span class="x">        case 'adresse':</span>
 <span class="x">            $listeRestos = /* à compléter */;</span>
 <span class="x">            break;</span>
 
@@ -7274,11 +7274,11 @@ Elles correspondent aux champs des deux formulaires de recherche (par nom et par
 <details class="question">
 <summary>Éléments de réponses ✅</summary>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">switch ($critere) {</span>
-<span class="x">    case &#39;nom&#39;:</span>
+<span class="x">    case 'nom':</span>
 <span class="x">        $listeRestos = getRestosByNomR($nomR);</span>
 <span class="x">        break;</span>
 
-<span class="x">    case &#39;adresse&#39;:</span>
+<span class="x">    case 'adresse':</span>
 <span class="x">        $listeRestos = getRestosByAdresse($voieAdrR, $cpR, $villeR);</span>
 <span class="x">        break;</span>
 <span class="x">}</span>
@@ -7291,30 +7291,30 @@ Elles correspondent aux champs des deux formulaires de recherche (par nom et par
 </details>
 <p>🔨 <strong>Ajouter l'appel à la vue de résultats</strong>🖼️ : La vue <code>vueResultRecherche.php</code> ne doit être affichée que si des données ont été trouvées. Ajouter son inclusion en fin de contrôleur.</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// En fin de contrôleur</span>
-<span class="x">include &quot;$racine/vue/entete.html.php&quot;;</span>
+<span class="x">include "$racine/vue/entete.html.php";</span>
 
 <span class="x">// Toujours afficher le formulaire de recherche</span>
-<span class="x">include &quot;$racine/vue/vueRechercheResto.php&quot;;</span>
+<span class="x">include "$racine/vue/vueRechercheResto.php";</span>
 
 <span class="x">// Afficher les résultats uniquement si une recherche a été faite</span>
 <span class="x">if (/* condition à compléter */) {</span>
-<span class="x">    include &quot;$racine/vue/vueResultRecherche.php&quot;;</span>
+<span class="x">    include "$racine/vue/vueResultRecherche.php";</span>
 <span class="x">}</span>
 
-<span class="x">include &quot;$racine/vue/pied.html.php&quot;;</span>
+<span class="x">include "$racine/vue/pied.html.php";</span>
 </code></pre></div>
 <details class="question">
 <summary>Éléments de réponses ✅</summary>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$titre = &quot;Recherche d&#39;un restaurant&quot;;</span>
-<span class="x">include &quot;$racine/vue/entete.html.php&quot;;</span>
-<span class="x">include &quot;$racine/vue/vueRechercheResto.php&quot;;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$titre = "Recherche d'un restaurant";</span>
+<span class="x">include "$racine/vue/entete.html.php";</span>
+<span class="x">include "$racine/vue/vueRechercheResto.php";</span>
 
 <span class="x">if (!empty($_POST)) {</span>
 <span class="x">    // Afficher les résultats uniquement si une recherche a été soumise</span>
-<span class="x">    include &quot;$racine/vue/vueResultRecherche.php&quot;;</span>
+<span class="x">    include "$racine/vue/vueResultRecherche.php";</span>
 <span class="x">}</span>
 
-<span class="x">include &quot;$racine/vue/pied.html.php&quot;;</span>
+<span class="x">include "$racine/vue/pied.html.php";</span>
 </code></pre></div>
 </details>
 <h2 id="4-analyse-de-rechercherestophp-gestion-de-laffichage">4. Analyse de <code>rechercheResto.php</code> : gestion de l'affichage 🔍<a class="headerlink" href="#4-analyse-de-rechercherestophp-gestion-de-laffichage" title="Permanent link">⚓︎</a></h2>
@@ -7323,38 +7323,38 @@ Elles correspondent aux champs des deux formulaires de recherche (par nom et par
 <summary>Annexe 6 - contrôleur rechercheResto.php à compléter 📄</summary>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
-<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&quot;SCRIPT_FILENAME&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nv">$racine</span> <span class="o">=</span> <span class="s2">&quot;..&quot;</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">"SCRIPT_FILENAME"</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$racine</span> <span class="o">=</span> <span class="s2">".."</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="k">include_once</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/modele/bd.resto.inc.php&quot;</span><span class="p">;</span>
+<span class="k">include_once</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/modele/bd.resto.inc.php"</span><span class="p">;</span>
 
 <span class="c1">// creation du menu burger</span>
 <span class="nv">$menuBurger</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
-<span class="nv">$menuBurger</span><span class="p">[]</span> <span class="o">=</span> <span class="k">Array</span><span class="p">(</span><span class="s2">&quot;url&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;./?action=recherche&amp;critere=nom&quot;</span><span class="p">,</span> <span class="s2">&quot;label&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Recherche par nom&quot;</span><span class="p">);</span>
-<span class="nv">$menuBurger</span><span class="p">[]</span> <span class="o">=</span> <span class="k">Array</span><span class="p">(</span><span class="s2">&quot;url&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;./?action=recherche&amp;critere=adresse&quot;</span><span class="p">,</span> <span class="s2">&quot;label&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Recherche par adresse&quot;</span><span class="p">);</span>
+<span class="nv">$menuBurger</span><span class="p">[]</span> <span class="o">=</span> <span class="k">Array</span><span class="p">(</span><span class="s2">"url"</span> <span class="o">=&gt;</span> <span class="s2">"./?action=recherche&amp;critere=nom"</span><span class="p">,</span> <span class="s2">"label"</span> <span class="o">=&gt;</span> <span class="s2">"Recherche par nom"</span><span class="p">);</span>
+<span class="nv">$menuBurger</span><span class="p">[]</span> <span class="o">=</span> <span class="k">Array</span><span class="p">(</span><span class="s2">"url"</span> <span class="o">=&gt;</span> <span class="s2">"./?action=recherche&amp;critere=adresse"</span><span class="p">,</span> <span class="s2">"label"</span> <span class="o">=&gt;</span> <span class="s2">"Recherche par adresse"</span><span class="p">);</span>
 
 <span class="c1">// critere de recherche par defaut</span>
-<span class="nv">$critere</span> <span class="o">=</span> <span class="s2">&quot;nom&quot;</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s2">&quot;critere&quot;</span><span class="p">]))</span> <span class="p">{</span>
-    <span class="nv">$critere</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s2">&quot;critere&quot;</span><span class="p">];</span>
+<span class="nv">$critere</span> <span class="o">=</span> <span class="s2">"nom"</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s2">"critere"</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="nv">$critere</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s2">"critere"</span><span class="p">];</span>
 <span class="p">}</span>
 <span class="c1">// recuperation des donnees GET, POST, et SESSION</span>
 <span class="c1">// recherche par nom</span>
-<span class="nv">$nomR</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="nv">$nomR</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
 <span class="c1">// recherche par adresse</span>
-<span class="nv">$voieAdrR</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
-<span class="nv">$cpR</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
-<span class="nv">$villeR</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="nv">$voieAdrR</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+<span class="nv">$cpR</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+<span class="nv">$villeR</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
 
-<span class="c1">// appel des fonctions permettant de recuperer les donnees utiles a l&#39;affichage</span>
+<span class="c1">// appel des fonctions permettant de recuperer les donnees utiles a l'affichage</span>
 <span class="c1">// Si on provient du formulaire de recherche : $critere indique le type de recherche à effectuer</span>
 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">))</span> <span class="p">{</span>
     <span class="k">switch</span> <span class="p">(</span><span class="nv">$critere</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">case</span> <span class="s1">&#39;nom&#39;</span><span class="o">:</span>
+        <span class="k">case</span> <span class="s1">'nom'</span><span class="o">:</span>
             <span class="c1">// recherche par nom</span>
 
             <span class="k">break</span><span class="p">;</span>
-        <span class="k">case</span> <span class="s1">&#39;adresse&#39;</span><span class="o">:</span>
+        <span class="k">case</span> <span class="s1">'adresse'</span><span class="o">:</span>
             <span class="c1">// recherche par adresse</span>
 
             <span class="k">break</span><span class="p">;</span>
@@ -7364,40 +7364,40 @@ Elles correspondent aux champs des deux formulaires de recherche (par nom et par
 <span class="c1">// traitement si necessaire des donnees recuperees</span>
 <span class="p">;</span>
 
-<span class="c1">// appel du script de vue qui permet de gerer l&#39;affichage des donnees</span>
-<span class="nv">$titre</span> <span class="o">=</span> <span class="s2">&quot;Recherche d&#39;un restaurant&quot;</span><span class="p">;</span>
-<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php&quot;</span><span class="p">;</span>
-<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/vueRechercheResto.php&quot;</span><span class="p">;</span>
-<span class="k">include</span> <span class="s2">&quot;</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php&quot;</span><span class="p">;</span>
+<span class="c1">// appel du script de vue qui permet de gerer l'affichage des donnees</span>
+<span class="nv">$titre</span> <span class="o">=</span> <span class="s2">"Recherche d'un restaurant"</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/entete.html.php"</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/vueRechercheResto.php"</span><span class="p">;</span>
+<span class="k">include</span> <span class="s2">"</span><span class="si">$racine</span><span class="s2">/vue/pied.html.php"</span><span class="p">;</span>
 <span class="cp">?&gt;</span>
 </code></pre></div>
 </details>
 <details class="info">
 <summary>Annexe 7 - vue vueRechercheResto.php 📄</summary>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;h1&gt;Recherche d&#39;un restaurant&lt;/h1&gt;</span>
-<span class="x">&lt;form action=&quot;./?action=recherche&amp;critere=</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$critere</span> <span class="cp">?&gt;</span><span class="x">&quot; method=&quot;POST&quot;&gt;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;h1&gt;Recherche d'un restaurant&lt;/h1&gt;</span>
+<span class="x">&lt;form action="./?action=recherche&amp;critere=</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$critere</span> <span class="cp">?&gt;</span><span class="x">" method="POST"&gt;</span>
 
 <span class="x">    </span><span class="cp">&lt;?php</span>
     <span class="k">switch</span> <span class="p">(</span><span class="nv">$critere</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">case</span> <span class="s2">&quot;nom&quot;</span><span class="o">:</span>
+        <span class="k">case</span> <span class="s2">"nom"</span><span class="o">:</span>
             <span class="cp">?&gt;</span>
 <span class="x">            Recherche par nom : &lt;br /&gt;</span>
-<span class="x">            &lt;input type=&quot;text&quot; name=&quot;nomR&quot; placeholder=&quot;nom&quot; value=&quot;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$nomR</span> <span class="cp">?&gt;</span><span class="x">&quot; /&gt;&lt;br /&gt;</span>
+<span class="x">            &lt;input type="text" name="nomR" placeholder="nom" value="</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$nomR</span> <span class="cp">?&gt;</span><span class="x">" /&gt;&lt;br /&gt;</span>
 <span class="x">            </span><span class="cp">&lt;?php</span>
             <span class="k">break</span><span class="p">;</span>
-        <span class="k">case</span> <span class="s2">&quot;adresse&quot;</span><span class="o">:</span>
+        <span class="k">case</span> <span class="s2">"adresse"</span><span class="o">:</span>
             <span class="cp">?&gt;</span>
 <span class="x">            Recherche par adresse : &lt;br /&gt;</span>
-<span class="x">            &lt;input type=&quot;text&quot; name=&quot;villeR&quot; placeholder=&quot;ville&quot; value=&quot;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$villeR</span> <span class="cp">?&gt;</span><span class="x">&quot;/&gt;&lt;br /&gt;</span>
-<span class="x">            &lt;input type=&quot;text&quot; name=&quot;cpR&quot; placeholder=&quot;code postal&quot; value=&quot;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$cpR</span> <span class="cp">?&gt;</span><span class="x">&quot;/&gt;&lt;br /&gt;</span>
-<span class="x">            &lt;input type=&quot;text&quot; name=&quot;voieAdrR&quot; placeholder=&quot;rue&quot; value=&quot;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$voieAdrR</span> <span class="cp">?&gt;</span><span class="x">&quot;/&gt;&lt;br /&gt;</span>
+<span class="x">            &lt;input type="text" name="villeR" placeholder="ville" value="</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$villeR</span> <span class="cp">?&gt;</span><span class="x">"/&gt;&lt;br /&gt;</span>
+<span class="x">            &lt;input type="text" name="cpR" placeholder="code postal" value="</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$cpR</span> <span class="cp">?&gt;</span><span class="x">"/&gt;&lt;br /&gt;</span>
+<span class="x">            &lt;input type="text" name="voieAdrR" placeholder="rue" value="</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$voieAdrR</span> <span class="cp">?&gt;</span><span class="x">"/&gt;&lt;br /&gt;</span>
 <span class="x">            </span><span class="cp">&lt;?php</span>
             <span class="k">break</span><span class="p">;</span>
 
     <span class="p">}</span>
     <span class="cp">?&gt;</span>
 <span class="x">    &lt;br /&gt;&lt;br /&gt;</span>
-<span class="x">    &lt;input type=&quot;submit&quot; value=&quot;Rechercher&quot; /&gt;</span>
+<span class="x">    &lt;input type="submit" value="Rechercher" /&gt;</span>
 
 <span class="x">&lt;/form&gt;</span>
 </code></pre></div>
@@ -7408,17 +7408,17 @@ Elles correspondent aux champs des deux formulaires de recherche (par nom et par
 <span class="cp">&lt;?php</span>
 <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nb">count</span><span class="p">(</span><span class="nv">$listeRestos</span><span class="p">);</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
     <span class="cp">?&gt;</span>
-<span class="x">    &lt;div class=&quot;card&quot;&gt;</span>
-<span class="x">        &lt;div class=&quot;descrCard&quot;&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="s2">&quot;&lt;a href=&#39;./?action=detail&amp;idR=&quot;</span> <span class="o">.</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s1">&#39;idR&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&#39;&gt;&quot;</span> <span class="o">.</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s1">&#39;nomR&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&lt;/a&gt;&quot;</span><span class="p">;</span> <span class="cp">?&gt;</span>
+<span class="x">    &lt;div class="card"&gt;</span>
+<span class="x">        &lt;div class="descrCard"&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="s2">"&lt;a href='./?action=detail&amp;idR="</span> <span class="o">.</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s1">'idR'</span><span class="p">]</span> <span class="o">.</span> <span class="s2">"'&gt;"</span> <span class="o">.</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s1">'nomR'</span><span class="p">]</span> <span class="o">.</span> <span class="s2">"&lt;/a&gt;"</span><span class="p">;</span> <span class="cp">?&gt;</span>
 <span class="x">            &lt;br /&gt;</span>
-<span class="x">            </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">&quot;numAdrR&quot;</span><span class="p">]</span> <span class="cp">?&gt;</span>
-<span class="x">            </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">&quot;voieAdrR&quot;</span><span class="p">]</span> <span class="cp">?&gt;</span>
+<span class="x">            </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">"numAdrR"</span><span class="p">]</span> <span class="cp">?&gt;</span>
+<span class="x">            </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">"voieAdrR"</span><span class="p">]</span> <span class="cp">?&gt;</span>
 <span class="x">            &lt;br /&gt;</span>
-<span class="x">            </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">&quot;cpR&quot;</span><span class="p">]</span> <span class="cp">?&gt;</span>
-<span class="x">            </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">&quot;villeR&quot;</span><span class="p">]</span> <span class="cp">?&gt;</span>
+<span class="x">            </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">"cpR"</span><span class="p">]</span> <span class="cp">?&gt;</span>
+<span class="x">            </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$listeRestos</span><span class="p">[</span><span class="nv">$i</span><span class="p">][</span><span class="s2">"villeR"</span><span class="p">]</span> <span class="cp">?&gt;</span>
 <span class="x">        &lt;/div&gt;</span>
-<span class="x">        &lt;div class=&quot;tagCard&quot;&gt;</span>
-<span class="x">            &lt;ul id=&quot;tagFood&quot;&gt;       </span>
+<span class="x">        &lt;div class="tagCard"&gt;</span>
+<span class="x">            &lt;ul id="tagFood"&gt;       </span>
 <span class="x">            &lt;/ul&gt;</span>
 <span class="x">        &lt;/div&gt;</span>
 <span class="x">    &lt;/div&gt;</span>
@@ -7441,7 +7441,7 @@ Elles correspondent aux champs des deux formulaires de recherche (par nom et par
 <details class="question">
 <summary>Éléments de réponses ✅</summary>
 <p>La transmission se fait dans le champ <code>action</code> du formulaire de recherche dans <code>vueRechercheResto.php</code> :</p>
-<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;form action=&quot;./?action=recherche&amp;critere=</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$critere</span> <span class="cp">?&gt;</span><span class="x">&quot; method=&quot;POST&quot;&gt;</span>
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">&lt;form action="./?action=recherche&amp;critere=</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$critere</span> <span class="cp">?&gt;</span><span class="x">" method="POST"&gt;</span>
 </code></pre></div>
 La valeur de <code>$critere</code> est ainsi ajoutée à l'URL en méthode GET à chaque soumission du formulaire.</p>
 </details>
@@ -7642,7 +7642,7 @@ La valeur de <code>$critere</code> est ainsi ajoutée à l'URL en méthode GET �
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

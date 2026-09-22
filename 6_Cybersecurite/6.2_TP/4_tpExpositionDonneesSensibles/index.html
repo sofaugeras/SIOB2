@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6550,13 +6550,13 @@ Elles apparaissent dans l’onglet Réseau <strong>sans aucune protection</stron
 <li>Voir quel type de fichier est accepté</li>
 <li>Essayer d’envoyer un fichier contenant :</li>
 </ol>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="s2">&quot;Exploit OK&quot;</span><span class="p">;</span> <span class="cp">?&gt;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="s2">"Exploit OK"</span><span class="p">;</span> <span class="cp">?&gt;</span>
 </code></pre></div>
 <ol>
 <li>Tenter d’accéder au fichier via l’URL</li>
 <li>Modifier le fichier pour afficher l’arborescence :</li>
 </ol>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="nb">print_r</span><span class="p">(</span><span class="nb">scandir</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">));</span> <span class="cp">?&gt;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="nb">print_r</span><span class="p">(</span><span class="nb">scandir</span><span class="p">(</span><span class="s2">"."</span><span class="p">));</span> <span class="cp">?&gt;</span>
 </code></pre></div>
 <ol>
 <li>Rechercher les fichiers sensibles (config, accès base, etc.)</li>
@@ -6633,7 +6633,7 @@ Un fichier .php appelé via l’URL est exécuté par Apache → Cela prouve une
 <p>Utiliser <code>highlight_file()</code> pour les afficher :</p>
 </li>
 </ol>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="nb">highlight_file</span><span class="p">(</span><span class="s1">&#39;config.php&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span> <span class="nb">highlight_file</span><span class="p">(</span><span class="s1">'config.php'</span><span class="p">);</span> <span class="cp">?&gt;</span>
 </code></pre></div>
 <ol>
 <li>Tenter d’afficher la BDD via un script PHP</li>
@@ -6744,7 +6744,7 @@ Il protège uniquement le transit, pas le serveur.</p>
 <h4 id="622-hachage-robuste-des-mots-de-passe">6.2.2 Hachage robuste des mots de passe 🔑<a class="headerlink" href="#622-hachage-robuste-des-mots-de-passe" title="Permanent link">⚓︎</a></h4>
 <p>Les mots de passe <strong>ne doivent jamais</strong> être stockés en clair ou hachés via MD5/SHA1.</p>
 <p>🧪 <strong>Étape 1 : hachage sécurisé</strong></p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$password = &quot;monMotDePasse&quot;;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$password = "monMotDePasse";</span>
 <span class="x">$hash = password_hash($password, PASSWORD_DEFAULT);</span>
 </code></pre></div>
 <p>🧪 <strong>Étape 2 : vérification</strong></p>
@@ -6853,7 +6853,7 @@ Les fonctions modernes (bcrypt, Argon2) sont lentes volontairement.</p>
 <p>À ajouter dans <code>Apache</code> :</p>
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>X-Frame-Options: DENY
 X-Content-Type-Options: nosniff
-Content-Security-Policy: default-src &#39;self&#39;;
+Content-Security-Policy: default-src 'self';
 Referrer-Policy: strict-origin
 </code></pre></div>
 <div class="admonition question">
@@ -7018,7 +7018,7 @@ Il empêche le site d’être chargé dans un <iframe>, ce qui bloque les attaqu
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

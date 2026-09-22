@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6713,7 +6713,7 @@
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">num_art</span><span class="p">,</span><span class="w"> </span><span class="n">poids_art</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">ARTICLE</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">poids_art</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">poids_article_2</span><span class="p">;</span>
-<span class="cm">/* or on sait calculer le poids de l&#39;article 2 */</span>
+<span class="cm">/* or on sait calculer le poids de l'article 2 */</span>
 <span class="k">SELECT</span><span class="w"> </span><span class="n">poids_art</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">ARTICLE</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">num_art</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
@@ -6735,13 +6735,13 @@ Le principe consiste à construire une sous-requête qui donne un résultat équ
 <span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">Num_Ven</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">Num_Ven</span>
 <span class="w">                    </span><span class="k">FROM</span><span class="w"> </span><span class="n">COMMANDE</span>
-<span class="w">                    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Num_Cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;C01&#39;</span><span class="p">);</span>
+<span class="w">                    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Num_Cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'C01'</span><span class="p">);</span>
 </code></pre></div>
 Ce qui est l'équuivalent de ...</p>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_Ven</span><span class="p">,</span><span class="w"> </span><span class="n">Prénom_Ven</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">,</span><span class="w"> </span><span class="n">COMMANDE</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">Num_Ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">Num_Ven</span>
-<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">Num_Cli</span><span class="o">=</span><span class="s1">&#39;CO1&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">Num_Cli</span><span class="o">=</span><span class="s1">'CO1'</span><span class="p">;</span>
 </code></pre></div>
 <p><img alt="⁉️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2049.svg" title=":interrobang:" /> Il n'y a pas d'équivalent pour les besoins exprimé à la forme négative.</p>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> : Liste des vendeurs qui n'ont pas traité avec le client 'C01'</p>
@@ -6749,7 +6749,7 @@ Ce qui est l'équuivalent de ...</p>
 <span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">Num_Ven</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">Num_Ven</span>
 <span class="w">                        </span><span class="k">FROM</span><span class="w"> </span><span class="n">COMMANDE</span>
-<span class="w">                        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Num_Cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;C01&#39;</span><span class="p">);</span>
+<span class="w">                        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Num_Cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'C01'</span><span class="p">);</span>
 </code></pre></div>
 <h4 id="123-syntaxe">1.2.3 Syntaxe<a class="headerlink" href="#123-syntaxe" title="Permanent link">⚓︎</a></h4>
 <p>On ramène la valeur de la variable par un ordre SQL. Le résultat de cet ordre SQL est utilisé dans la condition comme si c’était une variable. L’ordre SQL est le suivant :</p>
@@ -6844,7 +6844,7 @@ Ce qui est l'équuivalent de ...</p>
 <span class="k">FROM</span><span class="w"> </span><span class="n">CLIENT</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">vil_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">vil_cli</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">CLIENT</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;C15&#39;</span><span class="p">)</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'C15'</span><span class="p">)</span>
 </code></pre></div>
 Rq: ici C15 est aussi affiché dans le résultat</p>
 </details>
@@ -6910,7 +6910,7 @@ Comment réagit votre requête si deux articles ont tous les deux le prix le plu
 <span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">sal_ven</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">sal_ven</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">vil_ven</span><span class="w"> </span><span class="o">=</span><span class="s1">&#39;Paris&#39;</span><span class="p">);</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">vil_ven</span><span class="w"> </span><span class="o">=</span><span class="s1">'Paris'</span><span class="p">);</span>
 </code></pre></div>
 </details>
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> REQUETE IMBRIQUEES HAVING</p>
@@ -6965,7 +6965,7 @@ Comment réagit votre requête si deux articles ont tous les deux le prix le plu
 <span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span>
 <span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
 <span class="k">ON</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_ven</span>
-<span class="k">WHERE</span><span class="w">  </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO1&#39;</span>
+<span class="k">WHERE</span><span class="w">  </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'CO1'</span>
 
 <span class="k">INTERSECT</span>
 
@@ -6973,19 +6973,19 @@ Comment réagit votre requête si deux articles ont tous les deux le prix le plu
 <span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span>
 <span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
 <span class="k">ON</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_ven</span>
-<span class="k">WHERE</span><span class="w">  </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO2&#39;</span><span class="w"> </span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w">  </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'CO2'</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 <p>MySQL ne propose malheureusement pas cette commande SQL, heureusement le fonctionnement de cette requête peut-être simulé grâce à une petite astuce. L'emploi d'une requête imbriquée avec <code>IN</code> comme ci-dessous est l’alternative à <code>INTERSECT</code> :</p>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_ven</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_ven</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span>
 <span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
 <span class="k">ON</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_ven</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO1&#39;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'CO1'</span>
 <span class="k">AND</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span>
 <span class="w">                        </span><span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span>
 <span class="w">                        </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
 <span class="w">                        </span><span class="k">ON</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_ven</span>
-<span class="w">                        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO2&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<span class="w">                        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'CO2'</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 <h3 id="22-union">2.2 UNION<a class="headerlink" href="#22-union" title="Permanent link">⚓︎</a></h3>
 <p><img alt="♥️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2665.svg" title=":hearts:" /> combine les résultats de plusieurs requêtes <code>SELECT</code> en éliminant les doublons</p>
@@ -6995,7 +6995,7 @@ Comment réagit votre requête si deux articles ont tous les deux le prix le plu
 <span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span>
 <span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
 <span class="k">ON</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_ven</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO1&#39;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'CO1'</span>
 
 <span class="k">UNION</span>
 
@@ -7003,7 +7003,7 @@ Comment réagit votre requête si deux articles ont tous les deux le prix le plu
 <span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span>
 <span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
 <span class="k">ON</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_ven</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO2&#39;</span><span class="w"> </span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'CO2'</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Attention</p>
@@ -7018,8 +7018,8 @@ Comment réagit votre requête si deux articles ont tous les deux le prix le plu
 <span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span>
 <span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
 <span class="k">ON</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO1&#39;</span><span class="w"> </span>
-<span class="k">OR</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;C02&#39;</span><span class="p">);</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'CO1'</span><span class="w"> </span>
+<span class="k">OR</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'C02'</span><span class="p">);</span><span class="w"> </span>
 </code></pre></div>
 <h3 id="23-difference">2.3 Différence<a class="headerlink" href="#23-difference" title="Permanent link">⚓︎</a></h3>
 <p>L’opérateur <code>EXCEPT</code> (ou MINUS dans certains systèmes de gestion de bases de données) est utilisé pour retourner les lignes présentes dans le résultat de la première requête <code>SELECT</code> mais pas dans le résultat de la seconde. C’est un moyen efficace de trouver des différences entre deux ensembles de données.</p>
@@ -7029,7 +7029,7 @@ Comment réagit votre requête si deux articles ont tous les deux le prix le plu
 <span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span>
 <span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
 <span class="k">ON</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_ven</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO1&#39;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'CO1'</span>
 
 <span class="k">EXCEPT</span>
 
@@ -7037,19 +7037,19 @@ Comment réagit votre requête si deux articles ont tous les deux le prix le plu
 <span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span>
 <span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
 <span class="k">ON</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_ven</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO2&#39;</span><span class="w"> </span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'CO2'</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 <p>Une équivalence :</p>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_ven</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_ven</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span>
 <span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
 <span class="k">ON</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_ven</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO1&#39;</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'CO1'</span><span class="w"> </span>
 <span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span>
 <span class="w">                                </span><span class="k">FROM</span><span class="w"> </span><span class="n">VENDEUR</span><span class="w"> </span>
 <span class="w">                                </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
 <span class="w">                                </span><span class="k">ON</span><span class="w"> </span><span class="n">VENDEUR</span><span class="p">.</span><span class="n">num_ven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_ven</span>
-<span class="w">                                </span><span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO2&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<span class="w">                                </span><span class="k">WHERE</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'CO2'</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 <h3 id="24-application">2.4 Application<a class="headerlink" href="#24-application" title="Permanent link">⚓︎</a></h3>
 <p>Pour rappel, on travaille sur le schéma relationnel suivant :</p>
@@ -7067,7 +7067,7 @@ Comment réagit votre requête si deux articles ont tous les deux le prix le plu
 <span class="k">INTERSECT</span>
 <span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">CLIENT</span><span class="p">.</span><span class="n">num_cli</span><span class="p">,</span><span class="w"> </span><span class="n">CLIENT</span><span class="p">.</span><span class="n">nom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">CLIENT</span><span class="p">.</span><span class="n">prénom_cli</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">CLIENT</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">Vil_Cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Redon&quot;</span><span class="p">);</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">Vil_Cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Redon"</span><span class="p">);</span>
 
 <span class="cm">/* Autre solution */</span>
 <span class="k">SELECT</span><span class="w"> </span><span class="n">num_cli</span><span class="p">,</span><span class="w"> </span><span class="n">nom_cli</span><span class="p">,</span><span class="w"> </span><span class="n">prénom_cli</span>
@@ -7075,7 +7075,7 @@ Comment réagit votre requête si deux articles ont tous les deux le prix le plu
 <span class="k">ON</span><span class="w"> </span><span class="n">CLIENT</span><span class="p">.</span><span class="n">num_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">num_cli</span>
 <span class="k">AND</span><span class="w"> </span><span class="n">num_cli</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">num_cli</span><span class="p">,</span>
 <span class="w">                </span><span class="k">FROM</span><span class="w"> </span><span class="n">CLIENT</span>
-<span class="w">                </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Vil_Cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Redon&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Vil_Cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Redon"</span><span class="p">);</span>
 </code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 11. Liste des articles de couleur verte ou figurant sur la commande numéro 28.</p>
@@ -7083,14 +7083,14 @@ Comment réagit votre requête si deux articles ont tous les deux le prix le plu
 <summary>correction</summary>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">num_art</span><span class="p">,</span><span class="w"> </span><span class="n">des_art</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">ARTICLE</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">coul_art</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Verte&quot;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">coul_art</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Verte"</span>
 <span class="k">UNION</span>
 <span class="k">SELECT</span><span class="w"> </span><span class="n">ARTICLE</span><span class="p">.</span><span class="n">num_art</span><span class="p">,</span><span class="w"> </span><span class="n">des_art</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">ARTICLE</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">DETAIL</span>
 <span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">ARTICLE</span><span class="p">.</span><span class="n">Num_Art</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DETAIL</span><span class="p">.</span><span class="n">Num_Art</span>
 <span class="w">    </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">COMMANDE</span>
 <span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">DETAIL</span><span class="p">.</span><span class="n">Num_Com</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">Num_Com</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">Num_Com</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;28&#39;</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">COMMANDE</span><span class="p">.</span><span class="n">Num_Com</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'28'</span><span class="p">;</span>
 </code></pre></div>
 </details>
 <p><img alt="❓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2753.svg" title=":question:" /> 12. Liste des articles vendus au moins une fois sauf ceux de couleur rouge.</p>
@@ -7103,7 +7103,7 @@ ON ARTICLE.Num_Art = DETAIL.Num_Art
 EXCEPT
 SELECT num_art, des_art
 FROM ARTICLE
-WHERE Art_Coul = &quot;Rouge&quot;;
+WHERE Art_Coul = "Rouge";
 /*Autre solution*/
 SELECT A.num_art, des_art
 FROM ARTICLE A INNER JOIN DETAIL
@@ -7111,7 +7111,7 @@ ON A.Num_Art = DETAIL.Num_Art
 WHERE NOT EXISTS
 (SELECT num_art
 FROM ARTICLE B
-WHERE Coul_art = &#39;Rouge&#39; ;
+WHERE Coul_art = 'Rouge' ;
 ```
 </code></pre></div>
 </details>
@@ -7168,7 +7168,7 @@ Emprunts réalisés par un lecteur :
 </code></pre></div>
 Il sera possible ici de rajouter un ouvrage :
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">Insert</span><span class="w"> </span><span class="n">v_ouvrage_reseau</span><span class="w"> </span><span class="p">(</span><span class="n">TitreOuvrage</span><span class="p">,</span><span class="w"> </span><span class="n">AnneeParution</span><span class="p">,</span><span class="w"> </span><span class="n">NumGenre</span><span class="p">)</span>
-<span class="k">Values</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;TCP/IP pour les nuls&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2001</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+<span class="k">Values</span><span class="w"> </span><span class="p">(</span><span class="ss">"TCP/IP pour les nuls"</span><span class="p">,</span><span class="w"> </span><span class="mi">2001</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
 </code></pre></div>
 L’insertion est bien entendu réalisée dans la table Ouvrage.
 Cela est possible car tous les champs nécessaires de la table Ouvrage sont renseignés, que l’identifiant est un numéro automatique et que la projection porte sur <code>O.NumGenre</code>.</p>
@@ -7703,7 +7703,7 @@ Jointure droite (RIGHT JOINT sans l’intersection A)
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

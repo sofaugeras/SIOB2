@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6782,8 +6782,8 @@ php<span class="w"> </span>artisan<span class="w"> </span>key:generate
 <p>▶️ Configure <code>.env.testing</code> ⚙️</p>
 <p>D'abord la base de données de Test :</p>
 <p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">todo_test</span><span class="p">;</span>
-<span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">&#39;laravel_test&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;secret&#39;</span><span class="p">;</span>
-<span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">todo_test</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;laravel_test&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">'laravel_test'</span><span class="o">@</span><span class="s1">'localhost'</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">'secret'</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">todo_test</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">'laravel_test'</span><span class="o">@</span><span class="s1">'localhost'</span><span class="p">;</span>
 <span class="n">FLUSH</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="p">;</span>
 </code></pre></div>
 puis la configuration</p>
@@ -6801,13 +6801,13 @@ DB_PASSWORD=secret
 <p>Dans la continuité, nous provisionnerons un service MySQL via Docker au sein de GitHub Actions afin d’exécuter automatiquement la suite de tests dans un environnement reproductible et compatible avec nos contraintes de schéma.</p>
 <p>dans le fichier <code>phpunit.xml</code> à la racine du projet
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>  &lt;!--
-  &lt;server name=&quot;DB_CONNECTION&quot; value=&quot;sqlite&quot;/&gt;
-  &lt;server name=&quot;DB_DATABASE&quot; value=&quot;:memory:&quot;/&gt;
+  &lt;server name="DB_CONNECTION" value="sqlite"/&gt;
+  &lt;server name="DB_DATABASE" value=":memory:"/&gt;
   --&gt;
-  &lt;server name=&quot;DB_CONNECTION&quot; value=&quot;mysql&quot;/&gt;
-  &lt;server name=&quot;DB_DATABASE&quot; value=&quot;todo_test&quot;/&gt;
-  &lt;server name=&quot;DB_USERNAME&quot; value=&quot;laravel_test&quot;/&gt;
-  &lt;server name=&quot;DB_PASSWORD&quot; value=&quot;secret&quot;/&gt;
+  &lt;server name="DB_CONNECTION" value="mysql"/&gt;
+  &lt;server name="DB_DATABASE" value="todo_test"/&gt;
+  &lt;server name="DB_USERNAME" value="laravel_test"/&gt;
+  &lt;server name="DB_PASSWORD" value="secret"/&gt;
 </code></pre></div></p>
 </details>
 <h2 id="2-premier-test-smoke-test">2. Premier test “Smoke test” 🧩<a class="headerlink" href="#2-premier-test-smoke-test" title="Permanent link">⚓︎</a></h2>
@@ -6818,8 +6818,8 @@ DB_PASSWORD=secret
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">public</span> <span class="k">function</span> <span class="nf">test_invite_est_redirige_depuis_accueil_vers_login</span><span class="p">()</span>
 <span class="p">{</span>
-    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">);</span>
-    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">assertRedirect</span><span class="p">(</span><span class="nx">route</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">));</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">'/'</span><span class="p">);</span>
+    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">assertRedirect</span><span class="p">(</span><span class="nx">route</span><span class="p">(</span><span class="s1">'login'</span><span class="p">));</span>
 <span class="p">}</span>
 
 <span class="k">public</span> <span class="k">function</span> <span class="nf">test_utilisateur_auth_peut_acceder_a_l_accueil</span><span class="p">()</span>
@@ -6828,11 +6828,11 @@ DB_PASSWORD=secret
 
     <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">actingAs</span><span class="p">(</span><span class="nv">$user</span><span class="p">)</span>
                      <span class="o">-&gt;</span><span class="na">followingRedirects</span><span class="p">()</span>
-                     <span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">);</span>
+                     <span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">'/'</span><span class="p">);</span>
 
     <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">assertOk</span><span class="p">();</span>
-    <span class="c1">// On vérifiera qu&#39;on voit bien le texte &quot;Ma Todo List&quot; dans la page</span>
-    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">assertSee</span><span class="p">(</span><span class="s1">&#39;Ma Todo List&#39;</span><span class="p">);</span>
+    <span class="c1">// On vérifiera qu'on voit bien le texte "Ma Todo List" dans la page</span>
+    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">assertSee</span><span class="p">(</span><span class="s1">'Ma Todo List'</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 <ul>
@@ -6854,18 +6854,18 @@ Failed<span class="w"> </span>asserting<span class="w"> </span>that<span class="
 ---<span class="w"> </span>Expected
 +++<span class="w"> </span>Actual
 @@<span class="w"> </span>@@
--<span class="s1">&#39;http://localhost/dashboard&#39;</span>
-+<span class="s1">&#39;http://localhost&#39;</span>
+-<span class="s1">'http://localhost/dashboard'</span>
++<span class="s1">'http://localhost'</span>
 +++<span class="w"> </span>Actual
 @@<span class="w"> </span>@@
--<span class="s1">&#39;http://localhost/dashboard&#39;</span>
-+<span class="s1">&#39;http://localhost&#39;</span>
+-<span class="s1">'http://localhost/dashboard'</span>
++<span class="s1">'http://localhost'</span>
 @@<span class="w"> </span>@@
--<span class="s1">&#39;http://localhost/dashboard&#39;</span>
-+<span class="s1">&#39;http://localhost&#39;</span>
--<span class="s1">&#39;http://localhost/dashboard&#39;</span>
-+<span class="s1">&#39;http://localhost&#39;</span>
-+<span class="s1">&#39;http://localhost&#39;</span>
+-<span class="s1">'http://localhost/dashboard'</span>
++<span class="s1">'http://localhost'</span>
+-<span class="s1">'http://localhost/dashboard'</span>
++<span class="s1">'http://localhost'</span>
++<span class="s1">'http://localhost'</span>
 </code></pre></div>
 </details>
 <details class="success">
@@ -6945,11 +6945,11 @@ Duration:<span class="w"> </span><span class="m">8</span>.40s
 <span class="k">public</span> <span class="k">function</span> <span class="nf">definition</span><span class="p">()</span><span class="o">:</span> <span class="k">array</span>
     <span class="p">{</span>
         <span class="k">return</span> <span class="p">[</span>
-            <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="nx">fake</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">(),</span>
-            <span class="s1">&#39;email&#39;</span> <span class="o">=&gt;</span> <span class="nx">fake</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">unique</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">safeEmail</span><span class="p">(),</span>
-            <span class="s1">&#39;email_verified_at&#39;</span> <span class="o">=&gt;</span> <span class="nx">now</span><span class="p">(),</span>
-            <span class="s1">&#39;password&#39;</span> <span class="o">=&gt;</span> <span class="k">static</span><span class="o">::</span><span class="nv">$password</span> <span class="o">??=</span> <span class="nx">Hash</span><span class="o">::</span><span class="na">make</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">),</span>
-            <span class="s1">&#39;remember_token&#39;</span> <span class="o">=&gt;</span> <span class="nx">Str</span><span class="o">::</span><span class="na">random</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
+            <span class="s1">'name'</span> <span class="o">=&gt;</span> <span class="nx">fake</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">(),</span>
+            <span class="s1">'email'</span> <span class="o">=&gt;</span> <span class="nx">fake</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">unique</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">safeEmail</span><span class="p">(),</span>
+            <span class="s1">'email_verified_at'</span> <span class="o">=&gt;</span> <span class="nx">now</span><span class="p">(),</span>
+            <span class="s1">'password'</span> <span class="o">=&gt;</span> <span class="k">static</span><span class="o">::</span><span class="nv">$password</span> <span class="o">??=</span> <span class="nx">Hash</span><span class="o">::</span><span class="na">make</span><span class="p">(</span><span class="s1">'password'</span><span class="p">),</span>
+            <span class="s1">'remember_token'</span> <span class="o">=&gt;</span> <span class="nx">Str</span><span class="o">::</span><span class="na">random</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
         <span class="p">];</span>
     <span class="p">}</span>
 </code></pre></div>
@@ -6970,7 +6970,7 @@ Duration:<span class="w"> </span><span class="m">8</span>.40s
     <span class="k">public</span> <span class="k">function</span> <span class="nf">definition</span><span class="p">()</span><span class="o">:</span> <span class="k">array</span>
     <span class="p">{</span>
         <span class="k">return</span> <span class="p">[</span>
-            <span class="s1">&#39;titre&#39;</span> <span class="o">=&gt;</span> <span class="nx">fake</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">words</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="k">true</span><span class="p">),</span> <span class="c1">// par ex. &quot;Maison&quot;, &quot;Bureau perso&quot;</span>
+            <span class="s1">'titre'</span> <span class="o">=&gt;</span> <span class="nx">fake</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">words</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="k">true</span><span class="p">),</span> <span class="c1">// par ex. "Maison", "Bureau perso"</span>
         <span class="p">];</span>
     <span class="p">}</span>
 
@@ -7008,12 +7008,12 @@ Duration:<span class="w"> </span><span class="m">8</span>.40s
     <span class="k">public</span> <span class="k">function</span> <span class="nf">definition</span><span class="p">()</span><span class="o">:</span> <span class="k">array</span>
     <span class="p">{</span>
         <span class="k">return</span> <span class="p">[</span>
-            <span class="s1">&#39;texte&#39;</span>     <span class="o">=&gt;</span> <span class="nx">fake</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">sentence</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
-            <span class="s1">&#39;termine&#39;</span>   <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span>
-            <span class="s1">&#39;important&#39;</span> <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span>
-            <span class="s1">&#39;date_fin&#39;</span>  <span class="o">=&gt;</span> <span class="k">null</span><span class="p">,</span>
-            <span class="s1">&#39;listes_id&#39;</span> <span class="o">=&gt;</span> <span class="nx">Listes</span><span class="o">::</span><span class="na">factory</span><span class="p">(),</span> <span class="c1">// crée une Liste associée</span>
-            <span class="s1">&#39;user_id&#39;</span>   <span class="o">=&gt;</span> <span class="nx">User</span><span class="o">::</span><span class="na">factory</span><span class="p">(),</span>  <span class="c1">// crée un User associé</span>
+            <span class="s1">'texte'</span>     <span class="o">=&gt;</span> <span class="nx">fake</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">sentence</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+            <span class="s1">'termine'</span>   <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span>
+            <span class="s1">'important'</span> <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span>
+            <span class="s1">'date_fin'</span>  <span class="o">=&gt;</span> <span class="k">null</span><span class="p">,</span>
+            <span class="s1">'listes_id'</span> <span class="o">=&gt;</span> <span class="nx">Listes</span><span class="o">::</span><span class="na">factory</span><span class="p">(),</span> <span class="c1">// crée une Liste associée</span>
+            <span class="s1">'user_id'</span>   <span class="o">=&gt;</span> <span class="nx">User</span><span class="o">::</span><span class="na">factory</span><span class="p">(),</span>  <span class="c1">// crée un User associé</span>
         <span class="p">];</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -7054,9 +7054,9 @@ Tout ce que tu écris ici est exécuté dans le contexte de ton application Lara
 <p>✔️ Tester une factory
 <div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>&gt;<span class="w"> </span>App<span class="se">\M</span>odels<span class="se">\L</span>istes::factory<span class="o">()</span>-&gt;create<span class="o">()</span><span class="p">;</span>
 <span class="o">=</span><span class="w"> </span>App<span class="se">\M</span>odels<span class="se">\L</span>istes<span class="w"> </span><span class="o">{</span><span class="c1">#6211</span>
-<span class="w">    </span>titre:<span class="w"> </span><span class="s2">&quot;eos ut&quot;</span>,
-<span class="w">    </span>updated_at:<span class="w"> </span><span class="s2">&quot;2025-12-06 13:09:32&quot;</span>,
-<span class="w">    </span>created_at:<span class="w"> </span><span class="s2">&quot;2025-12-06 13:09:32&quot;</span>,
+<span class="w">    </span>titre:<span class="w"> </span><span class="s2">"eos ut"</span>,
+<span class="w">    </span>updated_at:<span class="w"> </span><span class="s2">"2025-12-06 13:09:32"</span>,
+<span class="w">    </span>created_at:<span class="w"> </span><span class="s2">"2025-12-06 13:09:32"</span>,
 <span class="w">    </span>id:<span class="w"> </span><span class="m">4</span>,
 <span class="w">  </span><span class="o">}</span>
 </code></pre></div></p>
@@ -7088,12 +7088,12 @@ composer<span class="w"> </span>dump-autoload
     <span class="k">public</span> <span class="k">function</span> <span class="nf">definition</span><span class="p">()</span><span class="o">:</span> <span class="k">array</span>
     <span class="p">{</span>
         <span class="k">return</span> <span class="p">[</span>
-            <span class="s1">&#39;texte&#39;</span>     <span class="o">=&gt;</span> <span class="nx">fake</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">sentence</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
-            <span class="s1">&#39;termine&#39;</span>   <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span>
-            <span class="s1">&#39;important&#39;</span> <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span>
-            <span class="s1">&#39;date_fin&#39;</span>  <span class="o">=&gt;</span> <span class="k">null</span><span class="p">,</span>
-            <span class="s1">&#39;listes_id&#39;</span> <span class="o">=&gt;</span> <span class="nx">Listes</span><span class="o">::</span><span class="na">factory</span><span class="p">(),</span> <span class="c1">// crée une Liste associée</span>
-            <span class="s1">&#39;user_id&#39;</span>   <span class="o">=&gt;</span> <span class="nx">User</span><span class="o">::</span><span class="na">factory</span><span class="p">(),</span>  <span class="c1">// crée un User associé</span>
+            <span class="s1">'texte'</span>     <span class="o">=&gt;</span> <span class="nx">fake</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">sentence</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+            <span class="s1">'termine'</span>   <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span>
+            <span class="s1">'important'</span> <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span>
+            <span class="s1">'date_fin'</span>  <span class="o">=&gt;</span> <span class="k">null</span><span class="p">,</span>
+            <span class="s1">'listes_id'</span> <span class="o">=&gt;</span> <span class="nx">Listes</span><span class="o">::</span><span class="na">factory</span><span class="p">(),</span> <span class="c1">// crée une Liste associée</span>
+            <span class="s1">'user_id'</span>   <span class="o">=&gt;</span> <span class="nx">User</span><span class="o">::</span><span class="na">factory</span><span class="p">(),</span>  <span class="c1">// crée un User associé</span>
         <span class="p">];</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -7113,27 +7113,27 @@ composer<span class="w"> </span>dump-autoload
 <p>✔️ Créer un utilisateur
 <div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>&gt;<span class="w"> </span>App<span class="se">\M</span>odels<span class="se">\U</span>ser::factory<span class="o">()</span>-&gt;create<span class="o">()</span><span class="p">;</span>
 <span class="o">=</span><span class="w"> </span>App<span class="se">\M</span>odels<span class="se">\U</span>ser<span class="w"> </span><span class="o">{</span><span class="c1">#6632</span>
-<span class="w">    </span>name:<span class="w"> </span><span class="s2">&quot;Diane Lambert&quot;</span>,
-<span class="w">    </span>email:<span class="w"> </span><span class="s2">&quot;pauline27@example.net&quot;</span>,
-<span class="w">    </span>email_verified_at:<span class="w"> </span><span class="s2">&quot;2025-12-06 13:14:50&quot;</span>,
-<span class="w">    </span><span class="c1">#password: &quot;$2y$12$mynJ8kscphRfl1KCdRRVR.XS8hKU0dxzQvaBkTWWc8P9TkgonEgEq&quot;,</span>
-<span class="w">    </span><span class="c1">#remember_token: &quot;nNiqZwe2AN&quot;,</span>
-<span class="w">    </span>updated_at:<span class="w"> </span><span class="s2">&quot;2025-12-06 13:14:51&quot;</span>,
-<span class="w">    </span>created_at:<span class="w"> </span><span class="s2">&quot;2025-12-06 13:14:51&quot;</span>,
+<span class="w">    </span>name:<span class="w"> </span><span class="s2">"Diane Lambert"</span>,
+<span class="w">    </span>email:<span class="w"> </span><span class="s2">"pauline27@example.net"</span>,
+<span class="w">    </span>email_verified_at:<span class="w"> </span><span class="s2">"2025-12-06 13:14:50"</span>,
+<span class="w">    </span><span class="c1">#password: "$2y$12$mynJ8kscphRfl1KCdRRVR.XS8hKU0dxzQvaBkTWWc8P9TkgonEgEq",</span>
+<span class="w">    </span><span class="c1">#remember_token: "nNiqZwe2AN",</span>
+<span class="w">    </span>updated_at:<span class="w"> </span><span class="s2">"2025-12-06 13:14:51"</span>,
+<span class="w">    </span>created_at:<span class="w"> </span><span class="s2">"2025-12-06 13:14:51"</span>,
 <span class="w">    </span>id:<span class="w"> </span><span class="m">3</span>,
 <span class="w">  </span><span class="o">}</span>
 </code></pre></div></p>
 <p>✔️ Tester la factory Todos</p>
 <div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>&gt;<span class="w"> </span>App<span class="se">\M</span>odels<span class="se">\T</span>odos::factory<span class="o">()</span>-&gt;create<span class="o">()</span><span class="p">;</span>
 <span class="o">=</span><span class="w"> </span>App<span class="se">\M</span>odels<span class="se">\T</span>odos<span class="w"> </span><span class="o">{</span><span class="c1">#5520</span>
-<span class="w">    </span>texte:<span class="w"> </span><span class="s2">&quot;Ut rerum praesentium fugit.&quot;</span>,
+<span class="w">    </span>texte:<span class="w"> </span><span class="s2">"Ut rerum praesentium fugit."</span>,
 <span class="w">    </span>termine:<span class="w"> </span>false,
 <span class="w">    </span>important:<span class="w"> </span>false,
 <span class="w">    </span>date_fin:<span class="w"> </span>null,
 <span class="w">    </span>listes_id:<span class="w"> </span><span class="m">5</span>,
 <span class="w">    </span>user_id:<span class="w"> </span><span class="m">4</span>,
-<span class="w">    </span>updated_at:<span class="w"> </span><span class="s2">&quot;2025-12-06 13:22:15&quot;</span>,
-<span class="w">    </span>created_at:<span class="w"> </span><span class="s2">&quot;2025-12-06 13:22:15&quot;</span>,
+<span class="w">    </span>updated_at:<span class="w"> </span><span class="s2">"2025-12-06 13:22:15"</span>,
+<span class="w">    </span>created_at:<span class="w"> </span><span class="s2">"2025-12-06 13:22:15"</span>,
 <span class="w">    </span>id:<span class="w"> </span><span class="m">9</span>,
 <span class="w">  </span><span class="o">}</span>
 </code></pre></div>
@@ -7188,11 +7188,11 @@ Nous allons vérifier que cette relation fonctionne bien.</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">public</span> <span class="k">function</span> <span class="nf">test_un_todos_appartient_a_une_liste</span><span class="p">()</span>
 <span class="p">{</span>
-    <span class="c1">// Arrange : création d&#39;une liste</span>
+    <span class="c1">// Arrange : création d'une liste</span>
     <span class="nv">$liste</span> <span class="o">=</span> <span class="nx">Listes</span><span class="o">::</span><span class="na">factory</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">();</span>
 
-    <span class="c1">// Act : création d&#39;un Todos lié à cette liste</span>
-    <span class="nv">$todo</span> <span class="o">=</span> <span class="nx">Todos</span><span class="o">::</span><span class="na">factory</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">for</span><span class="p">(</span><span class="nv">$liste</span><span class="p">,</span> <span class="s1">&#39;listes&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">();</span>
+    <span class="c1">// Act : création d'un Todos lié à cette liste</span>
+    <span class="nv">$todo</span> <span class="o">=</span> <span class="nx">Todos</span><span class="o">::</span><span class="na">factory</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">for</span><span class="p">(</span><span class="nv">$liste</span><span class="p">,</span> <span class="s1">'listes'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">();</span>
 
     <span class="c1">// Assert : la relation renvoie bien la bonne liste</span>
     <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertTrue</span><span class="p">(</span><span class="nv">$todo</span><span class="o">-&gt;</span><span class="na">listes</span><span class="o">-&gt;</span><span class="na">is</span><span class="p">(</span><span class="nv">$liste</span><span class="p">));</span>
@@ -7218,11 +7218,11 @@ Nous allons vérifier que cette relation fonctionne bien.</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">public</span> <span class="k">function</span> <span class="nf">test_un_todos_appartient_a_un_utilisateur</span><span class="p">()</span>
 <span class="p">{</span>
-    <span class="c1">// Arrange : création d&#39;un utilisateur</span>
+    <span class="c1">// Arrange : création d'un utilisateur</span>
     <span class="nv">$user</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">factory</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">();</span>
 
-    <span class="c1">// Act : création d&#39;un Todos lié à cet utilisateur</span>
-    <span class="nv">$todo</span> <span class="o">=</span> <span class="nx">Todos</span><span class="o">::</span><span class="na">factory</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">for</span><span class="p">(</span><span class="nv">$user</span><span class="p">,</span> <span class="s1">&#39;user&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">();</span>
+    <span class="c1">// Act : création d'un Todos lié à cet utilisateur</span>
+    <span class="nv">$todo</span> <span class="o">=</span> <span class="nx">Todos</span><span class="o">::</span><span class="na">factory</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">for</span><span class="p">(</span><span class="nv">$user</span><span class="p">,</span> <span class="s1">'user'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">();</span>
 
     <span class="c1">// Assert : la relation renvoie bien le bon utilisateur</span>
     <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertTrue</span><span class="p">(</span><span class="nv">$todo</span><span class="o">-&gt;</span><span class="na">user</span><span class="o">-&gt;</span><span class="na">is</span><span class="p">(</span><span class="nv">$user</span><span class="p">));</span>
@@ -7252,7 +7252,7 @@ Nous allons vérifier que cette relation fonctionne bien.</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">public</span> <span class="k">function</span> <span class="nf">test_un_todos_est_non_termine_et_non_important_par_defaut</span><span class="p">()</span>
 <span class="p">{</span>
-    <span class="c1">// Act : création d&#39;un Todos sans préciser termine/important</span>
+    <span class="c1">// Act : création d'un Todos sans préciser termine/important</span>
     <span class="nv">$todo</span> <span class="o">=</span> <span class="nx">Todos</span><span class="o">::</span><span class="na">factory</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">();</span>
 
     <span class="c1">// Assert : les valeurs par défaut sont respectées</span>
@@ -7302,14 +7302,14 @@ Nous allons vérifier que cette relation fonctionne bien.</p>
         <span class="nv">$liste</span> <span class="o">=</span> <span class="nx">Listes</span><span class="o">::</span><span class="na">factory</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">();</span>
 
         <span class="nv">$data</span> <span class="o">=</span> <span class="nb">array_merge</span><span class="p">([</span>
-            <span class="s1">&#39;texte&#39;</span>      <span class="o">=&gt;</span> <span class="s1">&#39;Acheter du café&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;date_fin&#39;</span>   <span class="o">=&gt;</span> <span class="nx">now</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">addDay</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">format</span><span class="p">(</span><span class="s1">&#39;Y-m-d\TH:i&#39;</span><span class="p">),</span>
-            <span class="s1">&#39;priority&#39;</span>   <span class="o">=&gt;</span> <span class="mi">0</span><span class="p">,</span>              <span class="c1">// bouton radio importance</span>
-            <span class="s1">&#39;categories&#39;</span> <span class="o">=&gt;</span> <span class="p">[],</span>             <span class="c1">// tableau de catégories (checkbox)</span>
-            <span class="s1">&#39;liste&#39;</span>      <span class="o">=&gt;</span> <span class="nv">$liste</span><span class="o">-&gt;</span><span class="na">id</span><span class="p">,</span>     <span class="c1">// correspond à $request-&gt;input(&#39;liste&#39;)</span>
+            <span class="s1">'texte'</span>      <span class="o">=&gt;</span> <span class="s1">'Acheter du café'</span><span class="p">,</span>
+            <span class="s1">'date_fin'</span>   <span class="o">=&gt;</span> <span class="nx">now</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">addDay</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">format</span><span class="p">(</span><span class="s1">'Y-m-d\TH:i'</span><span class="p">),</span>
+            <span class="s1">'priority'</span>   <span class="o">=&gt;</span> <span class="mi">0</span><span class="p">,</span>              <span class="c1">// bouton radio importance</span>
+            <span class="s1">'categories'</span> <span class="o">=&gt;</span> <span class="p">[],</span>             <span class="c1">// tableau de catégories (checkbox)</span>
+            <span class="s1">'liste'</span>      <span class="o">=&gt;</span> <span class="nv">$liste</span><span class="o">-&gt;</span><span class="na">id</span><span class="p">,</span>     <span class="c1">// correspond à $request-&gt;input('liste')</span>
         <span class="p">],</span> <span class="nv">$overrides</span><span class="p">);</span>
 
-        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">(</span><span class="s1">&#39;/action/add&#39;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">(</span><span class="s1">'/action/add'</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -7327,17 +7327,17 @@ Nous allons vérifier que cette relation fonctionne bien.</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">public</span> <span class="k">function</span> <span class="nf">test_texte_est_obligatoire</span><span class="p">()</span>
 <span class="p">{</span>
-    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">postTodo</span><span class="p">([</span><span class="s1">&#39;texte&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;&#39;</span><span class="p">]);</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">postTodo</span><span class="p">([</span><span class="s1">'texte'</span> <span class="o">=&gt;</span> <span class="s1">''</span><span class="p">]);</span>
 
-    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">assertSessionHasErrors</span><span class="p">(</span><span class="s1">&#39;texte&#39;</span><span class="p">);</span>
-    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertDatabaseCount</span><span class="p">(</span><span class="s1">&#39;todos&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">assertSessionHasErrors</span><span class="p">(</span><span class="s1">'texte'</span><span class="p">);</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertDatabaseCount</span><span class="p">(</span><span class="s1">'todos'</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 <p><strong>question</strong> "💡 Comportement attendu côté contrôleur ?"</p>
 <p>Dans ton contrôleur qui traite <code>/action/add</code>, tu dois avoir quelque chose comme :</p>
 <p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="nv">$validated</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">validate</span><span class="p">([</span>
-    <span class="s1">&#39;texte&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;required&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">],</span>
+    <span class="s1">'texte'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">'required'</span><span class="p">,</span> <span class="s1">'string'</span><span class="p">],</span>
     <span class="c1">// autres règles…</span>
 <span class="p">]);</span>
 </code></pre></div>
@@ -7357,10 +7357,10 @@ Failed<span class="w"> </span>asserting<span class="w"> </span>that<span class="
 <span class="w">  </span>at<span class="w"> </span>tests<span class="se">\F</span>eature<span class="se">\T</span>odosValidationTest.php:40
 <span class="w">     </span><span class="m">36</span>▕<span class="w">     </span>public<span class="w"> </span><span class="k">function</span><span class="w"> </span>test_texte_est_obligatoire<span class="o">()</span>
 <span class="w">     </span><span class="m">37</span>▕<span class="w">     </span><span class="o">{</span>
-<span class="w">     </span><span class="m">38</span>▕<span class="w">         </span><span class="nv">$response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$this</span>-&gt;postTodo<span class="o">([</span><span class="s1">&#39;texte&#39;</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span><span class="s1">&#39;&#39;</span><span class="o">])</span><span class="p">;</span>
+<span class="w">     </span><span class="m">38</span>▕<span class="w">         </span><span class="nv">$response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$this</span>-&gt;postTodo<span class="o">([</span><span class="s1">'texte'</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span><span class="s1">''</span><span class="o">])</span><span class="p">;</span>
 <span class="w">     </span><span class="m">39</span>▕
-<span class="w">  </span>➜<span class="w">  </span><span class="m">40</span>▕<span class="w">         </span><span class="nv">$response</span>-&gt;assertSessionHasErrors<span class="o">(</span><span class="s1">&#39;texte&#39;</span><span class="o">)</span><span class="p">;</span>
-<span class="w">     </span><span class="m">41</span>▕<span class="w">         </span><span class="nv">$this</span>-&gt;assertDatabaseCount<span class="o">(</span><span class="s1">&#39;todos&#39;</span>,<span class="w"> </span><span class="m">0</span><span class="o">)</span><span class="p">;</span>
+<span class="w">  </span>➜<span class="w">  </span><span class="m">40</span>▕<span class="w">         </span><span class="nv">$response</span>-&gt;assertSessionHasErrors<span class="o">(</span><span class="s1">'texte'</span><span class="o">)</span><span class="p">;</span>
+<span class="w">     </span><span class="m">41</span>▕<span class="w">         </span><span class="nv">$this</span>-&gt;assertDatabaseCount<span class="o">(</span><span class="s1">'todos'</span>,<span class="w"> </span><span class="m">0</span><span class="o">)</span><span class="p">;</span>
 <span class="w">     </span><span class="m">42</span>▕<span class="w">     </span><span class="o">}</span>
 <span class="w">     </span><span class="m">43</span>▕<span class="w"> </span><span class="o">}</span>
 <span class="w">     </span><span class="m">44</span>▕
@@ -7380,10 +7380,10 @@ Le contrôleur, en cas de texte vide, ne renvoie pas d’errors bag, mais :</p>
 <p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">public</span> <span class="k">function</span> <span class="nf">test_texte_est_obligatoire</span><span class="p">()</span>
 <span class="p">{</span>
-    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">postTodo</span><span class="p">([</span><span class="s1">&#39;texte&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;&#39;</span><span class="p">]);</span>
-    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">assertRedirect</span><span class="p">(</span><span class="nx">route</span><span class="p">(</span><span class="s1">&#39;todo.liste&#39;</span><span class="p">));</span>
-    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">assertSessionHas</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="s2">&quot;Veuillez saisir un ToDo d&#39;une longueur max de 255 caractères&quot;</span><span class="p">);</span>
-    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertDatabaseCount</span><span class="p">(</span><span class="s1">&#39;todos&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">postTodo</span><span class="p">([</span><span class="s1">'texte'</span> <span class="o">=&gt;</span> <span class="s1">''</span><span class="p">]);</span>
+    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">assertRedirect</span><span class="p">(</span><span class="nx">route</span><span class="p">(</span><span class="s1">'todo.liste'</span><span class="p">));</span>
+    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">assertSessionHas</span><span class="p">(</span><span class="s1">'message'</span><span class="p">,</span> <span class="s2">"Veuillez saisir un ToDo d'une longueur max de 255 caractères"</span><span class="p">);</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertDatabaseCount</span><span class="p">(</span><span class="s1">'todos'</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 et ca passe beaucoup mieux ...</p>
@@ -7411,17 +7411,17 @@ et ca passe beaucoup mieux ...</p>
 <p>dans le controleur : </p>
 <p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">validate</span><span class="p">([</span>
-<span class="s1">&#39;texte&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;required|string|min:3|max:255&#39;</span><span class="p">,</span>
+<span class="s1">'texte'</span> <span class="o">=&gt;</span> <span class="s1">'required|string|min:3|max:255'</span><span class="p">,</span>
 <span class="p">]);</span>
 </code></pre></div>
 dans les tests : </p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">public</span> <span class="k">function</span> <span class="nf">test_texte_doit_avoir_une_longueur_minimale</span><span class="p">()</span>
 <span class="p">{</span>
-    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">postTodo</span><span class="p">([</span><span class="s1">&#39;texte&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ab&#39;</span><span class="p">]);</span> <span class="c1">// 2 caractères</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">postTodo</span><span class="p">([</span><span class="s1">'texte'</span> <span class="o">=&gt;</span> <span class="s1">'ab'</span><span class="p">]);</span> <span class="c1">// 2 caractères</span>
 
-    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">assertSessionHasErrors</span><span class="p">(</span><span class="s1">&#39;texte&#39;</span><span class="p">);</span>
-    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertDatabaseCount</span><span class="p">(</span><span class="s1">&#39;todos&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">assertSessionHasErrors</span><span class="p">(</span><span class="s1">'texte'</span><span class="p">);</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertDatabaseCount</span><span class="p">(</span><span class="s1">'todos'</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 </div>
@@ -7443,14 +7443,14 @@ quand toutes les données sont <strong>valides</strong>, le Todo doit être cré
     <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">postTodo</span><span class="p">();</span> <span class="c1">// toutes les valeurs par défaut sont valides</span>
 
     <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">assertSessionDoesntHaveErrors</span><span class="p">();</span>
-    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">assertRedirect</span><span class="p">();</span> <span class="c1">// ou -&gt;assertRedirect(&#39;/&#39;); selon ton contrôleur</span>
+    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">assertRedirect</span><span class="p">();</span> <span class="c1">// ou -&gt;assertRedirect('/'); selon ton contrôleur</span>
 
-    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertDatabaseCount</span><span class="p">(</span><span class="s1">&#39;todos&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertDatabaseCount</span><span class="p">(</span><span class="s1">'todos'</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
 
-    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertDatabaseHas</span><span class="p">(</span><span class="s1">&#39;todos&#39;</span><span class="p">,</span> <span class="p">[</span>
-        <span class="s1">&#39;texte&#39;</span>   <span class="o">=&gt;</span> <span class="s1">&#39;Acheter du café&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;termine&#39;</span> <span class="o">=&gt;</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s1">&#39;important&#39;</span> <span class="o">=&gt;</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertDatabaseHas</span><span class="p">(</span><span class="s1">'todos'</span><span class="p">,</span> <span class="p">[</span>
+        <span class="s1">'texte'</span>   <span class="o">=&gt;</span> <span class="s1">'Acheter du café'</span><span class="p">,</span>
+        <span class="s1">'termine'</span> <span class="o">=&gt;</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">'important'</span> <span class="o">=&gt;</span> <span class="mi">0</span><span class="p">,</span>
     <span class="p">]);</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -7528,8 +7528,8 @@ tout se passe dans la base <code>todo_test</code>.</p>
 </ul>
 <p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">public</span> <span class="k">function</span> <span class="nf">test_voir_la_connexion_de_test</span><span class="p">()</span> <span class="p">{</span> 
-  <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertSame</span><span class="p">(</span><span class="s1">&#39;mysql&#39;</span><span class="p">,</span> <span class="nx">config</span><span class="p">(</span><span class="s1">&#39;database.default&#39;</span><span class="p">));</span> 
-  <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertSame</span><span class="p">(</span><span class="s1">&#39;todo_test&#39;</span><span class="p">,</span> <span class="nx">config</span><span class="p">(</span><span class="s1">&#39;database.connections.mysql.database&#39;</span><span class="p">));</span>
+  <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertSame</span><span class="p">(</span><span class="s1">'mysql'</span><span class="p">,</span> <span class="nx">config</span><span class="p">(</span><span class="s1">'database.default'</span><span class="p">));</span> 
+  <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertSame</span><span class="p">(</span><span class="s1">'todo_test'</span><span class="p">,</span> <span class="nx">config</span><span class="p">(</span><span class="s1">'database.connections.mysql.database'</span><span class="p">));</span>
 <span class="p">}</span>
 </code></pre></div>
 - Puis le supprimer une fois que tu es sûre de ta configuration.</p>
@@ -7577,8 +7577,8 @@ Ces tests couvrent déjà toutes les fonctionnalités essentielles :</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">public</span> <span class="k">function</span> <span class="nf">test_invite_ne_peut_pas_acceder_aux_todos</span><span class="p">()</span>
 <span class="p">{</span>
-    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/todos&#39;</span><span class="p">);</span>
-    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">assertRedirect</span><span class="p">(</span><span class="nx">route</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">));</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">'/todos'</span><span class="p">);</span>
+    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">assertRedirect</span><span class="p">(</span><span class="nx">route</span><span class="p">(</span><span class="s1">'login'</span><span class="p">));</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="72-tests-lies-a-lautorisation-policies">7.2 Tests liés à l'autorisation (Policies) 🧭<a class="headerlink" href="#72-tests-lies-a-lautorisation-policies" title="Permanent link">⚓︎</a></h3>
@@ -7593,10 +7593,10 @@ Ces tests couvrent déjà toutes les fonctionnalités essentielles :</p>
 <span class="p">{</span>
     <span class="nv">$a</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">factory</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">();</span>
     <span class="nv">$b</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">factory</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">();</span>
-    <span class="nv">$todo</span> <span class="o">=</span> <span class="nx">Todos</span><span class="o">::</span><span class="na">factory</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">for</span><span class="p">(</span><span class="nv">$a</span><span class="p">,</span> <span class="s1">&#39;user&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">();</span>
+    <span class="nv">$todo</span> <span class="o">=</span> <span class="nx">Todos</span><span class="o">::</span><span class="na">factory</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">for</span><span class="p">(</span><span class="nv">$a</span><span class="p">,</span> <span class="s1">'user'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">();</span>
 
-    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">actingAs</span><span class="p">(</span><span class="nv">$b</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">(</span><span class="s2">&quot;/todos/</span><span class="si">{</span><span class="nv">$todo</span><span class="o">-&gt;</span><span class="na">id</span><span class="si">}</span><span class="s2">/edit&quot;</span><span class="p">,</span> <span class="p">[</span>
-        <span class="s1">&#39;texte&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;H4ck&#39;</span><span class="p">,</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">actingAs</span><span class="p">(</span><span class="nv">$b</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">(</span><span class="s2">"/todos/</span><span class="si">{</span><span class="nv">$todo</span><span class="o">-&gt;</span><span class="na">id</span><span class="si">}</span><span class="s2">/edit"</span><span class="p">,</span> <span class="p">[</span>
+        <span class="s1">'texte'</span> <span class="o">=&gt;</span> <span class="s1">'H4ck'</span><span class="p">,</span>
     <span class="p">]);</span>
 
     <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">assertForbidden</span><span class="p">();</span>
@@ -7636,7 +7636,7 @@ Ces tests couvrent déjà toutes les fonctionnalités essentielles :</p>
 <span class="w">        </span><span class="nt">ports</span><span class="p">:</span>
 <span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3306:3306</span>
 <span class="w">        </span><span class="nt">options</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
-<span class="w">          </span><span class="no">--health-cmd=&quot;mysqladmin ping -h 127.0.0.1 -uroot -proot&quot;</span>
+<span class="w">          </span><span class="no">--health-cmd="mysqladmin ping -h 127.0.0.1 -uroot -proot"</span>
 <span class="w">          </span><span class="no">--health-interval=10s</span>
 <span class="w">          </span><span class="no">--health-timeout=5s</span>
 <span class="w">          </span><span class="no">--health-retries=10</span>
@@ -7648,7 +7648,7 @@ Ces tests couvrent déjà toutes les fonctionnalités essentielles :</p>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Setup PHP</span>
 <span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shivammathur/setup-php@v2</span>
 <span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">php-version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;8.3&#39;</span>
+<span class="w">          </span><span class="nt">php-version</span><span class="p">:</span><span class="w"> </span><span class="s">'8.3'</span>
 <span class="w">          </span><span class="nt">extensions</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mbstring, dom, pdo_mysql</span>
 <span class="w">          </span><span class="nt">coverage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xdebug</span>
 
@@ -7659,7 +7659,7 @@ Ces tests couvrent déjà toutes les fonctionnalités essentielles :</p>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Setup Node</span>
 <span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-node@v4</span>
 <span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">node-version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;20&#39;</span>
+<span class="w">          </span><span class="nt">node-version</span><span class="p">:</span><span class="w"> </span><span class="s">'20'</span>
 
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install frontend dependencies</span>
 <span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm ci</span>
@@ -7667,7 +7667,7 @@ Ces tests couvrent déjà toutes les fonctionnalités essentielles :</p>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build assets</span>
 <span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm run build</span>
 
-<span class="w">      </span><span class="c1"># ⬇️ On aligne l&#39;environnement de la CI sur ton env de test local</span>
+<span class="w">      </span><span class="c1"># ⬇️ On aligne l'environnement de la CI sur ton env de test local</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Prepare environment file</span>
 <span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cp .env.testing .env</span>
 
@@ -7712,7 +7712,7 @@ Ces tests couvrent déjà toutes les fonctionnalités essentielles :</p>
 <summary>Fix problem Xdebug's coverage mode</summary>
 <p>symptômes : </p>
 <div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>PS<span class="w"> </span>C:<span class="se">\w</span>amp64<span class="se">\w</span>ww<span class="se">\t</span>odo2026&gt;<span class="w"> </span>php<span class="w"> </span>artisan<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--coverage<span class="w"> </span>--min<span class="o">=</span><span class="m">80</span>
-ERROR<span class="w">  </span>Code<span class="w"> </span>coverage<span class="w"> </span>driver<span class="w"> </span>not<span class="w"> </span>available.<span class="w"> </span>Did<span class="w"> </span>you<span class="w"> </span><span class="nb">set</span><span class="w"> </span>Xdebug<span class="err">&#39;</span>s<span class="w"> </span>coverage<span class="w"> </span>mode?
+ERROR<span class="w">  </span>Code<span class="w"> </span>coverage<span class="w"> </span>driver<span class="w"> </span>not<span class="w"> </span>available.<span class="w"> </span>Did<span class="w"> </span>you<span class="w"> </span><span class="nb">set</span><span class="w"> </span>Xdebug<span class="err">'</span>s<span class="w"> </span>coverage<span class="w"> </span>mode?
 </code></pre></div>
 <p>Dans le "bon" <code>php.ini</code>, vérifier </p>
 <div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>xdebug.mode<span class="o">=</span>develop,coverage
@@ -7727,7 +7727,7 @@ si un développeur commente des tests ou ajoute beaucoup de code non testé, la 
 php<span class="w"> </span>artisan<span class="w"> </span><span class="nb">test</span>
 
 git<span class="w"> </span>add<span class="w"> </span>.
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Intégration de l&#39;environnement de tests et de la couverture&quot;</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Intégration de l'environnement de tests et de la couverture"</span>
 git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
 </code></pre></div>
 <p>Sur <strong>GitHub</strong>, onglet Actions, tu dois voir le workflow tests s’exécuter automatiquement à chaque push / pull request.</p>
@@ -7737,14 +7737,14 @@ git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span
 <p>Verifier dans vos <code>*.blade.php</code> pour que le SASS soient utiliser (<code>app.blade.php</code>, <code>guest.blade.php</code>)</p>
 <p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="o">&lt;!--</span> <span class="nx">Styles</span> <span class="nx">et</span> <span class="nx">Scripts</span> <span class="o">:</span> <span class="nx">Utilisation</span> <span class="nx">SASS</span> <span class="o">--&gt;</span> 
-<span class="o">@</span><span class="nx">vite</span><span class="p">([</span><span class="s1">&#39;resources/sass/app.scss&#39;</span><span class="p">,</span> <span class="s1">&#39;resources/js/app.js&#39;</span><span class="p">])</span>
+<span class="o">@</span><span class="nx">vite</span><span class="p">([</span><span class="s1">'resources/sass/app.scss'</span><span class="p">,</span> <span class="s1">'resources/js/app.js'</span><span class="p">])</span>
 </code></pre></div>
 dans <code>vite.config.js</code></p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="nx">laravel</span><span class="p">({</span>
         <span class="nx">input</span><span class="o">:</span> <span class="p">[</span>
-            <span class="s1">&#39;resources/sass/app.scss&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;resources/js/app.js&#39;</span><span class="p">,</span>
+            <span class="s1">'resources/sass/app.scss'</span><span class="p">,</span>
+            <span class="s1">'resources/js/app.js'</span><span class="p">,</span>
         <span class="p">],</span>
         <span class="nx">refresh</span><span class="o">:</span> <span class="k">true</span><span class="p">,</span>
     <span class="p">}),</span>
@@ -7905,7 +7905,7 @@ dans <code>vite.config.js</code></p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6678,26 +6678,26 @@
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 
 <span class="k">function</span> <span class="nf">connexionPDO</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nv">$login</span> <span class="o">=</span> <span class="s2">&quot;votre login&quot;</span><span class="p">;</span>
-    <span class="nv">$mdp</span> <span class="o">=</span> <span class="s2">&quot;votre mot de passe&quot;</span><span class="p">;</span>
-    <span class="nv">$bd</span> <span class="o">=</span> <span class="s2">&quot;nom de la base de données&quot;</span><span class="p">;</span>
-    <span class="nv">$serveur</span> <span class="o">=</span> <span class="s2">&quot;adresse IP ou nom du serveur de base de données&quot;</span><span class="p">;</span>
+    <span class="nv">$login</span> <span class="o">=</span> <span class="s2">"votre login"</span><span class="p">;</span>
+    <span class="nv">$mdp</span> <span class="o">=</span> <span class="s2">"votre mot de passe"</span><span class="p">;</span>
+    <span class="nv">$bd</span> <span class="o">=</span> <span class="s2">"nom de la base de données"</span><span class="p">;</span>
+    <span class="nv">$serveur</span> <span class="o">=</span> <span class="s2">"adresse IP ou nom du serveur de base de données"</span><span class="p">;</span>
 
     <span class="k">try</span> <span class="p">{</span>
-        <span class="nv">$conn</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s2">&quot;mysql:host=</span><span class="si">$serveur</span><span class="s2">;dbname=</span><span class="si">$bd</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nv">$login</span><span class="p">,</span> <span class="nv">$mdp</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">MYSQL_ATTR_INIT_COMMAND</span> <span class="o">=&gt;</span> <span class="s1">&#39;SET NAMES \&#39;UTF8\&#39;&#39;</span><span class="p">));</span>
+        <span class="nv">$conn</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s2">"mysql:host=</span><span class="si">$serveur</span><span class="s2">;dbname=</span><span class="si">$bd</span><span class="s2">"</span><span class="p">,</span> <span class="nv">$login</span><span class="p">,</span> <span class="nv">$mdp</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">MYSQL_ATTR_INIT_COMMAND</span> <span class="o">=&gt;</span> <span class="s1">'SET NAMES \'UTF8\''</span><span class="p">));</span>
         <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">setAttribute</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span><span class="p">,</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_EXCEPTION</span><span class="p">);</span>
         <span class="k">return</span> <span class="nv">$conn</span><span class="p">;</span>
     <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">PDOException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">print</span> <span class="s2">&quot;Erreur de connexion PDO &quot;</span><span class="p">;</span>
+        <span class="k">print</span> <span class="s2">"Erreur de connexion PDO "</span><span class="p">;</span>
         <span class="k">die</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&quot;SCRIPT_FILENAME&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">"SCRIPT_FILENAME"</span><span class="p">]</span> <span class="o">==</span> <span class="no">__FILE__</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// prog de test</span>
-    <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Content-Type:text/plain&#39;</span><span class="p">);</span>
+    <span class="nb">header</span><span class="p">(</span><span class="s1">'Content-Type:text/plain'</span><span class="p">);</span>
 
-    <span class="k">echo</span> <span class="s2">&quot;connexionPDO() : </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">"connexionPDO() : </span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
     <span class="nb">print_r</span><span class="p">(</span><span class="nx">connexionPDO</span><span class="p">());</span>
 <span class="p">}</span>
 <span class="cp">?&gt;</span>
@@ -6709,14 +6709,14 @@
 
 <span class="x">    try {</span>
 <span class="x">        $cnx = connexionPDO();</span>
-<span class="x">        $req = $cnx-&gt;prepare(&quot;select * from resto where idR=:idR&quot;);</span>
-<span class="x">        $req-&gt;bindValue(&#39;:idR&#39;, $idR, PDO::PARAM_INT);</span>
+<span class="x">        $req = $cnx-&gt;prepare("select * from resto where idR=:idR");</span>
+<span class="x">        $req-&gt;bindValue(':idR', $idR, PDO::PARAM_INT);</span>
 
 <span class="x">        $req-&gt;execute();</span>
 
 <span class="x">        $resultat = $req-&gt;fetch(PDO::FETCH_ASSOC);</span>
 <span class="x">    } catch (PDOException $e) {</span>
-<span class="x">        print &quot;Erreur !: &quot; . $e-&gt;getMessage();</span>
+<span class="x">        print "Erreur !: " . $e-&gt;getMessage();</span>
 <span class="x">        die();</span>
 <span class="x">    }</span>
 <span class="x">    return $resultat;</span>
@@ -6727,8 +6727,8 @@
 
 <span class="x">    try {</span>
 <span class="x">        $cnx = connexionPDO();</span>
-<span class="x">        $req = $cnx-&gt;prepare(&quot;select * from resto where nomR like :nomR&quot;);</span>
-<span class="x">        $req-&gt;bindValue(&#39;:nomR&#39;, &quot;%&quot;.$nomR.&quot;%&quot;, PDO::PARAM_STR);</span>
+<span class="x">        $req = $cnx-&gt;prepare("select * from resto where nomR like :nomR");</span>
+<span class="x">        $req-&gt;bindValue(':nomR', "%".$nomR."%", PDO::PARAM_STR);</span>
 
 <span class="x">        $req-&gt;execute();</span>
 
@@ -6738,21 +6738,21 @@
 <span class="x">        $ligne = $req-&gt;fetch() ;</span>
 <span class="x">        }</span>
 <span class="x">    } catch (PDOException $e) {</span>
-<span class="x">        print &quot;Erreur !: &quot; . $e-&gt;getMessage();</span>
+<span class="x">        print "Erreur !: " . $e-&gt;getMessage();</span>
 <span class="x">        die();</span>
 <span class="x">    }</span>
 <span class="x">    return $resultat;</span>
 <span class="x">}</span>
 
-<span class="x">if ($_SERVER[&quot;SCRIPT_FILENAME&quot;] == __FILE__) {</span>
+<span class="x">if ($_SERVER["SCRIPT_FILENAME"] == __FILE__) {</span>
 <span class="x">    // prog principal de test</span>
-<span class="x">    header(&#39;Content-Type:text/plain&#39;);</span>
+<span class="x">    header('Content-Type:text/plain');</span>
 
-<span class="x">    echo &quot;getRestoByIdR(1) : \n&quot;;</span>
+<span class="x">    echo "getRestoByIdR(1) : \n";</span>
 <span class="x">    print_r(getRestoByIdR(1));</span>
 
-<span class="x">    echo &quot;getRestosByNomR(&#39;charcut&#39;) : \n&quot;;</span>
-<span class="x">    print_r(getRestosByNomR(&quot;charcut&quot;));</span>
+<span class="x">    echo "getRestosByNomR('charcut') : \n";</span>
+<span class="x">    print_r(getRestosByNomR("charcut"));</span>
 
 <span class="x">}</span>
 <span class="x">?&gt;</span>
@@ -6764,7 +6764,7 @@
 <span class="x">Array</span>
 <span class="x">(</span>
 <span class="x">    [idR] =&gt; 1</span>
-<span class="x">    [nomR] =&gt; l&#39;entrepote</span>
+<span class="x">    [nomR] =&gt; l'entrepote</span>
 <span class="x">    [numAdrR] =&gt; 2</span>
 <span class="x">    [voieAdrR] =&gt; rue Maurice Ravel</span>
 <span class="x">    [cpR] =&gt; 33000</span>
@@ -6775,7 +6775,7 @@
 <span class="x">    [horairesR] =&gt; &lt;table&gt;...&lt;/table&gt;</span>
 <span class="x">)</span>
 
-<span class="x">getRestosByNomR(&#39;charcut&#39;) :</span>
+<span class="x">getRestosByNomR('charcut') :</span>
 <span class="x">Array</span>
 <span class="x">(</span>
 <span class="x">    [0] =&gt; Array</span>
@@ -6818,8 +6818,8 @@
 <h3 id="21-requetes-preparees">2.1 Requêtes préparées<a class="headerlink" href="#21-requetes-preparees" title="Permanent link">⚓︎</a></h3>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">function getRestoByIdR($idR) {</span>
 <span class="x">    $cnx = connexionPDO();</span>
-<span class="x">    $req = $cnx-&gt;prepare(&quot;SELECT * FROM resto WHERE idR = :idR&quot;);</span>
-<span class="x">    $req-&gt;bindValue(&#39;:idR&#39;, $idR, PDO::PARAM_INT);</span>
+<span class="x">    $req = $cnx-&gt;prepare("SELECT * FROM resto WHERE idR = :idR");</span>
+<span class="x">    $req-&gt;bindValue(':idR', $idR, PDO::PARAM_INT);</span>
 <span class="x">    $req-&gt;execute();</span>
 <span class="x">    $resultat = $req-&gt;fetch(PDO::FETCH_ASSOC);</span>
 <span class="x">    return $resultat;</span>
@@ -6877,7 +6877,7 @@ Après l'appel à <code>bindValue()</code>, la requête réellement exécutée a
 </table>
 <p>Ce curseur contient 3 lignes et 3 colonnes. Il est lu <strong>ligne par ligne</strong> avec <code>fetch()</code>.</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$resultat = $req-&gt;fetch(PDO::FETCH_ASSOC);</span>
-<span class="x">// Résultat : [&#39;idR&#39; =&gt; 1, &#39;nomR&#39; =&gt; &quot;l&#39;entrepote&quot;, &#39;villeR&#39; =&gt; &#39;Bordeaux&#39;]</span>
+<span class="x">// Résultat : ['idR' =&gt; 1, 'nomR' =&gt; "l'entrepote", 'villeR' =&gt; 'Bordeaux']</span>
 </code></pre></div>
 <h3 id="23-parcours-complet-dun-curseur-while">2.3 Parcours complet d'un curseur (<code>while</code>)<a class="headerlink" href="#23-parcours-complet-dun-curseur-while" title="Permanent link">⚓︎</a></h3>
 <p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$ligne = $req-&gt;fetch(PDO::FETCH_ASSOC);</span>
@@ -6885,20 +6885,20 @@ Après l'appel à <code>bindValue()</code>, la requête réellement exécutée a
 <span class="x">    $resultat[] = $ligne;</span>
 <span class="x">    $ligne = $req-&gt;fetch(PDO::FETCH_ASSOC);</span>
 <span class="x">}</span>
-<span class="x">// Quand fetch() retourne false, la boucle s&#39;arrête</span>
+<span class="x">// Quand fetch() retourne false, la boucle s'arrête</span>
 </code></pre></div>
 <img alt="illustration" class="cnenter" src="../data/fetch.png" width="80%" /></p>
 <p>❓ <strong>Rappeler la syntaxe utilisée pour accéder à un champ d'un tableau associatif.</strong>⌨️</p>
 <details class="question">
 <summary>Éléments de réponses ✅</summary>
-<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$nomTableauAssociatif[&#39;nomDuChamp&#39;]</span>
+<p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$nomTableauAssociatif['nomDuChamp']</span>
 </code></pre></div>
 Par exemple : <code>$unResto['nomR']</code></p>
 </details>
 <p>❓ <strong>Rappeler comment accéder au nom du restaurant dans la variable retournée par</strong> <code>getRestoByIdR()</code>. ⌨️</p>
 <details class="question">
 <summary>Éléments de réponses ✅</summary>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$unResto[&#39;nomR&#39;]</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$unResto['nomR']</span>
 </code></pre></div>
 </details>
 <h2 id="3-analyse-de-getrestosbynomr">3. Analyse de <code>getRestosByNomR()</code> 🔎<a class="headerlink" href="#3-analyse-de-getrestosbynomr" title="Permanent link">⚓︎</a></h2>
@@ -6909,14 +6909,14 @@ Par exemple : <code>$unResto['nomR']</code></p>
 
 <span class="x">    try {</span>
 <span class="x">        $cnx = connexionPDO();</span>
-<span class="x">        $req = $cnx-&gt;prepare(&quot;select * from resto where idR=:idR&quot;);</span>
-<span class="x">        $req-&gt;bindValue(&#39;:idR&#39;, $idR, PDO::PARAM_INT);</span>
+<span class="x">        $req = $cnx-&gt;prepare("select * from resto where idR=:idR");</span>
+<span class="x">        $req-&gt;bindValue(':idR', $idR, PDO::PARAM_INT);</span>
 
 <span class="x">        $req-&gt;execute();</span>
 
 <span class="x">        $resultat = $req-&gt;fetch(PDO::FETCH_ASSOC);</span>
 <span class="x">    } catch (PDOException $e) {</span>
-<span class="x">        print &quot;Erreur !: &quot; . $e-&gt;getMessage();</span>
+<span class="x">        print "Erreur !: " . $e-&gt;getMessage();</span>
 <span class="x">        die();</span>
 <span class="x">    }</span>
 <span class="x">    return $resultat;</span>
@@ -6927,8 +6927,8 @@ Par exemple : <code>$unResto['nomR']</code></p>
 
 <span class="x">    try {</span>
 <span class="x">        $cnx = connexionPDO();</span>
-<span class="x">        $req = $cnx-&gt;prepare(&quot;select * from resto where nomR like :nomR&quot;);</span>
-<span class="x">        $req-&gt;bindValue(&#39;:nomR&#39;, &quot;%&quot;.$nomR.&quot;%&quot;, PDO::PARAM_STR);</span>
+<span class="x">        $req = $cnx-&gt;prepare("select * from resto where nomR like :nomR");</span>
+<span class="x">        $req-&gt;bindValue(':nomR', "%".$nomR."%", PDO::PARAM_STR);</span>
 
 <span class="x">        $req-&gt;execute();</span>
 
@@ -6938,21 +6938,21 @@ Par exemple : <code>$unResto['nomR']</code></p>
 <span class="x">        $ligne = $req-&gt;fetch() ;</span>
 <span class="x">        }</span>
 <span class="x">    } catch (PDOException $e) {</span>
-<span class="x">        print &quot;Erreur !: &quot; . $e-&gt;getMessage();</span>
+<span class="x">        print "Erreur !: " . $e-&gt;getMessage();</span>
 <span class="x">        die();</span>
 <span class="x">    }</span>
 <span class="x">    return $resultat;</span>
 <span class="x">}</span>
 
-<span class="x">if ($_SERVER[&quot;SCRIPT_FILENAME&quot;] == __FILE__) {</span>
+<span class="x">if ($_SERVER["SCRIPT_FILENAME"] == __FILE__) {</span>
 <span class="x">    // prog principal de test</span>
-<span class="x">    header(&#39;Content-Type:text/plain&#39;);</span>
+<span class="x">    header('Content-Type:text/plain');</span>
 
-<span class="x">    echo &quot;getRestoByIdR(1) : \n&quot;;</span>
+<span class="x">    echo "getRestoByIdR(1) : \n";</span>
 <span class="x">    print_r(getRestoByIdR(1));</span>
 
-<span class="x">    echo &quot;getRestosByNomR(&#39;charcut&#39;) : \n&quot;;</span>
-<span class="x">    print_r(getRestosByNomR(&quot;charcut&quot;));</span>
+<span class="x">    echo "getRestosByNomR('charcut') : \n";</span>
+<span class="x">    print_r(getRestosByNomR("charcut"));</span>
 
 <span class="x">}</span>
 <span class="x">?&gt;</span>
@@ -6964,7 +6964,7 @@ Par exemple : <code>$unResto['nomR']</code></p>
 <span class="x">Array</span>
 <span class="x">(</span>
 <span class="x">    [idR] =&gt; 1</span>
-<span class="x">    [nomR] =&gt; l&#39;entrepote</span>
+<span class="x">    [nomR] =&gt; l'entrepote</span>
 <span class="x">    [numAdrR] =&gt; 2</span>
 <span class="x">    [voieAdrR] =&gt; rue Maurice Ravel</span>
 <span class="x">    [cpR] =&gt; 33000</span>
@@ -6975,7 +6975,7 @@ Par exemple : <code>$unResto['nomR']</code></p>
 <span class="x">    [horairesR] =&gt; &lt;table&gt;...&lt;/table&gt;</span>
 <span class="x">)</span>
 
-<span class="x">getRestosByNomR(&#39;charcut&#39;) :</span>
+<span class="x">getRestosByNomR('charcut') :</span>
 <span class="x">Array</span>
 <span class="x">(</span>
 <span class="x">    [0] =&gt; Array</span>
@@ -7027,7 +7027,7 @@ Par exemple : <code>$unResto['nomR']</code></p>
 </blockquote>
 <details class="question">
 <summary>Éléments de réponses ✅</summary>
-<p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">resto</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">nomR</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%charcut%&#39;</span>
+<p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">resto</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">nomR</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'%charcut%'</span>
 </code></pre></div>
 Le <code>bindValue()</code> associe <code>"%charcut%"</code> au paramètre <code>:nomR</code>. Les <code>%</code> permettent de trouver tous les restaurants dont le nom <strong>contient</strong> la chaîne <code>charcut</code>.</p>
 </details>
@@ -7051,18 +7051,18 @@ Chaque <code>$ligne</code> est un tableau associatif (un restaurant), et <code>$
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">function getNoteMoyenneByIdR($idR) {</span>
 <span class="x">    try {</span>
 <span class="x">        $cnx = connexionPDO();</span>
-<span class="x">        $req = $cnx-&gt;prepare(&quot;select avg(note) from critiquer where idR=:idR&quot;);</span>
-<span class="x">        $req-&gt;bindValue(&#39;:idR&#39;, $idR, PDO::PARAM_INT);</span>
+<span class="x">        $req = $cnx-&gt;prepare("select avg(note) from critiquer where idR=:idR");</span>
+<span class="x">        $req-&gt;bindValue(':idR', $idR, PDO::PARAM_INT);</span>
 
 <span class="x">        $req-&gt;execute();</span>
 
 <span class="x">        $resultat = $req-&gt;fetch(PDO::FETCH_ASSOC);</span>
 <span class="x">    } catch (PDOException $e) {</span>
-<span class="x">        print &quot;Erreur !: &quot; . $e-&gt;getMessage();</span>
+<span class="x">        print "Erreur !: " . $e-&gt;getMessage();</span>
 <span class="x">        die();</span>
 <span class="x">    }</span>
-<span class="x">    if ($resultat[&quot;avg(note)&quot;] != NULL) {</span>
-<span class="x">        return $resultat[&quot;avg(note)&quot;];</span>
+<span class="x">    if ($resultat["avg(note)"] != NULL) {</span>
+<span class="x">        return $resultat["avg(note)"];</span>
 <span class="x">    } else {</span>
 <span class="x">        return 0;</span>
 <span class="x">    }</span>
@@ -7135,8 +7135,8 @@ Chaque <code>$ligne</code> est un tableau associatif (un restaurant), et <code>$
 </ul>
 </details>
 <p>❓ <strong>Expliquer la condition suivante en fin de fonction :</strong>🤔</p>
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">if ($resultat[&quot;avg(note)&quot;] != NULL) {</span>
-<span class="x">    return $resultat[&quot;avg(note)&quot;];</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">if ($resultat["avg(note)"] != NULL) {</span>
+<span class="x">    return $resultat["avg(note)"];</span>
 <span class="x">} else {</span>
 <span class="x">    return 0;</span>
 <span class="x">}</span>
@@ -7157,13 +7157,13 @@ Chaque <code>$ligne</code> est un tableau associatif (un restaurant), et <code>$
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">function addAimer($mailU, $idR) {</span>
 <span class="x">    try {</span>
 <span class="x">        $cnx = connexionPDO();</span>
-<span class="x">        $req = $cnx-&gt;prepare(&quot;insert into aimer (mailU, idR) values(:mailU,:idR)&quot;);</span>
-<span class="x">        $req-&gt;bindValue(&#39;:idR&#39;, $idR, PDO::PARAM_INT);</span>
-<span class="x">        $req-&gt;bindValue(&#39;:mailU&#39;, $mailU, PDO::PARAM_STR);</span>
+<span class="x">        $req = $cnx-&gt;prepare("insert into aimer (mailU, idR) values(:mailU,:idR)");</span>
+<span class="x">        $req-&gt;bindValue(':idR', $idR, PDO::PARAM_INT);</span>
+<span class="x">        $req-&gt;bindValue(':mailU', $mailU, PDO::PARAM_STR);</span>
 
 <span class="x">        $resultat = $req-&gt;execute();</span>
 <span class="x">    } catch (PDOException $e) {</span>
-<span class="x">        print &quot;Erreur !: &quot; . $e-&gt;getMessage();</span>
+<span class="x">        print "Erreur !: " . $e-&gt;getMessage();</span>
 <span class="x">        die();</span>
 <span class="x">    }</span>
 <span class="x">    return $resultat;</span>
@@ -7205,9 +7205,9 @@ Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.<
 <p>Dans la base, la table <code>aimer</code> indique qu'un utilisateur aime un restaurant. Pour "aimer" un restaurant, l'utilisateur clique sur l'étoile ⭐ dans la fiche du restaurant.</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">function addAimer($idR, $mailU) {</span>
 <span class="x">    $cnx = connexionPDO();</span>
-<span class="x">    $req = $cnx-&gt;prepare(&quot;INSERT INTO aimer (idR, mailU) VALUES (:idR, :mailU)&quot;);</span>
-<span class="x">    $req-&gt;bindValue(&#39;:idR&#39;,   $idR,   PDO::PARAM_INT);</span>
-<span class="x">    $req-&gt;bindValue(&#39;:mailU&#39;, $mailU, PDO::PARAM_STR);</span>
+<span class="x">    $req = $cnx-&gt;prepare("INSERT INTO aimer (idR, mailU) VALUES (:idR, :mailU)");</span>
+<span class="x">    $req-&gt;bindValue(':idR',   $idR,   PDO::PARAM_INT);</span>
+<span class="x">    $req-&gt;bindValue(':mailU', $mailU, PDO::PARAM_STR);</span>
 <span class="x">    return $req-&gt;execute();</span>
 <span class="x">}</span>
 </code></pre></div>
@@ -7306,7 +7306,7 @@ Cette variable est créée par l'instruction : <code>new PDO("mysql:host=$serveu
 <p><img alt="pdo" class="center" src="../data/pdo.png" witdh="100%" /></p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">function connexionPDO() {</span>
 <span class="x">    global $login, $mdp, $bd, $serveur;</span>
-<span class="x">    $conn = new PDO(&quot;mysql:host=$serveur;dbname=$bd&quot;, $login, $mdp);</span>
+<span class="x">    $conn = new PDO("mysql:host=$serveur;dbname=$bd", $login, $mdp);</span>
 <span class="x">    $conn-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);</span>
 <span class="x">    return $conn;</span>
 <span class="x">}</span>
@@ -7374,13 +7374,13 @@ Cette variable est créée par l'instruction : <code>new PDO("mysql:host=$serveu
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">function addAimer($mailU, $idR) {</span>
 <span class="x">    try {</span>
 <span class="x">        $cnx = connexionPDO();</span>
-<span class="x">        $req = $cnx-&gt;prepare(&quot;insert into aimer (mailU, idR) values(:mailU,:idR)&quot;);</span>
-<span class="x">        $req-&gt;bindValue(&#39;:idR&#39;, $idR, PDO::PARAM_INT);</span>
-<span class="x">        $req-&gt;bindValue(&#39;:mailU&#39;, $mailU, PDO::PARAM_STR);</span>
+<span class="x">        $req = $cnx-&gt;prepare("insert into aimer (mailU, idR) values(:mailU,:idR)");</span>
+<span class="x">        $req-&gt;bindValue(':idR', $idR, PDO::PARAM_INT);</span>
+<span class="x">        $req-&gt;bindValue(':mailU', $mailU, PDO::PARAM_STR);</span>
 
 <span class="x">        $resultat = $req-&gt;execute();</span>
 <span class="x">    } catch (PDOException $e) {</span>
-<span class="x">        print &quot;Erreur !: &quot; . $e-&gt;getMessage();</span>
+<span class="x">        print "Erreur !: " . $e-&gt;getMessage();</span>
 <span class="x">        die();</span>
 <span class="x">    }</span>
 <span class="x">    return $resultat;</span>
@@ -7415,7 +7415,7 @@ Avec clé primaire composée :
 <p>❓ <strong>Écrire la requête SQL permettant de supprimer **une occurrence précise</strong> de la table**<code>aimer</code> 🗄️</p>
 <details class="question">
 <summary>Éléments de réponses ✅</summary>
-<p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">aimer</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">idR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">mailU</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;test@bts.sio&#39;</span><span class="p">;</span>
+<p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">aimer</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">idR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">mailU</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'test@bts.sio'</span><span class="p">;</span>
 </code></pre></div>
 Avec des paramètres PDO :
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">aimer</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">idR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">:</span><span class="n">idR</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">mailU</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">:</span><span class="n">mailU</span>
@@ -7446,7 +7446,7 @@ Avec des paramètres PDO :
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">function delAimer($idR, $mailU) {</span>
 <span class="x">    $cnx = connexionPDO();</span>
 
-<span class="x">    $req = $cnx-&gt;prepare(&quot;/* requête à compléter */&quot;);</span>
+<span class="x">    $req = $cnx-&gt;prepare("/* requête à compléter */");</span>
 
 <span class="x">    // bindValue à compléter</span>
 
@@ -7459,20 +7459,20 @@ Avec des paramètres PDO :
 <span class="x">    $resultat = -1;</span>
 <span class="x">    try {</span>
 <span class="x">        $cnx = connexionPDO();</span>
-<span class="x">        $req = $cnx-&gt;prepare(&quot;DELETE FROM aimer WHERE idR = :idR AND mailU = :mailU&quot;);</span>
-<span class="x">        $req-&gt;bindValue(&#39;:idR&#39;,   $idR,   PDO::PARAM_INT);</span>
-<span class="x">        $req-&gt;bindValue(&#39;:mailU&#39;, $mailU, PDO::PARAM_STR);</span>
+<span class="x">        $req = $cnx-&gt;prepare("DELETE FROM aimer WHERE idR = :idR AND mailU = :mailU");</span>
+<span class="x">        $req-&gt;bindValue(':idR',   $idR,   PDO::PARAM_INT);</span>
+<span class="x">        $req-&gt;bindValue(':mailU', $mailU, PDO::PARAM_STR);</span>
 <span class="x">        $resultat = $req-&gt;execute();</span>
 <span class="x">    } catch (PDOException $e) {</span>
-<span class="x">        print &quot;Erreur !: &quot; . $e-&gt;getMessage();</span>
+<span class="x">        print "Erreur !: " . $e-&gt;getMessage();</span>
 <span class="x">        die();</span>
 <span class="x">    }</span>
 <span class="x">    return $resultat;</span>
 <span class="x">}</span>
 </code></pre></div>
 <p>Dans la section de test :
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">echo &quot;\n delAimer(\&quot;test@bts.sio\&quot;, 2) : \n&quot;;</span>
-<span class="x">print_r(delAimer(&quot;test@bts.sio&quot;, 2));</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">echo "\n delAimer(\"test@bts.sio\", 2) : \n";</span>
+<span class="x">print_r(delAimer("test@bts.sio", 2));</span>
 </code></pre></div></p>
 </details>
 <h3 id="7-consultation-des-critiques-dun-restaurant">7. Consultation des critiques d'un restaurant 💬<a class="headerlink" href="#7-consultation-des-critiques-dun-restaurant" title="Permanent link">⚓︎</a></h3>
@@ -7507,8 +7507,8 @@ Avec des paramètres PDO :
 </code></pre></div></p>
 <p><strong>Structure de données retournée :</strong>
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>$critiques
-├── [0] → [&#39;idR&#39; =&gt; 1, &#39;mailU&#39; =&gt; &#39;user@mail.com&#39;, &#39;note&#39; =&gt; 4, &#39;commentaire&#39; =&gt; &#39;...&#39;]
-├── [1] → [&#39;idR&#39; =&gt; 1, &#39;mailU&#39; =&gt; &#39;autre@mail.com&#39;, &#39;note&#39; =&gt; 3, &#39;commentaire&#39; =&gt; &#39;...&#39;]
+├── [0] → ['idR' =&gt; 1, 'mailU' =&gt; 'user@mail.com', 'note' =&gt; 4, 'commentaire' =&gt; '...']
+├── [1] → ['idR' =&gt; 1, 'mailU' =&gt; 'autre@mail.com', 'note' =&gt; 3, 'commentaire' =&gt; '...']
 └── ...
 </code></pre></div></p>
 <p><strong>Code complet de <code>getCritiquerByIdR()</code> :</strong></p>
@@ -7516,8 +7516,8 @@ Avec des paramètres PDO :
 <span class="x">    $resultat = array();</span>
 <span class="x">    try {</span>
 <span class="x">        $cnx = connexionPDO();</span>
-<span class="x">        $req = $cnx-&gt;prepare(&quot;SELECT * FROM critiquer WHERE idR = :idR&quot;);</span>
-<span class="x">        $req-&gt;bindValue(&#39;:idR&#39;, $idR, PDO::PARAM_INT);</span>
+<span class="x">        $req = $cnx-&gt;prepare("SELECT * FROM critiquer WHERE idR = :idR");</span>
+<span class="x">        $req-&gt;bindValue(':idR', $idR, PDO::PARAM_INT);</span>
 <span class="x">        $req-&gt;execute();</span>
 <span class="x">        $ligne = $req-&gt;fetch(PDO::FETCH_ASSOC);</span>
 <span class="x">        while ($ligne) {</span>
@@ -7525,14 +7525,14 @@ Avec des paramètres PDO :
 <span class="x">            $ligne = $req-&gt;fetch(PDO::FETCH_ASSOC);</span>
 <span class="x">        }</span>
 <span class="x">    } catch (PDOException $e) {</span>
-<span class="x">        print &quot;Erreur !: &quot; . $e-&gt;getMessage();</span>
+<span class="x">        print "Erreur !: " . $e-&gt;getMessage();</span>
 <span class="x">        die();</span>
 <span class="x">    }</span>
 <span class="x">    return $resultat;</span>
 <span class="x">}</span>
 </code></pre></div>
 <p>Dans la section de test :
-<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">echo &quot;\n getCritiquerByIdR(1) : \n&quot;;</span>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">echo "\n getCritiquerByIdR(1) : \n";</span>
 <span class="x">print_r(getCritiquerByIdR(1));</span>
 </code></pre></div></p>
 </details>
@@ -7683,7 +7683,7 @@ Avec des paramètres PDO :
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

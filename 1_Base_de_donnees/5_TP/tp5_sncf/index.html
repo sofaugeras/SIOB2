@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6443,7 +6443,7 @@ Le langage SQL permet de définir une valeur par défaut lorsqu'un champ de la b
 La clause <code>DEFAULT</code> doit être suivie par la valeur à affecter. Cette valeur peut être un des types suivants : <br /></p>
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>- constante numérique 
 - constante alphanumérique (chaîne de caractères) 
-- le mot clé ``USER`` (nom de l&#39;utilisateur) 
+- le mot clé ``USER`` (nom de l'utilisateur) 
 - le mot clé ``NULL`` 
 - le mot clé ``CURRENT_DATE`` (date de saisie) 
 - le mot clé ``CURRENT_TIME`` (heure de saisie) 
@@ -6487,21 +6487,21 @@ La clause <code>UNIQUE</code> permet de vérifier que la valeur saisie pour un c
 <details class="question">
 <summary>Correction</summary>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">gare</span><span class="w"> </span><span class="p">(</span><span class="n">codeGare</span><span class="p">,</span><span class="w"> </span><span class="n">nomGare</span><span class="p">,</span><span class="w"> </span><span class="n">nomVille</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span>
-<span class="p">(</span><span class="s1">&#39;5&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Montparnasse&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Paris&#39;</span><span class="p">);</span>
+<span class="p">(</span><span class="s1">'5'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Montparnasse'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Paris'</span><span class="p">);</span>
 </code></pre></div>
 </details>
 <p><strong>R5 :</strong> Ajoutez deux trains partant de la gare ‘5’.</p>
 <details class="question">
 <summary>Correction</summary>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="p">(</span><span class="n">numTrain</span><span class="p">,</span><span class="w"> </span><span class="n">codeGareDep</span><span class="p">,</span><span class="w"> </span><span class="n">CodeGareARR</span><span class="p">,</span><span class="w"> </span><span class="n">HDep</span><span class="p">,</span><span class="w"> </span><span class="n">HArr</span><span class="p">,</span><span class="w"> </span><span class="n">CodeTrf</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span>
-<span class="w">    </span><span class="p">(</span><span class="s1">&#39;133&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;5&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-10-01 11:41:44&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-10-01 15:41:44&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Q&#39;</span><span class="p">),</span>
-<span class="w">    </span><span class="p">(</span><span class="s1">&#39;134&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;5&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-10-01 11:41:44&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-10-01 15:41:44&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Q&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">(</span><span class="s1">'133'</span><span class="p">,</span><span class="w"> </span><span class="s1">'5'</span><span class="p">,</span><span class="w"> </span><span class="s1">'3'</span><span class="p">,</span><span class="w"> </span><span class="s1">'2024-10-01 11:41:44'</span><span class="p">,</span><span class="w"> </span><span class="s1">'2024-10-01 15:41:44'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Q'</span><span class="p">),</span>
+<span class="w">    </span><span class="p">(</span><span class="s1">'134'</span><span class="p">,</span><span class="w"> </span><span class="s1">'5'</span><span class="p">,</span><span class="w"> </span><span class="s1">'1'</span><span class="p">,</span><span class="w"> </span><span class="s1">'2024-10-01 11:41:44'</span><span class="p">,</span><span class="w"> </span><span class="s1">'2024-10-01 15:41:44'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Q'</span><span class="p">);</span>
 </code></pre></div>
 </details>
 <p><strong>R6 :</strong> Modifiez le tuple <code>(‘5’, ‘Montparnasse’, ‘Paris’)</code> en <code>(‘5’, ‘Paris Montparnasse’, ‘Paris’)</code>, quelles sont les mises à jour à effectuer sur la base ?</p>
 <details class="question">
 <summary>Correction</summary>
-<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">gare</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">nomGare</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Paris Montparnasse&#39;</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">gare</span><span class="p">.</span><span class="n">codeGare</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">gare</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">nomGare</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Paris Montparnasse'</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">gare</span><span class="p">.</span><span class="n">codeGare</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span>
 </code></pre></div>
 </details>
 <p><strong>R7 :</strong> Modifiez le tuple <code>(‘5’, ‘Paris Montparnasse’, ‘Paris’)</code> en <code>(‘15’, ‘Paris Montparnasse’, ‘Paris’)</code>, quelles sont les mises à jour à effectuer sur la base ?</p>
@@ -6515,7 +6515,7 @@ Dans la méthode, il faudra mieux :</p>
 <li>Supprimer l'enregistrement <code>(‘5’, ‘Paris Montparnasse’, ‘Paris’)</code></li>
 </ul>
 <p><div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">gare</span><span class="w"> </span><span class="p">(</span><span class="n">codeGare</span><span class="p">,</span><span class="w"> </span><span class="n">nomGare</span><span class="p">,</span><span class="w"> </span><span class="n">nomVille</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span>
-<span class="p">(</span><span class="s1">&#39;15&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Montparnasse&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Paris&#39;</span><span class="p">);</span>
+<span class="p">(</span><span class="s1">'15'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Montparnasse'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Paris'</span><span class="p">);</span>
 <span class="k">UPDATE</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">codeGareDep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">codeGareDep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span>
 <span class="k">UPDATE</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">CodeGareARR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">CodeGareARR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span>
 <span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">gare</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">codeGare</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
@@ -6528,19 +6528,19 @@ provoque l'erreur suivante : <code>#1451 - Cannot delete or update a parent row:
 Puis modifiez les données pour que Tous les trains qui partent de Questembert soient de type quotidien.</p>
 <details class="question">
 <summary>Correction</summary>
-<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">gare</span><span class="w"> </span><span class="p">(</span><span class="n">codeGare</span><span class="p">,</span><span class="w"> </span><span class="n">nomGare</span><span class="p">,</span><span class="w"> </span><span class="n">nomVille</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;16&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Questembert&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Questembert&#39;</span><span class="p">);</span><span class="w"> </span>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">gare</span><span class="w"> </span><span class="p">(</span><span class="n">codeGare</span><span class="p">,</span><span class="w"> </span><span class="n">nomGare</span><span class="p">,</span><span class="w"> </span><span class="n">nomVille</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">'16'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Questembert'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Questembert'</span><span class="p">);</span><span class="w"> </span>
 
 <span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="p">(</span><span class="n">numTrain</span><span class="p">,</span><span class="w"> </span><span class="n">codeGareDep</span><span class="p">,</span><span class="w"> </span><span class="n">CodeGareARR</span><span class="p">,</span><span class="w"> </span><span class="n">HDep</span><span class="p">,</span><span class="w"> </span><span class="n">HArr</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span>
-<span class="w">    </span><span class="p">(</span><span class="s1">&#39;233&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;16&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-10-11 11:41:44&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-10-11 15:41:44&#39;</span><span class="p">),</span>
-<span class="w">    </span><span class="p">(</span><span class="s1">&#39;234&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;16&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-10-21 11:41:44&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2024-10-21 15:41:44&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">(</span><span class="s1">'233'</span><span class="p">,</span><span class="w"> </span><span class="s1">'16'</span><span class="p">,</span><span class="w"> </span><span class="s1">'3'</span><span class="p">,</span><span class="w"> </span><span class="s1">'2024-10-11 11:41:44'</span><span class="p">,</span><span class="w"> </span><span class="s1">'2024-10-11 15:41:44'</span><span class="p">),</span>
+<span class="w">    </span><span class="p">(</span><span class="s1">'234'</span><span class="p">,</span><span class="w"> </span><span class="s1">'16'</span><span class="p">,</span><span class="w"> </span><span class="s1">'1'</span><span class="p">,</span><span class="w"> </span><span class="s1">'2024-10-21 11:41:44'</span><span class="p">,</span><span class="w"> </span><span class="s1">'2024-10-21 15:41:44'</span><span class="p">);</span>
 
-<span class="k">UPDATE</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">CodeTrf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Q&#39;</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">codeGareDep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">16</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
+<span class="k">UPDATE</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">CodeTrf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Q'</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">codeGareDep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">16</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
 </code></pre></div>
 </details>
 <p><strong>R9 :</strong> Effacez tous les enregistrements de TRAIN qui partent de Rennes. On partiras du principe qu'il n'existe pas pas d'enregistrements liés dans les tables connexes. </p>
 <details class="question">
 <summary>Correction</summary>
-<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">ville</span><span class="w"> </span><span class="o">=</span><span class="s1">&#39;Rennes&#39;</span><span class="w"> </span><span class="p">;</span>
+<div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">ville</span><span class="w"> </span><span class="o">=</span><span class="s1">'Rennes'</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 </details>
 <p><strong>R10 :</strong> Effacez tous les enregistrements de TRAIN. Quelles instructions complémentaires faut-il rajouter ?</p>
@@ -6698,7 +6698,7 @@ Puis modifiez les données pour que Tous les trains qui partent de Questembert s
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

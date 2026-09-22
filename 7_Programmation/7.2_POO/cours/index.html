@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6676,14 +6676,14 @@
 </ul>
 <p><div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Personnage</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">    </span><span class="s">&quot;&quot;&quot;</span>
-<span class="s">    Personnage d&#39;un jeu de type hack &#39;n slash</span>
+<span class="w">    </span><span class="s">"""</span>
+<span class="s">    Personnage d'un jeu de type hack 'n slash</span>
 
 <span class="s">    Attributs :</span>
 <span class="s">        nom : chaine de caractères, nom du personnage</span>
 <span class="s">        pv : entier positif ou nul, points de vie du personnage</span>
 <span class="s">        degats : entier strictement positif, dégats maximum du personnage</span>
-<span class="s">        position : couple d&#39;entiers donnant l&#39;abscisse et l&#39;ordonnée</span>
+<span class="s">        position : couple d'entiers donnant l'abscisse et l'ordonnée</span>
 <span class="s">                   du personnage sur la carte</span>
 <span class="s">    Méthodes:</span>
 <span class="s">        Init() constructeur de la classe Personnage</span>
@@ -6692,24 +6692,24 @@
 <span class="s">                Uniquement pour les attributs _pv et _position</span>
 <span class="s">        deplacement(paramètres) : permet de changer la position</span>
 <span class="s">                                  du personnage</span>
-<span class="s">        attaque() : renvoie les dégâts faits à l&#39;adversaire</span>
-<span class="s">    &quot;&quot;&quot;</span>
+<span class="s">        attaque() : renvoie les dégâts faits à l'adversaire</span>
+<span class="s">    """</span>
 </code></pre></div>
 La première méthode dans la classe est le <strong>constructeur</strong>, appelé du même nom que la classe en JAVA. Dans le constructeur de <code>Personnage</code> est aussi passé en argument le paramètre <strong>nom</strong>. Le constructeur initialise les attributs de l’objet (points de vie, dégâts, position).</p>
 <p>Tous les attributs sont précédés d’un tiret bas « <code>_</code> » pour signifier qu’ils sont <strong>privés</strong>.</p>
 <div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><span class="n">Personnage</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="s">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="s">"""</span>
 <span class="s">    Constructeur de la classe Personnage</span>
 
 <span class="s">    Données:   </span>
 <span class="s">        nom : chaine de caractères, nom du personnage</span>
 <span class="s">        pv : entier positif ou nul, points de vie du personnage</span>
 <span class="s">        degats : entier strictement positif, dégats maximum du personnage</span>
-<span class="s">        position : couple d&#39;entiers donnant l&#39;abscisse et</span>
-<span class="s">                   l&#39;ordonnée du personnage sur la carte</span>
+<span class="s">        position : couple d'entiers donnant l'abscisse et</span>
+<span class="s">                   l'ordonnée du personnage sur la carte</span>
 <span class="s">    Résultat : </span>
 <span class="s">        ne retourne rien, crée un nouveau Personnage</span>
-<span class="s">    &quot;&quot;&quot;</span>
+<span class="s">    """</span>
 <span class="w">    </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
 <span class="w">    </span><span class="n">pv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">80</span><span class="p">;</span>
 <span class="w">    </span><span class="n">degats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span>
@@ -6747,9 +6747,9 @@ Il n’y a pas forcément de mutateurs (ni d’accesseurs) pour tous les attribu
 </code></pre></div>
 <h4 id="mutateurs-des-attributs">📤 Mutateurs des attributs<a class="headerlink" href="#mutateurs-des-attributs" title="Permanent link">⚓︎</a></h4>
 <div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setPv</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">nouveaux_pv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="s">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="s">"""</span>
 <span class="s">    Les points de vie d’un personnage sont positifs ou nuls.</span>
-<span class="s">    &quot;&quot;&quot;</span>
+<span class="s">    """</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nouveaux_pv</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">pv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
@@ -6780,7 +6780,7 @@ Il n’y a pas forcément de mutateurs (ni d’accesseurs) pour tous les attribu
 <p>On peut avoir un <strong>paramètre ellipse</strong> (<code>...</code>) qui est en fait un tableau, et doit être le dernier paramètre.</p>
 <h3 id="exemple">Exemple<a class="headerlink" href="#exemple" title="Permanent link">⚓︎</a></h3>
 <p><div class="language-java highlight"><span class="filename">Java</span><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">m</span><span class="p">(</span><span class="n">X</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// e est un tableau à une dimension d&#39;éléments de type X</span>
+<span class="w">    </span><span class="c1">// e est un tableau à une dimension d'éléments de type X</span>
 <span class="p">}</span>
 </code></pre></div>
 Un appel de la méthode <code>m</code> se fait alors de la façon suivante :</p>
@@ -6941,7 +6941,7 @@ La classe fille hérite :</p>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">afficher</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; possède &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pv</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; points de vie.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" possède "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pv</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" points de vie."</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 
@@ -6956,8 +6956,8 @@ La classe fille hérite :</p>
 
 <span class="w">    </span><span class="nd">@Override</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">afficher</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; (Guerrier) possède &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pv</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
-<span class="w">                           </span><span class="s">&quot; points de vie et &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">force</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; de force.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" (Guerrier) possède "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pv</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">                           </span><span class="s">" points de vie et "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">force</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" de force."</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -6980,7 +6980,7 @@ Dans le cadre de la POO :</p>
 <span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Personnage</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">attaquer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; attaque avec ses poings.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" attaque avec ses poings."</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 
@@ -6988,7 +6988,7 @@ Dans le cadre de la POO :</p>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Guerrier</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kd">super</span><span class="p">(</span><span class="n">nom</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
 <span class="w">    </span><span class="nd">@Override</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">attaquer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; attaque avec une épée !&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" attaque avec une épée !"</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 
@@ -6996,13 +6996,13 @@ Dans le cadre de la POO :</p>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Mage</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kd">super</span><span class="p">(</span><span class="n">nom</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
 <span class="w">    </span><span class="nd">@Override</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">attaquer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; lance un sort de feu !&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" lance un sort de feu !"</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 
-<span class="c1">// Exemple d&#39;utilisation</span>
-<span class="n">Personnage</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Guerrier</span><span class="p">(</span><span class="s">&quot;Arthas&quot;</span><span class="p">);</span>
-<span class="n">Personnage</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mage</span><span class="p">(</span><span class="s">&quot;Merlin&quot;</span><span class="p">);</span>
+<span class="c1">// Exemple d'utilisation</span>
+<span class="n">Personnage</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Guerrier</span><span class="p">(</span><span class="s">"Arthas"</span><span class="p">);</span>
+<span class="n">Personnage</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Mage</span><span class="p">(</span><span class="s">"Merlin"</span><span class="p">);</span>
 
 <span class="n">p1</span><span class="p">.</span><span class="na">attaquer</span><span class="p">();</span><span class="w"> </span><span class="c1">// Arthas attaque avec une épée !</span>
 <span class="n">p2</span><span class="p">.</span><span class="na">attaquer</span><span class="p">();</span><span class="w"> </span><span class="c1">// Merlin lance un sort de feu !</span>
@@ -7165,7 +7165,7 @@ Dans le cadre de la POO :</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

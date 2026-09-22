@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -7078,7 +7078,7 @@ Ces caractères peuvent être différents suivant le SGBDR utilisé. Il faut se 
 <div class="tabbed-block">
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">nomPilote</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;DUP%&quot;</span><span class="w"> </span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">nomPilote</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">"DUP%"</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 </div>
 </div>
@@ -7115,7 +7115,7 @@ Ces caractères peuvent être différents suivant le SGBDR utilisé. Il faut se 
 <div class="tabbed-block">
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">numVol</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">villeArrivee</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;GILLOT&#39;</span><span class="p">,</span><span class="s1">&#39;MAURICE&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">villeArrivee</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">'GILLOT'</span><span class="p">,</span><span class="s1">'MAURICE'</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 </div>
 </div>
@@ -7198,7 +7198,7 @@ note : le champ de restriction doit absolument être répété.</p>
 <div class="tabbed-block">
 <p><div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">numVol</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">VOL</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">villeArrivee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;GILLOT&#39;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">villeArrivee</span><span class="w"> </span><span class="o">=</span><span class="s1">&#39;MAURICE&#39;</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">villeArrivee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'GILLOT'</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">villeArrivee</span><span class="w"> </span><span class="o">=</span><span class="s1">'MAURICE'</span><span class="p">;</span>
 </code></pre></div>
 note : le champ de restriction doit absolument être répété.
 note 2 : On ne peut pas mettre l'opérateur <code>AND</code> ici car une ville ne peut pas en même temps être GILLOT <strong>et</strong> Maurice.</p>
@@ -7241,14 +7241,14 @@ note 2 : On ne peut pas mettre l'opérateur <code>AND</code> ici car une ville n
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span><span class="p">,</span><span class="w"> </span><span class="n">bonus</span><span class="p">,</span><span class="w"> </span><span class="n">salaire</span><span class="p">,</span><span class="w"> </span><span class="n">adresse</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">bonus</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">800</span><span class="p">)</span><span class="w"> </span><span class="k">OR</span>
-<span class="w">      </span><span class="p">(</span><span class="n">salaire</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3500</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">adresse</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%Paris&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="p">(</span><span class="n">salaire</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3500</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">adresse</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">"%Paris"</span><span class="p">);</span>
 </code></pre></div>
 <p>Remarques : 
 - L’opérateur <code>AND</code> est prioritaire par rapport à l’opérateur <code>OR</code>. </p>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span><span class="p">,</span><span class="w"> </span><span class="n">bonus</span><span class="p">,</span><span class="w"> </span><span class="n">salaire</span><span class="p">,</span><span class="w"> </span><span class="n">adresse</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">bonus</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">800</span><span class="w"> </span><span class="k">OR</span>
-<span class="w">      </span><span class="n">salaire</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3500</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">adresse</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%Paris&quot;</span><span class="p">;</span>
+<span class="w">      </span><span class="n">salaire</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3500</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">adresse</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">"%Paris"</span><span class="p">;</span>
 </code></pre></div>
 </div>
 </div>
@@ -7278,7 +7278,7 @@ note 2 : On ne peut pas mettre l'opérateur <code>AND</code> ici car une ville n
 <div class="tabbed-block">
 <p><div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span><span class="p">,</span><span class="w"> </span><span class="n">bonus</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">adresse</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%STE MARIE&quot;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">adresse</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%ST DENIS&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">bonus</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">adresse</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">"%STE MARIE"</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">adresse</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">"%ST DENIS"</span><span class="p">)</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">bonus</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 note : le parenthésage est ici obligatoire.</p>
 </div>
@@ -7411,7 +7411,7 @@ La clause <code>WHERE</code> contiendra les éventuelles restrictions. <br />
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">VOL</span>
 <span class="k">ON</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">.</span><span class="n">numPilote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">numPilote</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">numVol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;AF7684&#39;</span><span class="w"> </span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">numVol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'AF7684'</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 </div>
 </div>
@@ -7445,7 +7445,7 @@ La clause <code>WHERE</code> contiendra les éventuelles restrictions. <br />
 <span class="k">ON</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">.</span><span class="n">numPilote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">numPilote</span>
 <span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">AVION</span>
 <span class="k">ON</span><span class="w"> </span><span class="n">AVION</span><span class="p">.</span><span class="n">numAvion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">numAvion</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">nomAvion</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%747-400%&quot;</span><span class="w"> </span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">nomAvion</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">"%747-400%"</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 </div>
 </div>
@@ -7530,7 +7530,7 @@ La clause <code>WHERE</code> contiendra les éventuelles restrictions. <br />
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">,</span><span class="n">VOL</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">.</span><span class="n">numPilote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">numPilote</span><span class="w"> </span>
-<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">numVol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;AF7684&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">numVol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'AF7684'</span><span class="p">;</span>
 </code></pre></div>
 </div>
 </div>
@@ -7562,7 +7562,7 @@ La clause <code>WHERE</code> contiendra les éventuelles restrictions. <br />
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">VOL</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">.</span><span class="n">numPilote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">numPilote</span>
-<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">nomAvion</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%747-400%&quot;</span><span class="w"> </span><span class="p">;</span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">nomAvion</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">"%747-400%"</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 </div>
 </div>
@@ -8039,7 +8039,7 @@ Sa syntaxe générale est la suivante :
 </div>
 <div class="tabbed-block">
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">AVION</span><span class="p">(</span><span class="n">numAvion</span><span class="p">,</span><span class="w"> </span><span class="n">NomAvion</span><span class="p">,</span><span class="w"> </span><span class="n">capacite</span><span class="p">)</span>
-<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">7</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;A319&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">7</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="ss">"A319"</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 </div>
 </div>
@@ -8266,7 +8266,7 @@ Rd : « »</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

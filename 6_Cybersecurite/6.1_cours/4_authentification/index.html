@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6746,7 +6746,7 @@
 <span class="n">passwords</span> <span class="o">=</span> <span class="p">{}</span>
 
 <span class="c1">#ouverture du fichier contenant les mots de passe</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./data/french_passwords_top1000.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"./data/french_passwords_top1000.txt"</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
     <span class="c1">#pour chaque mot de passe, on créé un hachage MD5 et on stocke le mot de passe et son hachage dans le dictionnaire</span>
     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>   
         <span class="n">password</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
@@ -6754,9 +6754,9 @@
         <span class="n">passwords</span><span class="p">[</span><span class="n">password</span><span class="p">]</span> <span class="o">=</span> <span class="n">password_hash</span> 
 
 <span class="c1">#Sauvegarde des hachages dans un fichier</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./data/md5_passwords.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"./data/md5_passwords.csv"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">password</span><span class="p">,</span> <span class="nb">hash</span> <span class="ow">in</span> <span class="n">passwords</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">password</span> <span class="o">+</span> <span class="s1">&#39;;&#39;</span> <span class="o">+</span><span class="nb">hash</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">password</span> <span class="o">+</span> <span class="s1">';'</span> <span class="o">+</span><span class="nb">hash</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 
 <span class="c1">#fermeture du fichier</span>
 <span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
@@ -6780,11 +6780,11 @@
         <span class="c1">#si le hachage est dans le dictionnaire, on affiche le mot de passe correspondant</span>
         <span class="k">for</span> <span class="n">password</span><span class="p">,</span> <span class="n">password_hash</span> <span class="ow">in</span> <span class="n">passwords</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="k">if</span> <span class="n">password_hash</span> <span class="o">==</span> <span class="nb">hash</span><span class="p">:</span>
-                <span class="k">return</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Le mot de passe associé au hachage </span><span class="si">{</span><span class="nb">hash</span><span class="si">}</span><span class="s2"> est </span><span class="si">{</span><span class="n">password</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-            <span class="c1">#sinon on affiche que le mot de passe n&#39;a pas été trouvé</span>
-    <span class="k">return</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Le mot de passe associé au hachage </span><span class="si">{</span><span class="nb">hash</span><span class="si">}</span><span class="s2"> n&#39;a pas été trouvé&quot;</span><span class="p">)</span>
+                <span class="k">return</span> <span class="p">(</span><span class="sa">f</span><span class="s2">"Le mot de passe associé au hachage </span><span class="si">{</span><span class="nb">hash</span><span class="si">}</span><span class="s2"> est </span><span class="si">{</span><span class="n">password</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+            <span class="c1">#sinon on affiche que le mot de passe n'a pas été trouvé</span>
+    <span class="k">return</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Le mot de passe associé au hachage </span><span class="si">{</span><span class="nb">hash</span><span class="si">}</span><span class="s2"> n'a pas été trouvé"</span><span class="p">)</span>
 
-<span class="nb">hash</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="s2">&quot;secret&quot;</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span> <span class="c1">#5ebe2294ecd0e0f08eab7690d2a6ee69</span>
+<span class="nb">hash</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="s2">"secret"</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span> <span class="c1">#5ebe2294ecd0e0f08eab7690d2a6ee69</span>
 <span class="n">find_password</span><span class="p">(</span><span class="nb">hash</span><span class="p">)</span>
 </code></pre></div>
 <p>Exemple pour : 5ebe2294ecd0e0f08eab7690d2a6ee69</p>
@@ -6820,16 +6820,16 @@ le pirate possède donc le moyen de se connecter à concurrent.fr avec le compte
 
 <span class="c1"># generate new salt, hash password</span>
 <span class="c1"># h est le sel qui sera utilisé pour le hachage</span>
-<span class="n">h</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;monsite.fr&quot;</span>
+<span class="n">h</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">"monsite.fr"</span>
 <span class="c1"># Hash du mot de passe classique sans salage</span>
-<span class="n">pwd_md5</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;secret&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+<span class="n">pwd_md5</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="sa">b</span><span class="s2">"secret"</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">pwd_md5</span><span class="p">)</span>
 <span class="c1"># Hash du mot de passe classique avec salage</span>
-<span class="n">pwd</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">pbkdf2_hmac</span><span class="p">(</span><span class="s1">&#39;md5&#39;</span><span class="p">,</span> <span class="sa">b</span><span class="s2">&quot;secret&quot;</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="mi">100000</span><span class="p">)</span>
+<span class="n">pwd</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">pbkdf2_hmac</span><span class="p">(</span><span class="s1">'md5'</span><span class="p">,</span> <span class="sa">b</span><span class="s2">"secret"</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="mi">100000</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">pwd</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>5ebe2294ecd0e0f08eab7690d2a6ee69
-b&#39;\xc3;K\xc2\xfb\xb4z\xca`f\xc4T\xc9I\x1b.&#39;
+b'\xc3;K\xc2\xfb\xb4z\xca`f\xc4T\xc9I\x1b.'
 </code></pre></div></p>
 <h2 id="3-lauthentification-multi-facteur-mfa">3. L'authentification multi-facteur (MFA)🔐<a class="headerlink" href="#3-lauthentification-multi-facteur-mfa" title="Permanent link">⚓︎</a></h2>
 <h3 id="31-introduction-au-mfa">3.1 Introduction au MFA<a class="headerlink" href="#31-introduction-au-mfa" title="Permanent link">⚓︎</a></h3>
@@ -6895,22 +6895,22 @@ L’exemple le plus simple est le <strong>TOTP</strong> avec une application mob
 
 <span class="c1"># Étape 1 : Générer un secret unique pour un utilisateur</span>
 <span class="n">secret</span> <span class="o">=</span> <span class="n">pyotp</span><span class="o">.</span><span class="n">random_base32</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Secret partagé :&quot;</span><span class="p">,</span> <span class="n">secret</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Secret partagé :"</span><span class="p">,</span> <span class="n">secret</span><span class="p">)</span>
 
 <span class="c1"># Étape 2 : Générer un QR Code compatible Google Authenticator</span>
 <span class="n">uri</span> <span class="o">=</span> <span class="n">pyotp</span><span class="o">.</span><span class="n">totp</span><span class="o">.</span><span class="n">TOTP</span><span class="p">(</span><span class="n">secret</span><span class="p">)</span><span class="o">.</span><span class="n">provisioning_uri</span><span class="p">(</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;etudiant@bts-sio.fr&quot;</span><span class="p">,</span>
-    <span class="n">issuer_name</span><span class="o">=</span><span class="s2">&quot;DemoMFA&quot;</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">"etudiant@bts-sio.fr"</span><span class="p">,</span>
+    <span class="n">issuer_name</span><span class="o">=</span><span class="s2">"DemoMFA"</span>
 <span class="p">)</span>
 <span class="n">qrcode</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 <span class="c1"># Étape 3 : Vérification lors de la connexion</span>
 <span class="n">totp</span> <span class="o">=</span> <span class="n">pyotp</span><span class="o">.</span><span class="n">TOTP</span><span class="p">(</span><span class="n">secret</span><span class="p">)</span>
-<span class="n">code</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez le code affiché par votre application: &quot;</span><span class="p">)</span>
+<span class="n">code</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Entrez le code affiché par votre application: "</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">totp</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span><span class="n">code</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Authentification réussie&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"✅ Authentification réussie"</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;❌ Code invalide&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"❌ Code invalide"</span><span class="p">)</span>
 </code></pre></div>
 <p>👉 A faire : </p>
 <ul>
@@ -7186,7 +7186,7 @@ Elle peut être mise en œuvre facilement par les développeurs via des solution
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

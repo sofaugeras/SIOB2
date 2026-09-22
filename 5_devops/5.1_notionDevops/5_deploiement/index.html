@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6865,7 +6865,7 @@ La CD va plus loin : elle <strong>déploie</strong> automatiquement si la CI est
 <p>Dans notre pipeline, c'est le mécanisme <code>needs: build-test</code> dans GitHub Actions :</p>
 <div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="nt">deploy</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build-test</span><span class="w">   </span><span class="c1"># ← le CD attend que le CI soit vert</span>
-<span class="w">  </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.ref == &#39;refs/heads/main&#39;</span>
+<span class="w">  </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.ref == 'refs/heads/main'</span>
 </code></pre></div>
 <details class="question">
 <summary>Que se passe-t-il si un développeur pousse du code qui casse un test ?</summary>
@@ -6956,7 +6956,7 @@ La CD va plus loin : elle <strong>déploie</strong> automatiquement si la CI est
 <span class="k">FROM</span><span class="w"> </span><span class="s">php:8.3-fpm-alpine</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">runtime</span>
 
 <span class="c"># Extensions compilées : installation des headers, compilation, suppression des headers,</span>
-<span class="c"># réinstallation des libs runtime nécessaires à l&#39;exécution de gd</span>
+<span class="c"># réinstallation des libs runtime nécessaires à l'exécution de gd</span>
 <span class="k">RUN</span><span class="w"> </span>apk<span class="w"> </span>add<span class="w"> </span>--no-cache<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>libpng-dev<span class="w"> </span>libjpeg-turbo-dev<span class="w"> </span>libwebp-dev<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>libxml2-dev<span class="w"> </span>oniguruma-dev<span class="w"> </span><span class="se">\</span>
@@ -6968,12 +6968,12 @@ La CD va plus loin : elle <strong>déploie</strong> automatiquement si la CI est
 
 <span class="c"># OPcache : accélère PHP en gardant le bytecode en mémoire</span>
 <span class="k">RUN</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;opcache.enable=1&#39;</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;opcache.memory_consumption=256&#39;</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;opcache.validate_timestamps=0&#39;</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s1">'opcache.enable=1'</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s1">'opcache.memory_consumption=256'</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s1">'opcache.validate_timestamps=0'</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
 <span class="o">}</span><span class="w"> </span>&gt;<span class="w"> </span>/usr/local/etc/php/conf.d/opcache.ini
 
-<span class="c"># Sécurité : l&#39;application tourne sous un utilisateur non-root</span>
+<span class="c"># Sécurité : l'application tourne sous un utilisateur non-root</span>
 <span class="k">RUN</span><span class="w"> </span>addgroup<span class="w"> </span>-g<span class="w"> </span><span class="m">1000</span><span class="w"> </span>-S<span class="w"> </span>www<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>adduser<span class="w"> </span>-u<span class="w"> </span><span class="m">1000</span><span class="w"> </span>-S<span class="w"> </span>www<span class="w"> </span>-G<span class="w"> </span>www
 
 <span class="k">WORKDIR</span><span class="w"> </span><span class="s">/var/www/html</span>
@@ -6981,7 +6981,7 @@ La CD va plus loin : elle <strong>déploie</strong> automatiquement si la CI est
 <span class="c"># Copie du code compilé depuis le stage builder</span>
 <span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>builder<span class="w"> </span>--chown<span class="o">=</span>www:www<span class="w"> </span>/app<span class="w"> </span>.
 
-<span class="c"># Création des dossiers d&#39;écriture Laravel</span>
+<span class="c"># Création des dossiers d'écriture Laravel</span>
 <span class="k">RUN</span><span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>storage/framework/<span class="o">{</span>sessions,views,cache<span class="o">}</span><span class="w"> </span>storage/logs<span class="w"> </span><span class="se">\</span>
 <span class="w">             </span>bootstrap/cache<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>www:www<span class="w"> </span>storage<span class="w"> </span>bootstrap/cache<span class="w"> </span><span class="se">\</span>
@@ -6989,7 +6989,7 @@ La CD va plus loin : elle <strong>déploie</strong> automatiquement si la CI est
 
 <span class="k">USER</span><span class="w"> </span><span class="s">www</span>
 <span class="k">EXPOSE</span><span class="w"> </span><span class="s">9000</span>
-<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;php-fpm&quot;</span><span class="p">]</span>
+<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">"php-fpm"</span><span class="p">]</span>
 </code></pre></div>
 <details class="question">
 <summary>Pourquoi supprimer les packages <code>-dev</code> dans la même couche Docker (<code>RUN</code>) qu'on les installe ?</summary>
@@ -7043,7 +7043,7 @@ La CD va plus loin : elle <strong>déploie</strong> automatiquement si la CI est
 <p><strong>Le healthcheck</strong> sur MySQL garantit que la base est prête avant que l'application démarre :</p>
 <div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="nt">mysql</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">healthcheck</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;CMD&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;mysqladmin&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;ping&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;-h&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;127.0.0.1&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"CMD"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"mysqladmin"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"ping"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"-h"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"127.0.0.1"</span><span class="p p-Indicator">]</span>
 <span class="w">    </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
 <span class="w">    </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
 </code></pre></div>
@@ -7114,8 +7114,8 @@ La CD va plus loin : elle <strong>déploie</strong> automatiquement si la CI est
 <p>Ce job ne se déclenche que si le job CI est vert <strong>ET</strong> qu'on est sur la branche <code>main</code> :</p>
 <div class="language-yaml highlight"><span class="filename">YAML</span><pre><span></span><code><span class="nt">deploy</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build-test</span><span class="w">                             </span><span class="c1"># quality gate</span>
-<span class="w">  </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.ref == &#39;refs/heads/main&#39;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&amp;&amp; github.event_name == &#39;push&#39;</span>
+<span class="w">  </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.ref == 'refs/heads/main'</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&amp;&amp; github.event_name == 'push'</span>
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Self-hosted runner</p>
@@ -7287,7 +7287,7 @@ nano<span class="w"> </span>/opt/todo-prenom/.env.prod
 </code></pre></div></p>
 <h3 id="74-declencher-le-premier-deploiement">7.4 Déclencher le premier déploiement<a class="headerlink" href="#74-declencher-le-premier-deploiement" title="Permanent link">⚓︎</a></h3>
 <p>Faites un push sur la branche <code>main</code> de votre fork pour déclencher le pipeline :</p>
-<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>--allow-empty<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;premier déploiement&quot;</span>
+<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>--allow-empty<span class="w"> </span>-m<span class="w"> </span><span class="s2">"premier déploiement"</span>
 git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
 </code></pre></div>
 <p>Suivez l'exécution dans l'onglet <strong>Actions</strong> de votre repo. Votre application sera accessible à l'URL <code>http://todo-prenom.srv-debian.local</code>.</p>
@@ -7352,7 +7352,7 @@ Vite directement (sans PHP), et transmet les requêtes <code>.php</code> à php-
 <span class="p">}</span>
 
 <span class="k">location</span><span class="w"> </span><span class="p">~</span><span class="w"> </span><span class="sr">\.php$</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kn">fastcgi_pass</span><span class="w"> </span><span class="n">app</span><span class="p">:</span><span class="mi">9000</span><span class="p">;</span><span class="w">        </span><span class="c1"># &quot;app&quot; = nom du service Docker</span>
+<span class="w">    </span><span class="kn">fastcgi_pass</span><span class="w"> </span><span class="n">app</span><span class="p">:</span><span class="mi">9000</span><span class="p">;</span><span class="w">        </span><span class="c1"># "app" = nom du service Docker</span>
 <span class="w">    </span><span class="kn">fastcgi_param</span><span class="w"> </span><span class="s">SCRIPT_FILENAME</span><span class="w"> </span><span class="nv">$realpath_root$fastcgi_script_name</span><span class="p">;</span>
 <span class="w">    </span><span class="kn">include</span><span class="w"> </span><span class="s">fastcgi_params</span><span class="p">;</span>
 <span class="p">}</span>
@@ -7527,7 +7527,7 @@ Vite directement (sans PHP), et transmet les requêtes <code>.php</code> à php-
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

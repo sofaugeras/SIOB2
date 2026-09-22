@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6854,7 +6854,7 @@ docker<span class="w"> </span>ps<span class="w"> </span>-a<span class="w">      
 </code></pre></div>
 <p><strong>Étape 3 — Créer un fichier depuis le conteneur</strong> ✍️</p>
 <p>Dans le shell Ubuntu du conteneur :</p>
-<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Cree depuis le conteneur Docker&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/mnt/partage/depuis_docker.txt
+<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">"Cree depuis le conteneur Docker"</span><span class="w"> </span>&gt;<span class="w"> </span>/mnt/partage/depuis_docker.txt
 ls<span class="w"> </span>/mnt/partage
 </code></pre></div>
 <p><strong>Étape 4 — Vérifier depuis votre machine hôte</strong> 👀</p>
@@ -6865,7 +6865,7 @@ ls<span class="w"> </span>/mnt/partage
 <p>✅ Le fichier créé <strong>dans</strong> le conteneur est visible <strong>sur votre machine</strong>.</p>
 <p><strong>Étape 5 — Modifier le fichier depuis la machine hôte</strong> 🖊️</p>
 <p>Depuis votre machine, ajoutez une ligne au fichier :</p>
-<div class="language-powershell highlight"><span class="filename">PowerShell</span><pre><span></span><code><span class="nb">Add-Content</span> <span class="n">depuis_docker</span><span class="p">.</span><span class="n">txt</span> <span class="s2">&quot;Modifie depuis Windows !&quot;</span>
+<div class="language-powershell highlight"><span class="filename">PowerShell</span><pre><span></span><code><span class="nb">Add-Content</span> <span class="n">depuis_docker</span><span class="p">.</span><span class="n">txt</span> <span class="s2">"Modifie depuis Windows !"</span>
 </code></pre></div>
 <p><strong>Étape 6 — Vérifier la modification depuis le conteneur</strong> 🔄</p>
 <p>Retournez dans le terminal du conteneur et lisez le fichier :</p>
@@ -6930,7 +6930,7 @@ ls<span class="w"> </span>/mnt/partage
 <p>Docker est un outil intéressant pour développer, il permet de créer des environnements de développement isolés et facilement reproductibles. Vous pouvez avec Docker packager une application avec toutes ses dépendances pour la faire fonctionner sur n'importe quel système d'exploitation. Pour vous donner envie d'utiliser Docker, nous allons tester des exemples concrets.</p>
 <h3 id="31-youtube-dl">3.1 Youtube-dl 🎵<a class="headerlink" href="#31-youtube-dl" title="Permanent link">⚓︎</a></h3>
 <p><code>yt-dlp</code> est un outil en ligne de commande permettant de télécharger des vidéos sur Youtube et d'autres sites de streaming. Il est disponible sous forme de conteneur Docker, ce qui vous permet de l'utiliser sans avoir à l'installer sur votre système.</p>
-<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code><span class="nb">alias</span><span class="w"> </span><span class="nv">ytdl</span><span class="o">=</span><span class="s1">&#39;docker run --rm -v &quot;$(pwd):/downloads&quot; -it jauderho/yt-dlp:latest -x --audio-format mp3 --audio-quality 0 --embed-metadata&#39;</span>
+<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code><span class="nb">alias</span><span class="w"> </span><span class="nv">ytdl</span><span class="o">=</span><span class="s1">'docker run --rm -v "$(pwd):/downloads" -it jauderho/yt-dlp:latest -x --audio-format mp3 --audio-quality 0 --embed-metadata'</span>
 </code></pre></div>
 <p>Qu'avons-nous ici ?</p>
 <ul>
@@ -6955,7 +6955,7 @@ ls<span class="w"> </span>/mnt/partage
 <p>L'exemple suivant (SpotDL) illustre la puissance de Docker pour packager des outils complexes. Il est présenté <strong>à titre de démonstration technique</strong>. Le téléchargement de musique protégée par le droit d'auteur sans autorisation est illégal. En établissement scolaire, vérifiez la politique de votre réseau avant de l'utiliser.</p>
 </div>
 <p>Spotdl est un outil permettant de rechercher et télécharger des chansons à partir de leurs métadonnées Spotify. Il est disponible sous forme de conteneur Docker.</p>
-<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code><span class="nb">alias</span><span class="w"> </span><span class="nv">spotdl</span><span class="o">=</span><span class="s1">&#39;docker run --rm -v &quot;$(pwd):/music&quot; spotdl/spotify-downloader --audio {youtube,youtube-music,soundcloud,piped} --output &quot;{artist}/{album}/{track-number} - {title}.{output-ext}&quot; download&#39;</span>
+<div class="language-bash highlight"><span class="filename">💻 Console</span><pre><span></span><code><span class="nb">alias</span><span class="w"> </span><span class="nv">spotdl</span><span class="o">=</span><span class="s1">'docker run --rm -v "$(pwd):/music" spotdl/spotify-downloader --audio {youtube,youtube-music,soundcloud,piped} --output "{artist}/{album}/{track-number} - {title}.{output-ext}" download'</span>
 </code></pre></div>
 <p>Qu'avons-nous ici ?</p>
 <ul>
@@ -7121,7 +7121,7 @@ ls<span class="w"> </span>/mnt/partage
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

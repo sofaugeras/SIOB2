@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6651,157 +6651,157 @@
 <summary>Corrigé &amp; Code de référence</summary>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="c1">// ===== config.php =====</span>
-<span class="nb">ini_set</span><span class="p">(</span><span class="s1">&#39;display_errors&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="nb">ini_set</span><span class="p">(</span><span class="s1">'display_errors'</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
 <span class="nb">error_reporting</span><span class="p">(</span><span class="k">E_ALL</span><span class="p">);</span>
 <span class="nb">session_start</span><span class="p">();</span>
 
-<span class="nv">$DB_HOST</span> <span class="o">=</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">;</span>
-<span class="nv">$DB_NAME</span> <span class="o">=</span> <span class="s1">&#39;mfa_demo&#39;</span><span class="p">;</span>
-<span class="nv">$DB_USER</span> <span class="o">=</span> <span class="s1">&#39;root&#39;</span><span class="p">;</span>
-<span class="nv">$DB_PASS</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="nv">$DB_HOST</span> <span class="o">=</span> <span class="s1">'127.0.0.1'</span><span class="p">;</span>
+<span class="nv">$DB_NAME</span> <span class="o">=</span> <span class="s1">'mfa_demo'</span><span class="p">;</span>
+<span class="nv">$DB_USER</span> <span class="o">=</span> <span class="s1">'root'</span><span class="p">;</span>
+<span class="nv">$DB_PASS</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
 
 <span class="k">try</span> <span class="p">{</span>
-    <span class="nv">$pdo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s2">&quot;mysql:host=</span><span class="si">$DB_HOST</span><span class="s2">;dbname=</span><span class="si">$DB_NAME</span><span class="s2">;charset=utf8mb4&quot;</span><span class="p">,</span> <span class="nv">$DB_USER</span><span class="p">,</span> <span class="nv">$DB_PASS</span><span class="p">,</span> <span class="p">[</span>
+    <span class="nv">$pdo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s2">"mysql:host=</span><span class="si">$DB_HOST</span><span class="s2">;dbname=</span><span class="si">$DB_NAME</span><span class="s2">;charset=utf8mb4"</span><span class="p">,</span> <span class="nv">$DB_USER</span><span class="p">,</span> <span class="nv">$DB_PASS</span><span class="p">,</span> <span class="p">[</span>
         <span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span> <span class="o">=&gt;</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_EXCEPTION</span><span class="p">,</span>
         <span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_DEFAULT_FETCH_MODE</span> <span class="o">=&gt;</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_ASSOC</span><span class="p">,</span>
     <span class="p">]);</span>
 <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">PDOException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">die</span><span class="p">(</span><span class="s2">&quot;Erreur de connexion DB : &quot;</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">());</span>
+    <span class="k">die</span><span class="p">(</span><span class="s2">"Erreur de connexion DB : "</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">());</span>
 <span class="p">}</span>
 
 <span class="k">function</span> <span class="nf">require_login</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">]))</span> <span class="p">{</span>
-        <span class="nb">header</span><span class="p">(</span><span class="s2">&quot;Location: login.php&quot;</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'user_id'</span><span class="p">]))</span> <span class="p">{</span>
+        <span class="nb">header</span><span class="p">(</span><span class="s2">"Location: login.php"</span><span class="p">);</span>
         <span class="k">exit</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="k">function</span> <span class="nf">is_fully_authenticated</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;mfa_required&#39;</span><span class="p">]</span> <span class="o">??</span> <span class="k">false</span><span class="p">));</span>
+    <span class="k">return</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'user_id'</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'mfa_required'</span><span class="p">]</span> <span class="o">??</span> <span class="k">false</span><span class="p">));</span>
 <span class="p">}</span>
 
 <span class="c1">// ===== mfa_setup.php =====</span>
-<span class="k">require</span> <span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/config.php&#39;</span><span class="p">;</span>
-<span class="k">require</span> <span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/vendor/autoload.php&#39;</span><span class="p">;</span>
+<span class="k">require</span> <span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">'/config.php'</span><span class="p">;</span>
+<span class="k">require</span> <span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">'/vendor/autoload.php'</span><span class="p">;</span>
 
 <span class="k">use</span> <span class="nx">OTPHP\TOTP</span><span class="p">;</span>
 
 <span class="nx">require_login</span><span class="p">();</span>
 
-<span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM users WHERE id=?&quot;</span><span class="p">);</span>
-<span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">]]);</span>
+<span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">"SELECT * FROM users WHERE id=?"</span><span class="p">);</span>
+<span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'user_id'</span><span class="p">]]);</span>
 <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">();</span>
 
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$user</span><span class="p">)</span> <span class="p">{</span> <span class="nb">header</span><span class="p">(</span><span class="s2">&quot;Location: login.php&quot;</span><span class="p">);</span> <span class="k">exit</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$user</span><span class="p">)</span> <span class="p">{</span> <span class="nb">header</span><span class="p">(</span><span class="s2">"Location: login.php"</span><span class="p">);</span> <span class="k">exit</span><span class="p">;</span> <span class="p">}</span>
 
-<span class="k">if</span> <span class="p">(</span><span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;mfa_enabled&#39;</span><span class="p">])</span> <span class="p">{</span>
-    <span class="nb">header</span><span class="p">(</span><span class="s2">&quot;Location: dashboard.php&quot;</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$user</span><span class="p">[</span><span class="s1">'mfa_enabled'</span><span class="p">])</span> <span class="p">{</span>
+    <span class="nb">header</span><span class="p">(</span><span class="s2">"Location: dashboard.php"</span><span class="p">);</span>
     <span class="k">exit</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;mfa_secret&#39;</span><span class="p">]))</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$user</span><span class="p">[</span><span class="s1">'mfa_secret'</span><span class="p">]))</span> <span class="p">{</span>
     <span class="nv">$totp</span> <span class="o">=</span> <span class="nx">TOTP</span><span class="o">::</span><span class="na">create</span><span class="p">();</span>
     <span class="nv">$secret</span> <span class="o">=</span> <span class="nv">$totp</span><span class="o">-&gt;</span><span class="na">getSecret</span><span class="p">();</span>
-    <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;UPDATE users SET mfa_secret=? WHERE id=?&quot;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$secret</span><span class="p">,</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]]);</span>
-    <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;mfa_secret&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$secret</span><span class="p">;</span>
+    <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">"UPDATE users SET mfa_secret=? WHERE id=?"</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$secret</span><span class="p">,</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">'id'</span><span class="p">]]);</span>
+    <span class="nv">$user</span><span class="p">[</span><span class="s1">'mfa_secret'</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$secret</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nv">$totp</span> <span class="o">=</span> <span class="nx">TOTP</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;mfa_secret&#39;</span><span class="p">]);</span>
-<span class="nv">$totp</span><span class="o">-&gt;</span><span class="na">setLabel</span><span class="p">(</span><span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]);</span>
-<span class="nv">$totp</span><span class="o">-&gt;</span><span class="na">setIssuer</span><span class="p">(</span><span class="s2">&quot;DemoMFA&quot;</span><span class="p">);</span>
+<span class="nv">$totp</span> <span class="o">=</span> <span class="nx">TOTP</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="nv">$user</span><span class="p">[</span><span class="s1">'mfa_secret'</span><span class="p">]);</span>
+<span class="nv">$totp</span><span class="o">-&gt;</span><span class="na">setLabel</span><span class="p">(</span><span class="nv">$user</span><span class="p">[</span><span class="s1">'email'</span><span class="p">]);</span>
+<span class="nv">$totp</span><span class="o">-&gt;</span><span class="na">setIssuer</span><span class="p">(</span><span class="s2">"DemoMFA"</span><span class="p">);</span>
 <span class="nv">$uri</span> <span class="o">=</span> <span class="nv">$totp</span><span class="o">-&gt;</span><span class="na">getProvisioningUri</span><span class="p">();</span>
-<span class="nv">$qr</span> <span class="o">=</span> <span class="s2">&quot;https://api.qrserver.com/v1/create-qr-code/?size=200x200&amp;data=&quot;</span><span class="o">.</span><span class="nb">urlencode</span><span class="p">(</span><span class="nv">$uri</span><span class="p">);</span>
+<span class="nv">$qr</span> <span class="o">=</span> <span class="s2">"https://api.qrserver.com/v1/create-qr-code/?size=200x200&amp;data="</span><span class="o">.</span><span class="nb">urlencode</span><span class="p">(</span><span class="nv">$uri</span><span class="p">);</span>
 
-<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;REQUEST_METHOD&#39;</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;POST&#39;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nv">$code</span> <span class="o">=</span> <span class="nb">trim</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;code&#39;</span><span class="p">]</span> <span class="o">??</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">'REQUEST_METHOD'</span><span class="p">]</span> <span class="o">===</span> <span class="s1">'POST'</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$code</span> <span class="o">=</span> <span class="nb">trim</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">'code'</span><span class="p">]</span> <span class="o">??</span> <span class="s1">''</span><span class="p">);</span>
     <span class="k">if</span> <span class="p">(</span><span class="nv">$totp</span><span class="o">-&gt;</span><span class="na">verify</span><span class="p">(</span><span class="nv">$code</span><span class="p">))</span> <span class="p">{</span>
-        <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;UPDATE users SET mfa_enabled=1 WHERE id=?&quot;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]]);</span>
-        <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;mfa_required&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
-        <span class="nb">header</span><span class="p">(</span><span class="s2">&quot;Location: dashboard.php&quot;</span><span class="p">);</span>
+        <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">"UPDATE users SET mfa_enabled=1 WHERE id=?"</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$user</span><span class="p">[</span><span class="s1">'id'</span><span class="p">]]);</span>
+        <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'mfa_required'</span><span class="p">]</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+        <span class="nb">header</span><span class="p">(</span><span class="s2">"Location: dashboard.php"</span><span class="p">);</span>
         <span class="k">exit</span><span class="p">;</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="nv">$error</span> <span class="o">=</span> <span class="s2">&quot;Code invalide.&quot;</span><span class="p">;</span>
+        <span class="nv">$error</span> <span class="o">=</span> <span class="s2">"Code invalide."</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="cp">?&gt;</span>
 <span class="x">&lt;!DOCTYPE html&gt;</span>
-<span class="x">&lt;html lang=&quot;fr&quot;&gt;</span>
-<span class="x">&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Setup MFA&lt;/title&gt;&lt;/head&gt;</span>
+<span class="x">&lt;html lang="fr"&gt;</span>
+<span class="x">&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;title&gt;Setup MFA&lt;/title&gt;&lt;/head&gt;</span>
 <span class="x">&lt;body&gt;</span>
 <span class="x">&lt;h1&gt;Activer MFA&lt;/h1&gt;</span>
 <span class="x">&lt;p&gt;Scannez ce QR Code avec Google Authenticator :&lt;/p&gt;</span>
-<span class="x">&lt;img src=&quot;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$qr</span> <span class="cp">?&gt;</span><span class="x">&quot; alt=&quot;QR Code&quot;&gt;&lt;br&gt;</span>
-<span class="x">&lt;form method=&quot;post&quot;&gt;</span>
-<span class="x">&lt;label&gt;Entrez le code: &lt;input type=&quot;text&quot; name=&quot;code&quot; required&gt;&lt;/label&gt;</span>
-<span class="x">&lt;button type=&quot;submit&quot;&gt;Activer&lt;/button&gt;</span>
+<span class="x">&lt;img src="</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$qr</span> <span class="cp">?&gt;</span><span class="x">" alt="QR Code"&gt;&lt;br&gt;</span>
+<span class="x">&lt;form method="post"&gt;</span>
+<span class="x">&lt;label&gt;Entrez le code: &lt;input type="text" name="code" required&gt;&lt;/label&gt;</span>
+<span class="x">&lt;button type="submit"&gt;Activer&lt;/button&gt;</span>
 <span class="x">&lt;/form&gt;</span>
-<span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$error</span><span class="p">))</span> <span class="k">echo</span> <span class="s2">&quot;&lt;p style=&#39;color:red&#39;&gt;</span><span class="si">$error</span><span class="s2">&lt;/p&gt;&quot;</span><span class="p">;</span> <span class="cp">?&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$error</span><span class="p">))</span> <span class="k">echo</span> <span class="s2">"&lt;p style='color:red'&gt;</span><span class="si">$error</span><span class="s2">&lt;/p&gt;"</span><span class="p">;</span> <span class="cp">?&gt;</span>
 <span class="x">&lt;/body&gt;</span>
 <span class="x">&lt;/html&gt;</span>
 
 <span class="x">// ===== mfa_verify.php =====</span>
-<span class="x">require __DIR__ . &#39;/config.php&#39;;</span>
-<span class="x">require __DIR__ . &#39;/vendor/autoload.php&#39;;</span>
+<span class="x">require __DIR__ . '/config.php';</span>
+<span class="x">require __DIR__ . '/vendor/autoload.php';</span>
 
 <span class="x">use OTPHP\TOTP;</span>
 
 <span class="x">require_login();</span>
 
-<span class="x">if (!($_SESSION[&#39;mfa_required&#39;] ?? false)) {</span>
-<span class="x">    header(&quot;Location: dashboard.php&quot;);</span>
+<span class="x">if (!($_SESSION['mfa_required'] ?? false)) {</span>
+<span class="x">    header("Location: dashboard.php");</span>
 <span class="x">    exit;</span>
 <span class="x">}</span>
 
-<span class="x">$stmt = $pdo-&gt;prepare(&quot;SELECT * FROM users WHERE id=?&quot;);</span>
-<span class="x">$stmt-&gt;execute([$_SESSION[&#39;user_id&#39;]]);</span>
+<span class="x">$stmt = $pdo-&gt;prepare("SELECT * FROM users WHERE id=?");</span>
+<span class="x">$stmt-&gt;execute([$_SESSION['user_id']]);</span>
 <span class="x">$user = $stmt-&gt;fetch();</span>
 
-<span class="x">if (!$user || !$user[&#39;mfa_enabled&#39;]) {</span>
-<span class="x">    header(&quot;Location: login.php&quot;);</span>
+<span class="x">if (!$user || !$user['mfa_enabled']) {</span>
+<span class="x">    header("Location: login.php");</span>
 <span class="x">    exit;</span>
 <span class="x">}</span>
 
-<span class="x">$totp = TOTP::create($user[&#39;mfa_secret&#39;]);</span>
+<span class="x">$totp = TOTP::create($user['mfa_secret']);</span>
 
-<span class="x">if ($_SERVER[&#39;REQUEST_METHOD&#39;] === &#39;POST&#39;) {</span>
-<span class="x">    $code = trim($_POST[&#39;code&#39;] ?? &#39;&#39;);</span>
+<span class="x">if ($_SERVER['REQUEST_METHOD'] === 'POST') {</span>
+<span class="x">    $code = trim($_POST['code'] ?? '');</span>
 <span class="x">    if ($totp-&gt;verify($code)) {</span>
-<span class="x">        $_SESSION[&#39;mfa_required&#39;] = false;</span>
-<span class="x">        header(&quot;Location: dashboard.php&quot;);</span>
+<span class="x">        $_SESSION['mfa_required'] = false;</span>
+<span class="x">        header("Location: dashboard.php");</span>
 <span class="x">        exit;</span>
 <span class="x">    } else {</span>
-<span class="x">        $error = &quot;Code invalide.&quot;;</span>
+<span class="x">        $error = "Code invalide.";</span>
 <span class="x">    }</span>
 <span class="x">}</span>
 <span class="x">?&gt;</span>
 <span class="x">&lt;!DOCTYPE html&gt;</span>
-<span class="x">&lt;html lang=&quot;fr&quot;&gt;</span>
-<span class="x">&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Vérification MFA&lt;/title&gt;&lt;/head&gt;</span>
+<span class="x">&lt;html lang="fr"&gt;</span>
+<span class="x">&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;title&gt;Vérification MFA&lt;/title&gt;&lt;/head&gt;</span>
 <span class="x">&lt;body&gt;</span>
 <span class="x">&lt;h1&gt;Vérification du code MFA&lt;/h1&gt;</span>
-<span class="x">&lt;form method=&quot;post&quot;&gt;</span>
-<span class="x">&lt;input type=&quot;text&quot; name=&quot;code&quot; required&gt;</span>
-<span class="x">&lt;button type=&quot;submit&quot;&gt;Vérifier&lt;/button&gt;</span>
+<span class="x">&lt;form method="post"&gt;</span>
+<span class="x">&lt;input type="text" name="code" required&gt;</span>
+<span class="x">&lt;button type="submit"&gt;Vérifier&lt;/button&gt;</span>
 <span class="x">&lt;/form&gt;</span>
-<span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$error</span><span class="p">))</span> <span class="k">echo</span> <span class="s2">&quot;&lt;p style=&#39;color:red&#39;&gt;</span><span class="si">$error</span><span class="s2">&lt;/p&gt;&quot;</span><span class="p">;</span> <span class="cp">?&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$error</span><span class="p">))</span> <span class="k">echo</span> <span class="s2">"&lt;p style='color:red'&gt;</span><span class="si">$error</span><span class="s2">&lt;/p&gt;"</span><span class="p">;</span> <span class="cp">?&gt;</span>
 <span class="x">&lt;/body&gt;</span>
 <span class="x">&lt;/html&gt;</span>
 
 <span class="x">// ===== dashboard.php =====</span>
-<span class="x">require __DIR__ . &#39;/config.php&#39;;</span>
+<span class="x">require __DIR__ . '/config.php';</span>
 <span class="x">require_login();</span>
 <span class="x">if (!is_fully_authenticated()) {</span>
-<span class="x">    header(&#39;Location: mfa_verify.php&#39;);</span>
+<span class="x">    header('Location: mfa_verify.php');</span>
 <span class="x">    exit;</span>
 <span class="x">}</span>
 <span class="x">?&gt;</span>
 <span class="x">&lt;!DOCTYPE html&gt;</span>
-<span class="x">&lt;html lang=&quot;fr&quot;&gt;</span>
-<span class="x">&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;Dashboard&lt;/title&gt;&lt;/head&gt;</span>
+<span class="x">&lt;html lang="fr"&gt;</span>
+<span class="x">&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;title&gt;Dashboard&lt;/title&gt;&lt;/head&gt;</span>
 <span class="x">&lt;body&gt;</span>
-<span class="x">&lt;h1&gt;Bienvenue, </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;user_email&#39;</span><span class="p">]</span> <span class="o">??</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="cp">?&gt;</span><span class="x">&lt;/h1&gt;</span>
+<span class="x">&lt;h1&gt;Bienvenue, </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'user_email'</span><span class="p">]</span> <span class="o">??</span> <span class="s1">''</span><span class="p">)</span> <span class="cp">?&gt;</span><span class="x">&lt;/h1&gt;</span>
 <span class="x">&lt;p&gt;Votre compte est protégé par la MFA TOTP ✅&lt;/p&gt;</span>
-<span class="x">&lt;p&gt;&lt;a href=&quot;logout.php&quot;&gt;Se déconnecter&lt;/a&gt;&lt;/p&gt;</span>
+<span class="x">&lt;p&gt;&lt;a href="logout.php"&gt;Se déconnecter&lt;/a&gt;&lt;/p&gt;</span>
 <span class="x">&lt;/body&gt;</span>
 <span class="x">&lt;/html&gt;</span>
 </code></pre></div>
@@ -6952,7 +6952,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

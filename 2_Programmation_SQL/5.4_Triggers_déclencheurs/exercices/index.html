@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -6511,8 +6511,8 @@
 <span class="k">BEFORE</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Commande</span>
 <span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
 <span class="k">BEGIN</span>
-<span class="w">    </span><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">&#39;45000&#39;</span>
-<span class="w">        </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;La modification des commandes est interdite&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">'45000'</span>
+<span class="w">        </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'La modification des commandes est interdite'</span><span class="p">;</span>
 <span class="k">END</span><span class="w"> </span><span class="o">//</span>
 <span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
@@ -6527,14 +6527,14 @@
 <span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
 <span class="k">BEGIN</span>
 <span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">NumCom</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="k">OLD</span><span class="p">.</span><span class="n">NumCom</span><span class="w"> </span><span class="k">THEN</span>
-<span class="w">        </span><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">&#39;45000&#39;</span>
-<span class="w">            </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Le numéro de commande ne peut être modifié&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">'45000'</span>
+<span class="w">            </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Le numéro de commande ne peut être modifié'</span><span class="p">;</span>
 <span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
 
 <span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">DatCom</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="k">OLD</span><span class="p">.</span><span class="n">DatCom</span><span class="w"> </span><span class="k">THEN</span>
 <span class="w">        </span><span class="k">IF</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">DatCom</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">CURDATE</span><span class="p">()</span><span class="w"> </span><span class="k">THEN</span>
-<span class="w">            </span><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">&#39;45000&#39;</span>
-<span class="w">                </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;La date de commande ne peut pas être inférieure à la date en cours&#39;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">'45000'</span>
+<span class="w">                </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'La date de commande ne peut pas être inférieure à la date en cours'</span><span class="p">;</span>
 <span class="w">        </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
 <span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
 <span class="k">END</span><span class="w"> </span><span class="o">//</span>
@@ -6557,8 +6557,8 @@ Remarque : Ce trigger ne se déclenchera pas s'il existe une contrainte clé ét
 <span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">lignecommande</span><span class="p">.</span><span class="n">numcom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">OLD</span><span class="p">.</span><span class="n">numcom</span><span class="p">;</span>
 
 <span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="n">nb</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span>
-<span class="w">        </span><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">&#39;45000&#39;</span>
-<span class="w">            </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Opération annulée. Une ou plusieurs commandes ont des articles enregistrés&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">'45000'</span>
+<span class="w">            </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Opération annulée. Une ou plusieurs commandes ont des articles enregistrés'</span><span class="p">;</span>
 <span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
 <span class="k">END</span><span class="w"> </span><span class="o">//</span>
 <span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
@@ -6579,8 +6579,8 @@ Remarque : Ce trigger ne se déclenchera pas s'il existe une contrainte clé ét
 <span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">article</span><span class="p">.</span><span class="n">numart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">numart</span><span class="p">;</span>
 
 <span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">QteCommandee</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">stock</span><span class="w"> </span><span class="k">THEN</span>
-<span class="w">        </span><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">&#39;45000&#39;</span>
-<span class="w">            </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Ajout refusé. Quantités demandées non disponibles en stock&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">'45000'</span>
+<span class="w">            </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Ajout refusé. Quantités demandées non disponibles en stock'</span><span class="p">;</span>
 <span class="w">    </span><span class="k">ELSE</span>
 <span class="w">        </span><span class="k">UPDATE</span><span class="w"> </span><span class="n">article</span>
 <span class="w">        </span><span class="k">SET</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">QteCommandee</span>
@@ -6605,8 +6605,8 @@ Remarque : Ce trigger ne se déclenchera pas s'il existe une contrainte clé ét
 <span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">article</span><span class="p">.</span><span class="n">numart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">numart</span><span class="p">;</span>
 
 <span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">QteCommandee</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">stock</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">OLD</span><span class="p">.</span><span class="n">QteCommandee</span><span class="w"> </span><span class="k">THEN</span>
-<span class="w">        </span><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">&#39;45000&#39;</span>
-<span class="w">            </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Modification refusée. Quantités demandées non disponibles en stock&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">'45000'</span>
+<span class="w">            </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Modification refusée. Quantités demandées non disponibles en stock'</span><span class="p">;</span>
 <span class="w">    </span><span class="k">ELSE</span>
 <span class="w">        </span><span class="k">UPDATE</span><span class="w"> </span><span class="n">article</span>
 <span class="w">        </span><span class="k">SET</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QteEnStock</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">OLD</span><span class="p">.</span><span class="n">QteCommandee</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">QteCommandee</span>
@@ -6764,7 +6764,7 @@ table sont alors déclenchés (principe de cascade)</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
