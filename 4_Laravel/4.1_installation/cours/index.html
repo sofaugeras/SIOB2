@@ -4597,7 +4597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_tpExpositionDonneesSensibles.md" class="md-nav__link">
+      <a href="../../../6_Cybersecurite/6.2_TP/4_tpExpositionDonneesSensibles/" class="md-nav__link">
         
   
   
@@ -4625,7 +4625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4_tpViolationGestionAuthentification.md" class="md-nav__link">
+      <a href="../../../6_Cybersecurite/6.2_TP/3_tpViolationGestionAuthentification/" class="md-nav__link">
         
   
   
@@ -6450,11 +6450,10 @@
 <h1 id="installation-composer">Installation Composer<a class="headerlink" href="#installation-composer" title="Permanent link">⚓︎</a></h1>
 <p>Récupérer l’exécutable de <a href="https://getcomposer.org/">composer</a> et l’exécuter. 
 L’installateur vous demandera où se trouve php.exe (en général : <code>C:\wamp64\bin\php\phpX.X.X</code>). Cela installe Composer et met à jour le PATH de façon à ce que l'on puisse taper la commande composer en ligne de commande depuis n'importe quel répertoire.</p>
-<details class="warning">
-<summary>erreur opensssl</summary>
-<p>Si erreur "The openssl extension is missing which means that secure https transfer are impossible"
-activer la ligne extension=php_openssl.dll  en visualisant les extensions PHP de votre WAMP.</p>
-</details>
+<!-- ??? warning "erreur opensssl"
+    Si erreur "The openssl extension is missing which means that secure https transfer are impossible"
+    activer la ligne extension=php_openssl.dll  en visualisant les extensions PHP de votre WAMP. -->
+
 <p>Composer a besoin d'un fichier <code>composer.json</code> associé. Ce fichier contient les instructions pour Composer : les dépendances, les classes à charger automatiquement... Voici un extrait de ce fichier pour Laravel :</p>
 <p><div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">{</span>
 <span class="x">    "name": "laravel/laravel",</span>
@@ -6481,7 +6480,7 @@ Composer fonctionne en ligne de commande.<br />
 <p>Votre poste est maintenant configuré pour Laravel, vous pouvez donc créer un nouveau projet grâce à la commande ci- dessous:<br /></p>
 <p><img alt="💥" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4a5.svg" title=":boom:" /> Attention, le projet sera créé dans le dossier courant. Déplacer votre invite de commande dans le bon répertoire avant de lancer votre commande de création de projet: </p>
 <div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>CD C:\\wamp64\www\
-composer create-project --prefer-dist laravel/laravel monProjet "10.*"
+composer create-project --prefer-dist laravel/laravel monProjet"
 </code></pre></div>
 <p>Après quelques minutes, on obtient l’arborescence suivante :</p>
 <p><img alt="arborescence Laravel" src="../../data/monProjet10.png" /></p>
@@ -6632,7 +6631,7 @@ Pour que quelque chose s’affiche :<br /></p>
 </div>
 </div>
 <h2 id="le-moteur-de-gabarittemplate-blade">Le moteur de gabarit(template) BLADE<a class="headerlink" href="#le-moteur-de-gabarittemplate-blade" title="Permanent link">⚓︎</a></h2>
-<p>Utiliser un moteur de gabarit permet d’assurer directement la sécurité, la lisibilité, et l’organisation du code.a</p>
+<p>Utiliser un moteur de gabarit permet d’assurer directement la sécurité, la lisibilité, et l’organisation du code.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Toutes les fonctions utiliser à travers BLADE sont envoyés à travers la fonctions htmlspecialchars() pour se prémunir des attaques XSS.</p>

@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/6_Cybersecurite/6.2_TP/3_tpViolationGestionAuthentification/">
       
       
-        <link rel="prev" href="../2_tpInjectionSQL/">
+        <link rel="prev" href="../4_tpExpositionDonneesSensibles/">
       
       
-        <link rel="next" href="../4_tpExpositionDonneesSensibles/">
+        <link rel="next" href="../5_tpManqueControleAccesFonctionnel/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>TP Violation de Gestion d'authentification et de session 🔐 - Saint Sauveur BTS SIO SLAM</title>
+        <title>5. TP Violation de Gestion d'Authentification et de Session - Saint Sauveur BTS SIO SLAM</title>
       
     
     
@@ -148,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TP Violation de Gestion d'authentification et de session 🔐
+              5. TP Violation de Gestion d'Authentification et de Session
             
           </span>
         </div>
@@ -4587,7 +4587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3_tpExpositionDonneesSensibles.md" class="md-nav__link">
+      <a href="../4_tpExpositionDonneesSensibles/" class="md-nav__link">
         
   
   
@@ -4612,10 +4612,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../4_tpViolationGestionAuthentification.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. TP Violation de Gestion d'Authentification et de Session
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -4631,6 +4658,137 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-rappels-theoriques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Rappels théoriques 🧠
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Rappels théoriques 🧠">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-attaques-liees-a-lauthentification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Attaques liées à l’authentification 🔓
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-authentification-brisee-owasp-a07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Authentification brisée (OWASP A07) 🛑
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-comportement-du-formulaire-dauthentification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Comportement du formulaire d’authentification 🔍
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-interception-des-requetes-avec-burp-suite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Interception des requêtes avec Burp Suite 🛰️
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Interception des requêtes avec Burp Suite 🛰️">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-installation-burpsuite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Installation BurpSuite
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-attaque-par-force-brute-burp-intruder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Attaque par force brute (Burp Intruder) 🚀
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-analyse-de-la-gestion-de-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Analyse de la gestion de session 🕒
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-recommandations-de-securite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 🛡️ Recommandations de sécurité
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
