@@ -6571,10 +6571,12 @@ Les scanners automatisés peuvent détecter les erreurs de configurations. L’u
 <p>🐛 Même une application sans bug peut être compromise si l'environnement qui l'héberge est mal sécurisé.</p>
 <h2 id="2-application-sur-bijoo">2. Application sur Bijoo<a class="headerlink" href="#2-application-sur-bijoo" title="Permanent link">⚓︎</a></h2>
 <h4 id="partie-1">🔍 Partie 1<a class="headerlink" href="#partie-1" title="Permanent link">⚓︎</a></h4>
-<p>•   Inspectez l'URL suivante : http://localhost/breizhsecu/admin/config/  , que voyez-vous ?  Arrivez-vous à ouvrir le fichier qui s'y trouve ? 
-•   Sachant qu'une base de données MySQL s'installe très souvent avec un utilisateur qui a pour accès par défaut root/root ou root et aucun mot de passe, avez-vous pensé à changer les accès par défaut pour mettre le site web en production ? </p>
+<ul>
+<li>Inspectez l'URL suivante : http://localhost/breizhsecu/admin/config/  , que voyez-vous ?  Arrivez-vous à ouvrir le fichier qui s'y trouve ? <br /></li>
+<li>Sachant qu'une base de données MySQL s'installe très souvent avec un utilisateur qui a pour accès par défaut root/root ou root et aucun mot de passe, avez-vous pensé à changer les accès par défaut pour mettre le site web en production ? </li>
+</ul>
 <p>Mais encore : <a href="https://www.google.fr/search?dcr=0&amp;q=intitle%3A%22Index%20of%22">https://www.google.fr/search?dcr=0&amp;q=intitle%3A%22Index%20of%22</a></p>
-<p>🔍 Faites une recherche sur les dernières failles Apache</p>
+<p>🔍 Faites une recherche Web sur les dernières failles Apache</p>
 <details class="info">
 <summary>par exemple</summary>
 <ul>
@@ -6584,14 +6586,16 @@ Les scanners automatisés peuvent détecter les erreurs de configurations. L’u
 </details>
 <details class="warning">
 <summary>Config Apache</summary>
-<p>•   Allez dans le répertoire d'installation de votre serveur Apache local, celui que vous avez installé avec Wamp. Il se trouve dans un répertoire de nom apache, comme ceci : <code>C:\Program Files\wamp64\apache</code><br />
-•   Placez-vous dans le répertoire bin et lancez une invite de commande puis tapez : apache –version<br />
-•   Vous connaitrez ainsi la version d'Apache qui fait tourner votre site, comparez le numéro de version avec la dernière qui se trouve sur le site officiel d'apache https://httpd.apache.org/download.cgi <br />
-•   Vous pouvez consulter la rubrique "Security et official patches" pour vous donner un avant-goût des failles auxquelles vous êtes exposés avec une version inférieure. </p>
-<p>💊 Mesures préventives et curatives : Mettre à jour les composants sur votre serveur, si besoin</p>
+<ul>
+<li>Allez dans le répertoire d'installation de votre serveur Apache local, celui que vous avez installé avec Wamp. Il se trouve dans un répertoire de nom apache, comme ceci : <code>C:\Program Files\wamp64\apache</code><br /></li>
+<li>Placez-vous dans le répertoire bin et lancez une invite de commande puis tapez : apache –version<br /></li>
+<li>Vous connaitrez ainsi la version d'Apache qui fait tourner votre site, comparez le numéro de version avec la dernière qui se trouve sur le site officiel d'apache https://httpd.apache.org/download.cgi <br /></li>
+<li>Vous pouvez consulter la rubrique "Security et official patches" pour vous donner un avant-goût des failles auxquelles vous êtes exposés avec une version inférieure. </li>
+</ul>
+<p>💊 <strong>Mesures préventives et curatives :</strong> Mettre à jour les composants sur votre serveur, si besoin</p>
 </details>
-<details class="question">
-<summary>💊 Mesures préventives et curatives</summary>
+<div class="admonition question">
+<p class="admonition-title">💊 Mesures préventives et curatives</p>
 <p>Attention à vérifier champ statut dans Commande varchar(40)<br /></p>
 <ol>
 <li>Vérifier version apache et MySQL, MAJ si nécessaire</li>
@@ -6600,7 +6604,7 @@ Les scanners automatisés peuvent détecter les erreurs de configurations. L’u
 <li>Mettre à jour admin/config/bdd_config.inc</li>
 <li>Créer un .htacess pour le répertoire admin <a href="https://www.keycdn.com/support/popular-htaccess-examples">tuto</a></li>
 </ol>
-</details>
+</div>
 
 
 

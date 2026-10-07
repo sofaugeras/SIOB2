@@ -6775,8 +6775,8 @@ Voilà la liste des fonctionnalités de l’application que l'on va créer :<br 
 </div>
 <h2 id="11-initialiser-le-projet">1.1 Initialiser le projet<a class="headerlink" href="#11-initialiser-le-projet" title="Permanent link">⚓︎</a></h2>
 <p>La première étape lors d'un projet Laravel est la création de la structure avec une simple ligne de commande, dans notre cas :
-✋ Attention, le projet va être créé dans le dossier todo2024 <strong>dans le dossier courant</strong>.</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>composer create-project --prefer-dist laravel/laravel todo2024 
+✋ Attention, le projet va être créé dans le dossier todo2027 <strong>dans le dossier courant</strong>.</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>composer create-project --prefer-dist laravel/laravel todo2027 
 </code></pre></div>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
@@ -6815,11 +6815,11 @@ La première étape est donc d'éditer le fichier <code>.env</code> pour configu
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Sécurité</p>
-<p><img alt="🚧" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f6a7.svg" title=":construction:" /> Créer une base de données <code>todo2024</code> sous MySQL <br />
+<p><img alt="🚧" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f6a7.svg" title=":construction:" /> Créer une base de données <code>todo2027</code> sous MySQL <br />
 <img alt="💥" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4a5.svg" title=":boom:" /> créer un user de base de données à périmètre restreint pour votre application<br />
 <img alt="↪️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/21aa.svg" title=":arrow_right_hook:" /> Mettre à jour le <code>.env</code>
 <div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">'nouveau_utilisateur'</span><span class="o">@</span><span class="s1">'%'</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">'mot_de_passe'</span><span class="p">;</span>
-<span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">`</span><span class="n">todo2024</span><span class="o">`</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">'nouveau_utilisateur'</span><span class="o">@</span><span class="s1">'%s'</span><span class="p">;</span><span class="w"> </span>
+<span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">`</span><span class="n">todo2027</span><span class="o">`</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">'nouveau_utilisateur'</span><span class="o">@</span><span class="s1">'%s'</span><span class="p">;</span><span class="w"> </span>
 <span class="n">FLUSH</span><span class="w"> </span><span class="k">PRIVILEGES</span>
 </code></pre></div></p>
 </div>
@@ -6836,11 +6836,11 @@ L'ORM utilisé par Laravel est <strong>Eloquent</strong>, il est à la fois puis
 <p>Comme pour la création du projet, la création de la définition de vos table va se faire via une requête dans votre terminal en utilisant Artisan.</p>
 <p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>php artisan make:migration create_todos_table --create=todos
 </code></pre></div>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>INFO  Migration [C:\wamp64\www\todo2024\database\migrations/2023_11_21_084423_create_todos_table.php] created successfully.
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>INFO  Migration [C:\wamp64\www\todo2027\database\migrations/2023_11_21_084423_create_todos_table.php] created successfully.
 </code></pre></div></p>
 <p>L’option <code>--create=todos</code> dans la première méthode permet d’indiquer le nom du modèle de la table à créer.<br />
 La commande vient de créer un nouveau fichier dans le dossier database/migration. Dans mon cas le fichier se nomme :
-/todo2024/database/migrations/2023_11_21_084423_create_todo_table.php</p>
+/todo2027/database/migrations/2023_11_21_084423_create_todo_table.php</p>
 <details class="note">
 <summary>contenu du fichier</summary>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
@@ -6951,15 +6951,15 @@ Ajouter les champs dans la méthode <code>up</code> du fichier.</p>
 <div class="admonition warning">
 <p class="admonition-title">Checklist</p>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox"/> Terminal : <code>C:\wamp64\www\todo2024&gt;</code></li>
-<li class="task-list-item"><input type="checkbox"/> base de données <code>todo2024</code> créée</li>
+<li class="task-list-item"><input type="checkbox"/> Terminal : <code>C:\wamp64\www\todo2027&gt;</code></li>
+<li class="task-list-item"><input type="checkbox"/> base de données <code>todo2027</code> créée</li>
 <li class="task-list-item"><input type="checkbox"/> user base de donnée créé</li>
 <li class="task-list-item"><input type="checkbox"/> .env mis à jour</li>
-<li class="task-list-item"><input type="checkbox"/> métode <code>up</code> de la migration mise à jour</li>
+<li class="task-list-item"><input type="checkbox"/> méthode <code>up</code> de la migration mise à jour</li>
 </ul>
 </div>
 <p>Retour dans la ligne de commande :</p>
-<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>C:\wamp64\www\todo2024&gt;php artisan migrate:fresh  
+<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>C:\wamp64\www\todo2027&gt;php artisan migrate:fresh  
 
   Dropping all tables ..................................................................................................... 146ms DONE
 
@@ -6982,7 +6982,7 @@ Vérifier votre console et votre travail dans phpMyAdmin. </p>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Faites la même chose avec les tables CATEGORIES et CATEGORIES_TODOS
-Sachant que CATEGORISE possède également deux clés étrangères.</p>
+Sachant que CATEGORIES possède également deux clés étrangères.</p>
 <p>CATEGORIE(<u>idcat</u>, libelle)<br />
 CATEGORIES_TODOS (<u>id</u>,<u>idcat</u>)<br /></p>
 </div>
@@ -7041,14 +7041,12 @@ Mais vous avez d'autres commandes à disposition : <br />
 </div>
 <h2 id="13-le-modele">1.3 Le modèle<a class="headerlink" href="#13-le-modele" title="Permanent link">⚓︎</a></h2>
 <p>Maintenant que nous avons fait le script de création / migration, nous allons définir notre <strong>model</strong>.</p>
-<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>$ php artisan make:model Todos
+<p><div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>php artisan make:model Todos
 </code></pre></div>
 <img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> La commande va créer le fichier <code>Todos.php</code> dans le dossier <code>app/</code>.</p>
-<p>Ajouter dans la class <code>Todos.php</code> :</p>
-<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```php
-protected $fillable = ['texte', 'termine', 'important'];
-```
-</code></pre></div>
+<p>Ajouter dans la class <code>Todos.php</code> :
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">protected $fillable = ['texte', 'termine', 'important'];</span>
+</code></pre></div></p>
 <p>⚠️ Cette propriété est optionnelle, elle permet vous autorisera plus tard à faire du « mass-assignment » c'est à dire à créer un objet « Todos » depuis par exemple le POST HTTP.<br /></p>
 <div class="admonition note">
 <p class="admonition-title">A faire</p>

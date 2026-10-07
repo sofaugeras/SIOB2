@@ -7411,7 +7411,7 @@ La clause <code>WHERE</code> contiendra les éventuelles restrictions. <br />
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">VOL</span>
 <span class="k">ON</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">.</span><span class="n">numPilote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">numPilote</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">numVol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'AF7684'</span><span class="w"> </span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">numVol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'AF 7684'</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 </div>
 </div>
@@ -7530,7 +7530,7 @@ La clause <code>WHERE</code> contiendra les éventuelles restrictions. <br />
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomPilote</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">,</span><span class="n">VOL</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">PILOTE</span><span class="p">.</span><span class="n">numPilote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VOL</span><span class="p">.</span><span class="n">numPilote</span><span class="w"> </span>
-<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">numVol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'AF7684'</span><span class="p">;</span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">numVol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'AF 7684'</span><span class="p">;</span>
 </code></pre></div>
 </div>
 </div>
@@ -7591,9 +7591,19 @@ Les critères de <strong>tri</strong> sont indiqués dans la clause ORDER BY don
 </thead>
 <tbody>
 <tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">A319</td>
+<td style="text-align: center;">120</td>
+</tr>
+<tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">A340-300</td>
 <td style="text-align: center;">295</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">ATR42/72</td>
+<td style="text-align: center;">50</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
@@ -7604,16 +7614,6 @@ Les critères de <strong>tri</strong> sont indiqués dans la clause ORDER BY don
 <td style="text-align: center;">3</td>
 <td style="text-align: center;">B747-400</td>
 <td style="text-align: center;">420</td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">A319</td>
-<td style="text-align: center;">120</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">ATR42/72</td>
-<td style="text-align: center;">50</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
