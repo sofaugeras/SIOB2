@@ -29,7 +29,7 @@
     
     
       
-        <title>Manipulation des données - Saint Sauveur BTS SIO SLAM</title>
+        <title>3.1 Descriptions des données - Saint Sauveur BTS SIO SLAM</title>
       
     
     
@@ -114,7 +114,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#langage-de-description-des-donnees" class="md-skip">
+        <a href="#31-langage-de-description-des-donnees" class="md-skip">
           Aller au contenu
         </a>
       
@@ -148,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Manipulation des données
+              3.1 Descriptions des données
             
           </span>
         </div>
@@ -956,7 +956,7 @@
   <span class="md-ellipsis">
     
   
-    Manipulation des données
+    3.1 Descriptions des données
   
 
     
@@ -974,7 +974,7 @@
   <span class="md-ellipsis">
     
   
-    Manipulation des données
+    3.1 Descriptions des données
   
 
     
@@ -1194,7 +1194,7 @@
   <span class="md-ellipsis">
     
   
-    Gestion des permissions
+    3.2 Gestion des permissions
   
 
     
@@ -3636,6 +3636,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../4_Laravel/4.2_toDo/4.2.2_Ajout_categorie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Gestion des catégories
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../4_Laravel/4.2_toDo/4.2.2_Ajout_cat%C3%A9gorie/" class="md-nav__link">
         
   
@@ -4606,7 +4634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybersecurite/6.1_cours/9_auditCode/" class="md-nav__link">
+      <a href="../../../6_Cybersecurite/6.1_cours/91_auditCode/" class="md-nav__link">
         
   
   
@@ -4634,7 +4662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6_Cybersecurite/6.1_cours/9_exercices/" class="md-nav__link">
+      <a href="../../../6_Cybersecurite/6.1_cours/92_exercices/" class="md-nav__link">
         
   
   
@@ -4642,6 +4670,34 @@
     
   
     10. Exercices OWASP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6_Cybersecurite/6.1_cours/93_rgpd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Le RGPD : synthèse 🇪🇺🔐
   
 
     
@@ -6618,7 +6674,7 @@
   
 
 
-<h1 id="langage-de-description-des-donnees">Langage de description des données<a class="headerlink" href="#langage-de-description-des-donnees" title="Permanent link">⚓︎</a></h1>
+<h1 id="31-langage-de-description-des-donnees">3.1 Langage de description des données<a class="headerlink" href="#31-langage-de-description-des-donnees" title="Permanent link">⚓︎</a></h1>
 <h2 id="1-introduction">1. Introduction<a class="headerlink" href="#1-introduction" title="Permanent link">⚓︎</a></h2>
 <p>Dans le précédant chapitre, nous avons étudié les commandes <code>SQL</code> qui permettent d’interroger et de mettre à jour une base de données. Ces commandes appartiennent au langage de manipulation de données (LMD). Dans ce chapitre, nous étudierons le <strong>langage de description de données</strong> (LDD). Ce langage représente l’ensemble des instructions <code>SQL</code> qui permettent la création et la modification de la structure de bases de données. <br />
 La conception d’une base de données, comme tout objet technique, nécessite une phase de conception. Concernant les données, cette étape consiste à modéliser à l’aide de schémas le système d’information étudié. De ce schéma on déduit le schéma relationnel que nous avons abordé dans les précédents chapitres.</p>
@@ -6886,7 +6942,7 @@ Ainsi une colonne déclarée en <code>VARCHAR(30)</code> nécessitera au maximum
 <div class="admonition tip">
 <p class="admonition-title">Exemple fondateur <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2764.svg" title=":heart:" /> pour la table Lecteur</p>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Lecteur</span><span class="p">(</span>
-<span class="n">NumLecteur</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w"> </span>
+<span class="n">NumLecteur</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span>
 <span class="n">NomLecteur</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w"> </span>
 <span class="n">PrenomLecteur</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">),</span><span class="w"> </span>
 <span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">lecteur_pk</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">NumLecteur</span><span class="p">)</span><span class="w"> </span>
@@ -6896,7 +6952,7 @@ Ainsi une colonne déclarée en <code>VARCHAR(30)</code> nécessitera au maximum
 <details class="question">
 <summary>Donnez la commande SQL de création de la table en utilisant l’autre syntaxe pour préciser la clé primaire</summary>
 <div class="language-SQL highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">OUVRAGE</span><span class="w"> </span><span class="p">(</span>
-<span class="w">  </span><span class="n">numouvrage</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">numouvrage</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
 <span class="w">  </span><span class="n">titreouvrage</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="n">anneeparution</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="p">)</span><span class="w"> </span><span class="p">;</span>

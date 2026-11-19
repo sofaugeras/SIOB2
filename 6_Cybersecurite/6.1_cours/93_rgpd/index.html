@@ -12,13 +12,13 @@
         <meta name="author" content="Sophie FAUGERAS">
       
       
-        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/6_Cybersecurite/6.1_cours/9_auditCode/">
+        <link rel="canonical" href="https://github.com/sofaugeras/SIOB2/6_Cybersecurite/6.1_cours/93_rgpd/">
       
       
-        <link rel="prev" href="../8_pentest/">
+        <link rel="prev" href="../92_exercices/">
       
       
-        <link rel="next" href="../9_exercices/">
+        <link rel="next" href="../../6.2_TP/0_tpOwasp/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>9. Audit de code et analyse de qualité logicielle 👮‍♀️ - Saint Sauveur BTS SIO SLAM</title>
+        <title>11. Le RGPD : synthèse 🇪🇺🔐 - Saint Sauveur BTS SIO SLAM</title>
       
     
     
@@ -114,7 +114,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#9-audit-de-code-et-analyse-de-qualite-logicielle" class="md-skip">
+        <a href="#11-le-rgpd-synthese" class="md-skip">
           Aller au contenu
         </a>
       
@@ -148,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              9. Audit de code et analyse de qualité logicielle 👮‍♀️
+              11. Le RGPD : synthèse 🇪🇺🔐
             
           </span>
         </div>
@@ -944,7 +944,7 @@
   <span class="md-ellipsis">
     
   
-    Manipulation des données
+    3.1 Descriptions des données
   
 
     
@@ -972,7 +972,7 @@
   <span class="md-ellipsis">
     
   
-    Gestion des permissions
+    3.2 Gestion des permissions
   
 
     
@@ -3414,6 +3414,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../4_Laravel/4.2_toDo/4.2.2_Ajout_categorie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Gestion des catégories
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../4_Laravel/4.2_toDo/4.2.2_Ajout_cat%C3%A9gorie/" class="md-nav__link">
         
   
@@ -4384,6 +4412,62 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../91_auditCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Audit de code et analyse de qualité logicielle 👮‍♀️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../92_exercices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Exercices OWASP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -4403,7 +4487,7 @@
   <span class="md-ellipsis">
     
   
-    9. Audit de code et analyse de qualité logicielle 👮‍♀️
+    11. Le RGPD : synthèse 🇪🇺🔐
   
 
     
@@ -4421,7 +4505,7 @@
   <span class="md-ellipsis">
     
   
-    9. Audit de code et analyse de qualité logicielle 👮‍♀️
+    11. Le RGPD : synthèse 🇪🇺🔐
   
 
     
@@ -4447,22 +4531,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-quest-ce-quun-audit-de-code" class="md-nav__link">
+  <a href="#1-le-rgpd-en-bref" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Qu’est-ce qu’un audit de code ?
+        1. Le RGPD en bref
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Qu’est-ce qu’un audit de code ?">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-la-donnee-a-caractere-personnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. La donnée à caractère personnel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. La donnée à caractère personnel">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#definition" class="md-nav__link">
+  <a href="#21-les-trois-criteres-a-retenir" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📖 Définition
+        2.1 Les trois critères à retenir
       
     </span>
   </a>
@@ -4470,10 +4565,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#audit-manuel-vs-audit-automatise" class="md-nav__link">
+  <a href="#22-les-pieges-classiques" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧠 Audit manuel vs audit automatisé
+        2.2 Les pièges classiques
       
     </span>
   </a>
@@ -4486,22 +4581,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-les-criteres-de-qualite-logicielle" class="md-nav__link">
+  <a href="#3-les-donnees-sensibles" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Les critères de qualité logicielle
+        3. Les données sensibles
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Les critères de qualité logicielle">
+    <nav class="md-nav" aria-label="3. Les données sensibles">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#lisibilite" class="md-nav__link">
+  <a href="#31-le-principe-interdiction-sauf-exceptions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 Lisibilité
+        3.1 Le principe : interdiction, sauf exceptions
       
     </span>
   </a>
@@ -4509,10 +4604,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#maintenabilite" class="md-nav__link">
+  <a href="#32-les-donnees-a-part-en-france" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏗 Maintenabilité
+        3.2 Les données « à part » en France
       
     </span>
   </a>
@@ -4520,21 +4615,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#testabilite" class="md-nav__link">
+  <a href="#33-methode-pour-reperer-les-donnees-sensibles-dans-un-schema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧪 Testabilité
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#securite" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔐 Sécurité
+        3.3 Méthode pour repérer les données sensibles dans un schéma
       
     </span>
   </a>
@@ -4547,33 +4631,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-la-dette-technique" class="md-nav__link">
+  <a href="#4-le-traitement-de-donnees" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. La dette technique
+        4. Le traitement de données
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-outils-danalyse-couramment-utilises" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Outils d’analyse couramment utilisés
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Outils d’analyse couramment utilisés">
+    <nav class="md-nav" aria-label="4. Le traitement de données">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#analyse-statique" class="md-nav__link">
+  <a href="#41-les-acteurs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔍 Analyse statique
+        4.1 Les acteurs
       
     </span>
   </a>
@@ -4581,10 +4654,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#outils-de-linting-et-de-formatage" class="md-nav__link">
+  <a href="#42-les-principes-article-5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ✏️ Outils de linting et de formatage
+        4.2 Les principes (article 5)
       
     </span>
   </a>
@@ -4592,10 +4665,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#tests-automatises" class="md-nav__link">
+  <a href="#43-la-base-legale-article-6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧪 Tests automatisés
+        4.3 La base légale (article 6)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-les-deux-registres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Les deux registres
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-la-protection-des-la-conception-et-laipd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 La protection dès la conception et l'AIPD
       
     </span>
   </a>
@@ -4608,10 +4703,188 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-indicateurs-de-qualite-kpis" class="md-nav__link">
+  <a href="#5-la-securite-des-donnees-article-32" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Indicateurs de qualité (KPIs)
+        5. La sécurité des données (article 32)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. La sécurité des données (article 32)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-contre-quoi-protege-le-chiffrement-en-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Contre quoi protège le chiffrement en base ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-chiffrer-ou-hacher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Chiffrer ou hacher ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-la-journalisation-tracabilite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 La journalisation (traçabilité)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-les-droits-des-personnes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Les droits des personnes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Les droits des personnes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-les-droits-articles-13-a-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Les droits (articles 13 à 22)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-les-regles-de-traitement-des-demandes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Les règles de traitement des demandes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-la-conservation-des-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. La conservation des données
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. La conservation des données">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-le-cycle-de-vie-des-donnees-rappel-du-cours-sur-larchivage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Le cycle de vie des données (rappel du cours sur l'archivage)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-quelques-durees-de-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Quelques durées de référence
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-la-violation-de-donnees-personnelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. La violation de données personnelles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. La violation de données personnelles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-les-obligations-documenter-notifier-informer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Les obligations : « documenter, notifier, informer »
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-conserver-les-preuves" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Conserver les preuves
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-arbre-de-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Arbre de décision
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-fiche-reflexe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Fiche réflexe 📝
       
     </span>
   </a>
@@ -4619,21 +4892,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-audit-de-code-et-pratique-professionnelle" class="md-nav__link">
+  <a href="#10-qcm" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Audit de code et pratique professionnelle
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🏁 Conclusion
+        10. QCM ✅
       
     </span>
   </a>
@@ -4644,34 +4906,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../9_exercices/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    10. Exercices OWASP
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -6640,208 +6874,1453 @@
   
 
 
-<h1 id="9-audit-de-code-et-analyse-de-qualite-logicielle">9. Audit de code et analyse de qualité logicielle 👮‍♀️<a class="headerlink" href="#9-audit-de-code-et-analyse-de-qualite-logicielle" title="Permanent link">⚓︎</a></h1>
+<h1 id="11-le-rgpd-synthese">11. Le RGPD : synthèse 🇪🇺🔐<a class="headerlink" href="#11-le-rgpd-synthese" title="Permanent link">⚓︎</a></h1>
 <div class="admonition info">
-<p class="admonition-title">Compétences Cyber SLAM</p>
-<p><strong>Activité B3.5</strong>. Cybersécurisation d’une solution applicative et de son développement</p>
+<p class="admonition-title">Sources</p>
+<ul>
+<li><a href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32016R0679">Règlement (UE) 2016/679 – texte consolidé (EUR-Lex)</a></li>
+<li><a href="https://www.cnil.fr/fr/definition/donnee-sensible">CNIL : Les données sensibles</a></li>
+<li><a href="https://www.cnil.fr/fr/les-droits-pour-maitriser-vos-donnees-personnelles">CNIL : Les droits pour maîtriser vos données personnelles</a></li>
+<li><a href="https://www.cnil.fr/fr/passer-laction/les-durees-de-conservation-des-donnees">CNIL : Les durées de conservation des données</a></li>
+<li><a href="https://www.cnil.fr/fr/notifier-une-violation-de-donnees-personnelles">CNIL : Notifier une violation de données personnelles</a></li>
+<li><a href="https://www.cnil.fr/sites/cnil/files/atoms/files/recommandation_-_journalisation.pdf">CNIL : Recommandation relative à la journalisation (délibération n° 2021-122)</a></li>
+</ul>
+<p>Synthèse de cours généré par IA (claude nov. 2026) à l'aide des etudes de cas BTS de 2024 à 2026</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Compétences</p>
+<p>B3.1 Protéger les données à caractère personnel</p>
+<blockquote>
+<ul>
+<li>Recenser les traitements sur les données à caractère personnel au sein de l'organisation</li>
+<li>Identifier les risques liés à la collecte, au traitement, au stockage et à la diffusion des données à caractère personnel</li>
+<li>Appliquer la réglementation en matière de collecte, de traitement et de conservation des données à caractère personnel</li>
+<li>Sensibiliser les utilisateurs à la protection des données à caractère personnel</li>
+</ul>
+</blockquote>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Objectifs du chapitre</p>
+<p>À la fin de ce chapitre, vous devez savoir :</p>
+<ol>
+<li><strong>repérer</strong> les données personnelles et les données sensibles dans un schéma de base de données ;</li>
+<li><strong>identifier</strong> les acteurs, la finalité et la base légale d'un traitement ;</li>
+<li><strong>citer</strong> les droits des personnes et le délai de réponse ;</li>
+<li><strong>justifier</strong> une durée de conservation ;</li>
+<li><strong>choisir</strong> une mesure de sécurité adaptée (hachage, chiffrement, journalisation) ;</li>
+<li><strong>appliquer</strong> la procédure en cas de violation de données : qui prévenir, où la consigner, dans quel délai.</li>
+</ol>
+</div>
+<h2 id="1-le-rgpd-en-bref">1. Le RGPD en bref<a class="headerlink" href="#1-le-rgpd-en-bref" title="Permanent link">⚓︎</a></h2>
+<p>Le <strong>Règlement Général sur la Protection des Données</strong> (règlement UE 2016/679) est entré en application le <strong>25 mai 2018</strong>. C'est un <strong>règlement</strong> européen : il s'applique directement dans tous les États membres, sans loi de transposition. En France, il complète la loi <strong>Informatique et Libertés</strong> de 1978.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Question</th>
+<th style="text-align: left;">Réponse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Qui est concerné ?</strong></td>
+<td style="text-align: left;">Toute organisation (entreprise, association, administration) qui traite des données personnelles, quelle que soit sa taille</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Qui n'est pas concerné ?</strong></td>
+<td style="text-align: left;">Un particulier pour un usage <strong>strictement personnel ou domestique</strong> (son carnet d'adresses, ses photos de famille)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Où ?</strong></td>
+<td style="text-align: left;">Organisations établies dans l'UE <strong>ou</strong> qui ciblent des personnes situées dans l'UE (ex. : un site américain qui vend en France)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Qui contrôle ?</strong></td>
+<td style="text-align: left;">En France, la <strong>CNIL</strong> (Commission Nationale de l'Informatique et des Libertés)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Quelle logique ?</strong></td>
+<td style="text-align: left;"><strong>Responsabilisation</strong> (<em>accountability</em>) : plus de déclaration préalable à la CNIL, mais l'organisation doit être capable de <strong>prouver</strong> sa conformité à tout moment (registre, documentation, mesures de sécurité)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sanctions ?</strong></td>
+<td style="text-align: left;">Jusqu'à <strong>20 M€ ou 4 % du chiffre d'affaires annuel mondial</strong> (le montant le plus élevé). S'y ajoutent les sanctions pénales (art. 226-17 du code pénal : 5 ans d'emprisonnement et 300 000 € d'amende pour défaut de sécurité)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Veille réglementaire – l'Omnibus numérique</p>
+<p>La Commission européenne a proposé en novembre 2025 un « Omnibus numérique » qui modifie plusieurs points du RGPD. <strong>Il n'est pas adopté</strong> : le 21 octobre 2026, le Conseil de l'UE a seulement arrêté sa position de négociation. Celle-ci <strong>conserve la définition actuelle de la donnée personnelle</strong> mais allège notamment la notification des violations. <strong>Pour l'examen, on applique le RGPD actuel.</strong></p>
+</div>
+<details class="question">
+<summary>Exercice 1 – Le RGPD s'applique-t-il ?</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Pour chaque situation, indiquez si le RGPD s'applique et justifiez.</p>
+<ol>
+<li>Une association de randonnée de 40 membres tient un tableur avec le nom, le téléphone et l'adresse mail de ses adhérents.</li>
+<li>Lucas garde dans son téléphone les numéros de ses amis.</li>
+<li>Une boutique en ligne installée au Canada livre des vêtements dans toute l'Europe et propose son site en français.</li>
+<li>Une mairie publie le nombre total de naissances de l'année dans son bulletin municipal.</li>
+<li>Une start-up de 3 salariés développe une application de covoiturage.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Oui</strong> : une association est une organisation ; la taille ne compte pas.</li>
+<li><strong>Non</strong> : usage strictement personnel / domestique.</li>
+<li><strong>Oui</strong> : elle cible des personnes situées dans l'UE.</li>
+<li><strong>Non</strong> : un chiffre agrégé ne permet d'identifier personne (donnée anonyme).</li>
+<li><strong>Oui</strong> : elle traite les données de ses utilisateurs, quelle que soit sa taille.</li>
+</ol>
+</div>
+</div>
+</div>
+</details>
+<h2 id="2-la-donnee-a-caractere-personnel">2. La donnée à caractère personnel<a class="headerlink" href="#2-la-donnee-a-caractere-personnel" title="Permanent link">⚓︎</a></h2>
+<details class="warning">
+<summary>Définition (article 4.1)</summary>
+<blockquote>
+<p><strong>Toute information se rapportant à une personne physique identifiée ou identifiable.</strong></p>
+</blockquote>
+<p>Une personne est <strong>identifiable</strong> si on peut la reconnaître :</p>
+<ul>
+<li><strong>directement</strong> : nom, prénom, photo, voix ;</li>
+<li><strong>indirectement</strong> : numéro de sécurité sociale, n° client, matricule, adresse IP, plaque d'immatriculation, identifiant de connexion, ou <strong>un croisement</strong> d'informations (ex. : « la seule femme développeuse de l'agence de Redon »).</li>
+</ul>
+</details>
+<h3 id="21-les-trois-criteres-a-retenir">2.1 Les trois critères à retenir<a class="headerlink" href="#21-les-trois-criteres-a-retenir" title="Permanent link">⚓︎</a></h3>
+<p>Pour dire qu'une donnée est personnelle, vérifier :</p>
+<ol>
+<li>elle concerne une <strong>personne physique</strong> (un être humain vivant, pas une entreprise) ;</li>
+<li>cette personne est <strong>identifiée ou identifiable</strong>, directement ou indirectement ;</li>
+<li>c'est <strong>n'importe quelle information</strong> à son sujet, quel que soit le support (texte, image, son, log…).</li>
+</ol>
+<h3 id="22-les-pieges-classiques">2.2 Les pièges classiques<a class="headerlink" href="#22-les-pieges-classiques" title="Permanent link">⚓︎</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Donnée</th>
+<th style="text-align: left;">Personnelle ?</th>
+<th style="text-align: left;">Pourquoi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Raison sociale, n° SIRET</td>
+<td style="text-align: left;">❌ Non</td>
+<td style="text-align: left;">Concerne une <strong>personne morale</strong> (sauf entreprise individuelle portant le nom de l'exploitant)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Nom et prénom du dirigeant d'une société</td>
+<td style="text-align: left;">✅ Oui</td>
+<td style="text-align: left;">C'est une personne physique</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>contact@entreprise.fr</code></td>
+<td style="text-align: left;">❌ Non (en général)</td>
+<td style="text-align: left;">Adresse générique, non nominative</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>jean.dupont@entreprise.fr</code></td>
+<td style="text-align: left;">✅ Oui</td>
+<td style="text-align: left;">Adresse nominative, même professionnelle</td>
+</tr>
+<tr>
+<td style="text-align: left;">Adresse IP, adresse MAC</td>
+<td style="text-align: left;">✅ Oui</td>
+<td style="text-align: left;">Identifiant indirect, rattachable à un abonné ou à un appareil attribué</td>
+</tr>
+<tr>
+<td style="text-align: left;">Plaque d'immatriculation</td>
+<td style="text-align: left;">✅ Oui</td>
+<td style="text-align: left;">Rattachable au propriétaire</td>
+</tr>
+<tr>
+<td style="text-align: left;">Un identifiant technique (id, jeton, clé de session…)</td>
+<td style="text-align: left;">✅ Oui, s'il est <strong>relié</strong> à une personne</td>
+<td style="text-align: left;">Par jointure ou rapprochement, il permet de retrouver la personne</td>
+</tr>
+<tr>
+<td style="text-align: left;">Un fichier de logs</td>
+<td style="text-align: left;">✅ Oui</td>
+<td style="text-align: left;">Il contient l'identifiant de l'auteur des actions : <strong>les logs sont eux-mêmes un traitement de données personnelles</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Donnée <strong>pseudonymisée</strong></td>
+<td style="text-align: left;">✅ Oui</td>
+<td style="text-align: left;">La ré-identification reste possible avec la table de correspondance (clé)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Donnée <strong>anonymisée</strong></td>
+<td style="text-align: left;">❌ Non</td>
+<td style="text-align: left;">La ré-identification est <strong>impossible et irréversible</strong> : le RGPD ne s'applique plus</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition warning">
-<p class="admonition-title">Compétences visées</p>
+<p class="admonition-title">Pseudonymisation ≠ anonymisation</p>
 <ul>
-<li>Analyser et corriger les vulnérabilités détectées à l’issue d’un audit de sécurité d’une application web</li>
-<li>Participer à la vérification des éléments contribuant à la sûreté d’un développement informatique</li>
-<li>Prendre en compte la sécurité dans un projet de développement d’une solution applicative</li>
-<li>Mettre en œuvre et vérifier la conformité d’une solution applicative et de son développement à un référentiel, une - norme ou un standard de sécurité</li>
+<li><strong>Pseudonymiser</strong>, c'est remplacer l'identité par un pseudonyme (un code, un identifiant aléatoire), en conservant ailleurs la table de correspondance. La correspondance existe toujours → <strong>la donnée reste personnelle</strong>. C'est une <strong>mesure de sécurité</strong> citée par l'article 32 : on sépare par exemple les données d'identification et les données détaillées dans deux bases distinctes.</li>
+<li><strong>Anonymiser</strong>, c'est rendre la ré-identification impossible pour tout le monde, définitivement (agrégation, statistiques, suppression des identifiants et des attributs trop précis) → <strong>sortie du RGPD</strong>.</li>
 </ul>
 </div>
+<details class="question">
+<summary>Exercice 2 – Repérer les données personnelles d'une auto-école</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Une auto-école utilise la base de données suivante :</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>AutoEcole (siret, raisonSociale, adresse, telephoneAccueil, nomGerant)
+Eleve (numDossier, nom, prenom, dateNaissance, adresseMel, telephone, numNEPH)
+Moniteur (matricule, nom, prenom, telephonePro, numAutorisation)
+Vehicule (immatriculation, marque, modele, boiteAuto, idMoniteurAttitre)
+Lecon (id, dateHeure, numDossier, matricule, immatriculation, appreciation)
+StatMensuelle (mois, nbLecons, tauxReussite)
+</code></pre></div>
+<ol>
+<li>Listez les données à caractère personnel, table par table.</li>
+<li>Indiquez les tables qui ne contiennent aucune donnée personnelle et expliquez pourquoi.</li>
+<li>La colonne <code>appreciation</code> contient des commentaires du moniteur (« manque de confiance », « bonne anticipation »). Est-ce une donnée personnelle ? Justifiez.</li>
+</ol>
 </div>
-<div class="admonition info">
-<p class="admonition-title">🎯 Objectifs du chapitre</p>
+<div class="tabbed-block">
+<ol>
+<li>
 <ul>
-<li>Comprendre ce qu’est un audit de code.</li>
-<li>Expliquer la différence entre audit manuel et analyse automatisée.</li>
-<li>Identifier les critères de qualité d’un logiciel.</li>
-<li>Utiliser des outils courants d’analyse statique et dynamique.</li>
-<li>Interpréter les résultats d’un outil d’audit.</li>
+<li><code>AutoEcole</code> : <strong>nomGerant</strong> (personne physique).</li>
+<li><code>Eleve</code> : <strong>toutes les colonnes</strong> (numDossier et numNEPH sont des identifiants indirects).</li>
+<li><code>Moniteur</code> : <strong>toutes les colonnes</strong>, y compris le téléphone professionnel s'il est nominatif.</li>
+<li><code>Vehicule</code> : <strong>immatriculation</strong> et <strong>idMoniteurAttitre</strong> permettent de remonter à une personne.</li>
+<li><code>Lecon</code> : <strong>toutes</strong> les colonnes sont liées à un élève et un moniteur identifiables.</li>
+</ul>
+</li>
+<li><code>StatMensuelle</code> : données <strong>agrégées</strong>, aucune personne n'est identifiable. Les autres colonnes d'<code>AutoEcole</code> (siret, raisonSociale…) concernent une personne morale.</li>
+<li><strong>Oui</strong> : c'est une information se rapportant à un élève identifié (via numDossier). Une appréciation, même subjective, est une donnée personnelle ; l'élève peut d'ailleurs y accéder (droit d'accès).</li>
+</ol>
+</div>
+</div>
+</div>
+</details>
+<h2 id="3-les-donnees-sensibles">3. Les données sensibles<a class="headerlink" href="#3-les-donnees-sensibles" title="Permanent link">⚓︎</a></h2>
+<details class="warning">
+<summary>Définition (article 9) – catégories particulières de données</summary>
+<p>Ce sont des données personnelles qui révèlent :</p>
+<ul>
+<li>l'<strong>origine raciale ou ethnique</strong> ;</li>
+<li>les <strong>opinions politiques</strong> ;</li>
+<li>les <strong>convictions religieuses ou philosophiques</strong> ;</li>
+<li>l'<strong>appartenance syndicale</strong> ;</li>
+<li>les <strong>données génétiques</strong> ;</li>
+<li>les <strong>données biométriques</strong> servant à identifier une personne de manière unique (empreinte digitale, <strong>reconnaissance faciale</strong>, iris) ;</li>
+<li>les <strong>données de santé</strong> (physique ou mentale) ;</li>
+<li>la <strong>vie sexuelle ou l'orientation sexuelle</strong>.</li>
+</ul>
+<p>⚠️ Une donnée sensible est <strong>toujours</strong> une donnée personnelle ; l'inverse est faux.</p>
+</details>
+<h3 id="31-le-principe-interdiction-sauf-exceptions">3.1 Le principe : interdiction, sauf exceptions<a class="headerlink" href="#31-le-principe-interdiction-sauf-exceptions" title="Permanent link">⚓︎</a></h3>
+<p>Le traitement des données sensibles est <strong>interdit par principe</strong>. Il n'est possible que dans des cas limités, notamment :</p>
+<ul>
+<li><strong>consentement explicite</strong> de la personne ;</li>
+<li>obligations en matière de <strong>droit du travail</strong> et de protection sociale (ex. : médecine du travail) ;</li>
+<li>sauvegarde des <strong>intérêts vitaux</strong> de la personne ;</li>
+<li><strong>médecine</strong> préventive, diagnostic, soins, par des professionnels soumis au secret ;</li>
+<li>motif d'<strong>intérêt public important</strong> prévu par la loi.</li>
+</ul>
+<p>Quand le traitement est autorisé, il exige un <strong>niveau de protection renforcé</strong> : chiffrement, pseudonymisation, accès très restreints, journalisation, et souvent une <strong>AIPD</strong> (voir 4.5).</p>
+<div class="admonition warning">
+<p class="admonition-title">Biométrie et mot de passe : la différence juridique</p>
+<p>Un mot de passe est une donnée personnelle <strong>ordinaire</strong> : on peut le changer, le RGPD n'interdit pas de le traiter.
+Une empreinte digitale ou un gabarit de visage utilisé pour s'authentifier est une <strong>donnée biométrique</strong>, donc <strong>sensible</strong> : son usage est <strong>interdit par principe</strong>, sauf exception (le plus souvent le <strong>consentement explicite</strong>, avec une alternative proposée à ceux qui refusent). Elle ne peut ni être changée en cas de fuite, ni être prêtée à quelqu'un d'autre.</p>
+</div>
+<h3 id="32-les-donnees-a-part-en-france">3.2 Les données « à part » en France<a class="headerlink" href="#32-les-donnees-a-part-en-france" title="Permanent link">⚓︎</a></h3>
+<p>Sans être des données sensibles au sens strict de l'article 9, certaines données sont très encadrées :</p>
+<ul>
+<li>les données relatives aux <strong>infractions et condamnations</strong> pénales (article 10) ;</li>
+<li>le <strong>numéro de sécurité sociale (NIR)</strong>, dont l'usage est limité par la loi (santé, social, paie).</li>
+</ul>
+<h3 id="33-methode-pour-reperer-les-donnees-sensibles-dans-un-schema">3.3 Méthode pour repérer les données sensibles dans un schéma<a class="headerlink" href="#33-methode-pour-reperer-les-donnees-sensibles-dans-un-schema" title="Permanent link">⚓︎</a></h3>
+<ol>
+<li>Lister <strong>toutes</strong> les colonnes qui se rapportent à une personne physique → données personnelles.</li>
+<li>Parmi elles, cocher celles qui entrent dans <strong>une des 8 catégories</strong> de l'article 9 → données sensibles.</li>
+<li>Raisonner sur <strong>ce que la donnée révèle</strong>, pas seulement sur son nom : un poids, une tension artérielle, un traitement médicamenteux, une date de vaccination révèlent l'<strong>état de santé</strong>.</li>
+<li>Penser aux <strong>déductions par croisement</strong> : une donnée anodine peut, combinée à d'autres, révéler une donnée sensible (ex. : un menu « sans porc » choisi chaque jour à la cantine peut révéler une conviction religieuse).</li>
+<li>Lire le <strong>contexte</strong> : une information publiquement affichée ou nécessaire au service peut être traitée différemment ; justifiez toujours votre choix.</li>
+</ol>
+<details class="question">
+<summary>Exercice 3 – Les données sensibles d'une salle de sport</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label><label for="__tabbed_3_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Une salle de sport utilise l'application suivante :</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Adherent (id, nom, prenom, dateNaissance, sexe, adresseMel, telephone, mutuelle)
+FicheSante (idAdherent, taille, poids, contreIndications, certificatMedicalPdf)
+Acces (idAdherent, gabaritEmpreinte)
+Coaching (idAdherent, objectif, frequenceCardiaqueRepos)
+Reservation (idAdherent, idCours, dateHeure)
+Cours (id, libelle, salle, coach)
+</code></pre></div>
+<ol>
+<li>Listez les données sensibles et indiquez la catégorie de l'article 9 concernée.</li>
+<li>Le gérant veut ouvrir les portes par empreinte digitale. Quelle condition doit-il respecter ? Que doit-il proposer en plus ?</li>
+<li>Le cours « Yoga prénatal » apparaît dans les réservations. Pourquoi cette information mérite-t-elle une attention particulière ?</li>
+<li>Proposez deux mesures de protection renforcée pour la table <code>FicheSante</code>.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>
+<ul>
+<li><strong>Santé</strong> : taille, poids, contreIndications, certificatMedicalPdf, frequenceCardiaqueRepos (et l'<code>objectif</code> s'il est médical, ex. « rééducation du genou »).</li>
+<li><strong>Biométrie</strong> : gabaritEmpreinte.</li>
+<li><code>sexe</code>, <code>mutuelle</code> : données personnelles, non sensibles en elles-mêmes.</li>
+</ul>
+</li>
+<li>Le <strong>consentement explicite</strong> de chaque adhérent, et une <strong>alternative</strong> (badge, code) pour ceux qui refusent. Le gabarit devrait idéalement rester sur un support détenu par l'adhérent (carte) plutôt qu'en base centrale.</li>
+<li>Par <strong>déduction</strong>, elle révèle une grossesse, donc une donnée de <strong>santé</strong>.</li>
+<li>Exemples : <strong>chiffrement</strong> des colonnes, <strong>accès restreint</strong> au seul personnel habilité (coachs diplômés), <strong>journalisation</strong> des consultations, <strong>pseudonymisation</strong> (table séparée reliée par un identifiant aléatoire).</li>
+</ol>
+</div>
+</div>
+</div>
+</details>
+<h2 id="4-le-traitement-de-donnees">4. Le traitement de données<a class="headerlink" href="#4-le-traitement-de-donnees" title="Permanent link">⚓︎</a></h2>
+<details class="warning">
+<summary>Définition (article 4.2)</summary>
+<p>Un <strong>traitement</strong> est <strong>toute opération</strong> sur des données personnelles, automatisée ou non : collecte, enregistrement, organisation, conservation, modification, consultation, utilisation, communication, rapprochement, <strong>effacement ou destruction</strong>.</p>
+<p>👉 Un simple <code>SELECT</code> sur une table clients est un traitement. Un tableur sur un poste de travail aussi.</p>
+<p>Un traitement se définit avant tout par sa <strong>finalité</strong> (son objectif) : « gestion des contrats clients », « gestion de la paie », « traitement des demandes d'exercice des droits »…</p>
+</details>
+<h3 id="41-les-acteurs">4.1 Les acteurs<a class="headerlink" href="#41-les-acteurs" title="Permanent link">⚓︎</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Acteur</th>
+<th style="text-align: left;">Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Personne concernée</strong></td>
+<td style="text-align: left;">La personne dont on traite les données</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Responsable de traitement</strong></td>
+<td style="text-align: left;">Détermine la <strong>finalité</strong> et les <strong>moyens</strong> du traitement ; il est <strong>responsable de la conformité</strong> et de la protection des données</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sous-traitant</strong></td>
+<td style="text-align: left;">Traite les données <strong>pour le compte</strong> du responsable, sur ses instructions (contrat obligatoire, art. 28) : hébergeur, ESN qui développe ou maintient l'application, prestataire de paie…</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>DPO / DPD</strong> (Délégué à la protection des données)</td>
+<td style="text-align: left;">Conseille et contrôle la conformité en interne ; point de contact de la CNIL et des personnes ; c'est souvent lui qui traite les demandes d'exercice des droits</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CNIL</strong></td>
+<td style="text-align: left;">Autorité de contrôle : conseille, contrôle, sanctionne ; reçoit les notifications de violation</td>
+</tr>
+</tbody>
+</table>
+<p>Le DPO est <strong>obligatoire</strong> pour les organismes publics, et pour les organismes dont l'activité principale implique un suivi régulier et systématique à grande échelle ou le traitement à grande échelle de données sensibles. Il est conseillé pour tous les autres.</p>
+<h3 id="42-les-principes-article-5">4.2 Les principes (article 5)<a class="headerlink" href="#42-les-principes-article-5" title="Permanent link">⚓︎</a></h3>
+<p>Tout traitement doit respecter ces principes. Ce sont eux qu'il faut citer pour <strong>justifier</strong> une réponse.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Principe</th>
+<th style="text-align: left;">Ce que ça veut dire</th>
+<th style="text-align: left;">Traduction pour un développeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Licéité, loyauté, transparence</strong></td>
+<td style="text-align: left;">Base légale + personne informée</td>
+<td style="text-align: left;">Mentions d'information sur le formulaire, politique de confidentialité</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Limitation des finalités</strong></td>
+<td style="text-align: left;">Données collectées pour un but précis, pas réutilisées pour autre chose</td>
+<td style="text-align: left;">Ne pas réutiliser les emails de facturation pour de la prospection sans base légale</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Minimisation</strong></td>
+<td style="text-align: left;">Seulement les données <strong>nécessaires</strong></td>
+<td style="text-align: left;">Pas de champ « date de naissance » si on n'en a pas besoin</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Exactitude</strong></td>
+<td style="text-align: left;">Données exactes et à jour</td>
+<td style="text-align: left;">Permettre à l'utilisateur de modifier son profil</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Limitation de la conservation</strong></td>
+<td style="text-align: left;">Durée définie, puis suppression/archivage/anonymisation</td>
+<td style="text-align: left;">Script de purge, champ <code>dateFinConservation</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Intégrité et confidentialité</strong></td>
+<td style="text-align: left;">Sécurité adaptée au risque</td>
+<td style="text-align: left;">Hachage des mots de passe, requêtes préparées, chiffrement, HTTPS, droits SQL minimaux</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Responsabilité</strong> (<em>accountability</em>)</td>
+<td style="text-align: left;">Pouvoir <strong>prouver</strong> la conformité</td>
+<td style="text-align: left;">Registre, journalisation, documentation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-la-base-legale-article-6">4.3 La base légale (article 6)<a class="headerlink" href="#43-la-base-legale-article-6" title="Permanent link">⚓︎</a></h3>
+<p>Un traitement n'est licite que s'il repose sur <strong>une</strong> de ces six bases :</p>
+<ol>
+<li>le <strong>consentement</strong> de la personne (libre, spécifique, éclairé, univoque, retirable) ;</li>
+<li>l'exécution d'un <strong>contrat</strong> (ex. : livrer une commande) ;</li>
+<li>une <strong>obligation légale</strong> (ex. : conserver les factures) ;</li>
+<li>la sauvegarde des <strong>intérêts vitaux</strong> ;</li>
+<li>une <strong>mission d'intérêt public</strong> ;</li>
+<li>l'<strong>intérêt légitime</strong> du responsable (ex. : journalisation pour la sécurité), à condition de ne pas porter une atteinte excessive aux droits des personnes.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Le consentement n'est pas toujours la bonne base</p>
+<p>On croit souvent que le RGPD impose de demander le consentement pour tout. C'est faux : un site e-commerce n'a pas besoin du consentement pour traiter l'adresse de livraison (base = <strong>contrat</strong>). Le consentement est requis par exemple pour la prospection par email auprès de particuliers ou pour les cookies non essentiels.</p>
+</div>
+<h3 id="44-les-deux-registres">4.4 Les deux registres<a class="headerlink" href="#44-les-deux-registres" title="Permanent link">⚓︎</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Registre</th>
+<th style="text-align: left;">Contenu</th>
+<th style="text-align: left;">Quand ?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Registre des activités de traitement</strong> (art. 30)</td>
+<td style="text-align: left;">Pour chaque traitement : responsable et DPO, <strong>finalité</strong>, catégories de personnes et de données, destinataires, transferts hors UE, <strong>durées de conservation</strong>, mesures de sécurité</td>
+<td style="text-align: left;">Dès qu'on crée un <strong>nouveau traitement</strong>, y compris une nouvelle application interne</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Registre des violations</strong> (art. 33.5)</td>
+<td style="text-align: left;">Toutes les violations de données : faits, effets, mesures prises</td>
+<td style="text-align: left;"><strong>À chaque</strong> violation, même sans risque et même non notifiée à la CNIL</td>
+</tr>
+</tbody>
+</table>
+<p>Ces registres sont des <strong>documents internes</strong> : on ne les envoie pas à la CNIL, on doit pouvoir les présenter en cas de contrôle.</p>
+<h3 id="45-la-protection-des-la-conception-et-laipd">4.5 La protection dès la conception et l'AIPD<a class="headerlink" href="#45-la-protection-des-la-conception-et-laipd" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li><strong>Privacy by design</strong> (art. 25) : la protection des données est prise en compte <strong>dès la conception</strong> de l'application (minimisation des champs, chiffrement prévu dès le modèle de données, journalisation…).</li>
+<li><strong>Privacy by default</strong> : par défaut, le réglage le plus protecteur (profil non public, cases de consentement non pré-cochées).</li>
+<li><strong>AIPD</strong> (Analyse d'Impact relative à la Protection des Données, art. 35, en anglais <em>DPIA</em>) : obligatoire avant un traitement <strong>susceptible d'engendrer un risque élevé</strong> (données sensibles à grande échelle, biométrie, surveillance systématique, personnes vulnérables…). Elle décrit le traitement, évalue sa nécessité et les risques, et définit les mesures. L'outil PIA de la CNIL aide à la réaliser.</li>
+</ul>
+<details class="question">
+<summary>Exercice 4 – Acteurs et base légale d'une plateforme de covoiturage</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Énoncé</label><label for="__tabbed_4_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>La société <em>RouleEnsemble</em> édite une plateforme de covoiturage. Elle fait héberger son application chez un prestataire cloud et confie la gestion des paiements à un prestataire bancaire.</p>
+<ol>
+<li>Identifiez la personne concernée, le responsable de traitement et les sous-traitants.</li>
+<li>Indiquez la base légale la plus adaptée pour chaque traitement :<ul>
+<li>a) enregistrer le trajet réservé et le numéro de téléphone du conducteur pour le transmettre au passager ;</li>
+<li>b) envoyer une newsletter de promotions aux utilisateurs ;</li>
+<li>c) conserver les factures pendant 10 ans ;</li>
+<li>d) enregistrer les adresses IP de connexion pour détecter les fraudes.</li>
+</ul>
+</li>
+<li><em>RouleEnsemble</em> envisage de vérifier l'identité des conducteurs par reconnaissance faciale. Quelle démarche doit-elle mener avant la mise en service ? Pourquoi ?</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Personnes concernées : <strong>conducteurs et passagers</strong>. Responsable de traitement : <strong>RouleEnsemble</strong> (elle décide pourquoi et comment). Sous-traitants : <strong>l'hébergeur</strong> et le <strong>prestataire de paiement</strong> (contrat art. 28 obligatoire).</li>
+<li>a) <strong>Contrat</strong> ; b) <strong>consentement</strong> ; c) <strong>obligation légale</strong> ; d) <strong>intérêt légitime</strong> (sécurité).</li>
+<li>Une <strong>AIPD</strong> : la reconnaissance faciale est une donnée <strong>biométrique</strong> (sensible), utilisée à grande échelle → risque élevé. Il faudra aussi le <strong>consentement explicite</strong> et une alternative.</li>
+</ol>
+</div>
+</div>
+</div>
+</details>
+<details class="question">
+<summary>Exercice 5 – Principes non respectés</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Énoncé</label><label for="__tabbed_5_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Pour chaque situation, nommez le principe de l'article 5 qui n'est pas respecté et proposez une correction.</p>
+<ol>
+<li>Le formulaire d'inscription à une médiathèque demande la profession et la situation familiale.</li>
+<li>Une pizzeria utilise les numéros de téléphone de livraison pour envoyer des SMS publicitaires.</li>
+<li>Un club de tennis conserve depuis 15 ans les fiches de tous ses anciens membres.</li>
+<li>Un site de vente stocke les mots de passe en clair.</li>
+<li>Un utilisateur ne peut pas modifier son adresse postale erronée dans son espace client.</li>
+<li>Une entreprise est incapable de dire quelles données elle collecte ni pourquoi lors d'un contrôle de la CNIL.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Minimisation</strong> → supprimer ces champs, inutiles pour prêter des livres.</li>
+<li><strong>Limitation des finalités</strong> (et licéité) → recueillir un consentement spécifique pour la publicité.</li>
+<li><strong>Limitation de la conservation</strong> → fixer une durée, purger ou anonymiser.</li>
+<li><strong>Intégrité et confidentialité</strong> → hacher les mots de passe (bcrypt, Argon2).</li>
+<li><strong>Exactitude</strong> → permettre la rectification.</li>
+<li><strong>Responsabilité</strong> → tenir un registre des traitements.</li>
+</ol>
+</div>
+</div>
+</div>
+</details>
+<details class="question">
+<summary>Exercice 6 – Compléter le registre des traitements</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Énoncé</label><label for="__tabbed_6_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Une mairie met en place une application web d'inscription à la cantine scolaire : nom et prénom de l'enfant, classe, nom et coordonnées des parents, quotient familial (pour le tarif), régime alimentaire, allergies (projet d'accueil individualisé).</p>
+<ol>
+<li>Pourquoi ce traitement doit-il figurer dans le registre ?</li>
+<li>Rédigez la fiche du registre (finalité, personnes concernées, catégories de données, destinataires, durée de conservation, mesures de sécurité).</li>
+<li>Une donnée de la liste est sensible : laquelle, et quelle conséquence ?</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>C'est un <strong>nouveau traitement de données personnelles</strong> : le responsable doit pouvoir le documenter (principe de responsabilité).</li>
+<li>
+<p>Exemple de fiche :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Rubrique</th>
+<th style="text-align: left;">Contenu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Responsable</td>
+<td style="text-align: left;">La mairie (et coordonnées du DPO, obligatoire pour un organisme public)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Finalité</td>
+<td style="text-align: left;">Gestion des inscriptions et de la facturation de la restauration scolaire</td>
+</tr>
+<tr>
+<td style="text-align: left;">Personnes concernées</td>
+<td style="text-align: left;">Enfants scolarisés, parents</td>
+</tr>
+<tr>
+<td style="text-align: left;">Données</td>
+<td style="text-align: left;">Identité, classe, coordonnées des parents, quotient familial, régime, allergies</td>
+</tr>
+<tr>
+<td style="text-align: left;">Destinataires</td>
+<td style="text-align: left;">Service scolaire, service facturation, personnel de cantine (allergies uniquement)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Durée</td>
+<td style="text-align: left;">Année scolaire en base active, puis durée légale pour la facturation, puis suppression</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sécurité</td>
+<td style="text-align: left;">Authentification des agents, droits par profil, HTTPS, chiffrement des données de santé, journalisation</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Les <strong>allergies</strong> sont des données de <strong>santé</strong> : niveau de protection renforcé, accès limité au strict nécessaire.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</details>
+<h2 id="5-la-securite-des-donnees-article-32">5. La sécurité des données (article 32)<a class="headerlink" href="#5-la-securite-des-donnees-article-32" title="Permanent link">⚓︎</a></h2>
+<p>L'article 32 impose au responsable de traitement et au sous-traitant de mettre en œuvre des <strong>mesures techniques et organisationnelles appropriées</strong> pour garantir un <strong>niveau de sécurité adapté au risque</strong>, « y compris entre autres, <strong>selon les besoins</strong> » :</p>
+<ul>
+<li>a. la <strong>pseudonymisation et le chiffrement</strong> des données ;</li>
+<li>b. des moyens de garantir la <strong>confidentialité, l'intégrité, la disponibilité et la résilience</strong> des systèmes ;</li>
+<li>c. des moyens de <strong>rétablir la disponibilité</strong> des données après un incident (sauvegardes, PRA) ;</li>
+<li>d. une procédure pour <strong>tester et évaluer régulièrement</strong> l'efficacité des mesures (audits, pentests).</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Obligation légale ou bonne pratique ?</p>
+<ul>
+<li><strong>Obligation légale</strong> : assurer une <strong>sécurité adaptée au risque</strong>. Ne pas sécuriser les données est sanctionnable.</li>
+<li><strong>Le chiffrement, lui, est une mesure recommandée</strong> (bonne pratique) : l'article 32 le cite parmi les mesures possibles, à mettre en œuvre « selon les besoins ». Le RGPD n'impose aucune technique précise.</li>
+<li>Mais le chiffrement devient <strong>quasi indispensable</strong> pour les données sensibles, et il a un avantage juridique : si des données <strong>chiffrées</strong> fuient et que la clé n'est pas compromise, l'organisation n'a pas à informer les personnes concernées (art. 34).</li>
 </ul>
 </div>
-<h2 id="1-quest-ce-quun-audit-de-code">1. Qu’est-ce qu’un audit de code ?<a class="headerlink" href="#1-quest-ce-quun-audit-de-code" title="Permanent link">⚓︎</a></h2>
-<h3 id="definition">📖 Définition<a class="headerlink" href="#definition" title="Permanent link">⚓︎</a></h3>
-<p>L’<strong>audit de code</strong> est une démarche structurée consistant à examiner un code source afin d’en évaluer :</p>
-<ul>
-<li>la qualité technique,</li>
-<li>la maintenabilité,</li>
-<li>la robustesse,</li>
-<li>la sécurité,</li>
-<li>la conformité aux bonnes pratiques.</li>
-</ul>
-<p>Contrairement au débogage, l’audit ne vise pas uniquement à corriger une erreur existante.<br />
-Il cherche à <strong>prévenir les défauts futurs</strong> et à améliorer la qualité globale du projet.</p>
-<p>Dans un contexte professionnel, l’audit peut être réalisé :</p>
-<ul>
-<li>avant une mise en production,</li>
-<li>avant une reprise de projet,</li>
-<li>lors d’une revue de sécurité,</li>
-<li>dans le cadre d’un contrôle qualité interne.</li>
-</ul>
-<h3 id="audit-manuel-vs-audit-automatise">🧠 Audit manuel vs audit automatisé<a class="headerlink" href="#audit-manuel-vs-audit-automatise" title="Permanent link">⚓︎</a></h3>
-<p>L’audit de code repose sur deux approches complémentaires.</p>
-<h4 id="audit-manuel">🔎 Audit manuel<a class="headerlink" href="#audit-manuel" title="Permanent link">⚓︎</a></h4>
-<p>Il s’agit d’une lecture humaine du code.<br />
-Le développeur ou l’auditeur vérifie :</p>
-<ul>
-<li>la compréhension globale du projet,</li>
-<li>la cohérence architecturale,</li>
-<li>la séparation des responsabilités,</li>
-<li>la clarté des noms de variables et de méthodes,</li>
-<li>la présence de duplication de code,</li>
-<li>la gestion des erreurs.</li>
-</ul>
-<p>Cette approche permet de détecter des problèmes que les outils automatiques ne voient pas, notamment les défauts de conception.</p>
-<h4 id="analyse-automatisee">🤖 Analyse automatisée<a class="headerlink" href="#analyse-automatisee" title="Permanent link">⚓︎</a></h4>
-<p>Les outils d’analyse examinent le code sans l’exécuter (analyse statique) ou pendant son exécution (analyse dynamique).</p>
-<p>Ils permettent notamment de détecter :</p>
-<ul>
-<li>des erreurs potentielles,</li>
-<li>des incohérences de typage,</li>
-<li>des vulnérabilités connues,</li>
-<li>du code dupliqué,</li>
-<li>des écarts aux standards de codage.</li>
-</ul>
-<p>L’analyse automatisée est rapide, reproductible et intégrable dans une chaîne d’intégration continue.</p>
-<div class="admonition info">
-<p class="admonition-title">📝 Synthèse</p>
-<p>L’audit manuel apporte une vision architecturale et métier.  <br />
-L’analyse automatisée apporte une vision technique et mesurable.  <br />
-Les deux sont nécessaires pour garantir une qualité logicielle professionnelle.<br /></p>
+<h3 id="51-contre-quoi-protege-le-chiffrement-en-base">5.1 Contre quoi protège le chiffrement en base ?<a class="headerlink" href="#51-contre-quoi-protege-le-chiffrement-en-base" title="Permanent link">⚓︎</a></h3>
+<p>Le chiffrement des colonnes ne remplace pas la sécurité de l'application : il protège surtout quand quelqu'un <strong>contourne l'application</strong> et lit directement la base.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Scénario de menace</th>
+<th style="text-align: left;">Acteur</th>
+<th style="text-align: left;">Le chiffrement en base protège ?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Vol d'une <strong>sauvegarde</strong> ou d'un disque</td>
+<td style="text-align: left;">Externe ou interne</td>
+<td style="text-align: left;">✅ Oui</td>
+</tr>
+<tr>
+<td style="text-align: left;">Exfiltration de la base après compromission du serveur SGBD</td>
+<td style="text-align: left;">Attaquant externe</td>
+<td style="text-align: left;">✅ Oui, si la clé est stockée ailleurs</td>
+</tr>
+<tr>
+<td style="text-align: left;">Un <strong>administrateur</strong> ou un <strong>prestataire</strong> ayant un accès direct au SGBD consulte ou exporte les données</td>
+<td style="text-align: left;"><strong>Interne</strong></td>
+<td style="text-align: left;">✅ Oui, si la clé est réservée à l'application</td>
+</tr>
+<tr>
+<td style="text-align: left;">Attaque par <strong>force brute</strong> sur un compte d'accès direct à la base</td>
+<td style="text-align: left;">Externe</td>
+<td style="text-align: left;">✅ Oui, les données restent illisibles</td>
+</tr>
+<tr>
+<td style="text-align: left;">Un utilisateur légitime abuse de ses droits <strong>dans l'application</strong></td>
+<td style="text-align: left;">Interne</td>
+<td style="text-align: left;">❌ Non, l'application déchiffre pour lui → contrôle d'accès + journalisation</td>
+</tr>
+<tr>
+<td style="text-align: left;">Injection SQL via l'application</td>
+<td style="text-align: left;">Externe</td>
+<td style="text-align: left;">⚠️ Partiellement, selon où se fait le déchiffrement</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-chiffrer-ou-hacher">5.2 Chiffrer ou hacher ?<a class="headerlink" href="#52-chiffrer-ou-hacher" title="Permanent link">⚓︎</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Hachage</th>
+<th style="text-align: left;">Chiffrement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Réversible ?</td>
+<td style="text-align: left;">❌ Non</td>
+<td style="text-align: left;">✅ Oui, avec la clé</td>
+</tr>
+<tr>
+<td style="text-align: left;">Usage</td>
+<td style="text-align: left;"><strong>Mots de passe</strong> : on n'a jamais besoin de les relire, seulement de les comparer</td>
+<td style="text-align: left;">Données qu'on doit <strong>relire</strong> : email, téléphone, données médicales</td>
+</tr>
+<tr>
+<td style="text-align: left;">Exemples</td>
+<td style="text-align: left;"><code>password_hash()</code> (bcrypt, Argon2) en PHP</td>
+<td style="text-align: left;"><code>AES_ENCRYPT()</code> en MySQL, <code>EncryptByKey()</code> en SQL Server</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Chiffrer une colonne existante avec MySQL</p>
+<p><div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="c1">-- 1. Ajouter une colonne binaire pour la donnée chiffrée</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Client</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="n">telephone_chiffre</span><span class="w"> </span><span class="n">VARBINARY</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+
+<span class="c1">-- 2. Chiffrer les données existantes</span>
+<span class="k">UPDATE</span><span class="w"> </span><span class="n">Client</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">telephone_chiffre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AES_ENCRYPT</span><span class="p">(</span><span class="n">telephone</span><span class="p">,</span><span class="w"> </span><span class="s1">'cle_secrete'</span><span class="p">);</span>
+
+<span class="c1">-- 3. Supprimer la colonne en clair et renommer</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Client</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">telephone</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Client</span><span class="w"> </span><span class="k">RENAME</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">telephone_chiffre</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">telephone</span><span class="p">;</span>
+
+<span class="c1">-- Lecture en clair par l'application</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="k">CAST</span><span class="p">(</span><span class="n">AES_DECRYPT</span><span class="p">(</span><span class="n">telephone</span><span class="p">,</span><span class="w"> </span><span class="s1">'cle_secrete'</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">telephone</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Client</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span><span class="p">;</span>
+</code></pre></div>
+⚠️ En production, la clé ne doit <strong>jamais</strong> être écrite en dur dans le code : on la stocke dans une variable d'environnement (<code>$_ENV['AES_KEY']</code> en PHP) ou un coffre à secrets, et on la passe en paramètre de la requête préparée.</p>
 </div>
-<h2 id="2-les-criteres-de-qualite-logicielle">2. Les critères de qualité logicielle<a class="headerlink" href="#2-les-criteres-de-qualite-logicielle" title="Permanent link">⚓︎</a></h2>
-<p>La qualité d’un logiciel ne se limite pas à son bon fonctionnement.</p>
-<p>Un programme peut fonctionner correctement tout en étant difficile à maintenir, peu sécurisé ou mal structuré.</p>
-<p>On peut distinguer plusieurs critères fondamentaux.</p>
-<h3 id="lisibilite">📚 Lisibilité<a class="headerlink" href="#lisibilite" title="Permanent link">⚓︎</a></h3>
-<p>Un code lisible est un code compréhensible par un autre développeur.</p>
-<p>La lisibilité repose sur :</p>
-<ul>
-<li>un nommage explicite,</li>
-<li>des méthodes courtes,</li>
-<li>une indentation cohérente,</li>
-<li>des commentaires utiles et non redondants.</li>
-</ul>
-<p>Un code illisible augmente le risque d’erreur et la difficulté de maintenance.</p>
-<h3 id="maintenabilite">🏗 Maintenabilité<a class="headerlink" href="#maintenabilite" title="Permanent link">⚓︎</a></h3>
-<p>La maintenabilité mesure la capacité à faire évoluer un logiciel.</p>
-<p>Elle dépend :</p>
-<ul>
-<li>du respect de l’architecture (ex : MVC),</li>
-<li>de la séparation des responsabilités,</li>
-<li>d’un faible couplage entre les composants,</li>
-<li>de l’absence de duplication.</li>
-</ul>
-<p>Un projet mal structuré génère rapidement de la dette technique.</p>
-<h3 id="testabilite">🧪 Testabilité<a class="headerlink" href="#testabilite" title="Permanent link">⚓︎</a></h3>
-<p>Un code testable est un code dont les composants peuvent être isolés et vérifiés indépendamment.</p>
-<p>La présence de tests unitaires permet :</p>
-<ul>
-<li>de détecter des régressions,</li>
-<li>de documenter le comportement attendu,</li>
-<li>de sécuriser les évolutions.</li>
-</ul>
-<h3 id="securite">🔐 Sécurité<a class="headerlink" href="#securite" title="Permanent link">⚓︎</a></h3>
-<p>Un audit de code doit également vérifier :</p>
-<ul>
-<li>la validation des entrées utilisateur,</li>
-<li>la protection contre les injections,</li>
-<li>la gestion des droits d’accès,</li>
-<li>la gestion correcte des erreurs.</li>
-</ul>
-<div class="admonition info">
-<p class="admonition-title">📊 Synthèse</p>
-<p>Un logiciel de qualité doit être :</p>
-<ul>
-<li>lisible,</li>
-<li>maintenable,</li>
-<li>testable,</li>
-<li>sécurisé.</li>
-</ul>
-<p><strong>La qualité est un ensemble cohérent, pas un critère isolé.</strong></p>
+<h3 id="53-la-journalisation-tracabilite">5.3 La journalisation (traçabilité)<a class="headerlink" href="#53-la-journalisation-tracabilite" title="Permanent link">⚓︎</a></h3>
+<p>Journaliser les accès aux données personnelles est une mesure de sécurité qui découle de l'article 32 et du principe de responsabilité. Son <strong>objectif réglementaire</strong> : pouvoir <strong>imputer</strong> chaque accès ou action à une personne, par des moyens automatisés, et détecter les usages anormaux.</p>
+<p>La <strong>recommandation de la CNIL</strong> (délibération 2021-122) précise :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Point</th>
+<th style="text-align: left;">Recommandation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Opérations à tracer</strong></td>
+<td style="text-align: left;">Création, consultation, modification, suppression de données personnelles</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Contenu d'une trace</strong></td>
+<td style="text-align: left;"><strong>Auteur individuellement identifié</strong>, <strong>horodatage</strong>, <strong>équipement utilisé</strong>, <strong>nature de l'opération</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>À éviter</strong></td>
+<td style="text-align: left;">Dupliquer dans les logs les données du traitement (ne pas recopier le dossier du client dans le log !)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Durée de conservation</strong></td>
+<td style="text-align: left;"><strong>Entre 6 mois et 1 an</strong>, sur une période glissante (plus long seulement si une obligation légale ou un contentieux le justifie)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Protection</strong></td>
+<td style="text-align: left;">Les logs sont eux-mêmes des données personnelles : accès restreint, intégrité garantie (empreinte, stockage non modifiable)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Identifier l'équipement ≠ identifier l'auteur</p>
+<p>Une adresse IP ou MAC identifie une <strong>machine</strong>. Si cette machine est partagée (poste d'accueil, tablette de service), le log ne permet pas de savoir <strong>qui</strong> a agi : l'imputabilité n'est pas assurée.</p>
 </div>
-<h2 id="3-la-dette-technique">3. La dette technique<a class="headerlink" href="#3-la-dette-technique" title="Permanent link">⚓︎</a></h2>
-<p>La <strong>dette technique</strong> correspond aux compromis pris dans le développement qui devront être corrigés ultérieurement.</p>
-<p>Elle apparaît lorsque :</p>
-<ul>
-<li>le code est dupliqué,</li>
-<li>les tests sont absents,</li>
-<li>les méthodes deviennent trop longues,</li>
-<li>l’architecture n’est pas respectée.</li>
-</ul>
-<p>La dette technique ralentit progressivement le projet et augmente les risques d’erreur.</p>
-<p>Un audit permet de l’identifier et de la quantifier.</p>
-<h2 id="4-outils-danalyse-couramment-utilises">4. Outils d’analyse couramment utilisés<a class="headerlink" href="#4-outils-danalyse-couramment-utilises" title="Permanent link">⚓︎</a></h2>
-<p>Les entreprises s’appuient sur des outils spécialisés pour automatiser une partie de l’audit.</p>
-<h3 id="analyse-statique">🔍 Analyse statique<a class="headerlink" href="#analyse-statique" title="Permanent link">⚓︎</a></h3>
-<h4 id="sonarqube">SonarQube<a class="headerlink" href="#sonarqube" title="Permanent link">⚓︎</a></h4>
-<p>SonarQube est une plateforme d’analyse continue qui fournit :</p>
-<ul>
-<li>un tableau de bord qualité,</li>
-<li>la détection de bugs,</li>
-<li>l’identification de vulnérabilités,</li>
-<li>l’évaluation de la dette technique,</li>
-<li>la mesure de la duplication de code.</li>
-</ul>
-<p>Il est souvent intégré dans une chaîne CI/CD.</p>
-<h4 id="phpstan">PHPStan<a class="headerlink" href="#phpstan" title="Permanent link">⚓︎</a></h4>
-<p>PHPStan est un outil d’analyse statique pour PHP.</p>
-<p>Il vérifie notamment :</p>
-<ul>
-<li>les incohérences de types,</li>
-<li>les appels à des méthodes inexistantes,</li>
-<li>les erreurs potentielles avant exécution.</li>
-</ul>
-<p>Il est particulièrement utile dans les projets Laravel.</p>
-<h3 id="outils-de-linting-et-de-formatage">✏️ Outils de linting et de formatage<a class="headerlink" href="#outils-de-linting-et-de-formatage" title="Permanent link">⚓︎</a></h3>
-<h4 id="laravel-pint">Laravel Pint<a class="headerlink" href="#laravel-pint" title="Permanent link">⚓︎</a></h4>
-<p>Laravel Pint impose un style de code uniforme.</p>
-<p>Il n’améliore pas la logique du programme, mais garantit une cohérence visuelle et structurelle du projet.</p>
-<h3 id="tests-automatises">🧪 Tests automatisés<a class="headerlink" href="#tests-automatises" title="Permanent link">⚓︎</a></h3>
-<h4 id="phpunit">PHPUnit<a class="headerlink" href="#phpunit" title="Permanent link">⚓︎</a></h4>
-<p>PHPUnit permet d’écrire des tests unitaires afin de vérifier le comportement du code.</p>
-<p>Couplé à un outil de couverture (comme Xdebug), il permet de mesurer le pourcentage de code testé.</p>
-<div class="admonition info">
-<p class="admonition-title">📝 Synthèse</p>
-<p>Les outils ne remplacent pas le développeur.  <br />
-Ils assistent l’audit en détectant automatiquement des anomalies techniques mesurables.</p>
+<details class="question">
+<summary>Exercice 7 – Hacher, chiffrer ou rien ?</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Énoncé</label><label for="__tabbed_7_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Une plateforme de location de vélos stocke les données suivantes. Pour chacune, choisissez : <strong>hachage</strong>, <strong>chiffrement</strong>, ou <strong>aucun traitement particulier</strong>. Justifiez.</p>
+<ol>
+<li>Mot de passe du compte client</li>
+<li>Numéro de téléphone (le support appelle le client en cas de problème)</li>
+<li>Code PIN de déverrouillage du cadenas (vérifié par la borne)</li>
+<li>Nom des stations de location</li>
+<li>Photo de la pièce d'identité fournie à l'inscription (avant vérification)</li>
+<li>Réponse à la question secrète de récupération de compte</li>
+</ol>
 </div>
-<h2 id="5-indicateurs-de-qualite-kpis">5. Indicateurs de qualité (KPIs)<a class="headerlink" href="#5-indicateurs-de-qualite-kpis" title="Permanent link">⚓︎</a></h2>
-<p>Lors d’un audit, certains indicateurs permettent d’objectiver la qualité :</p>
-<ul>
-<li>taux de couverture des tests,</li>
-<li>nombre de bugs détectés,</li>
-<li>nombre de vulnérabilités,</li>
-<li>complexité cyclomatique,</li>
-<li>taux de duplication,</li>
-<li>estimation de la dette technique.</li>
+<div class="tabbed-block">
+<ol>
+<li><strong>Hachage</strong> : on compare, on ne relit jamais.</li>
+<li><strong>Chiffrement</strong> : il faut pouvoir le relire.</li>
+<li><strong>Hachage</strong> : la borne compare le code saisi à l'empreinte.</li>
+<li><strong>Rien</strong> : pas une donnée personnelle.</li>
+<li><strong>Chiffrement</strong> (le temps de la vérification), puis <strong>suppression</strong>.</li>
+<li><strong>Hachage</strong> : même logique qu'un mot de passe.</li>
+</ol>
+</div>
+</div>
+</div>
+</details>
+<details class="question">
+<summary>Exercice 8 – Scénarios de risque et chiffrement</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Énoncé</label><label for="__tabbed_8_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Un réseau de cabinets d'orthophonie stocke dans une base MySQL les coordonnées des patients et les comptes rendus de bilan. L'application impose une authentification forte et des droits par profil. La direction envisage de chiffrer les comptes rendus en base.</p>
+<ol>
+<li>Le chiffrement est-il une obligation légale ? Justifiez avec l'article 32.</li>
+<li>Rédigez un scénario de risque impliquant un <strong>acteur interne</strong> (précisez son rôle) contre lequel le chiffrement serait une protection.</li>
+<li>Rédigez un scénario impliquant un <strong>acteur externe</strong>.</li>
+<li>Donnez un scénario contre lequel le chiffrement en base <strong>ne protège pas</strong>, et la mesure adaptée.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Non</strong>, c'est une mesure <strong>recommandée</strong> : l'obligation est d'assurer une sécurité <strong>adaptée au risque</strong> ; ici, des données de <strong>santé</strong> rendent le chiffrement fortement conseillé.</li>
+<li>Ex. : l'<strong>administrateur système</strong> du prestataire d'hébergement, qui a un accès direct au serveur MySQL, exporte la table des comptes rendus pour la revendre. Chiffrés avec une clé réservée à l'application, ils lui sont illisibles.</li>
+<li>Ex. : un attaquant vole une <strong>sauvegarde</strong> de la base stockée sur un NAS mal protégé, ou casse par <strong>force brute</strong> le mot de passe d'un compte SQL exposé.</li>
+<li>Ex. : une secrétaire consulte, <strong>via l'application</strong>, le dossier d'un voisin. L'application déchiffre pour elle : il faut des <strong>droits d'accès</strong> limités au strict nécessaire et une <strong>journalisation</strong> des consultations.</li>
+</ol>
+</div>
+</div>
+</div>
+</details>
+<details class="question">
+<summary>Exercice 9 – Chiffrer une colonne en SQL</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Énoncé</label><label for="__tabbed_9_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Une médiathèque dispose de la table <code>Lecteur (num, nom, prenom, adresseMel, dateInscription)</code>. La colonne <code>adresseMel</code> est de type <code>VARCHAR(100)</code>.</p>
+<ol>
+<li>Écrivez les requêtes qui chiffrent les adresses mail existantes avec <code>AES_ENCRYPT()</code> et la clé <code>'M3d!aT#2026'</code>, en conservant le nom de colonne <code>adresseMel</code>.</li>
+<li>La clé est désormais dans <code>$_ENV['AES_KEY']</code>. Écrivez en PHP (PDO) la requête préparée qui renvoie le nom et l'adresse mail <strong>en clair</strong> d'un lecteur à partir de son numéro.</li>
+<li>Pourquoi ne faut-il pas écrire la clé dans le code source ?</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p><strong>1.</strong></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Lecteur</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="n">adresseMel_chiffre</span><span class="w"> </span><span class="n">VARBINARY</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+<span class="k">UPDATE</span><span class="w"> </span><span class="n">Lecteur</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">adresseMel_chiffre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AES_ENCRYPT</span><span class="p">(</span><span class="n">adresseMel</span><span class="p">,</span><span class="w"> </span><span class="s1">'M3d!aT#2026'</span><span class="p">);</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Lecteur</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">adresseMel</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Lecteur</span><span class="w"> </span><span class="k">RENAME</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">adresseMel_chiffre</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">adresseMel</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>2.</strong></p>
+<div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$sql = "SELECT nom, CAST(AES_DECRYPT(adresseMel, :cle) AS CHAR) AS adresseMel</span>
+<span class="x">        FROM Lecteur WHERE num = :num";</span>
+<span class="x">$stmt = $pdo-&gt;prepare($sql);</span>
+<span class="x">$stmt-&gt;execute([':cle' =&gt; $_ENV['AES_KEY'], ':num' =&gt; $num]);</span>
+<span class="x">$lecteur = $stmt-&gt;fetch();</span>
+</code></pre></div>
+<p><strong>3.</strong> Le code source est partagé (dépôt Git, développeurs, sauvegardes) : quiconque y accède pourrait déchiffrer les données. La clé doit être séparée des données et du code.</p>
+</div>
+</div>
+</div>
+</details>
+<details class="question">
+<summary>Exercice 10 – Analyser une table de journalisation</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Énoncé</label><label for="__tabbed_10_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Une agence immobilière fait remonter les accès à son logiciel de gestion locative dans la table suivante. Les ordinateurs de l'accueil sont partagés par trois agents.</p>
+<div class="language-text highlight"><span class="filename">📋 Texte</span><pre><span></span><code>LogAcces (idLog, ipPoste, dateHeure, action, contenuDossier)
+   action : 'CONSULTATION', 'MODIFICATION', 'SUPPRESSION'
+   contenuDossier : copie du dossier du locataire au moment de l'action
+</code></pre></div>
+<ol>
+<li>Cette table respecte-t-elle les recommandations de la CNIL ? Justifiez.</li>
+<li>Proposez une nouvelle structure.</li>
+<li>L'agence veut conserver ces logs 5 ans « pour être tranquille ». Qu'en pensez-vous ?</li>
+<li>Écrivez la requête SQL qui compte le nombre de suppressions par jour sur le mois en cours.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Non</strong> :<ul>
+<li>il manque l'<strong>auteur individuellement identifié</strong> : l'IP désigne un poste partagé ;</li>
+<li><code>contenuDossier</code> <strong>duplique</strong> les données du traitement dans les logs, ce qui est à éviter.</li>
 </ul>
-<p>Ces indicateurs facilitent la prise de décision technique.</p>
-<h2 id="6-audit-de-code-et-pratique-professionnelle">6. Audit de code et pratique professionnelle<a class="headerlink" href="#6-audit-de-code-et-pratique-professionnelle" title="Permanent link">⚓︎</a></h2>
-<p>En entreprise, l’audit de code s’intègre dans :</p>
+</li>
+<li><code>LogAcces (idLog, idUtilisateur, ipPoste, dateHeure, action, idDossier)</code> : auteur, équipement, horodatage, nature de l'opération, et une simple <strong>référence</strong> au dossier.</li>
+<li>Durée <strong>excessive</strong> : la CNIL recommande <strong>6 mois à 1 an</strong> ; on ne peut aller au-delà qu'avec une justification (obligation légale, contentieux en cours).</li>
+</ol>
+<p><strong>4.</strong></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="nb">DATE</span><span class="p">(</span><span class="n">dateHeure</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">jour</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nbSuppressions</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">LogAcces</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">action</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'SUPPRESSION'</span>
+<span class="w">  </span><span class="k">AND</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="n">dateHeure</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="n">CURDATE</span><span class="p">())</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="k">MONTH</span><span class="p">(</span><span class="n">dateHeure</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">MONTH</span><span class="p">(</span><span class="n">CURDATE</span><span class="p">())</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="nb">DATE</span><span class="p">(</span><span class="n">dateHeure</span><span class="p">);</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</details>
+<h2 id="6-les-droits-des-personnes">6. Les droits des personnes<a class="headerlink" href="#6-les-droits-des-personnes" title="Permanent link">⚓︎</a></h2>
+<h3 id="61-les-droits-articles-13-a-22">6.1 Les droits (articles 13 à 22)<a class="headerlink" href="#61-les-droits-articles-13-a-22" title="Permanent link">⚓︎</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Droit</th>
+<th style="text-align: left;">Article</th>
+<th style="text-align: left;">La personne peut…</th>
+<th style="text-align: left;">Ce que doit prévoir l'application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Information</strong></td>
+<td style="text-align: left;">13-14</td>
+<td style="text-align: left;">Savoir qui traite ses données, pourquoi, combien de temps, ses droits</td>
+<td style="text-align: left;">Mentions sur les formulaires, politique de confidentialité</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Accès</strong></td>
+<td style="text-align: left;">15</td>
+<td style="text-align: left;">Obtenir une copie de ses données</td>
+<td style="text-align: left;">Page « mes données », export</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Rectification</strong></td>
+<td style="text-align: left;">16</td>
+<td style="text-align: left;">Faire corriger des données inexactes</td>
+<td style="text-align: left;">Formulaire de modification du profil</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Effacement</strong> (« droit à l'oubli »)</td>
+<td style="text-align: left;">17</td>
+<td style="text-align: left;">Faire supprimer ses données (si plus nécessaires, consentement retiré, traitement illicite…)</td>
+<td style="text-align: left;">Suppression du compte <strong>et</strong> des données liées (attention aux clés étrangères, aux sauvegardes)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Limitation</strong></td>
+<td style="text-align: left;">18</td>
+<td style="text-align: left;">Geler temporairement le traitement (ex. : pendant une contestation)</td>
+<td style="text-align: left;">Un statut « gelé » qui bloque l'usage sans supprimer</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Portabilité</strong></td>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">Récupérer ses données dans un <strong>format structuré et lisible par machine</strong> pour les transmettre à un autre organisme</td>
+<td style="text-align: left;">Export JSON ou CSV</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Opposition</strong></td>
+<td style="text-align: left;">21</td>
+<td style="text-align: left;">S'opposer au traitement, <strong>toujours</strong> pour la prospection</td>
+<td style="text-align: left;">Lien de désinscription, case de refus</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Décision automatisée</strong></td>
+<td style="text-align: left;">22</td>
+<td style="text-align: left;">Ne pas faire l'objet d'une décision fondée <strong>uniquement</strong> sur un traitement automatisé (profilage) avec effet important</td>
+<td style="text-align: left;">Intervention humaine possible</td>
+</tr>
+</tbody>
+</table>
+<p>À cela s'ajoute le droit d'<strong>introduire une réclamation auprès de la CNIL</strong>.</p>
+<h3 id="62-les-regles-de-traitement-des-demandes">6.2 Les règles de traitement des demandes<a class="headerlink" href="#62-les-regles-de-traitement-des-demandes" title="Permanent link">⚓︎</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Règle</th>
+<th style="text-align: left;">Détail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Délai de réponse</strong></td>
+<td style="text-align: left;"><strong>1 mois</strong> à compter de la réception de la demande. Prolongeable de <strong>2 mois</strong> si la demande est complexe ou si les demandes sont nombreuses, à condition d'en <strong>informer la personne dans le premier mois</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Gratuité</strong></td>
+<td style="text-align: left;">Réponse gratuite, sauf demandes manifestement infondées ou excessives</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Vérification d'identité</strong></td>
+<td style="text-align: left;">Possible en cas de <strong>doute raisonnable</strong> ; la pièce justificative ne sert qu'à cette vérification et <strong>ne doit pas être conservée</strong> une fois la demande traitée</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Traçabilité</strong></td>
+<td style="text-align: left;">Garder la date de réception, l'état de la demande, les échanges, la date de réponse : c'est la preuve qu'on respecte le délai</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Registre</strong></td>
+<td style="text-align: left;">L'outil qui gère ces demandes est <strong>lui-même un traitement</strong> de données personnelles (identité des demandeurs) : il doit figurer au <strong>registre des traitements</strong></td>
+</tr>
+</tbody>
+</table>
+<details class="question">
+<summary>Exercice 11 – Quel droit exerce-t-on ?</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Énoncé</label><label for="__tabbed_11_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Une enseigne de jardinerie reçoit les demandes suivantes. Nommez le droit exercé.</p>
+<ol>
+<li>« Je veux savoir quelles informations vous avez sur moi. »</li>
+<li>« Mon nom est mal orthographié sur ma carte de fidélité. »</li>
+<li>« Je ne veux plus recevoir vos catalogues. »</li>
+<li>« Supprimez mon compte et toutes mes données. »</li>
+<li>« Envoyez-moi l'historique de mes achats dans un fichier que je pourrai importer chez un autre magasin. »</li>
+<li>« Je conteste le montant de mes points de fidélité : ne les utilisez pas tant que ce n'est pas réglé. »</li>
+<li>« Mon crédit en magasin a été refusé par un algorithme, je veux qu'un humain réexamine mon dossier. »</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Accès – 2. Rectification – 3. Opposition – 4. Effacement – 5. Portabilité – 6. Limitation – 7. Droit de ne pas faire l'objet d'une décision entièrement automatisée.</li>
+</ol>
+</div>
+</div>
+</div>
+</details>
+<details class="question">
+<summary>Exercice 12 – Délais et conservation des justificatifs</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Énoncé</label><label for="__tabbed_12_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Le secrétariat d'un club de football reçoit les demandes d'exercice des droits par courrier. Il demande systématiquement une photocopie de la carte d'identité, qu'il range dans un classeur « RGPD » conservé depuis 2019. Il répond en moyenne en 6 semaines.</p>
+<ol>
+<li>Une demande d'accès arrive le 12 février. Quelle est la date limite de réponse ? Comment le club peut-il obtenir plus de temps ?</li>
+<li>Le délai moyen du club est-il conforme ?</li>
+<li>La conservation du classeur depuis 2019 est-elle réglementaire ? Justifiez avec un principe du RGPD.</li>
+<li>Le club développe une petite application pour suivre ces demandes. Dans quel document doit-il la décrire ? Pourquoi ?</li>
+<li>Écrivez la requête SQL qui liste les demandes non traitées dont le délai d'un mois est dépassé, à partir de la table <code>Demande (id, nomDemandeur, typeDroit, dateReception, dateReponse)</code>.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Le <strong>12 mars</strong>. Prolongation possible de <strong>2 mois</strong> si la demande est complexe, en <strong>informant le demandeur avant le 12 mars</strong> des motifs du report.</li>
+<li><strong>Non</strong> : 6 semaines dépassent le délai d'un mois.</li>
+<li><strong>Non</strong> : principe de <strong>limitation de la conservation</strong> (et de minimisation). La pièce sert uniquement à vérifier l'identité ; elle doit être détruite une fois la demande traitée. La vérification ne devrait d'ailleurs être demandée qu'en cas de doute.</li>
+<li>Dans le <strong>registre des activités de traitement</strong> : l'application traite des données personnelles (identité et coordonnées des demandeurs).</li>
+</ol>
+<p><strong>5.</strong></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">nomDemandeur</span><span class="p">,</span><span class="w"> </span><span class="n">typeDroit</span><span class="p">,</span><span class="w"> </span><span class="n">dateReception</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Demande</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">dateReponse</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span>
+<span class="w">  </span><span class="k">AND</span><span class="w"> </span><span class="n">dateReception</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">CURDATE</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">MONTH</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">dateReception</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</details>
+<h2 id="7-la-conservation-des-donnees">7. La conservation des données<a class="headerlink" href="#7-la-conservation-des-donnees" title="Permanent link">⚓︎</a></h2>
+<blockquote>
+<p>Les données ne sont conservées que <strong>le temps nécessaire à la finalité</strong> du traitement (principe de <strong>limitation de la conservation</strong>, art. 5.1.e).</p>
+</blockquote>
+<p>« Par précaution », « au cas où », « on ne sait jamais » ne sont <strong>jamais</strong> des justifications valables. Une durée <strong>illimitée</strong> est <strong>toujours</strong> une non-conformité.</p>
+<h3 id="71-le-cycle-de-vie-des-donnees-rappel-du-cours-sur-larchivage">7.1 Le cycle de vie des données (rappel du cours sur l'archivage)<a class="headerlink" href="#71-le-cycle-de-vie-des-donnees-rappel-du-cours-sur-larchivage" title="Permanent link">⚓︎</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Phase</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Accès</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. Base active</strong></td>
+<td style="text-align: left;">Données utilisées au quotidien pour la finalité</td>
+<td style="text-align: left;">Services opérationnels concernés</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Archivage intermédiaire</strong></td>
+<td style="text-align: left;">Données qui ne servent plus mais qu'on doit garder pour une <strong>obligation légale</strong> ou un <strong>contentieux</strong> possible (valeur de <strong>preuve</strong>)</td>
+<td style="text-align: left;"><strong>Accès restreint</strong> à quelques personnes habilitées, support séparé si possible</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Sort final</strong></td>
+<td style="text-align: left;"><strong>Suppression</strong>, <strong>anonymisation</strong>, ou <strong>archivage définitif</strong> (rare : intérêt historique, archives publiques)</td>
+<td style="text-align: left;">—</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Sauvegarde ≠ archive</p>
 <ul>
-<li>les revues de code (pull requests),</li>
-<li>l’intégration continue,</li>
-<li>les audits de sécurité,</li>
-<li>les processus qualité.</li>
+<li>Une <strong>sauvegarde</strong> est une copie des données <strong>en cours de traitement</strong>, pour les <strong>restaurer</strong> en cas de perte (disponibilité).</li>
+<li>Une <strong>archive</strong> conserve des données qui <strong>ne sont plus traitées</strong>, pour une raison juridique ou probatoire : par exemple, des journaux de connexion archivés peuvent servir de <strong>preuve</strong> en justice.</li>
+<li>Pour garder sa valeur de preuve, une archive doit rester <strong>intègre</strong> (empreinte numérique vérifiée) et <strong>confidentielle</strong> (chiffrement, accès restreint).</li>
 </ul>
-<p>Il s’agit d’une pratique normale et attendue dans les équipes de développement modernes.</p>
-<h2 id="conclusion">🏁 Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">⚓︎</a></h2>
-<p>L’audit de code est une démarche essentielle pour garantir la qualité logicielle.</p>
-<p>Il repose sur :</p>
+</div>
+<h3 id="72-quelques-durees-de-reference">7.2 Quelques durées de référence<a class="headerlink" href="#72-quelques-durees-de-reference" title="Permanent link">⚓︎</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Données</th>
+<th style="text-align: left;">Durée</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Pièce d'identité fournie pour exercer un droit</td>
+<td style="text-align: left;">Le temps de la <strong>vérification</strong></td>
+<td style="text-align: left;">RGPD, minimisation</td>
+</tr>
+<tr>
+<td style="text-align: left;">Journaux (logs) d'accès</td>
+<td style="text-align: left;"><strong>6 mois à 1 an</strong></td>
+<td style="text-align: left;">Recommandation CNIL</td>
+</tr>
+<tr>
+<td style="text-align: left;">Images de vidéosurveillance</td>
+<td style="text-align: left;">1 mois maximum</td>
+<td style="text-align: left;">CNIL / code de la sécurité intérieure</td>
+</tr>
+<tr>
+<td style="text-align: left;">Données de carte bancaire après paiement</td>
+<td style="text-align: left;">13 mois en archivage intermédiaire (contestation)</td>
+<td style="text-align: left;">Code monétaire et financier</td>
+</tr>
+<tr>
+<td style="text-align: left;">Prospects non clients</td>
+<td style="text-align: left;">3 ans après le dernier contact</td>
+<td style="text-align: left;">CNIL</td>
+</tr>
+<tr>
+<td style="text-align: left;">Candidats non retenus</td>
+<td style="text-align: left;">2 ans après le dernier contact</td>
+<td style="text-align: left;">CNIL</td>
+</tr>
+<tr>
+<td style="text-align: left;">Dossier d'un salarié</td>
+<td style="text-align: left;">5 ans après son départ</td>
+<td style="text-align: left;">Code du travail</td>
+</tr>
+<tr>
+<td style="text-align: left;">Documents comptables et factures</td>
+<td style="text-align: left;">10 ans</td>
+<td style="text-align: left;">Code de commerce</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Rendre la durée effective dans l'application</p>
+<p>Écrire une durée dans le registre ne suffit pas : il faut <strong>l'appliquer</strong>. Côté développeur :</p>
 <ul>
-<li>une lecture humaine structurée,</li>
-<li>des outils d’analyse automatisée,</li>
-<li>des indicateurs mesurables,</li>
-<li>une démarche d’amélioration continue.</li>
+<li>ajouter une date de référence (<code>dateDerniereActivite</code>, <code>dateCloture</code>) ;</li>
+<li>programmer une <strong>purge automatique</strong> (tâche <code>cron</code>, <code>EVENT</code> MySQL, commande planifiée Laravel <code>schedule</code>) ;</li>
+<li>prévoir l'<strong>anonymisation</strong> si on veut garder des statistiques.</li>
 </ul>
-<p>Dans vos projets (comme bijoo ou todo), cette méthodologie vous permettra d’identifier les points d’amélioration et d’adopter des pratiques professionnelles alignées avec les attentes du secteur.</p>
-<p>🔗 A suivre <a href="../../6.2_TP/7_TP_auditCode/">TP Audit de code avec SonaQube sur Todo et bijoo</a></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="c1">-- Purge mensuelle des logs de plus d'un an</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">EVENT</span><span class="w"> </span><span class="n">purge_logs</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">SCHEDULE</span><span class="w"> </span><span class="k">EVERY</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">MONTH</span>
+<span class="k">DO</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">LogConnexion</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">dateHeure</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">NOW</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">YEAR</span><span class="p">;</span>
+</code></pre></div>
+</div>
+<details class="question">
+<summary>Exercice 13 – Fixer les durées de conservation</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Énoncé</label><label for="__tabbed_13_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Un site de vente de matériel de camping vous demande de proposer une durée de conservation (et le sort final) pour chaque catégorie. Justifiez.</p>
+<ol>
+<li>Compte d'un client qui n'a rien acheté ni ne s'est connecté depuis 4 ans</li>
+<li>Factures</li>
+<li>CV d'un candidat non retenu pour un poste de magasinier</li>
+<li>Journaux de connexion à l'espace d'administration</li>
+<li>Numéro de carte bancaire après une commande livrée</li>
+<li>Scan du justificatif d'identité joint à une demande d'effacement, traitée le 3 octobre</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Durée <strong>dépassée</strong> (prospect/client inactif : 3 ans après le dernier contact) → <strong>supprimer</strong> ou <strong>anonymiser</strong>, après un éventuel message de relance.</li>
+<li><strong>10 ans</strong> (obligation légale) → archivage intermédiaire à accès restreint, puis suppression.</li>
+<li><strong>2 ans</strong> après le dernier contact, avec l'accord du candidat ; sinon suppression immédiate.</li>
+<li><strong>6 mois à 1 an</strong> → purge glissante automatique.</li>
+<li>Pas en base active au-delà de la transaction (sauf consentement pour un paiement ultérieur) ; <strong>13 mois</strong> en archivage intermédiaire pour les contestations.</li>
+<li><strong>Supprimer</strong> dès la demande traitée : il ne servait qu'à vérifier l'identité.</li>
+</ol>
+</div>
+</div>
+</div>
+</details>
+<details class="question">
+<summary>Exercice 14 – Purge et anonymisation en SQL</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Énoncé</label><label for="__tabbed_14_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Une plateforme de covoiturage dispose des tables <code>Utilisateur (id, nom, prenom, adresseMel, dateDerniereConnexion)</code> et <code>Trajet (id, idConducteur, villeDepart, villeArrivee, dateTrajet)</code>.</p>
+<ol>
+<li>Écrivez un <code>EVENT</code> MySQL hebdomadaire qui <strong>anonymise</strong> les utilisateurs inactifs depuis plus de 3 ans (nom et prénom remplacés par <code>'ANONYME'</code>, adresse mail mise à <code>NULL</code>), afin de garder les statistiques de trajets.</li>
+<li>Pourquoi l'anonymisation est-elle ici préférable à la suppression ?</li>
+<li>Les trajets anonymisés sont-ils encore des données personnelles ? Nuancez.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p><strong>1.</strong></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="n">EVENT</span><span class="w"> </span><span class="n">anonymiser_inactifs</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">SCHEDULE</span><span class="w"> </span><span class="k">EVERY</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">WEEK</span>
+<span class="k">DO</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="n">Utilisateur</span>
+<span class="w">   </span><span class="k">SET</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'ANONYME'</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'ANONYME'</span><span class="p">,</span><span class="w"> </span><span class="n">adresseMel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NULL</span>
+<span class="w">   </span><span class="k">WHERE</span><span class="w"> </span><span class="n">dateDerniereConnexion</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">NOW</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="k">YEAR</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>2.</strong> Supprimer l'utilisateur obligerait à supprimer ou casser les trajets liés (clé étrangère) ; l'anonymisation conserve les statistiques sans identifier personne.</p>
+<p><strong>3.</strong> Attention : si un trajet très particulier (petit village, horaire régulier) permet encore de deviner le conducteur, l'anonymisation est <strong>incomplète</strong>. Il faut alors généraliser (ville → département, date → mois) ou agréger.</p>
+</div>
+</div>
+</div>
+</details>
+<h2 id="8-la-violation-de-donnees-personnelles">8. La violation de données personnelles<a class="headerlink" href="#8-la-violation-de-donnees-personnelles" title="Permanent link">⚓︎</a></h2>
+<details class="warning">
+<summary>Définition (article 4.12)</summary>
+<p>Une <strong>violation de données</strong> est une violation de la sécurité qui entraîne, <strong>de manière accidentelle ou illicite</strong>, la <strong>destruction</strong>, la <strong>perte</strong>, l'<strong>altération</strong>, la <strong>divulgation non autorisée</strong> de données personnelles, ou l'<strong>accès non autorisé</strong> à ces données.</p>
+<p>👉 Elle peut toucher les trois critères <strong>DIC</strong> : disponibilité (perte, rançongiciel), intégrité (altération), confidentialité (fuite, exfiltration, email envoyé au mauvais destinataire).</p>
+</details>
+<h3 id="81-les-obligations-documenter-notifier-informer">8.1 Les obligations : « documenter, notifier, informer »<a class="headerlink" href="#81-les-obligations-documenter-notifier-informer" title="Permanent link">⚓︎</a></h3>
+<p>C'est le <strong>responsable de traitement</strong> qui porte ces obligations (le sous-traitant doit le prévenir sans délai).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Obligation</th>
+<th style="text-align: left;">Quand ?</th>
+<th style="text-align: left;">À qui ?</th>
+<th style="text-align: left;">Délai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Documenter</strong> dans le <strong>registre des violations</strong></td>
+<td style="text-align: left;"><strong>Toujours</strong>, pour toute violation</td>
+<td style="text-align: left;">Document interne</td>
+<td style="text-align: left;">Dès la découverte</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Notifier</strong></td>
+<td style="text-align: left;">Si la violation présente un <strong>risque</strong> pour les droits et libertés des personnes</td>
+<td style="text-align: left;"><strong>CNIL</strong></td>
+<td style="text-align: left;"><strong>72 heures</strong> au plus tard après en avoir pris connaissance</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Informer les personnes concernées</strong></td>
+<td style="text-align: left;">Si le <strong>risque est élevé</strong> (données sensibles, données bancaires, mots de passe en clair, grand volume…)</td>
+<td style="text-align: left;">Les personnes concernées</td>
+<td style="text-align: left;">Dans les meilleurs délais</td>
+</tr>
+</tbody>
+</table>
+<p>L'information des personnes n'est <strong>pas nécessaire</strong> si les données étaient <strong>chiffrées</strong> (clé non compromise), si des mesures ultérieures ont supprimé le risque élevé, ou si elle demanderait des efforts disproportionnés (on fait alors une communication publique).</p>
+<div class="admonition note">
+<p class="admonition-title">Et la police / la gendarmerie ?</p>
+<p>Le <strong>dépôt de plainte</strong> est <strong>conseillé</strong> en cas d'attaque (piratage, rançongiciel), mais ce n'est <strong>pas</strong> une obligation du RGPD.</p>
+</div>
+<h3 id="82-conserver-les-preuves">8.2 Conserver les preuves<a class="headerlink" href="#82-conserver-les-preuves" title="Permanent link">⚓︎</a></h3>
+<p>En cas d'attaque, pour que les autorités puissent enquêter :</p>
+<ul>
+<li><strong>ne pas éteindre</strong> les machines (la mémoire vive contient des traces) ;</li>
+<li><strong>isoler</strong> les machines du réseau (débrancher le câble réseau, couper le Wi-Fi) ;</li>
+<li><strong>conserver</strong> les journaux (pare-feu, serveurs, SGBD), les messages piégés, des copies des disques ;</li>
+<li>garantir l'<strong>intégrité</strong> des copies (calcul d'empreinte SHA-256, copie bit à bit).</li>
+</ul>
+<h3 id="83-arbre-de-decision">8.3 Arbre de décision<a class="headerlink" href="#83-arbre-de-decision" title="Permanent link">⚓︎</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Étape</th>
+<th style="text-align: left;">Question</th>
+<th style="text-align: left;">Si oui</th>
+<th style="text-align: left;">Si non</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Y a-t-il eu destruction, perte, altération, divulgation ou accès non autorisé à des données personnelles ?</td>
+<td style="text-align: left;">C'est une violation → <strong>inscrire au registre des violations</strong></td>
+<td style="text-align: left;">Ce n'est pas une violation RGPD (mais c'est peut-être un incident de sécurité)</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">La violation présente-t-elle un risque pour les personnes ?</td>
+<td style="text-align: left;"><strong>Notifier la CNIL sous 72 h</strong></td>
+<td style="text-align: left;">Registre seulement</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Le risque est-il <strong>élevé</strong> (et les données non chiffrées) ?</td>
+<td style="text-align: left;"><strong>Informer aussi les personnes concernées</strong></td>
+<td style="text-align: left;">CNIL + registre</td>
+</tr>
+</tbody>
+</table>
+<details class="question">
+<summary>Exercice 15 – Que faire face à ces incidents ?</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Énoncé</label><label for="__tabbed_15_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Pour chaque incident, indiquez s'il s'agit d'une violation de données, le critère DIC touché, et les obligations (registre, CNIL, personnes concernées).</p>
+<ol>
+<li>Un agent d'une mutuelle envoie par erreur le relevé de remboursements de soins d'un adhérent à un autre adhérent.</li>
+<li>Un ordinateur portable contenant le fichier des 200 membres d'une association sportive (nom, téléphone) est volé. Le disque est <strong>chiffré</strong> et le mot de passe n'était pas noté.</li>
+<li>Une boutique en ligne découvre qu'un attaquant a exfiltré sa table clients (noms, emails, mots de passe <strong>en clair</strong>).</li>
+<li>Un rançongiciel chiffre le serveur de fichiers d'un cabinet comptable ; les sauvegardes du jour ont permis une restauration complète en 2 heures, sans exfiltration constatée.</li>
+<li>Un serveur web tombe en panne pendant une heure ; aucune donnée n'est perdue.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">#</th>
+<th style="text-align: left;">Violation ?</th>
+<th style="text-align: left;">DIC</th>
+<th style="text-align: left;">Obligations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">✅</td>
+<td style="text-align: left;">Confidentialité</td>
+<td style="text-align: left;">Registre + <strong>CNIL</strong> (données de santé → risque) + <strong>informer l'adhérent</strong> concerné (risque élevé)</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">✅</td>
+<td style="text-align: left;">Confidentialité (potentielle)</td>
+<td style="text-align: left;">Registre ; risque très faible grâce au chiffrement → pas de notification nécessaire en principe ; pas d'information des personnes</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">✅</td>
+<td style="text-align: left;">Confidentialité</td>
+<td style="text-align: left;">Registre + <strong>CNIL sous 72 h</strong> + <strong>informer les clients</strong> (mots de passe en clair → risque élevé, réutilisation sur d'autres sites) ; dépôt de plainte conseillé</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">✅</td>
+<td style="text-align: left;">Disponibilité</td>
+<td style="text-align: left;">Registre ; notification CNIL si un risque subsiste (indisponibilité, doute sur l'exfiltration) ; plainte conseillée ; conservation des preuves</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">❌ (incident de disponibilité sans atteinte aux données)</td>
+<td style="text-align: left;">Disponibilité</td>
+<td style="text-align: left;">Gestion d'incident interne ; pas d'obligation RGPD</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</details>
+<details class="question">
+<summary>Exercice 16 – Réagir à une intrusion</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Énoncé</label><label for="__tabbed_16_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Un lundi matin, l'administrateur d'un réseau de pharmacies constate dans les logs du SGBD des requêtes <code>SELECT * FROM Patient</code> envoyées dans la nuit depuis une adresse IP étrangère, et la création d'un compte SQL inconnu disposant de tous les privilèges.</p>
+<ol>
+<li>Qui est responsable de traitement ? Quelles sont ses obligations et dans quels délais ?</li>
+<li>Citez trois actions pour préserver les preuves.</li>
+<li>Écrivez la requête SQL qui retire tous les privilèges au compte <code>'intrus'@'%'</code>, puis celle qui le supprime.</li>
+<li>Proposez deux mesures pour éviter qu'un tel incident se reproduise.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Le <strong>réseau de pharmacies</strong>. Inscrire la violation au <strong>registre des violations</strong> ; <strong>notifier la CNIL sous 72 h</strong> ; <strong>informer les patients</strong> (données de santé → risque élevé) ; dépôt de plainte conseillé.</li>
+<li>Ne pas éteindre le serveur ; l'isoler du réseau ; conserver les logs du SGBD et du pare-feu ; faire une copie du disque et calculer son empreinte.</li>
+</ol>
+<p><strong>3.</strong></p>
+<div class="language-sql highlight"><span class="filename">🐬 SQL</span><pre><span></span><code><span class="k">REVOKE</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="p">,</span><span class="w"> </span><span class="k">GRANT</span><span class="w"> </span><span class="k">OPTION</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="s1">'intrus'</span><span class="o">@</span><span class="s1">'%'</span><span class="p">;</span>
+<span class="k">DROP</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">'intrus'</span><span class="o">@</span><span class="s1">'%'</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>4.</strong> Ex. : ne pas exposer le SGBD sur Internet (filtrage pare-feu) ; comptes SQL au moindre privilège ; mots de passe robustes ; chiffrement des données de santé ; alerte sur la création de comptes.</p>
+</div>
+</div>
+</div>
+</details>
+<h2 id="9-fiche-reflexe">9. Fiche réflexe 📝<a class="headerlink" href="#9-fiche-reflexe" title="Permanent link">⚓︎</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Si la question demande…</th>
+<th style="text-align: left;">Éléments de cours à mobiliser</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Qui doit être informé d'une violation ?</td>
+<td style="text-align: left;"><strong>CNIL sous 72 h</strong> si risque ; <strong>personnes concernées</strong> si risque élevé ; (gendarmerie conseillée, non obligatoire)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Dans quel document consigner une violation ?</td>
+<td style="text-align: left;"><strong>Registre des violations</strong> (interne, toujours)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Dans quel document décrire un traitement ?</td>
+<td style="text-align: left;"><strong>Registre des activités de traitement</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Délai pour répondre à une demande de droit ?</td>
+<td style="text-align: left;"><strong>1 mois</strong> (+ 2 mois si complexe, en prévenant la personne)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Peut-on conserver X indéfiniment ?</td>
+<td style="text-align: left;"><strong>Non</strong> : durée limitée à la finalité ; justifier avec la finalité</td>
+</tr>
+<tr>
+<td style="text-align: left;">Durée de conservation des logs ?</td>
+<td style="text-align: left;"><strong>6 mois à 1 an</strong> (recommandation CNIL)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Que doit contenir un log ?</td>
+<td style="text-align: left;">Auteur identifié, horodatage, équipement, nature de l'opération</td>
+</tr>
+<tr>
+<td style="text-align: left;">Le chiffrement est-il obligatoire ?</td>
+<td style="text-align: left;"><strong>Recommandé</strong> ; l'obligation est une sécurité <strong>adaptée au risque</strong> (art. 32)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mot de passe : chiffrer ou hacher ?</td>
+<td style="text-align: left;"><strong>Hacher</strong> (irréversible)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Biométrie / santé / syndicat… ?</td>
+<td style="text-align: left;"><strong>Donnée sensible</strong> → interdit sauf exception (consentement explicite…)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ce champ est-il une donnée personnelle ?</td>
+<td style="text-align: left;">Se rapporte-t-il à une <strong>personne physique</strong> <strong>identifiable</strong> (directement, par jointure ou par croisement) ?</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sauvegarde ou archive ?</td>
+<td style="text-align: left;">Sauvegarde = <strong>restaurer</strong> ; archive = <strong>conserver</strong> des données qui ne sont plus traitées (preuve, obligation légale)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Comment rédiger</p>
+<p>Une réponse « oui/non » ne suffit jamais. Toujours <strong>citer le principe</strong> (minimisation, limitation de la conservation, sécurité adaptée au risque…) ou <strong>l'acteur</strong> (CNIL, responsable de traitement) qui fonde la réponse.</p>
+</div>
+<h2 id="10-qcm">10. QCM ✅<a class="headerlink" href="#10-qcm" title="Permanent link">⚓︎</a></h2>
+<div class="admonition question">
+<p class="admonition-title">Le RGPD</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">Questions</label><label for="__tabbed_17_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>Q1. Laquelle de ces données n'est PAS une donnée à caractère personnel ?</strong><br />
+a) L'adresse IP d'un internaute<br />
+b) Le numéro SIRET d'une SARL<br />
+c) Le matricule d'un salarié<br />
+d) Une plaque d'immatriculation</p>
+<p><strong>Q2. Une donnée pseudonymisée :</strong><br />
+a) n'est plus soumise au RGPD<br />
+b) reste une donnée personnelle<br />
+c) est forcément une donnée sensible<br />
+d) ne peut pas être chiffrée</p>
+<p><strong>Q3. Laquelle est une donnée sensible ?</strong><br />
+a) Le numéro de téléphone<br />
+b) La date de naissance<br />
+c) Le gabarit d'empreinte digitale utilisé pour s'authentifier<br />
+d) L'adresse postale</p>
+<p><strong>Q4. Une entreprise subit une fuite de données non sensibles, présentant un risque faible. Elle doit obligatoirement :</strong><br />
+a) prévenir uniquement la gendarmerie<br />
+b) informer tous ses clients par email<br />
+c) notifier la CNIL sous 72 h et inscrire la violation au registre des violations<br />
+d) ne rien faire puisque le risque est faible</p>
+<p><strong>Q5. Un client exerce son droit d'accès le 3 mars. L'entreprise doit répondre au plus tard :</strong><br />
+a) le 3 avril (1 mois), sauf prolongation justifiée et annoncée<br />
+b) le 6 mars (72 h)<br />
+c) le 3 mai (2 mois)<br />
+d) quand elle le peut, il n'y a pas de délai</p>
+<p><strong>Q6. Pour stocker les mots de passe des utilisateurs, la bonne pratique est :</strong><br />
+a) le chiffrement AES<br />
+b) le stockage en clair dans une table à accès restreint<br />
+c) le hachage avec un algorithme lent et salé (bcrypt, Argon2)<br />
+d) l'encodage Base64</p>
+<p><strong>Q7. Selon la CNIL, les journaux d'accès doivent en principe être conservés :</strong><br />
+a) 1 mois<br />
+b) entre 6 mois et 1 an<br />
+c) 5 ans<br />
+d) sans limite de durée</p>
+<p><strong>Q8. Le droit à la portabilité permet à une personne :</strong><br />
+a) de faire corriger ses données<br />
+b) de récupérer ses données dans un format structuré et lisible par machine<br />
+c) d'emporter son ordinateur professionnel chez elle<br />
+d) de s'opposer à la prospection</p>
+<p><strong>Q9. Où doit être décrit un nouveau traitement de données personnelles ?</strong><br />
+a) Dans la charte informatique<br />
+b) Dans le registre des violations<br />
+c) Dans le registre des activités de traitement<br />
+d) Dans une déclaration envoyée à la CNIL avant la mise en service</p>
+<p><strong>Q10. Une table de logs contient l'adresse IP du poste, la date et l'action. Le poste est partagé par plusieurs agents. Que manque-t-il selon la CNIL ?</strong><br />
+a) Le contenu des données consultées<br />
+b) L'identification individuelle de l'auteur<br />
+c) Le nom du serveur de base de données<br />
+d) Rien, la table est complète</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Q1.</strong> b) Le numéro SIRET d'une SARL ✅<br />
+Il identifie une personne morale. Le RGPD ne protège que les personnes physiques.</p>
+<p><strong>Q2.</strong> b) reste une donnée personnelle ✅<br />
+La ré-identification reste possible avec la table de correspondance. Seule l'anonymisation fait sortir du RGPD.</p>
+<p><strong>Q3.</strong> c) Le gabarit d'empreinte digitale ✅<br />
+Donnée biométrique servant à identifier une personne de manière unique (article 9).</p>
+<p><strong>Q4.</strong> c) notifier la CNIL sous 72 h et inscrire la violation au registre ✅<br />
+L'information des personnes n'est obligatoire que si le risque est élevé. La plainte est conseillée mais pas imposée par le RGPD.</p>
+<p><strong>Q5.</strong> a) le 3 avril ✅<br />
+Délai d'un mois, prolongeable de deux mois si la demande est complexe, à condition d'en informer la personne dans le premier mois.</p>
+<p><strong>Q6.</strong> c) le hachage salé ✅<br />
+On n'a jamais besoin de relire un mot de passe : un hachage irréversible suffit et protège en cas de fuite. Base64 n'est pas une protection.</p>
+<p><strong>Q7.</strong> b) entre 6 mois et 1 an ✅<br />
+Recommandation CNIL 2021-122 ; une durée plus longue doit être justifiée (obligation légale, contentieux).</p>
+<p><strong>Q8.</strong> b) récupérer ses données dans un format structuré ✅<br />
+Par exemple un export JSON ou CSV, pour les transmettre à un autre service.</p>
+<p><strong>Q9.</strong> c) le registre des activités de traitement ✅<br />
+Depuis 2018, il n'y a plus de déclaration préalable à la CNIL : c'est le principe de responsabilité. Le registre des violations ne concerne que les incidents.</p>
+<p><strong>Q10.</strong> b) L'identification individuelle de l'auteur ✅<br />
+L'IP identifie l'équipement, pas la personne. Recopier le contenu des données dans les logs est au contraire à éviter.</p>
+</div>
+</div>
+</div>
+</div>
 
 
 
