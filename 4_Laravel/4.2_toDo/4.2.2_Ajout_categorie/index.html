@@ -3655,10 +3655,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#241-us1-une-nouvelle-page-recherche" class="md-nav__link">
+  <a href="#241-us1-compteur" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.4.1 US1 : Une nouvelle page : Recherche
+        2.4.1 US1 : Compteur
       
     </span>
   </a>
@@ -3666,10 +3666,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#242-us2-compteur" class="md-nav__link">
+  <a href="#242-us2-une-nouvelle-page-recherche" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.4.2 US2 : Compteur
+        2.4.2 US2 : Une nouvelle page : Recherche
       
     </span>
   </a>
@@ -7140,27 +7140,7 @@ Lisez un peu de documentation <a href="https://laravel.sillo.org/cours-laravel-1
 <p>Les nouvelles routes des user stories (2.4) seront à ajouter dans ce groupe.</p>
 <h2 id="24-user-story">2.4 User Story<a class="headerlink" href="#24-user-story" title="Permanent link">⚓︎</a></h2>
 <p>Une <strong>user story</strong> décrit une fonctionnalité du point de vue de l'utilisateur, sous la forme : <em>En tant que ... je souhaite ... afin de ...</em>. Elle est accompagnée de <strong>critères d'acceptation</strong> qui permettent de vérifier que la fonctionnalité est terminée.</p>
-<h3 id="241-us1-une-nouvelle-page-recherche">2.4.1 US1 : Une nouvelle page : Recherche<a class="headerlink" href="#241-us1-une-nouvelle-page-recherche" title="Permanent link">⚓︎</a></h3>
-<p>User story : On souhaite créer une page de Recherche par mot clé. Cette page disposera d'un champ texte pour saisir un mot-clé. A la validation de ce formulaire, l'application retournera tous les Todos contenant ce mot-clé dans leur texte, y compris dans les ToDos déjà supprimés.</p>
-<p><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2705.svg" title=":white_check_mark:" /> <ins>Critères d'acceptation</ins> :</p>
-<ul>
-<li>un lien depuis la page d'accueil permet d'accéder à la page de recherche ;</li>
-<li>la page contient un formulaire avec un champ texte et un bouton de validation ;</li>
-<li>la recherche ne tient pas compte de la position du mot-clé dans le texte (début, milieu ou fin) ;</li>
-<li>les Todos supprimés (softDelete) apparaissent dans les résultats et sont signalés comme tels ;</li>
-<li>si aucun Todo ne correspond, un message l'indique ;</li>
-<li>si le champ est vide, l'application affiche un message plutôt que de lancer la recherche.</li>
-</ul>
-<p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> <ins>A faire</ins> : créer la route (dans le groupe de routes de <code>TodosController</code>), la méthode du controller et la vue <code>recherche.blade.php</code>.</p>
-<details class="tips">
-<summary>Pistes</summary>
-<ul>
-<li>La recherche partielle se fait en SQL avec l'opérateur <code>LIKE</code> et le joker <code>%</code>.</li>
-<li>Par défaut, Eloquent exclut les enregistrements supprimés : regardez du côté de la méthode <code>withTrashed()</code>.</li>
-<li>Pour savoir dans la vue si un Todo est supprimé : <code>$todo-&gt;trashed()</code>.</li>
-</ul>
-</details>
-<h3 id="242-us2-compteur">2.4.2 US2 : Compteur<a class="headerlink" href="#242-us2-compteur" title="Permanent link">⚓︎</a></h3>
+<h3 id="241-us1-compteur">2.4.1 US1 : Compteur<a class="headerlink" href="#241-us1-compteur" title="Permanent link">⚓︎</a></h3>
 <p>User story : En tant qu'utilisateur, je souhaite disposer d'une page <strong>Compteur</strong> qui m'indique combien de Todos sont à faire, terminés et supprimés, afin d'avoir une vue d'ensemble de mon avancement.</p>
 <p><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2705.svg" title=":white_check_mark:" /> <ins>Critères d'acceptation</ins> :</p>
 <ul>
@@ -7186,8 +7166,8 @@ Lisez un peu de documentation <a href="https://laravel.sillo.org/cours-laravel-1
 <li>La fonction PHP <code>compact()</code> permet de transmettre plusieurs variables à la vue en une seule fois.</li>
 </ul>
 </details>
-<div class="admonition success">
-<p class="admonition-title">Éléments de correction 🎓</p>
+<details class="success">
+<summary>Éléments de correction 🎓</summary>
 <p><strong>1. La route</strong> : dans <code>routes/web.php</code>, à ajouter dans le groupe de routes de <code>TodosController</code>.</p>
 <div class="language-php highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">Route::controller(TodosController::class)-&gt;group(function () {</span>
 <span class="x">    // ... routes existantes</span>
@@ -7232,12 +7212,32 @@ Lisez un peu de documentation <a href="https://laravel.sillo.org/cours-laravel-1
 <p><strong>4. Le lien</strong> : dans la vue <code>home</code>.</p>
 <div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"{{ route('todo.compteur') }}"</span><span class="p">&gt;</span>Compteur<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
-</div>
+</details>
 <p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> <ins>Pour aller plus loin</ins> :</p>
 <ul>
 <li>afficher le nombre de Todos par catégorie, avec <code>Categories::withCount('todos')-&gt;get()</code> : Laravel ajoute un attribut <code>todos_count</code> à chaque catégorie ;</li>
 <li>afficher la progression <code>terminés / total</code> en pourcentage, en prenant garde au cas où il n'y a aucun Todo (division par zéro).</li>
 </ul>
+<h3 id="242-us2-une-nouvelle-page-recherche">2.4.2 US2 : Une nouvelle page : Recherche<a class="headerlink" href="#242-us2-une-nouvelle-page-recherche" title="Permanent link">⚓︎</a></h3>
+<p>User story : On souhaite créer une page de Recherche par mot clé. Cette page disposera d'un champ texte pour saisir un mot-clé. A la validation de ce formulaire, l'application retournera tous les Todos contenant ce mot-clé dans leur texte, y compris dans les ToDos déjà supprimés.</p>
+<p><img alt="✅" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2705.svg" title=":white_check_mark:" /> <ins>Critères d'acceptation</ins> :</p>
+<ul>
+<li>un lien depuis la page d'accueil permet d'accéder à la page de recherche ;</li>
+<li>la page contient un formulaire avec un champ texte et un bouton de validation ;</li>
+<li>la recherche ne tient pas compte de la position du mot-clé dans le texte (début, milieu ou fin) ;</li>
+<li>les Todos supprimés (softDelete) apparaissent dans les résultats et sont signalés comme tels ;</li>
+<li>si aucun Todo ne correspond, un message l'indique ;</li>
+<li>si le champ est vide, l'application affiche un message plutôt que de lancer la recherche.</li>
+</ul>
+<p><img alt="▶️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/25b6.svg" title=":arrow_forward:" /> <ins>A faire</ins> : créer la route (dans le groupe de routes de <code>TodosController</code>), la méthode du controller et la vue <code>recherche.blade.php</code>.</p>
+<details class="tips">
+<summary>Pistes</summary>
+<ul>
+<li>La recherche partielle se fait en SQL avec l'opérateur <code>LIKE</code> et le joker <code>%</code>.</li>
+<li>Par défaut, Eloquent exclut les enregistrements supprimés : regardez du côté de la méthode <code>withTrashed()</code>.</li>
+<li>Pour savoir dans la vue si un Todo est supprimé : <code>$todo-&gt;trashed()</code>.</li>
+</ul>
+</details>
 
 
 
