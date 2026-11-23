@@ -309,7 +309,7 @@
          <lastmod>2026-11-23</lastmod>
     </url>
     <url>
-         <loc>https://github.com/sofaugeras/SIOB2/6_Cybersecurite/6.1_cours/5_archivage/</loc>
+         <loc>https://github.com/sofaugeras/SIOB2/6_Cybersecurite/6.1_cours/5_rgpd/</loc>
          <lastmod>2026-11-23</lastmod>
     </url>
     <url>
@@ -330,10 +330,6 @@
     </url>
     <url>
          <loc>https://github.com/sofaugeras/SIOB2/6_Cybersecurite/6.1_cours/92_exercices/</loc>
-         <lastmod>2026-11-23</lastmod>
-    </url>
-    <url>
-         <loc>https://github.com/sofaugeras/SIOB2/6_Cybersecurite/6.1_cours/93_rgpd/</loc>
          <lastmod>2026-11-23</lastmod>
     </url>
     <url>
@@ -425,27 +421,31 @@
          <lastmod>2026-11-23</lastmod>
     </url>
     <url>
-         <loc>https://github.com/sofaugeras/SIOB2/8_AP/0.sommaire/</loc>
+         <loc>https://github.com/sofaugeras/SIOB2/8_Projet/0.sommaire/</loc>
          <lastmod>2026-11-23</lastmod>
     </url>
     <url>
-         <loc>https://github.com/sofaugeras/SIOB2/8_AP/8.1_CMS/consignes/</loc>
+         <loc>https://github.com/sofaugeras/SIOB2/8_Projet/8.1_GestionProjet/cours/</loc>
          <lastmod>2026-11-23</lastmod>
     </url>
     <url>
-         <loc>https://github.com/sofaugeras/SIOB2/8_AP/8.1_CMS/cours/</loc>
+         <loc>https://github.com/sofaugeras/SIOB2/8_Projet/8.2_CMS/consignes/</loc>
          <lastmod>2026-11-23</lastmod>
     </url>
     <url>
-         <loc>https://github.com/sofaugeras/SIOB2/8_AP/8.2_GSB/1_gsb_v1/</loc>
+         <loc>https://github.com/sofaugeras/SIOB2/8_Projet/8.2_CMS/cours/</loc>
          <lastmod>2026-11-23</lastmod>
     </url>
     <url>
-         <loc>https://github.com/sofaugeras/SIOB2/8_AP/8.2_GSB/2_gsb_evolutions/</loc>
+         <loc>https://github.com/sofaugeras/SIOB2/8_Projet/8.3_GSB/1_gsb_v1/</loc>
          <lastmod>2026-11-23</lastmod>
     </url>
     <url>
-         <loc>https://github.com/sofaugeras/SIOB2/8_AP/8.2_GSB/3_gsb_laravel/</loc>
+         <loc>https://github.com/sofaugeras/SIOB2/8_Projet/8.3_GSB/2_gsb_evolutions/</loc>
+         <lastmod>2026-11-23</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/sofaugeras/SIOB2/8_Projet/8.3_GSB/3_gsb_laravel/</loc>
          <lastmod>2026-11-23</lastmod>
     </url>
     <url>
